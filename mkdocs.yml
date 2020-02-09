@@ -1,0 +1,5 @@
+site_name: Maximo Asset Monitor Hands on Lab
+nav:
+    - Home: index.md
+    - About: about.md
+theme: readthedocs  
