@@ -1,7 +1,8 @@
 site_name: Maximo Asset Monitor Hands on Lab
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferreira
+site_description: "Documentation for Maximo Asset Manager Hands on Lab"
 nav:
     - Home: index.md
     - About: about.md
-theme:
-  name: null
-  custom_dir: 'cinder'
+theme: readthedocs

@@ -1,6 +1,6 @@
 # Introduction to this Lab
 
-In this hands-on lab you will learn how to get started with IBM Maximo Asset Monitor. You will learn about Monitor's capabilities to:
+Welcome to the IBM Maximo Asset Monitor Hands on Lab.  In this hands-on lab you will learn how to get started with IBM Maximo Asset Monitor. You will learn about Monitor's capabilities to:
 
 * Connect devices
 * Transform device data into asset entities
