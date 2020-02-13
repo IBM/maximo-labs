@@ -2,9 +2,9 @@
 
 Welcome to the IBM Maximo Asset Monitor Hands on Lab.  In this hands-on lab you will learn how to get started with IBM Maximo Asset Monitor. You will learn about Monitor's capabilities to:
 
-* Connect devices.
-* Transform device data into asset entities.
-* Use anomaly model and alert functions to detect anomalies and issue alerts.
+* Ingest data from devices or SCADA systems
+* Transform data into asset information
+* Be alerted about which assets are not performing normally
 * Create summary and asset dashboard to view asset condition metrics and related asset operational data.
 
 Maximo Asset Monitor connects devices, ingests device data, and transforms that data into meaningful insights through visualizations such as time series line and bar charts, tabular reports, and interactive diagrams. Watson IoT Platform and its additional add-on services enable organizations to capture and explore data for devices, equipment and machines, and discover insights that can drive better decision-making.
@@ -17,13 +17,13 @@ You can choose which modules to complete in this lab based on your role and the 
 
 |  Module | Name                      | Description      |
 |: ------:|:----------------------------:|:-----------------|
-| 1       |  Introduction to Monitoring  | Explore Monitoring Dashboards from IBM Munich Building. |
+| 1       | Monitoring Introduction  | Explore Monitoring Dashboards from IBM Munich Building. |
 | 2       |  Connect Historian           | Install and configure a [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational/ Technology data from a SCADA historian database. |
 | 3       |  Monitor SCADA Systems    | Create dashboards that enable you to visualize asset data using asset OT data.       |
 | 4       |  Connect Devices          | Connect devices and define asset types.     |
 | 5       |  Monitor Asset Devices    | Create dashboards that enable you to visualize asset data using asset device data.      |
 | 6       |  Monitor Anomalies        | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.       |
-| 7       |  Facilitator Instructions | Pre-requisites and instructions to facilitators of this lab. |
+| 7       |  Facilitator Instructions | Pre-requisites instructions to facilitators of this lab. |
 
 ### Learning Paths
 
