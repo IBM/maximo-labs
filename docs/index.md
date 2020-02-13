@@ -1,4 +1,4 @@
-# Introduction to this Lab
+# Overview of Labs
 
 Welcome to the IBM Maximo Asset Monitor Hands on Lab.  In this hands-on lab you will learn how to get started with IBM Maximo Asset Monitor. You will learn about Monitor's capabilities to:
 
@@ -11,25 +11,32 @@ Maximo Asset Monitor connects devices, ingests device data, and transforms that 
 
 ## Getting Started
 
-The hands on lab is intended to be used in one of three guided learning paths depending on your needs and available time.  The learning paths are intended for different applications of Monitor.
+You can choose which modules to complete in this lab based on your role and the amount of time you have available. The available learning paths and modules are listed in the table below.
 
 ### Modules
 
-|  Module           |    Name                  | Description      |
-|: ----------------:|:------------------------:|:-----------------|
-| 1                 |  Connect Historian | Install and configure a [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational Technology data from a SCADA historian database. |
-| 2                 |  Monitor SCADA Asset  |   Create dashboards that enable you to visualize asset data using asset OT data.       |
-| 3                 |  Connect Devices  | Connect devices and define asset types.     |
-| 4                 |  Monitor Device Assets   | Create dashboards that enable you to visualize asset data using asset device data.      |
-| 5                 |  Detect Anomalies | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.       |
+|  Module | Name                      | Description      |
+|: ------:|:----------------------------:|:-----------------|
+| 1       |  Introduction to Monitoring  | Explore Monitoring Dashboards from IBM Munich Building. |
+| 2       |  Connect Historian           | Install and configure a [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational/ Technology data from a SCADA historian database. |
+| 3       |  Monitor SCADA Systems    | Create dashboards that enable you to visualize asset data using asset OT data.       |
+| 4       |  Connect Devices          | Connect devices and define asset types.     |
+| 5       |  Monitor Asset Devices    | Create dashboards that enable you to visualize asset data using asset device data.      |
+| 6       |  Monitor Anomalies        | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.       |
+| 7       |  Facilitator Instructions | Pre-requisites and instructions to facilitators of this lab. |
 
 ### Learning Paths
 
-|  Modules         |    Focuses On                                             | Duration (mins)   |
-|: ----------------:|:--------------------------------------------------------:|:-----------------:|
-| 1 and 2          |  Remote Operational Monitoring of SCADA Systems           |     2 hours       |
-| 3 and 4          |  Operational Monitoring of Assets Using Device Sensors    |     2 hours       |
-| 5                |  Anomaly Detection                                        |     2 hours       |
+|  Your Interest                                           | Recommended Modules | Duration (mins)   |
+|:--------------------------------------------------------:|: ------------------:|:-----------------:|
+|  Quick Introduction to Monitoring Dashboards             | 1                   |     30 Minutes    |
+|  Remote Operational Monitoring of SCADA Systems          | 2 and 3             |     2 hours       |
+|  Operational Monitoring of Assets Using Device Sensors   | 4 and 5             |     2 hours       |
+|  Anomaly Detection                                       | 6                   |     2 hours       |
+
+
+### Pre-requisites
+*  
 
 ## Overview of Maximo Asset Monitor
 
@@ -43,7 +50,7 @@ Anomaly models can help reduce the “noise” that is caused by hundreds of fal
 
 ###  Demonstration
 
-Ask your Instructor for a demonstration of Monitor or watch this short 7 minute [video demonstration](https://youtu.be/IyQgRwAseLU)
+Ask your facilitator for a demonstration of Maxiom Asset Monitor or watch this short 7 minute [video demonstration](https://youtu.be/IyQgRwAseLU)
 
 ### Business Benefits
 
@@ -107,7 +114,6 @@ IBM Maximo Asset Monitor includes the following IBM Cloud services that help you
 * To store logs and files for above services using the included [Cloud Object Storage Service](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/analytics/as_logs.html)
 * For long term storage of device sensor data
 * To store images
-
 
 ---
 © 2020 International Business Machines Corporation.  No part of this document may be reproduced or transmitted in any form without written permission from IBM.  U.S. Government Users Restricted Rights — use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM.
