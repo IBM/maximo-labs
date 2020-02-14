@@ -13,7 +13,7 @@ Go to ibm.biz shortcut
 Log in
 
 
-## Section 1 - Exploring the robot data metrics
+## Exploring the robot data metrics
 In this section the attendees will explore  the robot arm entity type, metrics and dimensions
 
 
@@ -29,7 +29,7 @@ In this section the attendees will explore  the robot arm entity type, metrics 
 *  View the default dashboard
 
 
-## Section 2 - Configuring a robot dashboard
+## Configuring a robot dashboard
 In this section attendees updates the robot type dashboard and adds additional cards to the dashboard
 
 
@@ -61,7 +61,7 @@ In this section attendees updates the robot type dashboard and adds additional c
 *  Save and view the updated dashboard
 
 
-## Section 3 - Configuring a site summary dashboard
+## Configuring a site summary dashboard
 In this section attendees views summary dashboard editor and make changes to an existing dashboard
 
 *  Open the Monitor > Entity Type > Robotarm page

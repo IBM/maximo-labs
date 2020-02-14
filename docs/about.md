@@ -1,17 +1,8 @@
 # About this Lab
 
-Pre-requisites [mkdocs.org](https://mkdocs.org).
-
-## Contacts
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
 ## Contribute
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+You can:
+* IBMers can get an account here: [https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/)
+* Access Github Here [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab):
+* Access the published doc here:[https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/)

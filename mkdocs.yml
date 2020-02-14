@@ -4,12 +4,12 @@ site_author: Carlos Ferreira
 site_description: "Documentation for Maximo Asset Manager Hands on Lab"
 nav:
     - Home: index.md
-    - Monitors Introduction: introduction.md
-    - Connect Historian: connect_historian.md
-    - Monitor SCADA Systems: monitor_scada.md
-    - Connect Devices: connect_device.md
-    - Monitor Asset Devices: monitor_asset_devices.md
-    - Monitor Anomalies: monitor_anomalies.md
-    - Facilitator Instructions: facilitator_instructions.md
-    - About: about.md
+    - 1. Monitors Introduction: introduction.md
+    - 2. Connect Devices: connect_device.md
+    - 3. Monitor Asset Devices: monitor_asset_devices.md
+    - 4. Monitor Anomalies: monitor_anomalies.md
+    - 5. Connect Historian: connect_historian.md
+    - 6. Monitor SCADA Systems: monitor_scada.md
+    - 7. Facilitator Instructions: facilitator_instructions.md
+    - 8. Contributing: about.md
 theme: readthedocs

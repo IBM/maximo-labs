@@ -17,7 +17,7 @@ You can choose which modules to complete in this lab based on your role and the 
 
 |  Module | Name                      | Description      |
 |: ------:|:----------------------------:|:-----------------|
-| 1       | Monitoring Introduction  | Explore Monitoring Dashboards from IBM Munich Building. |
+| 1       | Monitoring Introduction  | Explore Monitoring Dashboards for Facilities |
 | 2       |  Connect Historian           | Install and configure a [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational/ Technology data from a SCADA historian database. |
 | 3       |  Monitor SCADA Systems    | Create dashboards that enable you to visualize asset data using asset OT data.       |
 | 4       |  Connect Devices          | Connect devices and define asset types.     |
@@ -34,9 +34,6 @@ You can choose which modules to complete in this lab based on your role and the 
 |  Operational Monitoring of Assets Using Device Sensors   | 4 and 5             |     2 hours       |
 |  Anomaly Detection                                       | 6                   |     2 hours       |
 
-
-### Pre-requisites
-*  
 
 ## Overview of Maximo Asset Monitor
 
