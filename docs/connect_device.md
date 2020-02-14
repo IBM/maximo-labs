@@ -55,7 +55,7 @@ Example:
 # Interfaces, Rules and Notifications
 In this next section you will take a look at how you can create physical\logical interfaces, define conditional rules and notifications. You will create an alert notification when the Nordic Thingy has an error condition.
 
-2.1  First, make sure your Nordic Thingy is turned on and actively sending sensor data to the IoTP. You may need to reconnect it using this web link: https://nrf52t.mybluemix.net/?edit
+1  First, make sure your Nordic Thingy is turned on and actively sending sensor data to the IoTP. You may need to reconnect it using this web link: https://nrf52t.mybluemix.net/?edit
 
 2.2  You can check it is connected by clicking the “Browse” tab in the IoTP and searching the devices list for device status and recent events.
 
