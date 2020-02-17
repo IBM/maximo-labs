@@ -7,7 +7,7 @@ Inside of your Entity Type homepage, right when you log in for the first time yo
 If you complete the full length Hands on Lab, your dashboard will look something like this. Today, we’ll get you on the right track:
 
 
-### Add Line Graphs
+### Add Line Graph Cards
 Time series data is represented well as line graphs. Let's display the the critical performance metrics the Thingy is providing so that we can see historical trends and in later modules apply ai models to detect anomalies.
 
 1.  Navigate back to the landing page for your entity type. You will see under “Summary Dashboards” an option to create a new dashboard. Click “+New Summary.”

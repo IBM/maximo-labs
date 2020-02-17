@@ -7,13 +7,7 @@ This lab requires that you:
 
 1.  Have a Nordic Thingy. You can [purchase](../facilitator_instructions) or have a Nordic Thingy before you begin this lab.  
 
-2.  Have a workstation that has:
-
-    *  Chrome browser
-
-    *  Is connected to the internet
-
-    *  Access to a Maximo Asset Environment
+2.  Have the pre-requisites required for [all labs](../facilitator_instructions)
 
 ## Connect Nordic Thingy to the Internet
 Let’s connect the a Nordic Thingy to the internet using  your Chrome on your computer. You first need to pair the Thingy via Bluetooth to your computer.  Google Chrome has a built in Bluetooth listener.  Using the connectivity page below you can connect to the internet and the Maximo Asset Monitor Cloud Service.   
@@ -24,26 +18,44 @@ Let’s connect the a Nordic Thingy to the internet using  your Chrome on your c
 
 3.  Use Bluetooth in the Google Chrome Browser to connect your device to the internet.  Open a tab with this web address:  [https://nrf52t.mybluemix.net/?edit](https://nrf52t.mybluemix.net/?edit).
 
-4.  This method will only work on  you’ll need to revisit if you get disconnected at any point. Click the blue “Connect” button.  
+4.  This method will only work on  you’ll need to revisit if you get disconnected at any point. Click the blue “Connect” button.
+
+![Connect Thingy in Chrome](img/i8.png)
 
 5. In the list of devices, find the one matching your device, select it and click “Pair.” You may need to rename the Thingy if you are in close range with others also using their own Thingy.
 
+![Pair Bluetooth](img/i9.png)  
+
 6. 	Once paired, you should see the following screen which shows IoTP connection status as well as some of the sensor values coming from the Thingy.
 
-7. 	The top righthand corner button will say “connecting”. Notice the IoTP indicator does not have a checkmark. This is because it is not yet connected to the IoT Platform. To connect it up, copy or make note of the Thingy name and, in a new tab or window, navigate to the IoT Platform service.
+![Thingy Status in Chrome](img/i10.png)  
+
+7. 	The top righthand corner button will say “connecting”. Notice the IoTP indicator does not have a checkmark. This is because it is not yet connected to the IoT Platform. To connect it up, copy or make note of the Thingy name and, in a new tab or window, you will next connect the Thingy to IoT Platform service included with Maximo Asset Monitor.
 
 ## Connect Nordic Thingy to Maximo Asset Monitor
 The Nordic Thingy has connectivity to the internet.  You must first register devices with Maximo Asset Manager before they can securely send and persist data there.
 
-1.  Navigate to and bookmark the Maximo Asset Monitor Dashboard page.  You will use this throughout the lab. [https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true)
+1.  Navigate to and bookmark the Maximo Asset Monitor Dashboard page.  You will use this throughout the lab. [https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true)  You are put on the Home screen
 
-2.	Log in to the Monitor. After logging in, you’ll land in “Dashboards.”
+2.	Log in to the Monitor.
+
+![Login to Maximo Asset Monitor](img/i11.png)
+
+3.  After logging in, you’ll land in Home Screen.”  See step 2 in the Before you begin section if you don't have an IBM ID to login or having trouble accessing the environment.
+
+![Maximo Asset Monitor Home](img/i12.png)
 
 3.  Click the “Connect” tab (third icon in the side menu)
 
-4.  Please open and refer to the email sent to you by Paulina Thomas concerning your pre-made Device ID/Thingy name, Device Type, and Authentication Token. Please search and confirm that your Device ID and Device Type are present.
+![Connect Devices Menu](img/i14.png)
 
-5. 	Navigate back to the Thingy page showing the sensor values and place the following into the “Token” field:
+4.  Click the “Connect” button (icon in the side menu)
+
+![Connect Devices Launch Button](img/i14.png)
+
+5.  Please open and refer to the email sent to you by Paulina Thomas concerning your pre-made Device ID/Thingy name, Device Type, and Authentication Token. Please search and confirm that your Device ID and Device Type are present.
+
+6. 	Navigate back to the Thingy page showing the sensor values and place the following into the “Token” field:
 
 ```
 <Auth Token>:<Device Type >:<Org ID>

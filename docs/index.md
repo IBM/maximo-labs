@@ -15,24 +15,24 @@ You can choose which labs to complete based on your learning objectives,  the am
 
 ### Labs
 
-|  Lab    | Learning Objectives       | Description      |
-|: ------:|:-------------------------:|:-----------------|
-| 1       |  Monitoring Introduction  | Explore Monitoring Dashboards for Facilities |
-| 2       |  Connect Historian        | Install [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational Technology data.|
-| 3       |  Monitor SCADA Systems    | Create dashboards that enable you to visualize asset data using asset OT data.       |
-| 4       |  Connect Devices          | Connect devices and define asset types.     |
-| 5       |  Monitor Asset Devices    | Create dashboards that enable you to visualize asset data using asset device data.      |
-| 6       |  Monitor Anomalies        | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.       |
-| 7       |  Facilitator Instructions | Pre-requisites instructions to facilitators of this lab. |
+|  Lab    | Status            | Learning Objectives       | Description      |
+|: ------:|:-----------------:|:-------------------------:|:-----------------|
+| 1       | Under Development |  Monitoring Introduction  | Explore Monitoring Dashboards for Facilities |
+| 2       | Under Development |  Connect Devices          | Connect devices and define asset types.     |
+| 3       | Under Development |  Monitor Asset Devices    | Create dashboards that enable you to visualize asset data using asset device data. |
+| 4       | Under Development |  Monitor Anomalies        | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.       |
+| 5       | Under Development |  Connect Historian        | Install [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational Technology data.|
+| 6       | Under Development |  Monitor SCADA Systems    | Create dashboards that enable you to visualize asset data using asset OT data.       |
+| 7       | Under Development |  Facilitator Instructions | Pre-requisites instructions to facilitators of this lab. |
 
 ### Learning Paths
 
-|  Your Interest                                           | Recommended Labs | Duration (mins)   |
-|:--------------------------------------------------------:|: ------------------:|:-----------------:|
-|  Quick Introduction to Monitoring Dashboards             | 1                   |     30 Minutes    |
-|  Remote Operational Monitoring of SCADA Systems          | 2 and 3             |     2 hours       |
-|  Operational Monitoring of Assets Using Device Sensors   | 4 and 5             |     2 hours       |
-|  Anomaly Detection                                       | 6                   |     2 hours       |
+|  Your Learning Goals                                     | Recommended Labs    | Time Needed (mins) |
+|:--------------------------------------------------------:|: ------------------:|:------------------:|
+|  Quick Introduction to Monitoring Dashboards             | 1                   |     45 Minutes     |
+|  Operational Monitoring of Assets Using Device Sensors   | 2 and 3             |     2 hours        |
+|  Anomaly Detection                                       | 4                   |     1 hours        |
+|  Remote Operational Monitoring of SCADA Systems          | 5 and 6             |     2 hours        |
 
 
 ## Overview of Maximo Asset Monitor
@@ -66,7 +66,6 @@ Many clients have already adopted Maximo for Enterprise Asset Management (EAM), 
 Here is a high level functional architecture of Maximo Asset Monitor
 ![Monitor Architecture](img/architecture.png)
 
-http://127.0.0.1:8000/architecture.png
 ### Included Services
 IBM Maximo Asset Monitor includes the following IBM Cloud services that help you achieve the above business benefits to scale monitoring to the enterprise:
 

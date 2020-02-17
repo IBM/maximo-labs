@@ -1,17 +1,14 @@
 # Overview
 
-In this hands-on lab module you will get a quick introduction to IBM Maximo Asset Monitor. You will learn about Monitor's capabilities:
+In this lab you will get a quick introduction to IBM Maximo Asset Monitor. You will learn about Monitor's capabilities:
 
 * Included services.
 * How to create view summary and asset dashboards
 * Create summary and asset dashboard to view asset condition metrics and related asset operational status.
 
-## Getting Started
-In this section, attendees logs into the Maximo Asset Monitor solution using a shared "thinkiot" user
-Open browser
-Go to ibm.biz shortcut
-Log in
-
+## Before You Begin
+This lab requires that you:
+1.  Have the pre-requisites required for [all labs](../facilitator_instructions)
 
 ## Exploring the robot data metrics
 In this section the attendees will explore  the robot arm entity type, metrics and dimensions
