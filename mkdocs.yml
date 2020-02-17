@@ -10,6 +10,6 @@ nav:
     - 4. Monitor Anomalies: monitor_anomalies.md
     - 5. Connect Historian: connect_historian.md
     - 6. Monitor SCADA Systems: monitor_scada.md
-    - 7. Facilitator Instructions: facilitator_instructions.md
+    - 7. Pre-Requisite Instructions: facilitator_instructions.md
     - 8. Contributing: about.md
 theme: readthedocs

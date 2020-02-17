@@ -11,14 +11,14 @@ Maximo Asset Monitor connects devices, ingests device data, and transforms that 
 
 ## Getting Started
 
-You can choose which modules to complete in this lab based on your role and the amount of time you have available. The available learning paths and modules are listed in the table below.
+You can choose which labs to complete based on your learning objectives,  the amount of time you have available. The available learning paths and labs are listed in the table below.
 
-### Modules
+### Labs
 
-|  Module | Name                      | Description      |
-|: ------:|:----------------------------:|:-----------------|
-| 1       | Monitoring Introduction  | Explore Monitoring Dashboards for Facilities |
-| 2       |  Connect Historian           | Install and configure a [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational/ Technology data from a SCADA historian database. |
+|  Lab    | Learning Objectives       | Description      |
+|: ------:|:-------------------------:|:-----------------|
+| 1       |  Monitoring Introduction  | Explore Monitoring Dashboards for Facilities |
+| 2       |  Connect Historian        | Install [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational Technology data.|
 | 3       |  Monitor SCADA Systems    | Create dashboards that enable you to visualize asset data using asset OT data.       |
 | 4       |  Connect Devices          | Connect devices and define asset types.     |
 | 5       |  Monitor Asset Devices    | Create dashboards that enable you to visualize asset data using asset device data.      |
@@ -27,7 +27,7 @@ You can choose which modules to complete in this lab based on your role and the 
 
 ### Learning Paths
 
-|  Your Interest                                           | Recommended Modules | Duration (mins)   |
+|  Your Interest                                           | Recommended Labs | Duration (mins)   |
 |:--------------------------------------------------------:|: ------------------:|:-----------------:|
 |  Quick Introduction to Monitoring Dashboards             | 1                   |     30 Minutes    |
 |  Remote Operational Monitoring of SCADA Systems          | 2 and 3             |     2 hours       |

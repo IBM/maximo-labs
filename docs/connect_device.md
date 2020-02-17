@@ -1,11 +1,22 @@
 #  Connecting a Physical Device
-Now that you have done some initial exploring of the IoT Platform and you have connected a simulated device, it’s time to connect a real, physical device. For the purposes of this hands-on exercise you will use a “Nordic Thingy.”
-
-Learn more about the Nordic Thingy and its various sensors here:
+Now that you have done some initial exploring of the IoT Platform and you have connected a simulated device, it’s time to connect a real, physical device. For the purposes of this hands-on exercise you will use a “Nordic Thingy.”  Learn more about the Nordic Thingy and its various sensors here:
 https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52
 
+# Before You Begin
+This lab requires that you:
+
+1.  Have a Nordic Thingy. You can [purchase](../facilitator_instructions) or have a Nordic Thingy before you begin this lab.  
+
+2.  Have a workstation that has:
+
+    *  Chrome browser
+
+    *  Is connected to the internet
+
+    *  Access to a Maximo Asset Environment
+
 ## Connect Nordic Thingy to the Internet
-Let’s connect the Thingy to the internet using  your Chrome on your computer. You first need to pair the Thingy via Bluetooth to your computer.  Google Chrome has a built in Bluetooth listener.  Using the connectivity page below you can connect to the internet and the Maximo Asset Monitor Cloud Service.   
+Let’s connect the a Nordic Thingy to the internet using  your Chrome on your computer. You first need to pair the Thingy via Bluetooth to your computer.  Google Chrome has a built in Bluetooth listener.  Using the connectivity page below you can connect to the internet and the Maximo Asset Monitor Cloud Service.   
 
 1.  Carefully remove the rubber overlay to find the power switch next to the micro-usb port.  A blue light should illuminate when the device is powered up.
 
