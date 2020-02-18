@@ -1,104 +1,76 @@
 #  Connecting a Physical Device
-Now that you have done some initial exploring of the IoT Platform and you have connected a simulated device, it’s time to connect a real, physical device. For the purposes of this hands-on exercise you will use a “Nordic Thingy.”  Learn more about the Nordic Thingy and its various sensors here:
-https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52
+Now that you have done some initial exploring of the IoT Platform and you have connected a simulated device, it’s time to connect a real, physical device. For the purposes of this hands-on exercise you will use a “Nordic Thingy.”  Learn more about the Nordic Thingy and its various sensors [here](https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52)
 
 # Before You Begin
 This lab requires that you:
 
-1.  Have a Nordic Thingy. You can [purchase](../facilitator_instructions) or have a Nordic Thingy before you begin this lab.  
-
-2.  Have the pre-requisites required for [all labs](../facilitator_instructions)
+1.  Have a Nordic Thingy. You can [purchase](../facilitator_instructions) Nordic Thingy.  
+2.  Have completed the pre-requisites required for [all labs](../facilitator_instructions)
 
 ## Connect Nordic Thingy to the Internet
 Let’s connect the a Nordic Thingy to the internet using  your Chrome on your computer. You first need to pair the Thingy via Bluetooth to your computer.  Google Chrome has a built in Bluetooth listener.  Using the connectivity page below you can connect to the internet and the Maximo Asset Monitor Cloud Service.   
 
 1.  Carefully remove the rubber overlay to find the power switch next to the micro-usb port.  A blue light should illuminate when the device is powered up.
-
 2.  Power on the Nordic Thingy. Push the tiny switch to the left of the micro-web port
-
 3.  Use Bluetooth in the Google Chrome Browser to connect your device to the internet.  Open a tab with this web address:  [https://nrf52t.mybluemix.net/?edit](https://nrf52t.mybluemix.net/?edit).
-
-4.  This method will only work on  you’ll need to revisit if you get disconnected at any point. Click the blue “Connect” button.
-
+4.  This method will only work on Google Chrome as it has a built in Bluetooth listener. Below is the connectivity page you’ll need to revisit if you get disconnected at any point. you’ll need to revisit if you get disconnected at any point. Click the blue “Connect” button.
 ![Connect Thingy in Chrome](img/i8.png)
-
 5. In the list of devices, find the one matching your device, select it and click “Pair.” You may need to rename the Thingy if you are in close range with others also using their own Thingy.
-
 ![Pair Bluetooth](img/i9.png)  
-
 6. 	Once paired, you should see the following screen which shows IoTP connection status as well as some of the sensor values coming from the Thingy.
-
 ![Thingy Status in Chrome](img/i10.png)  
-
 7. 	The top righthand corner button will say “connecting”. Notice the IoTP indicator does not have a checkmark. This is because it is not yet connected to the IoT Platform. To connect it up, copy or make note of the Thingy name and, in a new tab or window, you will next connect the Thingy to IoT Platform service included with Maximo Asset Monitor.
 
 ## Connect Nordic Thingy to Maximo Asset Monitor
 The Nordic Thingy has connectivity to the internet.  You must first register devices with Maximo Asset Manager before they can securely send and persist data there.
 
 1.  Navigate to and bookmark the Maximo Asset Monitor Dashboard page.  You will use this throughout the lab. [https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true)  You are put on the Home screen
-
-2.	Log in to the Monitor.
-
-![Login to Maximo Asset Monitor](img/i11.png)
-
-3.  After logging in, you’ll land in Home Screen.”  See step 2 in the Before you begin section if you don't have an IBM ID to login or having trouble accessing the environment.
-
-![Maximo Asset Monitor Home](img/i12.png)
-
-3.  Click the “Connect” tab (third icon in the side menu)
-
-![Connect Devices Menu](img/i14.png)
-
-4.  Click the “Connect” button (icon in the side menu)
-
-![Connect Devices Launch Button](img/i14.png)
-
-5.  Please open and refer to the email sent to you by Paulina Thomas concerning your pre-made Device ID/Thingy name, Device Type, and Authentication Token. Please search and confirm that your Device ID and Device Type are present.
-
-6. 	Navigate back to the Thingy page showing the sensor values and place the following into the “Token” field:
-
-```
-<Auth Token>:<Device Type >:<Org ID>
-```
-
-Example:
-```
-+A0@WxGamw*wcGiI+:smith_thingy:eefdu2
-```
-6.  Click the “Write” button to write the token to the Thingy. You should see the IoTP indicator turn green if successful
-
-7.  You should also now see data flowing from the Thingy to your corresponding Device ID in the IoTP back in the devices tab. Flip the Thingy upside down to create an error condition. It will beep and the light will turn red. Click on one of the rows to see the vent payload json file. Notice the “err” value in the payload changes to 1.
-
-8. Press the large black button on the top of the Thingy to clear the error.
+2.	Log in to the Monitor.  Click on the Login Button
+![Login to Maximo Asset Monitor](img/i11.png)&nbsp;
+3.  After logging in, you’ll land in Home Screen.”  See step 2 "Before You Begin" if you don't have an IBM ID to login or having trouble accessing the environment.
+![Maximo Asset Monitor Home](img/i12.png)&nbsp;
+4.  Click the “Connect” tab (third icon in the side menu)
+![Connect Devices Menu](img/i13.png) &nbsp;
+5.  Click the “Connect” button (icon in the side menu) &nbsp;
+![Connect Devices Launch Button](img/i14.png) &nbsp;
+6.  A new page will open. Navigate to the `Device Types` tab
+![Devices Types Tab](img/i14b.png) &nbsp;
+7.  Click on `Add Device Type` button in the top right corner.
+![Devices Types Tab](img/i16.png) &nbsp;
+8.  Now Create a new device type and name it `<your last name>_thingy`. For example, `smith_thingy.` In the figures below, you will see that the device type name has a dash in it. DO NOT PUT A DASH OR PERIOD IN YOUR DEVICE TYPE NAME. There is an issue in Monitor right now where the pipeline will break if there is a dash or period in your device type name.
+![Devices Types Add Type](img/i17.png) &nbsp;  
+![Devices Tab](img/i19.png) &nbsp;
+9.  Click “Next” until you get past “Finish.” You’ve finished creating a device type.
+10.  Now you will register a new device using the Device Type you just created. Make sure to name the device the same name as your Thingy from the earlier step.  Navigate back to the “Browse” tab and “Add Device”
+![Devices Add Device](img/i15a.png) &nbsp;
+![Devices Add Device Information](img/i18.png) &nbsp;
+![Devices Add Device](img/i20.png) &nbsp;
+11.  Once you finish creating the device, make sure you copy and make note of the device credentials!  Your device must provide device credentials to connect to the IOT Platform Service.
+![Devices Add Device Finish](img/i21.png) &nbsp;
+12.  Navigate back to the Thingy page showing the sensor values and place the following into the `Token` field: `<Auth Token>:<Device Type >:<Org ID>` For example: `+A0@WxGamw*wcGiI+:smith.thingy:eefdu2`
+13.  Click the “Write” button to write the token to the Thingy. You should see the IoTP Connect  indicator turn green if successful.
+![Devices Add Device Finish](img/i22.png) &nbsp;
+14.  You should also now see data flowing from the Thingy to your corresponding Device ID in the IoTP back in the devices tab. Flip the Thingy upside down to create an error condition. It will beep and the light will turn red. Click on one of the rows to see the vent payload json file. Notice the “err” value in the payload changes to 1.
+![Devices Add Device Finish](img/i23.png) &nbsp;
+15.  Press the large black button on the top of the Thingy to clear the error.
 
 # Interfaces, Rules and Notifications
 In this next section you will take a look at how you can create physical and logical interfaces, define conditional [rules and notifications](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/platform/reference/embeddedrules/index.html). After you will create an alert notification when the Nordic Thingy has an error condition.
 
 1.  First, make sure your Nordic Thingy is turned on and actively sending sensor data to the IoTP. You may need to reconnect it using this web link: https://nrf52t.mybluemix.net/?edit
-
 2. You can check it is connected by clicking the “Browse” tab in the IoTP and searching the devices list for device status and recent events.
-
 3.  Navigate to the device type for your Thingy and click on the “Interfaces” tab. Make sure “Advanced Flow” is selected and click the “Create Physical Interface” button.
-
 4.  Leave the default name for the physical interface and then click “Next.” Click the “+ Create event type” button on the next page. If your Nordic Thingy is still actively sending events, then you should see the “status” event show up. If the ‘status’ event does not automatically appear , check the connectivity back in ‘Browse’ in the device list. Select it and then click “Add.” Finally, click “Done” to complete the creation of the physical interfaces.
-
 5.  Next, click on the “+ Create Logical Interface” button to begin creating the logical interface. Leave the default name as is and click “Next.” Click the “+ Add Property” button, expand the “d” and select and save the “err” property.  
-
 6.  Let’s do the same for “temperature”, except this time we’ll use the mapping field to convert the temperature from Celsius to Fahrenheit. So, add property and select temperature. Then in the mapping field, click the pencil to edit and add the following equation: d.temperature * 1.8 + 32. Notice that to input the numbers “1.8” and “32” you have to first select the “Value” operator. If you switch the Advanced Editor button, you may run into syntax issues so be careful if you challenge yourself to type it that way.
 Click the green check mark when complete and then click save.  
-
 7.  Add the remaining properties. You should see the following before clicking “Next.”
-
 8. Click “Next” to move onto “Notifications.” Notifications allow you to take action when certain conditions occur.
-
 9. Change the “State Update Notification” criteria to “State Changes.” Make sure to hit the “Apply” button to save changes.
-
 10.  Click the “Add Notification” button. We want to notify when the Thingy’s error condition is set to 1.
 $state.err = 1
 Enter the Name, description, criteria and condition as shown below. Then click “Apply” and “Done”.
-
 11.  The interface creation is almost complete. Back in the interface view, click the “Activate” button and activate the interfaces. If successful, you should see a green rocket ship icon next to each interface.
-
 12. You can check to see if your interface is working, by browsing to your device, select the “State” tab and switch the interface to your newly created interface. Temperature should now be shown in Fahrenheit.
 
 # Process Data
