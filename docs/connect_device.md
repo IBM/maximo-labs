@@ -115,11 +115,12 @@ This next exercise focuses how and what database tables your device data is stor
 
 1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.
 ![Device Data State](img/i39.png) &nbsp;
-2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 called IOT_<Device Type Name>.  To see the table go back to your Monitor tab (https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo) then click `Usage` tab.
+2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 called IOT_<Device Type Name>.  To see the table go back to your Monitor tab (https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo) then click `Services` tab.
+![Services](img/i41a.png) &nbsp;
 3. Click `View Details`
-![DB2 Credentials](img/i40.png) &nbsp;
+![Services](img/i41b.png) &nbsp;
 4. Next to Db2 Warehouse on Cloud, and click `Launch`
-![Search Entity Types](img/i41.png) &nbsp;  
+![DB2 Credentials](img/i40.png) &nbsp;
 5. Copy and paste the `username` and `password` from the `View Details` window into the Db2 login page.
 ![Search Entity Types](img/i42.png) &nbsp;
 5. The DB2 page opens in another tab.  You may see a second log in dialog labeled `Attention` to change your DB2 password. Ignore the second login dialog.
