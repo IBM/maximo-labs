@@ -1,6 +1,6 @@
 # Introduction
 
-Customers that have Operational Technology data from SCADA systems that incrementally store industrial process data in a historian database can publish that data Maximo Asset Monitor.   This module explains how to install and configure a IBM Watson IoT Bulk Data Ingest Connector for SCADA to publish historian time series data into IBM Maximo Asset Monitor.  The [IBM Watson IoT Bulk Data Ingest Connector for SCADA](https://github.com/ibm-watson-iot/mas-scada-bulkingest) is an open source asset and supported by the Community.
+Customers that have Operational Technology data from SCADA systems that incrementally store industrial process data in a historian database can publish that data Maximo Asset Monitor.   This lab explains how to install and configure a IBM Watson IoT Bulk Data Ingest Connector for SCADA to publish historian time series data into IBM Maximo Asset Monitor.  The [IBM Watson IoT Bulk Data Ingest Connector for SCADA](https://github.com/ibm-watson-iot/mas-scada-bulkingest) is an open source asset and supported by the Community.
 
 # Before You Begin
 

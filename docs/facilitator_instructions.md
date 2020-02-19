@@ -4,16 +4,18 @@ Here are the require pre-requisites for all labs in this hands on lab guide
 
 ## All Labs
 
-All labs require:
+All labs require that you have:
 
-1.  Access to a Maximo Asset Environment.   To get access to the Monitor Environment please send an email to your lab instructor or  carlos.ferreira1@ibm.comm
+1.  A computer with a Chrome browser, internet connectivity and Bluetooth connectivity.
 
-2.  IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?)
+2.  User access to a Maximo Asset Environment.   To get access to the `Monitor-Demo` tenant, please send an email to your lab instructor or  `carlos.ferreira1@ibm.com`
 
-  * Click on Login to MY IBM button
-  * Click Create an IBM ID link
+3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?)
 
-3.  Test your access to the Maximo Asset Monitor Environment.  If you are using tenant id  "Monitor-Demo"  you can try using this [UR](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&isAPM=true)
+  * Click `Login` to MY IBM button
+  * Click `Create an IBM ID` link
+
+4.  Test your access to the Maximo Asset Monitor Environment.  If you are using tenant id  "Monitor-Demo"  you can try using this [UR](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&isAPM=true)
 
 ## Lab 1
 Ensure there are computers with a browser and network connectivity to Monitor-Demo tenant URL.
@@ -52,7 +54,7 @@ If you are an IBMer follow these instructions for expensing the Nordic Thingy
 
 4.	Create a Report and fill in the boxes: Report Name, Business Purpose, Report Category, and the Cost Center you will be charging it too. Report the purchase under “Non-Travel Expenses”. Save the Report.
 
-5.	Click on the Expense and make the Expense Type “Emergency Purchase” and the Expense Subtype ”PC Supplies”. Give the Description box a meaningful description to why you’re purchasing the Nordic Thingy:52. Save the expense.
+5.	Click `Expense` and make the Expense Type `Emergency Purchase` and the Expense Subtype `PC Supplies`. Give the Description box a meaningful description to why you’re purchasing the Nordic Thingy:52. Save the expense.
 
 6.	Submit the Report.
 

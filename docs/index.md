@@ -2,16 +2,17 @@
 
 Welcome to the IBM Maximo Asset Monitor Hands on Lab.  In this hands-on lab you will learn how to get started with IBM Maximo Asset Monitor. You will learn about Monitor's capabilities to:
 
+* Connect devices
 * Ingest data from devices or SCADA systems
 * Transform data into asset information
 * Be alerted about which assets are not performing normally
-* Create summary and asset dashboard to view asset condition metrics and related asset operational data.
+* Create system summary and asset dashboard to view asset condition metrics and related asset operational data.
 
 Maximo Asset Monitor connects devices, ingests device data, and transforms that data into meaningful insights through visualizations such as time series line and bar charts, tabular reports, and interactive diagrams. Watson IoT Platform and its additional add-on services enable organizations to capture and explore data for devices, equipment and machines, and discover insights that can drive better decision-making.
 
 ## Getting Started
 
-You can choose which labs to complete based on your learning objectives,  the amount of time you have available. The available learning paths and labs are listed in the table below.
+You can choose which labs to complete based on your learning objectives,  the amount of time you have available. The available learning paths and labs are listed in the table below.  Each lab includes multiple exercises with step by step directions.  
 
 ### Labs
 
