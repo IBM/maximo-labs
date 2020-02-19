@@ -16,15 +16,15 @@ You can choose which labs to complete based on your learning objectives,  the am
 
 ### Labs
 
-|  Lab    | Status            | Learning Objectives       | Description      |
-|: ------:|:-----------------:|:-------------------------:|:-----------------|
-| 1       | Under Development |  Monitoring Introduction  | Explore Monitoring Dashboards for Facilities |
-| 2       | Under Development |  Connect Devices          | Connect devices and define asset types.     |
-| 3       | Under Development |  Monitor Asset Devices    | Create dashboards that enable you to visualize asset data using asset device data. |
-| 4       | Under Development |  Monitor Anomalies        | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.       |
-| 5       | Under Development |  Connect Historian        | Install [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational Technology data.|
-| 6       | Under Development |  Monitor SCADA Systems    | Create dashboards that enable you to visualize asset data using asset OT data.       |
-| 7       | Under Development |  Facilitator Instructions | Pre-requisites instructions to facilitators of this lab. |
+|  Lab    | Status            | Learning Objectives         | Description      |
+|: ------:|:-----------------:|:---------------------------:|:-----------------|
+| 1       | Under Development |  Monitor Introduction       | Explore Monitoring Dashboards for Facilities |
+| 2       | Under Development |  Connect Devices            | Connect devices and define asset types.     |
+| 3       | Under Development |  Monitor Assets             | Create dashboards that enable you to visualize asset data using asset device data. |
+| 4       | Under Development |  Monitor Anomalies          | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.     |
+| 5       | Under Development |  Ingest SCADA Data          | Install [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational Technology data.|
+| 6       | Under Development |  Monitor SCADA Systems      | Create dashboards that enable you to visualize asset data using asset OT data.     |
+| 7       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
 
 ### Learning Paths
 

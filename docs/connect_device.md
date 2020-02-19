@@ -1,4 +1,4 @@
-#  Connecting a Physical Device
+#  Connect a Physical Device
 Now that you have done some initial exploring of the IoT Platform and you have connected a simulated device, it’s time to connect a real, physical device. For this exercise you will use a “Nordic Thingy.”  Learn more about the Nordic Thingy and its various sensors [here](https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52)
 
 # Before You Begin
@@ -110,28 +110,22 @@ You will create an alert notification when the Nordic Thingy has an error condit
 16. You can check to see if your interface is working, by browsing to your device, select the `State` tab and switch the interface to your newly created interface. Temperature should now be shown in Fahrenheit.
 ![Check Physical Interface State Events](img/i38.png) &nbsp;  
 
-# Process Data
-This next exercise focus on how to apply functions to:
+# Store Data
+This next exercise focuses how and what database tables your device data is stored in.  Make sure you have completed the earlier exercises in this lab. You should already have device type with an active physical and logical interface and that you have at least one device of that type sending data.
 
-*  Calculate key performance metrics using logical interface data
-*  Augument asset data with related key performance indicators from other external data sources.  Examples include weather or mainteance information services.
-
-## Before You Begin
-Make sure you have completed the earlier exercies in this lab. You should already have device type with an active physical and logical interface and that you have at least one device of that type sending data.
-
-1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoTP and checking your devices status, recent events and state. You should see values update when look at the state interface.
-2. When device data flows through a physical and logical interface, the IoT Platform then flows that data into the Data Lake within DB2. It creates a table called IOT_<Device Type Name>. Go back to your Monitor webpage (https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo) then click `Usage` tab.
+1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.
+![Device Data State](img/i39.png) &nbsp;
+2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 called IOT_<Device Type Name>.  To see the table go back to your Monitor tab (https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo) then click `Usage` tab.
 3. Click `View Details`
+![DB2 Credentials](img/i40.png) &nbsp;
 4. Next to Db2 Warehouse on Cloud, and click `Launch`
-4. Copy and paste the `username` and `password` from the `View Details` window into the Db2 login page.
-5. You will see a second log in prompt and an `Attention` dialog. Ignore the second change login dialog to change the password.
-6. Click top left hamburger button.  
+![Search Entity Types](img/i41.png) &nbsp;  
+5. Copy and paste the `username` and `password` from the `View Details` window into the Db2 login page.
+![Search Entity Types](img/i42.png) &nbsp;
+5. The DB2 page opens in another tab.  You may see a second log in dialog labeled `Attention` to change your DB2 password. Ignore the second login dialog.
+6. On the DB2 Click top left hamburger button.
+![Search Entity Types](img/i43.png) &nbsp;
 7. Under Explore click tables -> `BLUADMIN` Find your `IOT_<Device Name>` table. Click `View Data` button to see the data.  
-8.  Now that you know the data is successfully flowing into IOT Platform Service, it is time to take a look at that data Maximo Asset Manager dashboards. Go to the previous browser tab with Maximo Asset Monitor, click `Monitor`. Here you can see all of the entity types ([logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/developing/connect.html) that were created from your device types) and metrics (device properties) being collected and analyzed.
-9.  Hover over your entity type and click `View` button to explore your entities.
-10.  On the page for your entity type, you should see your device with the same name in a list format under a heading “Instance Dashboards.” Select it, then click `Metrics` tab on the right-hand side. Here you can explore charts showing the values of the properties over time. It may take it several minutes to accrue enough data to visualize, take a break and return after ten or so minutes. Scroll down a bit to view the charts for pressure and temperature.
-11.  The above charts show data for one device at a time. What if we want to view aggregate data across all devices of the same entity type? You can use the `Data` tab to see that information. Navigate back to the landing page for your entity type. Click `Data` tab to view aggregate data for your entity type.
-12.  In the data view on the left-hand side, select the “battery” metric. The chart on the right will show the minimum and maximum battery percentage across all entities. This chart fills up over time.
-13.  Take some time to explore the data for some of the other metrics. Flip your Thingy over to cause an error condition. After a few minutes, you should see the chart for the “err” metric updated showing the value change.
+![Search Entity Types](img/i44.png) &nbsp;
 
-In the next lab you will creating a Monitor Dashboard to monitor your Thingy.
+In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
