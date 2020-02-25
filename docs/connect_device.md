@@ -21,6 +21,7 @@ Let’s connect the a Nordic Thingy to the internet using  your Chrome on your c
 ![Thingy Status in Chrome](img/i10.png)  
 7. 	The top righthand corner button will say “connecting”. Notice the IoTP indicator does not have a checkmark. This is because it is not yet connected to the IoT Platform. To connect it up, copy or make note of the Thingy name and, in a new tab or window, you will next connect the Thingy to IoT Platform service included with Maximo Asset Monitor.
 
+
 ## Connect Nordic Thingy to Maximo Asset Monitor
 The Nordic Thingy has connectivity to the internet.  You must first register device types and then devices with the IOT Platform service included with Maximo Asset Manager before they can securely send and persist data there.
 

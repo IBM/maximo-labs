@@ -1,5 +1,5 @@
 # View Data
-Now that you know the data is successfully flowing into IOT Platform Service, it is time to take a look at that data Maximo Asset Manager dashboards. Go to Maximo Asset Monitor page.
+Now that you know the data is successfully flowing into IOT Platform Service, in this exercise you will see what data dashboards are automatically created for you in Maximo Asset Manager dashboards. Go to Maximo Asset Monitor page.
 
 1. Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/developing/connect.html).  An entity is created for each mapped device ID along with it's corresponding properties.
 2.  Search for your Entity Type `<your last name>_thingy`
@@ -18,7 +18,7 @@ Now that you know the data is successfully flowing into IOT Platform Service, it
 ![Metrics Page](img/i78.png) &nbsp;  
 
 # Analyze Data
-Now that you have device data, it is time to further analyze and process that data so that remote operations managers can take action using intelligent insights.  
+In the previous exercise you saw how you can see the raw device data in Monitor Dashboards, in this exercises you will learn how perform data analysis and transform data so that remote operations managers can take action using intelligent insights.  
 
 1.  Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/developing/connect.html).  An entity is created for each mapped device ID along with it's corresponding properties.
 2.  Search for your and click on your Entity Type `<your last name>_thingy`
@@ -38,59 +38,64 @@ Now that you have device data, it is time to further analyze and process that da
 10.  Replace the calculated `output metric` name with your own like `Daily_Temperature_Mean`
 11.  Leave everything else as default and click `Create` to save the metric.  This calculated metric is calculating a daily mean. If you wanted to calculate an `Hourly_Temperature_Mean`, you can set the `Granularity` to `Hourly` on the output dialog.
 12.  You should now see your new calculated metric in the metrics list on the left-hand side.
+13.  Click the `Configure` button to update calculated metrics.
 ![Calculated Metrics](img/i83.png) &nbsp;  
+14.  Click `Next` and `Schedule` icon to change the schedule of how often the mean is calculated.  You can change the frequency of how often hourly mean is calculated changing it from every 5 minutes to every hour.   You can also change how many days back the mean temperature function should calculate for using historical temperature data.    
+![Calculated Metrics](img/i84.png) &nbsp;  
+15.  Click `Update` to save your function configuration changes.
 ---
 **Note:**
 Calculated functions by default are scheduled to run every 5 minutes.  Check back to later see if the metric is being calculated.
 ---
-
-
- Congratulatons!.  You have learned how to view the metrics of your entities as well as create new, calculated metrics from that data.
+ Congratulations.  You have learned how to view the metrics of your entities as well as create new, calculated metrics from that data.
 
 # Alerts
-1. Configure the alert to trigger an alert when the value of a metric-name `Hourly_Sum_Errors`
-![Calculated Metric Using Sum](img/i75.png) &nbsp;  
-2. Click `+` button access the Function Catalog.
-3. Search on `Alert`
-4. Select the `AlertExpression` function and then click `Select` button.
-7. Configure the alert to trigger an alert when the value of a metric-name `Hourly_Sum_Errors`
-![Calculated Metric Using Sum](img/i75.png) &nbsp;  
-reaches 24 errors.  It will require investigation of the errors.  Using the format `df['metric-name']`
-8.  Set Alert Expression `expression` value to `df['“Hourly_Sum_Errors']>24`
-9.  Set Alert Expression `Severity` value to `df['“Hourly_Sum_Errors']>24`
-10.  Set Alert Expression `Status` value to `New`  Alerts start in state of `new` until they are `acknowledged`, `validated` and finally `resolved` or `dismissed`
-![Calculated Metric Using Sum](img/i76.png) &nbsp;  
-11.  Name the alert `Error_Alert`
 
-In the create alert dialog, “Data Items” list, select the “Hourly_Sum_Errors” metric that you created in the last section.
+In this exercises you will learn how to create alerts. Alerts are function in the catalog that can be configured to notify you that certain asset conditions that requires attention.  There are a variety of alert functions included in the catalog like `High`, `Low` and `Alert Expression Filter`.  These alerts are functions that can be scheduled to run every five minutes or less frequently.  Unlike IOT Platform Service notifications, that are invoked immediately when data is ingested into the Kafka streams and provide an `Action` application programming interface to integrate with other systems.
 
-5.3  Next, you need to add a condition expression. The Analytics Service uses Python for its expression language. Place the following expression into the “expression” field: ${Hourly_Sum_Errors} > 5
-More information on writing expressions can be found in the documentation here: https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/analytics/as_add_custom_ expressions.html
+1. Use what you learned in the previous exercise to create a calculated metric named `Hourly_Sum_Errors` to sum up all the alert errors created by pressing the button on your Nordic Thingy using the `Sum` function in the Catalog.  After you will create an alert to be notified when the hourly sum of errors exceeds 10 using the instructions below.
+2. Configure an alert using the value of a metric-name `Hourly_Sum_Errors` created in the previous step. ![Calculated Metric Using Sum](img/i85.png) &nbsp;  
+3. Click `+` button access the Function Catalog.  ![Calculated Metric Using Sum](img/i79.png) &nbsp;  
+4. Search on `Alert`
+5. Select the `AlertExpression` function and then click `Select` button.  ![Calculated Metric Using Sum](img/i86.png) &nbsp;  
+6. Configure the alert to trigger an alert when the value of a metric-name `Hourly_Sum_Errors`reaches 24 errors.  It will require investigation of the errors.  Monitor uses Python for its expression language  Using the format `df['metric-name']`
+7.  Set Alert Expression `expression` value to `df['Hourly_Sum_Errors']>24`
+8.  Set Alert Expression `Severity` value to `df['Hourly_Sum_Errors']>24`
+df['Hourly_Sum_Errors']>24
+9.  Set Alert Expression `Status` value to `New`  Alerts start in state of `new` until they are `acknowledged`, `validated` and finally `resolved` or `dismissed` ![Configure Alert Expression](img/i87.png) &nbsp;  
+10.  Name the alert `Hourly_Sum_Errors_Alert`  The Monitor pipeline runs every 5 minutes.  If you have flipped over your Thingy more than five times, you should see the alert show up on the chart in about five minutes.  ![Configure Alert Expression](img/i88.png) &nbsp;
 
-5.4  Click “Next” and then give the new alert the name “Error Alert” and then click “Create” to complete the creation of the alert.
+Congratulations.  You have learned how to create new Alerts from a calculated metric that sums the total number of errors that occur on an asset device.  You can also receive alerts on a device event stream topic and take action. That is beyond the scope of these materials. Find out more information on how to configure these actions in the [documentation](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/analytics/as_custom_actions.html)
 
-5.5  If you have flipped over your Thingy more than five times, you should see the alert show up on the chart in about five minutes.
+You can also create you and register your custom functions in the catalog.  This is an advanced topic and goes beyond the scope of this lab. You can learn more in this tutorial for creating custom functions in the  [documentation](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/analytics/tutorials/as_adding_complex_function_tutorial.html)  You can also explore a sample Hello World custom function in [GitHub](https://github.com/madendorff/functions)
 
-5.6  You can also receive alerts on an Event Streams topic and take action. That is beyond the scope of these materials. Find out more information on how to configure these actions in the help here: https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/analytics/as_custom_a ctions.html
-5.7  In this last set of steps, you will explore a prepopulated sample within the Analytics Service. In the IoT Platform, navigate to the “Monitor” tab. Search for the entity type called “Fluke.”
+# Troubleshoot Functions
 
-5.8  Under the title “Instance Dashboards,” you can see entities/device ids under the Fluke entity type/device type. The attributes “System,” “Site,” “Part,” etc. are Dimensions. You will learn how to create dimensions for your own entity type in Section 6. Click one of the device ids to see an instance dashboard. You can create instance dashboards the same way you create summary dashboards in Sections 6-9.
+# Create a Monitor Instance Dashboard
 
-5.9  Now switch to the “Data” tab to view the aggregated metrics for all of the sensors in the Fluke entity type. There are lots of calculated metrics. Take some time to explore the calculated metrics. You can click the configure button on any of the calculated metrics to see what functions are used.
-
-5.10 Some of these metrics were calculated with “Custom Functions.” In fact, this entire sample robot data was calculated using a custom function. As stated earlier, a custom function is a multi-argument calculation that produces one or more output items (KPIs). Typically, the custom functions you write involve multiple lines of code. Custom functions you develop must be stored in a python package in an external repository, such as GIT, and registered with Watson IoT Platform Analytics.
-Creating and registering custom functions is an advanced topic and goes beyond the scope of these materials. You can learn more by reviewing the tutorial for creating custom functions in the documentation here: https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/analytics/tutorials/as_a dding_complex_function_tutorial.html
-You can also explore a sample Hello World custom function in GitHub here:
-https://github.com/madendorff/functions
-
-## Create a Monitor Dashboard
-
-Inside of your Entity Type homepage, right when you log in for the first time you will see a Dashboard card called `Hourly`. Upon clicking on the card, you will most likely see a dashboard that looks like this:
+In this exercises you will learn how to create summary dashboards that aggregate data across multiple entities (Thingies) within your Entity Type homepage, right when you log in for the first time you will see a Dashboard card called `Hourly`. Upon clicking on the card, you will most likely see a dashboard that looks like this:
 
 If you complete the full length Hands on Lab, your dashboard will look something like this. Today, we’ll get you on the right track:
 
+1.  Click `Home`. Here you can see the top level tasks you can do in Monitor. ![Home](img/i89.png) &nbsp;
+2.  Click `Monitor Entities` You will create a simulated set of entities representing an assembly line of robots.
+3.  Click `Create entity type` button. ![Create an Entity Type](img/i90.png) &nbsp;
+4.  Click `Create entity type` button.
+5.  Select on `Sample Robot` and click on `Next`button.  ![Create a Robot Entity Type and simulated robot metrics](img/i91.png) &nbsp;
+6.  Edit the Entity Type name prepending your own initials `Your_Initials_Robots_Type`.![Create a Robot Entity Type and simulated robot metrics](img/i92.png) &nbsp;
+7.  Click `Submit` button.  Monitor will create  a set of robots you can monitor with simulated random data.  
+8.  Expand `Metric` to see the metrics that Monitor has created for your Robots with simulated time series data. ![View recent (Less than 24 hours) Robot metrics across all robots](img/i93.png) &nbsp;
+9.  Expand  `Dimensions` to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by `Manufacturer`. ![View Robot dimensions across all robots](img/i94.png) &nbsp;
+10.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like generating a random number to cause a fault like `abnormal_stop_count`. ![View Robot calculated metric functions](img/i95.png)
+11.  Click the `Dashboards` tab to  to see the list of `Entities`(Robots) in the `Instance Dashboards` table.
+Click
+12.  Click on one of the Robot instance dashboards that have been automatically created for you by Monitor  ![View Robot calculated metric functions](img/i96.png)
+13.  Click on the gear icon to modify the layout of your Robot instance dashboard.  This dashboard template is shared by all robots in your Entity Type. ![View Robot instance dashboard](img/i98.png)
 
-### Add Line Graph Cards
+
+# Create a Monitor Summary Dashboard
+
+## Add Line Graph Cards
 Time series data is represented well as line graphs. Let's display the the critical performance metrics the Thingy is providing so that we can see historical trends and in later labs apply ai models to detect anomalies.
 
 1.  Navigate back to the landing page for your entity type. You will see under “Summary Dashboards” an option to create a new dashboard. Click `+New Summary`.

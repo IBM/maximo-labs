@@ -1,12 +1,10 @@
-# Still Under Development
-
 In this lab you will get a quick introduction to IBM Maximo Asset Monitor. You will learn about Monitor's capabilities:
 
 * Included services.
 * How to create view summary and asset dashboards
 * Create summary and asset dashboard to view asset condition metrics and related asset operational status.
 
-## Before You Begin
+# Before You Begin
 This lab requires that you:
 1.  Have the pre-requisites required for [all labs](../facilitator_instructions)
 

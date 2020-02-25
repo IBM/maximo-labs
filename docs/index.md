@@ -18,23 +18,18 @@ You can choose which labs to complete based on your learning objectives,  the am
 
 |  Lab    | Status            | Learning Objectives         | Description      |
 |: ------:|:-----------------:|:---------------------------:|:-----------------|
-| 1       | Under Development |  Monitor Introduction       | Explore Monitoring Dashboards for Facilities |
-| 2       | Under Development |  Connect Devices            | Connect devices and define asset types.     |
-| 3       | Under Development |  Monitor Assets             | Create dashboards that enable you to visualize asset data using asset device data. |
-| 4       | Under Development |  Monitor Anomalies          | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.     |
-| 5       | Under Development |  Ingest SCADA Data          | Install [SCADA Connector(https://github.com/ibm-watson-iot/mas-scada-bulkingest) to ingest Operational Technology data.|
-| 6       | Under Development |  Monitor SCADA Systems      | Create dashboards that enable you to visualize asset data using asset OT data.     |
-| 7       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
+| 1       | Ready for Use     |  Connect Devices            | Connect devices and define asset types.     |
+| 2       | Ready for Use     |  Monitor Assets             | Create dashboards that enable you to visualize asset data using asset device data. |
+| 3       | Under Development |  Monitor Anomalies          | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.     |
+| 4       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
+| 5       | Under Development |  Contributing to Labs       | How to provide feedback or add submit new content.|
 
 ### Learning Paths
 
 |  Your Learning Goals                                     | Recommended Labs    | Time Needed (mins) |
 |:--------------------------------------------------------:|: ------------------:|:------------------:|
-|  Quick Introduction to Monitoring Dashboards             | 1                   |     45 Minutes     |
-|  Operational Monitoring of Assets Using Device Sensors   | 2 and 3             |     2 hours        |
-|  Anomaly Detection                                       | 4                   |     1 hours        |
-|  Remote Operational Monitoring of SCADA Systems          | 5 and 6             |     2 hours        |
-
+|  Operational Monitoring of Assets Using Device Sensors   | 1 and 2             |     2 hours        |
+|  Anomaly Detection                                       | 3                   |     1 hours        |
 
 ## Overview of Maximo Asset Monitor
 
@@ -75,7 +70,6 @@ IBM Maximo Asset Monitor includes the following IBM Cloud services that help you
 * Security of users and device
 * Extension points for above and create rules on incoming sensor
 * Mapping physical device types to logical interfaces that reflect the asset you want to manage
-
 
 #### IBM Event Streams Service
 
