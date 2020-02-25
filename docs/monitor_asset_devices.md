@@ -71,42 +71,6 @@ You can also create you and register your custom functions in the catalog.  This
 
 # Troubleshoot Functions
 
-# Create a Monitor Instance Dashboard
-
-In this exercises you will learn how to create summary dashboards that aggregate data across multiple entities (Thingies) within your Entity Type homepage, right when you log in for the first time you will see a Dashboard card called `Hourly`. Upon clicking on the card, you will most likely see a dashboard that looks like this:
-
-If you complete the full length Hands on Lab, your dashboard will look something like this. Today, we’ll get you on the right track:
-
-1.  Click `Home`. Here you can see the top level tasks you can do in Monitor. ![Home](img/i89.png) &nbsp;
-2.  Click `Monitor Entities` You will create a simulated set of entities representing an assembly line of robots.
-3.  Click `Create entity type` button. ![Create an Entity Type](img/i90.png) &nbsp;
-4.  Click `Create entity type` button.
-5.  Select on `Sample Robot` and click on `Next`button.  ![Create a Robot Entity Type and simulated robot metrics](img/i91.png) &nbsp;
-6.  Edit the Entity Type name prepending your own initials `Your_Initials_Robots_Type`.![Create a Robot Entity Type and simulated robot metrics](img/i92.png) &nbsp;
-7.  Click `Submit` button.  Monitor will create  a set of robots you can monitor with simulated random data.  
-8.  Expand `Metric` to see the metrics that Monitor has created for your Robots with simulated time series data. ![View recent (Less than 24 hours) Robot metrics across all robots](img/i93.png) &nbsp;
-9.  Expand  `Dimensions` to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by `Manufacturer`. ![View Robot dimensions across all robots](img/i94.png) &nbsp;
-10.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like generating a random number to cause a fault like `abnormal_stop_count`. ![View Robot calculated metric functions](img/i95.png)
-11.  Click the `Dashboards` tab to  to see the list of `Entities`(Robots) in the `Instance Dashboards` table.
-Click
-12.  Click on one of the Robot instance dashboards that have been automatically created for you by Monitor  ![View Robot calculated metric functions](img/i96.png)
-13.  Click on the gear icon to modify the layout of your Robot instance dashboard.  This dashboard template is shared by all robots in your Entity Type. ![View Robot instance dashboard](img/i98.png)
-
-
-# Create a Monitor Summary Dashboard
-
-## Add Line Graph Cards
-Time series data is represented well as line graphs. Let's display the the critical performance metrics the Thingy is providing so that we can see historical trends and in later labs apply ai models to detect anomalies.
-
-1.  Navigate back to the landing page for your entity type. You will see under “Summary Dashboards” an option to create a new dashboard. Click `+New Summary`.
-2.  Next to `Definition`, click `Contents`. Select which data you would like to graphed on your dashboard.  
-3.  Select which aggregation methods  you would like to see on your line graphs for each of your data types (You created these in the Analytics Service chapters).
-4.  Now, click `Dashboard` next to contents. You can drag and drop the line graph cards that you just made in whichever orientation you see fit.
-5.  Once you are content with your dashboard layout, click `Create Summary`. After a few minutes, you will end up with the beginnings of a sophisticated and value driven dashboard.
-6.  Copy and paste the JSON lines 3 to 158 from “Monitor Final JSON without Image.json” into the top of the card array of your exported JSON. Copy and paste the JSON from my file beginning at the curly brace on line 3.
-
-You are adding a few value cards to your dashboard. Please refer to the Full Hands on Lab in the Box folder if you would like to go through the whole lab.
-
-Be careful of your commas, curly braces, and brackets or your JSON will get angry. In Atom, you can click on the curly brace at the top of your value card and it will underline that brace blue along with the last curly brace of the card. Make sure to put a comma after the last curly brace before the beginning of the next card.
-
-You have finished the  "Operational Monitoring of Assets" lab.
+1.  Should you see `Analysis Stopped` warning this means your pipeline for your entity type has stopped calculating your metrics. You should click on `Analysis Stopped red dot ` to view the error details.  ![](img/i99.png) &nbsp;
+2.  These warnings often occur because the metric name for an input argument of your function has been deleted or the name has changed.   
+3.  Click on `Search glass` icon in the data field to find the metric name that is causing the problem.  Make sure it exists or is properly configured.

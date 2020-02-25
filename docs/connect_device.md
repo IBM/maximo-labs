@@ -116,7 +116,7 @@ This next exercise focuses how and what database tables your device data is stor
 
 1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.
 ![Device Data State](img/i39.png) &nbsp;
-2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 called IOT_<Device Type Name>.  To see the table go back to your Monitor tab (https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo) then click `Services` tab.
+2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 called IOT_<Device Type Name>.  To see the table go back to then click `Services` [tab](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo).
 ![Services](img/i41a.png) &nbsp;
 3. Click `View Details`
 ![Services](img/i41b.png) &nbsp;
@@ -127,7 +127,7 @@ This next exercise focuses how and what database tables your device data is stor
 5. The DB2 page opens in another tab.  You may see a second log in dialog labeled `Attention` to change your DB2 password. Ignore the second login dialog.
 6. On the DB2 Click top left hamburger button.
 ![Search Entity Types](img/i43.png) &nbsp;
-7. Under Explore click tables -> `BLUADMIN` Find your `IOT_<Device Name>` table. Click `View Data` button to see the data.  
+7. Under `Explore` click `tables` -> `BLUADMIN` Find your `IOT_<Device Name>` table. Click `View Data` button to see the data.  
 ![Search Entity Types](img/i44.png) &nbsp;
 
-In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
+Congratulations you have successfully connected a device and have it sending and storing data in Maximo Asset Monitor.  In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
