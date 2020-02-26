@@ -19,18 +19,17 @@ All labs require that you have:
 
 ## Lab 1 Connect Devices
 
-1.  You hgave completed the pre-requisites required for [All Labs](../facilitator_instructions)above.
+1.  You have completed the pre-requisites required for [All Labs](../facilitator_instructions)above.
 
-2.  You have a Nordic Thingy. You can [purchase](../facilitator_instructions) Nordic Thingy.  
+2.  You have a Nordic Thingy.  See the sections below for purchasing a Nordic Thingy.  
 
 
-## Lab 3 Monitor Assets
+## Lab 2 Monitor Assets
 
-1.  You have completed Lab 1 Connect  devices
+1.  You have completed Lab 1 Connect Devices
 
-2.  
 
-### Purchasing a Nordic Thingy
+# Purchasing a Nordic Thingy
 Purchasing a Nordic Thingy is a 4-step process:
 
 1.	Go to the Nordic Semiconductor website:https://www.nordicsemi.com/Software-and-Tools/Prototyping-platforms/Nordic-Thingy-52
@@ -41,7 +40,7 @@ Purchasing a Nordic Thingy is a 4-step process:
 
 4.	Follow the directions on the distributer’s website to checkout. Get manager approval and checkout.
 
-### IBMers can Expense a Nordic Thingy
+## IBMers can Expense a Nordic Thingy
 If you are an IBMer follow these instructions for expensing the Nordic Thingy
 
 1.	Launch SAP Concur

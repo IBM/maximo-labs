@@ -1,5 +1,8 @@
+# Before You Begin
+This lab requires that you have completed Lab 1 Connected Devices
+
 # View Data
-Now that you know the data is successfully flowing into IOT Platform Service, in this exercise you will see what data dashboards are automatically created for you in Maximo Asset Manager dashboards. Go to Maximo Asset Monitor page.
+Now that you know the data is successfully flowing into IOT Platform Service, in this exercise you will see what data dashboards are automatically created for you. Go to Maximo Asset Monitor page.
 
 1. Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/developing/connect.html).  An entity is created for each mapped device ID along with it's corresponding properties.
 2.  Search for your Entity Type `<your last name>_thingy`
@@ -51,7 +54,7 @@ Calculated functions by default are scheduled to run every 5 minutes.  Check bac
 
 # Alerts
 
-In this exercises you will learn how to create alerts. Alerts are function in the catalog that can be configured to notify you that certain asset conditions that requires attention.  There are a variety of alert functions included in the catalog like `High`, `Low` and `Alert Expression Filter`.  These alerts are functions that can be scheduled to run every five minutes or less frequently.  Unlike IOT Platform Service notifications, that are invoked immediately when data is ingested into the Kafka streams and provide an `Action` application programming interface to integrate with other systems.
+In this exercises you will learn how to create alerts. Alerts are function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a variety of alert functions included in the catalog like `High`, `Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  Unlike `Actions` in the IOT Platform Service notifications, that are invoked immediately when event data is ingested into the Kafka streams. `Action` provide an application programming interface to integrate with other systems.  You can also create you and register your custom functions in the Maximo Asset Monitor catalog.  Both of these are advanced topics that are beyond the scope of this lab. You can learn more about how to create custom functions in this [tutorial](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/analytics/tutorials/as_adding_complex_function_tutorial.html)  You can also explore a sample Hello World custom function in [GitHub](https://github.com/madendorff/functions)
 
 1. Use what you learned in the previous exercise to create a calculated metric named `Hourly_Sum_Errors` to sum up all the alert errors created by pressing the button on your Nordic Thingy using the `Sum` function in the Catalog.  After you will create an alert to be notified when the hourly sum of errors exceeds 10 using the instructions below.
 2. Configure an alert using the value of a metric-name `Hourly_Sum_Errors` created in the previous step. ![Calculated Metric Using Sum](img/i85.png) &nbsp;  
@@ -67,7 +70,6 @@ df['Hourly_Sum_Errors']>24
 
 Congratulations.  You have learned how to create new Alerts from a calculated metric that sums the total number of errors that occur on an asset device.  You can also receive alerts on a device event stream topic and take action. That is beyond the scope of these materials. Find out more information on how to configure these actions in the [documentation](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/analytics/as_custom_actions.html)
 
-You can also create you and register your custom functions in the catalog.  This is an advanced topic and goes beyond the scope of this lab. You can learn more in this tutorial for creating custom functions in the  [documentation](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/analytics/tutorials/as_adding_complex_function_tutorial.html)  You can also explore a sample Hello World custom function in [GitHub](https://github.com/madendorff/functions)
 
 # Troubleshoot Functions
 

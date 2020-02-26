@@ -17,13 +17,37 @@ You will use data from simulated industry robots as the assets you are responsib
 6.  Click `Submit` button.  Monitor will create  a set of robots you can monitor with simulated random data.  
 
 ## Start Exploring Robots Metrics in Instance Dashboards
-1.  Expand `Metric` to see the metrics that Monitor has created for your Robots with simulated time series data. ![View recent (Less than 24 hours) Robot metrics across all robots](img/i93.png) &nbsp;  The outline shows the acc, load, speed and torque metrics in the data items outline.
+An instance dashboard displays the operational metrics for a single entity, i.e. one specific industry robot. The data metrics of the robot are presented on the dashboard using cards.
+
+1.  On the `Data` tab, expand `Metric` to see the metrics that Monitor has created for your Robots with simulated time series data. ![View recent (Less than 24 hours) Robot metrics across all robots](img/i93.png) &nbsp;  The outline shows the acc, load, speed and torque metrics in the data items outline.
 2.  Expand  `Dimensions` to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by `Manufacturer`. ![View Robot dimensions across all robots](img/i94.png) &nbsp;
-10.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like generating a random number to cause a fault like `abnormal_stop_count`. ![View Robot calculated metric functions](img/i95.png)
-11.  Click the `Dashboards` tab to  to see the list of `Entities`(Robots) in the `Instance Dashboards` table.
-Click
-12.  Click on one of the Robot instance dashboards that have been automatically created for you by Monitor  ![View Robot calculated metric functions](img/i96.png)
-13.  Click on the gear icon to modify the layout of your Robot instance dashboard.  This dashboard template is shared by all robots in your Entity Type. ![View Robot instance dashboard](img/i98.png)
+3.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like generating a random number to cause a fault like `abnormal_stop_count`. ![View Robot calculated metric functions](img/i95.png)
+4.  Click the `Dashboards` tab to  to see the list of `Entities`(Robots) in the `Instance Dashboards` table.
+5.  Click one of the Robot instance dashboards that have been automatically created for you by Monitor. ![View Robot calculated metric functions](img/i96.png) &nbsp;
+6.  Click on the `Back from` calendar drop down to see historical performance metrics of this robot.
+7.  Note the different types of [cards](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/dashboard/cards_json_ref.html) in your dashboard.  Monitor provides multiple types of cards to choose from when configuring a dashboard.  ![View Robot calculated metric functions](img/i97.png) &nbsp;
+
+### Value Cards
+A value card shows a single or multiple entity metric value. A value may be attributed with a title, a label and a unit. The value may be given a precision and rules on threshold levels.  A value card may be sized as a wide or tall card with big or small sized numbers.
+
+### Line Graph Cards
+A line graph card shows time-series data from a single or multiple entities as a graph with time and value axes. The graph may be given a title and labels on the axes. The line graph may be shown in full screen mode and is added a data table with the metrics values plotted in the graph.
+A line graph may also be overlaid with an Alert metric indicating any anomalies on the metric.
+
+### Table Cards
+A table card shows tabular data by columns. A table card is configured by referencing some data source for each column. The table may group data source values and present a count rather than each individual value.
+An Alerts Table is a preconfigured table presenting alert information.
+Image cards
+An image card shows as a custom image with configured hotspots. Each hotspot is indicated at a position on the image with an icon and configured as a value card with entity metrics. The value card is shown when clicking on the hot spot.
+
+## Modify and Share Dasbhoard Layouts
+In this exercise you will  modify the layout of the instance dashboard.  An instance dashboard is a configuration of cards, layout and the datasource metrics for a specific asset. One instance dashboard json configuration file is used for all robots of your Robot Entity type.  You can export and dashboard configuration file adding new cards.  You can also reuse and import dashboard configuration files from others.
+
+1.  Click the `gear icon` to modify the layout of your Robot instance dashboard.  This dashboard template is shared by all robots in your Entity Type. ![View Robot instance dashboard](img/i98.png) &nbsp;
+2.  Monitor provides a responsive user interface as the display size of the device or browser window changes you can reposition the cards.  Change the layout of your dashboard by dragging cards around with you mouse. ![View Robot instance dashboard](img/i98.png) &nbsp;
+3.  Once you satisfied with the layout,  change the width of the browser window to a smaller size.  Note the new `Dashboard Size` of the layout has changed.  Once again change the layout of your dashboard by dragging cards around with your mouse. ![View Robot instance dashboard](img/i98.png) &nbsp;
+4.  Click on `Export` button. The dashboard configuration file is saved to your local downloads directory on your computer.
+5.  Click on `Save` to save the new dashboard layout.
 
 Note: The graph shows a statistical aggregation of the torque data item across all your robots. Hence the torque values may be shown as the Max and Min values of torque.
 
