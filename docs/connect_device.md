@@ -1,9 +1,3 @@
-# Before You Begin
-This lab requires that you:
-
-1.  Have a Nordic Thingy. You can [purchase](../facilitator_instructions) Nordic Thingy.  
-2.  Have completed the pre-requisites required for [all labs](../facilitator_instructions)
-
 # Objectives
 In this lab you will learn how to:
 
@@ -11,7 +5,13 @@ In this lab you will learn how to:
 * Map device Physical Interfaces to Logical Interfaces
 * Create realtime Rules and Actions on device events
 * Understand how device data is stored
+---
+*Before you begin:*  
+This lab requires that you:
 
+1.  Have a Nordic Thingy. You can [purchase](../facilitator_instructions) Nordic Thingy.  
+2.  Have completed the pre-requisites required for [all labs](../facilitator_instructions)
+---
 #  Connect a Physical Device
 Now that you have done some initial exploring of the IoT Platform and you have connected a simulated device, it’s time to connect a real, physical device. For this exercise you will use a Nordic Thingy.  Learn more about the Nordic Thingy and its various sensors [here](https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52)
 

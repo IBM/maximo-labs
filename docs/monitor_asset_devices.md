@@ -1,5 +1,14 @@
-# Before You Begin
+# Objectives
+In this lab you will learn about:
+
+* What data dashboards are automatically created for you
+* How to perform data analysis using functions catalog
+* How to be alerted about non-conforming asset conditions
+* Troubleshoot functions
+---
+*Before you begin:*  
 This lab requires that you have completed Lab 1 Connected Devices
+---
 
 # View Data
 Now that you know the data is successfully flowing into IOT Platform Service, in this exercise you will see what data dashboards are automatically created for you. Go to Maximo Asset Monitor page.
@@ -75,4 +84,4 @@ Congratulations.  You have learned how to create new Alerts from a calculated me
 
 1.  Should you see `Analysis Stopped` warning this means your pipeline for your entity type has stopped calculating your metrics. You should click on `Analysis Stopped red dot ` to view the error details.  ![](img/i99.png) &nbsp;
 2.  These warnings often occur because a calculated metric function input argument depends on a metric name that has been deleted or whose name has changed.   
-3.  Click on `Search glass` icon in the data field to find the metric name that is causing the problem.  Make sure it exists or choose the new metric name in the calculated metric that uses it. 
+3.  Click on `Search glass` icon in the data field to find the metric name that is causing the problem.  Make sure it exists or choose the new metric name in the calculated metric that uses it.

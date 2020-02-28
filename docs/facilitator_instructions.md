@@ -29,7 +29,7 @@ All labs require that you have:
 1.  You have completed Lab 1 Connect Devices
 
 
-# Purchasing a Nordic Thingy
+## Purchasing a Nordic Thingy
 Purchasing a Nordic Thingy is a 4-step process:
 
 1.	Go to the Nordic Semiconductor website:https://www.nordicsemi.com/Software-and-Tools/Prototyping-platforms/Nordic-Thingy-52
@@ -40,7 +40,7 @@ Purchasing a Nordic Thingy is a 4-step process:
 
 4.	Follow the directions on the distributer’s website to checkout. Get manager approval and checkout.
 
-## IBMers can Expense a Nordic Thingy
+### IBMers can Expense a Nordic Thingy
 If you are an IBMer follow these instructions for expensing the Nordic Thingy
 
 1.	Launch SAP Concur
