@@ -7,10 +7,12 @@ In this lab you will learn how to:
 *  Monitor alerts across multiple assets in a summary dashboard you create
 *  Troubleshoot to find the rood cause of a problem
 
-## Before You Begin
-This lab requires that you have completed the pre-requisites required for [all labs](../facilitator_instructions)
-
 You will use data from simulated industry robots as the assets you are responsible to monitor. Monitor provides simulated anomalies that you can apply to learn about anomaly detection.
+
+---
+*Before you begin:*  
+This lab requires that you have completed the pre-requisites required for [all labs](../facilitator_instructions)
+---
 
 ## Create Simulated Robots to Monitor
 1.  Click `Home` to see the top level tasks you can do with Monitor. ![Home](img/i89.png) &nbsp;
@@ -56,33 +58,49 @@ In this exercise you will modify the layout of the individual robot instance das
 
 
 # Create a Summary Dashboard
-In the previous exercise you created an instance dashboard for each Robot.   In this exercise you will create a [Summary Dashboard](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/dashboard/tutorials/summary_dashboard_tutorial.html).
+In the previous exercise you created an instance dashboard for each Robot.   In this exercise you will create a [Summary Dashboard](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/dashboard/tutorials/summary_dashboard_tutorial.html).  There is one summary dashboard presenting aggregated and filtered performance KPI across all robots of the type.  A summary dashboard allows you to see the metrics for a filtered group of assets.  "Show me all robots from a manufacturer and with a specific firmware.""
 
-1.  From the side menu, click `Monitor`.
-2.  From the `Entity Types` tab, select your entity type and click `View`.
-3.  Select the `Dashboards` tab. ![View Robot instance dashboard](img/i100.png) &nbsp;
-4.  Click New Summary.
-5.  On the Definition page, assign the name "Painting_robot_daily_summary" to the dashboard.
-6.  Select the daily time grain.
-7.  Accept the default value for timestamp.
-8.  If you simulated data that uses the robot template, define your taxonomy and its hierarchy as follows:
-9.  Select manufacturer as the highest-level dimension.
-10.  Select firmware as the next level dimension.
-11.  Set manufacturer as the parent of firmware
-12.  If you added data from a physical device, define your taxonomy and its hierarchy as follows:
-13.  Select provider as the highest-level dimension.
-14.  Select color as the next level dimension.
-15.  Set provider as the parent of color.
-16.  Click Next.
-17.  If you simulated data by using the device simulator, skip the step to define the taxonomy.
-19.   On the Contents page, choose load to include it on the dashboard.
-20.  Set the aggregation method to mean.
-21.  Click Create summary.
+The filters are called dimensions.  In the "Mastering Monitor" Lab you will learn how to assign dimensions to the entities. Our simulated robots already have the appropriate dimensions for assigned to each robot.  Robot 73000 may have a manufacturer GHI Industries and Robot 73002 may have Rentech. A summary dashboard allows you filter assets and then compute the data metrics aggregations for the applied filter.  For example, the Max, Min and Mean torque of all robots for the filtered scope of a selected manufacturer.
 
-# Reuse Dashboard Configurations
-1.  Export the JSON configuration From the Entity types tab, select your entity type. From the Dashboards tab, find the dashboard that you want to edit under Summary Dashboards.  Click Menu and click Edit.
-2. Go to the Dashboard page of the summary dashboard editor.
-3. Click Export.
+A summary dashboard uses time grains when computing the aggregations.  Monitor can display four types of summary dashboards. You can choose by hour, day, week, month time grains.  A summary dashboard supports the same cards as an instance dashboard.
+
+1.  From the side menu, click `Monitor`
+2.  From the `Entity Types` tab, select your entity type and click `View`
+3.  Select the `Dashboards` tab ![Create summary dashboard](img/i102.png) &nbsp;
+4.  Click `New Summary`
+5.  On the `Definition` page, assign the name `robot_daily_summary` to the dashboard
+![Data filter and data aggregation using dimensions](img/i103.png) &nbsp;
+6.  Select the `daily` time grain
+7.  Accept the default value for `timestamp`
+8.  Since your simulated robot data also created dimensions, define your filters.  Select `load_rating` as the lowest-level dimension and `manufacturer` as the parent dimension
+9.  Select `firmware` as the mid-level dimension and `manufacturer` as the parent dimension
+10.  Select `manufacturer` as the dimension and leave `None` as the parent since it is the top level filter and aggregation we want to see.
+11. Click `Next` and choose the max, min and mean for aggregation methods for all the number metrics. ![Assign dimensions for order of aggregations](img/i104.png) &nbsp;
+12. Click `Export`to save the dashboard json configuration. You will edit it later.  You can also import dashboard configurations from this menu.
+![Export the summary dashboard configuration json](img/i105.png) &nbsp;
+14.  Click `Create summary` to create the dashboard.  Your dashboard should like something like the one below.
+![Expoert the summary dashboard configuration json](img/i106.png) &nbsp;
+15.  Optionally repeat the steps above to create summary dashboards to view hourly, weekly and monthly performance metrics summaries of the all robots.
+
+
+
+# Add Simulated Anomalies
+You need anomalies to be able to detect anomalies. Add some simulated anomalies to your robots using the steps below.   
+
+
+# Add Anomaly Models
+Maximo Asset Monitor includes models to [detect anomalies](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html) in the function catalog. In this exercise you will:
+
+ *  Add anomaly models to your Robot Entity Type.  
+ *  Compare each anomaly model high scores correlation with the raw data for robot metrics by visually inspecting the line graphs.
+ *  Add an alert with anomaly model score threshold that corresponds to a level that indicates an anomaly for a robot metric.
+ *  Add an alert table to summarize alerts across all the Robots in your Entity Type.
+ 
+
+Add additional data.   This requires you to add anomalies to your line charts.
+
+Anomaly models require a [window size](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_window_size.html) which is the number of samples evaluate each time the model is scheduled to execute.  
+
 
 # Modify Dashboards
 ## Add Line cards
@@ -134,4 +152,4 @@ You are adding a few value cards to your dashboard. Please refer to the Full Han
 
 Be careful of your commas, curly braces, and brackets or your JSON will get angry. In Atom, you can click on the curly brace at the top of your value card and it will underline that brace blue along with the last curly brace of the card. Make sure to put a comma after the last curly brace before the beginning of the next card.
 
-You have finished the  "Operational Monitoring of Assets" lab.
+Congratulations you have successfully create an asset instance dashboard and a summary dashboard that aggregates asset performance metrics across multiple assets.  You also learned how to detect anomalies by applying anomaly models and alerts at scale across all your enterprise assets.
