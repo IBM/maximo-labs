@@ -1,7 +1,8 @@
 # Objectives
 In this lab you will learn how to:
 
-*  Create an asset instance dashboard and a summary dashboard that aggregates asset performance metrics across multiple assets
+*  Create an asset instance dashboard to see how an individual asset is performing
+*  Create a summary dashboard that aggregates asset performance metrics across multiple assets of the same type
 *  Detect anomalies by applying anomaly models
 *  Create alerts to prioritize anomalies
 *  Monitor alerts across multiple assets in a summary dashboard you create
@@ -32,20 +33,23 @@ An [instance dashboard](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/d
 5.  Click one of the Robot instance dashboards that have been automatically created for you by Monitor. ![View Robot calculated metric functions](img/i96.png) &nbsp;
 6.  Click on the `Back from` calendar drop down to see historical performance metrics of this robot.   ![View Robot calculated metric functions](img/i97.png) &nbsp;
 7.  Note the different types of [cards](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/dashboard/cards_json_ref.html) in your dashboard.  Monitor provides multiple types of cards to choose from when configuring a dashboard.
+8.  In this exercise the Instance Dashboard for the Robots was automatically created for you.  You can also export a summary dashboard and import it by managing instance dashboards as shown in the next exercise.  
 
-### Value Cards
+9.   Monitor includes a variety of cards. Take a moment to see what cards were created for you in the instance dashboard.
+
+*Value Cards*
 A value card shows a single or multiple entity metric value. A value may be attributed with a title, a label and a unit. The value may be given a precision and rules on threshold levels.  A value card may be sized as a wide or tall card with big or small sized numbers.
 
-### Line Graph Cards
+*Line Graph Cards*
 A line graph card shows time-series data from a single or multiple entities as a graph with time and value axes. The graph may be given a title and labels on the axes. The line graph may be shown in full screen mode and is added a data table with the metrics values plotted in the graph.
 A line graph may also be overlaid with an Alert metric indicating any anomalies on the metric.
 
-### Table Cards
+*Table Cards*
 A table card shows tabular data by columns. A table card is configured by referencing some data source for each column. The table may group data source values and present a count rather than each individual value.
-An Alerts Table is a preconfigured table presenting alert information.
+An Alerts Table is a preconfigured table presenting alert information.  You will add one later for tabulating alerts.
 
-### Image cards
-An image card shows as a custom image with configured hotspots. Each hotspot is indicated at a position on the image with an icon and configured as a value card with entity metrics. The value card is shown when clicking on the hot spot.
+*Image cards*
+An image card shows as a custom image with configured hotspots. Each hotspot is indicated at a position on the image with an icon and configured as a value card with entity metrics. The value card is shown when clicking on the hot spot.  You will add one later for displaying an image of the robot.
 
 ## Edit Instance Dashboard
 In this exercise you will modify the layout of the individual robot instance dashboard.  An asset instance dashboard is a configuration of cards, layout and the datasource metrics for a specific asset. One instance dashboard json configuration file is used for all robots of your Robot Entity type.  You can export and dashboard configuration file adding new cards.  You can also reuse and import dashboard configuration files from others.
@@ -82,31 +86,75 @@ A summary dashboard uses time grains when computing the aggregations.  Monitor c
 ![Expoert the summary dashboard configuration json](img/i106.png) &nbsp;
 15.  Optionally repeat the steps above to create summary dashboards to view hourly, weekly and monthly performance metrics summaries of the all robots.
 
+# Add Simulated Anomaly Metric Line Card
+You need anomalies to be able to detect anomalies. In this exercise  you will add some simulated anomalies to your robots using the steps below.  The anomaly requires an existing metric as input and the output is an abruptly increasing or decreasing value than normal value. The increased value is still within a SCADA system normal operating range.  Therefore max or min business rules would not adequately detect the anomaly.  You will then add the metric as a line card to your instance dashboard.
 
-
-# Add Simulated Anomalies
-You need anomalies to be able to detect anomalies. Add some simulated anomalies to your robots using the steps below.   
-
+1.  Search the function catalog for  `AnomalyGeneratorExtremeValue` to create an anomaly for time.  Your dashboard should like something like the one below.
+![Search Function Catalog for Anomaly Generator Extreme Value](img/i107.png) &nbsp;
+2.  Choose  `travel_time` for the metric `input_item`.  Extreme anomaly values will be added to this time series metric.
+3.  Set `factor` to a value of `2` times the normal value levels.
+3.  Set `size` to a value of `6`.  This is how frequently in terms of the number of sample intervals between how often an an anomaly will occur.  ![Add anomaly frequency](img/i108.png) &nbsp;
+5.  Set the `output_metric` to `trave_time_actual` ![Travel time metric name that will have anomalies](img/i109.png) &nbsp;
+6.  Click `Create`
+7.  Click on `Dasbhoards` tab to see the list instance dashboards
+8.  Click on `Gear` icon top right.  Choose `Manage instance dashboards`
+9.  Click on `Export` button top right. Instance dashboard json file should be saved in your browser downloads directory with a name of `Industrial Robot summary-dashboard.json`
+![Export Instance Dashboard Json](img/i109b.png) &nbsp;
+10.  Open the file using Atom IDE or copy the file contents into an online [Web JSON editor](https://jsoneditoronline.org/#left=local.ginesu).  Read about the structure of [Monitor dashboard Json files](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html) and study the json file in the editor.
+![Travel time metric name that will have anomalies](img/i109.png) &nbsp;  
+11.  Insert the [line card json](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/line_graph_json_ref.html) below into the "cards":[]. ```
+{
+    "content": {
+        "series": [
+            {
+                "dataSourceId": "travel_time",
+                "label": "Travel Time"
+            }
+        ],
+        "unit": "sec"
+    },
+    "dataSource": {
+        "attributes": [
+            {
+                "attribute": "travel_time",
+                "id": "travel_time"
+            }
+        ]
+    },
+    "id": "travel_time_line_card",
+    "size": "LARGE",
+    "title": "Travel Time",
+    "type": "TIMESERIES"
+},
+```
+12.  Notice how the JSON `content >  series > dataSourceId`  fields don't have an aggregation ` "aggregator": "min",` like other line metrics.  As a result the `travel_time` metric line series graph data will display raw data.    
+13.  Make sure to change all values with size `XLARGE` to `LARGE`.  and `XSMALLWIDE`to `SMALLWIDE`. and save your changes to the instance dashboard json file.   
+13.  You can see the finished [Industrial_Robot_Instance_Travel_Time.json](here)  or in the [online Json editor](https://jsoneditoronline.org/#left=cloud.7b1708f47a1649b5978625551e83ff64)
+13.  Click on `import` button, choose the `file` you updated with the line card click `open` to import your updated json file. ![Import Instance Dashboard Json](img/i110.png) &nbsp;
+14.  Your instance dashboard should now look like the one below.
+![Import Instance Dashboard Json](img/i111.png) &nbsp;
 
 # Add Anomaly Models
-Maximo Asset Monitor includes models to [detect anomalies](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html) in the function catalog. In this exercise you will:
+Maximo Asset Monitor includes models to [detect anomalies](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html) in the function catalog.  The anomaly models can detect a variety of patterns.  These include;
+
+In this exercise you will:
 
  *  Add anomaly models to your Robot Entity Type.  
  *  Compare each anomaly model high scores correlation with the raw data for robot metrics by visually inspecting the line graphs.
  *  Add an alert with anomaly model score threshold that corresponds to a level that indicates an anomaly for a robot metric.
  *  Add an alert table to summarize alerts across all the Robots in your Entity Type.
- 
 
-Add additional data.   This requires you to add anomalies to your line charts.
 
 Anomaly models require a [window size](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_window_size.html) which is the number of samples evaluate each time the model is scheduled to execute.  
 
 
-# Modify Dashboards
 ## Add Line cards
 1.  Add a line graph card that plots the minimum, average, and maximum work_performed by robots.
 Add a table card that displays the daily mean work_performaned by robots for the last 7 days. Add the work_performed_too_high alert.
-Show a value card that displays the average work_performed value for entities 73000 and 73001. Use the dataFilter object to specify each deviceid.
+Show a value card that displays the average work_performed value for entities `73000` and `73001`. Use the `dataFilter` object to specify each `deviceid`.
+
+#  Add Anomaly Alerts to Line Charts
+This requires you to add anomalies to your line charts.
 
 ## Add an image card.
 Display the map that you added when you added the source data.
