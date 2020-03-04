@@ -16,7 +16,11 @@
                       "attribute": "travel_time",
                       "id": "travel_time"
                   }
-              ]
+              ],
+              "range": {
+                  "count": -24,
+                  "interval": "hour"
+              }
           },
           "id": "travel_time_line_card",
           "size": "LARGE",

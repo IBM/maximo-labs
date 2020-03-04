@@ -1,0 +1,60 @@
+{
+    "id": "card-anomaly-scores-line-timeseries",
+    "dataSource": {
+        "attributes": [
+            {
+                "attribute": "travel_time_spectral_score",
+                "id": "travel_time_spectral_score"
+            },
+            {
+                "attribute": "travel_time_saliency_score",
+                "id": "travel_time_saliency_score"
+            },
+            {
+                "attribute": "travel_time_ga_score",
+                "id": "travel_time_ga_score"
+            },
+            {
+                "attribute": "travel_time_fft_score",
+                "id": "travel_time_fft_score"
+            },
+            {
+                "attribute": "travel_time_kmeans_score",
+                "id": "travel_time_kmeans_score"
+            }
+        ],
+        "range": {
+            "count": -24,
+            "interval": "hour"
+        }
+    },
+    "content": {
+        "series": [
+            {
+                "dataSourceId": "travel_time_spectral_score",
+                "label": "Spectral"
+            },
+            {
+                "dataSourceId": "travel_time_saliency_score",
+                "label": "Saliency"
+            },
+            {
+                "dataSourceId": "travel_time_ga_score",
+                "label": "Generalized"
+            },
+            {
+                "dataSourceId": "travel_time_fft_score",
+                "label": "FFT"
+            },
+            {
+                "dataSourceId": "travel_time_kmeans_score",
+                "label": "Kmeans"
+            }
+        ],
+        "xLabel": "Time",
+        "yLabel": "Score"
+    },
+    "size": "MEDIUM",
+    "title": "Anomaly Scores for Travel Time",
+    "type": "TIMESERIES"
+}
