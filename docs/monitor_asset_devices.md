@@ -34,27 +34,26 @@ In the previous exercise you saw how you can see the raw device data in Monitor 
 
 1.  Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/developing/connect.html).  An entity is created for each mapped device ID along with it's corresponding properties.
 2.  Search for your and click on your Entity Type `<your last name>_thingy`
-![Search Entity Types](img/i73.png) &nbsp;  
-3.  You can the mean of a metric by creating a calculated metric by selecting the `Mean` function from the catalog.  
-4.  Click `Data` tab  for your and click on your Entity Type `<your last name>_thingy`
+![Search Entity Types](img/i73.png) &nbsp;   
+3.  Click `Data` tab  on the homepage for your Entity Type.
 ![Add Calculated Metrics](img/i74.png) &nbsp;  
-5.  Click `+` button access the Function Catalog.
+4.  You can start tracking the mean of the entities across your Entity Type by creating a calculated metric from the Function Catalogue.
+5.  Click `+` button access the Function Catalog.  Select the `Mean` function from the catalog. 
 ![Search Catalog](img/i79.png) &nbsp;
-6.  Search on `Mean`
+6.  Click `Select`.
 ![Add Calculated Data for Mean](img/i80.png) &nbsp;
-7.  Select the `Mean` function and then click `Select` button.
-8.  In the next dialog, select the metric that you want to calculate the daily mean for. In this case, `Temperature` and click `Next`.
+7.  In the next dialog, select the metric that you want to calculate the daily mean for. In this case, `Temperature` and click `Next`.
 ![Add Daily Mean Temperture Calculated Data](img/i81.png) &nbsp;
-9.  Since temperature is changing and recorded over time you need to specify what time period the mean is being calculated for.   This is called the granularity and you can leave it set to `Daily` to calculate the daily mean.
+8.  Since temperature is changing and recorded over time you need to specify what time period the mean is being calculated for.   This is called the granularity and you can leave it set to `Daily` to calculate the daily mean.
 ![Search Entity Types](img/i82.png) &nbsp;
-10.  Replace the calculated `output metric` name with your own like `Daily_Temperature_Mean`
-11.  Leave everything else as default and click `Create` to save the metric.  This calculated metric is calculating a daily mean. If you wanted to calculate an `Hourly_Temperature_Mean`, you can set the `Granularity` to `Hourly` on the output dialog.
-12.  You should now see your new calculated metric in the metrics list on the left-hand side.
-13.  Click the `Configure` button to update calculated metrics.
+9.  Replace the calculated `output metric` name with your own like `Daily_Temperature_Mean`
+10.  Leave everything else as default and click `Create` to save the metric.  This calculated metric is calculating a daily mean. If you wanted to calculate an `Hourly_Temperature_Mean`, you can set the `Granularity` to `Hourly` on the output dialog.
+11.  You should now see your new calculated metric in the metrics list on the left-hand side.
+12.  Click the `Configure` button to update calculated metrics.
 ![Calculated Metrics](img/i83.png) &nbsp;  
-14.  Click `Next` and `Schedule` icon to change the schedule of how often the mean is calculated.  You can change the frequency of how often hourly mean is calculated changing it from every 5 minutes to every hour.   You can also change how many days back the mean temperature function should calculate for using historical temperature data.    
+13.  Click `Next` and `Schedule` icon to change the schedule of how often the mean is calculated.  You can change the frequency of how often hourly mean is calculated changing it from every 5 minutes to every hour.   You can also change how many days back the mean temperature function should calculate for using historical temperature data.    
 ![Calculated Metrics](img/i84.png) &nbsp;  
-15.  Click `Update` to save your function configuration changes.
+14.  Click `Update` to save your function configuration changes.
 ---
 **Note:**
 Calculated functions by default are scheduled to run every 5 minutes.  Check back to later see if the metric is being calculated.
@@ -85,3 +84,6 @@ Congratulations.  You have learned how to create new Alerts from a calculated me
 1.  Should you see `Analysis Stopped` warning this means your pipeline for your entity type has stopped calculating your metrics. You should click on `Analysis Stopped red dot ` to view the error details.  ![](img/i99.png) &nbsp;
 2.  These warnings often occur because a calculated metric function input argument depends on a metric name that has been deleted or whose name has changed.   
 3.  Click on `Search glass` icon in the data field to find the metric name that is causing the problem.  Make sure it exists or choose the new metric name in the calculated metric that uses it.
+
+
+Paulina
