@@ -38,7 +38,7 @@ In the previous exercise you saw how you can see the raw device data in Monitor 
 3.  Click `Data` tab  on the homepage for your Entity Type.
 ![Add Calculated Metrics](img/i74.png) &nbsp;  
 4.  You can start tracking the mean of the entities across your Entity Type by creating a calculated metric from the Function Catalogue.
-5.  Click `+` button access the Function Catalog.  Select the `Mean` function from the catalog. 
+5.  Click `+` button access the Function Catalog.  Select the `Mean` function from the catalog.
 ![Search Catalog](img/i79.png) &nbsp;
 6.  Click `Select`.
 ![Add Calculated Data for Mean](img/i80.png) &nbsp;
@@ -84,6 +84,3 @@ Congratulations.  You have learned how to create new Alerts from a calculated me
 1.  Should you see `Analysis Stopped` warning this means your pipeline for your entity type has stopped calculating your metrics. You should click on `Analysis Stopped red dot ` to view the error details.  ![](img/i99.png) &nbsp;
 2.  These warnings often occur because a calculated metric function input argument depends on a metric name that has been deleted or whose name has changed.   
 3.  Click on `Search glass` icon in the data field to find the metric name that is causing the problem.  Make sure it exists or choose the new metric name in the calculated metric that uses it.
-
-
-Paulina
