@@ -21,15 +21,16 @@ You can choose which labs to complete based on your learning objectives,  the am
 | 1       | Ready for Use     |  Connect Devices            | Connect devices and define asset types.     |
 | 2       | Ready for Use     |  Monitor Assets             | Create dashboards that enable you to visualize asset data using asset device data. |
 | 3       | Under Development |  Monitor Anomalies          | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.     |
-| 4       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
-| 5       | Under Development |  Contributing to Labs       | How to provide feedback or add submit new content.|
+| 4       | Under Development |  Create Service Requests    | Resolve anomalies by creating service requests in Maximo. |
+| 5       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
+| 6       | Under Development |  Contributing to Labs       | How to provide feedback or add submit new content.|
 
 ### Learning Paths
 
 |  Your Learning Goals                                     | Recommended Labs    | Time Needed (mins) |
 |:--------------------------------------------------------:|: ------------------:|:------------------:|
 |  Operational Monitoring of Assets Using Device Sensors   | 1 and 2             |     2 hours        |
-|  Anomaly Detection                                       | 3                   |     1 hours        |
+|  Anomaly Detection  and Resolution                       | 3 and 4             |     2 hours        |
 
 ## Overview of Maximo Asset Monitor
 
