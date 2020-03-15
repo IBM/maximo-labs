@@ -68,15 +68,15 @@ The Nordic Thingy has connectivity to the internet.  You must first register dev
 17.  Press the large black button on the top of the Thingy to clear the error.
 ---
 **Note:**
-This exercise demonstrated how to manually add a device to Maximo Asset Monitor.  You would most likely  programatically add devices using the included Watson IOT Platform Service [REST APIs](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/references/ref_apis.html) and [Python SDK](https://ibm-watson-iot.github.io/iot-python/application/api/registry/devices/).
+This exercise demonstrated how to manually add a device to Maximo Asset Monitor.  You would most likely  programatically add devices using the included Watson IOT Platform Service [REST APIs](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/references/ref_apis.html) and [Python SDK](https://ibm-watson-iot.github.io/iot-python/application/api/registry/devices/).
 ---
 
 # Interfaces, Rules and Notifications
 You will create an alert notification when the Nordic Thingy has an error condition.  In this next section you will learn how you can:
 
-  *  Create [physical interfaces](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/GA_information_management/im_ui_flow.html#gs_web)
-  *  Create [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/GA_information_management/im_ui_flow.html#gs_web)
-  *  Define conditional realtime [rules and notifications](https://www.ibm.com/support/knowledgecenter/en/SSQP8H/iot/platform/reference/embeddedrules/index.html)&nbsp;
+  *  Create [physical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web)
+  *  Create [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web)
+  *  Define conditional realtime [rules and notifications](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/platform/reference/embeddedrules/index.html)&nbsp;
 &nbsp;
 
 ## Create a Physical Interface
