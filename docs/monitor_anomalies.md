@@ -51,9 +51,9 @@ An image card shows as a custom image with configured hotspots. Each hotspot is 
 ## Edit Instance Dashboard
 In this exercise you will modify the layout of the individual robot instance dashboard.  An asset instance dashboard is a configuration of cards, layout and the datasource metrics for a specific asset. One instance dashboard json configuration file is used for all robots of your Robot Entity type.  You can export and dashboard configuration file adding new cards.  You can also reuse and import dashboard configuration files from others.
 
-1.  Click the `gear icon` to modify the layout of your Robot instance dashboard.  This dashboard template is shared by all robots in your Entity Type. ![Manage Instance Robot dashboard](img/i98.png) &nbsp;
+1.  Click the `gear icon` to modify the layout of your robot instance dashboard.  This dashboard template is shared by all robots in your Entity Type. ![Manage Instance Robot dashboard](img/i98.png) &nbsp;
 2.  Monitor provides a responsive user interface as the display size of the device or browser window changes you can reposition the cards.  Change the card layout of your dashboard by dragging cards around with you mouse. ![View Robot instance dashboard](img/i100.png) &nbsp;
-3.  Once you are satisfied with the card layout, change the width of the browser window to a smaller size.  Note the `Dashboard Size` of the layout has changed.  Once again change the layout of your dashboard by dragging cards around with your mouse. ![View Robot instance dashboard](img/i101.png) &nbsp; The dashboard configuration saves all the adjustments you make to the layout for each resize your browser window.
+3.  Once you are satisfied with the card layout, change the width of the browser window to a smaller size.  Note the `Dashboard Size` of the layout has changed.  Once again change the layout of your dashboard by dragging cards around with your mouse. ![View Robot instance dashboard](img/i101.png) &nbsp; The dashboard configuration saves all the adjustments you make to the layout for each resize of your browser window.
 4.  Click on `Export` button. The dashboard configuration file in a json format is saved to your local downloads directory on your computer.  
 5.  Click on `Save` to save the new dashboard layout.
 
@@ -61,9 +61,9 @@ In this exercise you will modify the layout of the individual robot instance das
 # Create a Summary Dashboard
 In the previous exercise you modified an instance dashboard for each Robot.   In this exercise you will create a [Summary Dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/summary_dashboard_tutorial.html).  There is one summary dashboard presenting aggregated and filtered performance KPI across all robots of the type.  A summary dashboard allows you to see the metrics for a filtered group of assets.  "Show me all robots from a manufacturer and with a specific firmware.""
 
-The filters are called dimensions.  Later in this Lab you will learn how to assign dimensions to the entities. Our simulated robots already have the appropriate dimensions for assigned to each robot.  Robot 73000 may have a manufacturer GHI Industries and Robot 73002 may have Rentech. A summary dashboard allows you filter assets and then compute the data metrics aggregations for the applied filter.  For example, the Max, Min and Mean torque of all robots for the filtered scope of a selected manufacturer.
+These filters are called dimensions in Monitor.  Later in this Lab you will learn how to assign dimensions to the entities. Our simulated robots already have the appropriate dimensions assigned to each robot.  Robot 73000 may have a manufacturer GHI Industries and Robot 73002 may have a manufacturer Rentech. A summary dashboard allows you filter assets and then compute the data metrics aggregations for the applied filter.  For example, the Max, Min and Mean torque of all robots for the filtered scope of a selected manufacturer.
 
-A summary dashboard uses time grains when computing the aggregations.  Monitor can display four types of summary dashboards. You can choose by hour, day, week, month time grains.  A summary dashboard supports the same cards as an instance dashboard.
+A summary dashboard uses time grains when computing the aggregations.  Monitor can display four types of summary dashboards. You can choose by hour, day, week, month time grains.  A summary dashboard supports the same cards as an instance dashboard.  The next steps show you how to create a daily summary dashboard for all your robots.
 
 1.  From the side menu, click `Monitor`
 2.  From the `Entity Types` tab, search for your Entity Type by typing the name in the search field. Select your entity type and click `View`
@@ -81,17 +81,17 @@ A summary dashboard uses time grains when computing the aggregations.  Monitor c
 ![Export the summary dashboard configuration json](img/i105.png) &nbsp;
 13.  Click `Create summary` to create the dashboard.  Your dashboard should like something like the one below.
 ![Expoert the summary dashboard configuration json](img/i106.png) &nbsp;
-14.  Notice the summary dashboard form automatically added the aggregation functions for min, mas and mean to your `Metrics (calculated)`.
+14.  Notice the summary dashboard form automatically added the aggregation functions for min, max and mean to your `Metrics (calculated)`.
 15.  Click on `Data` tab and expand the `Metrics (calculated)` section of the `Data Items` to see the daily min, max and mean calculated metrics.  They should look something like the figure below. ![View the min, max and mean calculated metrics ](img/i131.png) &nbsp;
 16.  Optionally repeat the steps above to create summary dashboards to create hourly, weekly and monthly aggregation performance metrics summaries of the all robots.
 
 # Add Metric Line Card
 You need anomalies to be able to detect anomalies.  Monitor provides simulated anomalies that you can apply to learn about anomaly detection.  In this exercise you will:
 
-*  Add a simulated anomaly metric for `travel_time_anomaly`.
+*  Add a simulated anomaly metric named `travel_time_anomaly`.
 *  Add a line card to display the `travel_time_anomaly` metric an instance dashboard.
 
- The `travel_time` deviation that was generated earlier for your robot simulated data did not have anamolies in it.   The `AnomalyGeneratorExtremeValue` function adds anomalies to the metric you choose.   It abruptly increases or decreases the normal metric values for the metric you choose.   A SCADA system would likely not be able to detect the abrupt anomaly increase or decrease in metric value if it is within the SCADA system normal operating range max or min business.  In the steps below you will add a new metric `travel_time_anomaly` and a line chart to display the anomalous data on your instance dashboard.  Later you will use Maximo Asset Monitor anomaly models to detect these anomalies.
+ The `travel_time` deviation that was generated earlier for your robot simulated data did not have anamolies in it.   The `AnomalyGeneratorExtremeValue` function adds anomalies to the metric you choose.   It abruptly increases or decreases the normal metric values for the metric you choose.  In the steps below you will use this function to add a new calculated metric with anomalies named `travel_time_anomaly`  You will add a line chart to display the anomalous data on your instance dashboard.  Later you will use Maximo Asset Monitor anomaly models to detect these anomalies.  A SCADA system would likely not be able to detect these type of abrupt anomaly increase or decrease in metric values. SCADA systems typically only provide max or min business rule thresholds.
 
 **Add Simulated Anomaly Data for Travel Time**
 
@@ -110,14 +110,17 @@ In this part of the exercise you will create simulated extreme anomalous values 
 **Add Simulated Anomaly Travel Time Line Card to Instance Dashboard**
 
 In this part of the exercise you will visualize the simulated `travel_time_anomaly` in a line card.
+
 1.  Click on `Dashboards` tab to see the list instance dashboards
 2.  Click on one of the robot instance dashboards in the table list.
 3.  Click on `Gear` icon top right.  Choose `Edit dashboards`![Edit Dashboard](img/i129.png) &nbsp;
 4.  Click on `Export` button top right. Instance dashboard json file should be saved in your browser downloads directory with a name of `Industrial Robot summary-dashboard.json`
-![Export Instance Dashboard JSON](img/i109b.png) &nbsp;
-5.  Open the exported instance dashboard JSON file using an Integrated Developer Environment like [Atom](https://atom.io/) or copy the file contents into an online [Web JSON editor](https://jsoneditoronline.org/#left=local.ginesu).  Read and learn about the [JSON structure of Monitor dashboard template](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html) and then study the JSON file cards in the editor.
-6.  Insert the [travel_time line chart card json](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/line_graph_json_ref.html) below into the `"cards":[]`.
-
+![Export Instance Dashboard JSON](img/i109b.png)&nbsp;
+5.  Open the exported instance dashboard JSON file using an Integrated Developer Environment like [Atom](https://atom.io/) or copy the file contents into an online [Web JSON editor](https://jsoneditoronline.org/#left=local.ginesu)
+6.  Read and learn about the [JSON structure of Monitor dashboard template](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html)
+&nbsp;
+7.  Study the JSON file cards in the editor.  Insert the [travel_time line chart card json](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/line_graph_json_ref.html) below into the `"cards":[]`.
+  ```
     {
         "content": {
             "series": [
@@ -146,22 +149,22 @@ In this part of the exercise you will visualize the simulated `travel_time_anoma
         "title": "Travel Time with Anomaly",
         "type": "TIMESERIES"
     },
-
-7.  Notice how the JSON nodes for `"content": {"series":` and `"content": {"dataSourceId":` don't have an aggregation ` "aggregator": "min",` like other line metrics in summary dashboard JSON.  As a result the `travel_time_anomaly` metric line chart data will display raw grain metric data. ![ travel_time_anomaly will show sudden extreme anomalies](img/i113.png) &nbsp;  
-8.  Notice how the `"range": {"count": -24,"interval": "hour"}` JSON node lets Monitor know to only display the last 24 hours of data.    
-9.  Make sure to change all values with card sizes of `XLARGE` to `LARGE` and `XSMALLWIDE`to `SMALLWIDE`, since these formats have been deprecated.
-10.  In the IDE, save your changes to the instance dashboard JSON file.
-11.  You can see the finished [Industrial_Robot_Instance_Travel_Time.json](/json/Industrial_Robot_Instance_Travel_Time.json)
-12.  Return to the Monitor dasshboard editor and click on the `Import` button.
-13.  Choose the `file` you updated with the line card click `open` to import your updated JSON file.
-13.  Your instance dashboard should now look similar to the one below and have a `travel_time_anomaly` Card with some extreme anomalies like the one in the red rectangle. ![Robot Instance Dashboard](img/i114.png).
+    ```
+8.  Notice how the JSON nodes for `"content": {"series":` and `"content": {"dataSourceId":` don't have an aggregation ` "aggregator": "min",` like other line metrics in summary dashboard JSON.  As a result the `travel_time_anomaly` metric line chart data will display raw grain metric data. ![ travel_time_anomaly will show sudden extreme anomalies](img/i113.png) &nbsp;  
+9.  Notice how the `"range": {"count": -24,"interval": "hour"}` JSON node lets Monitor know to only display the last 24 hours of data.    
+10.  Make sure to change all values with card sizes of `XLARGE` to `LARGE` and `XSMALLWIDE`to `SMALLWIDE`, since these formats have been deprecated.
+11.  In the IDE, save your changes to the instance dashboard JSON file.
+12.  You can see the finished [Industrial_Robot_Instance_Travel_Time.json](/json/Industrial_Robot_Instance_Travel_Time.json) &nbsp;
+13.  Return to the Monitor dasshboard editor and click on the `Import` button.
+14.  Choose the `file` you updated with the line card click `open` to import your updated JSON file.
+15.  Your instance dashboard should now look similar to the one below and have a `travel_time_anomaly` Card with some extreme anomalies like the one in the red rectangle. ![Robot Instance Dashboard](img/i114.png).
 
 # Add Anomaly Detection
 Maximo Asset Monitor includes models to [detect anomalies](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html) in the function catalog.  The anomaly models can detect many types of anomaly patterns.  These include:
 
 *  *Varying signal becomes flat line* which can be caused by a defective or tampered with sensor.
 *  *Varying signal becomes a near vertical line* which can be caused by a defective sensor or extreme changes to the system.
-*  *Sudden peak maximum or minimum exceeds historic values* which can be caused by operating equipment outside normal operating procedures.
+*  *Sudden peak maximum or minimum* which can be caused by operating equipment outside normal operating procedures.
 *  *Flat line becomes a varying signal*  which can be a system that has been running smoothly and then becomes out of tolerance or unstable.
 *  *No sensor data is available* which can be caused by a defective sensor or network connectivity issues.
 *  *A predicted value doesn't come within the threshold* based on correlated dependent target variables values.
@@ -275,9 +278,9 @@ Add a multi series line chart card to your instance dashboard that plots the ano
   | ------------------------------------- |:----------------:|
   | `travel_time_spectral_score`          |  99              |
   | `travel_time_saliency_score`          |  105             |
-  | `travel_time_ga_score`                |  0.1             |
-  | `travel_time_fft_score`               |  40              |
-  | `travel_time_kmeans_score`            |  4.5             |
+  | `travel_time_ga_score`                |  0.4             |
+  | `travel_time_fft_score`               |  104             |
+  | `travel_time_kmeans_score`            |  8               |
 
 
 **Add Anomaly Alerts**
@@ -304,9 +307,9 @@ In this exercise you will create alerts for each anomaly function score identifi
 | ------------------------------------- |:----------------:| ----------------------------:|
 | SpectralAnomalyScore2                 |  99              | `travel_time_spectral_alert` |
 | SaliencybasedGeneralizedAnomalyScore  |  105             | `travel_time_saliency_alert` |
-| GeneralizedAnomalyScore               |  0.1             | `travel_time_ga_alert`       |
-| FFTbasedGeneralizedAnomalyScore2      |  40              | `travel_time_fft_alert`      |
-| KMeansAnomalyScore                    |  4.5             | `travel_time_kmeans_alert`   |
+| GeneralizedAnomalyScore               |  0.4             | `travel_time_ga_alert`       |
+| FFTbasedGeneralizedAnomalyScore2      |  104             | `travel_time_fft_alert`      |
+| KMeansAnomalyScore                    |  8               | `travel_time_kmeans_alert`   |
 
 **Update Functions**
 
