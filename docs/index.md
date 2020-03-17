@@ -67,19 +67,16 @@ Here is a high level functional architecture of Maximo Asset Monitor
 IBM Maximo Asset Monitor includes the following IBM Cloud services that help you achieve the above business benefits to scale monitoring to the enterprise:
 
 #### Watson IoT Platform Connection Service
-* Secure registration and management of devices and gateways using the included [Connection Service](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/developing/develop.html)
+* Secure registration and management of devices and gateways using the included [Connection Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/develop.html)
 * Security of users and device
 * Extension points for above and create rules on incoming sensor
 * Mapping physical device types to logical interfaces that reflect the asset you want to manage
-
-#### IBM Event Streams Service
-
-* Messaging service for ensuring data can be streamed in realtime into Kafka without data loss using the included [Event Streams Service](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/developing/data_access_messagehub.html)
-* Real-time integration actions
+* Messaging service for ensuring data can be streamed in realtime
+* Real-time rules and actions
 
 #### Watson IoT Platform Analytics Service
 
-* Data processing and analysis of historical data using the included [Analytics Service](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/analytics/as_overview.html)
+* Data processing and analysis of historical data using the included [Analytics Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_overview.html)
 * Data cleansing and transformation
 * Job scheduling
 * Pipeline analysis and data loading to the data lake
@@ -90,7 +87,7 @@ IBM Maximo Asset Monitor includes the following IBM Cloud services that help you
 
 #### Monitor Service
 
-* Out-of-the-box operational dashboards that scale to the enterprise using the included [Monitor Service](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/dashboard/monitoring.html)
+* Out-of-the-box operational dashboards that scale to the enterprise using the included [Monitor Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/kc_welcome_mon.html)
 * Image card
 * Line time series chart card
 * Value card
@@ -103,7 +100,7 @@ IBM Maximo Asset Monitor includes the following IBM Cloud services that help you
 
 #### Object Storage Service
 
-* To store logs and files for above services using the included [Cloud Object Storage Service](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/analytics/as_logs.html)
+* To store logs and files for above services using the included [Cloud Object Storage Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_logs.html)
 * For long term storage of device sensor data
 * To store images
 

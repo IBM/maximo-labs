@@ -186,11 +186,27 @@ In this exercise you will:
 3.  Select the metric to score for anomalies `travel_time_anomaly`
 4.  Anomaly models require a [window size](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_window_size.html) which is the number of samples points to evaluate each time the model is scheduled to execute.   Enter a `window_size` of `12`.   
 4.  Name the calculated metric `travel_time_kmeans_score`  ![Add Data](img/i114c.png)&nbsp;
-5.  Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  
-6.  Search for `FFTbasedGeneralizedAnomalyScore2` in the function catalog.  Configure and name it `travel_time_fft_score`
-7.  Search for `GeneralizedAnomalyScore` in the function catalog. Configure and name it `travel_time_ga_score`
-8.  Search for `SaliencybasedGeneralizedAnomalyScore` in the function catalog.  Configure and name it `travel_time_saliency_score`
-9.  Search for `SpectralAnomalyScore` in the function catalog.  Configure and name it `travel_time_spectral_score`
+5.  Click `Next` to configure schedule, look back period and name the alert.
+6. Click `Auto schedule` on button to configure anomaly function scoring schedule. ![Toggle anomaly scoring schedule and look back period view](img/i126.png) &nbsp;
+7.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the window size.! [Configure anomaly scoring schedule and look back period](img/i124.png) &nbsp;
+8.  Set the look back period to `2` days.  This will calculate historical scores  looking back 2 days using the new configuration values with the historical metric values for `travel_time_anomaly`.
+9.  Set the output metric name for the alert `travel_time_spectral_score`
+10.  Click `Save` to save the alert configuration.  It will take 15 minutes for the alert to update.  While waiting lets create anomaly functions for the other anomaly models. See the guidance in the table below for scheduling anomaly functions.
+11.  Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  
+12.  Search for `FFTbasedGeneralizedAnomalyScore2` in the function catalog.  Configure and name it `travel_time_fft_score`
+13.  Search for `GeneralizedAnomalyScore` in the function catalog. Configure and name it `travel_time_ga_score`
+14.  Search for `SaliencybasedGeneralizedAnomalyScore` in the function catalog.  Configure and name it `travel_time_saliency_score`
+15.  Search for `SpectralAnomalyScore` in the function catalog.  Configure and name it `travel_time_spectral_score`
+
+**Table - Suggested Scoring Schedule**
+
+| Data Grain Frequency | Sample Window | Data Required         | Schedule Scoring                                                                 |
+| ------------------- |:-------------:| --------------------- |:--------------------------------------------------------------------------------:|
+| 1 Day               | 12            |  24 Days              | <br>Noncritical – Once per 12 days </br> <br>Critical - Once per day</br>    |
+| 1 Hour              | 12            |  24 Hours             | <br>Noncritical – Once per 12 days </br> <br>Critical - Once per 1 hour</br> |
+| 5 Minutes           | 12            |  2 Hours              | <br>Noncritical – Once per 60 mins </br> <br>Critical - Once per 5 mins</br> |
+| 1 Minute            | 12            |  1 Hour               | <br>Noncritical – Once per 12 mins </br> <br>Critical - Once per 5 mins</br> |
+
 
 **Add a Multi Series Line Chart**
 
