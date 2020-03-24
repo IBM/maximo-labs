@@ -171,7 +171,7 @@ Maximo Asset Monitor includes models to [detect anomalies](https://www.ibm.com/s
 
 In this exercise you will:
 
- *  **Add anomaly functions** to your Robot Entity Type.  
+ *  **Add anomaly functions** to your Robot Entity Type to score how likely an anomaly is occurring.
  *  **Add a line chart** to visually compare if high anomaly model scores correlate with the robot `travel_time_anomaly` metric on each robot instance dashboard.
  *  **Add anomaly alert functions** with score thresholds that corresponds to a level that indicates an anomaly for a robot metric.
  *  **Update a function**  with a new metric name or configuration values if needed.
@@ -179,6 +179,8 @@ In this exercise you will:
  *  **Add alerts table to robot instance and summary dashboard** to summarize anomaly alerts.
 
 **Add Anomaly Functions**
+
+You will add an anomaly function that will provide a score of how likely the single input metric is having anomalies during the specified window.  
 
 1.  Search the function catalog for anomaly models to detect anomalies for the metric `travel_time_anomaly`.  
 2.  On the `Data` tab, click the '+' button and search in the function catalog for `Anomaly`.   ![Add Data](img/i114a.png)&nbsp;
@@ -188,8 +190,8 @@ In this exercise you will:
 4.  Name the calculated metric `travel_time_kmeans_score`  ![Add Data](img/i114c.png)&nbsp;
 5.  Click `Next` to configure schedule, look back period and name the alert.
 6. Click `Auto schedule` on button to configure anomaly function scoring schedule. ![Toggle anomaly scoring schedule and look back period view](img/i126.png) &nbsp;
-7.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the window size.! [Configure anomaly scoring schedule and look back period](img/i124.png) &nbsp;
-8.  Set the look back period to `2` days.  This will calculate historical scores  looking back 2 days using the new configuration values with the historical metric values for `travel_time_anomaly`.
+7.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the window size. ![Configure anomaly scoring schedule and look back period](img/i124.png) &nbsp;
+8.  Set the look back period to `2` days.  This will calculate historical scores looking back 2 days using the new configuration values with the historical metric values for `travel_time_anomaly`.
 9.  Set the output metric name for the alert `travel_time_spectral_score`
 10.  Click `Save` to save the alert configuration.  It will take 15 minutes for the alert to update.  While waiting lets create anomaly functions for the other anomaly models. See the guidance in the table below for scheduling anomaly functions.
 11.  Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  
@@ -210,7 +212,7 @@ In this exercise you will:
 
 **Add a Multi Series Line Chart**
 
-Add a multi series line chart card to your instance dashboard that plots the anomaly model scores for `time_travel_anomaly` metric.  You can then visually correlate which models are effective at detecting anomalies by seeing which model scores are high when the anomalies happen.
+Add a line chart** to visually compare if high anomaly model scores correlate with the robot `travel_time_anomaly` metric on each robot instance dashboard.  In this exercise you will add a multi series line chart card to your instance dashboard that plots the anomaly model scores for `time_travel_anomaly` metric.  You can then visually correlate which models are effective at detecting anomalies by seeing which model scores are high when the anomalies happen.
 
 1.  From the instance dashboard click on the `gear icon`![Manage Instance Robot dashboard](img/i98.png) &nbsp;
 2.  Select `Edit dashboard`
