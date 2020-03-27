@@ -14,7 +14,7 @@ You can create service request in IBM Maximo Enterprise Asset Management Service
 3.  The page pictured below will pop up. In the `Service Name` field, name your Maximo service something easily identifiable. In the drop-down menu titled `Service Type`, choose Maximo. You will also need the host URL, the username, and the password you use to login to your Maximo service.  If you do not have this information, contact your system administrator. In the `Site dimension` and `Asset dimension` fields, use the prepopulated values `SITEID` and `ASSETID`, respectively. ![Blank Add Service](img/max2.png) &nbsp;![Filled Add Service](img/max3.png) &nbsp;
 4.  Next, click `Save Changes`. Your Maximo service should pop up underneath the title `Other Services` on the `Services` page.
 
-#  Create Service Request
+#  Create Service Request from an Alert
 
 In this section, you will need to have some alerts that have already been triggered for your Entity Type. If you have not yet learned how to create an alert in Monitor, please see the `Alerts` section in Lab 2: Monitor Assets. You will also need to have an asset/assets with the same name as your entity/entities already set up in your Maximo service. If you do not know how to create an asset in Maximo, please see Appendix 1: Creating an Asset in Maximo.
 
@@ -27,7 +27,7 @@ In this section, you will need to have some alerts that have already been trigge
 If you would like to change the description or details, you are welcome to. Instead, use the prepopulated options. Finally, click `Create`. ![Create SR](img/max7.png) &nbsp;
 7.  You will now see that a number has replaced the `Create service request` button. If you click on that number you will be directed to the service request you just created. You may be prompted to log in to your Maximo service. Use the username and password you were given by your system administrator. ![Alert with SR](img/max8.png) &nbsp;![Maximo SR](img/max9.png) &nbsp;
 
-#  Resolve Service Request
+#  Escalate Service Request to a Work Order"
 
 1.  Escalate Service Request to Work Order.  Inside of the page for the Service Request you just created, you will see on the left side there is a list menu. Find `Create`. Hover over `Create` and click on `Work Order`.![Create Menu Maximo](img/max10.png) &nbsp;
 2.  Select the repair facility of your choice when prompted and click `OK`.![Repair Facility](img/max11.png) &nbsp;
