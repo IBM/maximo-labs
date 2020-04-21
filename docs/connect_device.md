@@ -16,7 +16,7 @@ This lab requires that you:
 Now that you have done some initial exploring of the IoT Platform and you have connected a simulated device, it’s time to connect a real, physical device. For this exercise you will use a Nordic Thingy.  Learn more about the Nordic Thingy and its various sensors [here](https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52)
 
 ## Connect Nordic Thingy to the Internet
-Let’s connect the a Nordic Thingy to the internet using  your Chrome on your computer. You first need to pair the Thingy via Bluetooth to your computer.  Google Chrome has a built in Bluetooth listener.  Using the connectivity page below you can connect to the internet and the Maximo Asset Monitor Cloud Service.   
+Let’s connect the a Nordic Thingy to the internet using Google Chrome on your computer. We are using Google Chrome because it has a built in Bluetooth listener.  Using the connectivity page below you can connect your Nordic Thingy device to the internet and the Maximo Asset Monitor Cloud Service. You first need to pair the Thingy via Bluetooth to your computer.    
 
 1.  Carefully remove the rubber overlay to find the power switch next to the micro-usb port.  A blue light should illuminate when the device is powered up.
 2.  Power on the Nordic Thingy. Push the tiny switch to the left of the micro-web port
@@ -58,7 +58,7 @@ The Nordic Thingy has connectivity to the internet.  You must first register dev
 ![Devices Add Device Finish](img/i21.png) &nbsp;
 12.  A Noridic Thingy also needs the IOT Platform tenant organization ID to connect to the IOT Platform Service.   To find the `Org ID` look in the top right of the screen to see your `Org ID` or the browser URL. Make note of the `Org ID` for use in the next step.
 ![Devices Add Device Finish](img/i21a.png) &nbsp;
-13.  Navigate back to the Thingy page showing the sensor values and place the following into the `Token` field: `<Auth Token>:<Device Type >:<Org ID>` For example: `+A0@WxGamw*wcGiI+:smith.thingy:eefdu2`
+13.  Navigate back to the Thingy page within your Chrome Browser showing the sensor values and place the following into the `Token` field: `<Auth Token>:<Device Type >:<Org ID>` For example: `+A0@WxGamw*wcGiI+:smith.thingy:eefdu2`
 14.  Click `Write` button to write the token to the Thingy. You should see the IoT Platform service connection status indicator will turn green if successful.
 ![Devices Add Device Finish](img/i22.png) &nbsp;
 15.  You should also now see data flowing from the Thingy to your corresponding Device ID in the IoT Platform service back in the `Devices` tab.
@@ -124,7 +124,7 @@ This next exercise focuses how and what database tables your device data is stor
 
 1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.
 ![Device Data State](img/i39.png) &nbsp;
-2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 called IOT_<Device Type Name>.  To see the table go back to then click `Services` [tab](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo).
+2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 Warehouse called `IOTANALYTICS_<Device Type Name>`.  To see the table go back to the Watson IoT Platform window containing Monitor then click `Services` on the hamburger menu. [tab](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo).
 ![Services](img/i41a.png) &nbsp;
 3. Click `View Details`
 ![Services](img/i41b.png) &nbsp;
@@ -135,7 +135,7 @@ This next exercise focuses how and what database tables your device data is stor
 5. The DB2 page opens in another tab.  You may see a second log in dialog labeled `Attention` to change your DB2 password. Ignore the second login dialog.
 6. On the DB2 Click top left hamburger button.
 ![Search Entity Types](img/i43.png) &nbsp;
-7. Under `Explore` click `tables` -> `BLUADMIN` Find your `IOT_<Device Name>` table. Click `View Data` button to see the data.  
+7. Under `Explore` click `tables` -> `BLUADMIN` Find your `IOTANALYTICS_<Device Name>` table. Click `View Data` button to see the data.  
 ![Search Entity Types](img/i44.png) &nbsp;
 
 Congratulations you have successfully connected a device and have it sending and storing data in Maximo Asset Monitor.  In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
