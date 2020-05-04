@@ -1,11 +1,11 @@
-#Advanced Topics
+# Advanced Topics
 
-##Creating Dimensions
+## Creating Dimensions
 
-##Creating a Value Card
+## Creating a Value Card
 
-##Uploading an Image
+## Uploading an Image
 
-##Creating an Image Card
+## Creating an Image Card
 
-##Creating a Table Card
+## Creating a Table Card
