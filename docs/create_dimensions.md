@@ -13,12 +13,35 @@ In order to successfully push your JSON schema into the Monitor platform, you wi
 1. In the hamburger menu on the left side of the screen of Maximo Asset Monitor, click `Connect`.
 2. To the right of where it says `Watson IoT Platform Service` click `View Details`.
 3. Now click the `Launch` button.
-4. 
-
-## Creating a Value Card
-
-## Uploading an Image
-
-## Creating an Image Card
-
-## Creating a Table Card
+4. Sign into the `vrvzh6` organization in the Watson IoT Platform Service window. You can locate the organization on the top right corner of your screen. Click in the red boxed area on your browser to change the organization if need be. ![Changing IoTP Org](img/cd2.png) 
+5. On the left side pop out menu, click on `Apps`.
+6. Next, click `+ Generate API Key` button.
+7. Click next until you hit the `Generate API Key` button. Nothing of importance for this exercise appears before this step.
+8. Make sure you copy and paste your API Key and Token in a safe place. You will not be able to retrieve the token again. You will need both the API Key and Token to push the dimensions to Monitor.
+## Pushing the Dimensions using Postman
+1. Figure out the hierarchy you will deploy. I used `Country`:US, `Site`:Cambridge, and `Asset`:Motor. You will be pushing key-value pairs associated with your devices into Monitor to create your dimensions.
+2. Open up the Postman application. In the top left corner you will see a button that says `+New`. Click on the `Request` button. Name your Request and create a Collection to place the Request.  Click the dropdown menu inside the red box in Postman to classify this API Call as a `POST` Request. ![POST Request](img/cd3.png)
+3. Copy and paste this link into where it says “Enter request URL”: https://api-beta.connectedproducts.internetofthings.ibmcloud.com/api/master/v1/Monitor-Demo/entity/type/EntityType/dimensional **In the Request URL in Postman, you will need to enter your Device Type/Entity Type instead of “EntityType.”**
+4. Click on `Headers`. (`Params` will be the default select.) Enter the key-value pairs you see below. However, instead of the API Key and Token shown below, **enter the API Key and Token you generated in the first section of this lab.** ![Postman Headers](img/cd4.png)
+5. Now click on `Body` and select `raw`. You will need to enter a JSON payload here to tie your Device ID with your chosen dimensions. In this case, `id` will always be your Nordic Thingy Device ID. `name` will be the dimension name, and `value` will be the value you are assigning to your Device ID in terms of your dimension. ![Postman Body](img/cd5.png)
+6. Here is the JSON I used. Feel free to use more than three dimensions if you so choose. Please copy, paste, and modify the JSON below for the sake of easy formatting: 
+```
+  [
+    {
+        "id": "PThingy",
+        "name" : "COUNTRY",
+        "value" : "US"
+    },
+    {
+        "id": "PThingy",
+        "name" : "SITE",
+        "value" : "Cambridge"
+    },
+    {
+        "id": "PThingy",
+        "name" : "ASSET",
+        "value" : "Motor"
+    }
+  ] 
+ ```
+7. After you have finished the above steps. Click `Send`. You should receive a `200 OK` success code from Postman. If not, make sure you entered everything correctly. If you are still having issues, please contact Paulina Thomas (paulina.thomas@ibm.com), or post a comment in the #ask-as_monitor Slack channel in the AI Applications workspace. ![200 OK](img/cd6.png)
