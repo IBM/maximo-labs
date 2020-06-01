@@ -6,8 +6,8 @@ nav:
     - Home: index.md
     - 1.  Connect Devices: connect_device.md
     - 2.  Monitor Assets: monitor_asset_devices.md
-    - 3.  Monitor Anomalies (under development: monitor_anomalies.md
+    - 3.  Monitor Anomalies: monitor_anomalies.md
     - 4.  Create Service Requests: service_request.md
-    - 5.  Pre-Requisite Instructions (under development): facilitator_instructions.md
+    - 5.  Pre-Requisite Instructions: facilitator_instructions.md
     - 6.  Contributing: about.md
 theme: readthedocs
