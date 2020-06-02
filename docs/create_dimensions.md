@@ -20,9 +20,9 @@ In order to successfully push your JSON schema into the Monitor platform, you wi
 8. Make sure you copy and paste your API Key and Token in a safe place. You will not be able to retrieve the token again. You will need both the API Key and Token to push the dimensions to Monitor.
 ## Pushing the Dimensions using Postman
 
+In this section, you will come up with metadata you would like to assign to your entities for the purpose of drill down and quick root cause analysis. The dimensions enable you to look at devices of a certain category or drill down to a single device.
 
-
-1. Figure out the hierarchy you will deploy. In the example inside of the attached Postman Collection, the dimensions `Country`:US, `Site`:Cambridge, and `Asset`:Motor were used. You will be pushing key-value pairs associated with your devices into Monitor to create your dimensions.
+1. Figure out the metadata you will deploy. In the example inside of the attached Postman Collection, the dimensions `Country`:US, `Site`:Cambridge, and `Asset`:Motor were used. You will be pushing key-value pairs associated with your devices into Monitor to create your dimensions.
 2. Open up the Postman application. In the top left corner you will see a button that says `+New`. Click on the `Request` button. Name your Request and create a Collection to place the Request.  Click the dropdown menu inside the red box in Postman to classify this API Call as a `POST` Request. ![POST Request](img/cd3.png)
 3. Copy and paste this link into where it says “Enter request URL”: https://api-beta.connectedproducts.internetofthings.ibmcloud.com/api/master/v1/TenantID/entity/type/EntityType/dimensional **In the Request URL in Postman, you will need to enter your Device Type/Entity Type instead of “EntityType", and you willn need to enter the name of the Tenant you are using in place of "TenantID”.**
 4. Click on `Headers`. (`Params` will be the default select.) Enter the key-value pairs you see below. However, instead of the API Key and Token shown below, **enter the API Key and Token you generated in the first section of this lab.** ![Postman Headers](img/cd4.png)
