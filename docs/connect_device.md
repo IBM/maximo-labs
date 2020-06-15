@@ -43,7 +43,6 @@ The Nordic Thingy has connectivity to the internet.  You must first register dev
 5.  You are now inside of the IoT Platform Connection Service within Maximo Asset Monitor. &nbsp;
 6. Navigate to the `Device Type` tab.
 7.  Click `Add new device type` button in the top right corner.
-![Devices Types Tab](img/i16.png) &nbsp;
 8.  Now create a new device type and name it `<your last name>_thingy`. For example, `smith_thingy.`Classify this device type as `Device` by selecting that radio button. In the figures below, you will see that the device type name has a dash in it. DO NOT PUT A DASH OR PERIOD IN YOUR DEVICE TYPE NAME. There is an issue in Monitor right now where the pipeline will break if there is a dash or period in your device type name. If you would like to create Metadata, you can enter a key value pair describing your device. By doing so, you can easily create dimensions, a concept described in great detail in Lab 5, for your device type.
 9.  Click `Create Device Type`. You’ve finished creating a device type.
 10.  Now you will register a new device using the `Device Type` you just created. Navigate back to the `Devices` tab and click `Add new device`.
@@ -70,60 +69,30 @@ You will create an alert notification when the Nordic Thingy has an error condit
 ## Create a Physical Interface
 1.  Make sure your Nordic Thingy is turned on and actively sending sensor data to the IoTP service. You may need to reconnect the Thingy in the Chrome browser using this [web link](https://nrf52t.mybluemix.net/?edit) and steps provided earlier.
 2. Check if the Thingy is connected.  Click `Browse` tab in the IoT Platform service and searching the devices list for device status and recent events.
-![Browse Devices](img/i27.png) &nbsp;
 3.  Navigate to the device type for your Thingy and click `Interfaces` tab. Make sure `Advanced Flow` is selected and click `Create Physical Interface` button.
-![Device Type Advanced Flow](img/i28.png) &nbsp;
 4.  Leave the default name for the physical interface and then click `Next`.
 5.  Click `+ Create event type` button on the next page. If your Nordic Thingy is still actively sending events, then you should see the `status` event show up.
 6.  If the `status` event does not automatically appear, check the connectivity back in `Browse` in the device list. Select it and then click `Add.`
 7.  Click `Done` to complete the creation of the physical interfaces.
-![Add Event Types to Physical Interface](img/i29.png) &nbsp;
 
 ## Create a Logical Interface
 1.  Next, click `+ Create Logical Interface` button to begin creating the logical interface. Leave the default name as is and click `Next`
 2. Click `+ Add Property` button, expand the `d` and select and save the `err` property.
-![Add Event Types to Physical Interface](img/i30.png) &nbsp;
-![Add Property to Physical Interface](img/i31.png) &nbsp;   
 3.  Let’s do the same for “temperature”, except this time we’ll use the mapping field to convert the temperature from Celsius to Fahrenheit using [JSONData script functions](https://docs.jsonata.org/expressions).  Select `add` property  
 4.  Select `temperature`
-5.  Then in the mapping field, click `pencil` icon to edit
+5.  Then in the mapping field, click `pencil` icon to edit.
 6.  Add the following equation: `d.temperature * 1.8 + 32`. Notice that to input the numbers `1.8` and `32` you have to first select the `Value` operator. Another option is to switch the `Advanced Editor` button and paste the formula.  If you mistype it may cause a syntax error so be careful.
-7.  Click `green check` mark when complete
-8.  Click `save`
-![Add a Calculated Property to a Physical Interface](img/i32.png) &nbsp;   
-9.  Add the remaining properties. You should see the following before clicking `Next`
-![Add a Calculated Property to a Physical Interface](img/i33.png) &nbsp;   
+7.  Click `green check` mark when complete.
+8.  Click `save`.
+9.  Add the remaining properties. You should see the following before clicking `Next`. 
 9. Click `Next` to move onto `Notifications`. Notifications allow you to take action when certain conditions occur.
-10. Change the `State Update Notification` criteria to `State Changes.` This will send data to your Logical interface only when the value changes.   Make sure to hit the `Apply` button to save changes. If you want to send the event all the time even when the values are the same as previous events select `All events`.
-![Add a Calculated Property to a Physical Interface](img/i34.png) &nbsp;   
-![Add a Calculated Property to a Physical Interface](img/i35.png) &nbsp;   
+10. Change the `State Update Notification` criteria to `State Changes.` This will send data to your Logical interface only when the value changes.   Make sure to hit the `Apply` button to save changes. If you want to send the event all the time even when the values are the same as previous events select `All events`. 
 11.  Click `Add Notification` button. This will raise a notification event in IOT Platform when the Thingy’s error condition is set to `1`
 12.  Enter the Name, description, criteria and condition as shown below.`$state.err = 1`
 13.  Click `Apply`
-14.  Click `Done`
-![Save Physical Interface Definition](img/i36.png) &nbsp;  
-15.  The interface creation is almost complete. Back in the interface view, click `Activate` button and activate the interfaces. If successful, you should see a green rocket ship icon next to each interface.
-![Add a Calculated Property to a Physical Interface](img/i37.png) &nbsp;  
+14.  Click `Done` 
+15.  The interface creation is almost complete. Back in the interface view, click `Activate` button and activate the interfaces. If successful, you should see a green rocket ship icon next to each interface. 
 16. You can check to see if your interface is working, by browsing to your device, select the `State` tab and switch the interface to your newly created interface. Temperature should now be shown in Fahrenheit.
 ![Check Physical Interface State Events](img/i38.png) &nbsp;  
 
-# Store Data
-This next exercise focuses how and what database tables your device data is stored in.  Make sure you have completed the earlier exercises in this lab. You should already have device type with an active physical and logical interface and that you have at least one device of that type sending data.
-
-1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.
-![Device Data State](img/i39.png) &nbsp;
-2. Device data flows through a physical device type, transformed into a logical interface and stored in a time series database table within DB2 Warehouse called `IOTANALYTICS_<Device Type Name>`.  To see the table go back to the Watson IoT Platform window containing Monitor then click `Services` on the hamburger menu. [tab](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo).
-![Services](img/i41a.png) &nbsp;
-3. Click `View Details`
-![Services](img/i41b.png) &nbsp;
-4. Next to Db2 Warehouse on Cloud, and click `Launch`
-![DB2 Credentials](img/i40.png) &nbsp;
-5. Copy and paste the `username` and `password` from the `View Details` window into the Db2 login page.
-![Search Entity Types](img/i42.png) &nbsp;
-5. The DB2 page opens in another tab.  You may see a second log in dialog labeled `Attention` to change your DB2 password. Ignore the second login dialog.
-6. On the DB2 Click top left hamburger button.
-![Search Entity Types](img/i43.png) &nbsp;
-7. Under `Explore` click `tables` -> `BLUADMIN` Find your `IOTANALYTICS_<Device Name>` table. Click `View Data` button to see the data.  
-![Search Entity Types](img/i44.png) &nbsp;
-
-Congratulations you have successfully connected a device and have it sending and storing data in Maximo Asset Monitor.  In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
+Congratulations you have successfully connected a device and have it sending data in Maximo Asset Monitor.  In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
