@@ -40,8 +40,10 @@ The Nordic Thingy has connectivity to the internet.  You must first register dev
 ![Maximo Asset Monitor Home](img/i12.png)&nbsp;
 4.  Click `Connect` tab (third icon in the side menu)
 ![Connect Devices Menu](img/i13.png) &nbsp;
-5.  You are now inside of the IoT Platform Connection Service within Maximo Asset Monitor. &nbsp;
+5.  You are now inside of the IoT Platform Connection Service within Maximo Asset Monitor. 
+![Connect Device](img/connect1.png)&nbsp;
 6. Navigate to the `Device Type` tab.
+![Connect Device](img/connect2.png)&nbsp;
 7.  Click `Add new device type` button in the top right corner.
 8.  Now create a new device type and name it `<your last name>_thingy`. For example, `smith_thingy.`Classify this device type as `Device` by selecting that radio button. In the figures below, you will see that the device type name has a dash in it. DO NOT PUT A DASH OR PERIOD IN YOUR DEVICE TYPE NAME. There is an issue in Monitor right now where the pipeline will break if there is a dash or period in your device type name. If you would like to create Metadata, you can enter a key value pair describing your device. By doing so, you can easily create dimensions, a concept described in great detail in Lab 5, for your device type.
 9.  Click `Create Device Type`. You’ve finished creating a device type.
