@@ -92,7 +92,6 @@ You will create an alert notification when the Nordic Thingy has an error condit
 13.  Click `Apply`
 14.  Click `Done` 
 15.  The interface creation is almost complete. Back in the interface view, click `Activate` button and activate the interfaces. If successful, you should see a green rocket ship icon next to each interface. 
-16. You can check to see if your interface is working, by browsing to your device, select the `State` tab and switch the interface to your newly created interface. Temperature should now be shown in Fahrenheit.
-![Check Physical Interface State Events](img/i38.png) &nbsp;  
+16. You can check to see if your interface is working, by browsing to your device, select the `State` tab and switch the interface to your newly created interface. Temperature should now be shown in Fahrenheit. 
 
 Congratulations you have successfully connected a device and have it sending data in Maximo Asset Monitor.  In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
