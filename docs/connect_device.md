@@ -48,7 +48,7 @@ The Nordic Thingy has connectivity to the internet.  You must first register dev
 8.  Now create a new device type and name it `<your last name>_thingy`. For example, `smith_thingy.`Classify this device type as `Device` by selecting that radio button. In the figures below, you will see that the device type name has a dash in it. DO NOT PUT A DASH OR PERIOD IN YOUR DEVICE TYPE NAME. There is an issue in Monitor right now where the pipeline will break if there is a dash or period in your device type name. If you would like to create Metadata, you can enter a key value pair describing your device. By doing so, you can easily create dimensions, a concept described in great detail in Lab 6, for your device type.
 ![Connect Device Type](img/connect4.png)&nbsp;
 9.  Click `Create Device Type`. You’ve finished creating a device type.
-10.  Now you will register a new device using the `Device Type` you just created. Navigate back to the `Devices` tab and click `Add new device`.
+10.  Now you will register a new device using the `Device Type` you just created. Navigate back to the `Devices` tab and click `Add new device`
 ![Connect Device Type](img/connect5.png)&nbsp;
 11.  Search for and select the `Device Type` you created in the previous steps. Make sure to name the device the same name as you named your physical Thingy device from the earlier step. 
 ![Connect Device Type](img/connect6.png)&nbsp;
