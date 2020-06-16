@@ -58,7 +58,7 @@ The Nordic Thingy has connectivity to the internet.  You must first register dev
 ![Connect Device Type](img/connect8.png)&nbsp;
 13. Click next, and create your new device. You will be able to copy and paste your authentication token from this screen. Please do so into a note or write it down.
 ![Connect Device Type](img/connect9.png)&nbsp;
-14.  A Nordic Thingy also needs the IOT Platform tenant organization ID to connect to the IOT Platform Service.   To find the `Org ID` look in the top right of the screen to see your `Org ID` or the browser URL. Make note of the `Org ID` for use in the next step.
+14.  A Nordic Thingy also needs the IOT Platform tenant organization ID to connect to the IOT Platform Service.   To find the `Organization ID` look at the first item in the blue box inside the screenshot from above. Make note of the `Organization ID` for use in the next step.
 15.  Navigate back to the Thingy page within your Chrome Browser showing the sensor values and place the following into the `Token` field: `<Auth Token>:<Device Type >:<Org ID>` For example: `+A0@WxGamw*wcGiI+:smith.thingy:eefdu2`
 16.  Click `Write` button to write the token to the Thingy. You should see the IoT Platform service connection status indicator will turn green if successful.
 17.  You should also now see data flowing from the Thingy to your corresponding Device ID in the IoT Platform service back in the `Devices` tab.
