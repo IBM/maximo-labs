@@ -20,13 +20,13 @@ Let’s connect the a Nordic Thingy to the internet using Google Chrome on your 
 
 1.  Carefully remove the rubber overlay to find the power switch next to the micro-usb port.  A blue light should illuminate when the device is powered up.
 2.  Power on the Nordic Thingy. Push the tiny switch to the left of the micro-web port
-3.  Use Bluetooth in the Google Chrome Browser to connect your device to the internet.  Open a tab with this web address:  [https://nrf52t.mybluemix.net/?edit](https://nrf52t.mybluemix.net/?edit).
+3.  Use Bluetooth in the Google Chrome Browser to connect your device to the internet.  Open a tab with this web address:  [https://nrf52t-v2.mybluemix.net/](https://nrf52t-v2.mybluemix.net/).
 4.  This method will only work on Google Chrome as it has a built in Bluetooth listener. Below is the connectivity page you’ll need to revisit if you get disconnected at any point. you’ll need to revisit if you get disconnected at any point. Click `Connect` button.
-![Connect Thingy in Chrome](img/i8.png)
+![Connect Thingy in Chrome](img/connect13.png)&nbsp;
 5. In the list of devices, find the one matching your device, select it and click `Pair`. You may need to rename the Thingy if you are in close range with others also using their own Thingy.
-![Pair Bluetooth](img/i9.png)  
+![Pair Bluetooth](img/i9.png)
 6. 	Once paired, you should see the following screen which shows IoTP connection status as well as some of the sensor values coming from the Thingy.
-![Thingy Status in Chrome](img/i10.png)  
+![Thingy Status in Chrome](img/i10.png)
 7. 	The top righthand corner button will say “connecting”. Notice the IoTP indicator does not have a checkmark. This is because it is not yet connected to the IoT Platform. To connect it up, copy or make note of the Thingy name and, in a new tab or window, you will next connect the Thingy to IoT Platform service included with Maximo Asset Monitor.
 
 
