@@ -25,9 +25,7 @@ Let’s connect the a Nordic Thingy to the internet using Google Chrome on your 
 ![Connect Thingy in Chrome](img/connect13.png)&nbsp;
 5. In the list of devices, find the one matching your device, select it and click `Pair`. You may need to rename the Thingy if you are in close range with others also using their own Thingy.
 ![Pair Bluetooth](img/i9.png)
-6. 	Once paired, you should see the following screen which shows IoTP connection status as well as some of the sensor values coming from the Thingy.
-![Thingy Status in Chrome](img/i10.png)
-7. 	The top righthand corner button will say “connecting”. Notice the IoTP indicator does not have a checkmark. This is because it is not yet connected to the IoT Platform. To connect it up, copy or make note of the Thingy name and, in a new tab or window, you will next connect the Thingy to IoT Platform service included with Maximo Asset Monitor.
+6. 	Once paired, a form will pop up. The form's presence indicates that the Thingy is connected to your computer via Bluetooth. In order to connect the Thingy to the IoT Platform, we will need to obtain the information to fill in missing fields in the form. We will obtain this information in the next section.
 
 
 ## Connect Nordic Thingy to Maximo Asset Monitor
