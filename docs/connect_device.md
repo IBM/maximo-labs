@@ -38,34 +38,35 @@ The Nordic Thingy has connectivity to the internet.  You must first register dev
 ![Login to Maximo Asset Monitor](img/i11.png)&nbsp;
 3.  After logging in, you’ll land in Home Screen.”
 ![Maximo Asset Monitor Home](img/i12.png)&nbsp;
-4.  Click `Connect` tab (third icon in the side menu)
+4.  Click `Services` tab (fifth icon in the side menu)
 ![Connect Devices Menu](img/i13.png) &nbsp;
-5.  Click `Connect` button (icon in the side menu) to Connect to IOT Platform service included with Maximo Asset Monitor. &nbsp;
+5.  Next to the `Watson IoT Platform Service` title, click `View Details`. A new window will open. &nbsp;
 ![Connect Devices Launch Button](img/i14.png) &nbsp;
-6.  A new page will open. Navigate to the `Device Types` tab
+6. Click `View More`. Copy and paste the link of the `Source URL` into a new tab in your browser.
+7.  A new page will open. Navigate to the `Device Types` tab
 ![Devices Types Tab](img/i14b.png) &nbsp;
-7.  Click `Add Device Type` button in the top right corner.
+8.  Click `Add Device Type` button in the top right corner.
 ![Devices Types Tab](img/i16.png) &nbsp;
-8.  Now create a new device type and name it `<your last name>_thingy`. For example, `smith_thingy.` In the figures below, you will see that the device type name has a dash in it. DO NOT PUT A DASH OR PERIOD IN YOUR DEVICE TYPE NAME. There is an issue in Monitor right now where the pipeline will break if there is a dash or period in your device type name.
+9.  Now create a new device type and name it `<your last name>_thingy`. For example, `smith_thingy.` In the figures below, you will see that the device type name has a dash in it. DO NOT PUT A DASH OR PERIOD IN YOUR DEVICE TYPE NAME. There is an issue in Monitor right now where the pipeline will break if there is a dash or period in your device type name.
 ![Devices Types Add Type](img/i17.png) &nbsp;  
 ![Devices Tab](img/i19.png) &nbsp;
-9.  Click `Next` until you get past `Finish`. You’ve finished creating a device type.
-10.  Now you will register a new device using the `Device Type` you just created. Make sure to name the device the same name as your Thingy from the earlier step.  Navigate back to the `Browse` tab and `Add Device`
+10.  Click `Next` until you get past `Finish`. You’ve finished creating a device type.
+11.  Now you will register a new device using the `Device Type` you just created. Make sure to name the device the same name as your Thingy from the earlier step.  Navigate back to the `Browse` tab and `Add Device`
 ![Devices Add Device](img/i15a.png) &nbsp;
 ![Devices Add Device Information](img/i18.png) &nbsp;
 ![Devices Add Device](img/i20.png) &nbsp;
-11.  Once you finish creating the device, make sure you copy and make note of the device credentials!  Your device must provide device credentials to connect to the IOT Platform Service.
+12.  Once you finish creating the device, make sure you copy and make note of the device credentials!  Your device must provide device credentials to connect to the IOT Platform Service.
 ![Devices Add Device Finish](img/i21.png) &nbsp;
-12.  A Noridic Thingy also needs the IOT Platform tenant organization ID to connect to the IOT Platform Service.   To find the `Org ID` look in the top right of the screen to see your `Org ID` or the browser URL. Make note of the `Org ID` for use in the next step.
+13.  A Noridic Thingy also needs the IOT Platform tenant organization ID to connect to the IOT Platform Service.   To find the `Org ID` look in the top right of the screen to see your `Org ID` or the browser URL. Make note of the `Org ID` for use in the next step.
 ![Devices Add Device Finish](img/i21a.png) &nbsp;
-13.  Navigate back to the Thingy page within your Chrome Browser showing the sensor values and place the following into the `Token` field: `<Auth Token>:<Device Type >:<Org ID>` For example: `+A0@WxGamw*wcGiI+:smith.thingy:eefdu2`
-14.  Click `Write` button to write the token to the Thingy. You should see the IoT Platform service connection status indicator will turn green if successful.
+14.  Navigate back to the Thingy page within your Chrome Browser showing the sensor values and place the following into the `Token` field: `<Auth Token>:<Device Type >:<Org ID>` For example: `+A0@WxGamw*wcGiI+:smith.thingy:eefdu2`
+15.  Click `Write` button to write the token to the Thingy. You should see the IoT Platform service connection status indicator will turn green if successful.
 ![Devices Add Device Finish](img/i22.png) &nbsp;
-15.  You should also now see data flowing from the Thingy to your corresponding Device ID in the IoT Platform service back in the `Devices` tab.
+16.  You should also now see data flowing from the Thingy to your corresponding Device ID in the IoT Platform service back in the `Devices` tab.
 ![Devices Add Device Finish](img/i25.png)&nbsp;
-16.  Flip the Thingy upside down to create an error condition. It will beep and the light will turn red. Click on one of the rows to see the vent payload json file. Notice the `err` value in the payload changes to 1.
+17.  Flip the Thingy upside down to create an error condition. It will beep and the light will turn red. Click on one of the rows to see the vent payload json file. Notice the `err` value in the payload changes to 1.
 ![Devices Add Device Finish](img/i26.png)&nbsp;
-17.  Press the large black button on the top of the Thingy to clear the error.
+18.  Press the large black button on the top of the Thingy to clear the error.
 ---
 **Note:**
 This exercise demonstrated how to manually add a device to Maximo Asset Monitor.  You would most likely  programatically add devices using the included Watson IOT Platform Service [REST APIs](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/references/ref_apis.html) and [Python SDK](https://ibm-watson-iot.github.io/iot-python/application/api/registry/devices/).
