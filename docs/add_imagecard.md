@@ -3,5 +3,5 @@
 ### Choose Image
 ### Obtain API Key
 ### Push Image to Datalake using Postman
-## Create Image Card
+## Display Image Card on Dashboard
 ### Create Image Card JSON Object
