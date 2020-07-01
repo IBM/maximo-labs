@@ -22,8 +22,10 @@ You can choose which labs to complete based on your learning objectives,  the am
 | 2       | Ready for Use     |  Monitor Assets             | Create dashboards that enable you to visualize asset data using asset device data. |
 | 3       | Ready for Use     |  Monitor Anomalies          | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.     |
 | 4       | Ready for Use     |  Create Service Requests    | Resolve anomalies by creating service requests in Maximo. |
-| 5       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
-| 6       | Under Development |  Contributing to Labs       | How to provide feedback or add submit new content.|
+| 5       | Under Development |  Visualize Assets           | Add image cards and hover spots to see asset conditions on your asset image. |
+| 6       | Ready for Use     |  Asset Meta Data            | Add dimensions for filtering assets and aggregating asset metrics on Summary Dashboards.|
+| 7       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
+| 8       | Under Development |  Contributing to Labs       | How to provide feedback or add submit new content.|
 
 ### Learning Paths
 
