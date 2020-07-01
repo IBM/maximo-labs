@@ -130,7 +130,10 @@ This next exercise focuses how and what database tables your device data is stor
 ![Services](img/i41a.png) &nbsp;
 3. Click `View Details`
 ![Services](img/i41b.png) &nbsp;
-### If when you click on `View Details`, you see fields that say admin only, please contact an administrator on the account to give you your respective DB2 link, username, and password. If instead of DB2 Warehouse, your tenant uses PostgreSQL, download DBeaver and enter the information given in the `View Details` tab. More information on Maximo Asset Monitor and PostgreSQL can be found [here](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/data_access_postgres_mon.html)
+---
+**Note:**
+If when you click on `View Details`, you see fields that say admin only, please contact an administrator on the account to give you your respective DB2 link, username, and password. If instead of DB2 Warehouse, your tenant uses PostgreSQL, download DBeaver and enter the information given in the `View Details` tab. More information on Maximo Asset Monitor and PostgreSQL can be found [here](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/data_access_postgres_mon.html)
+---
 4. Next to Db2 Warehouse on Cloud, and click `Launch`
 ![DB2 Credentials](img/i40.png) &nbsp;
 5. Copy and paste the `username` and `password` from the `View Details` window into the Db2 login page.

@@ -8,6 +8,8 @@ nav:
     - 2.  Monitor Assets: monitor_asset_devices.md
     - 3.  Monitor Anomalies: monitor_anomalies.md
     - 4.  Create Service Requests: service_request.md
-    - 5.  Pre-Requisite Instructions: facilitator_instructions.md
-    - 6.  Contributing: about.md
+    - 5.  Visualize Assets: add_imagecard.md
+    - 6.  Asset Meta Data: create_dimensions.md
+    - 7.  Pre-Requisite Instructions: facilitator_instructions.md
+    - 8.  Contributing: about.md
 theme: readthedocs

@@ -194,12 +194,12 @@ Watch the 19 min video explaining how to configure anomaly detection functions, 
 
 ---
 
-**Choose an Entity Type to Analyze**
+**Choose an Entity to Analyze**
 
 Imagine you are managing a fleet of delivery vehicles.  One out of the five vehicles is a car instead of a scooter. If you wanted to detect anomalies for excessive miles per gallon performance you should analyze the miles per gallon metric for the car separately from the scooters.  Add an `EntityFilter` function to isolate a function analysis to an individual entity.
 
 1.  While editing your entity type,  search the function catalog for `EntityFilter` function. 
-2.  On the `Data` tab, click the '+' button and search in the function catalog for `EntityFilter`.   ![Add Data](img/i114a.png)&nbsp;
+2.  On the `Data` tab, click the '+' button and search in the function catalog for `EntityFilter`.   ![Add Data](img/AddFunction.png)&nbsp;
 3.  On the function `Configuration` tab, enter the list of entity ids separated by a comma or `73000` for just one entity. ![Choose Entity](img/a1.png)&nbsp;  
 4.  On the function `Output` tab, enter the name of they filtered entity `entity_73000` for the output metric name.  ![Name it entity_73000](img/a2.png)&nbsp; 
 
@@ -208,7 +208,7 @@ Imagine you are managing a fleet of delivery vehicles.  One out of the five vehi
 Add the `Filter` function you can isolate your analysis to an individual entity and metric.  Select the metrics to analyze from the filtered entities by adding Filter.  
 
 1.  While editing your entity type,  search the function catalog for `Filter` function. 
-2.  On the `Data` tab, click the '+' button and search in the function catalog for `Filter`.   ![Add Data](img/i114a.png)&nbsp;
+2.  On the `Data` tab, click the '+' button and search in the function catalog for `Filter`.   ![Add Data](img/AddFunction.png)&nbsp;
 3.  Choose `entity_73000` output item from the previous function as source and expression shown below.  ![Choose Filter](img/a4.png)&nbsp;
 4.  On the function `Configuration` tab, choose `${entity_73000} == True` as the expression.  ![Choose Filter](img/a3.png)&nbsp;
 5.  On the function `Configuration` tab, choose `travel_time_anomaly` as the metric to analyzed for `filtered_sources`.
@@ -220,16 +220,16 @@ Add the `Filter` function you can isolate your analysis to an individual entity 
 You will add an anomaly function that will provide a score of how likely the single input metric is having anomalies during the specified window.  The directions that follow will use the metric `travel_time_anomaly` which will analyze all robots for that metric.   If you only want to analyze one robot entity `73000`, then select entity filtered metric created in the previous step `travel_time_anomaly_entity_73000` instead.
 
 1.  Search the function catalog for anomaly detection functions to detect anomalies for the metric `travel_time_anomaly`.  
-2.  On the `Data` tab, click the '+' button and search in the function catalog for `Anomaly`.   ![Add Data](img/i114a.png)&nbsp;
+2.  On the `Data` tab, click the '+' button and search in the function catalog for `Anomaly`.   ![Add Data](img/AddFunction.png)&nbsp;
 2.  Select `K-MeansAnomalyScore`.  Notice the different kinds of [Anomaly Model functions](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html) included with Monitor. Click `Select` button. ![Choose K-MeansAnomalyScore Anomaly Model](img/i114b.png)&nbsp;
 3.  Select the metric to score for anomalies `travel_time_anomaly`
 4.  Anomaly detection functions require a [window size](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_window_size.html) which is the number of samples points to evaluate each time the model is scheduled to execute.   Enter a `windowsize` of `12`.   
 4.  Name the calculated metric `travel_time_kmeans_score`  ![Add Data](img/i114c.png)&nbsp;
 5.  Click `Next` to configure schedule, look back period and name the alert.
-6. Click `Auto schedule` on button to configure anomaly function scoring schedule. ![Toggle anomaly scoring schedule and look back period view](img/i126.png) &nbsp;
-7.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the `windowsize`. ![Configure anomaly scoring schedule and look back period](img/i124.png) &nbsp;
+6. Click `Auto schedule` on button to configure anomaly function scoring schedule. ![Toggle anomaly scoring schedule and look back period view](img/KmeansAnomalyScore.png) &nbsp;
+7.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the `windowsize`. ![Configure anomaly scoring schedule and look back period](img/KmeansAnomalySchedule.png) &nbsp;
 8.  Set the look back period to `2` days.  This will calculate historical scores looking back 2 days using the new configuration values with the historical metric values for `travel_time_anomaly`.
-9.  Set the output metric name for the alert `travel_time_spectral_score`
+9.  Set the output metric name for the alert `travel_time_kmeans_score`
 10.  Click `Create` to create the alert configuration.  It will take 15 minutes for the alert to update.  While waiting lets create anomaly functions for the other anomaly detection functions. See the guidance in the table below for scheduling anomaly functions.
 11.  Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  
 12.  Search for `FFTbasedGeneralizedAnomalyScore2` in the function catalog.  Configure and name it `travel_time_fft_score`
@@ -340,7 +340,7 @@ Add a line chart** to visually compare if high anomaly model scores correlate wi
 
 **Add Anomaly Alerts**
 
-In this exercise you will create alerts for each anomaly function score identified in the previous exercise.  You will set the alert thresholds to values of the visually correlated anomaly scores.  As you learned earlier, alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a several alert functions included in the catalog like `Alert High`, `Alert Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  Add a `Alert High Value` alert for each anomaly model.  Alerts can  calculate historical values for a given function configuration.
+In this exercise you will create alerts for each anomaly function score identified in the previous exercise.  You will set the alert thresholds to values of the visually correlated anomaly scores using the `upper_threshold` values from the table in `Add Anomaly Functions`    As you learned earlier, alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a several alert functions included in the catalog like `Alert High`, `Alert Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  Add a `Alert High Value` alert for each anomaly model.  Alerts can  calculate historical values for a given function configuration.
 
 1. Click `+` button access the Function Catalog.  ![Search function catalog for alerts](img/i128.png) &nbsp;  
 2. Search on `Alert`
