@@ -3,7 +3,8 @@
 In Maximo Asset Monitor, images can add a tremendous amount of value to data visualization when paired with graphs, tables, and value cards. Using a REST API call, you are able to push an image of your choosing into the Monitor data lake and display this image on your dashboards. You are also able to place icons which called hotspots on the image cards. These icons are tied to data from individual sensors or an aggregate of all of the sensors on a summary dashboard. Inside of the JSON configuration for the image card, you are able to set alert conditions that change the icon on the hotspot.
 ![Munich Occupancy Image Card](img/im1.png) &nbsp;
 
-Here is what you see when you click on one of the hotspots.
+*Here is what you see when you click on one of the hotspots.*
+
 ![Munich Occupancy Hotspot](img/im2.png) &nbsp;
 
 The image card above displays an occupancy use case. Individual occupancy sensors have been tied to each hot spot to indicate whether seats in a meeting room in the Munich IoT center are occupied. The image above shows a much more complicated image card with hotspots than you will be creating in this lab, but this example is something that you could use eventually in the real world.
