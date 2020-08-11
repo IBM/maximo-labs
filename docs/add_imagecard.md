@@ -17,7 +17,15 @@ In this lab, you will learn how to select a photo for your image card, push your
 3. These are the types of files that you can push into the Monitor data lake.
 ![Acceptable File Types](img/im3.png) &nbsp;
 ### Obtain API Key
-1. 
+1. Open up your Maximo Asset Monitor tenant.
+2. Open up the hamburger menu on the left side and select `Services`.
+![Services Navigation](img/im4.png) &nbsp;
+3. Next to `Watson IoT Platform Service`, click `View Details` and then click  `View More`.
+![Watson IoT Platform Service](img/im5.png) &nbsp;
+4. Copy and paste the `API Key`and `API Token` into a Notes application of your choosing. It is good to save this information in a place that is easy to access. You will most likely use this API Key and Token again.
+![Grab API Key and Token](img/im6.png) &nbsp;
+5. Copy and paste this into Postman.
+![Key and Token in Postman](img/im7.png) &nbsp;
 ### Push Image to Datalake using Postman
 ## Display Image Card on Dashboard
 ### Create Image Card JSON Object
