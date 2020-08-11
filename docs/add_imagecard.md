@@ -24,7 +24,7 @@ In this lab, you will learn how to select a photo for your image card, push your
 ![Watson IoT Platform Service](img/im5.png) &nbsp;
 4. Copy and paste the `API Key`and `API Token` into a Notes application of your choosing. It is good to save this information in a place that is easy to access. You will most likely use this API Key and Token again.
 ![Grab API Key and Token](img/im6.png) &nbsp;
-5. Copy and paste the API Key and Token you obtained into Postman.
+5. Copy and paste the API Key and Token you obtained from the `Services` tab in Monitor into Postman.
 ![Key and Token in Postman](img/im7.png) &nbsp;
 ### Push Image to Datalake using Postman
 ## Display Image Card on Dashboard
