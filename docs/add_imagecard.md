@@ -31,6 +31,7 @@ In this lab, you will learn how to select a photo for your image card, push your
 2. In the top left corner you will see a button that says `+New`. Click on the `Request` button. Name your Request and create a Collection to place the Request.  Click the dropdown menu inside the red box in Postman to classify this API Call as a `POST` Request.
 ![Create POST Request](img/im8.png) &nbsp;
 3. Copy and paste this link into the field where it says “Enter request URL”: `https://api-{{geo_country_code}}.connectedproducts.internetofthings.ibmcloud.com/api/images/v1/{{tenantID}}/entityType/{{entityTypeName}}` You will need to replace the text in double curly braces `{{}}` with data associated with your Monitor workspace. First, you will need to replace `{{geo_country_code}}` with your specific country code. You can find your country code in your Monitor URL. The beginning of your URL will be `https://dashboard-{{geo_country_code}}`, either `us`,`uk`,`de`, or `beta`. Next, you will need to replace `{{tenantID}}` with your Maximo Asset Monitor Tenant ID. You can find your tenant ID in the top right corner of your Monitor webpage underneath your IBMiD. Last, you will need to enter the name of your Entity Type in place of `{{entityTypeName}}`.
+
 ![URL Geo Code](img/im9.png) &nbsp;
 ![URL TenantID](img/im10.png) &nbsp;
 4. Now that you have modified the request URL, we will add the header. Please have handy the API Key and Token you obtained earlier. Add this information into the `Header` tab, :
