@@ -1,5 +1,7 @@
 # Create Image Card
 
+**Please complete the Value Cards Lab before attempting this lab. Some of the JSON configuration you will use here is flushed out in that section.**
+
 In Maximo Asset Monitor, images can add a tremendous amount of value to data visualization when paired with graphs, tables, and value cards. Using a REST API call, you are able to push an image of your choosing into the Monitor data lake and display this image on your dashboards. You are also able to place icons which called hotspots on the image cards. These icons are tied to data from individual sensors or an aggregate of all of the sensors on a summary dashboard. Inside of the JSON configuration for the image card, you are able to set alert conditions that change the icon on the hotspot.
 ![Munich Occupancy Image Card](img/im1.png) &nbsp;
 
@@ -25,6 +27,15 @@ In this lab, you will learn how to select a photo for your image card, push your
 4. Copy and paste the `API Key`and `API Token` into a Notes application of your choosing. It is good to save this information in a place that is easy to access. You will most likely use this API Key and Token again.
 ![Grab API Key and Token](img/im6.png) &nbsp;
 ### Push Image to Datalake using Postman
-1. 
+1. Open up your `Postman` application.
+2. In the top left corner you will see a button that says `+New`. Click on the `Request` button. Name your Request and create a Collection to place the Request.  Click the dropdown menu inside the red box in Postman to classify this API Call as a `POST` Request.
+![Create POST Request](img/im8.png) &nbsp;
+3. Copy and paste this link into the field where it says “Enter request URL”: `https://api-{{geo_country_code}}.connectedproducts.internetofthings.ibmcloud.com/api/images/v1/{{tenantID}}/entityType/{{entityTypeName}}` You will need to replace the text in double curly braces `{{}}` with data associated with your Monitor workspace. First, you will need to replace `{{geo_country_code}}` with your specific country code. You can find your country code in your Monitor URL. The beginning of your URL will be `https://dashboard-{{geo_country_code}}`, either `us`,`uk`,`de`, or `beta`. Next, you will need to replace `{{tenantID}}` with your Maximo Asset Monitor Tenant ID. You can find your tenant ID in the top right corner of your Monitor webpage underneath your IBMiD. Last, you will need to enter the name of your Entity Type in place of `{{entityTypeName}}`.
+![URL Geo Code](img/im9.png) &nbsp;
+![URL TenantID](img/im10.png) &nbsp;
+4. Now that you have modified the request URL, we will add the header. Please have handy the API Key and Token you obtained earlier. Add this information into the header tab, :
+![Header Info](img/im11.png) &nbsp;
+![Header in Postman](img/im12.png) &nbsp;
+5. 
 ## Display Image Card on Dashboard
 ### Create Image Card JSON Object
