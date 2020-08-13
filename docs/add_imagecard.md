@@ -34,16 +34,25 @@ In this lab, you will learn how to select a photo for your image card, push your
 
 ![URL Geo Code](img/im9.png) &nbsp;
 ![URL TenantID](img/im10.png) &nbsp;
+
 4. Now that you have modified the request URL, we will add the header. Please have handy the API Key and Token you obtained earlier. Add this information into the `Header` tab, :
+
 ![Header Info](img/im11.png) &nbsp;
 ![Header in Postman](img/im12.png) &nbsp;
+
 5. Now, navigate to the `Body` tab and the select `form-data` radio button.
+
 ![Body and Form Data Postman](img/im13.png) &nbsp;
+
 6. Enter the form data specified below. Make sure to select `File` from the drop down button next to your `imagefilecontent`. This option will allow you to select the image file you chose in the first section of this lab.
+
 ![KC Form Data Requirements](img/im14.png) &nbsp;
 ![File Drop Down](img/im15.png) &nbsp;
 ![Complete Form Data](img/im16.png) &nbsp;
+
 7. Click the blue `Send` button to send your request. You should receive a `200 OK` message. If you do not, make sure that everything in this section has been entered correctly. If this work is to no avail, contact your administrator.
+
+![Success](img/im17.png) &nbsp;
 ## Display Image Card on Dashboard
 ### Create Image Card JSON Object
 1.
