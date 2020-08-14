@@ -58,7 +58,12 @@ Now that you have pushed the image of your choice into the Monitor data lake, yo
 
 ![Sourdough Leavening Dashboard](img/im18.png) &nbsp;
 ### Export Dashboard JSON
-1.
+1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
+2. Click on the gear in the top right of your chosen dashboard.
+![Gear Edit](img/im21.png) &nbsp;
+3. Click `Edit Dashboard`.
+![Edit Dashboard](img/im22.png) &nbsp;
+4. Click `Export` and save your JSON into a folder that you can keep handy. Open the file in a text editor of your choice. Here are some good open source options: [Atom](https://atom.io/),[Brackets](http://brackets.io/), and [Sublime](https://www.sublimetext.com/).
 ### Create Image Card JSON Object
 1. Please copy and paste the JSON code block below into the top of your `cards` array.
 ![Card Array](img/im19.png) &nbsp;
