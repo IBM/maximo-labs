@@ -57,6 +57,68 @@ In this lab, you will learn how to select a photo for your image card, push your
 Now that you have pushed the image of your choice into the Monitor data lake, you will now need to create a JSON object for the image card you wish to display. In this JSON code, you will tell Monitor what data to show, where to show that data, and how you want the data to be shown. The JSON code that will be shown in the later steps corresponds with the summary dashboard shown below:
 
 ![Sourdough Leavening Dashboard](img/im18.png) &nbsp;
-### Create Image Card JSON Object
+### Export Dashboard JSON
 1.
-### Upload Image Card to Dashboard
+### Create Image Card JSON Object
+1. Please copy and paste the JSON code block below into the top of your `cards` array.
+![Card Array](img/im19.png) &nbsp;
+``` yaml
+{
+            "id": "starter-image-card",
+            "size": "LARGE",
+            "title": "Sourdough Starter Environment",
+            "type": "IMAGE",
+            "content": {
+                "alt": "Sourdough Starter Environment",
+                "zoomMax": 1,
+                "image": "starter",
+                "hotspots": [
+                    {
+                        "icon": "icon--info--solid",
+                        "color": "'#0F0",
+                        "content": {
+                            "title": "Ambient Temperature",
+                            "description": "Curent Reading",
+                            "attributes": [
+                                {
+                                    "dataSourceId": "ambient_temp",
+                                    "label": "Temperature",
+                                    "unit": "C"
+                                }
+                            ]
+                        },
+                        "locations": [
+                            {
+                                "x": "66",
+                                "y": "50"
+                            }
+                        ],
+                        "thresholds": [
+                            {
+                                "dataSourceId": "ambient_temp",
+                                "comparison": ">=",
+                                "value": 27,
+                                "color": "red",
+                                "icon": "icon--warning--solid"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "last",
+                        "attribute": "ambient_temp",
+                        "id": "ambient_temp"
+                    }
+                ],
+                "range": {
+                    "type": "rolling",
+                    "count": -24,
+                    "interval": "hour"
+                }
+            }
+        },
+```
+### Upload Your Image Card JSON
