@@ -26,7 +26,7 @@ In this lab, you will learn how to select a photo for your image card, push your
 ![Watson IoT Platform Service](img/im5.png) &nbsp;
 4. Copy and paste the `API Key`and `API Token` into a Notes application of your choosing. It is good to save this information in a place that is easy to access. You will most likely use this API Key and Token again.
 ![Grab API Key and Token](img/im6.png) &nbsp;
-### Push Image to Datalake using Postman
+### Push Image to Data Lake using Postman
 1. Open up your `Postman` application.
 2. In the top left corner you will see a button that says `+New`. Click on the `Request` button. Name your Request and create a Collection to place the Request.  Click the dropdown menu inside the red box in Postman to classify this API Call as a `POST` Request.
 ![Create POST Request](img/im8.png) &nbsp;
@@ -54,5 +54,9 @@ In this lab, you will learn how to select a photo for your image card, push your
 
 ![Success](img/im17.png) &nbsp;
 ## Display Image Card on Dashboard
+Now that you have pushed the image of your choice into the Monitor data lake, you will now need to create a JSON object for the image card you wish to display. In this JSON code, you will tell Monitor what data to show, where to show that data, and how you want the data to be shown. The JSON code that will be shown in the later steps corresponds with the summary dashboard shown below:
+
+![Sourdough Leavening Dashboard](img/im18.png) &nbsp;
 ### Create Image Card JSON Object
 1.
+### Upload Image Card to Dashboard
