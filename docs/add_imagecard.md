@@ -127,6 +127,7 @@ Now that you have pushed the image of your choice into the Monitor data lake, yo
 2. The information below gives you the tools you need to map the data items in your Entity Type to the card you will display with your JSON code.
 ![JSON Mapping 1](img/im25.png) &nbsp;
 ![JSON Mapping 2](img/im26.png) &nbsp;
+
 •	The “id” at the very top needs to be a unique name for this card. Use dashes instead of spaces.
 
 •	The “size” is self explanatory. I find that the image cards render best as “LARGE.”
