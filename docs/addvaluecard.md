@@ -16,7 +16,7 @@ In this section, you will learn the framework for a value card. Using the framew
 ``` yaml
 {
         "id": "ambient-humidity-value",
-        "size": "SMALL",
+        "size": "SMALLWIDE",
         "title": "Ambient Humidity",
         "type": "VALUE",
         "dataSource": {
