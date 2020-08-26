@@ -11,6 +11,7 @@ A great way to augment your Maximo Asset Monitor dashboards is with value cards.
 4. Click `Export` and save your JSON into a folder that you can keep handy. Make sure to save the file with the file extension `.json`. Open the file in a text editor of your choice. Here are some good open source options: [Atom](https://atom.io/), [Brackets](http://brackets.io/), and [Sublime](https://www.sublimetext.com/).
 ## Add Value Card JSON
 In this section, you will learn the framework for a value card. Using the framework below, map the data items that are in your Entity type to display your image card on a summary dashboard. Replace the data items in the above JSON with the applicable data items, titles, and other information from the Entity Type you are working with to tell the story you are trying to tell. This section shows you how to create this value card:
+
 ![Humidity Value Card](img/im29.png) &nbsp;
 
 1. Please copy and paste the JSON code block below into the top of your `cards` array.
@@ -69,7 +70,11 @@ Some other important notes about the JSON:
 ## Import Dashboard JSON
 1. 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
+
 ![Gear Edit](img/im21.png) &nbsp;
+
 3. Click `Edit Dashboard`.
+
 ![Edit Dashboard](img/im22.png) &nbsp;
+
 4. Click `Import` and select the file that you have just been working on. If you are successful, a small grey square will appear among your line graphs to drag and drop until you are satisfied with the layout. If you are unsuccessful, you will receive an error. The error message will notify you of something to change. Another option is to use a JSON parser on the internet that will notify you if your JSON has discrepancies. If at first you do not succeed, try, try again!
