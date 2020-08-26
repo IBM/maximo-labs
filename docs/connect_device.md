@@ -85,7 +85,7 @@ You will create an alert notification when the Nordic Thingy has an error condit
 1.  Make sure your Nordic Thingy is turned on and actively sending sensor data to the IoTP service. You may need to reconnect the Thingy in the Chrome browser using this [web link](https://nrf52t.mybluemix.net/?edit) and steps provided earlier.
 2. Check if the Thingy is connected.  Click `Browse` tab in the IoT Platform service and searching the devices list for device status and recent events.
 ![Browse Devices](img/i27.png) &nbsp;
-3.  Navigate to the device type for your Thingy and click `Interfaces` tab. Make sure `Advanced Flow` is selected and click `Create Physical Interface` button.
+3.  Navigate to the `Device Type` for your Thingy and click `Interfaces` tab. Make sure `Advanced Flow` is selected and click `Create Physical Interface` button.
 ![Device Type Advanced Flow](img/i28.png) &nbsp;
 4.  Leave the default name for the physical interface and then click `Next`.
 5.  Click `+ Create event type` button on the next page. If your Nordic Thingy is still actively sending events, then you should see the `status` event show up.

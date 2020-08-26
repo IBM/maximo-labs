@@ -1,0 +1,34 @@
+{
+      "_id": "at_l6juu55b",
+      "_rev": "6-192e9a6b9030f3aa7182718009e424ef",
+      "type": "user",
+      "default": {
+        "role": "operator:ORG.te_5jqglc5p"
+      },
+      "externalAttributeId": "us_fpt5vbht",
+      "attributes": [
+        "administrator",
+        "worker:ORG.te_5jqglc5p",
+        "supervisor:ORG.te_5jqglc5p",
+        "operator:ORG.te_5jqglc5p",
+        "worker:ORG.te_5jqglc5p.ProcessMap",
+        "supervisor:ORG.te_5jqglc5p.ProcessMap",
+        "operator:ORG.te_5jqglc5p.ProcessMap",
+        "worker:ORG.te_5jqglc5p.sti",
+        "supervisor:ORG.te_5jqglc5p.sti",
+        "operator:ORG.te_5jqglc5p.sti",
+        "worker:ORG.te_5jqglc5p.logik",
+        "supervisor:ORG.te_5jqglc5p.logik",
+        "operator:ORG.te_5jqglc5p.logik"
+      ],
+      "contexts": [
+        "ORG.te_5jqglc5p",
+        "ORG.te_5jqglc5p.ProcessMap",
+        "ORG.te_5jqglc5p.sti",
+        "ORG.te_5jqglc5p.logik"
+      ],
+      "createdByUserId": "us_2vyeb80n",
+      "updatedByUserId": "us_fpt5vbht",
+      "createdAt": 1574366705134,
+      "updatedAt": 1598292994242,
+      }
