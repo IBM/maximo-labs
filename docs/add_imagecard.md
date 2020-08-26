@@ -54,7 +54,7 @@ In this lab, you will learn how to select a photo for your image card, push your
 ## Display Image Card on Dashboard
 Now that you have pushed the image of your choice into the Monitor data lake, you will now need to create a JSON object for the image card you wish to display. In this JSON code, you will tell Monitor what data to show, where to show that data, and how you want the data to be shown. The JSON code that will be shown in the later steps corresponds with the summary dashboard shown below:
 
-![Sourdough Leavening Dashboard](img/im18.png) &nbsp;
+![Sourdough Leavening Dashboard](img/im28.png) &nbsp;
 ### Export Dashboard JSON
 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
@@ -128,17 +128,12 @@ Now that you have pushed the image of your choice into the Monitor data lake, yo
 ![JSON Mapping 1](img/im25.png) &nbsp;
 ![JSON Mapping 2](img/im26.png) &nbsp;
 
-•	The “id” at the very top needs to be a unique name for this card. Use dashes instead of spaces.
-
-•	The “size” is self explanatory. I find that the image cards render best as “LARGE.”
-
-•	The “type” is the type of card such as “VALUE,” “TIMESERIES,” or “IMAGE.”
-
-•	“unit” is unit of measurement.
-
-•	“Alt” refers to the title that will be presented if the picture does not load for some reason.
-
-•	“image” refers to the image that you pushed into the data lake. This value must be identical to the “id” value from your Postman image call.
+-	The `id` at the very top needs to be a unique name for this card. Use dashes instead of spaces.
+-	The `size` is self explanatory. Image cards render best as `LARGE`.
+-	The `type` is the type of card such as `VALUE`, `TIMESERIES`, or `IMAGE`.
+-	`unit` refers to the unit of measurement belonging to your data item.
+- `alt` refers to the title that will be presented if the picture does not load for some reason.
+- `image` refers to the image that you pushed into the data lake. This value must be identical to the `id` value from your Postman image call.
 
 3. Using the framework above, map the data items that are in your Entity type to display your image card on a summary dashboard. Replace the data items in the above JSON with the applicable data items, titles, and other information from the Entity Type you are working with to tell the story you are trying to tell. If you are confused, please reference the Knowledge center page for adding image cards [here](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/image_json_ref.html).
 4. Finally, save your file with your finished image card. **Be sure to employ version control and save your file with a new name every time you make serious changes in case you make an error. You want to make sure you always have a working file.**
