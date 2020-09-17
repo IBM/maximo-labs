@@ -10,6 +10,7 @@ nav:
     - 4.  Create Service Requests: service_request.md
     - 5.  Visualize Assets: add_imagecard.md
     - 6.  Asset Meta Data: create_dimensions.md
-    - 7.  Pre-Requisite Instructions: facilitator_instructions.md
-    - 8.  Contributing: about.md
+    - 7.  Add Other Cards : addvaluecard.md
+    - 8.  Pre-Requisite Instructions: facilitator_instructions.md
+    - 9.  Contributing: about.md
 theme: readthedocs
