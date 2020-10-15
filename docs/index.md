@@ -1,4 +1,4 @@
-# Overview of Labs
+## Overview of Labs
 
 Welcome to the IBM Maximo Asset Monitor Hands on Lab.  In this hands-on lab you will learn how to get started with IBM Maximo Asset Monitor. You will learn about Monitor's capabilities to:
 
@@ -10,11 +10,10 @@ Welcome to the IBM Maximo Asset Monitor Hands on Lab.  In this hands-on lab you 
 
 Maximo Asset Monitor connects devices, ingests device data, and transforms that data into meaningful insights through visualizations such as time series line and bar charts, tabular reports, and interactive diagrams. Watson IoT Platform and its additional add-on services enable organizations to capture and explore data for devices, equipment and machines, and discover insights that can drive better decision-making.
 
-## Getting Started
+### Labs
 
 You can choose which labs to complete based on your learning objectives,  the amount of time you have available. The available learning paths and labs are listed in the table below.  Each lab includes multiple exercises with step by step directions.  
 
-### Labs
 
 |  Lab    | Status            | Learning Objectives         | Description      |
 |: ------:|:-----------------:|:---------------------------:|:-----------------|
@@ -28,7 +27,7 @@ You can choose which labs to complete based on your learning objectives,  the am
 | 8       | Under Development |  Facilitator Instructions   | Pre-requisites instructions to facilitators of this lab. |
 | 9       | Under Development |  Contributing to Labs       | How to provide feedback or add submit new content.|
 
-### Learning Paths
+#### Learning Paths
 
 |  Your Learning Goals                                     | Recommended Labs    | Time Needed (mins) |
 |:--------------------------------------------------------:|: ------------------:|:------------------:|
@@ -37,7 +36,7 @@ You can choose which labs to complete based on your learning objectives,  the am
 |  Visualize and Filter Assets                             | 5, 6 and 7          |     2 hours        |
 
 
-## Overview of Maximo Asset Monitor
+### Overview of Maximo Asset Monitor
 
 IBM Maximo Asset Monitor enables AI-powered remote monitoring at enterprise scale for asset maintenance and operations leaders seeking to optimize operating performance with fewer, more accurate alerts, and greater insights into what is causing them.
 
@@ -47,11 +46,11 @@ With Maximo Asset Monitor, asset sensors can be securely registered with the inc
 
 Anomaly models can help reduce the “noise” that is caused by hundreds of false positive alerts using traditional threshold alerts. AI models allow clients to focus on and resolve the most critical anomalies.
 
-###  Demonstration
+####  Demonstration
 
 Ask your facilitator for a demonstration of Maxiom Asset Monitor or watch this short 7 minute [video demonstration](https://youtu.be/IyQgRwAseLU)
 
-### Business Benefits
+#### Business Benefits
 
 Many clients have already adopted Maximo for Enterprise Asset Management (EAM), and they are realizing the benefits of extending the life of their capital investments while reducing operational and maintenance costs. They want to further leverage these assets by using the real-time operational data of those assets. For example:
 
@@ -63,15 +62,15 @@ Many clients have already adopted Maximo for Enterprise Asset Management (EAM), 
 
 * Compliance officers can better document historical trends to demonstrate regulatory compliance and reduce the cost and risk of non-compliance.
 
-### Architecture
+#### Architecture
 
 Here is a high level functional architecture of Maximo Asset Monitor
-![Monitor Architecture](img/architecture.png)
+![Monitor Architecture](/img/monitor/architecture.png)
 
-### Included Services
+#### Included Services
 IBM Maximo Asset Monitor includes the following IBM Cloud services that help you achieve the above business benefits to scale monitoring to the enterprise:
 
-#### Watson IoT Platform Connection Service
+##### Watson IoT Platform Connection Service
 * Secure registration and management of devices and gateways using the included [Connection Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/develop.html)
 * Security of users and device
 * Extension points for above and create rules on incoming sensor
@@ -79,7 +78,7 @@ IBM Maximo Asset Monitor includes the following IBM Cloud services that help you
 * Messaging service for ensuring data can be streamed in realtime
 * Real-time rules and actions
 
-#### Watson IoT Platform Analytics Service
+##### Watson IoT Platform Analytics Service
 
 * Data processing and analysis of historical data using the included [Analytics Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_overview.html)
 * Data cleansing and transformation
@@ -90,7 +89,7 @@ IBM Maximo Asset Monitor includes the following IBM Cloud services that help you
 * Data service connections
 * Catalog of data functions with anomaly models to intelligently identify conditions that require attention
 
-#### Monitor Service
+##### Monitor Service
 
 * Out-of-the-box operational dashboards that scale to the enterprise using the included [Monitor Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/kc_welcome_mon.html)
 * Image card
@@ -99,11 +98,11 @@ IBM Maximo Asset Monitor includes the following IBM Cloud services that help you
 * Table card
 * Shareable and customizable dashboards to allow users to respond, understand, and resolve alerts
 
-#### Database Service
+##### Database Service
 
 * To store data for all of the above services using the include using the included Database Service.  Which database service is included depends on which plan as been purchased. This lab is based on DB2.
 
-#### Object Storage Service
+##### Object Storage Service
 
 * To store logs and files for above services using the included [Cloud Object Storage Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_logs.html)
 * For long term storage of device sensor data
