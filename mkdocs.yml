@@ -13,4 +13,22 @@ nav:
     - 7.  Add Other Cards : addvaluecard.md
     - 8.  Pre-Requisite Instructions: facilitator_instructions.md
     - 9.  Contributing: about.md
+    - Maximo Visual Inspection Lab: 
+        - Access Lab: 
+            - Welcome: mvi-hol/mvi-index.md
+            - Getting Started: mvi-hol/prereqs.md
+            - -Exercise One: 
+                    - -Exercise 1-1: mvi-hol/exerciseOne/exercise1-1.md
+                    - -Exercise 1-2: mvi-hol/exerciseOne/exercise1-2.md
+                    - -Exercise 1-3: mvi-hol/exerciseOne/exercise1-3.md
+            - -Exercise Two: 
+                    - -Exercise 2-1: mvi-hol/exerciseTwo/exercise2-1.md
+                    - -Exercise 2-2: mvi-hol/exerciseTwo/exercise2-2.md
+                    - -Exercise 2-3: mvi-hol/exerciseTwo/exercise2-3.md
+            - Closing: mvi-hol/closing.md
+            - If you have more time: mvi-hol/time.md
+            - Troubleshooting: mvi-hol/troubleshoot.md
+            - Contact: mvi-hol/contact.md
 theme: readthedocs
+markdown_extensions:
+  - attr_list
