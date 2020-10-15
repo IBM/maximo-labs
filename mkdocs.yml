@@ -1,34 +1,35 @@
-site_name: Maximo Asset Monitor Labs
+site_name: IBM Maximo Labs
 site_url: https://mam-hol.eu-gb.mybluemix.net/
 site_author: Carlos Ferreira
 site_description: "Documentation for Maximo Asset Manager Hands on Lab"
 nav:
-    - Home: index.md
-    - 1.  Connect Devices: connect_device.md
-    - 2.  Monitor Assets: monitor_asset_devices.md
-    - 3.  Monitor Anomalies: monitor_anomalies.md
-    - 4.  Create Service Requests: service_request.md
-    - 5.  Visualize Assets: add_imagecard.md
-    - 6.  Asset Meta Data: create_dimensions.md
-    - 7.  Add Other Cards : addvaluecard.md
-    - 8.  Pre-Requisite Instructions: facilitator_instructions.md
-    - 9.  Contributing: about.md
-    - Maximo Visual Inspection Lab: 
-        - Access Lab: 
-            - Welcome: mvi-hol/mvi-index.md
-            - Getting Started: mvi-hol/prereqs.md
-            - -Exercise One: 
-                    - -Exercise 1-1: mvi-hol/exerciseOne/exercise1-1.md
-                    - -Exercise 1-2: mvi-hol/exerciseOne/exercise1-2.md
-                    - -Exercise 1-3: mvi-hol/exerciseOne/exercise1-3.md
-            - -Exercise Two: 
-                    - -Exercise 2-1: mvi-hol/exerciseTwo/exercise2-1.md
-                    - -Exercise 2-2: mvi-hol/exerciseTwo/exercise2-2.md
-                    - -Exercise 2-3: mvi-hol/exerciseTwo/exercise2-3.md
-            - Closing: mvi-hol/closing.md
-            - If you have more time: mvi-hol/time.md
-            - Troubleshooting: mvi-hol/troubleshoot.md
-            - Contact: mvi-hol/contact.md
+    - Monitor Lab:
+      - Get Started: index.md
+      - Pre-Requisites: facilitator_instructions.md
+      - Exercises:
+          - 1.  Connect Devices: monitor-hol/connect_device.md
+          - 2.  Monitor Assets: monitor_asset_devices.md
+          - 3.  Monitor Anomalies: monitor_anomalies.md
+          - 4.  Create Service Requests: service_request.md
+          - 5.  Add Image Card: add_imagecard.md
+          - 6.  Add Dimensinos: create_dimensions.md
+          - 7.  Add Value Card : addvaluecard.md
+
+    - Visual Inspection Lab:
+      - Get Started: mvi-hol/mvi-index.md
+      - Pre-Requisites: mvi-hol/prereqs.md
+      - Excercises:
+          - 1.1 DataSets : mvi-hol/exerciseOne/exercise1-1.md
+          - 1.2 Train and Deploy Model: mvi-hol/exerciseOne/exercise1-2.md
+          - 1.3 Create Project: mvi-hol/exerciseOne/exercise1-3.md
+          - 2.1 Create Inspection: mvi-hol/exerciseTwo/exercise2-1.md
+          - 2.2 Conduct Inspection: mvi-hol/exerciseTwo/exercise2-2.md
+          - 2.3 Dashboard Configuration: mvi-hol/exerciseTwo/exercise2-3.md
+      - Next Steps: mvi-hol/closing.md
+      - Extra: mvi-hol/time.md
+      - Troubleshooting: mvi-hol/troubleshoot.md
+      - Contact: mvi-hol/contact.md
+    - Contributing: about.md
 theme: readthedocs
 markdown_extensions:
   - attr_list
