@@ -2,7 +2,7 @@
 
 # Contact
 
-If you have any questions about this lab, please contact the following IBMers:
+If you have any questions about this MVI lab, please contact the following IBMers:
 
 - Cecilia Duffus - <cecilia.d@ibm.com>
 
