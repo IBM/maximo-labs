@@ -4,9 +4,9 @@
 
 Congratulations! You have completed this lab and are now able to:
 
-- Understand how to navigate the MVI Platform and MVI Mobile.
-- Create data sets, augment data, train and deploy models that detect defects in aluminum cans.
-- Create an inspection to inspect for dents in aluminum cans.
+- Understand how to navigate the MVI Platform and MVI Mobile
+- Create data sets, augment data, train and deploy models 
+- Create an inspection on MVI Mobile.
 - Look at your pass/fail inspection rate on a dashboard
 
 
