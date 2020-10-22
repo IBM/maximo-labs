@@ -5,15 +5,15 @@ site_description: "Documentation for Maximo Asset Manager Hands on Lab"
 nav:
     - Monitor Lab:
       - Get Started: index.md
-      - Pre-Requisites: facilitator_instructions.md
+      - Pre-Requisites: monitor-hol/facilitator_instructions.md
       - Exercises:
           - 1.  Connect Devices: monitor-hol/connect_device.md
-          - 2.  Monitor Assets: monitor_asset_devices.md
-          - 3.  Monitor Anomalies: monitor_anomalies.md
-          - 4.  Create Service Requests: service_request.md
-          - 5.  Add Image Card: add_imagecard.md
-          - 6.  Add Dimensinos: create_dimensions.md
-          - 7.  Add Value Card : addvaluecard.md
+          - 2.  Monitor Assets: monitor-hol/monitor_asset_devices.md
+          - 3.  Monitor Anomalies: monitor-hol/monitor_anomalies.md
+          - 4.  Create Service Requests: monitor-hol/service_request.md
+          - 5.  Add Image Card: monitor-hol/add_imagecard.md
+          - 6.  Add Dimensinos: monitor-hol/create_dimensions.md
+          - 7.  Add Value Card : monitor-hol/addvaluecard.md
 
     - Visual Inspection Lab:
       - Get Started: mvi-hol/mvi-index.md

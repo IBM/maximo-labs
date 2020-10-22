@@ -1,6 +1,6 @@
 Here are the contributors to Maximo Labs
 
-- Carlos Ferreira - <cecilia.d@ibm.com>
+- Carlos Ferreira - <carlos.ferreira1@ibm.com>
 
 - Paulina Thomas - <Paulina.Thomas@ibm.com>
 
