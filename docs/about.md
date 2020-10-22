@@ -1,13 +1,17 @@
-# About this Lab
+# Contribute
+You can contribute by providing feedback or content for the labs. 
 
-## Contribute
+1.  Submit issues or enhancements that you would like to see to this hands on lab.
+2.  Contribute Content by becoming an author contributor of the labs.
 
-You can contribute by providing feedback or content. 
 
-### Provide feedback
-You can submit any feedback, questions or issues on the labs.  We will address them in the issue or with improvements to future versions of the lab. Submit issues you encounter with the lab at [https://github.com/IBM/monitor-hands-on-lab/issues](https://github.com/IBM/monitor-hands-on-lab/issues).  Provide a description of the problem.  Steps to reproduce the problem.  What you expected should be there or happen in the lab.
+## Submit issues or enhancements
+You can submit any feedback, questions or issues on the labs.  We will address them in the issue or with improvements to
+future versions of the lab. Submit issues you encounter with the lab at [https://github.com/IBM/monitor-hands-on-lab/issues](https://github.com/IBM/monitor-hands-on-lab/issues).  Provide a description of the problem.  Steps to reproduce the problem.  What you expected should be there or happen in the lab.
 
-### Write new labs or improve the existing labs 
+
+## Contribute Content
+Writing new labs or improve the existing labs 
 
 1. Get a Github account:  
 * IBMers can get an account here: [https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/)
@@ -20,16 +24,9 @@ You can submit any feedback, questions or issues on the labs.  We will address t
 
 4.  Deploy the web app to IBM CLoud.  See details below.
 
-# How to Contribute
+### How to Add Content to the Monitor Hands on Lab
 
-You can contribute to this Hands On Lab by:
-
-1.  Submitting issues or enhancements that you would like to see to this hands on lab.
-2.  Becoming an author contributor of the labs.
-
-# Adding Content to the Monitor Hands on Lab
-
-## Setup Python 3
+##### Setup Python 3
 
 You can install Python packages with
 
@@ -47,7 +44,7 @@ This will install into the site-package directory
     source iot-python3/bin/activate
     python --version
 
-## Setup MkDocs
+##### Setup MkDocs
 
 Install MkDocs. https://www.mkdocs.org/
 
@@ -74,7 +71,7 @@ Building the Site
 >http://127.0.0.1:8000
 http://127.0.0.1:8000/img/architecture.png
 
-## Add Content
+#### Add Content
 
 Add the files to /docs/ index.md
 Add the files to /docs/ index.md
@@ -102,7 +99,7 @@ To Add Content First Pull Latest Content Locally
 Review and Accept Pull Requests
 
 
-## Deploy to IBM Cloud
+### Deploy to IBM Cloud
 
 Use command line to deploy ibm cloud cf push
 
@@ -138,5 +135,3 @@ Deploy
     ibmcloud api https://api.eu-gb.bluemix.net
     ibmcloud target --cf-api https://api.eu-gb.bluemix.net -o carlos.ferreira1@ibm.com -s dev
     ibmcloud cf push
-
-## For IBMers
