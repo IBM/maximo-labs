@@ -1,8 +1,8 @@
+Here are the contributors to Maximo Labs
 
+- Carlos Ferreira - <cecilia.d@ibm.com>
 
-# Contact
-
-If you have any questions about this MVI lab, please contact the following IBMers:
+- Paulina Thomas - <Paulina.Thomas@ibm.com>
 
 - Cecilia Duffus - <cecilia.d@ibm.com>
 
@@ -11,6 +11,8 @@ If you have any questions about this MVI lab, please contact the following IBMer
 - Eric Lowry - <elowry@us.ibm.com>
 
 - Graeme Pexton - <jgpexton@us.ibm.com>
+
+If you would also like to contribute see the [contributing page](about.md)
 
 ![img](/img/mvi-hol-imgs/img-closing/ibmLogo.jpg){: style="height:400px;width:500px;position:relative;bottom:10px;left:0px"}
 

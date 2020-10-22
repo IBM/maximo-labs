@@ -1,6 +1,6 @@
 # Pre-Requisite Instructions
 
-Here are the require pre-requisites for all labs in this hands on lab guide
+Here are the require pre-requisites for all exercises in this lab guide
 
 ## All Labs
 

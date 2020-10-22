@@ -25,10 +25,9 @@ nav:
           - 2.1 Create Inspection: mvi-hol/exerciseTwo/exercise2-1.md
           - 2.2 Conduct Inspection: mvi-hol/exerciseTwo/exercise2-2.md
           - 2.3 Dashboard Configuration: mvi-hol/exerciseTwo/exercise2-3.md
-      - Next Steps: mvi-hol/closing.md
-      - Extra: mvi-hol/time.md
+      - Next Steps: mvi-hol/nextsteps.md
       - Troubleshooting: mvi-hol/troubleshoot.md
-      - Contact: mvi-hol/contact.md
+    - Contributors: contributors.md
     - Contributing: about.md
 theme: readthedocs
 markdown_extensions:
