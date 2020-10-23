@@ -26,9 +26,12 @@
 
     <br>
 
-4. Download the folder for you in the lab email, and store the images and model in an easily accessible place. 
+4. Download the contents in the Box folder and store the model and images in an easily accessible place. 
 
-# <u> Download Maximo Visual Inspection Mobile </u>
+        Box url-> https://ibm.box.com/s/x6b81fphpqn4pctmejpvk29zlfgpvxqq
+
+
+<u> Download Maximo Visual Inspection Mobile </u>
 
 1. Go to the App Store. (Only available on iOS 13 or later.          
 2. Type <b>IBM Maximo Visual Inspection</b> in the search bar.

@@ -1,6 +1,6 @@
 
 
-<h1>Exercise 1.2 - Train and Deploy a Deep Learning Model</h1>
+<h2>Exercise 1.2 - Train and Deploy a Deep Learning Model</h2>
 
 
 <b>Train Model:</b> Now that our data set has been created, we are ready to start training our Deep Learning Model. The more images you use to train a model on, the more accurate the model will be. Therefore, we provided you with an accurate model whereas this model your building with only 5 images will not be as accurate. 
@@ -15,7 +15,7 @@
 
     <br>
 
-3.   Give your model the name of "Dent Detection Model-YourIntials".
+3.   Give your model the name of `Dent Detection Model-YourInitials`.
 
     ![img](/img/mvi-hol-imgs/img-exerciseOne/exercise1-2/nameModel.png){: style="height:300px;width:800px"}
 
@@ -109,5 +109,5 @@
 
 <b>Congrats, you have trained and deployed a model that can be used on Maximo Visual Inspection Mobile!</b> 
 
-<footer>4</footer>
+
 

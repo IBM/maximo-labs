@@ -1,7 +1,7 @@
 
 
 
-# Welcome to the IBM Maximo Visual Inspection Hands-on Lab! 
+<h1>Welcome to the IBM Maximo Visual Inspection Hands-on Lab!</h1>
 
 ![img](/img/mvi-hol-imgs/img-mvi-index/mvi26.png){:style="height:390px;width:350px;"}
 ![img](/img/mvi-hol-imgs/img-mvi-index/coke.png){:style="height:390px;width:200px;margin-left:40px"}
@@ -38,16 +38,5 @@ Target Industries:
 
 <p><b><h4>Lab Use Case</h4></b> 
 <p>This lab will take you through a manufacturing use case. This lab will walk you through the implementation of Maximo Visual Inspection at a fictious aluminum can manufacturing company. The company is struggling to keep up with order fulfillment and is losing a lot of money due to material waste due to rework and defective cans not being spotted. The personas who will be in charge of the implementations will be the quality engineer and production line worker.</p>
-
-<p><b><h4>Table of Contents:</h4></b></p>
-
-<ul>
-<li>Getting Started</li>
-<li>Exercises</li>
-<li>Next Steps - Closing</li>
-<li>Extra</li>
-<li>Troubleshooting</li>
-<li>Contact</li>
-</ul>
 
 

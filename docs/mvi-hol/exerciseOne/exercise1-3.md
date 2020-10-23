@@ -1,5 +1,3 @@
-
-
 <h2>Exercise 1.3 - Project Creation for Inspections</h2>
 
 We will now create a project that will be used on Maximo Visual Inspection Mobile. Projects allow you to group trained models with the data sets that were used for training. In Exercise 2, we will show you how a project is used with Maximo Visual Inspection Mobile. 
