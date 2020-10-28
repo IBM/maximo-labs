@@ -3,7 +3,7 @@
 <h2>Exercise 1.2 - Train and Deploy a Deep Learning Model</h2>
 
 
-<b>Train Model:</b> Now that our data set has been created, we are ready to start training our Deep Learning Model. The more images you use to train a model on, the more accurate the model will be. Therefore, we provided you with an accurate model whereas this model your building with only 5 images will not be as accurate. 
+<b>Train Model:</b> Now that our data set has been created, we are ready to start training our Deep Learning Model. In general, the more images used to train a model, the more accurate the model will be. The Augmented data set will create a better model than the 5 base images. We also have provided you with an even more accurate pretrained model built on 2000+ images.    
 
 1. Make sure you are on your `Cans-Augmented-YourInitials` data set. 
 
@@ -27,15 +27,15 @@
 
     <br>
 
-5.   Scroll down to the `Optimize Model` section, select `Tiny YOLO v2` as the model type. 
+5.   Scroll down to the `Optimize Model` using section, select `Tiny YOLO v2` as the model type. 
 
-6. Select `CoreML` as the training options, which is what allows the model to be used on an iOS device. 
+6. Select `Enable Core ML` as the training option, which is what allows the model to be used on an iOS device. 
 
 7. In the `Model hyperparameters`, change `Max Iteration` to `2000`.
 
     ![img](/img/mvi-hol-imgs/img-exerciseOne/exercise1-2/yolo.png){: style="height:400px;width:1000px"}
 
-    We are only using 2000 iterations because we don't want to stretch the GPU too thin. Also, it takes a lot more time to train the model.
+    We are only using 2000 iterations because we don't want to stretch the GPU too thin. Also, it takes a lot more time to train the model with higher iterations. Increasing the iterations can improve model accuracy, similar to adding more images to a dataset.
     
     <br>
 
@@ -51,7 +51,7 @@
 
 
 
-<b>Deploy Model:</b> Now that you have created a Deep Learning model, we are going to deploy the model. We will be using the model that was provided in this lab while the model you created is training. The model we have provided was trained using over 2,000 images. Therefore, it will be significantly more accurate than the model you just created. 
+<b>Deploy Model:</b> While your model is training, we are going to deploy the model that was given to you as part of the lab artifacts. The model was trained using over 2,000 images. Therefore, it will be significantly more accurate than the model you just created. 
 
 1. First, select the `Models` tab.
 
@@ -89,19 +89,19 @@
 
     <br>
 
-7. Click on the deployed model and then we can see the details of the model.
+7. Click on the deployed model to see the details of the model.
 
     ![img](/img/mvi-hol-imgs/img-exerciseOne/exercise1-2/details.png){: style="height:300px;width:900px"}
 
     <br>
 
-8. Now scroll down so we can test the model. Drag the image we provided you for testing (it was not used to train this model) and drop it into the `Test Model` box or select `Import` and upload the picture. 
+8. Scroll down to test the model. Drag the `Model Test Pic` we provided you for testing and drop it into the `Test Model` box or select `Import` and upload the picture. This image was not used to train the model.
 
     ![img](/img/mvi-hol-imgs/img-exerciseOne/exercise1-2/test.png){: style="height:400px;width:1100px"}
 
     <br>
 
-9. You can see our Deep Learning Model is able to identify which can is good and which can has a dent. On the right side, is the color of each label and the confidence scores of how likely it is that object. 
+9. You can see our Deep Learning Model is able to identify which can is good and which can has a dent. On the right side is the color of each label and the confidence scores of how likely it is to be that object. 
 
     ![img](/img/mvi-hol-imgs/img-exerciseOne/exercise1-2/results.png){: style="height:400px;width:900px"}
 
