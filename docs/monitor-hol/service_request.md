@@ -1,11 +1,11 @@
-You should now have a good understanding of how alerts happen in Maximo Asset Monitor.  Now you will learn how to create acknowledge alert and create service requests to further investigate and resolve alerts in Maximo.  In this lab you will:
+You should now have a good understanding of how alerts happen in Maximo Asset Monitor.  Now you will learn how to create acknowledge alert and create service requests to further investigate and resolve alerts in Maximo.  In this Exercise you will:
 
 1.  Create a Maximo Service Connection so that Monitor knows which Maximo service to open service requests in.
 2.  Acknowledge an Alert and create Service Request in Maximo so that the alert can be investigated and resolved.
 3.  Resolve Service Request in Maximo.
 4.  Resolve Alerts in Monitor.
 
-You can create service request in IBM Maximo Enterprise Asset Management Service from an alert in Maximo Asset Monitor. In Maximo, a service request indicates that an asset or location in your enterprise needs some sort of attention. Once a service request has been created, there is a ticket associated with that request. If the service request has been validated and the asset requires a particular task, you can assign the service request a work order to specify the labor, materials, services, and tools to complete the particular task. In this lab exercise, you will learn how to connect a Maximo service to your Maximo Asset Monitor instance, create a service request, and assign that service request a work order.
+You can create service request in IBM Maximo Enterprise Asset Management Service from an alert in Maximo Asset Monitor. In Maximo, a service request indicates that an asset or location in your enterprise needs some sort of attention. Once a service request has been created, there is a ticket associated with that request. If the service request has been validated and the asset requires a particular task, you can assign the service request a work order to specify the Exerciseor, materials, services, and tools to complete the particular task. In this Exercise exercise, you will learn how to connect a Maximo service to your Maximo Asset Monitor instance, create a service request, and assign that service request a work order.
 
 #  Create Maximo Service Connection
 
@@ -16,7 +16,7 @@ You can create service request in IBM Maximo Enterprise Asset Management Service
 
 #  Create Service Request from an Alert
 
-In this section, you will need to have some alerts that have already been triggered for your Entity Type. If you have not yet learned how to create an alert in Monitor, please see the `Alerts` section in Lab 2: Monitor Assets. You will also need to have an asset/assets with the same name as your entity/entities already set up in your Maximo service. If you do not know how to create an asset in Maximo, please see Appendix 1: Creating an Asset in Maximo.
+In this section, you will need to have some alerts that have already been triggered for your Entity Type. If you have not yet learned how to create an alert in Monitor, please see the `Alerts` section in Exercise 2: Monitor Assets. You will also need to have an asset/assets with the same name as your entity/entities already set up in your Maximo service. If you do not know how to create an asset in Maximo, please see Appendix 1: Creating an Asset in Maximo.
 
 1.  Select `Monitor` from the hamburger menu and go to your Entity Type.![Hamburger Menu2](/img/monitor/max4.png) &nbsp;
 2.  You are able to access a list of your alerts from your Entity Type homepage two different ways:

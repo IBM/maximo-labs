@@ -1,5 +1,5 @@
 # Objectives
-In this lab you will learn about:
+In this Exercise you will learn about:
 
 * What data dashboards are automatically created for you
 * How to perform data analysis using functions catalog
@@ -7,7 +7,7 @@ In this lab you will learn about:
 * Troubleshoot functions
 ---
 *Before you begin:*  
-This lab requires that you have completed Lab 1 Connected Devices
+This Exercise requires that you have completed Exercise 1 Connected Devices
 ---
 
 # View Data
@@ -62,7 +62,7 @@ Calculated functions by default are scheduled to run every 5 minutes.  Check bac
 
 # Alerts
 
-In this exercises you will learn how to create alerts. Alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a many types of alert functions included in the catalog like `High`, `Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  This is unlike Actions in the IOT Platform Service notifications that are invoked immediately when event data is ingested. Actions have an application programming interface to integrate with other systems.  You can also create you and register your custom functions in the Maximo Asset Monitor catalog.  Both of these are advanced topics that are beyond the scope of this lab. You can learn more about how to create custom functions in this [tutorial](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/tutorials/as_adding_complex_function_tutorial.html)  You can also explore a sample Hello World custom function in [GitHub](https://github.com/madendorff/functions)
+In this exercises you will learn how to create alerts. Alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a many types of alert functions included in the catalog like `High`, `Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  This is unlike Actions in the IOT Platform Service notifications that are invoked immediately when event data is ingested. Actions have an application programming interface to integrate with other systems.  You can also create you and register your custom functions in the Maximo Asset Monitor catalog.  Both of these are advanced topics that are beyond the scope of this Exercise. You can learn more about how to create custom functions in this [tutorial](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/tutorials/as_adding_complex_function_tutorial.html)  You can also explore a sample Hello World custom function in [GitHub](https://github.com/madendorff/functions)
 
 1. Use what you learned in the previous exercise to create a calculated metric named `Hourly_Sum_Errors` to sum up all the alert errors created by pressing the button on your Nordic Thingy using the `Sum` function in the Catalog.  After you will create an alert to be notified when the hourly sum of errors exceeds 10 using the instructions below.
 2. Configure an alert using the value of a metric-name `Hourly_Sum_Errors` created in the previous step. ![Calculated Metric Using Sum](/img/monitor/i85.png) &nbsp;  

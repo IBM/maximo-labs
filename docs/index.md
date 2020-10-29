@@ -1,7 +1,10 @@
 ## Overview of Labs
 
-Welcome to the IBM Maximo Asset Monitor Hands on Lab.  In this hands-on lab you will learn how to get started with IBM 
-Maximo Asset Monitor. You will learn about Monitor's capabilities to:
+Welcome to the IBM Maximo Labs.  In these hands-on labs you will learn how to get started with IBM 
+Maximo Asset Monitor and Maximo Visual Inspection. 
+
+### Monitor Lab
+You will learn about Monitor's capabilities to:
 
 * Connect devices
 * Ingest data from devices
@@ -14,14 +17,12 @@ visualizations such as time series line and bar charts, tabular reports, and int
 and its additional add-on services enable organizations to capture and explore data for devices, equipment and machines, 
 and discover insights that can drive better decision-making.
 
-### Labs
-
-You can choose which labs to complete based on your learning objectives,  the amount of time you have available. The 
-available learning paths and labs are listed in the table below.  Each lab includes multiple exercises with step by step 
+You can choose which exercises to complete based on your learning objectives,  the amount of time you have available. The 
+available learning paths and exercises are listed in the table below.  Each exercise includes multiple steps with  
 directions.  
 
 
-|  Lab    | Status            | Learning Objectives         | Description      |
+|  Exercise    | Status            | Learning Objectives         | Description      |
 |: ------:|:-----------------:|:---------------------------:|:-----------------|
 | 1       | Ready for Use     |  Connect Devices            | Connect devices and define asset types.     |
 | 2       | Ready for Use     |  Monitor Assets             | Create dashboards that enable you to visualize asset data using asset device data. |
@@ -32,14 +33,14 @@ directions.
 | 7       | Ready for Use     |  Add Value Cards            | Add Value cards to your dashboards. |
 
  
-Students doing the labs and Facilitators preparing for delivering the labs should read the [instructions](facilitator_instructions.md).
+Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](facilitator_instructions.md).
 
 See [Contributing to Labs](about.md)  if you are interested in providing feedback by submitting enhancements or bugs.  We also 
-welcome your contributions to existing or new labs. 
+welcome your contributions to existing or new exercises. 
 
 #### Learning Paths
 
-|  Your Learning Goals                                     | Recommended Labs    | Time Needed (mins) |
+|  Your Learning Goals                                     | Recommended Exercises    | Time Needed (mins) |
 |:--------------------------------------------------------:|: ------------------:|:------------------:|
 |  Operational Monitoring of Assets Using Device Sensors   | 1 and 2             |     2 hours        |
 |  Anomaly Detection and Resolution                        | 3 and 4             |     2 hours        |

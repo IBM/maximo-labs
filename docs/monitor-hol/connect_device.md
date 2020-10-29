@@ -1,5 +1,5 @@
 # Objectives
-In this lab you will learn how to:
+In this Exercise you will learn how to:
 
 * Connect physical devices to Monitor
 * Map device Physical Interfaces to Logical Interfaces
@@ -7,7 +7,7 @@ In this lab you will learn how to:
 * Understand how device data is stored
 ---
 *Before you begin:*  
-This lab requires that you:
+This Exercise requires that you:
 
 1.  Have a Nordic Thingy. You can [purchase](../facilitator_instructions) Nordic Thingy.  
 2.  Have completed the pre-requisites required for [all labs](../facilitator_instructions)
@@ -31,8 +31,8 @@ Let’s connect the a Nordic Thingy to the internet using Google Chrome on your 
 ## Connect Nordic Thingy to Maximo Asset Monitor
 The Nordic Thingy has connectivity to the internet.  You must first register device types and then devices with the IOT Platform service included with Maximo Asset Manager before they can securely send and persist data there.
 
-1.  Navigate to and bookmark the Maximo Asset Monitor Dashboard page.  You will use this throughout the lab. [https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true)  You are put on the Home screen
-2.	Log in to the Monitor.  Click `Login` button.  See `Before You Begin` section in this lab if you don't have an IBM ID to login or having trouble accessing the environment.
+1.  Navigate to and bookmark the Maximo Asset Monitor Dashboard page.  You will use this throughout the Exercise. [https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&APM=true)  You are put on the Home screen
+2.	Log in to the Monitor.  Click `Login` button.  See `Before You Begin` section in this Exercise if you don't have an IBM ID to login or having trouble accessing the environment.
 ![Login to Maximo Asset Monitor](/img/monitor/i11.png)&nbsp;
 3.  After logging in, you’ll land in Home Screen.”
 ![Maximo Asset Monitor Home](/img/monitor/i12.png)&nbsp;
@@ -122,7 +122,7 @@ You will create an alert notification when the Nordic Thingy has an error condit
 ![Check Physical Interface State Events](/img/monitor/i38.png) &nbsp;  
 
 # Store Data
-This next exercise focuses how and what database tables your device data is stored in.  Make sure you have completed the earlier exercises in this lab. You should already have device type with an active physical and logical interface and that you have at least one device of that type sending data.
+This next exercise focuses how and what database tables your device data is stored in.  Make sure you have completed the earlier exercises in this Exercise. You should already have device type with an active physical and logical interface and that you have at least one device of that type sending data.
 
 1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.
 ![Device Data State](/img/monitor/i39.png) &nbsp;
@@ -144,4 +144,4 @@ If when you click on `View Details`, you see fields that say admin only, please 
 7. Under `Explore` click `tables` -> `BLUADMIN` Find your `IOTANALYTICS_<Device Name>` table. Click `View Data` button to see the data.  
 ![Search Entity Types](/img/monitor/i44.png) &nbsp;
 
-Congratulations you have successfully connected a device and have it sending and storing data in Maximo Asset Monitor.  In the next lab you will view the available dashboards and create new dashboards to monitor your Thingy.
+Congratulations you have successfully connected a device and have it sending and storing data in Maximo Asset Monitor.  In the next Exercise you will view the available dashboards and create new dashboards to monitor your Thingy.

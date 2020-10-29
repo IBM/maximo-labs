@@ -1,14 +1,14 @@
 # Pre-Requisite Instructions
 
-Here are the require pre-requisites for all exercises in this lab guide
+Here are the require pre-requisites for all exercises in this Exercise guide
 
-## All Labs
+## All Exercises
 
-All labs require that you have:
+All Exercises require that you have:
 
 1.  A computer with a Chrome browser, internet connectivity and Bluetooth connectivity.
 
-2.  User access to a Maximo Asset Environment like the `Monitor-Demo` tenant [URL](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&isAPM=true)  To get access to the `Monitor-Demo` tenant, please send an email to your lab facilitator or `carlos.ferreira1@ibm.com`
+2.  User access to a Maximo Asset Environment like the `Monitor-Demo` tenant [URL](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&isAPM=true)  To get access to the `Monitor-Demo` tenant, please send an email to your Exercise facilitator or `carlos.ferreira1@ibm.com`
 
 3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?)
 
@@ -17,7 +17,7 @@ All labs require that you have:
 
 4.  Test your access to the Maximo Asset Monitor Environment.  If you are using tenant id  "Monitor-Demo"  you can try using this [URL](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&isAPM=true)
 
-## Lab 1 Connect Devices
+## Exercise 1 Connect Devices
 
 1.  You have completed the pre-requisites required for [All Labs](../facilitator_instructions)above.
 
@@ -49,9 +49,9 @@ If you are an IBMer follow these instructions for expensing the Nordic Thingy
 
 6.	Submit the Report.
 
-## Lab 2 Monitor Assets
+## Exercise 2 Monitor Assets
 
-Lab 2 requires that you have completed Lab 1 Connect Devices.
+Exercise 2 requires that you have completed Exercise 1 Connect Devices.
 
 
 

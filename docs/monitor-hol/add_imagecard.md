@@ -7,9 +7,9 @@ In Maximo Asset Monitor, images can add a tremendous amount of value to data vis
 
 ![Munich Occupancy Hotspot](/img/monitor/im2.png) &nbsp;
 
-The image card above displays an occupancy use case. Individual occupancy sensors have been tied to each hot spot to indicate whether seats in a meeting room in the Munich IoT center are occupied. The image above shows a much more complicated image card with hotspots than you will be creating in this lab, but this example is something that you could use eventually in the real world.
+The image card above displays an occupancy use case. Individual occupancy sensors have been tied to each hot spot to indicate whether seats in a meeting room in the Munich IoT center are occupied. The image above shows a much more complicated image card with hotspots than you will be creating in this Exercise, but this example is something that you could use eventually in the real world.
 
-In this lab, you will learn how to select a photo for your image card, push your image into the Monitor data lake using a REST API call, and finally display your image card on a dashboard in Monitor. You will need Postman for this section. Please download the application at this link if you have not already: https://www.getpostman.com/
+In this Exercise, you will learn how to select a photo for your image card, push your image into the Monitor data lake using a REST API call, and finally display your image card on a dashboard in Monitor. You will need Postman for this section. Please download the application at this link if you have not already: https://www.getpostman.com/
 ## Upload Image to Monitor Datalake
 ### Choose Image
 1. Choose an image that allows you to use hotspots to tell a meaningful story. For example, choosing a floor plan of a factory floor where you can tie hotspots to assets on the floor would tell an important and meaningful story.
@@ -42,7 +42,7 @@ In this lab, you will learn how to select a photo for your image card, push your
 
 ![Body and Form Data Postman](/img/monitor/im13.png) &nbsp;
 
-6. Enter the form data specified below. Make sure to select `File` from the drop down button next to your `imagefilecontent`. This option will allow you to select the image file you chose in the first section of this lab.
+6. Enter the form data specified below. Make sure to select `File` from the drop down button next to your `imagefilecontent`. This option will allow you to select the image file you chose in the first section of this Exercise.
 
 ![KC Form Data Requirements](/img/monitor/im14.png) &nbsp;
 ![File Drop Down](/img/monitor/im15.png) &nbsp;

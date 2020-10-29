@@ -1,5 +1,5 @@
 # Objectives
-In this lab you will learn how to:
+In this Exercise you will learn how to:
 
 *  Create an asset instance dashboard to see how an individual asset is performing
 *  Create a summary dashboard that aggregates asset performance metrics across multiple assets of the same type
@@ -10,14 +10,14 @@ In this lab you will learn how to:
 
 ---
 *Before you begin:*  
-This lab requires that you have completed the [pre-requisites](../facilitator_instructions) required for all labs
+This Exercise requires that you have completed the [pre-requisites](../facilitator_instructions) required for all Exercises
 
 Watch the 10 min video explaining why anomalies matter to business. 
 [![Video](/img/monitor/yt-part1.png)](https://youtu.be/bSlh9TY3ECY "Video Title")
 ---
 
 ## Create Simulated Robots to Monitor
-In this exercise you quickly create some simulated robot operational data that you will use in your exercises in this Lab.  You will use data from simulated industry robots as the assets you are responsible to monitor.
+In this exercise you quickly create some simulated robot operational data that you will use in your exercises in this Exercise.  You will use data from simulated industry robots as the assets you are responsible to monitor.
 
 1.  Click `Home` to see the top level tasks you can do with Monitor. ![Home](/img/monitor/i89.png) &nbsp;
 2.  Click `Monitor Entities` You will create a simulated set of robot assets (entities) that represent an assembly line of manufacturing robots.
@@ -64,7 +64,7 @@ In this exercise you will modify the layout of the individual robot instance das
 # Create a Summary Dashboard
 In the previous exercise you modified an instance dashboard for each Robot.   In this exercise you will create a [Summary Dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/summary_dashboard_tutorial.html).  There is one summary dashboard presenting aggregated and filtered performance KPI across all robots of the type.  A summary dashboard allows you to see the metrics for a filtered group of assets.  "Show me all robots from a manufacturer and with a specific firmware.""
 
-These filters are called dimensions in Monitor.  Later in this Lab you will learn how to assign dimensions to the entities. Our simulated robots already have the appropriate dimensions assigned to each robot.  Robot 73000 may have a manufacturer GHI Industries and Robot 73002 may have a manufacturer Rentech. A summary dashboard allows you filter assets and then compute the data metrics aggregations for the applied filter.  For example, the Max, Min and Mean torque of all robots for the filtered scope of a selected manufacturer.
+These filters are called dimensions in Monitor.  Later in this Exercise you will learn how to assign dimensions to the entities. Our simulated robots already have the appropriate dimensions assigned to each robot.  Robot 73000 may have a manufacturer GHI Industries and Robot 73002 may have a manufacturer Rentech. A summary dashboard allows you filter assets and then compute the data metrics aggregations for the applied filter.  For example, the Max, Min and Mean torque of all robots for the filtered scope of a selected manufacturer.
 
 A summary dashboard uses time grains when computing the aggregations.  Monitor can display four types of summary dashboards. You can choose by hour, day, week, month time grains.  A summary dashboard supports the same cards as an instance dashboard.  The next steps show you how to create a daily summary dashboard for all your robots.
 
@@ -253,7 +253,7 @@ Add a line chart** to visually compare if high anomaly model scores correlate wi
 
 1.  From the instance dashboard click on the `gear icon`![Manage Instance Robot dashboard](/img/monitor/i98.png) &nbsp;
 2.  Select `Edit dashboard`
-3.  Add the following [line chart card Json](json/AnomalyScoreLineGraph.json) for `travel_time_anomaly` metric anomaly function scores to your instance dashboard.
+3.  Add the following [line chart card Json](/json/AnomalyScoreLineGraph.json) for `travel_time_anomaly` metric anomaly function scores to your instance dashboard.
 
     ```
    {
