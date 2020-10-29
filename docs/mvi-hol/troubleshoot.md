@@ -1,4 +1,4 @@
-# Troubleshooting tips
+<h2>Troubleshooting tips</h2>
 
 1. If you are not able to connect to your Projects on MVI Mobile, make sure your url, username, and password are correct.
 

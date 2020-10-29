@@ -1,6 +1,6 @@
 
 
-# Next Steps
+<h2>Next Steps</h2>
 
 Congratulations! You have completed this lab and are now able to:
 
@@ -12,15 +12,15 @@ Congratulations! You have completed this lab and are now able to:
 
 For full documentation on IBM Maximo Visual Inspection visit [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSRU69_1.3.0/base/vision_overview.html).
 
-# Extra Credit
+<h2>Extra Credit</h2>
 
 If you have extra time:
 
-1. Go back to the `Projects` tab and see how your new data set, `Inspection Results`, that you created in the app, is now a a part of your project.
+1. Go back to the `Projects` tab and see how your new data set, `Inspection Results-YourInitials`, that you created in the app, is now a part of your project.
 
 2. Go to the `Data Sets` tab and select your new data set, `Inspection Results-YourInitials`, and take a look at the new images you took. 
 
-3. Your model might be finished training, use a photo of a can to test your new model. <b>*Remember, it will not be as accurate because we did not train the model with a lot of images.*</b>
+3. Your model might be finished training and at 0% accuracy. You can go back and augment the data even more or add your own pictures to create a more accurate model. Use a photo of a can to test your new model.  <b>*Remember, it will not be as accurate because we did not train the model with a lot of images.*</b>
 
 
 

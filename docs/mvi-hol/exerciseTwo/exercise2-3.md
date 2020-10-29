@@ -1,7 +1,3 @@
-
-
-
-
 <h2>Exercise 2.3 - Fail/Pass Rate Dashboard Configuration</h2>
 
 Now that we have created an inspection and inspected a couple cans, we can get real-time data on how our production line is doing. 

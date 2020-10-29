@@ -1,5 +1,3 @@
-
-
 <h2>Exercise 2.2 - Conduct the Inspection</h2>
 
 Now that we have built our inspection, we are going to put it to the test. Please grab your dented and not-dented can to conduct this inspection. Place them in a well-lit area close to your phone. 

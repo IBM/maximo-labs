@@ -1,6 +1,6 @@
 
 
-# Exercise One - Maximo Visual Inspection Platform
+<h1>Exercise One - Maximo Visual Inspection Platform</h1>
 
 In this lab, we have provided you with a set of images for training, a test image, and a model to use during the exercise.
 
