@@ -33,7 +33,7 @@ directions.
 | 7       | Ready for Use     |  Add Value Cards            | Add Value cards to your dashboards. |
 
  
-Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](facilitator_instructions.md).
+Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](monitor-hol/facilitator_instructions).
 
 See [Contributing to Labs](about.md)  if you are interested in providing feedback by submitting enhancements or bugs.  We also 
 welcome your contributions to existing or new exercises. 
