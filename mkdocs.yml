@@ -6,7 +6,7 @@ nav:
   - Home: 
     - Welcome to the Maximo Labs: index.md
   - Monitor Lab:
-    - Get Started: monitor-hol/index.md
+    - Get Started: monitor-hol/monitor-index.md
     - Pre-Requisites: monitor-hol/facilitator_instructions.md
     - Exercises:
         - 1.  Connect Devices: monitor-hol/connect_device.md
