@@ -13,9 +13,8 @@ visualizations such as time series line and bar charts, tabular reports, and int
 and its additional add-on services enable organizations to capture and explore data for devices, equipment and machines, 
 and discover insights that can drive better decision-making.
 
-You can choose which exercises to complete based on your learning objectives,  the amount of time you have available. The 
-available learning paths and exercises are listed in the table below.  Each exercise includes multiple steps with  
-directions.  
+You can choose which exercises to complete based on your learning objectives, and the amount of time you have available. The 
+available learning paths and exercises are listed in the table below. Each exercise includes multiple steps with directions.  
 
 
 |  Exercise    | Status            | Learning Objectives         | Description      |
@@ -86,8 +85,9 @@ risk of non-compliance.
 
 #### Architecture
 
-Here is a high level functional architecture of Maximo Asset Monitor
-![Monitor Architecture](/img/monitor/architecture.png)
+Here is a high level functional architecture of Maximo Asset Monitor:
+
+![Monitor Architecture](/img/monitor/monitor_architecture.png)
 
 #### Included Services
 IBM Maximo Asset Monitor includes the following IBM Cloud services that help you achieve the above business benefits to 
@@ -132,7 +132,3 @@ service is included depends on which plan as been purchased. This lab is based o
 * For long term storage of device sensor data
 * To store images
 
----
-© 2020 International Business Machines Corporation.  No part of this document may be reproduced or transmitted in any 
-form without written permission from IBM.  U.S. Government Users Restricted Rights — use, duplication or disclosure 
-restricted by GSA ADP Schedule Contract with IBM.
