@@ -1,2 +1,3 @@
-# monitor-hands-on-lab
-This is an MkDocs web site to open source the documentation for Hands On Labl for Maximo Asset Monitor.  This will enable multiple contributors including partners and customer to help submit issues and maintain the documentation of the Hands On Lab
+# Maximo Hands On Labs
+This is an MkDocs web site to open source the documentation for Maximo Hands On Labs.
+This will enable multiple contributors including partners and customer to help submit issues and maintain the documentation.

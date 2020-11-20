@@ -12,6 +12,8 @@ Here are the contributors to Maximo Labs
 
 - Graeme Pexton - <jgpexton@us.ibm.com>
 
+- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
+
 If you would also like to contribute see the [contributing page](about.md)
 
 ![img](/img/mvi-hol-imgs/img-closing/ibmLogo.jpg){: style="height:400px;width:500px;position:relative;bottom:10px;left:0px"}

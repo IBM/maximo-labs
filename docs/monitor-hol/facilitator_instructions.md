@@ -19,7 +19,7 @@ All Exercises require that you have:
 
 ## Exercise 1 Connect Devices
 
-1.  You have completed the pre-requisites required for [All Labs](../facilitator_instructions)above.
+1.  You have completed the pre-requisites required for [All Labs](../facilitator_instructions) above.
 
 2.  You have a Nordic Thingy.  See the sections below for purchasing a Nordic Thingy.  
 
