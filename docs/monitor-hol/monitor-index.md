@@ -28,9 +28,9 @@ available learning paths and exercises are listed in the table below. Each exerc
 | 7       | Ready for Use     |  Add Value Cards            | Add Value cards to your dashboards. |
 
  
-Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](/monitor-hol/facilitator_instructions).
+Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](../facilitator_instructions).
 
-See [Contributing to Labs](/about) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
+See [Contributing to Labs](../../about) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
 welcome your contributions to existing or new exercises. 
 
 ## Learning Paths
@@ -87,7 +87,7 @@ risk of non-compliance.
 
 Here is a high level functional architecture of Maximo Asset Monitor:
 
-![Monitor Architecture](/img/monitor/monitor_architecture.png)
+![Monitor Architecture](../../img/monitor/monitor_architecture.png)
 
 # Included Services
 IBM Maximo Asset Monitor includes the following IBM Cloud services that help you achieve the above business benefits to 
