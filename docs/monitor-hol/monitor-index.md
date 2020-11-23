@@ -1,12 +1,12 @@
 
-### Monitor Lab
+# Welcome to the IBM Maximo Asset Monitor Lab!
 You will learn about Monitor's capabilities to:
 
 * Connect devices
 * Ingest data from devices
 * Transform data into asset information
 * Be alerted about which assets are not performing normally
-* Create system summary and asset dashboard to view asset condition metrics and related asset operational data.
+* Create system summary and asset dashboard to view asset condition metrics and related asset operational data
 
 Maximo Asset Monitor connects devices, ingests device data, and transforms that data into meaningful insights through 
 visualizations such as time series line and bar charts, tabular reports, and interactive diagrams. Watson IoT Platform 
@@ -24,25 +24,25 @@ available learning paths and exercises are listed in the table below. Each exerc
 | 3       | Ready for Use     |  Monitor Anomalies          | Apply AI functions to intelligently detect anomalies at sale, troubleshoot and understand root cause.     |
 | 4       | Ready for Use     |  Create Service Requests    | Resolve anomalies by creating service requests in Maximo. |
 | 5       | Ready for Use     |  Add Image Cards            | Add image cards and hover spots to see asset conditions on your asset image. |
-| 6       | Ready for Use     |  Add Dimension Metadata     | Add dimensions for filtering assets and aggregating asset metrics on Summary Dashboards.|
+| 6       | Ready for Use     |  Add Dimensions Metadata    | Add dimensions for filtering assets and aggregating asset metrics on Summary Dashboards.|
 | 7       | Ready for Use     |  Add Value Cards            | Add Value cards to your dashboards. |
 
  
-Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](monitor-hol/facilitator_instructions).
+Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](/monitor-hol/facilitator_instructions).
 
-See [Contributing to Labs](about.md)  if you are interested in providing feedback by submitting enhancements or bugs.  We also 
+See [Contributing to Labs](/about) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
 welcome your contributions to existing or new exercises. 
 
-#### Learning Paths
+## Learning Paths
 
-|  Your Learning Goals                                     | Recommended Exercises    | Time Needed (mins) |
+|  Your Learning Goals                                     | Recommended Exercises    | Time Needed   |
 |:--------------------------------------------------------:|: ------------------:|:------------------:|
 |  Operational Monitoring of Assets Using Device Sensors   | 1 and 2             |     2 hours        |
 |  Anomaly Detection and Resolution                        | 3 and 4             |     2 hours        |
 |  Visualize and Filter Assets                             | 5, 6 and 7          |     2 hours        |
 
 
-### Overview of Maximo Asset Monitor
+## Overview of Maximo Asset Monitor
 
 IBM Maximo Asset Monitor enables AI-powered remote monitoring at enterprise scale for asset maintenance and operations 
 leaders seeking to optimize operating performance with fewer, more accurate alerts, and greater insights into what is 
@@ -62,11 +62,11 @@ requiring any coding.
 Anomaly models can help reduce the “noise” that is caused by hundreds of false positive alerts using traditional threshold
  alerts. AI models allow clients to focus on and resolve the most critical anomalies.
 
-####  Demonstration
+##  Demonstration
 
 Ask your facilitator for a demonstration of Maxiom Asset Monitor or watch this short 7 minute [video demonstration](https://youtu.be/IyQgRwAseLU)
 
-#### Business Benefits
+## Business Benefits
 
 Many clients have already adopted Maximo for Enterprise Asset Management (EAM), and they are realizing the benefits of 
 extending the life of their capital investments while reducing operational and maintenance costs. They want to further 
@@ -83,25 +83,25 @@ design improvements to reduce warranty costs and system downtime.
 * Compliance officers can better document historical trends to demonstrate regulatory compliance and reduce the cost and 
 risk of non-compliance.
 
-#### Architecture
+## Architecture
 
 Here is a high level functional architecture of Maximo Asset Monitor:
 
 ![Monitor Architecture](/img/monitor/monitor_architecture.png)
 
-#### Included Services
+# Included Services
 IBM Maximo Asset Monitor includes the following IBM Cloud services that help you achieve the above business benefits to 
 scale monitoring to the enterprise:
 
-##### Watson IoT Platform Connection Service
-* Secure registration and management of devices and gateways using the included [Connection Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/develop.html)
+## Watson IoT Platform Connection Service
+* Secure registration and management of devices and gateways using the included [Connection Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/connect_mon.html)
 * Security of users and device
 * Extension points for above and create rules on incoming sensor
 * Mapping physical device types to logical interfaces that reflect the asset you want to manage
 * Messaging service for ensuring data can be streamed in realtime
 * Real-time rules and actions
 
-##### Watson IoT Platform Analytics Service
+## Watson IoT Platform Analytics Service
 
 * Data processing and analysis of historical data using the included [Analytics Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_overview.html)
 * Data cleansing and transformation
@@ -112,21 +112,19 @@ scale monitoring to the enterprise:
 * Data service connections
 * Catalog of data functions with anomaly models to intelligently identify conditions that require attention
 
-##### Monitor Service
+## Monitor Service
 
-* Out-of-the-box operational dashboards that scale to the enterprise using the included [Monitor Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/kc_welcome_mon.html)
-* Image card
-* Line time series chart card
-* Value card
-* Table card
+* Out-of-the-box operational dashboards that scale to the enterprise using the included [Monitor Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/monitoring.html)
 * Shareable and customizable dashboards to allow users to respond, understand, and resolve alerts
+* Different card types are available to be used in the dashboards: Value card, Table card, Image card, Line graph card (time series), Bar chart card, and Alert card
 
-##### Database Service
+## Database Service
 
-* To store data for all of the above services using the include using the included Database Service.  Which database 
-service is included depends on which plan as been purchased. This lab is based on DB2.
+* To store data for all of the above services using the included [Database Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/develop_mon.html).  
+* Which database service is included depends on which plan has been purchased. 
+* This lab is based on Db2 Warehouse on Cloud.
 
-##### Object Storage Service
+## Object Storage Service
 
 * To store logs and files for above services using the included [Cloud Object Storage Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_logs.html)
 * For long term storage of device sensor data
