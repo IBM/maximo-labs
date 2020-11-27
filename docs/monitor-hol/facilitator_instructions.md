@@ -8,7 +8,7 @@ All Exercises require that you have:
 
 1.  A computer with a Chrome browser, internet connectivity and Bluetooth connectivity.
 
-2.  User access to a Maximo Asset Monitor environment like the `Monitor-Demo` tenant [URL](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&isAPM=true).<br>
+2.  User access to a Maximo Asset Monitor environment like the `Monitor-Demo` tenant [URL](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo).<br>
 To get access to the `Monitor-Demo` tenant, please send an email to your Exercise facilitator or `carlos.ferreira1@ibm.com`
 
 3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?):<br>
@@ -16,7 +16,7 @@ o Click `Login to MY IBM` button<br>
 o Click `Create an IBM ID` link
 
 4.  Test your access to the Maximo Asset Monitor environment.<br>
-If you are using tenant id  "Monitor-Demo"  you can try using this [URL](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo&isAPM=true)
+If you are using tenant id  "Monitor-Demo"  you can try using this [URL](https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo)
 
 # Exercise 1 Connect Devices
 
