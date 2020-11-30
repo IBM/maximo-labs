@@ -1,32 +1,34 @@
 # Objectives
 In this Exercise you will learn about:
 
-* What data dashboards are automatically created for you
-* How to perform data analysis using functions catalog
+* Which data dashboards are automatically created for you
+* How to perform data analysis using the functions catalog
 * How to be alerted about non-conforming asset conditions
-* Troubleshoot functions
+* Troubleshooting functions
 ---
 *Before you begin:*  
 This Exercise requires that you have completed Exercise 1 Connected Devices
 ---
 
 # View Data
-Now that you know the data is successfully flowing into IOT Platform Service, in this exercise you will see what data dashboards are automatically created for you. Go to Maximo Asset Monitor page.
+Now that you know the data is successfully flowing into the IoT Platform Service, this exercise will let you see which dashboards are automatically created for you. Go to Maximo Asset Monitor page.
 
-1. Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/connect.html).  An entity is created for each mapped device ID along with it's corresponding properties.
+1. Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web). An entity is created for each mapped device ID along with it's corresponding properties.
 2.  Search for your Entity Type `<your last name>_thingy`
 ![Search Entity Types](/img/monitor/i73.png) &nbsp;  
 3.  Click on`<your last name>_thingy` row in the table for your entity type
 ![Search by Entity Type Name](/img/monitor/i74.png) &nbsp;  
-4.  Since you only have one device for Thingy Entity Type `<your last name>_thingy`, only one entity is listed on the `Dashboards` tab in the `Instance Dashboard` table on `Entities Type` page for your Entity Type.  As you add more devices to the `<your last name>_thingy` Device Type in IOT Platform they will appear on the entities page.  Any entity can be an asset, an IO Point, a system of assets or what ever you choose.
+4.  Since you only have one device for Thingy Entity Type `<your last name>_thingy`, only one entity is listed on the `Dashboards` tab in the `Instance Dashboard` table on `Entities Type` page for your Entity Type.  As you add more devices to the `<your last name>_thingy` Device Type in the IoT Platform they will appear on the entities page. Any entity can be an asset, an IO Point, a system of assets or what ever you choose.<br>
+(Note: You will not see the Hourly summary dash board just yet)
 ![Entities Page](/img/monitor/i75.png) &nbsp;   
 5.  Click on the `Data` Tab and expand `Metrics` to see all the aggregated metrics across all your devices like the max and min values for time series float data.
 6.  Scroll down a bit to view the metric charts for `co2`, `pressure` and `temperature`.  Click on `co2`to see its max an min over time aggregated across all entities in `<your last name>_thingy` Entity Type.
 ![Entities Page](/img/monitor/i76.png) &nbsp;
 7.  Click the `Dashboards` tab to return to see the list of `Entities` in the `Instance Dashboards` table.  
-8.  Select your Thingy entity listed in the `Instance Dashboards` table.  Now you only see the data for this specific asset.  The `Dimensions` tab shows the meta data used to classify your asset.  
+8.  Select your Thingy entity listed in the `Instance Dashboards` table.  Now you only see the data for this specific asset.  The `Dimensions` tab shows the meta data used to classify your asset.<br>
+(Note: you might only see the Name dimension)
 ![Dimensions Page](/img/monitor/i77.png) &nbsp;
-9.  Click `Metrics` tab to see metrics for the last 24 hours for only this asset or IO Point. It may take it time to accrue enough data to visualize, take a break and return after ten or so minutes.
+9.  Click `Metrics` tab to see metrics for the last 24 hours for this entity (asset) only. It may take some time to accrue enough data to visualize, take a break and return after ten or so minutes.
 ![Metrics Page](/img/monitor/i78.png) &nbsp;  
 
 # Analyze Data
