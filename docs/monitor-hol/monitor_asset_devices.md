@@ -26,45 +26,62 @@ Now that you know the data is successfully flowing into the IoT Platform Service
 ![Entities Page](/img/monitor/i76.png) &nbsp;
 7.  Click the `Dashboards` tab to return to see the list of `Entities` in the `Instance Dashboards` table.  
 8.  Select your Thingy entity listed in the `Instance Dashboards` table.  Now you only see the data for this specific asset.  The `Dimensions` tab shows the meta data used to classify your asset.<br>
-(Note: you might only see the Name dimension)
+(Note: you might only see the Name dimension, but you will add dimensions in a later exercise)
 ![Dimensions Page](/img/monitor/i77.png) &nbsp;
 9.  Click `Metrics` tab to see metrics for the last 24 hours for this entity (asset) only. It may take some time to accrue enough data to visualize, take a break and return after ten or so minutes.
 ![Metrics Page](/img/monitor/i78.png) &nbsp;  
 
 # Analyze Data
-In the previous exercise you saw how you can see the raw device data in Monitor Dashboards, in this exercises you will learn how perform data analysis and transform data so that remote operations managers can take action using intelligent insights.  
+In the previous exercise you saw how you can see the raw device data in Monitor Dashboards, in this exercises you will learn how to perform data analysis and transform data so that remote operations managers can take action using intelligent insights.  
 
-1.  Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/connect.html).  An entity is created for each mapped device ID along with it's corresponding properties.
-2.  Search for your and click on your Entity Type `<your last name>_thingy`
-![Search Entity Types](/img/monitor/i73.png) &nbsp;   
+1.  Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html).  An entity is created for each mapped device ID along with it's corresponding properties.
+2.  Search for and click on your Entity Type `<your last name>_thingy`
+![Search Entity Types](/img/monitor/i74.png) &nbsp;   
 3.  Click `Data` tab  on the homepage for your Entity Type.
-![Add Calculated Metrics](/img/monitor/i74.png) &nbsp;  
 4.  You can start tracking the mean of the entities across your Entity Type by creating a calculated metric from the Function Catalogue.
-5.  Click `+` button access the Function Catalog.  Select the `Mean` function from the catalog.
+5.  Click `+` button to access the Function Catalog. 
 ![Search Catalog](/img/monitor/i79.png) &nbsp;
-6.  Click `Select`.
+6.  Search for the `Mean` function in the catalog. Click on it and click `Select`.
 ![Add Calculated Data for Mean](/img/monitor/i80.png) &nbsp;
 7.  In the next dialog, select the metric that you want to calculate the daily mean for. In this case, `Temperature` and click `Next`.
 ![Add Daily Mean Temperture Calculated Data](/img/monitor/i81.png) &nbsp;
 8.  Since temperature is changing and recorded over time you need to specify what time period the mean is being calculated for.   This is called the granularity and you can leave it set to `Daily` to calculate the daily mean.
 ![Search Entity Types](/img/monitor/i82.png) &nbsp;
-9.  Replace the calculated `output metric` name with your own like `Daily_Temperature_Mean`
+9.  Replace the calculated `Output metric` name with your own like `Daily_Temperature_Mean`
 10.  Leave everything else as default and click `Create` to save the metric.  This calculated metric is calculating a daily mean. If you wanted to calculate an `Hourly_Temperature_Mean`, you can set the `Granularity` to `Hourly` on the output dialog.
-11.  You should now see your new calculated metric in the metrics list on the left-hand side.
+11.  You should now see your new calculated metric in the Metric (calculated) list on the left-hand side. If not, then wait 5 minutes and refresh the page. 
+![Calculated Metrics](/img/monitor/i83a.png) &nbsp;  
 12.  Click the `Configure` button to update calculated metrics.
-![Calculated Metrics](/img/monitor/i83.png) &nbsp;  
-13.  Click `Next` and `Schedule` icon to change the schedule of how often the mean is calculated.  You can change the frequency of how often hourly mean is calculated changing it from every 5 minutes to every hour.   You can also change how many days back the mean temperature function should calculate for using historical temperature data.    
+![Calculated Metrics](/img/monitor/i83b.png) &nbsp;  
+13.  Click `Next` and click on the `Auto schedule` switch to change the schedule of how often the mean is calculated. You can change the frequency of how often daily mean is calculated changing it from every 5 minutes to every hour.  You can also change how many days back the mean temperature function should calculate for using historical temperature data.    
 ![Calculated Metrics](/img/monitor/i84.png) &nbsp;  
 14.  Click `Update` to save your function configuration changes.
+
+15. Create a new calculated metric that calculates the number of errors every hour. Start by clicking the `+` button. Find the `Sum` function in function catalog and click `Select`. 
+![Create a Sum data item](/img/monitor/i84a.png) &nbsp;  
+16. In the following dialog, select the metric `err` in the source field, leave everything else default and select `Next`.<br> 
+In the output dialog, you can create a new granularity by clicking the `Manage` button.
+![Create new granularity](/img/monitor/i84b.png) &nbsp;  
+17. In the Create custom grain dialog, name the custom grain `Hourly` and select `Hourly` from the `Time basis` drop down. Leave everything else default and click “Create.” 
+![Create custom grain](/img/monitor/i84c.png) &nbsp;
+18. Name your new calculated metric `Hourly_Sum_Errors` and click `Create`. 
+![Finalize new Sum data item](/img/monitor/i84d.png) &nbsp;
+19. Flip your Nordic Thingy over once in a while to generate errors and after five minutes you should start to see data in the chart.
+![View new Sum data item](/img/monitor/i84e.png) &nbsp;
+
+Congratulations. You have learned how to view the metrics of your entities as well as create new calculated metrics from that data. Just like metrics, the calculated metrics are also stored in the data lake. Open and view the DB2 database tables like we did in Exercise 1 (Monitor Page > Usage > Db2 Warehouse on Cloud > Launch > Data > Tables > BLUEADMIN). <br>
+Once the list of schemas are populated, you'll find that the Analytics Service has created new tables, one for each time grain - search for the name 'DM_<Entity Type>' and you'll see them all:
+![View new Sum data item](/img/monitor/i84f.png) &nbsp;
+Click on one of the new tables to view the data.
+
 ---
 **Note:**
-Calculated functions by default are scheduled to run every 5 minutes.  Check back to later see if the metric is being calculated.
+Calculated functions by default are scheduled to run every 5 minutes. Check back later to see if the metric is being calculated.
 ---
- Congratulations.  You have learned how to view the metrics of your entities as well as create new, calculated metrics from that data.
 
 # Alerts
 
-In this exercises you will learn how to create alerts. Alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a many types of alert functions included in the catalog like `High`, `Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  This is unlike Actions in the IOT Platform Service notifications that are invoked immediately when event data is ingested. Actions have an application programming interface to integrate with other systems.  You can also create you and register your custom functions in the Maximo Asset Monitor catalog.  Both of these are advanced topics that are beyond the scope of this Exercise. You can learn more about how to create custom functions in this [tutorial](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/tutorials/as_adding_complex_function_tutorial.html)  You can also explore a sample Hello World custom function in [GitHub](https://github.com/madendorff/functions)
+In this exercise you will learn how to create alerts. Alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a many types of alert functions included in the catalog like `High`, `Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently. This is unlike Actions in the IoT Platform Service where notifications are invoked immediately when event data is ingested. Actions have an application programming interface to integrate with other systems.  You can also create and register your custom functions in the Maximo Asset Monitor catalog. Both of these are advanced topics that are beyond the scope of this Exercise. You can learn more about how to create custom functions in this [tutorial](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/tutorials/as_adding_complex_function_tutorial.html).
 
 1. Use what you learned in the previous exercise to create a calculated metric named `Hourly_Sum_Errors` to sum up all the alert errors created by pressing the button on your Nordic Thingy using the `Sum` function in the Catalog.  After you will create an alert to be notified when the hourly sum of errors exceeds 10 using the instructions below.
 2. Configure an alert using the value of a metric-name `Hourly_Sum_Errors` created in the previous step. ![Calculated Metric Using Sum](/img/monitor/i85.png) &nbsp;  
