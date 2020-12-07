@@ -239,7 +239,7 @@ You will add an anomaly function that will provide a score of how likely the sin
 
 **Table - Suggested Scoring Schedule**
 
-| Data Grain Frequency | Sample Window | Data Required         | Schedule Scoring                                                                 |
+|Data Grain Frequency | Sample Window | Data Required         | Schedule Scoring                                                                 |
 | ------------------- |:-------------:| --------------------- |:--------------------------------------------------------------------------------:|
 | 1 Day               | 12            |  24 Days              | <br>Noncritical – Once per 12 days </br> <br>Critical - Once per day</br>    |
 | 1 Hour              | 12            |  24 Hours             | <br>Noncritical – Once per 12 days </br> <br>Critical - Once per 1 hour</br> |
