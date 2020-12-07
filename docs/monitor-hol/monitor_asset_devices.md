@@ -94,7 +94,8 @@ In this exercise you will learn how to create alerts. Alerts are functions in th
 8.  Set Alert Expression `Severity` value to `High`
 9.  Set Alert Expression `Status` value to `New`. Alerts start in state of `New` until they are `Acknowledged`, `Validated` and finally `Resolved` or `Dismissed`. Click the Next button.![Configure Alert Expression Configuration](/img/monitor/i87.png) &nbsp;  
 10.  Name the alert `Hourly_Sum_Errors_Alert` and click the Create button. ![Configure Alert Expression Output](/img/monitor/i88.png) &nbsp;
-11. The Monitor pipeline runs every 5 minutes. If you have flipped over your Thingy more than five times, you should see the alert show up on the chart in about five minutes. ![Configure Alert Expression Output](/img/monitor/i88a.png) &nbsp;
+11. The Monitor pipeline runs every 5 minutes. If you have flipped over your Thingy more than five times, you should see the alert show up on the chart in about five minutes. ![View Alert Expression Result](/img/monitor/i88a.png) &nbsp;
+12. You can also watch all alerts for this entity type by selecting the Alerts tab. ![View All Alerts](/img/monitor/i88b.png) &nbsp;
 
 Congratulations.  You have learned how to create new Alerts from a calculated metric that sums the total number of errors that occur on an asset device.  You can also receive alerts on a device event stream topic and take action. That is beyond the scope of these materials. Find out more information on how to configure these actions in the [documentation](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/as_custom_actions.html).
 
