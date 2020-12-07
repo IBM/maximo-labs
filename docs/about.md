@@ -27,7 +27,7 @@ Writing new labs or improve the existing labs
 
 ### How to Add Content to the Monitor Hands on Lab
 
-##### Setup Python 3
+#### Setup Python 3
 
 You can install Python packages with
 
@@ -45,7 +45,7 @@ This will install into the site-package directory
     source iot-python3/bin/activate
     python --version
 
-##### Setup MkDocs
+#### Setup MkDocs
 
 Install MkDocs. https://www.mkdocs.org/
 
@@ -114,17 +114,6 @@ Kill MK Docs Process
     cp -R /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/site/* /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/mam-hol/public
     cd mam-hol
 
-Re-Add Google Analytics
-To each file like  public/analyze_data/index.html
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159649729-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-159649729-1');
-    </script>
 
 Deploy
     
