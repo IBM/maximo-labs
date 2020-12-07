@@ -44,7 +44,7 @@ In the previous exercise you saw how you can see the raw device data in Monitor 
 ![Search Catalog](/img/monitor/i79.png) &nbsp;
 6.  Search for the `Mean` function in the catalog. Click on it and click `Select`.
 ![Add Calculated Data for Mean](/img/monitor/i80.png) &nbsp;
-7.  In the next dialog, select the metric that you want to calculate the daily mean for. In this case, `Temperature` and click `Next`.
+7.  In the next dialog, select the metric that you want to calculate the daily mean for. In this case, `temperature` and click `Next`.
 ![Add Daily Mean Temperture Calculated Data](/img/monitor/i81.png) &nbsp;
 8.  Since temperature is changing and recorded over time you need to specify what time period the mean is being calculated for.   This is called the granularity and you can leave it set to `Daily` to calculate the daily mean.
 ![Search Entity Types](/img/monitor/i82.png) &nbsp;
