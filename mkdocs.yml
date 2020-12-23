@@ -20,7 +20,8 @@ nav:
 
   - Visual Inspection Lab:
     - Get Started: mvi-hol/mvi-index.md
-    - Pre-Requisites: mvi-hol/prereqs.md
+    - Pre-Requisites for 1.3.0: mvi-hol/prereqs.md
+    - Pre-Requisites for 8.0.0 on MAS: mvi-hol/prereqsMAS.md
     - Excercises:
         - 1.1 DataSets: mvi-hol/exerciseOne/exercise1-1.md
         - 1.2 Train and Deploy Model: mvi-hol/exerciseOne/exercise1-2.md
