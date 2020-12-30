@@ -87,7 +87,7 @@ risk of non-compliance.
 
 Here is a high level functional architecture of Maximo Asset Monitor:
 
-![Monitor Architecture](../../img/monitor/monitor_architecture.png)
+![Monitor Architecture](/img/monitor/monitor_architecture.png)
 
 # Included Services
 IBM Maximo Asset Monitor includes the following IBM Cloud services that help you achieve the above business benefits to 

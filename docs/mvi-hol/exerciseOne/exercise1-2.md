@@ -45,7 +45,7 @@
 
     <br>
 
-9. The MVI Platform will schedule the model training and begin training when the resources become available.  The timing of training varies on how many iterations you've chosen and how much data you’re using to train the model. 
+9. The MVI Platform will schedule the model training and begin training when the resources become available.  The timing of training varies on how many iterations you've chosen and how much data you’re using to train the model. As model training begins, you can move on to the next step and let it run in the background.
 
     ![img](/img/mvi-hol-imgs/img-exerciseOne/exercise1-2/training.png){: style="height:400px;width:1000px"}
 

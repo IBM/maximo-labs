@@ -15,7 +15,7 @@
 
      <br>
 
-2. Bring two aluminum cans.
+2. Bring two aluminum cans if possible. We have also provided pictures of aluminum cans not trained in the model if you do not have physical cans, which you can download in step 4.
     - 1-Dented
     - 1-Not Dented
 
@@ -36,7 +36,7 @@
 1. Go to the App Store. (Only available on iOS 13 or later.          
 2. Type <b>IBM Maximo Visual Inspection</b> in the search bar.
 
-    ![img](/img/mvi-hol-imgs/img-prereqs/applogo.png){: style="height:150px;width:250px;margin-left:40px"}
+    ![img](/img/mvi-hol-imgs/img-prereqs/newappUI.png){: style="height:150px;width:250px;margin-left:40px"}
 
 
 
