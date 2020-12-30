@@ -27,16 +27,25 @@ echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 sleep 1
 
 # Build the Monitor 8.2 level:
-#lab=monitor_8.2
+lab=monitor_8.2
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
+sleep 1
+
+# Build the Visual Inspection level:
+#lab=mvi
 #cd $root_dir/MkDocs/$lab
 #mkdocs build
 #echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 #mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 #echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-#sleep 1
+#sleep 2
 
-# Build the Visual Inspection level:
-#lab=mvi
+# Build the EXAMPLE level:
+#lab=EXAMPLE
 #cd $root_dir/MkDocs/$lab
 #mkdocs build
 #echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
