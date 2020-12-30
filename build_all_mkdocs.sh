@@ -18,14 +18,13 @@ sleep 1
 
 
 # Build the Monitor SaaS level:
-#lab=monitor_saas
-#cd $root_dir/MkDocs/$lab
-#mkdocs build
-#echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-##mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-#mv $root_dir/site/$lab/img/monitor $root_dir/site/img/
-#echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-#sleep 1
+lab=monitor_saas
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
+sleep 1
 
 # Build the Monitor 8.2 level:
 #lab=monitor_8.2
