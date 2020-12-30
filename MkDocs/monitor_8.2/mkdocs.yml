@@ -7,7 +7,7 @@ site_dir: ../../site/monitor_8.2
 
 nav:
   - Get back to Maximo Labs: /
-  - Monitor Labs:
+  - Monitor 8.2 Labs:
     - Welcome to the Monitor Labs: index.md
     - Get Started: getting_started.md
     - Pre-Requisites: facilitator_instructions.md
