@@ -1,7 +1,7 @@
 site_name: IBM Maximo Labs
 site_url: https://mam-hol.eu-gb.mybluemix.net/
-site_author: Carlos Ferreira
-site_description: "Documentation for Maximo Asset Manager Hands on Lab"
+site_author: Carlos Ferreira & Contributors
+site_description: "IBM Maximo Hands on Lab"
 google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site
 
