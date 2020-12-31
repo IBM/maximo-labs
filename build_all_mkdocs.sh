@@ -12,9 +12,6 @@ sleep 1
 cd $root_dir/MkDocs/toplevel
 mkdocs build
 echo "BUILD_INFO - The top level of IBM Maximo Labs are build."
-sleep 1
-
-
 
 
 # Build the Monitor SaaS level:
@@ -24,7 +21,6 @@ mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-sleep 1
 
 # Build the Monitor 8.2 level:
 lab=monitor_8.2
@@ -33,7 +29,6 @@ mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-sleep 1
 
 # Build the Visual Inspection level:
 #lab=mvi
@@ -44,14 +39,13 @@ sleep 1
 #echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 #sleep 2
 
-# Build the EXAMPLE level:
-#lab=EXAMPLE
-#cd $root_dir/MkDocs/$lab
-#mkdocs build
-#echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-#mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-#echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-#sleep 2
+# Build the template level:
+lab=template_1.0
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 
 # Start the web server hosting the complete site - then open the following URL in a browser: http://127.0.0.1:8080
