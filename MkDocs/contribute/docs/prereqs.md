@@ -2,24 +2,7 @@
 
 Here are the required pre-requisites for contributing to The Maximo labs.
 
-## Contribute Content
-Writing new labs or improve the existing labs 
-
-1. Get a Github account:  
-* IBMers can get an account here: [https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/)
-* Others can access and get an Github Here [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab):
-* Access the published doc here:[https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/)
-
-2.  Setup your local editing environment to contribute content.
-
-3.  Do a pull request to update content.   See details below.
-
-4.  Deploy the web app to IBM CLoud.  See details below.
-
-
-## How to Add Content to the Monitor Hands on Lab
-
-### Setup Python 3
+## Setup Python 3
 
 You can install Python packages with
 
@@ -31,13 +14,15 @@ This will install into the site-package directory
     
     usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
     brew install python3
-    python3 —version
+    python3 --version
     sudo pip3 install virtualenv
+    cd ~
     virtualenv iot-python3
     source iot-python3/bin/activate
     python --version
+    pip --version
 
-### Setup MkDocs
+## Setup MkDocs
 
 Install MkDocs. https://www.mkdocs.org/
 
@@ -45,7 +30,7 @@ Install MkDocs. https://www.mkdocs.org/
 
 Active Virtual Environment 
  
-    cd /Users/carlos.ferreira1ibm.com/ve/iot-python3/bin
+    cd ~/iot-python3/bin
     source activate
    
 Change Directory into the Site
@@ -56,74 +41,27 @@ Dectivate Virtual Environment
 
     deactivate
 
-Building the Site
+## Git / Github setup
 
-    mkdocs build
-    mkdocs serve
+1. Get a Github account
+2. IBMers can get access to the IBM Github area here:<br>
+[https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/)
+3. Others can access the Github repo of the IBM Maximo Labs here [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab)
+4. Access the published doc is located here: [https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/)
 
-You will then find the build site here: http://127.0.0.1:8000
+Clone the github repository down to your local machine:
 
-### Add Content
+    cd ~
+    mkdir Github
+    cd ~/Github
+    git clone git@github.com:IBM/monitor-hands-on-lab.git
+    cd monitor-hands-on-lab
 
-Add the files to /MkDocs/<Lab_version>/docs/ starting with the index.md
+Now build the complete site on your local machine:
 
-GitHub
-
-HOL Repo  https://github.com/IBM/monitor-hands-on-lab
-Open an Github account to contribute https://w3.ibm.com/developer/opensource/contribute/ibm-github/
-
-IBM Cloud PHP Static WebSite Repo url https://github.com/carlosibm/mam-hol
-team https://github.com/orgs/IBM/teams/watson-iot
-
-IBM Cloud Public MAM HOL Pages Website url https://mam-hol.eu-gb.mybluemix.net/
-
-URL to Hosted Labs on IBM Cloud  https://monitor-hol.eu-gb.mybluemix.net/
-
-To Add Content First Pull Latest Content Locally
-
-    git pull  https://github.com/IBM/monitor-hands-on-lab.git master
-    git status 
-    git add   files shown as changed in status
-    git commit -m “message of changes”
-    git push origin master
-
-Review and Accept Pull Requests
-
-
-### Deploy to IBM Cloud
-
-Use command line to deploy ibm cloud cf push
-
-    mkdocs build
-    mkdocs serve
- 
-Kill MK Docs Process
- 
-    ps -A | grep mkdocs
-    cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project
-    cp -R /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/site/* /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/mam-hol/public
-    cd mam-hol
-
-Re-Add Google Analytics
-To each file like  public/analyze_data/index.html
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159649729-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-159649729-1');
-    </script>
-
-Deploy
+    ./build_all_mkdocs.sh
     
-    cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/mam-hol
-    ibmcloud login -sso
-    ibmcloud account list
-    Select account 1. IBM (10b59068b84d48c48f8300f8e1e63dba)
-    ibmcloud target -c <<accpunt_id>>
-    ibmcloud api https://api.eu-gb.bluemix.net
-    ibmcloud target --cf-api https://api.eu-gb.bluemix.net -o carlos.ferreira1@ibm.com -s dev
-    ibmcloud cf push
+Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) and take a look at the complete IBM Maximo labs locally.
+To find these contribute instructions navigate to [http://localhost:8080/contribute](http://localhost:8080/contribute)
 
+You are now ready to either add to existing labs or create a new lab from scratch.
