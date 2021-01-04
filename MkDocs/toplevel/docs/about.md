@@ -16,3 +16,31 @@ For bugs please include steps to reproduce your issue.  For enhancements please 
 If you want to write new labs or improve the existing labs, then find the instructions to do so here:<br>
 [Contributing to Labs](../../contribute)
 
+---
+
+# Contributors accross the IBM Maximo Labs
+
+- Carlos Ferreira - <carlos.ferreira1@ibm.com>
+
+- Paulina Thomas - <Paulina.Thomas@ibm.com>
+
+- Cecilia Duffus - <cecilia.d@ibm.com>
+
+- Nirel Cortes - <nirel.cortes@ibm.com>
+
+- Eric Lowry - <elowry@us.ibm.com>
+
+- Graeme Pexton - <jgpexton@us.ibm.com>
+
+- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
+
+---
+
+# Change Information
+
+|Date     |By             | Description                                           |
+|:--------|:--------------|:------------------------------------------------------|
+|2021-01-04|Jan Ekstrøm|Merged contributors into one About page and added change information as well. Added Last Update at the end of the Index file. Implemented that on all sub-sites.|
+| 2020-12-30 | Jan Ekstrøm | Migrated original site to toplevel and created the new structure for the IBM Maximo Labs |
+
+---

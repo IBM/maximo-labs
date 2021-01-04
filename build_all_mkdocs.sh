@@ -35,14 +35,14 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
-# Build the Visual Inspection level:
-#lab=mvi
+# Build the MVI_SaaS level:
+#lab=mvi_saas
 #cd $root_dir/MkDocs/$lab
 #mkdocs build
 #echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 #mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 #echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-#sleep 2
+
 
 
 #### DON't CHANGE THE BELOW MANDATORY SECTION WHICH IS PART OF THE TOPLEVEL CONTENT ####

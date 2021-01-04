@@ -7,11 +7,9 @@ site_dir: ../../site
 
 
 nav:
-  - Home: 
-    - Welcome to the Maximo Labs: index.md
-  - About:
-    - Contributors: contributors.md
-    - Contributing: about.md
+  - Welcome to the Maximo Labs: index.md
+  - About: about.md
+
 theme: readthedocs
 
 markdown_extensions:

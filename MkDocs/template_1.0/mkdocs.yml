@@ -1,6 +1,6 @@
 site_name: Template 1.0 Labs
 site_url: https://mam-hol.eu-gb.mybluemix.net/
-site_author: Carlos Ferreira & Contributors
+site_author: Jan Ekstrøm & Contributors
 site_description: "Maximo Template 1.0 Hands on Lab"
 google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/template_1.0
@@ -12,9 +12,9 @@ nav:
     - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
     - Exercises:
-        - 1. Exercise 1: exercise_1.md
-        - 2. Exercise 2: exercise_2.md
-        - 3. Exercise 3: exercise_3.md
+        - 1. Do something: something.md
+        - 2. Do something else: something_else.md
+  - About: about.md
 
 theme: readthedocs
 markdown_extensions:

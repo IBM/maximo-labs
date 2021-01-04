@@ -19,6 +19,7 @@ nav:
         - 5.  Add Image Cards: add_imagecard.md
         - 6.  Add Dimensions: create_dimensions.md
         - 7.  Add Value Cards: addvaluecard.md
+  - About: about.md
 
 theme: readthedocs
 markdown_extensions:

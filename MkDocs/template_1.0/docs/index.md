@@ -6,3 +6,9 @@ You will learn about Template's capabilities to:
 * Yet another third thing
 
 Maximo Template product information goes here.
+
+---
+
+**Updated: 2021-01-04**
+
+---

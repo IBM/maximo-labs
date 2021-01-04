@@ -1,4 +1,7 @@
-# Welcome to the IBM Maximo Asset Monitor Lab<br>(Version: 8.2)
+# Welcome to the IBM Maximo Monitor Lab<br>(Version: 8.2)
+
+THIS IS A COPY OF THE MONITOR SAAS LAB AND NEEDS TO BE UPDATED
+
 You will learn about Monitor's capabilities to:
 
 * Connect devices
@@ -11,3 +14,9 @@ Maximo Asset Monitor connects devices, ingests device data, and transforms that 
 visualizations such as time series line and bar charts, tabular reports, and interactive diagrams. Watson IoT Platform 
 and its additional add-on services enable organizations to capture and explore data for devices, equipment and machines, 
 and discover insights that can drive better decision-making.
+
+---
+
+**Updated: 2020**
+
+---
