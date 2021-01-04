@@ -1,0 +1,62 @@
+site_name: IBM Maximo Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferreira
+site_description: "Documentation for Maximo Asset Manager Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+nav:
+  - Home: 
+    - Welcome to the Maximo Labs: index.md
+  - Monitor Lab:
+    - Get Started: monitor-hol/monitor-index.md
+    - Pre-Requisites: monitor-hol/facilitator_instructions.md
+    - Exercises:
+        - 1.  Connect Devices: monitor-hol/connect_device.md
+        - 2.  Monitor Assets: monitor-hol/monitor_asset_devices.md
+        - 3.  Monitor Anomalies: monitor-hol/monitor_anomalies.md
+        - 4.  Create Service Requests: monitor-hol/service_request.md
+        - 5.  Add Image Cards: monitor-hol/add_imagecard.md
+        - 6.  Add Dimensions: monitor-hol/create_dimensions.md
+        - 7.  Add Value Cards: monitor-hol/addvaluecard.md
+
+  - Visual Inspection Lab:
+    - Get Started: mvi-hol/mvi-index.md
+    - Pre-Requisites for 1.3.0: mvi-hol/prereqs.md
+    - Pre-Requisites for 8.0.0 on MAS: mvi-hol/prereqsMAS.md
+    - Exercises:
+        - 1.1 DataSets: mvi-hol/exerciseOne/exercise1-1.md
+        - 1.2 Train and Deploy Model: mvi-hol/exerciseOne/exercise1-2.md
+        - 1.3 Create Project: mvi-hol/exerciseOne/exercise1-3.md
+        - 2.1 Create Inspection: mvi-hol/exerciseTwo/exercise2-1.md
+        - 2.2 Conduct Inspection: mvi-hol/exerciseTwo/exercise2-2.md
+        - 2.3 Dashboard Configuration: mvi-hol/exerciseTwo/exercise2-3.md
+    - Next Steps: mvi-hol/nextsteps.md
+    - Troubleshooting: mvi-hol/troubleshoot.md
+  - MAS Lab for FastStart:
+    - Get Started: fastart-lab/fastart-index.md
+    - Pre-Requisites: fastart-lab/prereqs.md
+  - Exercises - FastStart:
+    - 1.  Monitor: 
+      - 1.1 Summary & Instance Dashboard: mvi-hol/exerciseOne/exercise1-1.md
+      - 1.2 Anomaly Detection: mvi-hol/exerciseOne/exercise1-3.md 
+      - 1.3 Create Service Request: mvi-hol/exerciseOne/exercise1-3.md  
+    - 2.  Manage: 
+      - 2.1 Service Request & Anomaly: mvi-hol/exerciseOne/exercise1-1.md
+      - 2.2 Create/Assign Work Order: mvi-hol/exerciseOne/exercise1-1.md
+    - 3.  Mobile: 
+      - 3.1 View/Execute/Complete Inspection: mvi-hol/exerciseOne/exercise1-1.md
+      - 3.2 Collect Observational Meters: mvi-hol/exerciseOne/exercise1-2.md
+    - 4.  Health & Predict: 
+      - 4.1 View Assets in Grid: mvi-hol/exerciseOne/exercise1-1.md
+      - 4.2 Work Queues: mvi-hol/exerciseOne/exercise1-2.md
+      - 4.3 Asset Detail Page: mvi-hol/exerciseOne/exercise1-3.md 
+      - 4.4 New Preventative Maintenance Schedule: mvi-hol/exerciseOne/exercise1-3.md
+    - 5.  Preventative Maintenance Work Order: 
+      - 5.1 Review/Approve PM WO (Manage): mvi-hol/exerciseOne/exercise1-1.md
+      - 5.2 View/Execute/Complete New WO (Mobile): mvi-hol/exerciseOne/exercise1-2.md
+      - 5.3 Recalculate Health Score (Health): mvi-hol/exerciseOne/exercise1-3.md
+  - About:
+    - Contributors: contributors.md
+    - Contributing: about.md
+theme: readthedocs
+markdown_extensions:
+  - attr_list

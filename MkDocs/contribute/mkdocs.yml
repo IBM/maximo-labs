@@ -1,0 +1,21 @@
+site_name: Contribute to IBM Maximo Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Jan Ekstrøm & Contributors
+site_description: "How to contribute to the IBM Maximo hands on abs"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/contribute
+
+nav:
+  - Get back to Maximo Labs: /
+  - Contribute:
+    - Welcome to contribute: index.md
+    - Get started: getting_started.md
+    - Pre-Requisites: prereqs.md
+    - Add content: add_content.md
+    - Create new lab: create_new.md
+    - Deploy to IBM Cloud: deploy.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list

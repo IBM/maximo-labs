@@ -1,0 +1,26 @@
+site_name: Monitor 8.2 Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferreira & Contributors
+site_description: "Maximo Asset Monitor 8.2 Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/monitor_8.2
+
+nav:
+  - Get back to Maximo Labs: /
+  - Monitor 8.2 Labs:
+    - Welcome to the Monitor Labs: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: facilitator_instructions.md
+    - Exercises:
+        - 1.  Connect Devices: connect_device.md
+        - 2.  Monitor Assets: monitor_asset_devices.md
+        - 3.  Monitor Anomalies: monitor_anomalies.md
+        - 4.  Create Service Requests: service_request.md
+        - 5.  Add Image Cards: add_imagecard.md
+        - 6.  Add Dimensions: create_dimensions.md
+        - 7.  Add Value Cards: addvaluecard.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
