@@ -1,65 +1,53 @@
 # Create new lab
 
-Before starting to add a new lab, create a branch for the changes following the same process as under [Add content](../add_content).
+ **THIS IS STILL WORK IN PROGRESS**
 
+Creating a new lab follows the same process as under [Add content](../add_content)
 
+* Prepare your Git branch
+* Make changes
+* Push your changes and close Git branch
 
+Only the "Make changes" is different as it follows a more guided process,  
+the other steps are the same.
 
+## Make changes
 
-# THIS IS A COPY OF ADD CONTENT<br>WAIT FOR AN UPDATE ON THIS CHAPTER
+The following steps are used to crate a new lab based on the provided [template](../../template_1.0)
 
-Before starting to add or change existing content, create a branch for the changes.
+### Replicate Template to your lab
 
-You can get a brief introduction to the use of branches here:<br>
-[https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches)
+Select the `template_1.0` folder
+![Select template folder](/img/contribute/copy_template_1.png)
 
-Basically you need to do the following to create a new branch locally and on the Github repo:
+Make a copy of the `template_1.0` folder
+![Copy template folder](/img/contribute/copy_template_2.png)
 
-    $ git pull
-    $ git checkout -b [name_of_your_new_branch]
-    $ git push origin [name_of_your_new_branch]
-    
-Make some changes in the markdown files.<br>
+Rename the `template_1.0 copy` folder to < product >_< version > for wich this new lab is intended,  
+e.g. `mvi_saas`
+![Rename template folder](/img/contribute/copy_template_3.png)
+
+Also rename the folder under `img/template_1.0` using the same name lab name,  
+e.g. `img/mvi_saas`. It is important that this structure is kept consistent cross all labs in order to easily build and deploy the complete set of labs.
+![Rename img/template folder](/img/contribute/copy_template_4.png)
+
+### Modify the mkdocs.yml file
+
+Select and open the `mkdocs.yml` file located in the root of you new lab folder
+![Select mkdocs.yml](/img/contribute/edit_mkdocs.yml_1.png)
+
+Edit the marked areas suitable for your new lab
+![Edit mkdocs.yml](/img/contribute/edit_mkdocs.yml_2.png)
+
+Which could look like this
+![Edit mkdocs.yml](/img/contribute/edit_mkdocs.yml_3.png)
+
+Save the file.
+
+### Build and verify your lab content
+
 In the terminal navigate to the root of this git repo and execute the build script:
 
     $ ./build_all_mkdocs.sh
 
 Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that your changes look as expected. Hint: press control-c to stop the web server and get back to the prompt.
-<br><br>
-When you are satisfied with your contribution take a look at the changes you have created in git:
-
-    $ git status
-
-Add those files to git:
-
-    $ git add .
-
-Commit the changes:
-
-    $ git commit -m "Write a descriptive message of your changes"
-
-Push the changes to the Github branch:
-
-    $ git push origin [name_of_your_new_branch]
-
-Go to the Github repository [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab)
-
-Select your branch in the dropdown box:
-![Select branch](/img/contribute/add_select_branch.png)
-
-Create a Pull request:
-![Select Pull request](/img/contribute/add_select_pull_request.png)
-
-Give it a title and description. Hit the `Create pull request` button.
-
-Ask Carlos Ferreia (carlos.ferreira1@ibm.com) to review and accept your Pull Request.
-
-Clean up by deleting the local and remote branch when your Pull request has been accepted and your commits are added to the master branch.
-
-    $ git checkout master
-    $ git branch -d [name_of_your_new_branch]
-    $ git push origin :[name_of_your_new_branch]
-
-Note: the : before the Github branch will delete it on Github.
-
-You have now contributed to an existing lab - Thank you very much :-)

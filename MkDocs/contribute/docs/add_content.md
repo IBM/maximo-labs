@@ -5,19 +5,25 @@ Before starting to add or change existing content, create a branch for the chang
 You can get a brief introduction to the use of branches here:<br>
 [https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches)
 
+## Prepare your Git branch
+
 Basically you need to do the following to create a new branch locally and on the Github repo:
 
     $ git pull
     $ git checkout -b [name_of_your_new_branch]
     $ git push origin [name_of_your_new_branch]
-    
+
+## Make changes
+
 Make some changes in the markdown files.<br>
 In the terminal navigate to the root of this git repo and execute the build script:
 
     $ ./build_all_mkdocs.sh
 
 Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that your changes look as expected. Hint: press control-c to stop the web server and get back to the prompt.
-<br><br>
+
+## Push your changes and close Git branch
+
 When you are satisfied with your contribution take a look at the changes you have created in git:
 
     $ git status
@@ -52,6 +58,6 @@ Clean up by deleting the local and remote branch when your Pull request has been
     $ git branch -d [name_of_your_new_branch]
     $ git push origin :[name_of_your_new_branch]
 
-Note: the : before the Github branch will delete it on Github.
+Note: the `:` before the Github branch will delete it on Github.
 
 You have now contributed to an existing lab - Thank you very much :-)
