@@ -1,6 +1,6 @@
 # Create new lab
 
- **THIS IS STILL WORK IN PROGRESS**
+ **THIS IS WORK IN PROGRESS**
 
 Creating a new lab follows the same process as under [Add content](../add_content)
 
@@ -13,9 +13,9 @@ the other steps are the same.
 
 ## Make changes
 
-The following steps are used to crate a new lab based on the provided [template](../../template_1.0)
+The following steps are used to crate a new lab based on the provided [template](/template_1.0)
 
-### Replicate Template to your lab
+### 1. Replicate Template to your lab
 
 Select the `template_1.0` folder
 ![Select template folder](/img/contribute/copy_template_1.png)
@@ -28,10 +28,16 @@ e.g. `mvi_saas`
 ![Rename template folder](/img/contribute/copy_template_3.png)
 
 Also rename the folder under `img/template_1.0` using the same name lab name,  
-e.g. `img/mvi_saas`. It is important that this structure is kept consistent cross all labs in order to easily build and deploy the complete set of labs.
+e.g. `img/mvi_saas`. 
 ![Rename img/template folder](/img/contribute/copy_template_4.png)
 
-### Modify the mkdocs.yml file
+*Note: It is important that this structure is kept consistent cross all labs in order to easily build and deploy the complete set of labs.* 
+
+Save the file.
+
+### 2. Modify the mkdocs.yml file
+
+The `mkdocs.yml`file holds the configuration of the new lab, i.e. some generic information about the new lab, like location of where the site will be created during the build and also which .md (markdown) files it consist of based on the navigation information.  
 
 Select and open the `mkdocs.yml` file located in the root of you new lab folder
 ![Select mkdocs.yml](/img/contribute/edit_mkdocs.yml_1.png)
@@ -42,12 +48,86 @@ Edit the marked areas suitable for your new lab
 Which could look like this
 ![Edit mkdocs.yml](/img/contribute/edit_mkdocs.yml_3.png)
 
+*Note: The `nav:` definition holds the navigation menu for the new lab. It is only the `index.md` and `about.md` that need to have some mandatory information explained below. The rest of the markdown files and navigation menu is defined by the way the lab is structured and how many exercises it consist of.* 
+
 Save the file.
 
-### Build and verify your lab content
+### 3. Modify the index.md file
 
-In the terminal navigate to the root of this git repo and execute the build script:
+The `index.md` file is the landing / welcome page for the new lab.  
+
+Select and open the `index.md` file located in the `docs` folder of you new lab
+![Select index.md](/img/contribute/edit_index_1.png)
+
+Edit the file and make sure to change the marked areas suitable for your new lab
+![Edit index.md](/img/contribute/edit_index_2.png)
+
+Which could look like this
+![Edit index.md](/img/contribute/edit_index_3.png)
+
+*Note: Remember to update the `Updated` to current date once the new lab is ready.* 
+
+Save the file.
+
+### 4. Modify the about.md file
+
+The `about.md` file contains a list of the contributors to this lab as well as the Change Information.  
+
+Select and open the `about.md` file located in the `docs` folder of you new lab
+![Select about.md](/img/contribute/edit_about_1.png)
+
+Edit the file and make sure to change the marked areas suitable for your new lab
+![Edit about.md](/img/contribute/edit_about_2.png)
+
+Which could look like this
+![Edit about.md](/img/contribute/edit_about_3.png)
+
+*Note: Please update both sections when the lab is ready.* 
+
+Save the file.
+
+### 5. Add the new lab to the build script
+
+First we need to update the `build_all_mkdocs.sh` file located in the root of the `monitor-hands-on-lab` folder.
+This file contains the shell script for building the entire IBM Maximo Labs static web site.  
+
+Select and open the `build_all_mkdocs.sh` file
+![Select build_all_mkdocs.sh](/img/contribute/edit_build_1.png)
+
+Scroll bown to find `# Build the template level:`
+![Edit build_all_mkdocs.sh](/img/contribute/edit_build_2.png)
+
+Copy the section and paste it above the `#### DON't CHANGE THE BELOW MANDATORY...` line. Change the comment and the `lab=` variable to match the folder of the new lab.
+![Edit build_all_mkdocs.sh](/img/contribute/edit_build_3.png)
+
+*Note: Please don't change anything else.* 
+
+Save the file.
+
+### 6. Build and verify your lab content
+
+In a terminal navigate to the root of this git repo and execute the build script:
 
     $ ./build_all_mkdocs.sh
 
-Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that your changes look as expected. Hint: press control-c to stop the web server and get back to the prompt.
+It could look like this:
+![Edit build_all_mkdocs.sh](/img/contribute/edit_build_4.png)
+
+Wait until it has finished building the whole site.
+![Edit build_all_mkdocs.sh](/img/contribute/edit_build_5.png)
+
+Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that the build was successful.  
+![Edit build_all_mkdocs.sh](/img/contribute/edit_build_6.png)
+
+If the new lab has not yet been added to the `index.md` in the `toplevel` page, then navigate directly to the new lab [http://localhost:8080/mvi_saas](http://localhost:8080/mvi_ssas) in order to verify that your changes look as expected.  
+![Edit build_all_mkdocs.sh](/img/contribute/edit_build_7.png)
+
+Congratulations, you have now created the foundation for the new lab following the structure and consistensy of the entire IBM Maximo Labs site.
+
+Now you "only" need to add all the content to the foundation, by adding markdown files and images according to the structure.  
+
+Re-run this step until the new lab contains what you expect.
+
+*Hint: press control-c to stop the web server and get back to the prompt.*
+
+*Note: It is good practise to commit your changes once the foundation is in place - and again when you have created or updated every markdown files in the exercise.*

@@ -8,7 +8,7 @@ site_dir: ../../site/mvi_saas
 nav:
   - Get back to Maximo Labs: /
   - MVI SaaS Labs:
-    - Welcome to the Template Labs: index.md
+    - Welcome to the MVI Labs: index.md
     - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
     - Exercises:

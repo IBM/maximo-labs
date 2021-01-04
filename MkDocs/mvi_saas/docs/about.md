@@ -1,7 +1,7 @@
 
-# Contributors to IBM Maximo Template
+# Contributors to IBM Maximo Visual Inspection Labs
 
-- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
+- Cecilia Duffus - cecilia.d@ibm.com
 
 ---
 
@@ -9,7 +9,6 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2021-01-04|Jan Ekstrøm|Added the About page and Updated information into Index. |
-|2020-12-30|Jan Ekstrøm|First step on the Template section. |
+|2021-01-05|Cecilia Duffus|First version of the Maximo Visual Inspection (SaaS) labs. |
 
 ---

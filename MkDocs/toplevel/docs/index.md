@@ -3,20 +3,20 @@
 In these hands-on labs you will learn how to get started with the different products that are available in the IBM Maximo portfolio.<br>
 Look under the appropriate version below to find the labs you are looking for.
 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Ready: ](/img/ready.png) Ready to use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Under Construction: ](/img/under_construction.png) Under construction &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Not Started: ](/img/not_started.png) Not started &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Ready: ](/img/ready.png) Ready to use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Under Construction: ](/img/under_construction.png) Under development &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Not Started: ](/img/not_started.png) Not started &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  
 
 ---
-### SaaS Labs
+### SaaS
 ![Ready: ](/img/ready.png) [IBM Maximo Asset Monitor (SaaS)](/monitor_saas/)  
 ![Not Started: ](/img/not_started.png) [IBM Maximo Visual Inspection (SaaS)](/mvi_saas/)  
 
 
-### MAS 8.2 Labs
+### Maximo Application Suite 8.2
 ![Under Construction: ](/img/under_construction.png) [IBM Maximo Monitor (MAS 8.2)](/monitor_8.2/)  
 ![Not Started: ](/img/not_started.png) [IBM Maximo Visual Inspection (MAS 8.2)](/mvi_8.2/)  
-![Not Started: ](/img/not_started.png) [IBM Maximo Health (MAS 8.2)](/health_8.2/)  
+![Not Started: ](/img/not_started.png) [IBM Maximo Health (MAS 8.1)](/health_8.2/)  
 
-### MAS 8.3 Labs
+### Maximo Application Suite 8.3
 ![Not Started: ](/img/not_started.png) [IBM Maximo Manage (MAS 8.3)](/manage_8.3/)  
 ![Not Started: ](/img/not_started.png) [IBM Maximo Health (MAS 8.3)](/healt_8.3/)  
 ![Not Started: ](/img/not_started.png) [IBM Maximo Predict (MAS 8.3)](/predict_8.3/)  
@@ -24,9 +24,8 @@ Look under the appropriate version below to find the labs you are looking for.
 
 ### Faststart 2021 Labs
 
-![Not Started: ](/img/not_started.png) [IBM Maximo Monitor (FS21)](/monitor_fs21/)  
+![Not Started: ](/img/not_started.png) [IBM Maximo Monitor, Health & Predict (FS21)](/apm_fs21/)  
 ![Not Started: ](/img/not_started.png) [IBM Maximo Visual Inspection (FS21)](/mvi_fs21/)  
-![Not Started: ](/img/not_started.png) [IBM Maximo Health & Predict (FS21)](/health-predict_fs21/)  
 
 
 ENJOY :-)
