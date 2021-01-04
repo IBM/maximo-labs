@@ -95,7 +95,10 @@ To Add Content First Pull Latest Content Locally
     git status 
     git add   files shown as changed in status
     git commit -m “message of changes”
-    git push origin master
+    git checkout -b branchname
+    git push --set-upstream origin branchname
+
+
 
 Review and Accept Pull Requests
 
