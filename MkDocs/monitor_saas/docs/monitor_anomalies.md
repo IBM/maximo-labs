@@ -157,7 +157,7 @@ In this part of the exercise you will visualize the simulated `travel_time_anoma
 9.  Notice how the `"range": {"count": -24,"interval": "hour"}` JSON node lets Monitor know to only display the last 24 hours of data.    
 10.  Make sure to change all values with card sizes of `XLARGE` to `LARGE` and `XSMALLWIDE`to `SMALLWIDE`, since these formats have been deprecated.
 11.  In the IDE, save your changes to the instance dashboard JSON file.
-12.  You can see the finished [Industrial_Robot_Instance_Travel_Time.json](/json/Industrial_Robot_Instance_Travel_Time.json) &nbsp;
+12.  You can see the finished [Industrial_Robot_Instance_Travel_Time.json](/monitor_saas/json/Industrial_Robot_Instance_Travel_Time.json) &nbsp;
 13.  Return to the Monitor dasshboard editor and click on the `Import` button.
 14.  Choose the `file` you updated with the line card click `open` to import your updated JSON file.
 15.  Your instance dashboard should now look similar to the one below and have a `travel_time_anomaly` Card with some extreme anomalies like the one in the red rectangle. ![Robot Instance Dashboard](/img/monitor_saas/i114.png).
@@ -247,13 +247,15 @@ You will add an anomaly function that will provide a score of how likely the sin
 | 1 Minute            | 12            |  1 Hour               | <br>Noncritical – Once per 12 mins </br> <br>Critical - Once per 5 mins</br> |
 
 
+<br>
+
 **Add a Multi Series Line Chart**
 
 Add a line chart** to visually compare if high anomaly model scores correlate with the robot `travel_time_anomaly` metric on each robot instance dashboard.  In this exercise you will add a multi series line chart card to your instance dashboard that plots the anomaly model scores for `time_travel_anomaly` metric.  You can then visually correlate which models are effective at detecting anomalies by seeing which model scores are high when the anomalies happen.
 
 1.  From the instance dashboard click on the `gear icon`![Manage Instance Robot dashboard](/img/monitor_saas/i98.png) &nbsp;
 2.  Select `Edit dashboard`
-3.  Add the following [line chart card Json](/json/AnomalyScoreLineGraph.json) for `travel_time_anomaly` metric anomaly function scores to your instance dashboard.
+3.  Add the following [line chart card Json](/monitor_saas/json/AnomalyScoreLineGraph.json) for `travel_time_anomaly` metric anomaly function scores to your instance dashboard.
 
     ```
    {
@@ -338,6 +340,8 @@ Add a line chart** to visually compare if high anomaly model scores correlate wi
   | `travel_time_kmeans_score`            |  8               |
 
 
+<br>
+
 **Add Anomaly Alerts**
 
 In this exercise you will create alerts for each anomaly function score identified in the previous exercise.  You will set the alert thresholds to values of the visually correlated anomaly scores using the `upper_threshold` values from the table in `Add Anomaly Functions`    As you learned earlier, alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a several alert functions included in the catalog like `Alert High`, `Alert Low` and `Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  Add a `Alert High Value` alert for each anomaly model.  Alerts can  calculate historical values for a given function configuration.
@@ -365,6 +369,8 @@ In this exercise you will create alerts for each anomaly function score identifi
 | GeneralizedAnomalyScore               |  0.4             | `travel_time_ga_alert`       |
 | FFTbasedGeneralizedAnomalyScore2      |  104             | `travel_time_fft_alert`      |
 | KMeansAnomalyScore                    |  8               | `travel_time_kmeans_alert`   |
+
+<br>
 
 **Update Functions**
 
