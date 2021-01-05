@@ -8,7 +8,7 @@ Look under the appropriate version below to find the labs you are looking for.
 ---
 ### SaaS
 ![Ready: ](/img/ready.png) [IBM Maximo Asset Monitor (SaaS)](/monitor_saas/)  
-![Not Started: ](/img/not_started.png) [IBM Maximo Visual Inspection (SaaS)](/mvi_saas/)  
+![Ready: ](/img/ready.png) [IBM Maximo Visual Inspection (1.3.0)](/mvi_saas/)  
 
 
 ### Maximo Application Suite 8.2
@@ -32,7 +32,7 @@ ENJOY :-)
 
 ---
 
-**Updated: 2021-01-04**
+**Updated: 2021-01-05**
 
 ---
 © 2020 International Business Machines Corporation.  No part of this document may be reproduced or transmitted in any 

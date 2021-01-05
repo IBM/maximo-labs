@@ -40,6 +40,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2021-01-05|Jan Ekstrøm|Added IBM Maximo Visual Inspection (1.3.0) to the list of Ready to use labs in the SaaS section.|
 |2021-01-04|Jan Ekstrøm|Merged contributors into one About page and added change information as well. Added Last Update at the end of the Index file. Implemented that on all sub-sites.|
 | 2020-12-30 | Jan Ekstrøm | Migrated original site to toplevel and created the new structure for the IBM Maximo Labs |
 
