@@ -1,6 +1,7 @@
 #!/bin/bash
-
+##################################################################################
 #### DON't CHANGE THE BELOW MANDATORY SECTION WHICH IS A PRE-REQ FOR THE LABS ####
+##################################################################################
 
 # Set the Root directory, which is where this file is located.
 root_dir=`pwd`
@@ -15,7 +16,9 @@ cd $root_dir/MkDocs/toplevel
 mkdocs build
 echo "BUILD_INFO - The top level of IBM Maximo Labs are build."
 
+##################################################################################
 #### DON't CHANGE THE ABOVE MANDATORY SECTION WHICH IS A PRE-REQ FOR THE LABS ####
+##################################################################################
 
 #### BELOW IS WHERE EACH LAB IS BEING BUILD                                   ####
 
@@ -43,6 +46,14 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
+# Build the MVI 8.2 level:
+lab=mvi_8.2
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
+
 # Build the Maximo Monitor, Health, and Predict Overview 8.2  level:
 lab=apm_fs21
 cd $root_dir/MkDocs/$lab
@@ -51,7 +62,11 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
+
+
+########################################################################################
 #### DON't CHANGE THE BELOW MANDATORY SECTION WHICH IS PART OF THE TOPLEVEL CONTENT ####
+########################################################################################
 
 # Build the template level:
 lab=template_1.0
