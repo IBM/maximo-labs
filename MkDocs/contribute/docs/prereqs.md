@@ -46,8 +46,11 @@ Dectivate Virtual Environment
 1. Get a Github account
 2. IBMers can get access to the IBM Github area here:<br>
 [https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/)
-3. Others can access the Github repo of the IBM Maximo Labs here [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab)
-4. Access the published doc is located here: [https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/)
+3. Access the Github repo of the IBM Maximo Labs here:<br>
+[https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab)
+4. Access the latest published labs here:<br>
+[https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/)<br>
+(This might not contain the latest changes from the Github repository)
 
 Clone the github repository down to your local machine:
 
@@ -61,7 +64,8 @@ Now build the complete site on your local machine:
 
     ./build_all_mkdocs.sh
     
-Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) and take a look at the complete IBM Maximo labs locally.
+Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) and take a look at the complete IBM Maximo labs locally.  
+<br>
 To find these contribute instructions navigate to [http://localhost:8080/contribute](http://localhost:8080/contribute)
 
-You are now ready to either add to existing labs or create a new lab from scratch.
+*You are now ready to either add to existing labs or create a new lab from scratch.*
