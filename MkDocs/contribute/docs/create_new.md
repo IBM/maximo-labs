@@ -1,17 +1,20 @@
 # Create new lab
 
- **THIS IS WORK IN PROGRESS**
+Creating a new lab follows the same process as under [Add content](../add_content):
 
-Creating a new lab follows the same process as under [Add content](../add_content)
+1. Prepare your Git branch
+2. Make changes
+3. Commit and push your changes
+4. Create Pull request
+5. Clean up branches locally and remotely (Github)
 
-* Prepare your Git branch
-* Make changes
-* Push your changes and close Git branch
+The only difference is in the first time you execute step "2. Make changes", so follow this process:
 
-Only the "Make changes" is different as it follows a more guided process,  
-the other steps are the same.
+* Follow step "1. Prepare your Git branch" under [Add content](../add_content/#1-prepare-your-git-branch).
+* Come back here and run the below "Make first changes for new lab".
+* Go back to [Add content](../add_content/#3-commit-and-push-your-changes) and run from step 3.<br>(You are done here :-)
 
-## Make changes
+## Make first changes for new lab
 
 The following steps are used to crate a new lab based on the provided [template](/template_1.0)
 
