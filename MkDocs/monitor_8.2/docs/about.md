@@ -18,6 +18,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2021-01-05|Jan Ekstrøm|Added the missing JSON files for Monitor Anomalies. |
 |2021-01-04|Jan Ekstrøm|Copied from the Monitor SaaS lab to be a starting point for the Monitor 8.2 Lab. |
 
 ---

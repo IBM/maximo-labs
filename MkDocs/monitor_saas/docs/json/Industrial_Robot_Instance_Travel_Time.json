@@ -1,0 +1,742 @@
+{
+    "cards": [
+      {
+          "content": {
+              "series": [
+                  {
+                      "dataSourceId": "travel_time_anomaly",
+                      "label": "Travel Time"
+                  }
+              ],
+              "unit": "sec"
+          },
+          "dataSource": {
+              "attributes": [
+                  {
+                      "attribute": "travel_time_anomaly",
+                      "id": "travel_time_anomaly"
+                  }
+              ],
+              "range": {
+                  "count": -24,
+                  "interval": "hour"
+              },
+              "timeGrain": "day"
+          },
+          "id": "travel_time_anomaly_line_card",
+          "size": "LARGE",
+          "title": "Travel Time with Anomaly",
+          "type": "TIMESERIES"
+      },
+        {
+            "id": "travel_time_fft_alert",
+            "size": "LARGE",
+            "title": "Robot alerts from the last 48 hours",
+            "type": "ALERT",
+            "dataSource": {
+                "range": {
+                    "count": -48,
+                    "interval": "hour"
+                },
+                "timeGrain": "input",
+                "type": "alert"
+            }
+        },
+        {
+            "id": "card-anomaly-scores-line-timeseries",
+            "dataSource": {
+                "attributes": [
+                    {
+                        "attribute": "travel_time_anomaly",
+                        "id": "travel_time_anomaly"
+                    },
+                    {
+                        "attribute": "travel_time_spectral_score",
+                        "id": "travel_time_spectral_score"
+                    },
+                    {
+                        "attribute": "travel_time_saliency_score",
+                        "id": "travel_time_saliency_score"
+                    },
+                    {
+                        "attribute": "travel_time_ga_score",
+                        "id": "travel_time_ga_score"
+                    },
+                    {
+                        "attribute": "travel_time_fft_score",
+                        "id": "travel_time_fft_score"
+                    },
+                    {
+                        "attribute": "travel_time_kmeans_score",
+                        "id": "travel_time_kmeans_score"
+                    }
+                ],
+                "range": {
+                    "count": -24,
+                    "interval": "hour"
+                },
+                "timeGrain": "day"
+            },
+            "content": {
+                "series": [
+                    {
+                        "dataSourceId": "travel_time_anomaly",
+                        "label": "Travel Time Deviation "
+                    },
+                    {
+                        "dataSourceId": "travel_time_spectral_score",
+                        "label": "Spectral"
+                    },
+                    {
+                        "dataSourceId": "travel_time_saliency_score",
+                        "label": "Saliency"
+                    },
+                    {
+                        "dataSourceId": "travel_time_ga_score",
+                        "label": "Generalized"
+                    },
+                    {
+                        "dataSourceId": "travel_time_fft_score",
+                        "label": "FFT"
+                    },
+                    {
+                        "dataSourceId": "travel_time_kmeans_score",
+                        "label": "Kmeans"
+                    }
+                ],
+                "xLabel": "Time",
+                "yLabel": "Score"
+            },
+            "size": "LARGE",
+            "title": "Anomaly Scores for Travel Time",
+            "type": "TIMESERIES"
+        },
+        {
+            "content": {
+                "series": [
+                    {
+                        "dataSourceId": "speed_mean_ID",
+                        "label": "Average Speed"
+                    },
+                    {
+                        "dataSourceId": "speed_max_ID",
+                        "label": "Maximum Speed"
+                    },
+                    {
+                        "dataSourceId": "speed_min_ID",
+                        "label": "Minimum Speed"
+                    }
+                ],
+                "unit": "m/sec"
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "mean",
+                        "attribute": "speed",
+                        "id": "speed_mean_ID"
+                    },
+                    {
+                        "aggregator": "max",
+                        "attribute": "speed",
+                        "id": "speed_max_ID"
+                    },
+                    {
+                        "aggregator": "min",
+                        "attribute": "speed",
+                        "id": "speed_min_ID"
+                    }
+                ],
+                "timeGrain": "day"
+            },
+            "id": "speedLayoutID",
+            "size": "LARGE",
+            "title": "Minimum Speed vs Maximum Speed vs Average Speed",
+            "type": "TIMESERIES"
+        },
+        {
+            "content": {
+                "attributes": [
+                    {
+                        "dataSourceId": "torque_min_Id",
+                        "precision": 3,
+                        "label": "Minimum torque",
+                        "thresholds": [
+                            {
+                                "color": "#5aa700",
+                                "comparison": "<",
+                                "icon": "icon--checkmark--outline",
+                                "value": 10
+                            },
+                            {
+                                "color": "#F00",
+                                "comparison": ">",
+                                "icon": "icon--warning",
+                                "value": 10
+                            }
+                        ]
+                    },
+                    {
+                        "dataSourceId": "torque_max_Id",
+                        "precision": 3,
+                        "label": "Maximum torque",
+                        "thresholds": [
+                            {
+                                "color": "#5aa700",
+                                "comparison": "<",
+                                "icon": "icon--checkmark--outline",
+                                "value": 14
+                            },
+                            {
+                                "color": "#F00",
+                                "comparison": ">",
+                                "icon": "icon--warning",
+                                "value": 14
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "min",
+                        "attribute": "torque",
+                        "id": "torque_min_Id"
+                    },
+                    {
+                        "aggregator": "max",
+                        "attribute": "torque",
+                        "id": "torque_max_Id"
+                    }
+                ]
+            },
+            "id": "torqueLayoutId",
+            "size": "SMALL",
+            "title": "Torque (N.m)",
+            "type": "VALUE"
+        },
+        {
+            "content": {
+                "attributes": [
+                    {
+                        "dataSourceId": "speed_last_Id",
+                        "precision": 3,
+                        "label": "Current Speed",
+                        "thresholds": [
+                            {
+                                "color": "#5aa700",
+                                "comparison": "<",
+                                "icon": "icon--checkmark--outline",
+                                "value": 5
+                            },
+                            {
+                                "color": "#F00",
+                                "comparison": ">",
+                                "icon": "icon--warning",
+                                "value": 5
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "last",
+                        "attribute": "speed",
+                        "id": "speed_last_Id"
+                    }
+                ]
+            },
+            "id": "currentSpeedLayoutId",
+            "size": "SMALL",
+            "title": "Speed (m/sec)",
+            "type": "VALUE"
+        },
+        {
+            "content": {
+                "attributes": [
+                    {
+                        "dataSourceId": "abnormal_stop_count_last_Id",
+                        "precision": 3,
+                        "thresholds": [
+                            {
+                                "color": "#5aa700",
+                                "comparison": "<",
+                                "icon": "icon--checkmark--outline",
+                                "value": 1
+                            },
+                            {
+                                "color": "#F00",
+                                "comparison": ">",
+                                "icon": "error",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "last",
+                        "attribute": "abnormal_stop_count",
+                        "id": "abnormal_stop_count_last_Id"
+                    }
+                ]
+            },
+            "id": "abnormal_stop_countLayoutId",
+            "size": "SMALLWIDE",
+            "title": "Abnormal stop",
+            "type": "VALUE"
+        },
+        {
+            "content": {
+                "attributes": [
+                    {
+                        "dataSourceId": "completed_movement_count_last_Id",
+                        "precision": 3,
+                        "thresholds": [
+                            {
+                                "color": "#5aa700",
+                                "comparison": ">",
+                                "icon": "icon--checkmark--outline",
+                                "value": 5
+                            },
+                            {
+                                "color": "#ecee06",
+                                "comparison": "<",
+                                "icon": "icon--warning",
+                                "value": 5
+                            },
+                            {
+                                "color": "#F00",
+                                "comparison": "=",
+                                "icon": "error",
+                                "value": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "last",
+                        "attribute": "completed_movement_count",
+                        "id": "completed_movement_count_last_Id"
+                    }
+                ]
+            },
+            "id": "completed_movement_countLayoutId",
+            "size": "SMALLWIDE",
+            "title": "Completed movement",
+            "type": "VALUE"
+        },
+        {
+            "content": {
+                "attributes": [
+                    {
+                        "dataSourceId": "load_last_Id",
+                        "precision": 3,
+                        "thresholds": [
+                            {
+                                "color": "#5aa700",
+                                "comparison": ">",
+                                "icon": "icon--checkmark--outline",
+                                "value": 370
+                            },
+                            {
+                                "color": "#F00",
+                                "comparison": "<",
+                                "icon": "error",
+                                "value": 350
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "last",
+                        "attribute": "load",
+                        "id": "load_last_Id"
+                    }
+                ]
+            },
+            "id": "loadLayoutId",
+            "size": "SMALLWIDE",
+            "title": "Load",
+            "type": "VALUE"
+        },
+        {
+            "content": {
+                "attributes": [
+                    {
+                        "dataSourceId": "operator_last_Id"
+                    }
+                ]
+            },
+            "dataSource": {
+                "attributes": [
+                    {
+                        "aggregator": "last",
+                        "attribute": "operator",
+                        "id": "operator_last_Id"
+                    }
+                ]
+            },
+            "id": "operatorLayoutId",
+            "size": "SMALLWIDE",
+            "title": "Last operated by",
+            "type": "VALUE"
+        }
+    ],
+    "layouts": {
+        "max": [
+            {
+                "i": "travel_time_fft_alert",
+                "x": 0,
+                "y": 16
+            },
+            {
+                "i": "card-anomaly-scores-line-timeseries",
+                "x": 0,
+                "y": 8
+            },
+            {
+                "i": "travel_time_anomaly_line_card",
+                "x": 0,
+                "y": 4
+            },
+            {
+                "i": "travel_time_line_card",
+                "x": 0,
+                "y": 0
+            },
+            {
+                "i": "speedLayoutID",
+                "x": 0,
+                "y": 12
+            },
+            {
+                "i": "torqueLayoutId",
+                "x": 8,
+                "y": 2
+            },
+            {
+                "i": "currentSpeedLayoutId",
+                "x": 10,
+                "y": 2
+            },
+            {
+                "i": "abnormal_stop_countLayoutId",
+                "x": 12,
+                "y": 0
+            },
+            {
+                "i": "completed_movement_countLayoutId",
+                "x": 8,
+                "y": 0
+            },
+            {
+                "i": "loadLayoutId",
+                "x": 12,
+                "y": 1
+            },
+            {
+                "i": "operatorLayoutId",
+                "x": 8,
+                "y": 1
+            }
+        ],
+        "xl": [
+            {
+                "i": "travel_time_fft_alert",
+                "x": 0,
+                "y": 16
+            },
+            {
+                "i": "card-anomaly-scores-line-timeseries",
+                "x": 0,
+                "y": 8
+            },
+            {
+                "i": "travel_time_anomaly_line_card",
+                "x": 0,
+                "y": 4
+            },
+            {
+                "i": "travel_time_line_card",
+                "x": 0,
+                "y": 0
+            },
+            {
+                "i": "speedLayoutID",
+                "x": 0,
+                "y": 12
+            },
+            {
+                "i": "torqueLayoutId",
+                "x": 8,
+                "y": 0
+            },
+            {
+                "i": "currentSpeedLayoutId",
+                "x": 10,
+                "y": 0
+            },
+            {
+                "i": "abnormal_stop_countLayoutId",
+                "x": 12,
+                "y": 0
+            },
+            {
+                "i": "completed_movement_countLayoutId",
+                "x": 8,
+                "y": 1
+            },
+            {
+                "i": "loadLayoutId",
+                "x": 12,
+                "y": 1
+            },
+            {
+                "i": "operatorLayoutId",
+                "x": 8,
+                "y": 2
+            }
+        ],
+        "lg": [
+            {
+                "i": "travel_time_fft_alert",
+                "x": 0,
+                "y": 16
+            },
+            {
+                "i": "card-anomaly-scores-line-timeseries",
+                "x": 0,
+                "y": 8
+            },
+            {
+                "i": "travel_time_anomaly_line_card",
+                "x": 0,
+                "y": 4
+            },
+            {
+                "i": "travel_time_line_card",
+                "x": 0,
+                "y": 0
+            },
+            {
+                "i": "speedLayoutID",
+                "x": 0,
+                "y": 12
+            },
+            {
+                "i": "torqueLayoutId",
+                "x": 8,
+                "y": 0
+            },
+            {
+                "i": "currentSpeedLayoutId",
+                "x": 12,
+                "y": 0
+            },
+            {
+                "i": "abnormal_stop_countLayoutId",
+                "x": 8,
+                "y": 1
+            },
+            {
+                "i": "completed_movement_countLayoutId",
+                "x": 12,
+                "y": 1
+            },
+            {
+                "i": "loadLayoutId",
+                "x": 8,
+                "y": 2
+            },
+            {
+                "i": "operatorLayoutId",
+                "x": 12,
+                "y": 2
+            }
+        ],
+        "md": [
+            {
+                "i": "travel_time_fft_alert",
+                "x": 0,
+                "y": 0
+            },
+            {
+                "i": "card-anomaly-scores-line-timeseries",
+                "x": 0,
+                "y": 4
+            },
+            {
+                "i": "travel_time_anomaly_line_card",
+                "x": 0,
+                "y": 8
+            },
+            {
+                "i": "travel_time_line_card",
+                "x": 0,
+                "y": 12
+            },
+            {
+                "i": "speedLayoutID",
+                "x": 0,
+                "y": 16
+            },
+            {
+                "i": "torqueLayoutId",
+                "x": 0,
+                "y": 20
+            },
+            {
+                "i": "currentSpeedLayoutId",
+                "x": 4,
+                "y": 20
+            },
+            {
+                "i": "abnormal_stop_countLayoutId",
+                "x": 0,
+                "y": 21
+            },
+            {
+                "i": "completed_movement_countLayoutId",
+                "x": 4,
+                "y": 21
+            },
+            {
+                "i": "loadLayoutId",
+                "x": 0,
+                "y": 22
+            },
+            {
+                "i": "operatorLayoutId",
+                "x": 4,
+                "y": 22
+            }
+        ],
+        "sm": [
+            {
+                "i": "travel_time_fft_alert",
+                "x": 0,
+                "y": 0
+            },
+            {
+                "i": "card-anomaly-scores-line-timeseries",
+                "x": 0,
+                "y": 4
+            },
+            {
+                "i": "travel_time_anomaly_line_card",
+                "x": 0,
+                "y": 8
+            },
+            {
+                "i": "travel_time_line_card",
+                "x": 0,
+                "y": 12
+            },
+            {
+                "i": "speedLayoutID",
+                "x": 0,
+                "y": 16
+            },
+            {
+                "i": "torqueLayoutId",
+                "x": 0,
+                "y": 20
+            },
+            {
+                "i": "currentSpeedLayoutId",
+                "x": 2,
+                "y": 20
+            },
+            {
+                "i": "abnormal_stop_countLayoutId",
+                "x": 0,
+                "y": 21
+            },
+            {
+                "i": "completed_movement_countLayoutId",
+                "x": 0,
+                "y": 23
+            },
+            {
+                "i": "loadLayoutId",
+                "x": 0,
+                "y": 25
+            },
+            {
+                "i": "operatorLayoutId",
+                "x": 0,
+                "y": 27
+            }
+        ],
+        "xs": [
+            {
+                "i": "travel_time_fft_alert",
+                "x": 0,
+                "y": 0
+            },
+            {
+                "i": "card-anomaly-scores-line-timeseries",
+                "x": 0,
+                "y": 4
+            },
+            {
+                "i": "travel_time_anomaly_line_card",
+                "x": 0,
+                "y": 8
+            },
+            {
+                "i": "travel_time_line_card",
+                "x": 0,
+                "y": 12
+            },
+            {
+                "i": "speedLayoutID",
+                "x": 0,
+                "y": 16
+            },
+            {
+                "i": "torqueLayoutId",
+                "x": 0,
+                "y": 20
+            },
+            {
+                "i": "currentSpeedLayoutId",
+                "x": 0,
+                "y": 21
+            },
+            {
+                "i": "abnormal_stop_countLayoutId",
+                "x": 0,
+                "y": 22
+            },
+            {
+                "i": "completed_movement_countLayoutId",
+                "x": 0,
+                "y": 23
+            },
+            {
+                "i": "loadLayoutId",
+                "x": 0,
+                "y": 24
+            },
+            {
+                "i": "operatorLayoutId",
+                "x": 0,
+                "y": 25
+            }
+        ]
+    },
+    "title": "Industrial Robot summary"
+}

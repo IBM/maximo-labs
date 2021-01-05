@@ -17,6 +17,6 @@ and discover insights that can drive better decision-making.
 
 ---
 
-**Updated: 2020-01-04**
+**Updated: 2020-01-05**
 
 ---
