@@ -54,7 +54,7 @@
 1. Go to the App Store. (Only available on iOS 13 or later.          
 2. Type <b>IBM Maximo Visual Inspection</b> in the search bar.
 
-    ![img](/img/mvi-hol-imgs/img-prereqs/newappUI.png){: style="height:150px;width:250px;margin-left:40px"}
+    ![img](/img/mvi_8.2/img-prereqs/newappUI.png){: style="height:150px;width:250px;margin-left:40px"}
 
 
 
@@ -65,23 +65,22 @@
 4. Open the app and click on each of the buttons in <span style="color:red">red.</span> 
 
 
-
     - <b>Terms and Conditions:</b>
 
-    ![img](/img/mvi-hol-imgs/img-prereqs/termsNconditions.jpeg){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](/img/mvi_8.2/img-prereqs/termsNconditions.jpeg){: style="height:400px;width:250px;margin-left:40px"}
 
     - Allow MVI to access your camera, bluetooth, and photos.
     -  `Select` I already have an account:
 
-    ![img](/img/mvi-hol-imgs/img-prereqs/cameraA.png){: style="height:410px;width:200px;"}
-    ![img](/img/mvi-hol-imgs/img-prereqs/bluetoothA.png){: style="height:410px;width:200px;margin-left:5px"}
-    ![img](/img/mvi-hol-imgs/img-prereqs/photoAccess.png){: style="height:410px;width:200px;"}
+    ![img](/img/mvi_8.2/img-prereqs/cameraA.png){: style="height:410px;width:200px;"}
+    ![img](/img/mvi_8.2/img-prereqs/bluetoothA.png){: style="height:410px;width:200px;margin-left:5px"}
+    ![img](/img/mvi_8.2/img-prereqs/photoAccess.png){: style="height:410px;width:200px;"}
 
     - Enter your information in the `Name` and `Location` fields.
 
-    ![img](/img/mvi-hol-imgs/img-prereqs/nameLocation.jpeg){: style="height:300px;width:250px;margin-left:40px"}
+    ![img](/img/mvi_8.2/img-prereqs/nameLocation.jpeg){: style="height:300px;width:250px;margin-left:40px"}
 
-5. Select the settings symbol ![img](/img/mvi-hol-imgs/img-prereqs/setting.jpg){: style="height:30px;width:30px"} in the top left corner of your screen. Have `Handheld Mode` switched on and changed the `Server Version` to `8.0.0 and above`. 
+5. Select the settings symbol ![img](/img/mvi_8.2/img-prereqs/setting.jpg){: style="height:30px;width:30px"} in the top left corner of your screen. Have `Handheld Mode` switched on and changed the `Server Version` to `8.0.0 and above`. 
  
     ![img](/img/mvi_8.2/img-prereqs/serverV.png){: style="height:400px;width:250px;margin-left:40px"}
     

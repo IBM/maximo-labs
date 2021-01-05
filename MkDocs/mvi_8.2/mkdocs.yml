@@ -7,8 +7,8 @@ site_dir: ../../site/mvi_8.2
 
 nav:
   - Get back to Maximo Labs: /
-  - MVI SaaS Labs:
-    - Welcome to the MVI Labs: index.md
+  - MVI 8.2 Labs:
+    - Welcome to the MVI 8.2 Labs: index.md
     - Pre-Requisites: prereqs.md
     - Exercises:
         - 1.1 DataSets: exerciseOne/exercise1-1.md
