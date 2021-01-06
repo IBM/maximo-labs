@@ -34,9 +34,10 @@ Also rename the folder under `img/template_1.0` using the same name lab name,
 e.g. `img/mvi_saas`. 
 ![Rename img/template folder](/img/contribute/copy_template_4.png)
 
-*Note: It is important that this structure is kept consistent cross all labs in order to easily build and deploy the complete set of labs.* 
-
 Save the file.
+
+!!! attention "Important"
+    It is important that this structure is kept consistent cross all labs in order to easily build and deploy the complete set of labs.
 
 ### 2. Modify the mkdocs.yml file
 
@@ -51,9 +52,13 @@ Edit the marked areas suitable for your new lab
 Which could look like this
 ![Edit mkdocs.yml](/img/contribute/edit_mkdocs.yml_3.png)
 
-*Note: The `nav:` definition holds the navigation menu for the new lab. It is only the `index.md` and `about.md` that need to have some mandatory information explained below. The rest of the markdown files and navigation menu is defined by the way the lab is structured and how many exercises it consist of.* 
-
 Save the file.
+
+!!! note
+    The `nav:` definition holds the navigation menu for the new lab.<br>
+    It is only the `index.md` and `about.md` that need to have some mandatory information, as explained below. The rest of the markdown files and navigation menu is defined by the way the lab is structured and how many exercises it consist of.
+
+
 
 ### 3. Modify the index.md file
 
@@ -68,9 +73,11 @@ Edit the file and make sure to change the marked areas suitable for your new lab
 Which could look like this
 ![Edit index.md](/img/contribute/edit_index_3.png)
 
-*Note: Remember to update the `Updated` to current date once the new lab is ready.* 
-
 Save the file.
+
+!!! attention "Remember to do this:"
+    Update the `Updated` at the end of this file to current date once the new lab is ready.
+
 
 ### 4. Modify the about.md file
 
@@ -85,9 +92,11 @@ Edit the file and make sure to change the marked areas suitable for your new lab
 Which could look like this
 ![Edit about.md](/img/contribute/edit_about_3.png)
 
-*Note: Please update both sections when the lab is ready.* 
-
 Save the file.
+
+!!! attention "Remember to do this:"
+    Update both sections when the lab is ready.
+
 
 ### 5. Add the new lab to the build script
 
@@ -103,9 +112,11 @@ Scroll bown to find `# Build the template level:`
 Copy the section and paste it above the `#### DON't CHANGE THE BELOW MANDATORY...` line. Change the comment and the `lab=` variable to match the folder of the new lab.
 ![Edit build_all_mkdocs.sh](/img/contribute/edit_build_3.png)
 
-*Note: Please don't change anything else.* 
-
 Save the file.
+
+!!! attention
+    Please don't change **anything else!**
+
 
 ### 6. Build and verify your lab content
 
@@ -125,12 +136,16 @@ Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) 
 If the new lab has not yet been added to the `index.md` in the `toplevel` page, then navigate directly to the new lab [http://localhost:8080/mvi_saas](http://localhost:8080/mvi_ssas) in order to verify that your changes look as expected.  
 ![Edit build_all_mkdocs.sh](/img/contribute/edit_build_7.png)
 
+!!! tip
+    Press control-c to stop the web server and get back to the prompt.
+
 Congratulations, you have now created the foundation for the new lab following the structure and consistensy of the entire IBM Maximo Labs site.
 
 Now you "only" need to add all the content to the foundation, by adding markdown files and images according to the structure.  
 
-Re-run this step until the new lab contains what you expect.
+!!! attention "Remember to do this:"
+    Go back to [Add content](../add_content/#3-commit-and-push-your-changes) and run from step 3. (You are done here :-)
 
-*Hint: press control-c to stop the web server and get back to the prompt.*
 
-*Note: It is good practise to commit your changes once the foundation is in place - and again when you have created or updated every markdown files in the exercise.*
+!!! note
+    It is good practise to commit your changes once the foundation is in place - and again when you have created or updated every markdown files in the exercise.
