@@ -100,12 +100,10 @@
 
     B. Click the `Eyeball` ![img](/img/mvi_8.2/img-prereqs/eye.png){: style="height:30px;width:30px"} next to your `API Key` on your browser and type the key in the API Key section on your device settings. Then type the `API Endpoint` url on the `Base URL` section on your device settings.
 
-    <b>Tip</b>:  Copy and Paste the information into an email you can access on the device, then Copy and Paste the information into MVI Mobile.  This will help avoid typos preventing you from connecting.
+!!! tip
+    Copy and Paste the information into an email you can access on the device, then Copy and Paste the information into MVI Mobile.  This will help avoid typos preventing you from connecting.
 
-8.	Click `Save` on the top right corner.
-
-
-
+- Click `Save` on the top right corner.
 
 <h1>You are ready to <u>begin!</u></h1>
 

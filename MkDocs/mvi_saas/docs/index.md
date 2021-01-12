@@ -36,5 +36,5 @@ Target Industries:
 <p>This lab will take you through a manufacturing use case. This lab will walk you through the implementation of Maximo Visual Inspection at a fictious aluminum can manufacturing company. The company is struggling to keep up with order fulfillment and is losing a lot of money due to material waste due to rework and defective cans not being spotted. The personas who will be in charge of the implementations will be the quality engineer and production line worker.</p>
 
 <hr />
-<p><strong>Updated: 2021-01-05</strong></p>
+<p><strong>Updated: 2021-01-11</strong></p>
 <hr />

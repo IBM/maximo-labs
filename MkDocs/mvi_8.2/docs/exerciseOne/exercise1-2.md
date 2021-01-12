@@ -35,9 +35,8 @@
 
     ![img](/img/mvi_8.2/img-exerciseOne/exercise1-2/yolo.png){: style="height:400px;width:1000px"}
 
+!!! attention
     We are only using 2000 iterations because we don't want to stretch the GPU too thin. Also, it takes a lot more time to train the model with higher iterations. Increasing the iterations can improve model accuracy, similar to adding more images to a dataset.
-    
-    <br>
 
 8.  Click the `Train Model` button at the top of the page.
 

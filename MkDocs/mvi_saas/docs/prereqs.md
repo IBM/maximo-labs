@@ -71,12 +71,10 @@
 
     ![img](/img/mvi_saas/img-prereqs/loginSettings.png){: style="height:400px;width:250px;margin-left:40px"}
     
+!!! tip
+    Copy and Paste the information into an email you can access on the device, then Copy and Paste the information into MVI Mobile.  This will help avoid typos preventing you from connecting.
 
-    <b>Tip:</b> Copy and Paste the information into an email you can access on the device to then Copy and Paste the information into MVI Mobile.  This will help avoid typos preventing you from connecting.
-
-    <br>
-
-6. Click `Save`.
+- Click `Save`.
 
     <h1>You are ready to <u>begin!</u></h1>
 

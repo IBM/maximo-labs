@@ -149,9 +149,8 @@ down a little to display the vertical and horizontal flip options)
 
     ![img](/img/mvi_8.2/img-exerciseOne/exercise1-1/aContinue.png){: style="height:400px;width:800px"}
 
-    Note: Under `New Creations`, you can see how many new images will be created.
-
-    <br>
+!!! note
+    Under `New Creations`, you can see how many new images will be created.
 
 17. When prompted, enter `Cans-Augmented-YourInitials` for the name of the new data set and then click the `Create data set` button. Wait until the augmentation process completes. (the running status appears in the top right corner)
 
