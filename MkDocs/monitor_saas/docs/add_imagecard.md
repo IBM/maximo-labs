@@ -1,6 +1,34 @@
 # Create Image Card
 
-In Maximo Asset Monitor, images can add a tremendous amount of value to data visualization when paired with graphs, tables, and value cards. Using a REST API call, you are able to push an image of your choosing into the Monitor data lake and display this image on your dashboards. You are also able to place icons which called hotspots on the image cards. These icons are tied to data from individual sensors or an aggregate of all of the sensors on a summary dashboard. Inside of the JSON configuration for the image card, you are able to set alert conditions that change the icon on the hotspot.
+In Maximo Asset Monitor, images can add a tremendous amount of value to data visualization when paired with graphs, tables, and value cards.  You can display an image on your dashboards.  You are also able to place icons which called hotspots on the image cards. These icons are tied to data from individual sensors or an aggregate of all of the sensors on a summary dashboard.
+
+## Create Image Card with the UI widget
+
+1.  Save this image ![Site map](/img/monitor_saas/site_map.png)
+2.  Click on the gear icon and choose Manage instance dashboard
+3.  Click on Image
+4.  Click on the Image card and upload the image `site_map.png`
+5.  Title: `Site Map`
+6.  Time range: `Last 24 hours`
+7.  Click on Edit image
+8.  Click on the map to create a hotspot
+    Note:  if your data has x, y location coordinates you can specify them here
+9.  Title: `Robot`
+10. Icon: `User`
+11. Color: Blue
+12. Click on Datasource and choose the following: `Entity_Id`, `Travel time`, `Work performed`
+13. Click Save
+14. Click Add Card
+15. Save and Close
+
+![Image widget](/img/monitor_saas/i205.png)
+![Image upload](/img/monitor_saas/i206.png)
+![Image card](/img/monitor_saas/i207.png)
+
+## Create Image Card with JSON
+
+ Using a REST API call, you are able to push an image of your choosing into the Monitor data lake and display this image on your dashboards.
+ Inside of the JSON configuration for the image card, you are able to set alert conditions that change the icon on the hotspot.
 ![Munich Occupancy Image Card](/img/monitor_saas/im1.png) &nbsp;
 
 **Here is what you see when you click on one of the hotspots.**

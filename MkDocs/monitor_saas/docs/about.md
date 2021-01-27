@@ -12,12 +12,15 @@
 
 - Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 
+- Mike Lamb - <mllamb@us.ibm.com>
+
 ---
 
 # Change Information
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2021-01-26|Mike Lamb|Added no JSON dashboard sections. |
 |2021-01-05|Jan Ekstrøm|Added the missing JSON files for Monitor Anomalies. |
 |2021-01-04|Jan Ekstrøm|Merged contributors into one about section and added change information as well. Added Last Update at the end of the Index file. |
 | 2020-12-30 | Jan Ekstrøm | Migrated original site to toplevel and created the new structure for the IBM Maximo Labs |
