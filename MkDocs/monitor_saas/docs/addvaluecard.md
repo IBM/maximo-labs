@@ -2,15 +2,15 @@
 A great way to augment your Maximo Asset Monitor dashboards is with value cards. This type of card allows you to display a metric or multiple metrics on a card and is a good way to show the status of an asset. You are also able to set alert thresholds to have different icons appear on the card to indicate a positive or negative status. 
 
 
-# Add Value Card using UI widget
+## Create Value Card using UI widget
 
-1.  Click on the gear icon and choose Manage instance dashboard
-2.  Choose Value/KPI
-3.  Title: `Travel time`
+1.  Click on the `gear icon` and choose Manage instance dashboard
+2.  Choose `Value/KPI`
+3.  Title: Travel time
 4.  Time range: `Last 24 hours`
-5.  Data item: `travel_time_anomaly_entity_73000`
-6.  Click on the pencil icon
-7.  Click on add Threshold
+5.  Data item: travel_time_anomaly_entity_73000
+6.  Click on the `pencil icon`
+7.  Click on `add Threshold`
 8.  Type `2` in the `>` value box
 9.  Save
 10. Add card
@@ -19,16 +19,17 @@ A great way to augment your Maximo Asset Monitor dashboards is with value cards.
 ![Value card widget](/img/monitor_saas/i208.png)
 ![Value card](/img/monitor_saas/i209.png)
 
-## Export Dashboard JSON
+## Create Value Card using JSON
+### Export Dashboard JSON
 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
 ![Gear Edit](/img/monitor_saas/im21.png) &nbsp;
 3. Click `Edit Dashboard`.
 ![Edit Dashboard](/img/monitor_saas/im22.png) &nbsp;
 4. Click `Export` and save your JSON into a folder that you can keep handy. Make sure to save the file with the file extension `.json`. Open the file in a text editor of your choice. Here are some good open source options: [Atom](https://atom.io/), [Brackets](http://brackets.io/), and [Sublime](https://www.sublimetext.com/).
-## Add Value Card JSON
+### Add Value Card JSON
 ![Sourdough Leavening Dashboard](/img/monitor_saas/im28.png) &nbsp;
-Here is an example of a complex value card: This value card is a stacked value card. The JSON to create a card like this can be located [here](https://atom.io/). In this Exercise, you will learn to make a more simple value card in order to best learn the theory behind the JSON mapping. You will make a value card that will look like the value card shown on the dashboard below.
+In this Exercise, you will learn to make a more simple value card in order to best learn the theory behind the JSON mapping. You will make a value card that will look like the value card shown on the dashboard below.
 
 ![Humidity Value Card](/img/monitor_saas/im29.png) &nbsp;
 
@@ -85,7 +86,7 @@ Some other important notes about the JSON:
 -	`precision` refers to the number of decimal points to be seen.
 
 3. Once you feel that you have correctly mapped the data items from your entity type into the above JSON format, save your file with your finished value card. **Be sure to employ version control and save your file with a new name every time you make serious changes in case you make an error. You want to make sure you always have a working file.**
-## Import Dashboard JSON
+### Import Dashboard JSON
 1. 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
 

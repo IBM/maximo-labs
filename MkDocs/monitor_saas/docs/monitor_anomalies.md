@@ -6,7 +6,7 @@ In this Exercise you will learn how to:
 *  Detect anomalies by applying anomaly detection functions
 *  Create alerts to prioritize anomalies
 *  Monitor alerts across multiple assets in a summary dashboard you create
-*  Troubleshoot to find the rood cause of a problem
+*  Troubleshoot to find the root cause of a problem
 
 ---
 *Before you begin:*  
@@ -110,26 +110,26 @@ In this part of the exercise you will create simulated extreme anomalous values 
 8.  Set the `Calculating the last` to `2` days to have Monitor generate 2 days of historical simulated anomalous data for `travel_time_anomaly`.
 9.  Click `Create`.  After 15 minutes the function should be complete and the anomaly data will be available.
 
-##Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using the UI widget
+###Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using the UI widget
 In this part of the exercise you will visualize the simulated `travel_time_anomaly` in a line card.
 
-1.  Click on Dashboards tab to see the list instance dashboards
+1.  Click on Dashboards tab to see the list of instance dashboards
 2.  Click on one of the robot instance dashboards in the table list.
-3.  Click on Gear icon top right.  Choose Edit dashboards
+3.  Click on `gear icon` top right.  Choose Edit dashboards
 4.  Continue
 5.  Choose `Time series line` from the right hand selection
-6.  Title: `Travel Time with Anomaly`
-7.  Time range: `Last 24 Hours`
-8.  Data item: `travel_time_anomaly`
-9.  Click Settings tab
-10. Unit: `sec`
-11. Click Add card
+6.  Title: Travel Time with Anomaly
+7.  Time range: Last 24 Hours
+8.  Data item: travel_time_anomaly
+9.  Click `Settings` tab
+10. Unit: sec
+11. Click `Add card`
 12. Save and Close
 
 ![Line card](/img/monitor_saas/i200.png)
 ![Line card settings](/img/monitor_saas/i201.png)
 
-##Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using JSON
+###Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using JSON
 
 In this part of the exercise you will visualize the simulated `travel_time_anomaly` in a line card.
 
@@ -269,16 +269,17 @@ You will add an anomaly function that will provide a score of how likely the sin
 <br>
 
 ##Add a Multi Series Line Chart using the UI widget
-1.  Click on the gear icon and choose Manage instance dashboard
-2.  Click on Time series line
-3.  Title: `Anomaly Scores for Travel Time`
+1.  Click on the `gear icon` and choose Manage instance dashboard
+2.  Click on `Time series line`
+3.  Title: Anomaly Scores for Travel Time
 4.  Time range: `Last 24 hours`
-5.  Choose the following calculated metrics: `travel_time_spectral_score`, `travel_time_saliency_score`, `travel_time_kmeans_score`, `travel_time_ga_score`,
-    `travel_time_fft_score`, `travel_time_anomaly`
+5.  Choose the following calculated metrics: travel_time_spectral_score,  
+    travel_time_saliency_score, travel_time_kmeans_score, travel_time_ga_score,
+    travel_time_fft_score, travel_time_anomaly
 6.  Click on Settings
-7.  X-axis-label: `Time`
-    Y-axis-label: `Score`
-8.  Click Add card
+7.  X-axis-label: Time
+    Y-axis-label: Score
+8.  Click `Add card`
 9.  Save and Close
 
 ![Line card](/img/monitor_saas/i202.png)
