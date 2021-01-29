@@ -13,7 +13,7 @@ Look under the appropriate version below to find the labs you are looking for.
 
 ### Maximo Application Suite 8.2
 ![Under Development: ](/img/under_development.png) [IBM Maximo Monitor (MAS 8.2)](/monitor_8.2/)  
-![Under Development: ](/img/under_development.png) [IBM Maximo Visual Inspection (MAS 8.2)](/mvi_8.2/)  
+![Ready: ](/img/ready.png) [IBM Maximo Visual Inspection (MAS 8.2)](/mvi_8.2/)  
 ![Not Started: ](/img/not_started.png) [IBM Maximo Health (MAS 8.1)](/health_8.2/)  
 
 ### Maximo Application Suite 8.3
