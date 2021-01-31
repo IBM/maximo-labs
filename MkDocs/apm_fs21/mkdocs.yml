@@ -16,6 +16,11 @@ nav:
         - 2. Manage Asset Servicing: manage_assets.md
         - 3. Manage Asset Health: asset_health.md
         - 4. Predict Asset Performance : predict_performance.md
+    - Demo Steps:
+        - 1. Monitor: demo-monitor.md
+        - 2. Manage - Mobile: demo-mobile.md
+        - 3. Health: demo-health.md
+        - 4. Health - Predict: demo-health-predict.md
   - About: about.md
 
 theme: readthedocs
