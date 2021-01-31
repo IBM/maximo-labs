@@ -6,7 +6,7 @@ In this Exercise you will learn how to:
 *  Detect anomalies by applying anomaly detection functions
 *  Create alerts to prioritize anomalies
 *  Monitor alerts across multiple assets in a summary dashboard you create
-*  Troubleshoot to find the rood cause of a problem
+*  Troubleshoot to find the root cause of a problem
 
 ---
 *Before you begin:*  
@@ -82,7 +82,7 @@ A summary dashboard uses time grains when computing the aggregations.  Monitor c
 11. Click `Next` and choose the max, min and mean for aggregation methods for all the number metrics. ![Assign dimensions for order of aggregations](/img/monitor_saas/i104.png) &nbsp;
 12. Click `Export`to save the dashboard json configuration. You will edit it later.  You can also import dashboard configurations from this menu.
 ![Export the summary dashboard configuration json](/img/monitor_saas/i105.png) &nbsp;
-13.  Click `Create summary` to create the dashboard.  Your dashboard should like something like the one below.
+13.  Click `Configure Dashboard` to create the dashboard which will take several minutes.  Your dashboard should like something like the one below.
 ![Expoert the summary dashboard configuration json](/img/monitor_saas/i106.png) &nbsp;
 14.  Notice the summary dashboard form automatically added the aggregation functions for min, max and mean to your `Metrics (calculated)`.
 15.  Click on `Data` tab and expand the `Metrics (calculated)` section of the `Data Items` to see the daily min, max and mean calculated metrics.  They should look something like the figure below. ![View the min, max and mean calculated metrics ](/img/monitor_saas/i131.png) &nbsp;
@@ -96,7 +96,7 @@ You need anomalies to be able to detect anomalies.  Monitor provides simulated a
 
  The `travel_time` deviation that was generated earlier for your robot simulated data did not have anamolies in it.   The `AnomalyGeneratorExtremeValue` function adds anomalies to the metric you choose.   It abruptly increases or decreases the normal metric values for the metric you choose.  In the steps below you will use this function to add a new calculated metric with anomalies named `travel_time_anomaly`  You will add a line chart to display the anomalous data on your instance dashboard.  Later you will use Maximo Asset Monitor anomaly detection functions to detect these anomalies.  A SCADA system would likely not be able to detect these type of abrupt anomaly increase or decrease in metric values. SCADA systems typically only provide max or min business rule thresholds.
 
-**Add Simulated Anomaly Data for Travel Time**
+##Add Simulated Anomaly Data for Travel Time
 
 In this part of the exercise you will create simulated extreme anomalous values for travel time.  
 1.  Search the function catalog for  `AnomalyGeneratorExtremeValue` to create extreme simulated anomaly data.  
@@ -110,7 +110,26 @@ In this part of the exercise you will create simulated extreme anomalous values 
 8.  Set the `Calculating the last` to `2` days to have Monitor generate 2 days of historical simulated anomalous data for `travel_time_anomaly`.
 9.  Click `Create`.  After 15 minutes the function should be complete and the anomaly data will be available.
 
-**Add Simulated Anomaly Travel Time Line Card to Instance Dashboard**
+###Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using the UI widget
+In this part of the exercise you will visualize the simulated `travel_time_anomaly` in a line card.
+
+1.  Click on Dashboards tab to see the list of instance dashboards
+2.  Click on one of the robot instance dashboards in the table list.
+3.  Click on `gear icon` top right.  Choose Edit dashboards
+4.  Continue
+5.  Choose `Time series line` from the right hand selection
+6.  Title: Travel Time with Anomaly
+7.  Time range: Last 24 Hours
+8.  Data item: travel_time_anomaly
+9.  Click `Settings` tab
+10. Unit: sec
+11. Click `Add card`
+12. Save and Close
+
+![Line card](/img/monitor_saas/i200.png)
+![Line card settings](/img/monitor_saas/i201.png)
+
+###Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using JSON
 
 In this part of the exercise you will visualize the simulated `travel_time_anomaly` in a line card.
 
@@ -230,7 +249,7 @@ You will add an anomaly function that will provide a score of how likely the sin
 7.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the `windowsize`. ![Configure anomaly scoring schedule and look back period](/img/monitor_saas/KmeansAnomalySchedule.png) &nbsp;
 8.  Set the look back period to `2` days.  This will calculate historical scores looking back 2 days using the new configuration values with the historical metric values for `travel_time_anomaly`.
 9.  Set the output metric name for the alert `travel_time_kmeans_score`
-10.  Click `Create` to create the alert configuration.  It will take 15 minutes for the alert to update.  While waiting lets create anomaly functions for the other anomaly detection functions. See the guidance in the table below for scheduling anomaly functions.
+10.  Click `Create` to create the calculated metric.  It will take 15 minutes for the calculated metric to update.  While waiting lets create anomaly functions for the other anomaly detection functions. See the guidance in the table below for scheduling anomaly functions.
 11.  Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  
 12.  Search for `FFTbasedGeneralizedAnomalyScore2` in the function catalog.  Configure and name it `travel_time_fft_score`
 13.  Search for `GeneralizedAnomalyScore` in the function catalog. Configure and name it `travel_time_ga_score`
@@ -249,7 +268,25 @@ You will add an anomaly function that will provide a score of how likely the sin
 
 <br>
 
-**Add a Multi Series Line Chart**
+##Add a Multi Series Line Chart using the UI widget
+1.  Click on the `gear icon` and choose Manage instance dashboard
+2.  Click on `Time series line`
+3.  Title: Anomaly Scores for Travel Time
+4.  Time range: `Last 24 hours`
+5.  Choose the following calculated metrics: travel_time_spectral_score,  
+    travel_time_saliency_score, travel_time_kmeans_score, travel_time_ga_score,
+    travel_time_fft_score, travel_time_anomaly
+6.  Click on Settings
+7.  X-axis-label: Time
+    Y-axis-label: Score
+8.  Click `Add card`
+9.  Save and Close
+
+![Line card](/img/monitor_saas/i202.png)
+![Line card settings](/img/monitor_saas/i203.png)
+![Line chart](/img/monitor_saas/i204.png)
+
+##Add a Multi Series Line Chart using JSON
 
 Add a line chart** to visually compare if high anomaly model scores correlate with the robot `travel_time_anomaly` metric on each robot instance dashboard.  In this exercise you will add a multi series line chart card to your instance dashboard that plots the anomaly model scores for `time_travel_anomaly` metric.  You can then visually correlate which models are effective at detecting anomalies by seeing which model scores are high when the anomalies happen.
 
@@ -328,7 +365,7 @@ Add a line chart** to visually compare if high anomaly model scores correlate wi
     ```    
 4.  View the the anomaly model scores for `time_travel_anomaly` metric line chart card on each robot instance dashboard.  Analyze the anomaly high scores for each model to see which ones happen when the anomaly does for `time_travel_anomaly` happens. It should look something like the card below  ![Travel Time and Anomaly Scores](/img/monitor_saas/i115.png)&nbsp;
 5.  In the line chart click `Spectral` label so that you can see only the line chart of each score versus `time_travel_anomaly` metric value.  ![Travel Time Spectral Anomaly Scores](/img/monitor_saas/i116.png)&nbsp;
-6.  Click on `Spectral` label again to hide that line.  Select the `Saliency` label to see anomaly score line.  Notice how the models score higher they there is an anomaly.  ![Travel Time Saliency Anomaly Scores](/img/monitor_saas/i117.png)  
+6.  Click on `Spectral` label again to hide that line.  Select the `Saliency` label to see anomaly score line.  Notice how the models score higher when there is an anomaly.  ![Travel Time Saliency Anomaly Scores](/img/monitor_saas/i117.png)  
 7. Study each instance dashboard to see where the anomaly scores are high and `time_travel_anomaly` metric appears to have an anomaly.  Make note of the score levels that correlate with your Robots anomalies that were generated in the `travel_time_anomaly` metric. You will use this in the next exercise when you create alerts to notify you that anomalies have occurred.  The table below has some suggested starting values:
 
   | Anomaly Score                         | Upper Threshold  |

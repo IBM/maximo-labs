@@ -1,6 +1,35 @@
 # Create Image Card
 
-In Maximo Asset Monitor, images can add a tremendous amount of value to data visualization when paired with graphs, tables, and value cards. Using a REST API call, you are able to push an image of your choosing into the Monitor data lake and display this image on your dashboards. You are also able to place icons which called hotspots on the image cards. These icons are tied to data from individual sensors or an aggregate of all of the sensors on a summary dashboard. Inside of the JSON configuration for the image card, you are able to set alert conditions that change the icon on the hotspot.
+In Maximo Asset Monitor, images can add a tremendous amount of value to data visualization when paired with graphs, tables, and value cards.  You can display an image on your dashboards.  You are also able to place icons which called hotspots on the image cards. These icons are tied to data from individual sensors or an aggregate of all of the sensors on a summary dashboard.
+
+## Create Image Card with the UI widget
+
+1.  Save this image by right clicking then choose Save Image As...
+  ![Site map](/img/monitor_saas/site_map.png)
+2.  Click on the `gear icon` and choose Manage instance dashboard
+3.  Click on Image
+4.  Click on the Image card and upload the image `site_map.png` from step 1.
+5.  Title: Site Map
+6.  Time range: `Last 24 hours`
+7.  Click on Edit image
+8.  Click on the map to create a hotspot
+    Note:  if your data has x, y location coordinates you can specify them here
+9.  Title: Robot
+10. Icon: `User`
+11. Color: Blue
+12. Click on `Datasource` and choose the following: Entity_Id, Travel time, Work performed
+13. Click Save
+14. Click Add Card
+15. Save and Close
+
+![Image widget](/img/monitor_saas/i205.png)
+![Image upload](/img/monitor_saas/i206.png)
+![Image card](/img/monitor_saas/i207.png)
+
+## Create Image Card with JSON
+
+ Using a REST API call, you are able to push an image of your choosing into the Monitor data lake and display this image on your dashboards.
+ Inside of the JSON configuration for the image card, you are able to set alert conditions that change the icon on the hotspot.
 ![Munich Occupancy Image Card](/img/monitor_saas/im1.png) &nbsp;
 
 **Here is what you see when you click on one of the hotspots.**
@@ -10,13 +39,13 @@ In Maximo Asset Monitor, images can add a tremendous amount of value to data vis
 The image card above displays an occupancy use case. Individual occupancy sensors have been tied to each hot spot to indicate whether seats in a meeting room in the Munich IoT center are occupied. The image above shows a much more complicated image card with hotspots than you will be creating in this Exercise, but this example is something that you could use eventually in the real world.
 
 In this Exercise, you will learn how to select a photo for your image card, push your image into the Monitor data lake using a REST API call, and finally display your image card on a dashboard in Monitor. You will need Postman for this section. Please download the application at this link if you have not already: https://www.getpostman.com/
-## Upload Image to Monitor Datalake
-### Choose Image
+### Upload Image to Monitor Datalake
+#### Choose Image
 1. Choose an image that allows you to use hotspots to tell a meaningful story. For example, choosing a floor plan of a factory floor where you can tie hotspots to assets on the floor would tell an important and meaningful story.
 2. Choose an image that is **smaller than 1MB**. Your API call will not be successful if you try to push a larger file.
 3. These are the types of files that you can push into the Monitor data lake.
 ![Acceptable File Types](/img/monitor_saas/im3.png) &nbsp;
-### Obtain API Key
+#### Obtain API Key
 1. Open up your Maximo Asset Monitor tenant.
 2. Open up the hamburger menu on the left side and select `Services`.
 ![Services Navigation](/img/monitor_saas/im4.png) &nbsp;
@@ -24,7 +53,7 @@ In this Exercise, you will learn how to select a photo for your image card, push
 ![Watson IoT Platform Service](/img/monitor_saas/im5.png) &nbsp;
 4. Copy and paste the `API Key`and `API Token` into a Notes application of your choosing. It is good to save this information in a place that is easy to access. You will most likely use this API Key and Token again.
 ![Grab API Key and Token](/img/monitor_saas/im6.png) &nbsp;
-### Push Image to Data Lake using Postman
+#### Push Image to Data Lake using Postman
 1. Open up your `Postman` application.
 2. In the top left corner you will see a button that says `+New`. Click on the `Request` button. Name your Request and create a Collection to place the Request.  Click the dropdown menu inside the red box in Postman to classify this API Call as a `POST` Request.
 ![Create POST Request](/img/monitor_saas/im8.png) &nbsp;
@@ -51,18 +80,18 @@ In this Exercise, you will learn how to select a photo for your image card, push
 7. Click the blue `Send` button to send your request. You should receive a `200 OK` message. If you do not, make sure that everything in this section has been entered correctly. If this work is to no avail, contact your administrator.
 
 ![Success](/img/monitor_saas/im17.png) &nbsp;
-## Display Image Card on Dashboard
+### Display Image Card on Dashboard
 Now that you have pushed the image of your choice into the Monitor data lake, you will now need to create a JSON object for the image card you wish to display. In this JSON code, you will tell Monitor what data to show, where to show that data, and how you want the data to be shown. The JSON code that will be shown in the later steps corresponds with the summary dashboard shown below:
 
 ![Sourdough Leavening Dashboard](/img/monitor_saas/im28.png) &nbsp;
-### Export Dashboard JSON
+#### Export Dashboard JSON
 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
 ![Gear Edit](/img/monitor_saas/im21.png) &nbsp;
 3. Click `Edit Dashboard`.
 ![Edit Dashboard](/img/monitor_saas/im22.png) &nbsp;
 4. Click `Export` and save your JSON into a folder that you can keep handy. Make sure to save the file with the file extension `.json`. Open the file in a text editor of your choice. Here are some good open source options: [Atom](https://atom.io/), [Brackets](http://brackets.io/), and [Sublime](https://www.sublimetext.com/).
-### Create Image Card JSON Object
+#### Create Image Card JSON Object
 1. Please copy and paste the JSON code block below into the top of your `cards` array.
 ![Card Array](/img/monitor_saas/im19.png) &nbsp;
 ``` yaml
@@ -138,7 +167,7 @@ Now that you have pushed the image of your choice into the Monitor data lake, yo
 3. Using the framework above, map the data items that are in your Entity type to display your image card on a summary dashboard. Replace the data items in the above JSON with the applicable data items, titles, and other information from the Entity Type you are working with to tell the story you are trying to tell. If you are confused, please reference the Knowledge center page for adding image cards [here](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/image_json_ref.html).
 4. Finally, save your file with your finished image card. **Be sure to employ version control and save your file with a new name every time you make serious changes in case you make an error. You want to make sure you always have a working file.**
 
-### Upload Your Image Card JSON
+#### Upload Your Image Card JSON
 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
 ![Gear Edit](/img/monitor_saas/im21.png) &nbsp;
