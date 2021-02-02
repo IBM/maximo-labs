@@ -13,7 +13,7 @@ This Exercise requires that you:
 2. Have a Nordic Thingy. This is how you [purchase](../facilitator_instructions#purchasing-a-nordic-thingy) Nordic Thingy.  
  
 ---
-#  Connect a Physical Device
+##  Connect a Physical Device
 It’s time to connect a real, physical device. For this exercise you will use a Nordic Thingy.  Learn more about the Nordic Thingy and its various sensors [here](https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52)
 
 ## Connect Nordic Thingy to the Internet
@@ -82,7 +82,7 @@ Notice the `err` value in the payload changed to 1.
 This exercise demonstrated how to manually add a device to Maximo Asset Monitor.  You would most likely  programatically add devices using the included Watson IOT Platform Service [REST APIs](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/reference/api.html) and [Python SDK](https://ibm-watson-iot.github.io/iot-python/application/api/registry/devices/).
 ---
 
-# Interfaces, Rules and Notifications
+## Interfaces, Rules and Notifications
 You will create an alert notification when the Nordic Thingy has an error condition.  In this next section you will learn how you can:
 
   *  Create [physical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web)
@@ -131,7 +131,7 @@ Click the `X`in the upper right corner to close this dialogue box and make sure 
 16. You can check to see if your interface is working, by browsing to your device, select the `State` tab and switch the interface to your newly created interface. Temperature should now be shown in Fahrenheit.
 ![Check Physical Interface State Events](/img/monitor_8.2/i38.png) &nbsp;  
 
-# Store Data
+## Store Data
 This next exercise focuses on how and what database tables your device data is stored in.  Make sure you have completed the earlier steps in this Exercise. You should already have a device type with an active physical and logical interface and at least one device of that type sending data.
 
 1.  You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.

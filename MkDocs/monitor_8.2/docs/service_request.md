@@ -1,3 +1,4 @@
+# Objectives
 You should now have a good understanding of how alerts happen in Maximo Asset Monitor.  Now you will learn how to create acknowledge alert and create service requests to further investigate and resolve alerts in Maximo.  In this Exercise you will:
 
 1.  Create a Maximo Service Connection so that Monitor knows which Maximo service to open service requests in.
@@ -7,14 +8,14 @@ You should now have a good understanding of how alerts happen in Maximo Asset Mo
 
 You can create service request in IBM Maximo Enterprise Asset Management Service from an alert in Maximo Asset Monitor. In Maximo, a service request indicates that an asset or location in your enterprise needs some sort of attention. Once a service request has been created, there is a ticket associated with that request. If the service request has been validated and the asset requires a particular task, you can assign the service request a work order to specify the Exerciseor, materials, services, and tools to complete the particular task. In this Exercise exercise, you will learn how to connect a Maximo service to your Maximo Asset Monitor instance, create a service request, and assign that service request a work order.
 
-#  Create Maximo Service Connection
+##  Create Maximo Service Connection
 
 1.  After logging into Maximo Asset Monitor, open up the hamburger menu and click on `Services.`![Hamburger Menu](/img/monitor_8.2/max1.png) &nbsp;
 2.  Once you reach the services page, click on the `Add Service` button.
 3.  The page pictured below will pop up. In the `Service Name` field, name your Maximo service something easily identifiable. In the drop-down menu titled `Service Type`, choose Maximo. You will also need the host URL, the username, and the password you use to login to your Maximo service.  If you do not have this information, contact your system administrator. In the `Site dimension` and `Asset dimension` fields, use the prepopulated values `SITEID` and `ASSETID`, respectively. ![Blank Add Service](/img/monitor_8.2/max2.png) &nbsp;![Filled Add Service](/img/monitor_8.2/max3.png) &nbsp;
 4.  Next, click `Save Changes`. Your Maximo service should pop up underneath the title `Other Services` on the `Services` page.
 
-#  Create Service Request from an Alert
+##  Create Service Request from an Alert
 
 In this section, you will need to have some alerts that have already been triggered for your Entity Type. If you have not yet learned how to create an alert in Monitor, please see the `Alerts` section in Exercise 2: Monitor Assets. You will also need to have an asset/assets with the same name as your entity/entities already set up in your Maximo service. If you do not know how to create an asset in Maximo, please see Appendix 1: Creating an Asset in Maximo.
 
@@ -27,13 +28,13 @@ In this section, you will need to have some alerts that have already been trigge
 If you would like to change the description or details, you are welcome to. Instead, use the prepopulated options. Finally, click `Create`. ![Create SR](/img/monitor_8.2/max7.png) &nbsp;
 7.  You will now see that a number has replaced the `Create service request` button. If you click on that number you will be directed to the service request you just created. You may be prompted to log in to your Maximo service. Use the username and password you were given by your system administrator. ![Alert with SR](/img/monitor_8.2/max8.png) &nbsp;![Maximo SR](/img/monitor_8.2/max9.png) &nbsp;
 
-#  Escalate Service Request to a Work Order"
+##  Escalate Service Request to a Work Order"
 
 1.  Escalate Service Request to Work Order.  Inside of the page for the Service Request you just created, you will see on the left side there is a list menu. Find `Create`. Hover over `Create` and click on `Work Order`.![Create Menu Maximo](/img/monitor_8.2/max10.png) &nbsp;
 2.  Select the repair facility of your choice when prompted and click `OK`.![Repair Facility](/img/monitor_8.2/max11.png) &nbsp;
 3.  You have created a Work Order! On the top of the Service Request window, click `Related Records`. The Work Order you just created will be on this page. ![Work Order](/img/monitor_8.2/max12.png) &nbsp;
 
-#  Resolve Alert
+##  Resolve Alert
 
 1.  Go back to your Alert page in your Entity type and find the alert for which you made the service request and work order.
 2.  Click on the drop down menu selected in the picture below. The menu should currently read `New`. ![New Alert](/img/monitor_8.2/max13.png) &nbsp;

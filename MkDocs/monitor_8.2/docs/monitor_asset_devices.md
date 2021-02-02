@@ -10,7 +10,7 @@ In this Exercise you will learn about:
 This Exercise requires that you have completed Exercise 1 Connected Devices
 ---
 
-# View Data
+## View Data
 Now that you know the data is successfully flowing into the IoT Platform Service, this exercise will let you see which dashboards are automatically created for you. Go to Maximo Asset Monitor page.
 
 1. Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web). An entity is created for each mapped device ID along with it's corresponding properties.
@@ -32,7 +32,7 @@ Now that you know the data is successfully flowing into the IoT Platform Service
 9.  Click `Metrics` tab to see metrics for the last 24 hours for this entity (asset) only. It may take some time to accrue enough data to visualize, take a break and return after ten or so minutes.
 ![Metrics Page](/img/monitor_8.2/i78.png) &nbsp;  
 
-# Analyze Data
+## Analyze Data
 In the previous exercise you saw how you can see the raw device data in Monitor Dashboards, in this exercises you will learn how to perform data analysis and transform data so that remote operations managers can take action using intelligent insights.  
 
 1.  Click `Monitor`. Here you can see all of the entity types created from the [logical interfaces](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html).  An entity is created for each mapped device ID along with it's corresponding properties.
@@ -80,7 +80,7 @@ Click on one of the new tables to view the data.
 Calculated functions by default are scheduled to run every 5 minutes. Check back later to see if the metric is being calculated.
 ---
 
-# Alerts
+## Alerts
 
 In this exercise you will learn how to create alerts. Alerts are functions in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a many types of alert functions included in the catalog like `High`, `Low` and<br>`Alert Expression Filter`.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently. This is unlike Actions in the IoT Platform Service where notifications are invoked immediately when event data is ingested. Actions have an application programming interface to integrate with other systems.  You can also create and register your custom functions in the Maximo Asset Monitor catalog. Both of these are advanced topics that are beyond the scope of this Exercise. You can learn more about how to create custom functions in Maximo Asset Monitor by following this [tutorial](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/tutorials/as_adding_complex_function_tutorial.html).
 
@@ -100,7 +100,7 @@ In this exercise you will learn how to create alerts. Alerts are functions in th
 Congratulations.  You have learned how to create new Alerts from a calculated metric that sums the total number of errors that occur on an asset device.  You can also receive alerts on a device event stream topic and take action. That is beyond the scope of these materials. Find out more information on how to configure these actions in the [documentation](https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/as_custom_actions.html).
 
 
-# Troubleshoot Functions
+## Troubleshoot Functions
 
 1.  Should you see `Analysis Stopped` warning this means your pipeline for your entity type has stopped calculating your metrics. You should click on `Analysis Stopped red dot ` to view the error details.  ![](/img/monitor_8.2/i99.png) &nbsp;
 2.  These warnings often occur because a calculated metric function input argument depends on a metric name that has been deleted or whose name has changed.   
