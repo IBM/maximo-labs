@@ -43,8 +43,8 @@ A Water Resource Authority needs to manage water and wastewater treatment across
 <br>
 <b>Health/Predict:</b><br>
 <br>
-•	Health/Predict - Reliability engineer selects PUMP 005 (all add pumps are non-OEM) that is also under performing and is predicted to fail before the next scheduled PM.<br>
-•	Health/Predict - Reliability engineer reviews asset detail page. 
+•	Health/Predict - Reliability engineer selects PUMP 005 that is also under performing and is predicted to fail before the next scheduled PM.<br>
+•	Health/Predict - Reliability engineer reviews asset detail page and asset timeline. 
 
 
 

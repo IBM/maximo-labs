@@ -1,7 +1,7 @@
 
 # Contributors to IBM Maximo Visual Inspection Labs
 
-- Cecilia Duffus - cecilia.d@ibm.com
+- Cecilia Stark - cecilia.stark@ibm.com
 
 - Jan Ekstrøm - jan.ekstrom@dk.ibm.com
 
