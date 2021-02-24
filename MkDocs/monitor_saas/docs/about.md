@@ -20,6 +20,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2021-02-12|Jan Ekstrøm|Correction of a screen shot in the Connect Devices exercise. |
 |2021-01-29|Mike Lamb|Added dashboard UI widget sections. |
 |2021-01-05|Jan Ekstrøm|Added the missing JSON files for Monitor Anomalies. |
 |2021-01-04|Jan Ekstrøm|Merged contributors into one about section and added change information as well. Added Last Update at the end of the Index file. |
