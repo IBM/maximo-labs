@@ -7,13 +7,13 @@ Here are the required pre-requisites for contributing to The Maximo labs.
 Even though Python 3.8.2 is installed on your Mac, you'd want to use the latest release.</br>
 First install Homebrew on Mac as described at [https://brew.sh/](https://brew.sh/):
 
-    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ![Install Homebrew](/img/contribute/pre-req_1.png)
 
 Press RETURN. When completed it is time to install the latest version of Python 3:
 
-    $ brew install python3
+    brew install python3
 
 Quit and restart the Terminal to have your PATH updated, then run python3 -V and pip3 -V:
 ![Homebrew installation of Python3](/img/contribute/pre-req_2.png)
@@ -22,8 +22,8 @@ Quit and restart the Terminal to have your PATH updated, then run python3 -V and
 
 If you want to uninstall Python 3 and Homebrew:
 
-    $ brew uninstall python3
-    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+    brew uninstall python3
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 
 !!! note "Additional Uninstallation Information"
     Further information about uninstalling:</br>
@@ -35,18 +35,18 @@ If you want to uninstall Python 3 and Homebrew:
 
 You can install Python packages with
 
-    $ pip3 install <package>
+    pip3 install <package>
 
 
 Installing MkDocs will install many other Python 3 packages.</br>
 If you only use Python 3 for this exercise then go ahead installing MkDocs right away, otherwise it is recommended to use python virtual environments.
 
-    $ python3 -m venv max-py3
-    $ cd max-py3/bin
-    $ source activate
-    $ python -V
-    $ pip -V
-    $ pip list
+    python3 -m venv max-py3
+    cd max-py3/bin
+    source activate
+    python -V
+    pip -V
+    pip list
 
 
 ![Create virtual environment](/img/contribute/pre-req_3.png)
@@ -64,15 +64,15 @@ If you only use Python 3 for this exercise then go ahead installing MkDocs right
 
 Install MkDocs [https://www.mkdocs.org/](https://www.mkdocs.org/)
 
-    $ pip install mkdocs
-    $ pip list
+    pip install mkdocs
+    pip list
 
 ![pip list after MkDocs package is installed](/img/contribute/pre-req_4.png)
 
 
 You can deactivate the virtual environment with this command:
 
-    $ deactivate
+    deactivate
 
 </br>
 ## Git / Github setup
@@ -88,15 +88,15 @@ You can deactivate the virtual environment with this command:
 
 Clone the github repository down to your local machine:
 
-    $ cd ~
-    $ mkdir Github
-    $ cd ~/Github
-    $ git clone git@github.com:IBM/monitor-hands-on-lab.git
-    $ cd monitor-hands-on-lab
+    cd ~
+    mkdir Github
+    cd ~/Github
+    git clone git@github.com:IBM/monitor-hands-on-lab.git
+    cd monitor-hands-on-lab
 
 Now build the complete site on your local machine:
 
-    $ ./build_all_mkdocs.sh
+    ./build_all_mkdocs.sh
     
 Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) and take a look at the complete IBM Maximo labs locally.  
 <br>
