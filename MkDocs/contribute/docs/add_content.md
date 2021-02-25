@@ -3,7 +3,7 @@
 Before starting to add or change existing content, create a branch for the changes.
 
 You can get a brief introduction to the use of branches here:<br>
-[https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches)
+[https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches){target=_blank}
 
 ## 1. Prepare your Git branch
 
@@ -32,7 +32,7 @@ In the terminal navigate to the root of this git repo and execute the build scri
 
     ./build_all_mkdocs.sh
 
-Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that your changes look as expected. 
+Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/){target=_blank} in order to verify that your changes look as expected. 
 
 !!! tip
     Press control-c to stop the web server and get back to the prompt.
@@ -62,7 +62,7 @@ Push the changes to the Github branch:
 
 ## 4. Create Pull request
 
-Go to the Github repository [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab)
+Go to the Github repository [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab){target=_blank}
 
 Select your branch in the dropdown box:
 ![Select branch](/img/contribute/add_select_branch.png)
