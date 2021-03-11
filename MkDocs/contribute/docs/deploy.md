@@ -1,14 +1,14 @@
 # Deploy to IBM Cloud
 
-This part of the contribution is performed by Carlos Ferreia (carlos.ferreira1@ibm.com).
+This part of the contribution is performed by Carlos Ferreia (carlos.ferreira1@ibm.com).</br>
 Contact him to accept your Pull Request and then perform the build and deploy.
 
-Use command line to deploy using ibm cloud cf push
+Build the site:
 
-    mkdocs build
-    mkdocs serve
+    cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project
+    ./build_all_mkdocs.sh
  
-Kill MK Docs Process
+Kill MK Docs Process and copy site content:
  
     ps -A | grep mkdocs
     cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project
@@ -16,7 +16,7 @@ Kill MK Docs Process
     cd mam-hol
 
 
-Deploy
+Deploy using ibm cloud cf push:
     
     cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/mam-hol
     ibmcloud login -sso

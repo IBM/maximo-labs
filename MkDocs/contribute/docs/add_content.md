@@ -3,15 +3,15 @@
 Before starting to add or change existing content, create a branch for the changes.
 
 You can get a brief introduction to the use of branches here:<br>
-[https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches)
+[https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches){target=_blank}
 
 ## 1. Prepare your Git branch
 
 Basically you need to do the following to create a new branch locally and on the Github repo:
 
-    $ git pull
-    $ git checkout -b [name_of_your_new_branch]
-    $ git push origin [name_of_your_new_branch]
+    git pull
+    git checkout -b [name_of_your_new_branch]
+    git push origin [name_of_your_new_branch]
 
 ## 2. Make changes
 
@@ -30,9 +30,9 @@ Make the changes in the markdown files, image files, and mkdocs.yml file.<br>
 
 In the terminal navigate to the root of this git repo and execute the build script:
 
-    $ ./build_all_mkdocs.sh
+    ./build_all_mkdocs.sh
 
-Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that your changes look as expected. 
+Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/){target=_blank} in order to verify that your changes look as expected. 
 
 !!! tip
     Press control-c to stop the web server and get back to the prompt.
@@ -42,19 +42,19 @@ Open the browser and navigate to [http://localhost:8080/](http://localhost:8080/
 
 When you are satisfied with your contribution take a look at the changes you have created in git:
 
-    $ git status
+    git status
 
 Add those files to git:
 
-    $ git add .
+    git add .
 
 Commit the changes:
 
-    $ git commit -m "Write a descriptive message of your changes"
+    git commit -m "Write a descriptive message of your changes"
 
 Push the changes to the Github branch:
 
-    $ git push origin [name_of_your_new_branch]
+    git push origin [name_of_your_new_branch]
 
 !!! note
     Repeate step 2 and 3 until you have fulfilled the purpose of your branch.
@@ -62,7 +62,7 @@ Push the changes to the Github branch:
 
 ## 4. Create Pull request
 
-Go to the Github repository [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab)
+Go to the Github repository [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab){target=_blank}
 
 Select your branch in the dropdown box:
 ![Select branch](/img/contribute/add_select_branch.png)
@@ -79,9 +79,9 @@ Give it a title and description. Hit the `Create pull request` button.
 
 Once the Pull request has been accepted and your commits are added to the master branch, it is time to clean up the branch locally and remotely (on Github).
 
-    $ git checkout master
-    $ git branch -d [name_of_your_new_branch]
-    $ git push origin :[name_of_your_new_branch]
+    git checkout master
+    git branch -d [name_of_your_new_branch]
+    git push origin :[name_of_your_new_branch]
 
 !!! note
     The `:` before the [name_of_your_new_branch] in the last command will delete it on Github.

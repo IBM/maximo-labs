@@ -122,7 +122,7 @@ Save the file.
 
 In a terminal navigate to the root of this git repo and execute the build script:
 
-    $ ./build_all_mkdocs.sh
+    ./build_all_mkdocs.sh
 
 It could look like this:
 ![Edit build_all_mkdocs.sh](/img/contribute/edit_build_4.png)

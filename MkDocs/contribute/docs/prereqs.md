@@ -1,55 +1,68 @@
 # Pre-Requisite Instructions
 
-Here are the required pre-requisites for contributing to The Maximo labs.
+Here are the required pre-requisites for contributing to The Maximo Labs.
 
-## Setup Python 3
+## Install Python 3
 
-You can install Python packages with
+It is recommended to install and use the latest release of Python 3.</br>
+First install Homebrew on Mac and then Python 3:
 
-    pip3 install <package>
-
-This will install into the site-package directory
-
-    /usr/local/lib/python3.7/site-packages
-    
-    usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install python3
-    python3 --version
-    sudo pip3 install virtualenv
+
+
+!!! note "Additional Information"
+    Installing Homebrew: [https://brew.sh/](https://brew.sh/){target=_blank}</br>
+    Installing Python 3: [https://formulae.brew.sh/formula/python3](https://formulae.brew.sh/formula/python@3.9){target=_blank}</br>
+    </br>
+    Uninstalling tips:</br>
+    [https://huybien.com/how-to-completely-uninstall-python-on-macos/](https://huybien.com/how-to-completely-uninstall-python-on-macos/){target=_blank}</br>
+    [https://docs.brew.sh/FAQ#how-do-i-uninstall-homebrew](https://docs.brew.sh/FAQ#how-do-i-uninstall-homebrew){target=_blank}
+</br>
+## Install MkDocs
+
+You will be using the package installer for python (pip) to install MkDocs within a python virtual environment (venv).</br>
+First lets get the python 3 virtual environment up and running:
+
     cd ~
-    virtualenv iot-python3
-    source iot-python3/bin/activate
-    python --version
-    pip --version
+    pwd
+    python3 -m venv max-py3
+    cd max-py3/bin
+    source activate
+    python -V
+    pip -V
+    pip list
 
-## Setup MkDocs
 
-Install MkDocs. https://www.mkdocs.org/
+![Create virtual environment](/img/contribute/pre-req_3.png)
+
+Then you will install the MkDocs packages and verify the packages has been installed:
 
     pip install mkdocs
+    pip list
 
-Active Virtual Environment 
- 
-    cd ~/iot-python3/bin
-    source activate
-   
-Change Directory into the Site
-   
-    cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/
+![pip list after MkDocs package is installed](/img/contribute/pre-req_4.png)
 
-Dectivate Virtual Environment 
+
+You can deactivate the virtual environment with this command:
 
     deactivate
 
+!!! note "Additional Information"
+    MkDocs: [https://www.mkdocs.org/](https://www.mkdocs.org/){target=_blank}</br>
+    Package Installer for Python: [https://pip.pypa.io/en/stable/](https://pip.pypa.io/en/stable/){target=_blank}</br>
+    Python 3 virtual environments: [https://docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html){target=_blank}
+
+</br>
 ## Git / Github setup
 
 1. Get a Github account
 2. IBMers can get access to the IBM Github area here:<br>
-[https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/)
+[https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/){target=_blank}
 3. Access the Github repo of the IBM Maximo Labs here:<br>
-[https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab)
+[https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab){target=_blank}
 4. Access the latest published labs here:<br>
-[https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/)<br>
+[https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/){target=_blank}<br>
 (This might not contain the latest changes from the Github repository)
 
 Clone the github repository down to your local machine:
@@ -64,9 +77,9 @@ Now build the complete site on your local machine:
 
     ./build_all_mkdocs.sh
     
-Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) and take a look at the complete IBM Maximo labs locally.  
+Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/){target=_blank} and take a look at the complete IBM Maximo Labs locally.  
 <br>
-To find these contribute instructions navigate to [http://localhost:8080/contribute](http://localhost:8080/contribute)
+To find these contribute instructions navigate to [http://localhost:8080/contribute](http://localhost:8080/contribute){target=_blank}
 
 !!! tip "Next step"
     You are now ready to either [add to an existing lab](../add_content/) or [create a new lab from scratch](../create_new/).
