@@ -1,5 +1,8 @@
 # Health Demo
 
+!!! note
+    Please follow the `Action` statements to navigate the steps and perform the lab.
+
 ## Overview
 
 Now that one asset has been identified as creating multiple alerts, the Operations Manager asked the Reliability Manager to dig deeper into all of the similar pumps, to make sure that there aren't any failures predicted to occur before planned maintenance.

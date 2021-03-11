@@ -9,14 +9,14 @@ nav:
   - Get back to Maximo Labs: /
   - APM Overview 8.2 Labs:
     - Welcome to the Maximo Monitor, Health and Predict Overview Lab: index.md
-    - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
     - Exercises:
+      - Exercise One:
         - 1. Remotely Monitor the Operational Status of Assets: monitor_assets.md
         - 2. Manage Asset Servicing: manage_assets.md
         - 3. Manage Asset Health: asset_health.md
         - 4. Predict Asset Performance : predict_performance.md
-    - Demo Steps:
+      - Exercise Two:
         - 1. Monitor: demo-monitor.md
         - 2. Manage - Mobile: demo-mobile.md
         - 3. Health: demo-health.md

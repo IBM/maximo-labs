@@ -1,6 +1,6 @@
 # Pre-Requisite Instructions
 
-Here are the required pre-requisites for the Maximo Template exercises.
+Here are the required pre-requisites for the Maximo exercises.
 
 # All Exercises
 
@@ -21,7 +21,7 @@ o Click `Create an IBM ID` link
 
 < Describe what is needed for Execise 1 >
 
-# Exercise 1 (If needed)
+# Exercise 2
 
-< Describe what is needed for Execise 1 >
+You will need access to Maximo Application Suite v8.2 and download the <b>Maximo Mobile for EAM</b> application in your application store.
 
