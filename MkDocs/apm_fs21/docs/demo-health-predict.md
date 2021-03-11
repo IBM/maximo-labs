@@ -1,5 +1,8 @@
 # Health - Predict Demo
 
+!!! note
+    Please follow the `Action` statements to navigate the steps and perform the lab.
+
 ## Overview
 There are several predictive models built to score against incoming sensor data for our asset.<br>
  • IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome.  Note that also included with the Maximo Application Suite is Watson Studio and Watson Machine Learning, both of which our Data Scientist can use for building, training, and maintaining predictive models.

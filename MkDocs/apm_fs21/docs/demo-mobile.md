@@ -1,5 +1,8 @@
 # Manage - Mobile Demo
 
+!!! note
+    Please follow the `Action` statements to navigate the steps and perform the lab.
+
 ## Service Request to Work Order
 
 Within Manage EAM, the newly created Service Request can be automated into a WO, where a manual review by a supervisor could occur where they can drill into related history records against the PUMP, they can also link directly to the monitor dashboard to review the details of the anomaly/alert.  Part of the evaluation may or may not give enough information to know exactly what needs to be addressed, so in this case an inspection should be performed. The supervisor can approve the work order and assign the appropriate resource.
