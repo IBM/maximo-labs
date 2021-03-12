@@ -12,17 +12,31 @@ Targeted to the Reliability Engineer, Maximo Health and Predict provide a view o
 Maximo Health and Predict share many of the same screens and are tightly integrated.  Base users of Maximo Application Suite will see "Maximo Health" at the top of each screen, while Premium users will see "Maximo Predict" along with columns, charts and graphs specific to their predictive models that are scoring assets.  Since Health and Predict are delivered in the Maximo Application Suite, it's easy to start with Health, and then move to Predict.
 
 As the Reliability Engineer, I'll identify assets the need attention, investigate those assets, and finally take an action to avoid unplanned downtime.<br>
-`Action:` Show grid view of assets in health.
+`Action:` Select Health Application in the right corner and show grid view of assets in health.
+
+![img](/img/apm_fs21/healthapp.png){:style="height:400px;width:800px"}
+![img](/img/apm_fs21/gridview.png){:style="height:400px;width:800px"}
 
 ## Review Asset's Health
 On the main screen, I can see a universal view of my managed assets in a familiar grid view. This is particularly valuable to me as the Reliability Engineer because I can see a mix of both EAM (Manage) IT data and sensor (Monitor) OT data together in a single view.<br>
  • These assets are coming from Maximo but we can connect to other EAM systems.  The data being shown is a mix of EAM data and calculated data.<br>
  • Different views of our data can be generated to make it easier to identify our critical assets.<br>
 
-To look at the status of my pumps, I'll add the status column.<br>
+To look at the status of my pumps, I'll add the status column.
+`Action:` Select `Manage Columns` and search status in the search bar. Check the box next to status and select `Ok`.
+
+![img](/img/apm_fs21/lookupcolumn.png){:style="height:400px;width:800px"}
+
  • I can also change, move, and resize columns of the grid view.
+ `Action:` Move column values around.
+
+![img](/img/apm_fs21/movecolumn.png){:style="height:400px;width:800px"}
 
 To focus on a certain set of pumps, I'll use the search feature and search for "PMP" to limit the list of all my assets.<br>
+`Action:` Search `PMP` in search bar above Asset Column.
+
+![img](/img/apm_fs21/pumpstatus.png){:style="height:250px;width:800px"}
+
  • I can also use filtering and sorting to help find what I'm looking for.  And, there are saved views ideal for different analysis or tasks.<br>
 
 In this view, you can see two columns with calculated data.<br>

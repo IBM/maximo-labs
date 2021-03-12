@@ -17,11 +17,7 @@ o Click `Create an IBM ID` link
 
 4.  Test your access to the Maximo Application Suite environment.
 
-# Exercise 1 (If needed)
+5. Download the <b>Maximo Mobile for EAM</b> application in your application store for Mobile exercise.
 
-< Describe what is needed for Execise 1 >
-
-# Exercise 2
-
-You will need access to Maximo Application Suite v8.2 and download the <b>Maximo Mobile for EAM</b> application in your application store.
+![img](/img/apm_fs21/newappUI.png){: style="height:150px;width:250px;margin-left:40px"}
 
