@@ -40,9 +40,10 @@ I can also see additional information including links in the long description th
 ![img](/img/apm_fs21/monitorlinks.png){: style="height:400px;width:250px;margin-left:40px"}
 
 By following the applications guidance, I tap on the blue highlighted TASK icon The number 3 is shown indicating there are 3 incomplete tasks. Here I can see the individual steps needed to complete the inspection. It’s important that as a new technician that I have clear instructions available to me to ensure I’m performing the correct steps and gathering the proper information needed to complete this work. In Maximo Mobile, it is all about presenting the right information, in the right place, at the right time. I’m able to track my progress by checking off the tasks as they are being performed.<br> 
-`Action:` Select the List Number Icon under the details of the Work Order. Review the tasks assigned and click each line to mark complete.
+`Action:` Select the List Number Icon under the details of the Work Order. Review the tasks assigned and click each line to mark complete. Then select Done.
 
-(need image here of steps with actual numbers on them, need image of each task and them being completed)
+![img](/img/apm_fs21/worktasks.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](/img/apm_fs21/worktasks2.png){: style="height:400px;width:250px;margin-left:40px"}
 
 I have determined that the vibration is being caused by the pump skid being loose and has also noticed that this non-OEM damper is degraded and should probably be replaced. I add this to the comments in the work order work log that "Tightened a loose bolt on the skid. Consider replacing dampener"<br>
 `Action:` Open the Worklog by clicking on the Worklog Icon next to the List Number Icon that we were just working in. Type in the description of comments.
@@ -58,9 +59,10 @@ I then need to record the failure information so that accurate data on the cause
 ![img](/img/apm_fs21/failure2.png){: style="height:400px;width:175px;margin-left:40px"}
 
 I want to also record the time it took to execute the steps of the WO and complete the WO. This data will help future planners and schedulers to estimate how long work like this typically takes, and more efficiently plan and assign these types of jobs.<br>
-`Action:` Add time or stop the clock and close out the work order.
+`Action:` Add time or stop the clock and close out the work order by selecting Complete work.
 
-(need image here of time card)
+![img](/img/apm_fs21/timecard1.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](/img/apm_fs21/timecard2.png){: style="height:400px;width:250px;margin-left:40px"}
 
 
 I will now hand it over to the reliability engineer to do some further analysis since the technician is only tasked with  working on specific assets in their care whereas the reliability engineer is looking across all sites/pumps.

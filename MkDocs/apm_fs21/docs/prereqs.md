@@ -44,3 +44,5 @@ o Click `Create an IBM ID` link
 
     ![img](/img/apm_fs21/opennav.png){: style="height:400px;width:250px;margin-left:40px"}
 
+!!! note
+    If you would like to show this demo on your computer you can use [Quicktime for macOS](https://support.apple.com/guide/quicktime-player/welcome/mac) or [Reflector](https://www.airsquirrels.com/reflector) as software to reflect your phone screen.
