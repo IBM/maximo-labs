@@ -6,7 +6,9 @@ You will learn a highlevel overview of the Maximo Application Suite applications
 
 Students doing the demo in this lab should have been provided access to Maximo Application Suite v8.2 instance by the Lab Facilitator or your IBM Rep.  
 
-Preparing for delivering the demo should read the Pre-Requisites.
+Preparing for delivering the demo should read the Pre-Requisites located in the left column where the indexes for the entire lab are.
+
+![img](/img/apm_fs21/mkdocstab.png){:style="height:400px;width:400px"}
 
 See [Contributing to Labs](../../about) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
 welcome your contributions to existing or new exercises. 
@@ -52,6 +54,6 @@ A Water Resource Authority needs to manage water and wastewater treatment across
 
 ---
 
-**Updated: 2021-03-10**
+**Updated: 2021-03-16**
 
 ---

@@ -24,8 +24,7 @@ Look under the appropriate version below to find the labs you are looking for.
 
 ### Faststart 2021 Labs
 
-![Under Development: ](/img/under_development.png) [IBM Maximo Monitor, Health & Predict (FS21)](/apm_fs21/)  
-![Not Started: ](/img/not_started.png) [IBM Maximo Visual Inspection (FS21)](/mvi_fs21/)  
+![Ready: ](/img/ready.png) [IBM Maximo Monitor, Health & Predict (FS21)](/apm_fs21/)   
 
 
 **ENJOY :-)**
@@ -38,7 +37,7 @@ Look under the appropriate version below to find the labs you are looking for.
 
 ---
 
-**Updated: 2021-01-05**
+**Updated: 2021-03-16**
 
 ---
 © 2020 International Business Machines Corporation.  No part of this document may be reproduced or transmitted in any 
