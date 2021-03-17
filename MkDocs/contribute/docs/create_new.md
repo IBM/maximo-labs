@@ -106,7 +106,7 @@ This file contains the shell script for building the entire IBM Maximo Labs stat
 Select and open the `build_all_mkdocs.sh` file
 ![Select build_all_mkdocs.sh](/img/contribute/edit_build_1.png)
 
-Scroll bown to find `# Build the template level:`
+Scroll down to find `# Build the template level:`
 ![Edit build_all_mkdocs.sh](/img/contribute/edit_build_2.png)
 
 Copy the section and paste it above the `#### DON't CHANGE THE BELOW MANDATORY...` line. Change the comment and the `lab=` variable to match the folder of the new lab.
