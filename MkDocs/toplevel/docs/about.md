@@ -24,7 +24,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 - Paulina Thomas - <Paulina.Thomas@ibm.com>
 
-- Cecilia Duffus - <cecilia.d@ibm.com>
+- Cecilia Stark - <cecilia.stark@ibm.com>
 
 - Nirel Cortes - <nirel.cortes@ibm.com>
 
@@ -40,6 +40,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2021-03-16|Cecilia Stark|Updated the status of Fast Start 2021 Labs.|
 |2021-01-05|Jan Ekstrøm|Migration to new IBM Maximo Labs is complete. OLD-REPO is purged.|
 |2021-01-05|Jan Ekstrøm|Added an Additional MkDocs Sub-sites section to provide direct liks to Contribute and Template.|
 |2021-01-05|Jan Ekstrøm|Added IBM Maximo Visual Inspection (8.2) to the list of Under development labs in the MAS 8.2 section.|
