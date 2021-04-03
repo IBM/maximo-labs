@@ -19,7 +19,7 @@ o Click `Create an IBM ID` link
 
 5. Download the <b>Maximo Mobile for EAM</b> application in your application store for Mobile exercise.
 
-![img](/img/apm_fs21/newappUI.png){: style="height:150px;width:250px;margin-left:40px"}
+![img](/img/apm_fs21/newappui.png){: style="height:150px;width:250px;margin-left:40px"}
 
 ## Set Up for Maximo Mobile
 
