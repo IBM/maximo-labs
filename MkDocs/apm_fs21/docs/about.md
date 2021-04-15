@@ -3,6 +3,7 @@
 
 - Carlos Ferreira - <carlos.ferreira1@ibm.com>
 - Cecilia Stark - <cecilia.stark@ibm.com>
+- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 
 ---
 
@@ -10,6 +11,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2021-04-15|Jan Ekstrøm| Renamed image file references using lower case file names and extensions. |
 |2021-03-16|Cecilia Stark| Finished 8.2 lab. |
 |2021-03-15|Cecilia Stark| Updated the demo steps with images - demo-monitor.md, demo-mobile.md, demo-health.md, demo-health-predict.md, pre-reqs.md, index.md. |
 |2021-03-10|Cecilia Stark| Updated the demo steps - demo-monitor.md, demo-mobile.md, demo-health.md, demo-health-predict.md, pre-reqs.md, index.md. |
