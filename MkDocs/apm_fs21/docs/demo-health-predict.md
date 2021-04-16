@@ -46,15 +46,15 @@ Our anomaly detection model creates a threshold based on history, and we can see
 At the bottom of the page, is an asset timeline that shows us several pieces of key information about our asset in the same graph.<br>
 `Action:` Open Asset Timeline tab.
 
-![img](/img/apm_fs21/assetT1.png){:style="height:300px;width:600px"}
-![img](/img/apm_fs21/assetT2.png){:style="height:300px;width:800px"}
+![img](/img/apm_fs21/asset_t1.png){:style="height:300px;width:600px"}
+![img](/img/apm_fs21/asset_t2.png){:style="height:300px;width:800px"}
 
 
   For example, we can see that I have a predicted failure (on the top line of the graph), that will occur before our next planned maintenance (on the second line of the graph).<br>
 •	Other information on the chart, like past work orders and inspection, provide valuable insight into our asset's history, and may support what kind of action we take.<br>
 `Action:` Hover over predicted failure.
 
-![img](/img/apm_fs21/assetT3.png){:style="height:300px;width:800px"}
+![img](/img/apm_fs21/asset_t3.png){:style="height:300px;width:800px"}
 
 While each piece of information, or widget, gives us insight into the state of our asset, all of the information together, gives us a richer view, and helps us make a data-driven decision on how to address this asset.
 
@@ -70,12 +70,12 @@ I can Create a service request, Create a work order, Recalculate a health score,
 
 In this case, I'll Edit the source asset record to adjust the next scheduled maintenance to avoid a potential failure...and unplanned downtime.<br>
 `[For demo purposes, you can click through to Maximo EAM to show the asset record, but don’t create a new maintenance record]`
-![img](/img/apm_fs21/editsourceR.png){:style="height:300px;width:800px"}
+![img](/img/apm_fs21/edit_source_record.png){:style="height:300px;width:800px"}
 
 Once that’s done, I mark my asset addressed, and move to my next asset, confident that we'll avoid unplanned downtime at our water treatment plant.<br> 
 `[For demo purposes, you can click on the “Queue unaddressed button, but please unclick it so that the asset remains in the queue for the next demo.]`
 
-![img](/img/apm_fs21/queueaddressed.png){:style="height:200px;width:800px"}
+![img](/img/apm_fs21/queue_addressed.png){:style="height:200px;width:800px"}
 
 Replacing a $5 damper could save thousands of dollars in capital costs preventing the pump from failing by vibrations.  The Reliability Engineer can also use this this type of information to ensure that they aren’t over maintaining their assets.
 
