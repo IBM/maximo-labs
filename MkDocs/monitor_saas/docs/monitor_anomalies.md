@@ -20,23 +20,27 @@ Watch the 10 min video explaining why anomalies matter to business.
 In this exercise you quickly create some simulated robot operational data that you will use in your exercises in this Exercise.  You will use data from simulated industry robots as the assets you are responsible to monitor.
 
 1.  Click `Home` to see the top level tasks you can do with Monitor. ![Home](/img/monitor_saas/i89.png) &nbsp;
-2.  Click `Monitor Entities` You will create a simulated set of robot assets (entities) that represent an assembly line of manufacturing robots.
-3.  Click `Create entity type` button. ![Create an Entity Type](/img/monitor_saas/i90.png) &nbsp;
-4.  Select on `Sample Robot` and click on `Next`button.  ![Create a Robot Entity Type and simulated robot metrics](/img/monitor_saas/i91.png) &nbsp;
-5.  Edit the Entity Type name prepending your own initials `Your_Initials_Robots_Type`.![Create a Robot Entity Type and simulated robot metrics](/img/monitor_saas/i92.png) &nbsp;
-6.  Click `Submit` button.  Monitor will create  a set of robots you can monitor with simulated random data.  
+2.  Click `Set up assets` You will create a simulated set of robot assets (entities) that represent an assembly line of manufacturing robots.
+3.  Click `+` button. ![Create an Entity Type](/img/monitor_saas/i90.png) &nbsp;
+4.  Select on `Sample Robot Type` and click on `Next`button.  ![Create a Robot Entity Type and simulated robot metrics](/img/monitor_saas/i91.png) &nbsp;
+5.  Edit the Asset Type name prepending your own initials `Your_Initials_Robots_Type`.![Create a Robot Asset Type and simulated robot metrics](/img/monitor_saas/i92.png) &nbsp;
+6.  Click `Create` button.  Monitor will create a set of robots you can monitor with simulated random data.
 
-## Explore Instance Dashboards
-An [instance dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/instance_dashboard_tutorial.html) displays the operational metrics for a single asset, i.e. one specific industry robot. The data metrics of the robot are presented on the dashboard using cards.
+## Explore Asset Type Dashboard
+An [asset dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/instance_dashboard_tutorial.html) displays the operational metrics for a single asset, i.e. one specific industry robot. The data metrics of the robot are presented on the dashboard using cards.
 
-1.  On the `Data` tab, expand `Metric` to see the metrics that Monitor has created for your Robots with simulated time series data.   The outline shows the acc, load, speed and torque metrics in the data items outline. ![View recent (Less than 24 hours) Robot metrics across all robots](/img/monitor_saas/i93.png) &nbsp;
-2.  Expand  `Dimensions` to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by `Manufacturer`.  [Dimensions](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_add_dimensions_api.html) are meta data for describing an asset that can be used also be used to filter assets in tables or in functions. ![View Robot dimensions across all robots](/img/monitor_saas/i94.png) &nbsp;
-3.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like generating a random number to cause a fault like `abnormal_stop_count`. ![View Robot calculated metric functions](/img/monitor_saas/i95.png)
-4.  Click the `Dashboards` tab to  to see the list of `Entities`(Robots) in the `Instance Dashboards` table.
-5.  Click one of the Robot instance dashboards that have been automatically created for you by Monitor. ![View Robot calculated metric functions](/img/monitor_saas/i96.png) &nbsp;
-6.  Click on the `Back from` calendar drop down to see historical performance metrics of this robot.   ![View Robot calculated metric functions](/img/monitor_saas/i97.png) &nbsp;
-7.  Note the different types of [cards](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html) in your dashboard.  Monitor provides multiple types of cards to choose from when configuring a dashboard.
-8.  In this exercise the Instance Dashboard for the Robots was automatically created for you.  You can also export a summary dashboard and import it by managing instance dashboards as shown in the next exercise.  Take a moment to see what cards were created for you in the instance dashboard.
+1.  Click on `Manage asset type`
+2.  On the `Data` tab, expand `Metric` to see the metrics that Monitor has created for your   Robots with simulated time series data.
+ The outline shows the acc, load, speed and torque metrics in the data items outline. ![View Robot metrics](/img/monitor_saas/i93.png) &nbsp;
+3.  Expand  `Dimension` to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by `Manufacturer`.  [Dimensions](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_add_dimensions_api.html) are meta data for describing an asset that can also be used to filter assets in tables or in functions. ![View Robot dimensions across all robots](/img/monitor_saas/i94.png) &nbsp;
+4.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like `work_performed`. ![View Robot calculated metric functions](/img/monitor_saas/i95.png)  
+5.  Click on `Monitor` on the left side.
+6.  Search for `Your_Initials` to find the asset type you created and click on it.
+7.  Robot asset dashboards have been automatically created for you by Monitor.  Click on asset(Robot) `73000` 
+8.  Click on `Asset Metrics Dashboard`
+9. Click one of the Robot asset dashboards that have been automatically created for you by Monitor. ![View asset metrics dashboard](/img/monitor_saas/i96.png) &nbsp;
+10.  In this exercise the Asset Dashboard for the Robots was automatically created for you.  Take a moment to see what cards were created for you in the `Asset Metrics Dashboard`.
+Note the different types of [cards](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html) in your dashboard.  Monitor provides multiple types of cards to choose from when configuring a dashboard.
 
 *Value Cards*
 A value card shows a single or multiple entity metric value. A value may be attributed with a title, a label and a unit. The value may be given a precision and rules on threshold levels.  A value card may be sized as a wide or tall card with big or small sized numbers.
@@ -51,72 +55,74 @@ A table card shows tabular data by columns. A table card is configured by refere
 *Image cards*
 An image card shows as a custom image with configured hotspots. Each hotspot is indicated at a position on the image with an icon and configured as a value card with entity metrics. The value card is shown when clicking on the hot spot.  You will add one later for displaying an image of the robot.
 
-## Edit Instance Dashboard
-In this exercise you will modify the layout of the individual robot instance dashboard.  An asset instance dashboard is a configuration of cards, layout and the datasource metrics for a specific asset. One instance dashboard json configuration file is used for all robots of your Robot Entity type.  You can export and dashboard configuration file adding new cards.  You can also reuse and import dashboard configuration files from others.
+## Edit Asset Dashboard
+In this exercise you will modify the layout of the individual robot asset dashboard.  An asset dashboard is a configuration of cards, layout and the datasource metrics for a specific asset. You can export dashboard configuration to JSON. You can also reuse and import dashboard configuration files from others.
 
-1.  Click the `gear icon` to modify the layout of your robot instance dashboard.  This dashboard template is shared by all robots in your Entity Type. ![Manage Instance Robot dashboard](/img/monitor_saas/i98.png) &nbsp;
-2.  Monitor provides a responsive user interface as the display size of the device or browser window changes you can reposition the cards.  Change the card layout of your dashboard by dragging cards around with you mouse. ![View Robot instance dashboard](/img/monitor_saas/i100.png) &nbsp;
-3.  Once you are satisfied with the card layout, change the width of the browser window to a smaller size.  Note the `Dashboard Size` of the layout has changed.  Once again change the layout of your dashboard by dragging cards around with your mouse. ![View Robot instance dashboard](/img/monitor_saas/i101.png) &nbsp; The dashboard configuration saves all the adjustments you make to the layout for each resize of your browser window.
-4.  Click on `Export` button. The dashboard configuration file in a json format is saved to your local downloads directory on your computer.  
-5.  Click on `Save` to save the new dashboard layout.
+1.  Click the `gear icon` to modify the layout of your robot asset dashboard.  ![Edit Robot dashboard](/img/monitor_saas/i97.png) &nbsp;
+2.  Monitor provides a responsive user interface as the display size of the device or browser window changes you can reposition the cards.  Change the card layout of your dashboard by dragging cards around with you mouse. ![View Robot asset dashboard](/img/monitor_saas/i98.png) &nbsp;
+3.  Once you are satisfied with the card layout, change the width of the browser window to a smaller size.  Note the `Dashboard Size` of the layout has changed.  Once again change the layout of your dashboard by dragging cards around with your mouse.  The dashboard configuration saves all the adjustments you make to the layout for each resize of your browser window.
+4.  Click on `Export` icon. The dashboard configuration file in a json format is saved to your local downloads directory on your computer.  
+5.  Click on `Save and close` to save the new dashboard layout.
 
 
 # Create a Summary Dashboard
-In the previous exercise you modified an instance dashboard for each Robot.   In this exercise you will create a [Summary Dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/summary_dashboard_tutorial.html).  There is one summary dashboard presenting aggregated and filtered performance KPI across all robots of the type.  A summary dashboard allows you to see the metrics for a filtered group of assets.  "Show me all robots from a manufacturer and with a specific firmware.""
+In the previous exercise you modified an asset dashboard for each Robot.   In this exercise you will create a [Summary Dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/summary_dashboard_tutorial.html).  There is one summary dashboard presenting aggregated and filtered performance KPI across all robots of the type.  A summary dashboard allows you to see the metrics for a filtered group of assets.  "Show me all robots from a manufacturer and with a specific firmware.""
 
 These filters are called dimensions in Monitor.  Later in this Exercise you will learn how to assign dimensions to the entities. Our simulated robots already have the appropriate dimensions assigned to each robot.  Robot 73000 may have a manufacturer GHI Industries and Robot 73002 may have a manufacturer Rentech. A summary dashboard allows you filter assets and then compute the data metrics aggregations for the applied filter.  For example, the Max, Min and Mean torque of all robots for the filtered scope of a selected manufacturer.
 
-A summary dashboard uses time grains when computing the aggregations.  Monitor can display four types of summary dashboards. You can choose by hour, day, week, month time grains.  A summary dashboard supports the same cards as an instance dashboard.  The next steps show you how to create a daily summary dashboard for all your robots.
+A summary dashboard uses time grains when computing the aggregations.  Monitor can display four types of summary dashboards. You can choose by hour, day, week, month time grains.  A summary dashboard supports the same cards as an asset dashboard.  The next steps show you how to create a daily summary dashboard for all your robots.
 
 1.  From the side menu, click `Monitor`
-2.  From the `Entity Types` tab, search for your Entity Type by typing the name in the search field. Select your entity type and click `View`
-3.  On the `Dashboards` tab ![Create summary dashboard](/img/monitor_saas/i102.png) &nbsp;
-4.  Click `New Summary`
-5.  On the `Definition` page, assign the name `robot_daily_summary` to the dashboard
-![Data filter and data aggregation using dimensions](/img/monitor_saas/i103.png) &nbsp;
-6.  Select the `daily` time grain
-7.  Accept the default value for `timestamp`
-8.  The simulated robot data that was created by Monitor also includes dimensions.  Select `load_rating` as the lowest-level dimension and `manufacturer` as the parent dimension
-9.  Select `firmware` as the mid-level dimension and `manufacturer` as the parent dimension
-10.  Select `manufacturer` as the dimension and leave `None` as the parent since it is the top level filter and aggregation we want to see.
-11. Click `Next` and choose the max, min and mean for aggregation methods for all the number metrics. ![Assign dimensions for order of aggregations](/img/monitor_saas/i104.png) &nbsp;
-12. Click `Export`to save the dashboard json configuration. You will edit it later.  You can also import dashboard configurations from this menu.
-![Export the summary dashboard configuration json](/img/monitor_saas/i105.png) &nbsp;
-13.  Click `Configure Dashboard` to create the dashboard which will take several minutes.  Your dashboard should like something like the one below.
-![Expoert the summary dashboard configuration json](/img/monitor_saas/i106.png) &nbsp;
-14.  Notice the summary dashboard form automatically added the aggregation functions for min, max and mean to your `Metrics (calculated)`.
-15.  Click on `Data` tab and expand the `Metrics (calculated)` section of the `Data Items` to see the daily min, max and mean calculated metrics.  They should look something like the figure below. ![View the min, max and mean calculated metrics ](/img/monitor_saas/i131.png) &nbsp;
-16.  Optionally repeat the steps above to create summary dashboards to create hourly, weekly and monthly aggregation performance metrics summaries of the all robots.
+2.  From the `Asset types` tab, search for your Entity Type by typing the name in the search field. Select your entity type and click on it.
+3.  Click `+` On the `Dashboards` tab.
+4.  On the `Definition` page, assign the name `robot_daily_summary` to the dashboard
+![Define summary dashboard](/img/monitor_saas/i99.png) &nbsp;
+5.  Select the `Daily` time grain
+6.  Select `load_rating` and `manufacturer`
+7. Click `Next` and choose the max, min and mean for aggregation methods for all the number metrics. ![Assign aggregation method](/img/monitor_saas/i100.png) &nbsp;
+8. Click `Configure dashboard`
+9. Export the dashboard to JSON that you will use later.
+![Export the summary dashboard configuration json](/img/monitor_saas/i101.png) &nbsp;
+10.  Click `Create`
+11.  Click on `robot_daily_summary` tab and see that the dashboard is being created.
+12.  [Optional] repeat the steps above to create summary dashboards to create hourly, weekly and monthly aggregation performance metrics summaries of the all robots.
 
 # Add Metric Line Card
 You need anomalies to be able to detect anomalies.  Monitor provides simulated anomalies that you can apply to learn about anomaly detection.  In this exercise you will:
 
 *  Add a simulated anomaly metric named `travel_time_anomaly`.
-*  Add a line card to display the `travel_time_anomaly` metric an instance dashboard.
+*  Add a line card to display the `travel_time_anomaly` metric on an asset dashboard.
 
- The `travel_time` deviation that was generated earlier for your robot simulated data did not have anamolies in it.   The `AnomalyGeneratorExtremeValue` function adds anomalies to the metric you choose.   It abruptly increases or decreases the normal metric values for the metric you choose.  In the steps below you will use this function to add a new calculated metric with anomalies named `travel_time_anomaly`  You will add a line chart to display the anomalous data on your instance dashboard.  Later you will use Maximo Asset Monitor anomaly detection functions to detect these anomalies.  A SCADA system would likely not be able to detect these type of abrupt anomaly increase or decrease in metric values. SCADA systems typically only provide max or min business rule thresholds.
+ The `travel_time` deviation that was generated earlier for your robot simulated data did not have anomalies in it.   The `AnomalyGeneratorExtremeValue` function adds anomalies to the metric you choose.   It abruptly increases or decreases the normal metric values for the metric you choose.  In the steps below you will use this function to add a new calculated metric with anomalies named `travel_time_anomaly`  You will add a line chart to display the anomalous data on your asset dashboard.  Later you will use Maximo Asset Monitor anomaly detection functions to detect these anomalies.  A SCADA system would likely not be able to detect these type of abrupt anomaly increase or decrease in metric values. SCADA systems typically only provide max or min business rule thresholds.
 
 ##Add Simulated Anomaly Data for Travel Time
 
 In this part of the exercise you will create simulated extreme anomalous values for travel time.  
-1.  Search the function catalog for  `AnomalyGeneratorExtremeValue` to create extreme simulated anomaly data.  
-![Search Function Catalog for Anomaly Generator Extreme Value](/img/monitor_saas/i107.png) &nbsp;
-2.  Choose  `travel_time` for the metric `input_item`.  Extreme anomaly values will be added to this time series metric.  ![Add anomaly metric](/img/monitor_saas/i108.png) &nbsp;
-3.  Set `factor` to a value of `100`.  This is how frequently an anomaly will occur.  An anomaly will be generated after every `100` data points.
-4.  Set `size` to a value of `4`.  This is how extreme value will be.  An anomaly will be `4` times the source `travel_time` metric.
-5.  Click `Next` to configure schedule to calculate historical values `Calculating the last` field to the name the metric being analyzed for anomalies. ![Toggle alert schedule and look back period view](/img/monitor_saas/i108b.png) &nbsp;
-6. Click `Auto schedule` on button to configure the functions schedule.
-7.  Set the `output_metric` to `travel_time_anomaly`.
-8.  Set the `Calculating the last` to `2` days to have Monitor generate 2 days of historical simulated anomalous data for `travel_time_anomaly`.
-9.  Click `Create`.  After 15 minutes the function should be complete and the anomaly data will be available.
+1.  Click on `Setup` on the left hand side.
+2.  Search for `Your_Initials` and click on the asset type you created.
+3.  Click on `73000` from the table.
+4.  Click on `Define dimensions in asset type`
+5.  Click on `Data` tab.  Click on `+`
+Search the function catalog for  `AnomalyGeneratorExtremeValue` to create extreme simulated anomaly data.
+![Search Function Catalog for Anomaly Generator Extreme Value](/img/monitor_saas/i104.png) &nbsp;
+6. Click `Select`
+7. Choose  `travel_time` for the metric `input_item`.  Extreme anomaly values will be added to this time series metric.
+8.  Set `factor` to a value of `100`.  This is how frequently an anomaly will occur.  An anomaly will be generated after every `100` data points.
+9.  Set `size` to a value of `4`.  This is how extreme value will be.  An anomaly will be `4` times the source `travel_time` metric.
+    ![Add anomaly metric](/img/monitor_saas/i105.png) &nbsp;
+10.  Click `Next` 
+11.  Click `Auto schedule` on button to configure the functions schedule.
+12.  Set the `output_metric` to `travel_time_anomaly`.
+13.  Set the `Calculating the last` to `2` days to have Monitor generate 2 data of historical simulated anomalous data for `travel_time_anomaly`.
+14.  Click `Create`.  After 15 minutes the function should be complete and the anomaly data will be available.
 
 ###Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using the UI widget
 In this part of the exercise you will visualize the simulated `travel_time_anomaly` in a line card.
 
-1.  Click on Dashboards tab to see the list of instance dashboards
-2.  Click on one of the robot instance dashboards in the table list.
-3.  Click on `gear icon` top right.  Choose Edit dashboards
-4.  Continue
+1.  From the side menu, click `Monitor`
+2.  Search for `Your_Initials` and click on the asset type you created.
+3.  Click on `robot_daily_summary` tab
+4.  Click on `gear icon` top right.  Choose Edit dashboards
 5.  Choose `Time series line` from the right hand selection
 6.  Title: Travel Time with Anomaly
 7.  Time range: Last 24 Hours
@@ -133,11 +139,9 @@ In this part of the exercise you will visualize the simulated `travel_time_anoma
 
 In this part of the exercise you will visualize the simulated `travel_time_anomaly` in a line card.
 
-1.  Click on `Dashboards` tab to see the list instance dashboards
-2.  Click on one of the robot instance dashboards in the table list.
-3.  Click on `Gear` icon top right.  Choose `Edit dashboards`![Edit Dashboard](/img/monitor_saas/i129.png) &nbsp;
-4.  Click on `Export` button top right. Instance dashboard json file should be saved in your browser downloads directory with a name of `Industrial Robot summary-dashboard.json`
-![Export Instance Dashboard JSON](/img/monitor_saas/i109b.png)&nbsp;
+1.  Click on `Industrial Robot summary` tab
+3.  Click on `Gear` icon top right.  Choose `Edit dashboards`
+4.  Click on `Export` icon top right. Asset dashboard json file should be saved in your browser downloads directory with a name of `Industrial Robot summary-dashboard.json`
 5.  Open the exported instance dashboard JSON file using an Integrated Developer Environment like [Atom](https://atom.io/) or copy the file contents into an online [Web JSON editor](https://jsoneditoronline.org/#left=local.ginesu)
 6.  Read and learn about the [JSON structure of Monitor dashboard template](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html)
 &nbsp;
@@ -177,9 +181,9 @@ In this part of the exercise you will visualize the simulated `travel_time_anoma
 10.  Make sure to change all values with card sizes of `XLARGE` to `LARGE` and `XSMALLWIDE`to `SMALLWIDE`, since these formats have been deprecated.
 11.  In the IDE, save your changes to the instance dashboard JSON file.
 12.  You can see the finished [Industrial_Robot_Instance_Travel_Time.json](/monitor_saas/json/Industrial_Robot_Instance_Travel_Time.json) &nbsp;
-13.  Return to the Monitor dasshboard editor and click on the `Import` button.
+13.  Return to the Monitor dasshboard editor and click on the `Import` icon.
 14.  Choose the `file` you updated with the line card click `open` to import your updated JSON file.
-15.  Your instance dashboard should now look similar to the one below and have a `travel_time_anomaly` Card with some extreme anomalies like the one in the red rectangle. ![Robot Instance Dashboard](/img/monitor_saas/i114.png).
+15.  Your asset dashboard should now look similar to the one below and have a `travel_time_anomaly` Card with some extreme anomalies like the one in the red rectangle. ![Robot Asset Dashboard](/img/monitor_saas/i114.png).
 
 # Add Anomaly Detection
 Maximo Asset Monitor includes models to [detect anomalies](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html) in the function catalog.  The anomaly detection functions can detect many types of anomaly patterns.  These include:
@@ -193,14 +197,13 @@ Maximo Asset Monitor includes models to [detect anomalies](https://www.ibm.com/s
 
 In this exercise you will:
 
- *  **Choose an entity** to analyze.
+ *  **Choose an asset** to analyze.
  *  **Choose a metric** to analyze.
- *  **Add anomaly functions** to your Robot Entity Type to score how likely an anomaly is occurring.
- *  **Add a line chart** to visually compare if high anomaly model scores correlate with the robot `travel_time_anomaly` metric on each robot instance dashboard.
+ *  **Add anomaly functions** to your Robot Asset Type to score how likely an anomaly is occurring.
+ *  **Add a line chart** to visually compare if high anomaly model scores correlate with the robot `travel_time_anomaly` metric on each robot asset dashboard.
  *  **Add anomaly alert functions** with score thresholds that corresponds to a level that indicates an anomaly for a robot metric.
  *  **Update a function**  with a new metric name or configuration values if needed.
  *  **Add alerts to a line chart** to visually see where anomalies are occurring on the `travel_time_anomaly` metric.
- *  **Add alerts table to robot instance and summary dashboard** to summarize anomaly alerts.
 
 ---
 *Before you begin:*  
@@ -213,14 +216,14 @@ Watch the 19 min video explaining how to configure anomaly detection functions, 
 
 ---
 
-**Choose an Entity to Analyze**
 
-Imagine you are managing a fleet of delivery vehicles.  One out of the five vehicles is a car instead of a scooter. If you wanted to detect anomalies for excessive miles per gallon performance you should analyze the miles per gallon metric for the car separately from the scooters.  Add an `EntityFilter` function to isolate a function analysis to an individual entity.
+Imagine you are managing a fleet of delivery vehicles.  One out of the five vehicles is a car instead of a scooter. If you wanted to detect anomalies for excessive miles per gallon performance you should analyze the miles per gallon metric for the car separately from the scooters.  Add an `EntityFilter` function to isolate a function analysis to an individual asset.
 
 1.  While editing your entity type,  search the function catalog for `EntityFilter` function. 
 2.  On the `Data` tab, click the '+' button and search in the function catalog for `EntityFilter`.   ![Add Data](/img/monitor_saas/AddFunction.png)&nbsp;
 3.  On the function `Configuration` tab, enter the list of entity ids separated by a comma or `73000` for just one entity. ![Choose Entity](/img/monitor_saas/a1.png)&nbsp;  
-4.  On the function `Output` tab, enter the name of they filtered entity `entity_73000` for the output metric name.  ![Name it entity_73000](/img/monitor_saas/a2.png)&nbsp; 
+4.  On the function `Output` tab, enter the name of they filtered entity `entity_73000` for the output metric name.  ![Name it entity_73000](/img/monitor_saas/a2.png)&nbsp;
+5. Click `Create`
 
 **Choose a Metric to Analyze**
 
@@ -228,10 +231,12 @@ Add the `Filter` function you can isolate your analysis to an individual entity 
 
 1.  While editing your entity type,  search the function catalog for `Filter` function. 
 2.  On the `Data` tab, click the '+' button and search in the function catalog for `Filter`.   ![Add Data](/img/monitor_saas/AddFunction.png)&nbsp;
-3.  Choose `entity_73000` output item from the previous function as source and expression shown below.  ![Choose Filter](/img/monitor_saas/a4.png)&nbsp;
+3.  Choose `entity_73000` output item from the previous function as source shown below.  
+![Choose Filter](/img/monitor_saas/a4.png)&nbsp;
 4.  On the function `Configuration` tab, choose `${entity_73000} == True` as the expression.  ![Choose Filter](/img/monitor_saas/a3.png)&nbsp;
 5.  On the function `Configuration` tab, choose `travel_time_anomaly` as the metric to analyzed for `filtered_sources`.
-6.  On the function `Output` tab, enter the name of they filtered entity `travel_time_anomaly_entity_73000` for the output metric name.  
+6.  Click `Next`
+7.  On the function `Output` tab, enter the name of they filtered entity `travel_time_anomaly_entity_73000` for the output metric name.  
 
 
 **Add Anomaly Functions**
@@ -243,18 +248,18 @@ You will add an anomaly function that will provide a score of how likely the sin
 2.  Select `K-MeansAnomalyScore`.  Notice the different kinds of [Anomaly Model functions](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html) included with Monitor. Click `Select` button. ![Choose K-MeansAnomalyScore Anomaly Model](/img/monitor_saas/i114b.png)&nbsp;
 3.  Select the metric to score for anomalies `travel_time_anomaly`
 4.  Anomaly detection functions require a [window size](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_window_size.html) which is the number of samples points to evaluate each time the model is scheduled to execute.   Enter a `windowsize` of `12`.   
-4.  Name the calculated metric `travel_time_kmeans_score`  ![Add Data](/img/monitor_saas/i114c.png)&nbsp;
-5.  Click `Next` to configure schedule, look back period and name the alert.
-6. Click `Auto schedule` on button to configure anomaly function scoring schedule. ![Toggle anomaly scoring schedule and look back period view](/img/monitor_saas/KmeansAnomalyScore.png) &nbsp;
-7.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the `windowsize`. ![Configure anomaly scoring schedule and look back period](/img/monitor_saas/KmeansAnomalySchedule.png) &nbsp;
-8.  Set the look back period to `2` days.  This will calculate historical scores looking back 2 days using the new configuration values with the historical metric values for `travel_time_anomaly`.
-9.  Set the output metric name for the alert `travel_time_kmeans_score`
-10.  Click `Create` to create the calculated metric.  It will take 15 minutes for the calculated metric to update.  While waiting lets create anomaly functions for the other anomaly detection functions. See the guidance in the table below for scheduling anomaly functions.
-11.  Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  
-12.  Search for `FFTbasedGeneralizedAnomalyScore2` in the function catalog.  Configure and name it `travel_time_fft_score`
-13.  Search for `GeneralizedAnomalyScore` in the function catalog. Configure and name it `travel_time_ga_score`
-14.  Search for `SaliencybasedGeneralizedAnomalyScore` in the function catalog.  Configure and name it `travel_time_saliency_score`
-15.  Search for `SpectralAnomalyScore` in the function catalog.  Configure and name it `travel_time_spectral_score`
+5.  Name the calculated metric `travel_time_kmeans_score`  ![Add Data](/img/monitor_saas/i114c.png)&nbsp;
+6.  Click `Next` to configure schedule, look back period and name the alert.
+7. Click `Auto schedule` on button to configure anomaly function scoring schedule. ![Toggle anomaly scoring schedule and look back period view](/img/monitor_saas/KmeansAnomalyScore.png) &nbsp;
+8.  Set the anomaly function to execute every `15` minutes.  The function will look for new data for `travel_time_anomaly` that have been added in the last 15 minutes and calculate alerts for those new data items in the `windowsize`. ![Configure anomaly scoring schedule and look back period](/img/monitor_saas/KmeansAnomalySchedule.png) &nbsp;
+9.  Set the look back period to `2` days.  This will calculate historical scores looking back 2 days using the new configuration values with the historical metric values for `travel_time_anomaly`.
+10.  Set the output metric name for the alert `travel_time_kmeans_score`
+11.  Click `Create` to create the calculated metric.  It will take 15 minutes for the calculated metric to update.  While waiting lets create anomaly functions for the other anomaly detection functions. See the guidance in the table below for scheduling anomaly functions.
+12.  Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  
+13.  Search for `FFTbasedGeneralizedAnomalyScore2` in the function catalog.  Configure and name it `travel_time_fft_score`
+14.  Search for `GeneralizedAnomalyScore` in the function catalog. Configure and name it `travel_time_ga_score`
+15.  Search for `SaliencybasedGeneralizedAnomalyScore` in the function catalog.  Configure and name it `travel_time_saliency_score`
+16.  Search for `SpectralAnomalyScore` in the function catalog.  Configure and name it `travel_time_spectral_score`
 
 **Table - Suggested Scoring Schedule**
 
@@ -269,18 +274,21 @@ You will add an anomaly function that will provide a score of how likely the sin
 <br>
 
 ##Add a Multi Series Line Chart using the UI widget
-1.  Click on the `gear icon` and choose Manage instance dashboard
-2.  Click on `Time series line`
-3.  Title: Anomaly Scores for Travel Time
-4.  Time range: `Last 24 hours`
-5.  Choose the following calculated metrics: travel_time_spectral_score,  
+1.  From the side menu, click `Monitor`
+2.  Search for `Your_Initials` and click on the asset type you created.
+3.  Click on `robot_daily_summary` tab
+4.  Click on `gear icon` top right.  Choose Edit dashboards
+5.  Click on `Time series line`
+6.  Title: Anomaly Scores for Travel Time
+7.  Time range: `Last 24 hours`
+8.  Choose the following calculated metrics: travel_time_spectral_score,  
     travel_time_saliency_score, travel_time_kmeans_score, travel_time_ga_score,
     travel_time_fft_score, travel_time_anomaly
-6.  Click on Settings
-7.  X-axis-label: Time
+9.  Click on Settings
+10.  X-axis-label: Time
     Y-axis-label: Score
-8.  Click `Add card`
-9.  Save and Close
+11.  Click `Add card`
+12.  Save and Close
 
 ![Line card](/img/monitor_saas/i202.png)
 ![Line card settings](/img/monitor_saas/i203.png)
@@ -290,9 +298,9 @@ You will add an anomaly function that will provide a score of how likely the sin
 
 Add a line chart** to visually compare if high anomaly model scores correlate with the robot `travel_time_anomaly` metric on each robot instance dashboard.  In this exercise you will add a multi series line chart card to your instance dashboard that plots the anomaly model scores for `time_travel_anomaly` metric.  You can then visually correlate which models are effective at detecting anomalies by seeing which model scores are high when the anomalies happen.
 
-1.  From the instance dashboard click on the `gear icon`![Manage Instance Robot dashboard](/img/monitor_saas/i98.png) &nbsp;
+1.  From the asset dashboard click on the `gear icon`![Manage asset Robot dashboard](/img/monitor_saas/i98.png) &nbsp;
 2.  Select `Edit dashboard`
-3.  Add the following [line chart card Json](/monitor_saas/json/AnomalyScoreLineGraph.json) for `travel_time_anomaly` metric anomaly function scores to your instance dashboard.
+3.  Add the following [line chart card Json](/monitor_saas/json/AnomalyScoreLineGraph.json) for `travel_time_anomaly` metric anomaly function scores to your asset dashboard.
 
     ```
    {
@@ -363,7 +371,7 @@ Add a line chart** to visually compare if high anomaly model scores correlate wi
       "type": "TIMESERIES"
     },
     ```    
-4.  View the the anomaly model scores for `time_travel_anomaly` metric line chart card on each robot instance dashboard.  Analyze the anomaly high scores for each model to see which ones happen when the anomaly does for `time_travel_anomaly` happens. It should look something like the card below  ![Travel Time and Anomaly Scores](/img/monitor_saas/i115.png)&nbsp;
+4.  View the the anomaly model scores for `time_travel_anomaly` metric line chart card on each robot asset dashboard.  Analyze the anomaly high scores for each model to see which ones happen when the anomaly does for `time_travel_anomaly` happens. It should look something like the card below  ![Travel Time and Anomaly Scores](/img/monitor_saas/i115.png)&nbsp;
 5.  In the line chart click `Spectral` label so that you can see only the line chart of each score versus `time_travel_anomaly` metric value.  ![Travel Time Spectral Anomaly Scores](/img/monitor_saas/i116.png)&nbsp;
 6.  Click on `Spectral` label again to hide that line.  Select the `Saliency` label to see anomaly score line.  Notice how the models score higher when there is an anomaly.  ![Travel Time Saliency Anomaly Scores](/img/monitor_saas/i117.png)  
 7. Study each instance dashboard to see where the anomaly scores are high and `time_travel_anomaly` metric appears to have an anomaly.  Make note of the score levels that correlate with your Robots anomalies that were generated in the `travel_time_anomaly` metric. You will use this in the next exercise when you create alerts to notify you that anomalies have occurred.  The table below has some suggested starting values:
@@ -447,6 +455,21 @@ In this exercises you will add the `travel_time_anomaly` alerts to the line card
 
 #Add Alerts Table Card
 
+##Add Alert Table Card using the UI widget
+
+1.  From the side menu, click `Monitor`
+2.  Search for `Your_Initials` and click on the asset type you created.
+3.  Click on `robot_daily_summary` tab
+4.  Click on `gear icon` top right.  Choose Edit dashboards
+5.  Click on `Alert table`
+6.  Title: Robot alerts from the last 24 hours
+7.  Time range: `Last 24 hours`
+8.  Click `Add card`
+9.  Save and Close
+10. You should now have the table in your summary dashboard showing the following Anomaly detection functions scoring.
+
+##Add Alert Table Card using JSON
+
 In the previous exercise you visually represented the anomaly alerts as red points on the line chart.  It's helpful to also see alerts organized in a table so that you can easily prioritize and act on them.
 
 1.  Add a table card that displays the `travel_time_anomaly_alerts` by robots for the last 24 hours. Add the following card to your instance dashboard template json.
@@ -469,8 +492,8 @@ In the previous exercise you visually represented the anomaly alerts as red poin
 ```
 
 
-2.  You should now have the table in your summary dashboard showing the following Anomaly detection functions scoring.  ![Alerts Table Card With Anomaly Alerts on Instance Dashboard](/img/monitor_saas/i109.png) &nbsp;
+2.  You should now have the table in your summary dashboard showing the following Anomaly detection functions scoring.  ![Alerts Table Card With Anomaly Alerts on Asset Dashboard](/img/monitor_saas/i109.png) &nbsp;
 
-3.  From the calendar control in the top right of the dashboard pick an earlier date to see the historical alerts for the robots on a specific date.  ![Alerts Table Card Without Anomaly Alerts on Instance Dashboard](/img/monitor_saas/i110.png) &nbsp;
+3.  From the calendar control in the top right of the dashboard pick an earlier date to see the historical alerts for the robots on a specific date.  ![Alerts Table Card Without Anomaly Alerts on Asset Dashboard](/img/monitor_saas/i110.png) &nbsp;
 
-Congratulations you have successfully create an asset instance dashboard and a summary dashboard that aggregates asset performance metrics across multiple assets.  You also learned how to detect anomalies by applying anomaly detection functions and alerts at scale across all your enterprise assets.
+Congratulations you have successfully create an asset dashboard and a summary dashboard that aggregates asset performance metrics across multiple assets.  You also learned how to detect anomalies by applying anomaly detection functions and alerts at scale across all your enterprise assets.
