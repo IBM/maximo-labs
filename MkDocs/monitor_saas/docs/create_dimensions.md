@@ -5,9 +5,24 @@ In Maximo Asset Monitor, dimensions are metadata used for filtering or aggregati
 Let’s look at an application of dimensions in Monitor. Dimensions in Maximo Asset Monitor allow for rapid actionable insights. The picture below shows a dashboard monitoring the IBM IoT Center in Munich which has been outfitted with sensors to measure comfort and occupancy. Our developers added the following dimensions: Region, Building, Floor, Zone, and Workstation. On this Building Summary dashboard, you can see on the alerts table that all 120 alerts for October 10 came from the Munich HQ building on the 27th floor in Zone 3. The dimensions enable you to tie your sensors with, in this case, location metadata that allows you to be able to drill down into Zone 3 inside of the dashboard or physically go to Zone 3 and check out the problem.  
 ![Dimensions in Monitor](/img/monitor_saas/cd1.png) 
 
+## Create Dimensions in the UI
+
+1.  Click on `Setup` on the left hand side.
+2.  Search for `Your_Initials` and click on the asset type you created.
+3.  Click on `Edit` icon
+4.  Click `Add dimension`
+5.  Fill in Dimension name with `COUNTRY`, type Literal, and default value `US`
+6.  Fill in Dimension name with `SITE`, type Literal, and default value `Cambridge`
+7.  Fill in Dimension name with `ASSET`, type Literal, and default value `Motor`
+8.  Click `Save`
+You will create a simulated set of robot assets that represent an assembly line of manufacturing robots.
+
+
+## Create Dimensions using the API
+
 To set up your own dimensions, you will need to open up Postman. If you do not already have Postman downloaded, here is a link to download the software https://www.getpostman.com/. 
 
-## Obtaining an API Key
+### Obtaining an API Key
 In order to successfully push your JSON schema into the Monitor platform, you will need an API key and token to authenticate your POST request. We will obtain this API key and token by creating one in the Watson IoT Platform Service application linked to your Maximo Asset Monitor instance.
 
 1. In the hamburger menu on the left side of the screen of your tenant of Maximo Asset Monitor, click `Connect`.
@@ -18,7 +33,7 @@ In order to successfully push your JSON schema into the Monitor platform, you wi
 6. Next, click `+ Generate API Key` button.
 7. Click next until you hit the `Generate API Key` button. Nothing of importance for this exercise appears before this step.
 8. Make sure you copy and paste your API Key and Token in a safe place. You will not be able to retrieve the token again. You will need both the API Key and Token to push the dimensions to Monitor.
-## Pushing the Dimensions using Postman
+### Pushing the Dimensions using Postman
 
 In this section, you will come up with metadata you would like to assign to your entities for the purpose of drill down and quick root cause analysis. The dimensions enable you to look at devices of a certain category or drill down to a single device.
 
@@ -47,4 +62,4 @@ In this section, you will come up with metadata you would like to assign to your
     }
   ] 
  ```
-7. After you have finished the above steps. Click `Send`. You should receive a `200 OK` success code from Postman. If not, make sure you entered everything correctly. If you are still having issues, please contact Paulina Thomas (paulina.thomas@ibm.com), or post a comment in the #ask-as_monitor Slack channel in the AI Applications workspace. ![200 OK](/img/monitor_saas/cd6.png)
+7. After you have finished the above steps. Click `Send`. You should receive a `200 OK` success code from Postman. If not, make sure you entered everything correctly. ![200 OK](/img/monitor_saas/cd6.png)
