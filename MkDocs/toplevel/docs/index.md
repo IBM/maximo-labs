@@ -17,10 +17,7 @@ Look under the appropriate version below to find the labs you are looking for.
 ![Not Started: ](/img/not_started.png) [IBM Maximo Health (MAS 8.1)](/health_8.2/)  
 
 ### Maximo Application Suite 8.3
-![Not Started: ](/img/not_started.png) [IBM Maximo Manage (MAS 8.3)](/manage_8.3/)  
-![Not Started: ](/img/not_started.png) [IBM Maximo Health (MAS 8.3)](/healt_8.3/)  
-![Not Started: ](/img/not_started.png) [IBM Maximo Predict (MAS 8.3)](/predict_8.3/)  
-![Not Started: ](/img/not_started.png) [IBM Maximo Mobile (MAS 8.3)](/mobile_8.3/)  
+![Under Development: ](/img/under_development.png) [IBM Maximo Application Suite 8.3 Overview](/mas_8.3/)  
 
 ### Faststart 2021 Labs
 
@@ -37,7 +34,7 @@ Look under the appropriate version below to find the labs you are looking for.
 
 ---
 
-**Updated: 2021-03-16**
+**Updated: 2021-04-27**
 
 ---
 © 2021 International Business Machines Corporation.  No part of this document may be reproduced or transmitted in any 
