@@ -70,6 +70,13 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
+# Build the Maximo Monitor Auto AI 8.4 level:
+lab=monitor_autoai_8.4
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 
 ########################################################################################
