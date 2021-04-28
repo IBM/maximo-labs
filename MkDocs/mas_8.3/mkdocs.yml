@@ -7,7 +7,7 @@ site_dir: ../../site/mas_8.3
 
 nav:
   - Get back to Maximo Labs: /
-  - MAS Overview 8.3 Labs:
+  - MASo  Overview 8.3 Labs:
     - Welcome to the Maximo Application Suite Overview 8.3 Overview Lab: index.md
     - Pre-Requisites: prereqs.md
     - Exercises:
