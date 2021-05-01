@@ -1,12 +1,10 @@
 # Create Devices
 
-In this exercise you will crete the devices that will store the simulated pump data being sent to Monitor.
- 
--  [Create two pump Devices](#createdevices) named `11111096` and `111137F8` for the  Device Type named `pump_co`. 
+In this exercise you will crete the devices that will store the simulated pump data being sent to Monitor.  [Create two pump Devices](#createdevices) 
+named `11111096` and `111137F8` for the  Device Type named `pump_co`. 
 
-
-!!! Note:
-Remember to replace `co` in the device type name with your own initials.
+!!! Note
+    Remember to replace `co` in the device type name with your own initials.
 
 ## Create Devices
 <a name="createdevices"></a>
@@ -29,9 +27,9 @@ and other information you want, click Next. ![Next](/img/monitor_autoai_8.4/c09.
 
 7.  On the `Summary` page, accept the defaults, click `Finish`. ![Next](/img/monitor_autoai_8.4/c11.png)
 
-8.  Save the device summary token information.  You will require it later when you connect your simulator to send data
+8.  Save the device summary token information.  You will need it later when you connect your simulator to send data.
 
-    
+    ```
     Organization ID  your org id
     Device Type pump_co
     Device ID 111137F8
@@ -43,7 +41,7 @@ and other information you want, click Next. ![Next](/img/monitor_autoai_8.4/c09.
     Device ID 11111096
     Authentication Method use-token-auth
     Authentication Token your token
-
+    ```
 9.  Click `Back` and repeat above steps 1. to 6. for 1 more Pump with `Device ID` = `111137F8`. 
 
 10.  On `Devices`, Click `Browse` tab menu.  Click the funnel icon.  Enter `pump_co` in the Search field for `Device Type`,

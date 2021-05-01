@@ -1,9 +1,7 @@
 # Setup Device Types
 
 In this exercise you will create the pump Device Type and data in Monitor IOT Platform that will receive the simulated pump 
-data in the lab.
-
--  [Create a Pump Device Type](#devicetypes) in Monitor
+data in the lab.  [Create a Pump Device Type](#devicetypes) in Monitor.
 
 ##Create Pump Device Types
 <a name="devicetypes"></a>
@@ -24,7 +22,6 @@ Platform tenant associated with this  Monitor tenant in a separate browser tab.
 
 4.  Go to the `Device Types` menu, and click `Add Device Type`. 
 ![Connect devices tile](/img/monitor_autoai_8.4/c04.png)
-
 !!! note
     Make sure to replace `co` in the device type name with your own initials.
 

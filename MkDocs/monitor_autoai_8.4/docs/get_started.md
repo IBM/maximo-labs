@@ -40,6 +40,11 @@ that will sent are:
 |   CURRENT            | Pump current                                                     |
 
 
+!!! note
+    If your lab is instructor led steps 1, 2, 3, 4, 5, 6 and 9 have already been done for you in the environment provide to you 
+    by your instructor.  You should  only do steps 7, 8 and 10. 
+
+
 ## Exercises
 
 Find the detailed instructions in the each exercise below:
@@ -48,22 +53,21 @@ Find the detailed instructions in the each exercise below:
 
 2.  [Create Device Types](create_device_types.md)
 
-3.  [Send Simulated Pump Data](send_device_simulated_data.md)
+3.  [Create Devices](create_devices.md)
 
-4.  [Create Physical and Logical Interfaces](create_interfaces.md)
+4.  [Send Simulated Pump Data](send_device_simulated_data.md)
 
-5.  [Create Dashboards](create_dashboards.md) in Maximo Asset Monitor using simulated pump data
+5.  [Create Physical and Logical Interfaces](create_interfaces.md)
 
-6.  [Identify Prediction Models](create_model.md) to predict Power consumption using Watson Studio Auto AI
+6.  [Create Dashboards](create_dashboards.md) in Maximo Asset Monitor using simulated pump data
 
-7.  [Train Test and Deploy Models in Monitor](train_test_save_model_in_monitor.md) to Monitor using Juypter Notebook
+7.  [Identify Prediction Models](create_model.md) to predict Power consumption using Watson Studio Auto AI
 
-8.  [Deploy and Configure a PredictionModel Custom Function in Monitor](deploy_prediction_model_function.md)
+8.  [Train Test and Deploy Models in Monitor](train_test_save_model_in_monitor.md) to Monitor using Juypter Notebook
 
-9.  [Update Dashboards](update_dashboards.md) with power prediction calculated metric in Maximo Asset Monitor 
+9.  [Deploy and Configure a PredictionModel Custom Function in Monitor](deploy_prediction_model_function.md)
 
-If your lab is instructor led steps 1, 2, 3, 4, 5 and 8 have already been done for you in the environment provide to you 
-by your instructor.  You should  only do steps 6, 7 and 9. 
+10.  [Update Dashboards](update_dashboards.md) with power prediction calculated metric in Maximo Asset Monitor 
 
 ## Architecture
 

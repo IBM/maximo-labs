@@ -2,7 +2,7 @@
 
 In this exercise you will setup your local development environment.
 
--  [Install and Create a Virtual Environment](#install_ve)  for Python v3
+-  [Install and Create a Virtual Environment](#install_ve)  for Python v3.7.9
 
 -  [Setup and Activate a Virtual Environment](#activate_ve)  Install Python dependencies, clone repository 
     and verify environment
@@ -15,22 +15,38 @@ In this exercise you will setup your local development environment.
 
 -  [Debug Functions](#debug)
 
+!!! note
+    These directions for are a Mac. Using Python v3.7.9 for Maximo Application Suite v8.4.
+    Download Python for Windows at  https://www.python.org/downloads/windows/ 
+    
 ## Install and Create a Virtual Environment
 <a name="install_ve"></a>
 
 1.  Launch Terminal
 
-2.  Install "pip". (Python Package Installer):
+2.  Install Brew Follow directions here: https://brew.sh/
+
+3. Install the right Python Version v3.7.9
     ```
-    sudo easy_install pip
+    brew install python 
+    ```
+   
+4.  Install "pip". (Python Package Installer):
+    ```
+    sudo easy_install pip  # for Mac try also removing sudo from the command
     ```
 
-3.  Install virtual environment to keep dependencies separate from other projects
+5.  Install virtual environment to keep dependencies separate from other projects
+    ### For Mac
     ```
-    sudo pip install virtualenv
+    sudo pip install virtualenv 
+    ```
+    ### For Windows
+    ```
+    pip install virtualenv      
     ```
 
-4.  Create a virtual environment
+6.  Create a virtual environment use Python 3.7.9 for Maximo Application Suite v8.3
     ```
     python3 -m venv iot-python3
     ```
@@ -39,7 +55,7 @@ In this exercise you will setup your local development environment.
 ## Setup and Activate a Virtual Environment
 <a name="activate_ve"></a>
 
-1.  Open a terminal window and change directory to your Virtual Environment directory.
+1.  Open a new terminal window and change directory to your Virtual Environment directory.
 
     ```
     cd iot-python3
@@ -47,49 +63,73 @@ In this exercise you will setup your local development environment.
 
 2.  Activate your virtual environment.
 
+    ###  For Mac
+
     ```
-    source bin/activate
+    source bin/activate  
+    ```
+
+    ###  For Windows
+
+    ```
+    .\Scripts\activate   
     ```
 
 3.  The result in `Terminal` should be something like:
+
+    ###  For Mac
 
     ```
     (iot-python3) My-Mac: myuserid$
     ```
 
-4.  Clone the github repository.
+4.  Install Git.  
 
-    ```
-    git clone git@github.com:IBM/update with URL .git
-    cd 
-    ```
-
-5.  Within your project directory in the activated virtual environment, install Monitor Python Custom Functions SDK and 
-dependencies.
+    ### For Windows
+    See https://git-scm.com/download/win  
     
+    ###  For Mac
+    The easiest is to install the Xcode Command Line Tools.
+
+5. Clone the github repository.
+
     ```
-    pip install numpy
-    pip install sqlalchemy pandas ibm_db_sa urllib3 requests lxml sklearn ibm_db python-dotenv future
-    pip install git+https://github.com/ibm-watson-iot/functions.git@production --upgrade  
+    git clone https://github.com/fe01134/maximo_autoai
+    cd maxmio_autoai
+    ```
+
+6.  Within your project directory in the activated virtual environment, install Monitor Python Custom Functions SDK and 
+dependencies.  
+
+    ```
     pip install -r requirements.txt
     ```
 
-6.  Apply export variables in terminal for DYLD_LIBRARY_PATH for DB2 jars on Mac OS X only.
+7.  Apply export variables in terminal for DYLD_LIBRARY_PATH for DB2 jars on Mac OS X only.
+
+    ###  For Mac
 
     ```
-    cd into the cloned project
-    export DYLD_LIBRARY_PATH=/Users/student01/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+    cd "<replace with the git cloned project directory name>"
+    export DYLD_LIBRARY_PATH=<"replace with your virtual env directory>"/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+    export DYLD_LIBRARY_PATH=/Users/carlosferreira/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
     ``` 
 
-7.   Set PYTHONPATH to your project directory.
-   
+8.  Set PYTHONPATH to your project directory where you installed your virtual environment.
+
+    ###  For Mac
+
     ```
-    export PYTHONPATH="<root_project_directory>"
-    export PYTHONPATH=/Users/student01/MAS_AutoAI
+    export PYTHONPATH="<replace with your root_project_directory>"/maximo_autoai 
+    export PYTHONPATH=/Users/carlosferreira/Documents/AutoAILabs/iot-python3/maximo_autoai 
     ```
 
-8.  Verify that you can get Python version .
+9.  Go to  Monitor, click on  `Services`, click `View Details` of Watson IOT Analytics.  Click on `Copy and paste` icon 
+and copy the credentials into a file named beta-1_credentials.json file.   Save the file in the project git cloned project 
+directory name directory `maximo_autoai`. 
+![credentials](/img/monitor_autoai_8.4/s01.png) 
 
+10.  Verify that you can get a local Python Script to run without errors.
     ```
     python ./scripts/local_test_of_function.py
     ```
@@ -97,7 +137,7 @@ dependencies.
 ## Install and Launch Jupyter 
 <a name="jupyter"></a>
 
-is an open-source web application that allows you to create and share documents that contain live code, equations, 
+Jupyter is an open-source web application that allows you to create and share documents that contain live code, equations, 
 visualizations and algorithms for working with AI Models and functions.
 
 1.  Install Jupyter using [instructions](https://jupyter.org/install) Use the `Pip Install` option.
@@ -113,7 +153,7 @@ visualizations and algorithms for working with AI Models and functions.
     ```
 
 3. Launch Jupyter Notebook to edit Linear Regression Models.
- 
+
     ```
     jupyter notebook
     ```
@@ -169,6 +209,7 @@ example settings below.
 ![setup assets](/img/monitor_autoai_8.4/l19.png) 
 
 4.  Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of your virtual environment.
+
     ```
     PYTHONUNBUFFERED=1;DYLD_LIBRARY_PATH=/Users/student01/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH;PYTHONPATH=/Users/student01/MAS_AutoAI
     ```
