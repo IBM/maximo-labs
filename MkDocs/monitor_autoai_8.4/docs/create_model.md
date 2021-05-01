@@ -182,11 +182,11 @@ and choose a model to use for predicting power for each pump.
 <a name="choosemodel"></a>
 
 Watson Studio can identify what are the correlated metrics that have the greatest impact in predicting a metric.  It also 
-provides overall accuracy of the model performance. Finally it give you a ranked ordered list of the models that are 
+provides overall accuracy of the model performance. Finally it gives you a ranked ordered list of the models that are 
 best fits for making a prediction.  
 
 1.  Review the pipeline leader board for which algorithms performed best. Click on the `Extra Trees Regressor` algorithm.
-there maybe more than one.  Select the one doesn't have feature enhancements.
+there maybe more than one.  Select the one that doesn't have feature enhancements.
 ![leader board](/img/monitor_autoai_8.4/d33.png)
 
 2.  The Auto AI experiment `Model Evatluation Measures` provides mean absolute error, root mean squared error and other
