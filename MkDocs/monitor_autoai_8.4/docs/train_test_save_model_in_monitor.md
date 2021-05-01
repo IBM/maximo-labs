@@ -16,7 +16,7 @@ In these exercises using the provided Jupyter Notebook you will:
 
 !!! note
     If this lab is instructor led, he or she will provide you access to virtual image that has the Jupyter and the notebooks 
-    already installed.  Skip steps 3 and 4 if you are using Windows.
+    already installed.  Skip steps 3, 4 and 8 if you are using Windows Virtual Machine.
 
 1.  Open a terminal window on Mac or a command prompt window on Windows. 
 ![Terminal](/img/monitor_autoai_8.4/tm03.png) ![Terminal](/img/monitor_autoai_8.4/tm01.png)
@@ -88,8 +88,10 @@ initials to the end of the Jupyter Notebook name. In the jupyter notebook, selec
 `notebooks/maximo_auto_ai-extra-trees-pump-co.ipynb` and click `Save`.
 ![Save As Model](/img/monitor_autoai_8.4/tm02.png)
 
-8.  This code in the notebook sets the Monitor credentials and entity type for your your instance of Monitor.  
-   
+8.  This code in the notebook sets the Monitor credentials and entity type for your your instance of Monitor.  Copy your 
+credentials in Monitor from `Services` menu and Watson IOT Platform Analytics.  Save it in a file named `beta-1_credentials.json`
+in the directory shown in the code below.
+![Copy Credentials for Analytics](/img/monitor_autoai_8.4/s01a.png)   
     ```
     credentials = {}
     with open('/Users/carlos.ferreira1ibm.com/ws/autoai/beta-1_credentials.json', encoding='utf-8') as F:
