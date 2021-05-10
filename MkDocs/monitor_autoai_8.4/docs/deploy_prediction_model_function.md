@@ -1,5 +1,5 @@
 # Deploy and Configure a PredictionModel Custom Function in Monitor
-<a name="install_ve"></a>
+<a name="deploy_model"></a>
 
 !!! note
     Skip steps 1, 2, 3, 4 and 5 if you are in the Think2021 Hands on Lab session.  These steps have already been done for you. 

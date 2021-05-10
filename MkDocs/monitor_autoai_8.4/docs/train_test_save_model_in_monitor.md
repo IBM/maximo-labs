@@ -90,7 +90,7 @@ initials to the end of the Jupyter Notebook name. In the jupyter notebook, selec
 
 8.  This code in the notebook sets the Monitor credentials and entity type for your your instance of Monitor.  Copy your 
 credentials in Monitor from `Services` menu and Watson IOT Platform Analytics.  Save it in a file named `beta-1_credentials.json`
-in the directory shown in the code below.
+in the directory shown in the code below.  
 ![Copy Credentials for Analytics](/img/monitor_autoai_8.4/s01a.png)   
     ```
     credentials = {}
@@ -101,10 +101,12 @@ in the directory shown in the code below.
     entity_type = 'pump_co'
     ```
     
-9.  This code in the notebook build a model for each pump.  The `Entity ID` uniquely identifies each asset the model should be trained for. Set the
-`Entity_Type_ID` the model should be associated with.  There are two ways Search the custom function logs in Cloud Object 
-Storage using Cyberduck as described in the exercise named [Download, Install and Configure CyberDuck for View Logs in Monitor](#cyberduck) 
-Search for 'entity_type_id'.  It should be on the first row of the log files. Download,  
+9.  This code in the notebook build a model for each pump.  The `Entity_Type_ID` uniquely identifies each asset the model 
+should be trained for. Set the `Entity_Type_ID` the model should be associated with.  There are two ways to search the 
+custom function logs in Cloud Object Storage using Cyberduck that are described in the exercise named  [Download, Install and Configure CyberDuck for View Logs in Monitor](#cyberduck)  
+To find your `Entity_Type_ID` in the logs in Monitor,  launch Cyberduck, and locate your pump, e.g. pump_co.  Unzip and 
+open one of the *.gz files there (e.g. 111012.gz) and search for 'entity_type_id'. It should be on the first row of the
+log files.
 
     ```
     entity_type = 'pump_cp'
@@ -166,7 +168,7 @@ Search for 'entity_type_id'.  It should be on the first row of the log files. Do
 <a name="SaveModel"></a>
 In the notebook, change the name of your model by replacing `co` with your own initials `power_extra_trees_model_co.mod` 
 
-1.  This code in the notebook saves the model to disk locally and try to read the model and make a prediction.
+1.  This code in the notebook saves the model to disk locally, re-loads the mode into memory and tries to make a prediction.
 
     ```
     import pickle
@@ -177,7 +179,8 @@ In the notebook, change the name of your model by replacing `co` with your own i
     yhat = model.predict(row)
     ```
    
-2. This code in the notebook saves the model in Monitor.  Make sure you replace the `co` in the model name to youro own initials  `power_extra_trees_model_co.mod`
+2. This code in the notebook saves the model in Monitor.  Make sure you replace the `co` in the model name to your own 
+initials  `power_extra_trees_model_co.mod`
 
     ```
     from iotfunctions.db import Database
@@ -205,7 +208,7 @@ In the notebook, change the name of your model by replacing `co` with your own i
 ## Retrieve a Model and Make Predictions  
 <a name="RetrieveModel"></a>
 
-1. This code in the notebook retrieves the model from Monitor and try to  make a prediction.  
+1. This code in the notebook retrieves the model from Monitor and tries to make a prediction.  
 
     ```
     try:
@@ -222,7 +225,7 @@ In the notebook, change the name of your model by replacing `co` with your own i
         pass
     ```    
    
-Congratulations you know have learned how to use the provide Jupyter notebook to train test and deploy a prediction model 
+Congratulations you have learned how to use the provided Jupyter notebook to train test and deploy a prediction model 
 to Monitor.  For more resource intensive models you should deploy them to a separate runtime service to make predictions.  
 In  the next lab exercise you will register the provided Monitor Custom function that will allow you to send the pump 
 metrics data to your deployed model to make a prediction.  

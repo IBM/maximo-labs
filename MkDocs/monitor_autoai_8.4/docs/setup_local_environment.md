@@ -165,9 +165,9 @@ to view the Notebook.
 <a name="cyberduck"></a>
 
 Monitor uses Object Storage service to access the log files for custom functions. Install and configure Cyberduck to 
-view logs.  You can connect to Cloud Object Storage (COS)  to download the custom function logs.  You can Access 
-credentials for COS is shown in Monitor under Services tab.  Use tool called Cyberduck.   Download free version from 
-web: https://cyberduck.io/download/ Configure the setting in CyberDuck to connect to the Object Storage service included 
+view logs.  Connect to the Cloud Object Storage (COS)  to download the custom function logs.  You can access the 
+credentials for accessing the service in Monitor under Services tab.  Use tool called Cyberduck.   Download free version from 
+Web: https://cyberduck.io/download/ Configure the setting in CyberDuck to connect to the Object Storage service included 
 with Monitor.
 
 1.  In Monitor, click on `Services` menu.  Copy the settings for Object Storage as shown in the below into `CyberDuck`.  ![Configure CyberDuck](/img/monitor_autoai_8.4/l01.png) 
@@ -187,9 +187,9 @@ https://s3-api.us-geo.objectstorage.softlayer.net
 
 8.  Hit refresh and navigate to your Asset Type and date folder to see and download your log files.
 
-9.  You will see Entity Type ID in the first few lines of the log files for that Asset Type.
+9.  You will see `Entity_Type_ID` in the first few lines of the log files for that `Asset Type`.
 
-10.  Bookmark the page for your Asset Type so that you can navigate here directly next time you want to access logs.
+10.  Bookmark the page for your `Asset Type` so that you can navigate here directly next time you want to access logs.
 
 
 ## Download, Install and Configure PyCharm

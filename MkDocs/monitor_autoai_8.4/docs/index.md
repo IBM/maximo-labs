@@ -3,8 +3,8 @@
 You will learn about Monitor's capabilities to use AutoAI to identify and deploy a prediction machine learning model to 
 Maximo Application Suite
 
-In this Tutorial we will show how to use AutoAI to identify a prediction machine learning model that you can train and 
-then deploy to Maximo Asset Monitor. You will learn how to:
+In this lab we will show you how to use AutoAI to identify, train  and then deploy to a prediction machine learning model 
+to Maximo Asset Monitor. You will learn how to:
 
 1.  Use the provided Jupyter notebook that will contain Python code to train, test and deploy machine learning model to
     Maximo Asset Monitor

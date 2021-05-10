@@ -17,7 +17,7 @@ nav:
     - 4. Send Simulated Data: send_device_simulated_data.md
     - 5. Create Interfaces: create_interfaces.md
     - 6. Create Dashboards: create_dashboards.md
-    - 7. Indentify Model: create_model.md
+    - 7. Identify Model: create_model.md
     - 8. Train Model: train_test_save_model_in_monitor.md
     - 9. Deploy Model: deploy_prediction_model_function.md
     - 10. Update Dashboards: update_dashboards.md

@@ -186,7 +186,7 @@ provides overall accuracy of the model performance. Finally it gives you a ranke
 best fits for making a prediction.  
 
 1.  Review the pipeline leader board for which algorithms performed best. Click on the `Extra Trees Regressor` algorithm.
-there maybe more than one.  Select the one that doesn't have feature enhancements.
+there maybe more than one.  Select the one that doesn't have feature engineering.
 ![leader board](/img/monitor_autoai_8.4/d33.png)
 
 2.  The Auto AI experiment `Model Evatluation Measures` provides mean absolute error, root mean squared error and other

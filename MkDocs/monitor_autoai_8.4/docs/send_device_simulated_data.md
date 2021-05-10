@@ -32,8 +32,9 @@ exercise for the 1 of pump devices `111137F8` ![Browse](/img/monitor_autoai_8.4/
 ## Start the Python Simulator
 <a name="simulator"></a>
 
-This exercise includes Python Simulator that reads a csv file  [maximo-auto_ai_pump_data_111137F8](../data/maximo-auto_ai_pump_data_111137F8) 
-with the pump data and sends the rows of data for the pump  device you specified in the previous exercise. The `event_payload.json` looks like:
+This exercise includes Python Simulator that reads a csv file  [maximo-auto_ai_pump_data_111137F8](https://github.com/fe01134/maximo_autoai/blob/main/data/maximo-auto_ai_pump_data_111137F8.csv) 
+with the pump data and sends the rows of data for the pump  device you specified in the previous exercise. The `event_payload.json` 
+looks like:
  
      {
         "evt_timestamp": "2020-01-19T03:59:53.03Z",
@@ -69,5 +70,7 @@ with this  Monitor tenant in a separate browser tab. ![Open Platform Services](/
 
 5.  Go to the `Devices` menu.  Enter the Device ID `111137F8` in the search box.  Click `Recent Events`.  It might take 
 a moment to get values as shown in the image below.  ![Recent Events](/img/monitor_autoai_8.4/s03.png)
+
+Optionally you can repeat this exercise with the other pump 11111096 using it's [training data](https://github.com/fe01134/maximo_autoai/blob/main/data/maximo-auto_ai_pump_data_11111096.csv)
 
 Congratulations you now pump device data flowing that you will use make a prediction model and monitor in dashboards. 
