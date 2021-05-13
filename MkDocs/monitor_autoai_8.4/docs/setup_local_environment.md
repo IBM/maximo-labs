@@ -164,9 +164,10 @@ to view the Notebook.
 ## Download, Install and Configure CyberDuck for View Logs in Monitor###
 <a name="cyberduck"></a>
 
-Monitor uses Object Storage service to access the log files for custom functions. Install and configure Cyberduck to 
-view logs.  Connect to the Cloud Object Storage (COS)  to download the custom function logs.  You can access the 
-credentials for accessing the service in Monitor under Services tab.  Use tool called Cyberduck.   Download free version from 
+Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Cloud Object Storage. Install and configure Cyberduck to view logs.  Connect to the 
+Cloud Object Storage (COS)  to download the custom function logs.  You can access the  credentials for accessing the 
+service in Monitor under Services tab.  Use tool called Cyberduck.   Download free version from: 
 Web: https://cyberduck.io/download/ Configure the setting in CyberDuck to connect to the Object Storage service included 
 with Monitor.
 
@@ -191,6 +192,73 @@ https://s3-api.us-geo.objectstorage.softlayer.net
 
 10.  Bookmark the page for your `Asset Type` so that you can navigate here directly next time you want to access logs.
 
+
+##  Download, Install and Configure DBeaver
+<a name="dbeaver"></a>
+
+Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Database, install and configure Dbeaver client to view logs in the database table.  
+Connect to the Monitor Database Service to query database for custom function logs.  You can get the database credentials 
+for accessing the database service in Monitor under Services tab.  Use a universal database client tool like Dbeaver to 
+access the table.   Download the free community edition from https://dbeaver.io/download/  Configure the setting in 
+Dbeaver to connect to the Database service included with Monitor.
+
+1.  In Monitor, click on `Services` menu.  Copy the settings for Database and enter them as as shown in `DBeaver`.  ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb00.png) 
+
+2.  Open `Dbeaver`.  Select a `New Database Connection` option from the `Database` menu.
+ ![New DB Connection](/img/monitor_autoai_8.4/sdb01.png)
+
+3.  Select  `IBM DB2` and click on  `Next` button.
+ ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb02.png)
+ 
+4.  Enter the database settings from Monitor Database Service in `DBeaver` connection settings dialog.
+ ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb03.png)
+
+5.  Click `test Connection` Button. 
+
+7.  Click `OK` Button to save the connection.
+
+
+##  Quary Logs using DBeaver
+<a name="dbeaver"></a>
+
+Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Database use the following queries with Dbeaver client to view logs.
+
+
+1.  Open `Dbeaver`.  Click a `Monitor Database Connection` for `BLUDB` schema.
+
+3.  Select  `New SQL Script` from the `SQL Editor` menu.  ![New SQL Statement](/img/monitor_autoai_8.4/sdb04.png)
+ 
+4.  Enter the the following query to get status of execution for all functions.
+
+    ```
+    SELECT E.NAME, K.ENTITY_TYPE_ID, K.STATUS, 
+    COUNT(*) AS Count FROM MAS82_MAM.KPI_LOGGING K, IOTANALYTICS.ENTITY_TYPE E 
+    WHERE K.ENTITY_TYPE_ID = E.ENTITY_TYPE_ID  GROUP BY E.NAME ,K.ENTITY_TYPE_ID,K.STATUS ;
+    ```
+    
+5.  Enter the the following query to delete old logs.
+
+    ```
+    DELETE FROM MAS82_MAM.KPI_LOGGING 
+    WHERE DATE(UPDATED_TS)!=CURRENT_DATE; 
+    ```
+
+6.  Enter the the following query to purge successful runs.
+
+    ```
+    DELETE FROM MAS82_MAM.KPI_LOGGING 
+    WHERE STATUS='SUCCESS' AND ENTITY_TYPE_ID IN (13,14);
+    ```
+    
+7.  Enter the the following query to get last 10 logs.
+
+    ```
+    SELECT E.NAME, K.ENTITY_TYPE_ID, K.STATUS, K.LOGFILE, K.LOG_MESSAGE, K.ERROR_MESSAGE, K.STARTED_TS FROM MAS82_MAM.KPI_LOGGING K, IOTANALYTICS.ENTITY_TYPE E 
+    WHERE K.ENTITY_TYPE_ID = E.ENTITY_TYPE_ID 
+    ORDER BY K.STARTED_TS DESC LIMIT 10; 
+    ```
 
 ## Download, Install and Configure PyCharm
 <a name="pycharm"></a>
