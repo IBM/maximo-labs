@@ -13,29 +13,39 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
 ---
 ### Maximo SaaS
-![Ready](./img/readynew.png)[Monitor](/monitor_saas/)  
-![Ready](./img/readynew.png)[Visual Inspection (1.3.0)](/mvi_saas/)  
+
+  ![Ready](./img/readynew.png)[Monitor](/monitor_saas/)  
+
+  ![Ready](./img/readynew.png)[Visual Inspection (1.3.0)](/mvi_saas/)  
 
 
 ### Maximo Application Suite 8.2
 
-![Ready](./img/readynew.png)[Suite 8.2 Overview Fast Start](/apm_fs21/)  
-![Under Development: ](./img/under_development.png)[Monitor](/monitor_8.2/)  
-![Ready](./img/readynew.png)[IBM Maximo Visual Inspection](/mvi_8.2/)  
+  ![Ready](./img/readynew.png)[Suite 8.2 Overview Fast Start](/apm_fs21/)  
+
+  ![Under Development: ](./img/under_development.png)[Monitor](/monitor_8.2/)  
+
+  ![Ready](./img/readynew.png)[Visual Inspection](/mvi_8.2/)  
 
 ### Maximo Application Suite 8.3
-![Under Development: ](./img/under_development.png) [Suite 8.3 Overview](/mas_8.3/) 
+
+  ![Under Development: ](./img/under_development.png) [Suite 8.3 Overview](/mas_8.3/) 
 
 ### Maximo Application Suite 8.4
-![Under Development: ](./img/under_development.png) [Monitor Auto AI Lab](/monitor_autoai_8.4/) <span style="color:red">*NEW!* Lab!!</span>
-![Not Started: ](./img/not_started.png)[Health](/health_8.4/) 
-![Not Started: ](./img/not_started.png)[Predict](/health_8.4/)   
+
+  ![Ready](./img/readynew.png)[Monitor Auto AI Lab](/monitor_autoai_8.4/) <span style="color:red">*NEW!* Lab!!</span>
+
+  ![Not Started: ](./img/not_started.png)[Health](/health_8.4/) 
+
+  ![Not Started: ](./img/not_started.png)[Predict](/health_8.4/)   
 
 ---
 
 ### Contribute
-![Ready](./img/readynew.png)[Contribute to Labs](/contribute/)  
-![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
+
+  ![Ready](./img/readynew.png)[Contribute to Labs](/contribute/)  
+
+  ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
 
