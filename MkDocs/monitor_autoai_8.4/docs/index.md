@@ -3,8 +3,8 @@
 You will learn about Monitor's capabilities to use AutoAI to identify and deploy a prediction machine learning model to 
 Maximo Application Suite
 
-In this Tutorial we will show how to use AutoAI to identify a prediction machine learning model that you can train and 
-then deploy to Maximo Asset Monitor. You will learn how to:
+In this lab we will show you how to use AutoAI to identify, train  and then deploy to a prediction machine learning model 
+to Maximo Asset Monitor. You will learn how to:
 
 1.  Use the provided Jupyter notebook that will contain Python code to train, test and deploy machine learning model to
     Maximo Asset Monitor
@@ -17,12 +17,17 @@ then deploy to Maximo Asset Monitor. You will learn how to:
 4.  Create an Asset Type and Asset dashboards to see the pump data and model predictions in Monitor
 
 
+
 ## Prerequisites
+
+This Hands on Lab requires:
+
+* Access to the Git repository  https://github.com/fe01134/maximo_autoai that includes the data, Python Scripts, functions 
+and Notebooks.  Request access from  carlos.ferreira1@ibm.com
 
 * An account for IBM ID and An IBM Cloud Account Trial  [here](http://ibm.biz/maximo-dev-ibmcloud)
 
-* Access to a Maximo Asset Monitor environment. Check if you instructor has already provided you one. Or request one from 
-carlos.ferreira1@ibm.com
+* Access to a Maximo Asset Monitor environment. Request access from your instructor. 
 
 * [Understand Virtual Environments](https://realpython.com/python-virtual-environments-a-primer/)
 
@@ -30,7 +35,7 @@ carlos.ferreira1@ibm.com
 
 * [Introduction to using Jupyter Notebooks](https://realpython.com/jupyter-notebook-introduction/#:~:text=The%20Jupyter%20Notebook%20is%20an,the%20people%20at%20Project%20Jupyter.)
 
-* Pandas for Time series data processing:
+* Understanding of Pandas for Time series data processing:
 
     - [https://medium.com/analytics-vidhya/module-6-pandas-5b053ee1e1a1](https://medium.com/analytics-vidhya/module-6-pandas-5b053ee1e1a1)
 
@@ -55,6 +60,6 @@ Follow the [Getting Started](get_started.md) insructions on the next page.
 
 ## License
 
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked 
+This Hands on Lab is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked 
 within this lab are licensed by their respective providers pursuant to their own separate licenses. Contributions are 
-subject to the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
+subject to the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt). 

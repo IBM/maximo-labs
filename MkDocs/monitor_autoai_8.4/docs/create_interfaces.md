@@ -79,48 +79,45 @@ You now are able to save the device data that is sent from any device to this De
 Logical interfaces allow you to map the metrics from the physical device types into a single Entity Type for Monitor.
 
 1.  Click `Create Logical Interface` button.
-![Event cache](/img/monitor_autoai_8.4/p9.png)
+![Create Interface](/img/monitor_autoai_8.4/p9.png)
 
 2.  Change the default name `pump_co_li`, click `Next`.
-![Event cache](/img/monitor_autoai_8.4/i1.png)
+![Name Interface](/img/monitor_autoai_8.4/I1.png)
 
-3.  Click the `Add Property` button 
-![Event cache](/img/monitor_autoai_8.4/i2.png)
+3.  Tick the `Allow Additional Properties` to `ON` and then  Click `Add Property` button. 
+![Event cache](/img/monitor_autoai_8.4/I2.png)
 
-4. Click the `Select` button for the `evet_timestamp`.
-![Event cache](/img/monitor_autoai_8.4/i3.png)
+4. Click the `Select` button for the `evt_timestamp`.
+![Change Timestamp](/img/monitor_autoai_8.4/i3.png)
 
-5. In the `Add Property` dialog select `String (date-time)` and click `Save` button.
-![Timestamp](/img/monitor_autoai_8.4/i4.png)
+5. In the dialog `Type` field, select `String (date-time)` and click `Save` button.
+![Timestamp](/img/monitor_autoai_8.4/I4.png)
 
 6. Click `Add Property` again for all the remaining metrics leaving the values as is shown below.
-![evt_timestamp](/img/monitor_autoai_8.4/i5.png)
-![speed](/img/monitor_autoai_8.4/i6.png)
-![head](/img/monitor_autoai_8.4/i7.png)
-![pump_mode](/img/monitor_autoai_8.4/i8.png)
-![flow](/img/monitor_autoai_8.4/i11.png)
-![voltage](/img/monitor_autoai_8.4/i11a.png))
+![evt_timestamp](/img/monitor_autoai_8.4/I5.png)
+![speed](/img/monitor_autoai_8.4/I6.png)
+![head](/img/monitor_autoai_8.4/I7.png)
+![pump_mode](/img/monitor_autoai_8.4/I8.png)
+![flow](/img/monitor_autoai_8.4/I11.png)
+![voltage](/img/monitor_autoai_8.4/I11a.png))
 ![POWER](/img/monitor_autoai_8.4/i11b.png))
-![CURRENT](/img/monitor_autoai_8.4/i12.png)
-
-7.  Tick the `Allow Additional Properties` to `ON` and then  Click `Add Property` button. 
-![Event cache](/img/monitor_autoai_8.4/i2.png)
+![CURRENT](/img/monitor_autoai_8.4/I12.png)
 
 8. Click `Next`, click link `No event notifications` 
-![Event cache](/img/monitor_autoai_8.4/i14A.png)
+![Event cache](/img/monitor_autoai_8.4/I13.png)
 
 9. change to `All events` and click the `x` to close the dialog box.
-![Event cache](/img/monitor_autoai_8.4/i14.png)
+![Event cache](/img/monitor_autoai_8.4/I14.png)
 
 10. Click `Apply`, then `Done`.
-![Event cache](/img/monitor_autoai_8.4/i15.png)
+![Event cache](/img/monitor_autoai_8.4/I15.png)
 
 11. Click `Activate` twice.
-![Event cache](/img/monitor_autoai_8.4/i16.png)
-![Event cache](/img/monitor_autoai_8.4/i17.png)
+![Event cache](/img/monitor_autoai_8.4/I16.png)
+![Event cache](/img/monitor_autoai_8.4/I17.png)
 
 12. Click `Done`.
-![Event cache](/img/monitor_autoai_8.4/i18.png)
+![Event cache](/img/monitor_autoai_8.4/I18.png)
 
 You now are able to create dashboards and calculated metrics using the device data that is sent by any device into 
 Monitor.  You must wait upto 10 minutes to start seeing your devices show up in Monitor.

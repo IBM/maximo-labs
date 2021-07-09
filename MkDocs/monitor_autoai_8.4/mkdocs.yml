@@ -9,18 +9,18 @@ nav:
   - Get back to Maximo Labs: /
   - Maximo Auto AI Hands on Lab:
     - Welcome to the Maximo Auto AI Hands on Lab: index.md
+    - Get Started: get_started.md
   - Exercises:
-    - 1. Get Started: get_started.md
-    - 2. Setup Local Environment: setup_local_environment.md
-    - 3. Create Device Types: create_device_types.md
+    - 1. Setup Local Environment: setup_local_environment.md
+    - 2. Create Device Types: create_device_types.md
+    - 3. Create Devices: create_devices.md
     - 4. Send Simulated Data: send_device_simulated_data.md
     - 5. Create Interfaces: create_interfaces.md
-    - 6. Create Devices: create_devices.md
-    - 7. Import Dashboards: create_dashboards.md
-    - 8. Create  Model: create_model.md
-    - 9. Train Model: train_test_save_model_in_monitor.md
-    - 10. Deploy Model: deploy_prediction_model_function.md
-    - 11. Update Dashboards: update_dashboards.md
+    - 6. Create Dashboards: create_dashboards.md
+    - 7. Identify Model: create_model.md
+    - 8. Train Model: train_test_save_model_in_monitor.md
+    - 9. Deploy Model: deploy_prediction_model_function.md
+    - 10. Update Dashboards: update_dashboards.md
   - About: about.md
 
 theme: readthedocs

@@ -84,9 +84,9 @@ PumpData.csv is a  comma separated version file that has two pump device data me
 |   POWER              | Pump power consumption                                           |
 |   CURRENT            | Pump current                                                     |
 
-The value we want to predict is `flow`.  An anomaly could occur then a pump is blocked or bearings have failed which would
-make the flow be less even while still having the same normal values for the other metrics.  In the next exercises you
-will see how AutoAI will help us understand which of these metrics have the greatest impact on predicting flow.
+The value we want to predict is `POWER`.  An anomaly could occur then a pump is blocked or bearings have failed which would
+make the `POWER` be greater even while still having the low values for the other metrics like `flow`.  In the next exercises you
+will see how AutoAI will help us understand which of these metrics have the greatest impact on predicting `POWER`.
 
 1. In Watson Studio, in your project created in the last exercise, click `Add to Project` button. ![Add to project](/img/monitor_autoai_8.4/d10.png) 
 
@@ -124,7 +124,7 @@ follow the instructions.
 
 5. Search on `Machine learning` and click on `Machine Learning` tile option  ![Watson](/img/monitor_autoai_8.4/d19b.png)
 
-6.  Scroll down and select the `Standard plan v2` or if not available select `Lite plan` thn click `Create` Button
+6.  Scroll down and select the `Standard plan v2` or if not available select `Lite plan` then click `Create` Button
    ![create service](/img/monitor_autoai_8.4/d20.png)
 
 6.  Select your new machine learning service by clicking in the `check box`  and then clicking `x` to close the dialog 
@@ -148,7 +148,7 @@ regression model to predict power consumption.  A regression model provides scor
 You can learn more about how pumps work in this [Video](https://www.youtube.com/watch?v=WUal9LXc0iM)
 
 
-1.  Make sure you are in the right IBM Cloud accoount in the top right of the screen, otherwise AutoAI might not show up 
+1.  Make sure you are in the right IBM Cloud account in the top right of the screen, otherwise AutoAI might not show up 
 as an option.  Click `Add to Project` and click `AutoAI experiment`. ![create an Auto AI experiement](/img/monitor_autoai_8.4/d26.png)
  
 !!! note
@@ -182,11 +182,11 @@ and choose a model to use for predicting power for each pump.
 <a name="choosemodel"></a>
 
 Watson Studio can identify what are the correlated metrics that have the greatest impact in predicting a metric.  It also 
-provides overall accuracy of the model performance. Finally it give you a ranked ordered list of the models that are 
+provides overall accuracy of the model performance. Finally it gives you a ranked ordered list of the models that are 
 best fits for making a prediction.  
 
 1.  Review the pipeline leader board for which algorithms performed best. Click on the `Extra Trees Regressor` algorithm.
-there maybe more than one.  Select the one doesn't have feature enhancements.
+there maybe more than one.  Select the one that doesn't have feature engineering.
 ![leader board](/img/monitor_autoai_8.4/d33.png)
 
 2.  The Auto AI experiment `Model Evatluation Measures` provides mean absolute error, root mean squared error and other
