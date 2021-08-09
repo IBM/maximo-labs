@@ -69,6 +69,9 @@ From the Mobile navigator, I click ‘Assist’ to open the search page where I 
 
 `Action:` Open the Maximo Mobile app and enter “Replace Pump O-Ring”, then select return.
 
+![img](/img/mas_8.3/assist1.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](/img/mas_8.3/assist2.png){: style="height:400px;width:250px;margin-left:40px"}
+
 Here I see the AI-powered search results arranged by most relevant recommendations at the top and organized in decreasing order of confidence. The AI shows me recommendations from manuals, historical work orders, previous collaboration sessions, training content – all of these different types of data sources are available for me to search against.  
 
  
@@ -77,62 +80,103 @@ If there are historical work orders, I can also look at additional details such 
 
 `Action:` Show historical work order. 
 
+![img](/img/mas_8.3/assist3.png){: style="height:400px;width:250px;margin-left:40px"}
+
  
 
 I can also further refine the search results by selecting the filter option.
 
 `Action:` Turn on the filter for asset type (`PUMP`), and manufacturer (`ABB`) and select done.  
 
+![img](/img/mas_8.3/assist4.png){: style="height:400px;width:175px;margin-left:40px"}
+![img](/img/mas_8.3/assist5.png){: style="height:400px;width:175px;margin-left:40px"}
+![img](/img/mas_8.3/assist6.png){: style="height:400px;width:175px;margin-left:40px"}
+
  
 
 I now see even more refined search results and the top result is now a maintenance manual. By giving the AI model feedback for the recommendations and marking them as relevant or not-relevant I am continuously training the AI models in real-time and improving the recommendations. 
 
+![img](/img/mas_8.3/assist7.png){: style="height:400px;width:250px;margin-left:40px"}
+
 `Action:` Select the `Yes` option in the search result, open up top result. 
+
+![img](/img/mas_8.3/assist8.png){: style="height:400px;width:250px;margin-left:40px"}
 
 Selecting the top recommendation in the search result presents the manual opened up and scrolled down to where the AI detects the most relevant passage which is highlighted in blue. This is really helpful especially in troubleshooting scenarios where there are surrounding images, and this can further help me get visual aid on the actions to take.  
 
  
-
-
-
 ## Contact Remote Expert
 
 In this case, I can see the O-ring replacement instructions with visuals. I am able to follow them until I attempt to remove the O-ring. Even following these instructions, it seems like the O-ring will not come off easily, and I don’t want to risk damaging it. I could use some additional instructions to perform the fix So I choose to contact a remote expert for assistance. 
 
+![img](/img/mas_8.3/assist9.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](/img/mas_8.3/assist10.png){: style="height:400px;width:250px;margin-left:40px"}
+
 `Action:` Select the `Contact Expert` option in the top right – type `replace O-ring` in the search field for (What do you need advice about?) 
+
+![img](/img/mas_8.3/assist11.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](/img/mas_8.3/assist12.png){: style="height:400px;width:250px;margin-left:40px"}
 
 Here I can see the online experts organized by area of expertise, and can also see the experts with top skill matches based on the work context. I see someone in the pump group is online so I initiate a collaboration request with them using the blue touchpoint. Soon, I receive a notification that they accepted the request and I initiate the session and can now use my mobile devices camera to show them what I see. 
 
- 
 
-`Action:` Select `Pump Group` to accept the request  
+`Action:` Select `Pump Group` to accept the request 
+
+
+<b>Expert View(2nd Device):</b>
+![img](/img/mas_8.3/assist13.png){: style="height:400px;width:250px;margin-left:40px"}
+
+<b>Technician View:</b>
+![img](/img/mas_8.3/assist14.png){: style="height:400px;width:250px;margin-left:100px"}
 
 `Action:` Select `START` to accept the request 
-
-
 
 In this scenario we do not require audio but there are options to use voice or if we’re in a noisy environment we can use text to communicate.   
 
 `Action:` Turn audio off on both devices so it doesn’t interfere. 
 
+![img](/img/mas_8.3/assist15.png){: style="height:400px;width:250px;margin-left:40px"}
+
 As I show my phone, the expert on their side views a stream of near-real time images and can select on one of them to provide what actions I should take. I’m going to indicate where exactly I’m stuck so the expert can provide some guidance. The expert can either enter pointed annotations or sketch on the screen directly using Augmented Reality.   There are also options with the annotations to mark them as a safety hazard so that the technician is careful as they perform the recommended action. 
+
+<b>Technician View:</b>
+
+![img](/img/mas_8.3/assist16.png){: style="height:400px;width:175px;margin-left:40px"}
+![img](/img/mas_8.3/assist17.png){: style="height:400px;width:175px;margin-left:40px"}
+![img](/img/mas_8.3/assist18.png){: style="height:400px;width:175px;margin-left:40px"}
 
 
 `Action:`  Select blue button on the bottom right corner - Technician adds annotation - ‘this is stuck’ (red 		arrow is only pointing to annotation just made, not a part of Assist) 
 
+
+<b>Expert View(2nd Device):</b>
+
+![img](/img/mas_8.3/assist19.png){: style="height:400px;width:175px;margin-left:40px"}
+![img](/img/mas_8.3/assist20.png){: style="height:400px;width:175px;margin-left:40px"}
+![img](/img/mas_8.3/assist21.png){: style="height:400px;width:175px;margin-left:40px"}
+
 `Action:` Expert adds any instruction “pry here”, either in chat or draw using sketch. 
 
- 
+This now shows up on the technicians view exactly where the expert had marked it which is the same experience they would have had if the two were next to each other.  
 
-This now shows up on the technicians view exactly where the expert had marked it which is the same experience they would have had if the two were next to each other.     
+<b>Technician View:</b>
+
+![img](/img/mas_8.3/assist22.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](/img/mas_8.3/assist23.png){: style="height:400px;width:250px;margin-left:40px"}
 
 You will notice that even when my phone is pointed in a different direction, the green arrow will direct me to the new annotation so I don't miss it.    
 
 `Action:` Move phone away from annotations. 
 
+<b>Technician View:</b>
+
+![img](/img/mas_8.3/assist24.png){: style="height:400px;width:250px;margin-left:40px"}
+
 The action of providing leverage to remove the o-ring worked and I’m able to now complete the rest of the tasks involved with replacing the part. I’ll end the collaboration session which will create a session summary with all of the chat transcripts and the guidance that was provided. This now can be added to the AI knowledge base for future reference. 
 
 `Action:` Select the end the session icon in the top left corner, then select `Yes`. 
+
+![img](/img/mas_8.3/assist26.png){: style="height:400px;width:250px;margin-left:40px"}
 
 
 
