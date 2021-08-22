@@ -219,7 +219,7 @@ Dbeaver to connect to the Database service included with Monitor.
 7.  Click `OK` Button to save the connection.
 
 
-##  Quary Logs using DBeaver
+##  Query Logs using DBeaver
 <a name="dbeaver"></a>
 
 Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
@@ -276,7 +276,8 @@ to run to reference the virtual environment you setup earlier.
 example settings below.
 ![setup assets](/img/monitor_autoai_8.4/l19.png) 
 
-4.  Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of your virtual environment.
+4.  Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of 
+your virtual environment.
 
     ```
     PYTHONUNBUFFERED=1;DYLD_LIBRARY_PATH=/Users/student01/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH;PYTHONPATH=/Users/student01/MAS_AutoAI

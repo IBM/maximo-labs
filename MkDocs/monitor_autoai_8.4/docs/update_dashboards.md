@@ -86,7 +86,7 @@ you did in the last exercise to [Deploy Model](#deploy_model).
 schedule frequency as well for verifying calculations and alerts.
 ![dashboard settings](/img/monitor_autoai_8.4/u17.png)
 
-## Update Dashboard
+## Update Dashboard Power Card
 
 <a name="UpdateDashboard"></a>
 
@@ -117,6 +117,29 @@ gear icon.
 
 6.  Click the `Save and close` button to save your changes to the dashboard.  All pumps will now get this same dashboard 
 change.  You can also create asset specific dashboards for each asset in the `Setup Asset Type` menu.
+
+## Update Dashboard Power Card with Alert
+To see a visual red dot on line series cards where alerts happen at specific time stamps you must edit the JSON of the 
+dashboard directly.
+
+1.  Edit the Asset dashboard  selecting your recently created calculated metric for `power_prediction_co`.  Click on 
+`Monitor`,  search on `pump_co`,  click on `111137F8`, click on  `Asset Metrics Dashboard` tab and click on `Settings` 
+gear icon.
+![dashboard settings](/img/monitor_autoai_8.4/u01.png)
+
+2. Click `Edit Dashboard` and then click `Continue` button in dialog.
+![dashboard settings](/img/monitor_autoai_8.4/u02.png)
+
+3. Click `Export Dashboard` and save the json file locally.
+
+4. Update and save the Json with the following code using a Python Editor or Monitor's Json editor in the Dashboard Editor.
+![dashboard settings](/img/monitor_autoai_8.4/u20.png)
+
+5. Import the updated Json file and click the `Save and close` button to save your changes to the dashboard.  All pumps will now 
+get this same dashboard change.  You can also create asset specific dashboards for each asset in the `Setup Asset Type`
+menu.  You should now see the Asset Metrics Dashboard with alerts similar to the one below in the Asset Dashboard.
+![dashboard settings](/img/monitor_autoai_8.4/u21.png)
+
 
 ## View Dashboard
 
