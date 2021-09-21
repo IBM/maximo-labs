@@ -1,0 +1,27 @@
+site_name: Visual Inspection 8.4 Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Cecilia Stark & Contributors
+site_description: "Visual Inspection 8.4 Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/mvi_8.4
+
+nav:
+  - Get back to Maximo Labs: /
+  - MVI 8.4 Labs:
+    - Welcome to the MVI 8.4 Labs: index.md
+    - Pre-Requisites: prereqs.md
+    - Exercises:
+        - 1.1 DataSets: exerciseOne/exercise1-1.md
+        - 1.2 Train and Deploy Model: exerciseOne/exercise1-2.md
+        - 1.3 Create Project: exerciseOne/exercise1-3.md
+        - 2.1 Create Inspection: exerciseTwo/exercise2-1.md
+        - 2.2 Conduct Inspection: exerciseTwo/exercise2-2.md
+        - 2.3 Dashboard Configuration: exerciseTwo/exercise2-3.md
+    - Next Steps: nextsteps.md
+    - Troubleshooting: troubleshoot.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition

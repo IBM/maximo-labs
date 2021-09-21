@@ -33,11 +33,13 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
 ### Maximo Application Suite 8.4
 
-  ![Ready](./img/readynew.png)[Monitor Auto AI Lab](/monitor_autoai_8.4/) <span style="color:red">*NEW!* Lab!!</span>
+  ![Ready](./img/readynew.png)[Monitor Auto AI Lab](/monitor_autoai_8.4/) <span style="color:red">*NEW!* Lab!!</span>  
 
-  ![Not Started: ](./img/not_started.png)[Health](/health_8.4/) 
+### Maximo Application Suite 8.5
 
-  ![Not Started: ](./img/not_started.png)[Predict](/health_8.4/)   
+  ![Not Started: ](./img/not_started.png) [Suite 8.5 Overview](/mas_8.5/) 
+
+  ![Not Started: ](./img/not_started.png)[Visual Inspection](/mvi_8.4/)
 
 ---
 
