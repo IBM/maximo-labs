@@ -21,10 +21,41 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 
 <h2>Exercise 1.1 - Creating a Data Set and Image Preparation</h2>
 
+<h3>Image Preparation - Taking Pictures *IOS DEVICE ONLY*</h3>
+
+HEIC images are not supported on MVI. These are automatically generated on your iOS device when you take a photo, therefore before you take pictures ensure you change the settings in the instructions below.
+
+1.	Go to the `Settings` on your iOS device and search for the `Camera` app. 
+
+![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/iOSsettings1.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/camerasettings.png){: style="height:400px;width:250px;margin-left:40px"}
+
+2.	Select `Formats` at the top and select `Most Compatible`.
+
+![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/formats.png){: style="height:400px;width:250px;margin-left:40px"}
+
+3. You are now ready to begin taking photos. Please take 10 images of dented cans and 10 images of good cans. Take your images at different angles and different locations by placing the can further away from you. Make sure to get the entire can in your photos. Note: If you do not have cans or a camera, we have supplied a data set for you in the .zip file that you previously downloaded. 
+
+    <span style="color:green">Good</span> Examples:<br>
+    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/can1.png){: style="height:300px;width:200px;margin-left:40px"}
+    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/can2.png){: style="height:300px;width:200px;margin-left:40px"}
+    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/can3.png){: style="height:300px;width:200px;margin-left:40px"}
+
+
+    <span style="color:red">Bad</span> Examples:<br>
+    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/can4.png){: style="height:300px;width:200px;margin-left:40px"}
+    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/can5.png){: style="height:300px;width:200px;margin-left:40px"}
+
+
+4. Once you have your 20 images, save them locally on your computer. 
+
+<h3>Image Preparation - Collecting Mode *IOS DEVICE ONLY*</h3>
+
+If you have the MVI application already installed you can create an inspection that collects photos and uploads them into a dataset on the MVI Web interface. 
 
 1. Log into Maximo Visual Inspections using your credentials.
 
-     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/login.png){: style="height:400px;width:700px;"}
+     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/login.png){: style="height:250px;width:700px;"}
 
     <br>
 
@@ -39,6 +70,8 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/dataset.png){: style="height:120px;width:700px"}
 
     <br>
+
+    *For those that did not have can pictures, drag and drop or import the WorkShopAttendee Dataset.zip file in “Create new Data Set” box pictured below. *
 
 4. Select `Create new data set`.
 
@@ -58,7 +91,7 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 
     <br>
 
-7. You will now drag and drop the 5 images of cans we provided you onto the `Drop files here` box or click `Import files` and select the images.
+7. Y5.	You will now drag and drop the 20 images of cans you saved locally onto the `Drop files here` box or click `Import files` and select the images.
 
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/create6.png){: style="height:450px;width:650px"}
 
@@ -99,7 +132,7 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 
 9. Look at the image and determine whether the can is “good” or “bad_dented”. Then, click the specific object name for the image and click the `Box` label.
 
-    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/boxL.png){: style="height:500px;width:1200px"}
+    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/boxL.png){: style="height:450px;width:700px"}
 
     <br>
 
@@ -109,7 +142,7 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 
     <br>
 
-11. Try to get the boxes around the cans as close as possible. If you need to adjust your label, just <u>uncheck</u> the `Box` label first (box turns BLUE when ACTIVE, BLACK when not active) and use the 4 white corners to <u>adjust</u> the label. You may need to click on one of the can boxes to select it, if the 4 white corner boxes are not showing. You can also select the <u>trash</u> can symbol next to the label on the top right to delete it.
+11. Try to get the boxes around the cans as close as possible. If you need to adjust your label, just uncheck the Box label first (box turns GRAY when ACTIVE, BLACK when not active) and use the 4 white corners to adjust the label. You may need to click on one of the can boxes to select it, if the 4 white corner boxes are not showing. You can also select the trash can symbol next to the label on the top right to delete it. Note: The trash can in the black icons is for deleting the ENTIRE image.
 
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/mistakes.png){: style="height:400px;width:900px"}
 
@@ -118,6 +151,19 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 12. Use the `Blue Arrow` to scroll up and down through all of the images or hover your mouse over and scroll. Label all of the “good” and “bad_dented” cans in all of the images.
 
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/blueA.png){: style="height:400px;width:500px"}
+
+13. If you want to label your objects faster, you can select the `Copy` icon to paste the exact same label as the last photo. 
+
+    ![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/copy1.png){: style="height:400px;width:500px"}
+
+!!! note
+    If you choose this option, make sure to adjust the label tightly around the object.
+
+Example:<br>
+
+![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/adjust1.png){: style="height:400px;width:300px"}
+![img](/img/mvi_8.4/img-exerciseOne/exercise1-1/adjust2.png){: style="height:400px;width:300px"}
+
 
 13. Once finished, go back to the data set by clicking the back arrow.
 

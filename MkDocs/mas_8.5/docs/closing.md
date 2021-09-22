@@ -2,7 +2,7 @@
 
 <h1>CLOSING REMARKS</h1> 
 
-- In our end-to-end journey, we’ve seen our Remote Operations Support Engineer get a view of the sedimentation tanks with MVI, using a model that the Asset Analystand the Asset Manager downloaded from the Digital Twin Exchange. 
+- In our end-to-end journey, we’ve seen our Remote Operations Support Engineer get a view of the sedimentation tanks with MVI, using a model that the Asset Analyst and the Asset Manager downloaded from the Digital Twin Exchange. 
 
 - The Engineer also monitored all of the enterprise’s pumps in near-real time, applyingAI anomaly detection to eliminate false positive alerts. They investigated an asset in trouble, and submitted a service request all from a set of dashboardsin Maximo Monitor. 
 

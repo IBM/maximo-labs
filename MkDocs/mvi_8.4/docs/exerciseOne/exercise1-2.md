@@ -3,7 +3,10 @@
 <h2>Exercise 1.2 - Train and Deploy a Deep Learning Model</h2>
 
 
-<b>Train Model:</b> Now that our data set has been created, we are ready to start training our Deep Learning Model. In general, the more images used to train a model, the more accurate the model will be. The Augmented data set will create a better model than the 5 base images. We also have provided you with an even more accurate pretrained model built on 2000+ images.    
+<b>Train Model:</b> Now that our data set has been created, we are ready to start training our Deep Learning Model. In general, the more images used to train a model, the more accurate the model will be. The Augmented data set will create a better model than the 5 base images. We also have provided you with an even more accurate pretrained model built on 2000+ images.  
+
+!!! note
+    Please make sure there are enough GPUs to train the model. 
 
 1. Make sure you are on your `Cans-Augmented-YourInitials` data set. 
 
@@ -36,7 +39,7 @@
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-2/yolo.png){: style="height:400px;width:1000px"}
 
 !!! attention
-    We are only using 2000 iterations because we don't want to stretch the GPU too thin. Also, it takes a lot more time to train the model with higher iterations. Increasing the iterations can improve model accuracy, similar to adding more images to a dataset.
+    We are only using 2000 iterations because we don't want to stretch the GPU too thin. Also, it takes a lot more time to train the model with higher iterations. Increasing the iterations can improve model accuracy, similar to adding more images to a dataset. Please make sure there are enough GPUs to train the model.
 
 8.  Click the `Train Model` button at the top of the page.
 
@@ -48,6 +51,8 @@
 
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-2/training.png){: style="height:400px;width:1000px"}
 
+!!! note
+    You can either wait for your model to be finished training and skip to deploying the model you created, or use the model provided in the box folder.
 
 
 <b>Deploy Model:</b> While your model is training, we are going to deploy the model that was given to you as part of the lab artifacts. The model was trained using over 2,000 images. Therefore, it will be significantly more accurate than the model you just created. 
@@ -58,7 +63,7 @@
 
     <br>
 
-2. Just like we did with the Data Set .zip file, we will do the same with the Model .zip file. You will drag and drop the `Dent Detection Model - Lab.zip` file that you saved to your computer or click `Import .zip file` and select the .zip file. Also, you can click the `x` on the progress bar for your model that is training if it is in the way. 
+2. Just like we did with the images, we will do the same with the Model .zip file. You will drag and drop the `Dent Detection Model - Lab.zip` file that you saved to your computer or click `Import .zip file` and select the .zip file. Also, you can click the `x` on the progress bar for your model that is training if it is in the way. 
 
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-2/modelzip.png){: style="height:600px;width:900px"}
 
@@ -94,7 +99,7 @@
 
     <br>
 
-8. Scroll down to test the model. Drag the `Model Test Pic` we provided you for testing and drop it into the `Test Model` box or select `Import` and upload the picture. This image was not used to train the model.
+8. Scroll down to test the model. Drag the `Model Test Pic` image we provided you for testing or use a picture you did not use to train your model and drop it into the `Test Model` box or select Import and upload the picture.  This image was not used to train the model we provided.
 
     ![img](/img/mvi_8.4/img-exerciseOne/exercise1-2/test.png){: style="height:400px;width:1100px"}
 

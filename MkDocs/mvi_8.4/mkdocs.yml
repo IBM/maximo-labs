@@ -1,14 +1,14 @@
-site_name: Visual Inspection 8.4 Labs
+site_name: Visual Inspection 8.3 Labs
 site_url: https://mam-hol.eu-gb.mybluemix.net/
 site_author: Cecilia Stark & Contributors
-site_description: "Visual Inspection 8.4 Hands on Lab"
+site_description: "Visual Inspection 8.3 Hands on Lab"
 google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/mvi_8.4
 
 nav:
   - Get back to Maximo Labs: /
-  - MVI 8.4 Labs:
-    - Welcome to the MVI 8.4 Labs: index.md
+  - MVI 8.3 Labs:
+    - Welcome to the MVI 8.3 Labs: index.md
     - Pre-Requisites: prereqs.md
     - Exercises:
         - 1.1 DataSets: exerciseOne/exercise1-1.md

@@ -80,10 +80,10 @@ A Water Resource Authority needs to manage water and wastewater treatment assets
 
 ## Demo Flow
 
-![img](/img/mas_8.3/demo_flow.png){:style="height:400px;width:800px"}
+![img](/img/mas_8.5/demo_flow.png){:style="height:400px;width:800px"}
 
 ---
 
-**Updated: 2021-04-27**
+**Updated: 2021-09-21**
 
 ---

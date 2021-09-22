@@ -1,4 +1,4 @@
-# Digital Twin Exchange - Manage Lab
+# Digital Twin Exchange - Manage Lab (Under construction)
 
 !!! note
     Please follow the `Action` statements to navigate the steps and perform the lab.
@@ -9,15 +9,15 @@ An asset manager, I can leverage the Digital Twin Exchange to purchase various a
 
 `Action:` Show how to browse the DTX and browse through the contents. Purchase a job plan and spare parts list related to a centrifugal pump- use the dev environment.
  
-1.	Click this [link](dev.digitaltwinexchange.ibm.com/) for DTX.
+1.	Click this [link](https://digitaltwinexchange.ibm.com/) for DTX.
 2.	Browse the Exchange and highlight the Isolation Forest Anomaly Detection Model as an artifact that feeds into Monitor to detect anomalies in the monitored asset
 3.	Type `centrifugal` in search to look for relevant asset data in the Exchange
 4.	Choose `Centrifugal Pump 12 month Job Plan` and `Centrifugal Pump Assembly Spare Parts Item`, add to basket 
 5.	Checkout and purchase(verbally)
 
-![img](/img/mas_8.3/dtx1.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.3/dtx2.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.3/dtx3.png){:style="height:400px;width:800px"} 
+![img](/img/mas_8.5/dtx1.png){:style="height:400px;width:800px"} 
+![img](/img/mas_8.5/dtx2.png){:style="height:400px;width:800px"} 
+![img](/img/mas_8.5/dtx3.png){:style="height:400px;width:800px"} 
 
 The availability of digital contents and integration between the DTX and Manage helps me save time and effort locating and registering the relevant information as well as ensuring the accuracy of the data If you are a provider of the contents, the DTX allows you to monetize on the digital contents such as data models, asset related information and IP some of which you have seen in our demo for Monitor and MVI.<br>
  
@@ -38,9 +38,9 @@ The availability of digital contents and integration between the DTX and Manage 
 10.	Go to Job Plans and search Job Plan with `DT`, confirm the imported job plan
 11.	Go to item master and search the item with `DT`, confirm 4 items are imported
 
-![img](/img/mas_8.3/manage1.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.3/manage2.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.3/manage3.png){:style="height:400px;width:800px"} 
+![img](/img/mas_8.5/manage1.png){:style="height:400px;width:800px"} 
+![img](/img/mas_8.5/manage2.png){:style="height:400px;width:800px"} 
+![img](/img/mas_8.5/manage3.png){:style="height:400px;width:800px"} 
 
 
 <b>TRANSITION:</b> I’m going to turn it over to the technician who is assigned to work on the pump.

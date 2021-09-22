@@ -11,6 +11,6 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2021-08-22|Cecilia Stark|Created lab for Visual Inpection 8.4.|
+|2021-08-22|Cecilia Stark|Created lab for Visual Inpection 8.3.|
 
 ---

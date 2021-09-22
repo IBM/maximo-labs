@@ -44,7 +44,7 @@
 
     <br>
 
-4. Download the contents in the Box folder named MVI 8.4.zip, decompress and store in an easily accessible place. 
+4. Download the contents in the Box folder named MVILabAttendee2021.zip, decompress and store in an easily accessible place. 
 
         Box url-> https://ibm.box.com/s/x6b81fphpqn4pctmejpvk29zlfgpvxqq
 
