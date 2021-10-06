@@ -13,8 +13,8 @@ https://github.com/ibm-watson-iot/iot-python/tree/master/samples/simpleDevice
 
 |Date     |By                 | Description                                           |
 |:--------|:------------------|:------------------------------------------------------|
-|2021-05-10| Carlos Ferreira  |Incorporated testing feedback from Christophe Lucas    |
-|2021-04-29| Carlos Ferreira  |Completed first draft. Ready for testing.              |
+|2021-05-10| Carlos Ferreira  |Incorporated testing feedback from Christophe Lucas. Ready for use  |
+|2021-04-29| Carlos Ferreira  |Completed all draft content of labs. Ready for testing.              |
 |2020-04-22|Carlos Ferreira|First version of the lab that includes custom function, Jupyter notebooks, pump data, prediction models and Python simulator . |
 
 ---
