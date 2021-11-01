@@ -1,5 +1,5 @@
 # Objectives
-In this Exercise you will learn how to deploy MAS Core:
+This exercise will teach you how to set up MAS Core:
 
 <br>
 

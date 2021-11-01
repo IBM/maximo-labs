@@ -1,6 +1,5 @@
 # Objectives
-In this Exercise you will learn how to deploy Cert Manager as a dependent
-component of MAS:
+This exercise will teach you how to set up Cert Manager, a dependent component of the Maximo Application Suite (MAS):
 
 <br>
 

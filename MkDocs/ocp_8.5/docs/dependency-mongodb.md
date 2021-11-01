@@ -1,6 +1,5 @@
 # Objectives
-In this Exercise you will learn how to deploy MongoDB as a first dependent
-component of Maximo Application Suite (MAS):
+This exercise will teach you how to set up MongoDB as the first dependent component of the Maximo Application Suite (MAS):
 
 <br>
 
@@ -18,7 +17,7 @@ oc login ...
 
 ### Install MongoDB
 
-In this part of the MongoDB installation, you will be downloading an opensource public repository of IBM's MongoDB. You will generate the self-signed certificate; set a 16 character password, and deploy a specific version using Block storage of IBM Cloud. After the deployment, you will be validating the installation.
+In this exercise, you will learn how to deploy MongoDB as a first dependent component of the Maximo Application Suite (MAS): In this part of the MongoDB installation, you will be downloading an opensource public repository of IBM's MongoDB. You will generate the self-signed certificate, set a 16-character password, and deploy a specific version using Block storage of the IBM Cloud. After the deployment, you will be validating the installation.
 
 **1. Set up fetch utility**
 ```shell

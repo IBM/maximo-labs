@@ -1,6 +1,5 @@
 # Objectives
-In this Exercise you will learn how to deploy Behavior Analytics Services (BAS)
-as a dependent component of MAS:
+This exercise will teach you how to set up Behavior Analytics Services (BAS), a dependent component of the Maximo Application Suite (MAS):
 
 <br>
 
@@ -54,12 +53,17 @@ oc create secret generic grafana-credentials -n ibm-bas --from-literal=grafana_u
 
 **4. Custom Resource**
 
-Ensure you are in `ibm-bas` project and create a CR for AnalyticsProxy deployment. Replace `managed-nfs-storage` with `ibmc-file-bronze` if you are not using Tech Zone's NFS.
+!!! note
+
+    Ensure you are in `ibm-bas` project to create a CR for AnalyticsProxy deployment. Replace `managed-nfs-storage` with `ibmc-file-bronze` if you are not using Tech Zone's NFS.
+
+!!! tip
+
+    It would be best to copy/paste the following block in your notepad file, adjust the storageclass and then execute.
 
 ```shell
 oc project ibm-bas
-```
-
+```    
 ```yaml
 cat <<EOF | oc create -f -
 apiVersion: bas.ibm.com/v1

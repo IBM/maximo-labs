@@ -1,10 +1,15 @@
 # Objectives
-In this Exercise you will learn how to deploy Suite License Service (SLS)
-as a dependent component of MAS:
+This exercise will teach you how to set up Suite License Service (SLS), a dependent component of the Maximo Application Suite (MAS):
 
 <br>
 
 ## Suite License Service (SLS)
+
+**0. Git clone author's repository**
+
+```shell
+git clone https://github.com/aroute/mas85roks.git
+```
 
 **1. Operator Catalog and Service Binding Operator**
 
