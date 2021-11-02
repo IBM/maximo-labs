@@ -26,12 +26,16 @@ with their corresponding metric values. In this exercise you will use Monitor to
 3.  Click `Create event type` button
 ![Create Events](/img/monitor_autoai_8.4/p4.png)
 
-4. Click on `Create event type` button.  ![Import](/img/monitor_autoai_8.4/p2a.png) Add `Device Event Type` to the `Physical Interface` by uploading a json file that contains a payload like this
+4. If your pump simulator is sending data you can wait for the dialog to fill in with your event data.  Otherwise you can
+set the payload by click on `Create event type` button.  ![Import](/img/monitor_autoai_8.4/p2a.png) Add `Device Event Type` 
+to the  `Physical Interface` by uploading a json file that contains a payload similar to the one below.  Replace `co` 
+with your initials for your eventID.
+
     ```
     {
       "EventName": "event",
       "EventDescription": "Device event",
-      "EventID": "pump_co_11111096",
+      "EventID": "pump_co",
       "Payload": {
           "evt_timestamp": "2020-01-19T03:59:53.03Z",
           "speed": 1124,

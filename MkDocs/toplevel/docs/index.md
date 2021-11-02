@@ -30,9 +30,10 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
 ### Maximo Application Suite 8.5
 
-  ![Under Development: ](./img/under_development.png)[Suite Overview](/mas_8.5/)<span style="color:red">*NEW!* Lab!!</span><br/>
-  ![Under Development: ](./img/under_development.png)[Monitor](/monitor_8.5/)<span style="color:red">*NEW!* Lab!!</span><br/>
-
+  ![Under Development: ](./img/under_development.png)[Suite Overview](/mas_8.5/)
+  ![Under Development: ](./img/under_development.png)[Monitor](/monitor_8.5/)
+  ![Under Development: ](./img/under_development.png)[Monitor Auto AI Lab](/monitor_autoai_8.5/) <span style="color:red">*Updated!* Lab!!</span><br/>
+  
 ---
 
 ### Contribute
