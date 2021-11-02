@@ -18,7 +18,6 @@ nav:
         - 3. Create Python Functions : python_function.md
         - 4. Create Python Expressions : python_expressions.md
         - 5. Add Value Card : add_value_card.md
-        - 6. Create Custom Function: custom_functions.md
   - About: about.md
 
 theme: readthedocs

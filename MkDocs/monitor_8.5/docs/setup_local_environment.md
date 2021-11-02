@@ -26,12 +26,22 @@ In this exercise you will setup your local development environment.
 
 1.  Launch Terminal
 
-2.  Install Brew Follow directions here: https://brew.sh/
+2.  Mac users need to install Brew Follow directions here: https://brew.sh/
 
-3. Install the right Python Version v3.7.9
+3.  Install the right Python Version v3.7.6
+
+Mac users
+- In terminal:
+
+   
     ```
     brew install python 
     ```
+
+Window users 
+
+- Please see available public references for [installing Python on Windows](https://medium.com/co-learning-lounge/how-to-download-install-python-on-windows-2021-44a707994013)
+
    
 4.  Install "pip". (Python Package Installer):
     ```
