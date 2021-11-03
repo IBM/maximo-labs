@@ -7,7 +7,9 @@ portfolio.  The labs are in different states of readiness for use shown below.
  ![Under Development](./img/under_development.png)Being developed and requires feedback.<br/>
  ![Not Started](./img/not_started.png)Not yet available.<br/>
  ![Deprecated](./img/deprecated.png)Has been deprecated.<br/>
+ 
 ---
+
 ### Maximo SaaS
 
   ![Ready](./img/readynew.png)[Monitor](/monitor_saas/)  
@@ -30,11 +32,9 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
 ### Maximo Application Suite 8.5
 
-  ![Under Development: ](./img/under_development.png)[Suite Overview](/mas_8.5/)
-  ![Under Development: ](./img/under_development.png)[Monitor](/monitor_8.5/)
-  ![Under Development: ](./img/under_development.png)[Monitor Auto AI Lab](/monitor_autoai_8.5/) <span style="color:red">*Updated!* Lab!!</span><br/>
-  
----
+  ![Under Development: ](./img/under_development.png)[Suite Overview](/mas_8.5/)<br/>
+  ![Under Development: ](./img/under_development.png)[Monitor Functions](/monitor_8.5/)<br/>
+  ![Under Development: ](./img/under_development.png)[Monitor Auto AI Lab](/monitor_autoai_8.5/) <span style="color:red">*Updated!* Lab!!</span>
 
 ### Contribute
 
@@ -42,8 +42,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
   ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
-
 **Updated: 2021-05-13**
-
 ---
+
 © 2021 International Business Machines Corporation.
