@@ -1,101 +1,110 @@
 # Pre-Requisite Instructions
 
-Here are the prerequisites for the Maximo Application Suite Deployment Labs.
+Here are the prerequisites for the Maximo Application Suite Deployment Labs.   All Exercises require that you have:
 
-# All Exercises
+*  A remote virtual server instance (preferrably Ubuntu Linux) as a working environment.
 
-All Exercises require that you have:
+*  An OpenShift Cluster on IBM Cloud.
 
-1. A remote virtual server instance (preferrably Ubuntu Linux) as a working environment.
+*  Maximo Application Suite license and installer file.
 
-2. An OpenShift Cluster on IBM Cloud.
+*  [Visual Studio Code](https://code.visualstudio.com/) running locally on your laptop with
+ [Microsoft's Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)  extension.
 
-3. Maximo Application Suite license and installer file.
+* An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?). Click 
+`Login to MY IBM` button and then click `Create an IBM ID` link
 
-4. [Visual Studio Code](https://code.visualstudio.com/) running locally on your laptop with [Microsoft's Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension.
+* Install Docker
 
-4.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?):<br>
-o Click `Login to MY IBM` button<br>
-o Click `Create an IBM ID` link
+## Working Environment Virtual Server Instance
 
-<br>
+As part of best practice, provision an Ubuntu Linux Virtual Server Instance (VSI) on the IBM Cloud as your remote working 
+environment.
 
-## Working Environment (Virtual Server Instance)
+## Assistance with IBM Cloud Credits
 
-As part of best practice, provision an Ubuntu Linux Virtual Server Instance (VSI) on the IBM Cloud as your remote working environment.
-
-**For Business Partners with IBM Cloud account or through Cloud Credit**
-
+Business Partners with IBM Cloud account or that have Cloud Credit can use 
 [Virtual Server for Classic](https://cloud.ibm.com/gen1/infrastructure/provision/vs)
 
-**Tech Zone (for IBMers only)**
-
+Tech Zone (for IBMers only) can use
 [Collection: IBM Virtual Server Instance (Classic)](https://techzone.ibm.com/collection/base-images)
 
-<br>
+### Install General Purpose Utilities
 
-### General Purpose Utilities
-
-1. After you acquire the instance, install the following general purpose tools and utilities:
+After you acquire the Virtual Server Instance, install the following general purpose tools and utilities:
 
 ```shell
 sudo apt-get install -y vim gettext iputils-ping mlocate git curl openssl zip unzip jq openjdk-8-jdk nodejs npm
 ```
+
 ```shell
 sudo updatedb && sudo apt-get clean all -y
 ```
 
-<br>
+### Install Command Line Interfaces
 
-### IBM Cloud and other CLIs
+Install CLIs for IBM Cloud CLI, Helm and Openshift.  Open and terminal window and type the following commands.
 
-2. Install IBM Cloud CLI, and other needed tools:
+*  IBM Cloud CLI
+    ```shell
+    curl -sL https://ibm.biz/idt-installer | bash
+    ```
 
-**`ibmcloud`**
-```shell
-curl -sL https://ibm.biz/idt-installer | bash
-```
-**`helm`**
-```shell
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && chmod 700 get_helm.sh && bash ./get_helm.sh
-```
-**`oc`**
-```shell
-curl -sLo /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/oc/4.6/linux/oc.tar.gz && sudo tar xzvf /tmp/oc.tar.gz -C /usr/local/bin/ && rm -rf /tmp/oc.tar.gz
-```
+*  Helm Command line Tool
+    ```shell
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && chmod 700 get_helm.sh && bash ./get_helm.sh
+    ```
 
-<br>
+*  Kubernetes Command line Tool
+    ```shell
+    link or command?
+    ```
+   
+*  OpenShift Command line Tool
+    ```shell
+    curl -sLo /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/oc/4.6/linux/oc.tar.gz && sudo tar xzvf /tmp/oc.tar.gz -C /usr/local/bin/ && rm -rf /tmp/oc.tar.gz
+    ```
 
-### Validate
+*  Docker Command line Tool
+    ```shell
+    link or command?
+    ```
 
-Validate the installed utilities:
+### Validate Install CLIs
 
+Validate the installed utilities: Open and terminal window and type the following commands.
+
+*  IBM Cloud CLI
 ```shell
 ibmcloud --help
 ```
+*  Helm CLI
 ```shell
 helm version -c
 ```
+
+*  Kubernetes CLI
 ```shell
 kubectl version --client=true
 ```
+
+*  OpenShift CLI
 ```shell
 oc version --client
 ```
+
+*  Docker CLI
 ```shell
 docker --help
 ```
 
-<br>
-<br>
-
 ## OpenShift Cluster
 
-**For Business Partners with IBM Cloud account or through Cloud credit**
+Business Partners with IBM Cloud account or through Cloud credit can contact their IBM sales representative for cloud 
+credit if you do not have IBM Cloud account of your own. 
 
-Contact your IBM sales representative for cloud credit if you do not have IBM Cloud account of your own. Acquire the following [OpenShift Classic](https://www.ibm.com/cloud/openshift) cluster:
-
-[Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
+1.  Acquire the following [OpenShift Classic](https://www.ibm.com/cloud/openshift) 
+cluster:  [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
 
 <table>
   <tr>
@@ -132,13 +141,12 @@ Contact your IBM sales representative for cloud credit if you do not have IBM Cl
   </tr>
 </table>
 
-Click Create
+2.  Click `Create`
 
+!!! note
 ⏰ IBM Cloud cluster provisioning may take 45 minutes to an hour.
 
-**Tech Zone (for IBMers and Business Partners)**
-
-[Collection: Custom ROKS & VMware requests: IBM RedHat Openshift Kubernetes Service (ROKS)](https://techzone.ibm.com/collection/custom-roks-v-mware-requests)
+IBMers and Business Partners can can also use the Tech Zone.  [Collection: Custom ROKS & VMware requests: IBM RedHat Openshift Kubernetes Service (ROKS)](https://techzone.ibm.com/collection/custom-roks-v-mware-requests)
 
 <table>
   <tr>
@@ -171,10 +179,12 @@ Click Create
   </tr>
 </table>
 
+!!! note
 ⏰ Tech Zone cluster provisioning may take 45 minutes to an hour.
 
 ### Get ready to begin
 
 !!! tip
-
-    Using VS Code with the Remote SSH extension, log in to your VSI and you're all set to begin!
+Use VS Code with the Remote SSH extension to log in to your Virtual Server Instance.
+ 
+You're all set to begin!
