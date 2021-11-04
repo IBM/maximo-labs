@@ -12,11 +12,11 @@ nav:
     - Pre-Requisites: prereqs.md
     - Get Started: getting_started.md
     - Exercises:
-        - 1. Dependency - MongoDB: dependency-mongodb.md
-        - 2. Dependency - Cert Manager: dependency-certmanager.md
-        - 3. Dependency - BAS: dependency-bas.md
-        - 4. Dependency - SLS: dependency-sls.md
-        - 5. MAS Core: mas-core.md
+        - 1. MongoDB: dependency-mongodb.md
+        - 2. Certificate Management: dependency-certmanager.md
+        - 3. Behavior Analytics Services: dependency-bas.md
+        - 4. Suite License Service: dependency-sls.md
+        - 5. Maximo Application Suite Core: mas-core.md
         - 6. Suite Setup: suite-setup.md
         - 7. Cloud Pak for Data: cp4d35.md
   - About: about.md
