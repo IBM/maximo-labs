@@ -14,12 +14,9 @@ Here are the prerequisites for the Maximo Application Suite Deployment Labs.   A
 * An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?). Click 
 `Login to MY IBM` button and then click `Create an IBM ID` link
 
-* Install Docker
-
 ## Working Environment Virtual Server Instance
 
-As part of best practice, provision an Ubuntu Linux Virtual Server Instance (VSI) on the IBM Cloud as your remote working 
-environment.
+As part of best practice, provision an Ubuntu Linux Virtual Server Instance (VSI) on the IBM Cloud as your remote working environment.
 
 ## Assistance with IBM Cloud Credits
 
@@ -45,63 +42,61 @@ sudo updatedb && sudo apt-get clean all -y
 
 Install CLIs for IBM Cloud CLI, Helm and Openshift.  Open and terminal window and type the following commands.
 
-*  IBM Cloud CLI
-    ```shell
-    curl -sL https://ibm.biz/idt-installer | bash
-    ```
+1\. IBM Cloud CLI
 
-*  Helm Command line Tool
-    ```shell
-    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && chmod 700 get_helm.sh && bash ./get_helm.sh
-    ```
+```shell
+curl -sL https://ibm.biz/idt-installer | bash
+```
 
-*  Kubernetes Command line Tool
-    ```shell
-    link or command?
-    ```
+2\. Helm Command line Tool
+
+```shell
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && chmod 700 get_helm.sh && bash ./get_helm.sh
+```
    
-*  OpenShift Command line Tool
-    ```shell
-    curl -sLo /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/oc/4.6/linux/oc.tar.gz && sudo tar xzvf /tmp/oc.tar.gz -C /usr/local/bin/ && rm -rf /tmp/oc.tar.gz
-    ```
+3\. OpenShift Command line Tool
 
-*  Docker Command line Tool
-    ```shell
-    link or command?
-    ```
+```shell
+curl -sLo /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/oc/4.6/linux/oc.tar.gz && sudo tar xzvf /tmp/oc.tar.gz -C /usr/local/bin/ && rm -rf /tmp/oc.tar.gz
+```
 
 ### Validate Install CLIs
 
 Validate the installed utilities: Open and terminal window and type the following commands.
 
-*  IBM Cloud CLI
+1\.  IBM Cloud CLI
+
 ```shell
 ibmcloud --help
 ```
-*  Helm CLI
+
+2\.  Helm CLI
+
 ```shell
 helm version -c
 ```
 
-*  Kubernetes CLI
+3\.  Kubernetes CLI
+
 ```shell
 kubectl version --client=true
 ```
 
-*  OpenShift CLI
+4\.  OpenShift CLI
+
 ```shell
 oc version --client
 ```
 
-*  Docker CLI
+5\.  Docker CLI
+
 ```shell
 docker --help
 ```
 
 ## OpenShift Cluster
 
-Business Partners with IBM Cloud account or through Cloud credit can contact their IBM sales representative for cloud 
-credit if you do not have IBM Cloud account of your own. 
+Business Partners with IBM Cloud account or through Cloud credit can contact their IBM sales representative for cloud credit if you do not have IBM Cloud account of your own. 
 
 1.  Acquire the following [OpenShift Classic](https://www.ibm.com/cloud/openshift) 
 cluster:  [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
@@ -144,7 +139,7 @@ cluster:  [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/cata
 2.  Click `Create`
 
 !!! note
-⏰ IBM Cloud cluster provisioning may take 45 minutes to an hour.
+    ⏰ IBM Cloud cluster provisioning may take 45 minutes to an hour.
 
 IBMers and Business Partners can can also use the Tech Zone.  [Collection: Custom ROKS & VMware requests: IBM RedHat Openshift Kubernetes Service (ROKS)](https://techzone.ibm.com/collection/custom-roks-v-mware-requests)
 
@@ -180,11 +175,11 @@ IBMers and Business Partners can can also use the Tech Zone.  [Collection: Custo
 </table>
 
 !!! note
-⏰ Tech Zone cluster provisioning may take 45 minutes to an hour.
+    ⏰ Tech Zone cluster provisioning may take 45 minutes to an hour.
 
 ### Get ready to begin
 
 !!! tip
-Use VS Code with the Remote SSH extension to log in to your Virtual Server Instance.
+    Use VS Code with the Remote SSH extension to log in to your Virtual Server Instance.
  
 You're all set to begin!
