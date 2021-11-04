@@ -1,34 +1,27 @@
 # Objectives
-This exercise will teach you how to set up Behavior Analytics Services (BAS), a dependent component of the Maximo Application Suite (MAS):
+In this exercise you will learn how to:
 
-<br>
+*  Install and setup Behavior Analytics Services (BAS).
+*  Validate BAS is ready for use with Maximo Application Suite (MAS).
 
-## Behavior Analytics Services (BAS)
+### Install Behavior Analytics Services (BAS)
 
-There are multiple ways you can install IBM's Behavior Analytics Services (BAS). Follow IBM's [documented method](https://developer.ibm.com/openlabsdev/ui/behavior-analytics-services) or below mentioned steps using command line.
+In this exercise, you will learn how to deploy Behavior Analytics Services. You will set up BAS using OpenShift's Operator. You will create an API key and record it as a reference for later.
 
-<br>
 
-### Install BAS
+### Install BAS Operator
 
-⏰ Wait time 45-50 minutes.
+!!! note
 
-**1. New Project**
+    ⏰ Wait time 45-50 minutes.
 
-Go to OpenShift dashboard - Projects<sup>1</sup>. Click on Create Project button<sup>2</sup>. Type
-`ibm-bas` in the Name field<sup>3</sup>. Click Create button<sup>4</sup> to create a new project.
+1\. Create new Project. Go to OpenShift dashboard - Projects<sup>1</sup>. Click on Create Project button<sup>2</sup>. Type `ibm-bas` in the Name field<sup>3</sup>. Click Create button<sup>4</sup> to create a new project.
 
 ![img](/img/ocp_8.5/ScreenShot-bas01.png)
 
-**2. Operator**
-
-From the Operators menu on the left-hand side, click on OperatorHub<sup>1</sup>.
+2\. From the Operators menu on the left-hand side, click on OperatorHub<sup>1</sup>.
 Ensure you are in `ibm-bas` project<sup>2</sup>. In All Items search field, type
-`behavior` to search for the operator<sup>3</sup>. Click on `Behavior Analytics Service` operator<sup>4</sup>.
-
-Click Install<sup>5</sup>.
-
-From the Install Operator screen - keeping everything default - click Install<sup>6</sup>.
+`behavior` to search for the operator<sup>3</sup>. Click on `Behavior Analytics Service` operator<sup>4</sup>. Click Install<sup>5</sup>. From the Install Operator screen - keeping everything default - click Install<sup>6</sup>.
 
 ![img](/img/ocp_8.5/ScreenShot-bas02.png)
 <br><br>
@@ -37,11 +30,13 @@ From the Install Operator screen - keeping everything default - click Install<su
 ![img](/img/ocp_8.5/ScreenShot-bas04.png)
 <br><br>
 
-⏰ Wait approximately 5 minutes for the Operator and the Dashboard to provision.
+!!! note
 
-**3. Username/Password**
+    ⏰ Wait approximately 5 minutes for the Operator and the Dashboard to provision.
 
-After the operator is installed, create username and passwords for the database
+### Set up Username/Password
+
+1\. After the operator is installed, create username and passwords for the database
 and grafana monitoring.
 
 ```shell
@@ -51,7 +46,7 @@ oc create secret generic database-credentials -n ibm-bas --from-literal=db_usern
 oc create secret generic grafana-credentials -n ibm-bas --from-literal=grafana_username=basuser --from-literal=grafana_password=passw0rd
 ```
 
-**4. Custom Resource**
+### Create Custom Resource
 
 !!! note
 
@@ -97,30 +92,29 @@ spec:
 EOF
 ```
 
-⏰ At this point in time, you must wait about 40 minutes. Monitor pods and
-Persistent Volumes as they are being created.
+!!! note
 
-**5. Validate deployment**
+    ⏰ At this point in time, you must wait about 40 minutes. Monitor pods and Persistent Volumes as they are being created.
 
-After about 40 minutes, validate AnalyticsProxy deployment by going to
+### Validate deployment
+
+1\. After about 40 minutes, validate AnalyticsProxy deployment by going to
 the Installed Operators<sup>1</sup>, Behavior Analytics Proxy operator, Analytics
 Proxy Deployment<sup>2</sup>, status<sup>3</sup>.
 
 ![img](/img/ocp_8.5/ScreenShot-bas05.png)
 <br><br>
 
-**6. Generate API key**
+### Generate API key
 
-Go back to the BAS Operator, click on Generate Key<sup>1</sup>.
-
-Keeping everything default, click Create<sup>2</sup>.
+1\. Go back to the BAS Operator, click on Generate Key<sup>1</sup>. Keeping everything default, click Create<sup>2</sup>.
 
 ![img](/img/ocp_8.5/ScreenShot-bas06.png)
 <br><br>
 ![img](/img/ocp_8.5/ScreenShot-bas07.png)
 <br><br>
 
-**7. Record API key**
+### Collect BAS API key for Use Later
 
 ```shell
 oc get secret bas-api-key -n ibm-bas --output="jsonpath={.data.apikey}" | base64 -d
@@ -128,6 +122,6 @@ oc get secret bas-api-key -n ibm-bas --output="jsonpath={.data.apikey}" | base64
 
 <br>
 
----
-<sub>Reference BAS</sub><br>
-<sub>https://www.ibm.com/docs/en/mas85/8.5.0?topic=administering-configuring-suite#bas</sub>
+## References
+BAS [URL](https://www.ibm.com/docs/en/mas85/8.5.0?topic=administering-configuring-suite#bas)
+

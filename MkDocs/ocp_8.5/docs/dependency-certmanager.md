@@ -1,29 +1,29 @@
 # Objectives
-This exercise will teach you how to set up Cert Manager, a dependent component of the Maximo Application Suite (MAS):
+In this exercise you will learn how to:
 
-<br>
+*  Setup Cert Manager.
 
-## Cert Manager
+### Cert Manager
 
-Jetstack's opensource community based [cert-manager](https://cert-manager.io/) is a dependency of MAS for the maintenance of X.509 certificates. Setting up your own domain name using DNS with public certificates, is beyond the scope of this guide (contact the author if you need general guidelines). In this tutorial, you will be setting up MAS with the default Ingress certificate of the IBM ROKS cluster.
+In this exercise, you will learn how to setup Jetstack's opensource community based [cert-manager](https://cert-manager.io/) which is a dependency of MAS for the maintenance of X.509 certificates. Setting up your own domain name using DNS with public certificates, is beyond the scope of this guide (contact the author if you need general guidelines). In this tutorial, you will be setting up MAS with the default Ingress certificate of the IBM ROKS cluster.
 
-<br>
+!!! note
 
-⏰ Wait time <5 minutes.
+    ⏰ Wait time <5 minutes.
 
-### Install Cert Manager
-
-Create a new project and install cert-manager using a one-line command.
+1\. Create a new project.
 
 ```shell
 oc new-project cert-manager
 ```
+
+2\. Install cert-manager using a one-line command.
+
 ```shell
 oc apply -f https://github.com/jetstack/cert-manager/releases/download/v1.2.0/cert-manager.yaml
 ```
 
 <br>
 
----
-<sub>Reference Cert Manager</sub><br>
-<sub>https://www.ibm.com/docs/en/mas85/8.5.0?topic=installation-system-requirements#cert-manager</sub>
+## References
+cert-manager  [URL](https://www.ibm.com/docs/en/mas85/8.5.0?topic=installation-system-requirements#cert-manager)

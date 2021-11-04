@@ -1,19 +1,20 @@
 # Objectives
-This exercise will teach you how to set up Suite License Service (SLS), a dependent component of the Maximo Application Suite (MAS):
+In this exercise you will learn how to:
 
-<br>
+*  Install and setup Suite License Service (SLS).
+*  Validate SLS is ready for use with Maximo Application Suite (MAS).
 
-## Suite License Service (SLS)
+### Install Suite License Service (SLS)
 
-**0. Git clone author's repository**
+In this exercise, you will learn how to deploy Suite License Service. You will set up SLS using OpenShift's Operator. You will create an API key and a host ID and record it as a reference for later.
+
+1\. Git clone author's repository.
 
 ```shell
 git clone https://github.com/aroute/mas85roks.git
 ```
 
-**1. Operator Catalog and Service Binding Operator**
-
-In order to deploy IBM's Suite License Service, you first need to activate IBM's Operator Catalog. In addition, you will set up a specific version of Red Hat's Service Binding Operator.
+2\. In order to deploy IBM's Suite License Service, you first need to activate IBM's Operator Catalog. In addition, you will set up a specific version of Red Hat's Service Binding Operator.
 
 ```shell
 oc create -f catalog.yaml
@@ -25,11 +26,11 @@ installplan=$(oc get installplan -n openshift-operators | grep -i service-bindin
 oc patch installplan ${installplan} -n openshift-operators --type merge --patch '{"spec":{"approved":true}}'
 ```
 
-**2. Suite License Service Operator**
+2\. Suite License Service Operator
 
 Interactively via OpenShift dashboard, search for and install IBM `Suite License Service` Operator from the Operator Hub with automatic renewal strategy. Note that the operator installs itself in `ibm-sls` project.
 
-**3. Entitled Registry**
+3\. Entitled Registry
 
 Locate your entitled registry key from IBM's Container Library and save it as variable below: [Container Software Library](https://myibm.ibm.com/products-services/containerlibrary).
 
@@ -40,7 +41,7 @@ oc project ibm-sls
 export ENTITLEMENT_KEY=xxxxxxxxxxxxxxxxxxxxx
 ```
 
-**4. MongoDB Secret**
+4\. MongoDB Secret
 
 Export previously created MongoDB password. Create IBM entitled registry and MongoDB secret.
 
@@ -58,7 +59,7 @@ chmod +x ibm-entitlement.sh
 oc create -f sls-mongo-credentials.yaml
 ```
 
-**5. License Service Custom Resource**
+5\. License Service Custom Resource
 
 Identify your ROKS' Ingress subdomain from the IBM Cloud dashboard. Edit `licenseservice.yaml` to insert the Ingress URL (line number 9).
 
@@ -70,23 +71,25 @@ Edit licenseservice.yaml file to insert the above mentioned two values. Ensure c
 oc create -f licenseservice.yaml
 ```
 
-⏰ Wait time 10-15 minutes.
+!!! note
 
-**6. License ID and Registration Key**
+    ⏰ Wait time 10-15 minutes.
 
-Wait and watch for the Licenseservice to come up. Identify your `LICENSEID` and `REGISTRATIONKEY`.
+### Collect SLS information for Use Later
+
+1\. Wait and watch for the Licenseservice to come up. Identify your `LICENSEID` and `REGISTRATIONKEY`.
 
 ```shell
 oc get -n ibm-sls licenseservice sls
 ```
 
-Identify SLS URL.
+2\. Identify SLS URL.
 
 ```shell
 oc get -n ibm-sls cm sls-suite-registration -o jsonpath='{.data.url}'
 ```
 
-Download the SLS certificate.
+3\. Download the SLS certificate.
 
 ```shell
 oc get secret -n ibm-sls sls-cert-client -o jsonpath='{.data.ca\.crt}' | base64 -d -w 0 > ca.crt
