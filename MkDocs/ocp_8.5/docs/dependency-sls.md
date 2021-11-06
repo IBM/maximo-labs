@@ -11,12 +11,13 @@ In this exercise, you will learn how to deploy Suite License Service. You will s
 1\. Git clone author's repository.
 
 ```shell
-git clone https://github.com/aroute/mas85roks.git
+git clone https://github.com/aroute/mas-ocp-lab.git
 ```
 
 2\. In order to deploy IBM's Suite License Service, you first need to activate IBM's Operator Catalog. In addition, you will set up a specific version of Red Hat's Service Binding Operator.
 
 ```shell
+cd mas-ocp-lab/
 oc create -f catalog.yaml
 ```
 ```shell
@@ -26,11 +27,16 @@ installplan=$(oc get installplan -n openshift-operators | grep -i service-bindin
 oc patch installplan ${installplan} -n openshift-operators --type merge --patch '{"spec":{"approved":true}}'
 ```
 
-2\. Suite License Service Operator
+3\. Suite License Service Operator
 
-Interactively via OpenShift dashboard, search for and install IBM `Suite License Service` Operator from the Operator Hub with automatic renewal strategy. Note that the operator installs itself in `ibm-sls` project.
+Interactively via OpenShift dashboard, search for and install IBM `Suite License Service` Operator from the Operator Hub with automatic renewal strategy. 
 
-3\. Entitled Registry
+!!! note
+
+    Suite License Service Operator installs itself in `ibm-sls` project.
+
+
+4\. Entitled Registry
 
 Locate your entitled registry key from IBM's Container Library and save it as variable below: [Container Software Library](https://myibm.ibm.com/products-services/containerlibrary).
 
@@ -41,14 +47,13 @@ oc project ibm-sls
 export ENTITLEMENT_KEY=xxxxxxxxxxxxxxxxxxxxx
 ```
 
-4\. MongoDB Secret
+5\. MongoDB Secret
 
 Export previously created MongoDB password. Create IBM entitled registry and MongoDB secret.
 
 ```shell
 export MONGO_PASSWORD=xxxxxxxxxxxx
 ```
-
 ```shell
 chmod +x ibm-entitlement.sh
 ```
@@ -56,16 +61,16 @@ chmod +x ibm-entitlement.sh
 ./ibm-entitlement.sh
 ```
 ```shell
-oc create -f sls-mongo-credentials.yaml
+envsubst < sls-mongo-credentials.yaml | oc create -f -
 ```
 
-5\. License Service Custom Resource
+6\. License Service Custom Resource
 
-Identify your ROKS' Ingress subdomain from the IBM Cloud dashboard. Edit `licenseservice.yaml` to insert the Ingress URL (line number 9).
+- Identify your ROKS' Ingress subdomain from the IBM Cloud dashboard. 
 
-Copy CA.pem from MongoDB's cert's directory.
+- Copy CA.pem from MongoDB's cert's directory.
 
-Edit licenseservice.yaml file to insert the above mentioned two values. Ensure columns are aligned and the file is properly formatted. Create SLS CR.
+- Using VS Code's File editor, open to edit `licenseservice.yaml` file and insert the above mentioned two values. Ensure columns are aligned for the certificate and the file is properly formatted. Create SLS CR.
 
 ```shell
 oc create -f licenseservice.yaml

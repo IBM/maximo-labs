@@ -42,8 +42,8 @@ Password: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 https://admin.MyIngressSubDomaind/initialsetup
 ```
 
-4\.  Use `https://admin.MyIngressSubDomaind/initialsetup` to login.
+4\.  Using Firefox browser, accept the self-signed risk and login `https://admin.MyIngressSubDomaind/initialsetup`.
 
-## Upload self-signed certificate to MAS
+## Upload self-signed certificate in Firefox/Chrome (Windows/MAC) to avoid browser warning.
 
 TODO!!!  Instructions on how to manually upload self-signed certificate to Firefox browser.

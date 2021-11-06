@@ -50,11 +50,11 @@ oc create secret generic grafana-credentials -n ibm-bas --from-literal=grafana_u
 
 !!! note
 
-    Ensure you are in `ibm-bas` project to create a CR for AnalyticsProxy deployment. Replace `managed-nfs-storage` with `ibmc-file-bronze` if you are not using Tech Zone's NFS.
+    Ensure you are in `ibm-bas` project to create a CR for AnalyticsProxy deployment. Replace `ibmc-file-bronze` with `managed-nfs-storage` if you are using Tech Zone's cluster with NFS.
 
 !!! tip
 
-    It would be best to copy/paste the following block in your notepad file, adjust the storageclass and then execute.
+    It would be best to copy/paste the following block in your notepad file, adjust the storageclass if needed, and then execute.
 
 ```shell
 oc project ibm-bas
@@ -71,7 +71,7 @@ spec:
     frequency: '@monthly'
     retention_age: 6
     persistent_storage:
-      storage_class: managed-nfs-storage
+      storage_class: ibmc-file-bronze
       storage_size: 10G
   airgapped:
     enabled: 'false'
