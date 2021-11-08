@@ -22,6 +22,7 @@ Export needed variables. The `LICENSING_ID` is equal to `LICENSEID` discovered e
 ```shell
 export ENTITLEMENT_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 export LICENSING_ID=xxxxxxxxxxxx
+export TM_VERSION=1.1.1
 ```
 
 3\. Install Maximo Application Suite
