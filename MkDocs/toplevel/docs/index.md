@@ -41,6 +41,8 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
   ![Under Development: ](./img/under_development.png) [Visual Inspection(8.3.0)](/mvi_8.4/)
 
+  ![Under Development: ](./img/under_development.png) [MAS Environmental Monitoring](/sustain_mas/)
+
 ---
 
 ### Contribute

@@ -1,4 +1,4 @@
-# Manage - Mobile - Safety Lab
+# Manage - Mobile Lab
 
 !!! note
     Please follow the `Action` statements to navigate the steps and perform the lab.
