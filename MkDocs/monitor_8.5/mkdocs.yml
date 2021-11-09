@@ -1,0 +1,25 @@
+site_name: Maximo Hands on Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferreira & Contributors
+site_description: "Maximo Hands on Lab for Monitor v8.5"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/monitor_8.5
+
+nav:
+  - Get back to Maximo Labs: /
+  - Monitor v8.5 Labs:
+    - Welcome to the Monitor Labs: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: prereqs.md
+    - Exercises:
+        - 1. Setup Local Environment : setup_local_environment.md
+        - 1. Create Packaging Hopper Assets : hopper_asset.md
+        - 2. Create Constants  : constant.md
+        - 3. Create Python Functions : python_function.md
+        - 4. Create Python Expressions : python_expressions.md
+        - 5. Add Value Card : add_value_card.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list

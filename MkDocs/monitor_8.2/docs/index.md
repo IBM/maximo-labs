@@ -1,7 +1,5 @@
 # Welcome to the IBM Maximo Monitor Lab<br>(Version: 8.2)
 
-THIS IS A COPY OF THE MONITOR SAAS LAB AND NEEDS TO BE UPDATED
-
 You will learn about Monitor's capabilities to:
 
 * Connect devices

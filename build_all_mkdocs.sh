@@ -78,6 +78,14 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
+# Build the Maximo Monitor Auto AI 8.5 level:
+lab=monitor_autoai_8.5
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+#mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+#echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
+
 # Build the Maximo Visual Inspection 8.4 level:
 lab=mvi_8.4
 cd $root_dir/MkDocs/$lab
@@ -96,12 +104,21 @@ echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the Maximo Application Suite Sustainability Use Cases level:
 lab=sustain_mas
+# Build the MAS v8.5 Monitor Lab level:
+lab=monitor_8.5
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
+# Build the MAS deployment on OCP lab level:
+lab=ocp_8.5
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 ########################################################################################
 #### DON't CHANGE THE BELOW MANDATORY SECTION WHICH IS PART OF THE TOPLEVEL CONTENT ####
@@ -127,4 +144,4 @@ echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 # Start the web server hosting the complete site - then open the following URL in a browser: http://127.0.0.1:8080
 cd $root_dir/site
 echo "BUILD_INFO - Starting the web server on http://127.0.0.1:8080."
-python3 -m http.server --cgi 8080 
+python3 -m http.server --cgi 8080
