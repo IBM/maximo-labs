@@ -98,8 +98,10 @@ docker --help
 
 Business Partners with IBM Cloud account or through Cloud credit can contact their IBM sales representative for cloud credit if you do not have IBM Cloud account of your own. 
 
-1.  Acquire the following [OpenShift Classic](https://www.ibm.com/cloud/openshift) 
-cluster:  [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
+1\.  Acquire the following cluster as a baseline to start [OpenShift Classic](https://www.ibm.com/cloud/openshift)[Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
+
+!!! tip
+    ⏰ Worker nodes can be easily scaled later, when needed.
 
 <table>
   <tr>
@@ -136,12 +138,12 @@ cluster:  [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/cata
   </tr>
 </table>
 
-2.  Click `Create`
+2\.  Click `Create`
 
 !!! note
     ⏰ IBM Cloud cluster provisioning may take 45 minutes to an hour.
 
-IBMers and Business Partners can can also use the Tech Zone.  [Collection: Custom ROKS & VMware requests: IBM RedHat Openshift Kubernetes Service (ROKS)](https://techzone.ibm.com/collection/custom-roks-v-mware-requests)
+IBMers and Business Partners can can also use the Tech Zone.  [Collection: Custom ROKS & VMware requests: IBM RedHat Openshift Kubernetes Service (ROKS)](https://techzone.ibm.com/collection/custom-roks-vmware-requests)
 
 <table>
   <tr>
