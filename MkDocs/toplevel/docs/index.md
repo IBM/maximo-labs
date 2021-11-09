@@ -28,21 +28,17 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
 ### Maximo Application Suite 8.4
 
-  ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.4/)   
+  ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.4/)<br/> 
+  ![Ready](./img/readynew.png) [Visual Inspection(8.3.0)](/mvi_8.4/)  
 
 ### Maximo Application Suite 8.5
 
-  ![Under Development: ](./img/under_development.png) [Suite 8.5 Overview](/mas_8.5/) 
-
-  ![Under Development: ](./img/under_development.png) [Visual Inspection(8.3.0)](/mvi_8.4/)
-
-  ![Under Development: ](./img/under_development.png) [MAS Environmental Monitoring](/sustain_mas/)
-
----
   ![Under Development: ](./img/under_development.png)[MAS Installation](/ocp_8.5/)<br/>
   ![Under Development: ](./img/under_development.png)[Suite Overview](/mas_8.5/)<br/>
   ![Under Development: ](./img/under_development.png)[Monitor Functions](/monitor_8.5/)<br/>
-  ![Under Development: ](./img/under_development.png)[Monitor Auto AI](/monitor_autoai_8.5/) <span style="color:red">*Updated!* Lab!!</span>
+  ![Under Development: ](./img/under_development.png)[Monitor Auto AI](/monitor_autoai_8.5/) <span style="color:red">*Updated!* Lab!!</span><br/>
+  ![Under Development: ](./img/under_development.png) [MAS Environmental Monitoring](/sustain_mas/)
+  
 
 ### Contribute
 
@@ -50,7 +46,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
   ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
-**Updated: 2021-05-13**
+**Updated: 2021-11-09**
 ---
 
 © 2021 International Business Machines Corporation.

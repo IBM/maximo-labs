@@ -1,7 +1,6 @@
 
 # Contributors to IBM Maximo Sustainability Labs
 
-- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 - Angelina Nicolella - <angelina.nicolella@ibm.com>
 
 ---

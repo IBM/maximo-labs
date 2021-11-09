@@ -3,10 +3,7 @@
 These Sustainability Labs will walk through different use cases. Use Cases will be continually added, therefore stay tuned for more!
 
 <!-- Use Case 1 - [MAS Environmental Monitoring](/sustain_mas/usecase1.md)  -->
-# Get Started with the IBM Maximo Sustainability Use Case 1!
-
-
-# Demo Use Case
+# IBM Maximo Sustainability Use Case 1
 
 Emission monitoring & regulatory compliance: Frequently record measured environmental data (Example: Nitrogen Oxides from Boiler) and monitor for deviation, dispatch service requests, managing the workflow, completing remediation work and long term corrective actions.
 
