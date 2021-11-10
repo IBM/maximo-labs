@@ -1,4 +1,4 @@
-# Safety Lab
+# Safety Lab (Under Construction)
 
 Companies have policies on communicating with their lone workers.   These policies range from having lone technicians check in at periodic intervals or when then arrive/depart a job site.  Safety regulations require the lone worker to be provided a communication device and do not specify the regularity of the communication.  Thus, little insight to the safety and wellbeing of a lone worker is known and when assistance is needed, it often is known later than it could be.  Additionally, one of the top safety violations that clients are fined with is in regard to safety hazard communications.  Clients ask one question “How do I protect my lone workers”   
 

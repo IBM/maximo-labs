@@ -1,0 +1,19 @@
+site_name: Environmental Use Cases Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Jan Ekstrøm & Contributors
+site_description: "Maximo Sustainability Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/sustain_mas
+
+nav:
+  - Get back to Maximo Labs: /
+  - Sustainability Labs:
+    - Pre-Requisites: prereqs.md
+    - USE CASES:
+        - 1. MAS Environmental Monitoring: usecase1.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
