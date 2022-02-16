@@ -1,0 +1,23 @@
+site_name: Monitor 8.6 CSV Importer Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Jan Ekstrøm & Contributors
+site_description: "Maximo Monitor 8.6 CSV Importer Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/monitor_csv_importer_8.6
+
+nav:
+  - Get back to Maximo Labs: /
+  - Monitor CSV Importer Labs:
+    - Welcome to the CSV importer Labs: index.md
+    - Pre-Requisites: prereqs.md
+    - Exercises:
+        - 1. Setup environment: setup.md
+        - 2. Get Node-RED script: get_script.md
+        - 3. Adjust Node-RED script: adjust_script.md
+        - 4. Inject data: inject_data.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition

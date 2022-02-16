@@ -40,6 +40,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2022-02-28|Janb Ekstrøm|Added the Monitor CSV Importer lab.|
 |2021-03-16|Cecilia Stark|Updated the status of Fast Start 2021 Labs.|
 |2021-01-05|Jan Ekstrøm|Migration to new IBM Maximo Labs is complete. OLD-REPO is purged.|
 |2021-01-05|Jan Ekstrøm|Added an Additional MkDocs Sub-sites section to provide direct liks to Contribute and Template.|

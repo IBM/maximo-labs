@@ -39,6 +39,9 @@ portfolio.  The labs are in different states of readiness for use shown below.
   ![Under Development: ](./img/under_development.png)[Monitor Auto AI](/monitor_autoai_8.5/) <span style="color:red">*Updated!* Lab!!</span><br/>
   ![Under Development: ](./img/under_development.png) [MAS Environmental Monitoring](/sustain_mas/)
   
+### Maximo Application Suite 8.6
+
+  ![Under Development: ](./img/under_development.png)[Monitor CSV Importer](/monitor_csv_importer_8.6/)<br/>
 
 ### Contribute
 
@@ -46,7 +49,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
   ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
-**Updated: 2021-11-09**
+**Updated: 2022-02-28**
 ---
 
-© 2021 International Business Machines Corporation.
+© 2022 International Business Machines Corporation.
