@@ -4,14 +4,14 @@ In this Exercise using Monitor you will learn how to :
 * Add a Python Function to check if the ambient temperature is greater than the maximum allowed ambient temperature 
 constant.
 
-The ambient temperature where the Hopper Asset is located should not exceed a temperature above 27 degrees Celcius.  The 
+The ambient temperature where the hopper asset is located should not exceed a temperature above 27 degrees.  The 
 food being packaged has a shorter shelf life when it is packaged at temperatures higher than that.  A remote operational 
-support teams monitor monitors the packaging Hoopers to ensure they are all operating within the required operating ranges 
+support teams monitor monitors the packaging hoppers to ensure they are all operating within the required operating ranges 
 and without anomalies.  
 
 ---
 *Before you begin:*  
--  You have completed the [pre-requisites](../prereqs) required for all Exercises 
+-  You have completed the [pre-requisites](../prereqs) required for all exercises 
 -  You have completed the prior exercise in this lab.
 ---
 
@@ -74,7 +74,7 @@ created in the previous exercise.  Expand the ` Calculated metrics`  and click t
 
 ## Next steps
 You now have a new calculated metric that will have a value of 1 each time the ambient temperature exceeds 27 degress 
-Celcius or 0 if it is less than or equal to 27 degrees Celcius.
+Celcius or 0 if it is less than or equal to 27 degrees.
 
 In the next exercise you wil create a PythonExpression to calculate the `temperature_deviation` between the 
 `ambient_temp` and the `ambient_temp_over_max`.

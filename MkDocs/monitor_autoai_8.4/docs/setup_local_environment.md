@@ -94,7 +94,7 @@ In this exercise you will setup your local development environment.
 5. Clone the github repository.
 
     ```
-    git clone https://github.com/fe01134/maximo_autoai
+    git clone the repo provided by your instructor
     cd maxmio_autoai
     ```
 

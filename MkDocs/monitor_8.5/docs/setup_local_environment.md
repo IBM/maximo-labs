@@ -16,7 +16,7 @@ In this exercise you will setup your local development environment.
 -  [Debug Functions](#debug)
 
 !!! note
-    These directions for are a Mac. Using Python v3.7.9 for Maximo Application Suite v8.4.
+    These directions for are a Mac. Using Python v3.7.9 for Maximo Application Suite v8.5.
     Download Python for Windows at  https://www.python.org/downloads/windows/ 
     
 ## Install and Create a Virtual Environment
@@ -28,7 +28,7 @@ In this exercise you will setup your local development environment.
 
 2.  Mac users need to install Brew Follow directions here: https://brew.sh/
 
-3.  Install the right Python Version v3.7.6
+3.  Install the right Python Version v3.7.9
 
 Mac users
 - In terminal:

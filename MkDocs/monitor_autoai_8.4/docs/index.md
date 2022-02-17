@@ -22,8 +22,8 @@ to Maximo Asset Monitor. You will learn how to:
 
 This Hands on Lab requires:
 
-* Access to the Git repository  https://github.com/fe01134/maximo_autoai that includes the data, Python Scripts, functions 
-and Notebooks.  Request access from  carlos.ferreira1@ibm.com
+* Your instructor can provide you access to the data, example Python Scripts, functions 
+and Notebooks.
 
 * An account for IBM ID and An IBM Cloud Account Trial  [here](http://ibm.biz/maximo-dev-ibmcloud)
 
@@ -47,7 +47,7 @@ and Notebooks.  Request access from  carlos.ferreira1@ibm.com
 
 ## Steps
 
-Follow the [Getting Started](get_started.md) insructions on the next page.
+Follow the [Getting Started](get_started.md) instructions on the next page.
 
 
 ## Learn more

@@ -13,11 +13,11 @@ nav:
     - Pre-Requisites: prereqs.md
     - Exercises:
         - 1. Setup Local Environment : setup_local_environment.md
-        - 1. Create Packaging Hopper Assets : hopper_asset.md
-        - 2. Create Constants  : constant.md
-        - 3. Create Python Functions : python_function.md
-        - 4. Create Python Expressions : python_expressions.md
-        - 5. Add Value Card : add_value_card.md
+        - 2. Create Packaging Hopper Assets : hopper_asset.md
+        - 3. Create Constants  : constant.md
+        - 4. Create Python Functions : python_function.md
+        - 5. Create Python Expressions : python_expressions.md
+        - 6. Add Value Card : add_value_card.md
   - About: about.md
 
 theme: readthedocs
