@@ -17,11 +17,21 @@ o Click `Create an IBM ID` link
 
 4.  Test your access to the Maximo Application Suite environment.
 
-# Exercise 1 (If needed)
+# Exercise 3
 
-< Describe what is needed for Execise 1 >
+At this point you have installed Node-RED and imported the script. You are ready to adjust the script with your credentials, which you should ask the Exercise facilitator or the MAS Administrator to provide. You need the following information:</br>
 
-# Exercise 2 (If needed)
+Monitor API credentials:
 
-< Describe what is needed for Execise 2 >
+1.  The Monitor API URL, which could look like this `https://demo.api.monitor.maximo35.innovationcloud.info/api/`
+2.  The API Key, which is a very long string of characters
+3.  The API Token, which is a very long string of characters
+
+Monitor DB2 Warehouse credentials:
+
+1.  Hostname
+2.  Database, usually BLUDB
+3.  Username
+4.  Password
+5.  Port number
 
