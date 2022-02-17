@@ -42,6 +42,11 @@ Now it is time to import the downloaded Node-RED script.
 ![Open File](/img/monitor_csv_importer_8.6/Import_04.png)</br></br>
 6.  Click `Import`.
 ![Import File](/img/monitor_csv_importer_8.6/Import_05.png)</br></br>
+7.  Click the `Deploy` button</br>
+![Deploy](/img/monitor_csv_importer_8.6/Import_06.png)</br></br>
+8.  and see this:
+![View Dashboard](/img/monitor_csv_importer_8.6/Import_07.png)</br>
+which is OK for now, as you need to add the credentials for your MAS instance.
 
 
 ---
