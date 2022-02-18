@@ -9,6 +9,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2022-02-17|Jan Ekstrøm|Ready for dry run. |
 |2022-02-16|Jan Ekstrøm|First draft version. |
 
 ---

@@ -13,8 +13,7 @@ nav:
     - Exercises:
         - 1. Setup environment: setup.md
         - 2. Get Node-RED script: get_script.md
-        - 3. Adjust Node-RED script: adjust_script.md
-        - 4. Inject data: inject_data.md
+        - 3. Adjust and run Node-RED script: adjust_script.md
   - About: about.md
 
 theme: readthedocs

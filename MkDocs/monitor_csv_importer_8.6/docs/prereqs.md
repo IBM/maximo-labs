@@ -30,7 +30,7 @@ Monitor API credentials:
 Monitor DB2 Warehouse credentials:
 
 1.  Hostname
-2.  Database, usually BLUDB
+2.  Database, usually `BLUDB`
 3.  Username
 4.  Password
 5.  Port number
