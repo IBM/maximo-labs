@@ -40,7 +40,7 @@ This section describes how to use the Monitor API to create the demo pump device
 1.  Open Node-RED in your browser if not done already.
 2.  Find and open the "Set Flow Data" node in Step 1.
 ![Find node](/img/monitor_csv_importer_8.6/Adjust_01.png)</br></br>
-3.  Enter the Monitor API URL `monitorAPIURL` as well as the API Key `x_api_key` and API Token `x_api_token`.
+3.  Enter the Monitor API URL `monitorAPIURL` as well as the API Key `x_api_key` and API Token `x_api_token`. Press `Done`.
 ![Enter credentials](/img/monitor_csv_importer_8.6/Adjust_02.png)</br>
 The metricTimestampColumn in the "Set Flow Data" function node tells Monitor which column should be used as timestamp, which is important when injecting historical data.</br>
 The metrics are already adjusted to contain the same columns as in Pump CSV data files that you will use later in the lab.</br></br>
@@ -76,9 +76,9 @@ The metrics are already adjusted to contain the same columns as in Pump CSV data
 5.  Scroll down and you will see two sections where you can enter data.</br>
 The first `"line"` section is populated with some simulated data which is in the same order as the CSV file data you will be using soon.
 The second section is where the SQL statement is being created which will be used to inject that data into the DB2 Warehouse.</br>
-You can leave these sections untouched for now, as this excercise will use provided CSV files that matches that data set - Click on `Done` or `Cancel` to close the function node.
+You can leave these sections untouched for now, as this excercise will use the provided CSV files that matches that data set - Click on `Done` or `Cancel` to close the function node.
 ![Describe Sections](/img/monitor_csv_importer_8.6/Adjust_15.png)</br></br>
-6.  Click on the `Inject 1 row` inject node.
+6.  Deploy the script and click on the `Inject 1 row` inject node.
 ![Inject 1 row](/img/monitor_csv_importer_8.6/Adjust_16.png)</br></br>
 7.  My first try failed due to wrong password as you can see in the debug pane.</br>
 The second attempt was successful as shown in the red box.</br>
@@ -96,7 +96,7 @@ You will be using the two csv files which was downloaded together with the Node-
 (in your Downloads folder). Please remember that location.</br>
 The first three steps of the total of five is done and you will now execute the last two steps.
 
-!!! note
+!!! tip
     The uploadSql and the chunks-to-lines nodes makes it possible to handle rather large data sets as they make sure the data set is handled in smaller chunks to avoid memory issues - but at the same time ingest 2048 rows into the database at the time (it seems to be a good number from a performance and error avoidance perspective).
 
 
@@ -105,14 +105,16 @@ The first three steps of the total of five is done and you will now execute the 
 2.  Open the `Format SQL` in Step 3, scroll to the end and make a copy of the lines between:</br>
 `// BEGIN: THIS SECTION CAN BE COPIED TO STEP 5 "Format SQL" NODE, ONCE IT WORKS.
 :
-// END`
+// END`</br>
+Click `Cancel`.
 ![First Format SQL node](/img/monitor_csv_importer_8.6/Adjust_21.png)</br></br>
 3.  Open the `Format SQL` in Step 5, scroll to the end.</br>
-You can see that the content you copied from Step 3 is already there, but now you know the process when experimenting with your own data sets.
+You can see that the content you copied from Step 3 is already there, but now you know the process when experimenting with your own data sets. Just click `Cancel`.
 ![Second Format SQL node](/img/monitor_csv_importer_8.6/Adjust_22.png)</br></br>
 4.  It is a good idea to delete the test rows that was injected in Step 3 before injecting the CSV data from the files. Scroll down in the workspace and you will see some additional Step 4 nodes to empty the table (but not removing it), click on the `Truncate table` inject node.
 ![Truncate table](/img/monitor_csv_importer_8.6/Adjust_23.png)</br></br>
-5.  It is now time to inject the first small data set of 10 data lines. The file `PumpDataSmall.csv` will be used for that purpose. Navigate the the [Node-RED Dashboard](http://localhost:1880/ui){target=_blank} and clik on `Choose file`.
+5.  It is now time to inject the first small data set of 10 data lines. The file `PumpDataSmall.csv` will be used for that purpose.</br>
+Navigate the the [Node-RED Dashboard](http://localhost:1880/ui){target=_blank} and click on `Choose file` (or `Browse...` on Windows).
 ![Choose file](/img/monitor_csv_importer_8.6/Adjust_30.png)</br></br>
 6.  Select `PumpDataSmall.csv` and press `Open`.
 ![Select file](/img/monitor_csv_importer_8.6/Adjust_31.png)</br></br>
@@ -127,7 +129,7 @@ You can see that the content you copied from Step 3 is already there, but now yo
 ![csv separator](/img/monitor_csv_importer_8.6/Adjust_35.png)</br></br>
 11.  It is a good idea to disable the two debug nodes before injecting the larger csv file. Click on the green (enabled) button so it become grey (disabled).
 ![Disable debug nodes](/img/monitor_csv_importer_8.6/Adjust_40.png)</br></br>
-12.  Now it is time to inject the large CSV file. Click on `Choos file` and open `PumpData.csv`. 
+12.  Now it is time to inject the large CSV file. Click on `Choose file` and open `PumpData.csv`. 
 ![Choose large file](/img/monitor_csv_importer_8.6/Adjust_41.png)</br></br>
 13.  Click on the `Play` button and you will see the progress as data is being injected.
 ![Running](/img/monitor_csv_importer_8.6/Adjust_42.png)</br></br>
@@ -135,7 +137,7 @@ You can see that the content you copied from Step 3 is already there, but now yo
 ![Done](/img/monitor_csv_importer_8.6/Adjust_43.png)</br></br>
 
 
-!!! note
+!!! attention
     Please empty the table when it is no longer being used.
 
 
