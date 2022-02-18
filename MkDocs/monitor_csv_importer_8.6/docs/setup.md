@@ -17,7 +17,9 @@ This is a fairly easy step, as you just have to follow this guide:
 [Running Node-RED locally](https://nodered.org/docs/getting-started/local){target=_blank}</br>
 
 It will work for Mac, Windows, and various Linux distributions.
-I used a local nmp installed version of Node-RED on my Mac.
+I used a local nmp installed version of Node-RED on my Mac.</br>
+</br>
+In either way, once installed open the browser and start the [Node-RED](http://localhost:1880/){target=_blank} editor.
 
 ##  Add required additional nodes
 
