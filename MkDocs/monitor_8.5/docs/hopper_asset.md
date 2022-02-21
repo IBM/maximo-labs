@@ -13,7 +13,7 @@ the required operating ambient temperature ranges and without anomalies.
 *Before you begin:*  
 
 This exercise requires that you have completed the [pre-requisites](../prereqs) required for all Exercises
-Make sure you have asked carlos.ferreira1 @ibm.com for access to source code repository https://github.com/fe01134/watson-classifier
+Ensure you instructor has provided you the notebooks needed for this lab. 
 
 ---
 

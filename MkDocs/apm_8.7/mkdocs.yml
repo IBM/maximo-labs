@@ -1,0 +1,26 @@
+site_name: Maximo APM V8.7 Hands On Lab
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferreira & Contributors
+site_description: "Maximo Asset Performance Management v8.7 Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/apm_8.7
+
+nav:
+  - Get back to Maximo Labs: /
+  - Maximo APM V8.7.0 Lab:
+    - Welcome to the Lab: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+      - 1. Create Hierarchy: create_hierarchy.md
+      - 2. Create Assets and Devices: create_assets_devices.md
+      - 3. Create Device Types and Mappings: create_device_types.md
+      - 4. Publish Device Data: send_device_simulated_data.md
+      - 5. Create Health Scores: create_health_score.md
+      - 6. View Asset Health: view_asset_health.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition

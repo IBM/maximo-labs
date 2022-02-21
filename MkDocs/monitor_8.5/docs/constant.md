@@ -35,7 +35,7 @@ use the code from this repository in other exercises.  From the terminal on your
 
     
     '''
-    git clone https://github.com/fe01134/watson-classifier
+    git clone github repo provided by your instructor
     cd watson-classifier
     '''
 

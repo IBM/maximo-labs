@@ -16,7 +16,7 @@ Here is the Architecture flow for this tutorial. ![Architecture flow](/img/monit
 3.  Append the token to the URL in `function.py` See the already updated URL for the custom function to call the `PredictionModel` in the `ai_prediction/functions.py`
 
     ```
-    PACKAGE_URL = 'git+https://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@github.com/fe01134/maximo_autoai.git'
+    PACKAGE_URL = 'git+https://yourtoken@github.com/yourgithub/maximo_autoai.git'
     ```
 
 4.  Save and commit the changes to the github repo.  
