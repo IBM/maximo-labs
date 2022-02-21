@@ -15,13 +15,13 @@ portfolio.  The labs are in different states of readiness for use shown below.
   
 ### Maximo Application Suite 8.6
 
-  ![Under Development: ](./img/under_development.png)[Monitor CSV Importer](/monitor_csv_importer_8.6/)<br/>
+  ![Ready](./img/readynew.png)[Monitor CSV Importer](/monitor_csv_importer_8.6/)<br/>
 
 ### Maximo Application Suite 8.5
 
-  ![Under Development: ](./img/under_development.png)[MAS Installation](/ocp_8.5/)<br/>
-  ![Under Development: ](./img/under_development.png)[Suite Overview](/mas_8.5/)<br/>
-  ![Under Development: ](./img/under_development.png)[Monitor Functions](/monitor_8.5/)<br/>
+  ![Under Development](./img/under_development.png)[MAS Installation](/ocp_8.5/)<br/>
+  ![Under Development](./img/under_development.png)[Suite Overview](/mas_8.5/)<br/>
+  ![Under Development](./img/under_development.png)[Monitor Functions](/monitor_8.5/)<br/>
   ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.5/)<br/>
   ![Ready](./img/readynew.png)[MAS Environmental Monitoring](/sustain_mas/)
 
@@ -45,13 +45,13 @@ portfolio.  The labs are in different states of readiness for use shown below.
   ![Ready](./img/readynew.png)[Monitor](/monitor_saas/)  
   ![Ready](./img/readynew.png)[Visual Inspection (1.3.0)](/mvi_saas/)  
  
-### Contribute
+### CONTRIBUTE
 
   ![Ready](./img/readynew.png)[Contribute to Labs](/contribute/)  
   ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
-**Updated: 2022-02-21**
+**UPDATED: 2022-02-21**
 ---
 
 © 2022 International Business Machines Corporation.

@@ -10,7 +10,7 @@ nav:
   - Monitor CSV Importer Labs:
     - Welcome to the CSV importer Labs: index.md
     - Pre-Requisites: prereqs.md
-    - Exercises:
+  - Exercises:
         - 1. Setup environment: setup.md
         - 2. Get Node-RED script: get_script.md
         - 3. Adjust and run Node-RED script: adjust_script.md
