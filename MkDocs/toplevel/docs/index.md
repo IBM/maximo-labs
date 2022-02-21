@@ -11,11 +11,11 @@ portfolio.  The labs are in different states of readiness for use shown below.
 ---
 ### Maximo Application Suite 8.7
 
-  ![Not Started](./img/not_started.png)[APM](/apm_8.7/)<span style="color:red">*Under development!*</span><br/>
+  ![Not Started](./img/not_started.png)[APM](/apm_8.7/) <span style="color:red">*Under development!*</span><br/>
   
 ### Maximo Application Suite 8.6
 
-  ![Ready](./img/readynew.png)[Monitor CSV Importer](/monitor_csv_importer_8.6/)<br/>
+  ![Ready](./img/readynew.png)[Monitor CSV Importer](/monitor_csv_importer_8.6/) <span style="color:red">*New!*</span><br/>
 
 ### Maximo Application Suite 8.5
 
