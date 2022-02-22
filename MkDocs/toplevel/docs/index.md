@@ -15,7 +15,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
   
 ### Maximo Application Suite 8.6
 
-  ![Ready](./img/readynew.png)[Monitor CSV Importer](/monitor_csv_importer_8.6/) <span style="color:red">*New!*</span><br/>
+  ![Ready](./img/readynew.png)[Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/) <span style="color:red">*New!*</span><br/>
 
 ### Maximo Application Suite 8.5
 

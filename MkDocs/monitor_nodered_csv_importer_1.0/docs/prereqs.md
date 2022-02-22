@@ -1,6 +1,6 @@
 # Pre-Requisite Instructions
 
-Here are the pre-requisites for the Maximo Monitor CSV Importer exercises that are designed for MAS Monitor and not the Monitor SaaS edition.
+Here are the pre-requisites for the Maximo Monitor Node-RED CSV Importer exercises that are designed for MAS Monitor and not the Maximo Asset Monitor SaaS edition.
 
 # All Exercises
 
