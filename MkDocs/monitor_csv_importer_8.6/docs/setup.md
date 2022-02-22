@@ -16,10 +16,15 @@ This Exercise requires that you have:
 This is a fairly easy step, as you just have to follow this guide:
 [Running Node-RED locally](https://nodered.org/docs/getting-started/local){target=_blank}</br>
 
-It will work for Mac, Windows, and various Linux distributions.
-I used a local nmp installed version of Node-RED on my Mac.</br>
-</br>
-In either way, once installed open the browser and start the [Node-RED](http://localhost:1880/){target=_blank} editor.
+Once installed and started open the browser and start the [Node-RED](http://localhost:1880/){target=_blank} editor.</br>
+
+!!! tip "This lab is verified on the following configurations"
+    Windows 10 running Node.js v16.14.0 + npm v8.3.1 + Node-RED v2.2.2</br>
+    MacOS Monterey running Node.js v14.18.3 + npm v6.14.15 + Node-RED v2.2.0</br>
+
+!!! attention
+    Make sure you are running Node-RED v2+, i.e. if you already have an existing v1 Node-RED instance installed locally then make sure to upgrade it before proceeding.
+
 
 ##  Add required additional nodes
 

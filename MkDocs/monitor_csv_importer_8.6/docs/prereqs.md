@@ -19,6 +19,8 @@ o Click `Create an IBM ID` link
 
 # Exercise 3
 
+For exercise 3 make sure you have the following in place:
+
 At this point you have installed Node-RED and imported the script. You are ready to adjust the script with your credentials, which you should ask the Exercise facilitator or the MAS Administrator to provide. You need the following information:</br>
 
 Monitor API credentials:
