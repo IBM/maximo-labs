@@ -40,8 +40,9 @@ This section describes how to use the Monitor API to create the demo pump device
 1.  Open Node-RED in your browser if not done already.
 2.  Find and open the "Set Flow Data" node in Step 1.
 ![Find node](/img/monitor_csv_importer_8.6/Adjust_01.png)</br></br>
-3.  Enter the Monitor API URL `monitorAPIURL`, the API Key `x_api_key` and API Token `x_api_token`.</br>
- Replace XX with your initials in line 5 and 7. Press `Done`.
+3.  Enter the Monitor API URL `monitorAPIURL`, the API Key `x_api_key` and API Token `x_api_token`</br>
+as defined in the [Pre-Requites](../prereqs).</br>
+Replace XX with your initials in line 5 and 7. Press `Done`.
 ![Enter credentials](/img/monitor_csv_importer_8.6/Adjust_02.png)</br>
 The metricTimestampColumn in the "Set Flow Data" function node tells Monitor which column should be used as timestamp, which is important when injecting historical data.</br>
 The metrics are already adjusted to contain the same columns as in Pump CSV data files that you will use later in the lab.</br></br>

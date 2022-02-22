@@ -1,7 +1,7 @@
-site_name: Monitor 8.6 CSV Importer Labs
+site_name: Monitor 8.6 Node-RED CSV Importer Labs
 site_url: https://mam-hol.eu-gb.mybluemix.net/
 site_author: Jan Ekstrøm & Contributors
-site_description: "Maximo Monitor 8.6 CSV Importer Hands on Lab"
+site_description: "Maximo Monitor 8.6 Node-RED CSV Importer Hands on Lab"
 google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/monitor_csv_importer_8.6
 

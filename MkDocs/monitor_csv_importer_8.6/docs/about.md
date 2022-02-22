@@ -1,5 +1,5 @@
 
-# Contributors to IBM Maximo Monitor CSV Importer Lab
+# Contributors to IBM Maximo Monitor Node-RED CSV Importer Lab
 
 - Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 

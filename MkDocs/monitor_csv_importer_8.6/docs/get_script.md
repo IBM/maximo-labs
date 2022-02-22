@@ -46,7 +46,13 @@ Now it is time to import the downloaded Node-RED script.
 ![Deploy](/img/monitor_csv_importer_8.6/Import_06.png)</br></br>
 8.  and see this:
 ![View Dashboard](/img/monitor_csv_importer_8.6/Import_07.png)</br>
-which is OK for now, as you need to add the credentials for your MAS instance.
+Don't worry about the error message at this point. This should be solved during the next exercise.
+
+!!! tip 
+    If you see red error messages in the Debug pane, you can hover over the node name and then</br>
+    the node which caused the error to occur will appear with dashed orange lines:</br></br>
+    ![Debug Error](/img/monitor_csv_importer_8.6/Import_10.png)</br></br>
+    This should help you identify where the error has occured and what needs to be done is indicated with the error decription.</br></br>
 
 
 ---
