@@ -19,8 +19,10 @@ This is a fairly easy step, as you just have to follow this guide:
 Once installed and started open the browser and start the [Node-RED](http://localhost:1880/){target=_blank} editor.</br>
 
 !!! tip "This lab is verified on the following configurations"
-    Windows 10 running Node.js v16.14.0 + npm v8.3.1 + Node-RED v2.2.2</br>
-    MacOS Monterey running Node.js v14.18.3 + npm v6.14.15 + Node-RED v2.2.0</br>
+    | Operating System   | Node.js    | npm        | Node-RED   |
+    |:-------------------|:-----------|:-----------|:-----------|
+    |MacOS Monterey      | 14.18.3    | 6.14.15    | 2.2.0      |
+    |Windows 10          | 16.14.0    | 8.3.1      | 2.2.2      |
 
 !!! attention
     Make sure you are running Node-RED v2+, i.e. if you already have an existing v1 Node-RED instance installed locally then make sure to upgrade it before proceeding.
