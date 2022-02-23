@@ -21,7 +21,7 @@ o Click `Create an IBM ID` link
 
 < Describe what is needed for Execise 1 >
 
-# Exercise 1 (If needed)
+# Exercise 2 (If needed)
 
-< Describe what is needed for Execise 1 >
+< Describe what is needed for Execise 2 >
 

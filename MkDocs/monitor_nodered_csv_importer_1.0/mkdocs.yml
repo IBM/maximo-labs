@@ -1,0 +1,22 @@
+site_name: Monitor Node-RED CSV Importer Lab
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Jan Ekstrøm & Contributors
+site_description: "Maximo Monitor Node-RED CSV Importer Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/monitor_nodered_csv_importer_1.0
+
+nav:
+  - Get back to Maximo Labs: /
+  - Monitor Node-RED CSV Importer Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Setup environment: setup.md
+        - 2. Get Node-RED script: get_script.md
+        - 3. Adjust and run Node-RED script: adjust_script.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
