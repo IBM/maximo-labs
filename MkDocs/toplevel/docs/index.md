@@ -16,7 +16,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
 ### Maximo Application Suite 8.6
 
   ![Ready](./img/readynew.png)[Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/) <span style="color:red">*New!*</span><br/>
-
+  ![Under Development](./img/under_development.png)[Suite Overview](/mas_8.6/)<br/>
 ### Maximo Application Suite 8.5
 
   ![Under Development](./img/under_development.png)[MAS Installation](/ocp_8.5/)<br/>
@@ -51,7 +51,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
   ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2022-02-22**
+**UPDATED: 2022-02-26**
 ---
 
 © 2022 International Business Machines Corporation.
