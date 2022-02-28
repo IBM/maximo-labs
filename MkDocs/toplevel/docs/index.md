@@ -20,7 +20,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
 ### Maximo Application Suite 8.5
 
-  ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.5/)<br/> <span style="color:red">*Updated!*</span><br/>
+  ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.5/) <span style="color:red">*Updated!*</span><br/>
   ![Ready](./img/readynew.png)[Suite Overview](/mas_8.5/)<br/>
   ![Ready](./img/readynew.png)[Monitor Functions](/monitor_8.5/)<br/>
   ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.5/)<br/>
@@ -35,11 +35,6 @@ portfolio.  The labs are in different states of readiness for use shown below.
 
   ![Ready](./img/readynew.png)[Suite Overview](/mas_8.3/) 
    
-### Maximo Application Suite 8.2
-
-  ![Ready](./img/readynew.png)[Suite Overview Fast Start](/apm_fs21/)  
-  ![Ready](./img/readynew.png)[Monitor](/monitor_8.2/)  
-  ![Ready](./img/readynew.png)[Visual Inspection](/mvi_8.2/)  
     
 ### Maximo SaaS
 

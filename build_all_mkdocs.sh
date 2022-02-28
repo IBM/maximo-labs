@@ -30,32 +30,8 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
-# Build the Monitor 8.2 level:
-lab=monitor_8.2
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
 # Build the MVI Saas level:
 lab=mvi_saas
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
-# Build the MVI 8.2 level:
-lab=mvi_8.2
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
-# Build the Maximo Monitor, Health, and Predict Overview 8.2  level:
-lab=apm_fs21
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
