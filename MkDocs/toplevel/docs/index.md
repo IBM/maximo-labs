@@ -16,12 +16,13 @@ portfolio.  The labs are in different states of readiness for use shown below.
 ### Maximo Application Suite 8.6
 
   ![Ready](./img/readynew.png)[Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/) <span style="color:red">*New!*</span><br/>
-  ![Under Development](./img/under_development.png)[Suite Overview](/mas_8.6/)<br/>
+  ![Ready](./img/readynew.png)[Suite Overview](/mas_8.6/) <span style="color:red">*New!*</span>
+
 ### Maximo Application Suite 8.5
 
-  ![Under Development](./img/under_development.png)[MAS Installation](/ocp_8.5/)<br/>
-  ![Under Development](./img/under_development.png)[Suite Overview](/mas_8.5/)<br/>
-  ![Under Development](./img/under_development.png)[Monitor Functions](/monitor_8.5/)<br/>
+  ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.5/)<br/> <span style="color:red">*Updated!*</span><br/>
+  ![Ready](./img/readynew.png)[Suite Overview](/mas_8.5/)<br/>
+  ![Ready](./img/readynew.png)[Monitor Functions](/monitor_8.5/)<br/>
   ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.5/)<br/>
   ![Ready](./img/readynew.png)[MAS Environmental Monitoring](/sustain_mas/)
 
@@ -42,7 +43,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
     
 ### Maximo SaaS
 
-  ![Ready](./img/readynew.png)[Monitor](/monitor_saas/)  
+  ![Ready](./img/readynew.png)[Monitor](/monitor_saas/)   <span style="color:red">*Updated!*</span><br/>
   ![Ready](./img/readynew.png)[Visual Inspection (1.3.0)](/mvi_saas/)  
  
 ### CONTRIBUTE

@@ -1,7 +1,8 @@
 
-# Contributors to IBM Maximo Template
+# Contributors to IBM Maximo Openshift Installation
 
-- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
+Maximo Application Suite 8.5 Deployment Lab on Red Hat OpenShift Kubernetes Services (ROKS) in IBM Cloud
+- Carlos Ferreira - <carlos.ferreira1@ibm.com>
 - Arif Ali - <aali@us.ibm.com>
 
 ---
@@ -10,8 +11,6 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2022-28-30|Carlos Ferreira |OCP Cloud Pak for Data installation brought in. |
 |2021-10-27|Arif Ali      |Added OpenShift deployment lab.
-|2021-01-04|Jan Ekstrøm|Added the About page and Updated information into Index. |
-|2020-12-30|Jan Ekstrøm|First step on the Template section. |
-
 ---

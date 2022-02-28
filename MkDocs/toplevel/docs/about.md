@@ -22,11 +22,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 - Carlos Ferreira - <carlos.ferreira1@ibm.com>
 
-- Paulina Thomas - <Paulina.Thomas@ibm.com>
-
 - Cecilia Stark - <cecilia.stark@ibm.com>
-
-- Nirel Cortes - <nirel.cortes@ibm.com>
 
 - Eric Lowry - <elowry@us.ibm.com>
 
@@ -34,12 +30,17 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 - Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 
+- Mike Lamb - <mllamb@us.ibm.com>
+
 ---
 
 # Change Information
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2021-01-29|Mike Lamb & Carlos Ferreira |Added updates to Monitor SaaS for Anomaly Detection lab. |
+|2021-02-12|Cecilia |MAS v8.6 Suite Overview Lab. |
+|2021-01-29|Mike Lamb|Added dashboard UI widget sections. |
 |2022-02-22|Jan Ekstrøm|Added the Monitor Node-RED CSV Importer lab.|
 |2022-02-18|Carlos Ferreira|Added the MAS 8.7 APM lab.|
 |2021-03-16|Cecilia Stark|Updated the status of Fast Start 2021 Labs.|

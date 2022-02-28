@@ -41,8 +41,9 @@ credentials file.
 5. Get the values for fields like `TOKEN`,  `DEVICE_TYPE` for the devices you created in the [Create Devices](create_devices.md) 
 exercise for the 1 of pump devices `111137F8` ![Browse](/img/monitor_autoai_8.4/c13.png) 
 
-6. For `SOURCE_DEVICE_ID` this is the name of the Device ID in the source data csv file.  See example [maximo-auto_ai_pump_data_111137F8](../data/maximo-auto_ai_pump_data_111137F8)
-
+6. For `SOURCE_DEVICE_ID` this is the name of the Device ID in the source data csv file.  See example file provided by the
+instructor named `/data/maximo-auto_ai_pump_data_111137F8.csv`
+ 
 7. For `DEVICE_ID` this is the name of the Device ID in the Monitor.
 
 ## Start the Python Simulator

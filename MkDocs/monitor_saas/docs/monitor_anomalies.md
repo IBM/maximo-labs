@@ -14,32 +14,36 @@ This Exercise requires that you have completed the [pre-requisites](../facilitat
 
 Watch the 10 min video explaining why anomalies matter to business. 
 [![Video](/img/monitor_saas/yt-part1.png)](https://youtu.be/bSlh9TY3ECY "Video Title")
+
 ---
 
 ## Create Simulated Robots to Monitor
 In this exercise you quickly create some simulated robot operational data that you will use in your exercises in this Exercise.  You will use data from simulated industry robots as the assets you are responsible to monitor.
 
 1.  Click `Home` to see the top level tasks you can do with Monitor. ![Home](/img/monitor_saas/i89.png) &nbsp;
-2.  Click `Set up assets` You will create a simulated set of robot assets (entities) that represent an assembly line of manufacturing robots.
-3.  Click `+` button. ![Create an Entity Type](/img/monitor_saas/i90.png) &nbsp;
-4.  Select on `Sample Robot Type` and click on `Next`button.  ![Create a Robot Entity Type and simulated robot metrics](/img/monitor_saas/i91.png) &nbsp;
-5.  Edit the Asset Type name prepending your own initials `Your_Initials_Robots_Type`.![Create a Robot Asset Type and simulated robot metrics](/img/monitor_saas/i92.png) &nbsp;
-6.  Click `Create` button.  Monitor will create a set of robots you can monitor with simulated random data.
+2.  Click `Set up`
+3.  Click on `Devices`  You will create a simulated set of robot assets (entities) that represent an assembly line of manufacturing robots.
+4.  Click `+` button. ![Create an Entity Type](/img/monitor_saas/i90.png) &nbsp;
+5.  Select on `Sample Robot Type` and click on `Next`button.  ![Create a Robot Entity Type and simulated robot metrics](/img/monitor_saas/i91.png) &nbsp;
+6.  Edit the Asset Type name prepending your own initials `Your_Initials_Robots_Type`.![Create a Robot Asset Type and simulated robot metrics](/img/monitor_saas/i92.png) &nbsp;
+7.  Click `Create` button.  Monitor will create a set of robots you can monitor with simulated random data.
 
-## Explore Asset Type Dashboard
-An [asset dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/instance_dashboard_tutorial.html) displays the operational metrics for a single asset, i.e. one specific industry robot. The data metrics of the robot are presented on the dashboard using cards.
+## Explore Device Type Dashboard
+An [device dashboard](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/instance_dashboard_tutorial.html) displays the operational metrics for a single device, i.e. one specific industry robot. The data metrics of the robot are presented on the dashboard using cards.
 
-1.  Click on `Manage asset type`
-2.  On the `Data` tab, expand `Metric` to see the metrics that Monitor has created for your   Robots with simulated time series data.
- The outline shows the acc, load, speed and torque metrics in the data items outline. ![View Robot metrics](/img/monitor_saas/i93.png) &nbsp;
-3.  Expand  `Dimension` to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by `Manufacturer`.  [Dimensions](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_add_dimensions_api.html) are meta data for describing an asset that can also be used to filter assets in tables or in functions. ![View Robot dimensions across all robots](/img/monitor_saas/i94.png) &nbsp;
-4.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like `work_performed`. ![View Robot calculated metric functions](/img/monitor_saas/i95.png)  
-5.  Click on `Monitor` on the left side.
-6.  Search for `Your_Initials` to find the asset type you created and click on it.
-7.  Robot asset dashboards have been automatically created for you by Monitor.  Click on asset(Robot) `73000` 
-8.  Click on `Asset Metrics Dashboard`
-9. Click one of the Robot asset dashboards that have been automatically created for you by Monitor. ![View asset metrics dashboard](/img/monitor_saas/i96.png) &nbsp;
-10.  In this exercise the Asset Dashboard for the Robots was automatically created for you.  Take a moment to see what cards were created for you in the `Asset Metrics Dashboard`.
+1.  Click on `Monitor` from the left nav
+2.  Click on `Devices` and search for `Your_Initials`
+3.  Click on your device type ![View Device Type](/img/monitor_saas/i93.png) &nbsp;
+4.  On the `Data` tab, expand `Metric` to see the metrics that Monitor has created for your   Robots with simulated time series data.
+ The outline shows the acc, load, speed and torque metrics in the data items outline. ![View Robot metrics](/img/monitor_saas/i93b.png) &nbsp;
+5.  Expand  `Dimension` to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by `Manufacturer`.  [Dimensions](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_add_dimensions_api.html) are meta data for describing a device that can also be used to filter devices in tables or in functions.
+6.  Expand  `Metric (calculated)` to see the functions used to create the simulated data like `work_performed`. ![View Robot calculated metric functions](/img/monitor_saas/i95.png)  
+7.  Click on `Monitor` on the left side.
+8.  Click on `Devices` and search for `Your_Initials` to find the device type you created and click on it.
+9.  Robot device dashboards have been automatically created for you by Monitor.  Click on device (Robot) `73000` 
+9.  Click on `Asset Metrics Dashboard`
+10. Click one of the Robot asset dashboards that have been automatically created for you by Monitor. ![View asset metrics dashboard](/img/monitor_saas/i96.png) &nbsp;
+11.  In this exercise the Asset Dashboard for the Robots was automatically created for you.  Take a moment to see what cards were created for you in the `Asset Metrics Dashboard`.
 Note the different types of [cards](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html) in your dashboard.  Monitor provides multiple types of cards to choose from when configuring a dashboard.
 
 *Value Cards*
@@ -181,7 +185,7 @@ In this part of the exercise you will visualize the simulated `travel_time_anoma
 10.  Make sure to change all values with card sizes of `XLARGE` to `LARGE` and `XSMALLWIDE`to `SMALLWIDE`, since these formats have been deprecated.
 11.  In the IDE, save your changes to the instance dashboard JSON file.
 12.  You can see the finished [Industrial_Robot_Instance_Travel_Time.json](/monitor_saas/json/Industrial_Robot_Instance_Travel_Time.json) &nbsp;
-13.  Return to the Monitor dasshboard editor and click on the `Import` icon.
+13.  Return to the Monitor dashboard editor and click on the `Import` icon.
 14.  Choose the `file` you updated with the line card click `open` to import your updated JSON file.
 15.  Your asset dashboard should now look similar to the one below and have a `travel_time_anomaly` Card with some extreme anomalies like the one in the red rectangle. ![Robot Asset Dashboard](/img/monitor_saas/i114.png).
 
@@ -221,7 +225,8 @@ Imagine you are managing a fleet of delivery vehicles.  One out of the five vehi
 
 1.  While editing your entity type,  search the function catalog for `EntityFilter` function. 
 2.  On the `Data` tab, click the '+' button and search in the function catalog for `EntityFilter`.   ![Add Data](/img/monitor_saas/AddFunction.png)&nbsp;
-3.  On the function `Configuration` tab, enter the list of entity ids separated by a comma or `73000` for just one entity. ![Choose Entity](/img/monitor_saas/a1.png)&nbsp;  
+3. Click `Next`
+4. Enter the list of entity ids separated by a comma or ``73000`` for just one entity. ![Choose Entity](/img/monitor_saas/a1.png)&nbsp;  
 4.  On the function `Output` tab, enter the name of they filtered entity `entity_73000` for the output metric name.  ![Name it entity_73000](/img/monitor_saas/a2.png)&nbsp;
 5. Click `Create`
 
@@ -230,13 +235,13 @@ Imagine you are managing a fleet of delivery vehicles.  One out of the five vehi
 Add the `Filter` function you can isolate your analysis to an individual entity and metric.  Select the metrics to analyze from the filtered entities by adding Filter.  
 
 1.  While editing your entity type,  search the function catalog for `Filter` function. 
-2.  On the `Data` tab, click the '+' button and search in the function catalog for `Filter`.   ![Add Data](/img/monitor_saas/AddFunction.png)&nbsp;
-3.  Choose `entity_73000` output item from the previous function as source shown below.  
-![Choose Filter](/img/monitor_saas/a4.png)&nbsp;
-4.  On the function `Configuration` tab, choose `${entity_73000} == True` as the expression.  ![Choose Filter](/img/monitor_saas/a3.png)&nbsp;
-5.  On the function `Configuration` tab, choose `travel_time_anomaly` as the metric to analyzed for `filtered_sources`.
-6.  Click `Next`
-7.  On the function `Output` tab, enter the name of they filtered entity `travel_time_anomaly_entity_73000` for the output metric name.  
+2.  On the `Data` tab, click the '+' button and search in the function catalog for `Filter`.   ![Add Data](/img/monitor_saas/i128.png)&nbsp;
+3.  Click `Next`
+4.  Choose `entity_73000` input item from the previous function as source shown below.  
+5.  On the function `Configuration` tab, choose `${entity_73000} == True` as the expression.  ![Choose Filter](/img/monitor_saas/a3.png)&nbsp;
+6.  On the function `Configuration` tab, choose `travel_time_anomaly` as the metric to analyzed for `filtered_sources`.
+7.  Click `Next`
+8.  On the function `Output` tab, enter the name of they filtered entity `travel_time_anomaly_entity_73000` for the output metric name.  
 
 
 **Add Anomaly Functions**
@@ -398,7 +403,7 @@ In this exercise you will create alerts for each anomaly function score identifi
 5.  Set `input_item` to  `travel_time_spectral_score`.
 6.  Set `upper_threshold` value to `99`.
 7.  Set `Severity`value to `High`.  You can add optionally add separate alerts for `Medium` and `Low` thresholds.
-8.  Set `Status` value to `New`.  Alerts don't have any order. They can start or finish an in any order.  Users can then transition them to `New` `Acknowledged`, `Validated` and finally `Resolved` or `Dismissed`.  Monitor does not provide a way to force specific state transition paths for alerts.
+8.  Set `Status` value to `New`.  Alerts don't have any order. They can start or finish an in any order.  Users can then transition them to `New` `Validated`, `Acknowleged` and finally `Resolved`.  Monitor does not provide a way to force specific state transition paths for alerts.
 9.  Click `Next` to configure schedule, look back period and name the alert.
 10. Click `Auto schedule` button to configure schedule. ![Toggle alert schedule and look back period view](/img/monitor_saas/i126.png) &nbsp;
 11.  Set the alert to execute every `15` minutes.  The alert will look for new data for `travel_time_spectral_score` that have been added in the last 15 minutes and calculate alerts for those new data items.![Configure alert schedule and look back period](/img/monitor_saas/i124.png) &nbsp;
