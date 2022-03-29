@@ -1,7 +1,7 @@
 # Use Case 1
 
 ## Scene 1 - Identification
-Control room operator observes a NOx emission warning on the main boiler plant used to generate steam for process and district heating. The NOx level is at an intermediate warning level and does not exceed regulatory emission limits. The Operator takes immediate action to reduce steam output. They raise Operator Log Entries to record these, generate a near miss environmental incident and raise a Service Request to Maintenance to inspect the boiler control systems. Wilson navigates to the Operator Log from the Start Center and selects Shift1B. Show the Operator Log record and the Operator Log Entries. Show how the Operator can create records from a Log Entry and navigate to the Related Records tab to show the created Service Request and Incident.
+Control room operator doesnt observes a NOx emission warning on the main boiler plant used to generate steam for process and district heating. The NOx level is at an intermediate warning level and does not exceed regulatory emission limits. The Operator takes immediate action to reduce steam output. They raise Operator Log Entries to record these, generate a near miss environmental incident and raise a Service Request to Maintenance to inspect the boiler control systems. Wilson navigates to the Operator Log from the Start Center and selects Shift1B. Show the Operator Log record and the Operator Log Entries. Show how the Operator can create records from a Log Entry and navigate to the Related Records tab to show the created Service Request and Incident.
 
 !!! note
     We can develop this scenario to provide the option of a Health/Predict generated event or an anomaly generated from a Watson model or Device input.
