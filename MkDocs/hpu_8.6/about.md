@@ -1,4 +1,4 @@
-![img](/img/hpu_8.6/banner.png){:style="height:150px;width:800px"}
+![img](/img/hpu_8.6/banner.png)
 
 
 # Contributors to IBM Maximo Application Suite Health and Predict for Utilities 8.6 Overview Lab

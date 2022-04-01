@@ -1,4 +1,4 @@
-![img](/img/hpu_8.6/banner.png){:style="height:150px;width:800px"}
+![img](/img/hpu_8.6/banner.png)
 
 # Demo Cleanup After Demo 
 
