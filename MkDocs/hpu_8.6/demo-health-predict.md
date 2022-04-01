@@ -5,16 +5,18 @@
 
 ## Intro
 
-I’m a Reliability Engineer (RE), my role is to maintain the reliability of the grid. My main responsibility is to ensure that the grid stays up and operational. I’m also responsible for making short, medium and long term investment decisions that drive maintenance and replacement policies.  I use asset condition and operational data to gain insights into Asset Health, Probability of Failure and Risk, both today and into the future. 
+I’m a Reliability Engineer (RE) and my role is to maintain the reliability of the grid. My main responsibility is to ensure that the grid stays up and operational. I’m also responsible for making short, medium and long term investment decisions that drive maintenance and replacement policies.  I use asset condition and operational data to gain insights into Asset Health, Probability of Failure and Risk, both today and into the future. 
 
  ![img](/img/hpu_8.6/ObjectivesRE.png)
 
 
-Thankfully I have a Health and Predict - Utilities solution from IBM with advanced analytics that help me do my work efficiently and confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.   Health and Predict - Utilities incorporates multiple data sources such as Asset Master and Work order data, historical failure data, GeoSpatial Data, Inspection and Test Logs, IoT and Sensor data.   Health and Predict - Utilities provides a flexible Asset condition framework for mining the asset condition data. Health and Predict - Utilities helps me identifying assets that are at greatest risk of failure, across different circuits/feeders, substations and regions.  The risk assessment helps me drive asset and work management activities in Maximo Manage or other EAM systems to keep the grid up, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.
+Thankfully I have a Health and Predict - Utilities solution from IBM with advanced analytics that help me do my work efficiently and confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.   Health and Predict - Utilities incorporates multiple data sources such as Asset Master and Work order data, historical failure data, GeoSpatial Data, Inspection and Test Logs, IoT and Sensor data.<br>     
+
+Health and Predict - Utilities provides a flexible Asset condition framework for mining the asset condition data. Health and Predict - Utilities helps me identifying assets that are at greatest risk of failure, across different circuits/feeders, substations and regions.  The risk assessment helps me drive asset and work management activities in Maximo Manage or other EAM systems to keep the grid up, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.
 
  ![img](/img/hpu_8.6/Goals2RE.png)
 
-### Identify Assets at Risk
+## Identify Assets at Risk
 
 Maximo Health and Predict are targeted to the RE, and provide a view of the current state of an enterprise's assets, and projects future conditions of those assets.  
 
@@ -49,30 +51,31 @@ We can even create a private view and save it.
 ![img](/img/hpu_8.6/Identify4.1.png)
 
 
-In this view, we can see some columns with calculated data. We can see Health scores, which are created for groups of assets from the Scoring tab.
+In this view, we can see some columns with calculated data. We can see Health scores, which are created for groups of assets from the Scoring tab.<br>  
+
 <b>Value:</b> Included with Health and Predict – Utilities are notebooks with predefined industry standard formulas to calculate health, criticality, risk, end of life and effective age scores for assets in the Utilities industry.
 
 Similarly, information in the Days to Failure column comes from a predictive model scheduled from the Predict grouping tab.
 
-Here is a list of asset classes loaded in the demo system. Note: this may change over time.
-•	Substation Transformers / Substation Power (IBM Transformers Tap Changers)
-•	Circuit Breaker
-    ◦	Air Blast Circuit Breaker (IBM Circuit Breakers Air Blast)
-    ◦	Air Magnetic Circuit Breaker
-    ◦	Circuit Breaker
-    ◦	Oil Circuit Breaker (IBM Circuit Breakers Oil)
-    ◦	SF6 Circuit Breaker
-    ◦	Vacuum Circuit Breaker
-•	Distribution Transformers (IBM Transformers Tap Changers)
-    ◦	Overheads (multiple)    
-    ◦	Undergrounds (multiple)
-•	Instrument Transformers 
-    ◦	Dry Current Transformer
-    ◦	Oil Filled Capacitive Voltage Transformer
-    ◦	Oil Filled Current Transformer (IBM Instrument Oil Filled CTs)
-    ◦	Oil Filled Voltage Transformer
-    ◦	SF6 Filled Current Transformer
-•	Switch gear / Gas Insulated Switch gear (IBM Gas Insulated Switchgear)
+Here is a list of asset classes loaded in the demo system. Note: this may change over time.<br>  
+•	Substation Transformers / Substation Power (IBM Transformers Tap Changers)<br>  
+•	Circuit Breaker<br>  
+    ◦	Air Blast Circuit Breaker (IBM Circuit Breakers Air Blast)<br>  
+    ◦	Air Magnetic Circuit Breaker<br>  
+    ◦	Circuit Breaker<br>  
+    ◦	Oil Circuit Breaker (IBM Circuit Breakers Oil)<br>  
+    ◦	SF6 Circuit Breaker<br>  
+    ◦	Vacuum Circuit Breaker<br>  
+•	Distribution Transformers (IBM Transformers Tap Changers)<br>  
+    ◦	Overheads (multiple)<br>      
+    ◦	Undergrounds (multiple)<br>  
+•	Instrument Transformers<br>   
+    ◦	Dry Current Transformer<br>  
+    ◦	Oil Filled Capacitive Voltage Transformer<br>  
+    ◦	Oil Filled Current Transformer (IBM Instrument Oil Filled CTs)<br>  
+    ◦	Oil Filled Voltage Transformer<br>  
+    ◦	SF6 Filled Current Transformer<br>  
+•	Switch gear / Gas Insulated Switch gear (IBM Gas Insulated Switchgear)<br>  
 
 ## Map View
 Another view to help us identify assets in trouble is the map view.
@@ -149,25 +152,25 @@ Work queues are preconfigured views designed to help us find what we're looking 
 
 ![img](/img/hpu_8.6/Identify8.1.png)
 
-There are a number of work queues included with Health and Predict.
-•	There are work queues specific to Predict, like assets with a High Probability of Failure.
-•	There's also a work queue for identifying assets in poor health.
-•	 And there are work queues that show assets with missing data. 
+There are a number of work queues included with Health and Predict.<br>  
+•	There are work queues specific to Predict, like assets with a High Probability of Failure.<br>  
+•	There's also a work queue for identifying assets in poor health.<br>  
+•	 And there are work queues that show assets with missing data.<br>   
 
 <b>Value:</b> The missing data work queues are extremely useful to a RE as they can help identify gaps in data necessary to create health scores or predictive failure models.<br> 
 
 `Action:` Select "Failing Before PM” work queue
 
-We'll select the Failing Before PM work queue to see all of the assets with scores in that work queue.  As a RE at a Utilities plant, it is critical for me to avoid failures.
-•	In this work queue, we can see that there are several pumps and Substation  Transformers that have a predicted failure before their next planned maintenance date.
-•	2 of the transformers are in our container that we viewed earlier.
+We'll select the Failing Before PM work queue to see all of the assets with scores in that work queue.  As a RE at a Utilities plant, it is critical for me to avoid failures.<br>  
+•	In this work queue, we can see that there are several pumps and Substation  Transformers that have a predicted failure before their next planned maintenance date.<br>  
+•	2 of the transformers are in our container that we viewed earlier.<br>  
 •	We’ll select “ST_1400518” in the queue as we start to manage our workload for the day, investigating and addressing all of the assets in the queue.<br> 
 
 `Action:` Select “ST_1400518” which opens the asset detail page [DETAILS ON THIS PAGE WILL VARY AS THIS IS A LIVE DEMO SYSTEM]
 
 ![img](/img/hpu_8.6/Identify8.2.png)
 
-### Investigate Further into Asset Details
+## Investigate Further into Asset Details
 
 On the top of the asset detail page we see the resulting scores from the predefined notebook for this Substation Transformer.  These are health, criticality, risk, end of life and effective age score.  Note that effective age is a calculation using the actual age and the health score.  An asset in poor health will have an effective age greater than its actual age.
 
@@ -221,20 +224,23 @@ We can hover on each of the assessment dates to get the detailed information.
 
 ![img](/img/hpu_8.6/Investigate3.1.png)
 
-There are several predictive models built to score against incoming sensor data for our asset.
-<b>Value:</b> IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome.
-Note that also included with MAS is Watson Studio and Watson Machine Learning, both of which our Data Scientist can use for building, training, and maintaining predictive models.
-In the case of our asset, our model tells us that it is projected to fail in xx days...plus or minus x days. 
-•	Depending on the richness of our failure history, our Data Scientist can build predictive models for specific failure modes.  And we can select those failure modes within the widget to see the projection for each.
-•	Also in the widget, we get information about our training data in the widget to help us decide when a model should be retrained.
-The Failure probability widget can show us how different failure modes impact our predictions.  For example, it might show us our asset has a xx% probability of failure in the next xx months due to xx
-•	Our Data Scientist can build specific models for time periods.  And just like the failure modes, we can look at the results by making different selections within our widget.
-•	Failure probability history shows how the probability of failure for each mode has changed over time.
-The factors that contribute to failure show which factors from our training data impacted failures the most, giving us an indication of what may lead to future failures.
-The anomaly detection model creates a threshold based on history, and we can see when our asset exceeds that threshold in our widget.
-The end of life curve is built based on training data for assets that have been decommissioned.   By applying the effective age calculation from the notebook, we can use this curve to estimate our end of life.
+There are several predictive models built to score against incoming sensor data for our asset.<br>  
 
-The effective age of our transformer is 51 years.  The curve produces an end of life probability of  100%...one more piece of evidence to show that this asset needs to be attended to immediately.
+<b>Value:</b> IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.<br>    
+These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome.<br>  
+Note that also included with MAS is Watson Studio and Watson Machine Learning, both of which our Data Scientist can use for building, training, and maintaining predictive models.
+In the case of our asset, our model tells us that it is projected to fail in xx days...plus or minus x days.<br>   
+•	Depending on the richness of our failure history, our Data Scientist can build predictive models for specific failure modes.  And we can select those failure modes within the widget to see the projection for each.<br>  
+•	Also in the widget, we get information about our training data in the widget to help us decide when a model should be retrained.<br>  
+
+The Failure probability widget can show us how different failure modes impact our predictions.  For example, it might show us our asset has a xx% probability of failure in the next xx months due to xx<br>  
+•	Our Data Scientist can build specific models for time periods.  And just like the failure modes, we can look at the results by making different selections within our widget.<br>  
+•	Failure probability history shows how the probability of failure for each mode has changed over time.
+The factors that contribute to failure show which factors from our training data impacted failures the most, giving us an indication of what may lead to future failures.<br>  
+The anomaly detection model creates a threshold based on history, and we can see when our asset exceeds that threshold in our widget.<br>  
+The end of life curve is built based on training data for assets that have been decommissioned.   By applying the effective age calculation from the notebook, we can use this curve to estimate our end of life.<br>  
+
+The effective age of our transformer is 51 years.  The curve produces an end of life probability of  100%...one more piece of evidence to show that this asset needs to be attended to immediately.<br>  
 
 `Action:` Hover NEAR the point where the effective age crosses the curve.  Scroll down the page.
 ![img](/img/hpu_8.6/Investigate4.1.png)
