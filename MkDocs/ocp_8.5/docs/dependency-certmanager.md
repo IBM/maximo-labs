@@ -5,7 +5,11 @@ In this exercise you will learn how to:
 
 ### Certificate Management
 
-In this exercise, you will learn how to setup Jetstack's opensource community based [cert-manager](https://cert-manager.io/) which is a dependency of MAS for the maintenance of X.509 certificates. Setting up your own domain name using DNS with public certificates, is beyond the scope of this guide (contact the author if you need general guidelines). In this tutorial, you will be setting up MAS with the default Ingress certificate of the IBM ROKS cluster.
+In this exercise, you will learn how to setup Jetstack's opensource community based [cert-manager](https://cert-manager.io/) which is a dependency of MAS for the maintenance of X.509 certificates. 
+
+!!! warning
+
+    Setting up your own domain name using DNS with public certificates, is beyond the scope of this guide (contact the author if you need general guidelines). In this tutorial, you will be setting up MAS with the self-signed certificate using default Ingress of the IBM ROKS cluster.
 
 !!! note
 

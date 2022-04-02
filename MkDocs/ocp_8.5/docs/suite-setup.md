@@ -140,6 +140,6 @@ You will be shown a success message with two URLs: Suite administration and Suit
 
 <br>
 
-**Congratulations**
+👏 **Congratulations**
 
-You have completed the deployment of Maximo Application Suite core. You are now ready to deploy Suite's Applications.
+You have completed the deployment of Maximo Application Suite core. 

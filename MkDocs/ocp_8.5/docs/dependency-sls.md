@@ -100,4 +100,4 @@ oc get -n ibm-sls cm sls-suite-registration -o jsonpath='{.data.url}'
 oc get secret -n ibm-sls sls-cert-client -o jsonpath='{.data.ca\.crt}' | base64 -d -w 0 > ca.crt
 ```
 
-TBA: [How to acquire MAS License File via License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page)
+[Follow this link to acquire MAS License File (AppPoints) via License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page)

@@ -1,4 +1,4 @@
-# Welcome to the Maximo Application Suite 8.5 Deployment Lab on Red Hat OpenShift Kubernetes Services (ROKS) in IBM Cloud<br>(Version: 1.0)
+# Welcome to the Maximo Application Suite 8.5 Deployment Lab on Red Hat OpenShift Kubernetes Services (ROKS) in IBM Cloud<br>(Version: 1.1)
 
 You will learn how to install  components of [Maximo Application Suite (MAS) 8.5](https://www.ibm.com/products/maximo)
 and it's dependencies on Red Hat's OpenShift Container Platform. You will learn how to deploy:
@@ -17,6 +17,6 @@ This tutorial is a still under development and it may change at any time. This i
 
 ---
 
-**Updated: 2021-10-20**
+**Updated: 2022-04-02**
 
 ---

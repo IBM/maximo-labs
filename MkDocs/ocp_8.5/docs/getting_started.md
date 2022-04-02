@@ -33,7 +33,7 @@ service.
 
 ##  Demonstration
 
-[Video demonstration of the deployment on IBM Cloud's OpenShift Platform](https://ibm.box.com/s/zesudhnb1skjs02195vq9pj037qsmq7n)
+[Video demonstration of the deployment on IBM Cloud's OpenShift Platform](https://techzone.ibm.com/collection/62178ab9bb51540018a245e6)
 
 ## Business Benefits
 

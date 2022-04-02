@@ -184,4 +184,8 @@ IBMers and Business Partners can can also use the Tech Zone.  [Collection: Custo
 !!! tip
     Use VS Code with the Remote SSH extension to log in to your Virtual Server Instance.
  
-You're all set to begin!
+**You're all set to begin!**
+
+!!! info
+
+    Should you require video assistance, follow author's videos via [Technology Zone Resource](https://techzone.ibm.com/collection/62178ab9bb51540018a245e6).

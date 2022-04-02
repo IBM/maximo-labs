@@ -6,9 +6,9 @@ In this exercise you will learn how to:
 
 ## Maximo Application Suite Core
 
-1\. Download the Installer
+1\. Download the Installer from Passport Advantage.
 
-Unzip mas-core installer (downloaded via Passport Advantage).
+Unzip mas-core installer.
 
 ```shell
 gunzip -c mas-installer-8.5.0.tgz | tar zxvf -
@@ -24,6 +24,11 @@ export ENTITLEMENT_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 export LICENSING_ID=xxxxxxxxxxxx
 export TM_VERSION=1.1.1
 ```
+
+!!! warning
+
+    Do not apply `TM_VERSION` variable if you happen to be following this guide when deploying MAS 8.6.
+
 
 3\. Install Maximo Application Suite
 
@@ -45,6 +50,10 @@ https://admin.MyIngressSubDomaind/initialsetup
 
 4\.  Using Firefox browser, accept the self-signed risk and login `https://admin.MyIngressSubDomaind/initialsetup`.
 
-## Upload self-signed certificate in Firefox/Chrome (Windows/MAC) to avoid browser warning.
+## Self-signed certificate acceptance warnings in Firefox/Chrome browsers.
 
-TODO!!!  Instructions on how to manually upload self-signed certificate to Firefox browser.
+1\. Your browser will present a self-signed acceptance warning the first time you access the `https://admin.MyIngressSubDomaind/initialsetup` URL. 
+
+2\. Access the API URL to accept its self-signed certificate as well: `https://api.MyIngressSubDomaind/initialsetup`
+
+3\. Hit the browser's back button to go back to the `https://admin.MyIngressSubDomaind/initialsetup` and proceed forward with the next steps of Suite setup.
