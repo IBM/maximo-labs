@@ -1,0 +1,21 @@
+site_name: MAS Health and Predict for Utilities 8.6 Lab
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferriera & Contributors
+site_description: "MAS Health and Predict for Utilities 8.6 Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/hpu_8.6
+
+nav:
+  - Get back to Maximo Labs: /
+  - MAS HPU 8.6 Lab:
+    - Welcome to the Maximo Application Suite Overview 8.6 Overview Lab: index.md
+    - Pre-Requisites: prereqs.md
+    - Exercises:
+      - 1. Health - Predict: demo-health-predict.md
+      - 2. Closing: closing.md 
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
