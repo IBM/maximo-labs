@@ -13,9 +13,10 @@ All Exercises require that you have:
 2.  User access to a Maximo Application Suite environment.<br>
 Your Exercise facilitator should have provided you with the information on your access.
 
-3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?):<br>
-o Click `Login to MY IBM` button<br>
-o Click `Create an IBM ID` link
+3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?):
+
+    - Click `Login to MY IBM` button
+    - Click `Create an IBM ID` link
 
 4.  Test your access to the Maximo Application Suite environment.
 
