@@ -4,6 +4,7 @@
 # Contributors to IBM Maximo Application Suite Health and Predict for Utilities 8.6 Overview Lab
 
 - John Douglas - <john.douglas@ibm.com>
+- Carlos Ferreira - <carlos.ferreira1@ibm.com>
 - Taylor Luong - <taylor.luong@ibm.com>
 
 
