@@ -1,0 +1,30 @@
+site_name: Maximo Application Suite Deployment Labs
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferreira & Contributors
+site_description: "Maximo Application Suite 8.6 with Manage+Health with demo data on Red Hat OpenShift Kubernetes Services (ROKS) in IBM Cloud"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/ocp_8.6
+
+nav:
+  - Get back to Maximo Labs: /
+  - OCP Labs:
+    - Welcome to the MAS Deployment Labs: index.md
+    - Pre-Requisites: prereqs.md
+    - Get Started: getting_started.md
+    - Exercises:
+        - 1. MongoDB: dependency-mongodb.md
+        - 2. Certificate Management: dependency-certmanager.md
+        - 3. Behavior Analytics Services: dependency-bas.md
+        - 4. Suite License Service: dependency-sls.md
+        - 5. Maximo Application Suite Core: mas-core.md
+        - 6. Suite Setup: suite-setup.md
+        - 7. Cloud Pak for Data: cp4d35.md
+        - 8. DB2 Warehouse: db2wh.md
+        - 9. Database for Manage+Health: database.md
+        - 10. Manage+Health with demo data: manage.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
