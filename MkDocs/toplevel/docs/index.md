@@ -15,8 +15,9 @@ portfolio.  The labs are in different states of readiness for use shown below.
   
 ### Maximo Application Suite 8.6
 
+  ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.6/) <span style="color:red">*New!*</span><br/>
   ![Ready](./img/readynew.png)[Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/) <span style="color:red">*New!*</span><br/>
-  ![Ready](./img/readynew.png)[Suite Overview](/mas_8.6/) <span style="color:red">*New!*</span><br/>
+  ![Ready](./img/readynew.png)[Suite Overview](/mas_8.6/)
   ![Ready](./img/readynew.png)[Health and Predict Utilities v8.6](/hpu_8.6/) <span style="color:red">*New!*</span>
 
 ### Maximo Application Suite 8.5
@@ -39,7 +40,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
     
 ### Maximo SaaS
 
-  ![Ready](./img/readynew.png)[Monitor](/monitor_saas/)   <span style="color:red">*Updated!*</span><br/>
+  ![Ready](./img/readynew.png)[Monitor](/monitor_saas/) <span style="color:red">*Updated!*</span><br/>
   ![Ready](./img/readynew.png)[Visual Inspection (1.3.0)](/mvi_saas/)  
  
 ### CONTRIBUTE
