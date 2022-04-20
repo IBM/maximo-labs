@@ -22,21 +22,26 @@ In this exercise you will setup your local development environment.
 ## Install and Create a Virtual Environment
 <a name="install_ve"></a>
 
-1.  Launch Terminal
+1. Launch Terminal
 
-2.  Install Brew Follow directions here: https://brew.sh/
+2. Install Brew Follow directions here: https://brew.sh/
 
 3. Install the right Python Version v3.7.9
     ```
     brew install python 
     ```
    
-4.  Install "pip". (Python Package Installer):
+4. Install "pip". (Python Package Installer):
     ```
     sudo easy_install pip  # for Mac try also removing sudo from the command
     ```
-
-5.  Install virtual environment to keep dependencies separate from other projects
+    
+    For Python 3.8.10 try using [instructions](https://packaging.python.org/en/latest/tutorials/installing-packages/):
+    ```
+    python3 -m ensurepip --default-pip
+    ```
+   
+6. Install virtual environment to keep dependencies separate from other projects
     ### For Mac
     ```
     sudo pip install virtualenv 
@@ -46,7 +51,7 @@ In this exercise you will setup your local development environment.
     pip install virtualenv      
     ```
 
-6.  Create a virtual environment use Python 3.7.9 for Maximo Application Suite v8.3
+7. Create a virtual environment use Python 3.7.9 for Maximo Application Suite v8.3
     ```
     python3 -m venv iot-python3
     ```
