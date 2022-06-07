@@ -9,15 +9,15 @@ nav:
   - Get back to Maximo Labs: /
   - Maximo APM V8.7.0 Lab:
     - Welcome to the Lab: index.md
-    - Get Started: getting_started.md
+    - Get Started: get_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:
-      - 1. Create Hierarchy: create_hierarchy.md
-      - 2. Create Assets and Devices: create_assets_devices.md
-      - 3. Create Device Types and Mappings: create_device_types.md
-      - 4. Publish Device Data: send_device_simulated_data.md
-      - 5. Create Health Scores: create_health_score.md
-      - 6. View Asset Health: view_asset_health.md
+      - Setup Watson Studio for Predict: setup_watson_studio.md
+      - Setup Local Python Environment : setup_local_environment.md
+      - Setup Assets Using Python: dataload_python.md
+      - Understand Health and Predict - Utilities Models: hpu_models.md
+      - Install and Configure App Connect: appconnect_install.md
+      - Setup Asset Data Load With App Connect: dataload_appconnect.md
   - About: about.md
 
 theme: readthedocs

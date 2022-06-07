@@ -47,21 +47,6 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
-# Build the Maximo Application Suite Overview 8.3 level:
-lab=mas_8.3
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
-# Build the Maximo Monitor Auto AI 8.4 level:
-lab=monitor_autoai_8.4
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the Maximo Monitor Auto AI 8.5 level:
 lab=monitor_autoai_8.5
@@ -71,13 +56,6 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 #mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 #echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
-# Build the Maximo Visual Inspection 8.4 level:
-lab=mvi_8.4
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the Maximo Application Suite Overview 8.5 level:
 lab=mas_8.5
@@ -128,7 +106,7 @@ mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 
-# Build the MAS v8.7 deployment for APM Lab level:
+# Build the MAS v8.7 deployment for Health Predict and Utilities Lab level:
 lab=apm_8.7
 cd $root_dir/MkDocs/$lab
 mkdocs build

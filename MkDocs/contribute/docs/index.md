@@ -8,6 +8,8 @@ This sub site will provide instructions to how to contribute to the IBM Maximo L
 * Build a new lab from scratch based on a template
 * Deploy the IBM Maximo labs to IBM Cloud
 
+You can also simply [open issues](https://github.com/IBM/monitor-hands-on-lab/issues/new) to provide us feedback.
+
 ---
 
 **Updated: 2021-02-25**

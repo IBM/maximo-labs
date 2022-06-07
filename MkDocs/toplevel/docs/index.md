@@ -1,7 +1,7 @@
 # Welcome to the IBM Maximo Labs
 
 In these hands-on labs you will learn how to get started with the different products that are available in the IBM Maximo 
-portfolio.  The labs are in different states of readiness for use shown below.
+portfolio.  The labs are in different states of readiness for use shown below. Feel free to [open issues](https://github.com/IBM/monitor-hands-on-lab/issues/new) and provide us feedback.
 
  ![Ready](./img/readynew.png)Ready for use. <br/>
  ![Under Development](./img/under_development.png)Being developed and requires feedback.<br/>
@@ -11,7 +11,7 @@ portfolio.  The labs are in different states of readiness for use shown below.
 ---
 ### Maximo Application Suite 8.7
 
-  ![Not Started](./img/not_started.png)[APM](/apm_8.7/) <span style="color:red">*Under development!*</span><br/>
+  ![Not Started](./img/not_started.png)[Health, Predict and Utilities](/apm_8.7/) <span style="color:red">*Under development!*</span><br/>
   
 ### Maximo Application Suite 8.6
 
@@ -23,17 +23,10 @@ portfolio.  The labs are in different states of readiness for use shown below.
 ### Maximo Application Suite 8.5
 
   ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.5/) <span style="color:red">*Updated!*</span><br/>
-  ![Ready](./img/readynew.png)[Suite Overview](/mas_8.5/)<br/>
   ![Ready](./img/readynew.png)[Monitor Functions](/monitor_8.5/)<br/>
   ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.5/)<br/>
   ![Ready](./img/readynew.png)[MAS Environmental Monitoring](/sustain_mas/)
 
-### Maximo Application Suite 8.4
-
-  ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.4/)<br/> 
-  ![Ready](./img/readynew.png)[Visual Inspection(8.3.0)](/mvi_8.4/)  
- 
-    
 ### Maximo SaaS
 
   ![Ready](./img/readynew.png)[Monitor](/monitor_saas/) <span style="color:red">*Updated!*</span><br/>
