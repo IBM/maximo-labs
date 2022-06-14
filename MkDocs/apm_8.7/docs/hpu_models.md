@@ -245,7 +245,7 @@ Any permenant modification on notebook, will need save to a latest version to ta
 
 Job is `Run-IBM-Transformers-Tap-Changers-DGA-4-0-0.Details`and can be checked using the steps below.
 
-1\. Login to Watson Studio, enter the project, and click the `Job` tab, click the job defined in configruation file, and then click `Eidt Configuration`, click `Next` and `Next`, we can see by default it binds to `latest` version and runtime is `Default Python 3.8`, close the eidt page by clicking `X` on the right connor.
+1\. Login to Watson Studio, enter the project, and click the `Job` tab, click the job defined in configruation file, and then click `Edit Configuration`, click `Next` and `Next`, we can see by default it binds to `latest` version and runtime is `Default Python 3.8`, close the edit page by clicking `X` on the right corner.
 ![drawing](/img/apm_8.7/hpu_model_ws_job.png)   
 
 ![drawing](/img/apm_8.7/hpu_model_ws_job_02.png)   

@@ -83,6 +83,11 @@ Setup database security to allow Watson Studio to access the Maximo Application 
 5. Return to the browser window that has Watson Studio Project you created earlier.  Add the database pem file as a data asset.  Drag and drop the database pem file into the data assets. 
 ![drag pem file](/img/apm_8.7/p22.png) 
 
+!!! note
+
+    Ensure Datascience User Belongs to Predict Security Group.   In Maximo Manage, add the user to the PREDICT and PREDICTGROUPING group in the user definition as shown in the screen below.
+    
+![Security Groups](/img/apm_8.7/p15.png) 
 
 
 ## Get URL to Download the Health and Predict and Utilities Notebooks
@@ -190,15 +195,15 @@ Replace key variable you collected in the previous steps with the values to crea
 
 For example: 
 
-    https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download?filename=pmlib
+    https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download
 
 `EXTERNAL_APM_API_BASEURL` = https://masws.predict.ivt09rel86.fake.suite.maximo.com
 `APM_ID` = f3fake48
 `APM_API_KEY` = n7gssk_fake_l_fake_486_fake_967_fake_jm8
 
-Becomes URL:
+The final URL becomes:
 
-    https://masws.predict.ivt09rel86.fake.suite.maximo.com/ibm/pmi/service/rest/ds/f3fake48/n7gssk_fake_l_fake_486_fake_967_fake_jm8/lib/download?filename=pmlib
+    https://masws.predict.ivt09rel86.fake.suite.maximo.com/ibm/pmi/service/rest/ds/f3fake48/n7gssk_fake_l_fake_486_fake_967_fake_jm8/lib/download
 
 1. Make note of the values and create the URL you can use in the browser to download the zip file. 
 Here is an example download URL for Predict model notebook templates zip file using the values from the previous steps. 
