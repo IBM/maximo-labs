@@ -97,7 +97,7 @@ These notebooks templates are what you use to calculate asset health and risk sc
 
 The Health and Predict notebooks require programmatic access and credentials to access Maximo Application Suite.  You will need these values to create the URL that allows you to download the Health, Predict and Utilities notebooks zip file.  The URL looks  like:
 
-    https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download/filename=pmlib
+    https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download
 
 
 | Environment Variable | Find It In                                                                                           | Used For                               |
@@ -128,7 +128,7 @@ It should look like:
 ![End Points](/img/apm_8.7/p35.png) 
 
 4. Note the URL for the `PREDICTAPI` endpoint.
-![End Points](/img/apm_8.7/p34.png) 
+![End Points](/img/apm_8.7/p34.png) -
 
 It should look like:
 `APM_API_BASEURL` = `PREDICTAPI` endpoint = https://main.predict.ivt11rel87.ivt.suite.maximo.com
@@ -137,7 +137,7 @@ It should look like:
 
 1. Open a browser and access the Openshift Console MAS is deployed on.  For IBM Cloud deployments goto `https://cloud.ibm.com`, 
 select your `account` from the drop down menu and click `Clusters`
-![IBM Cloud Account](/img/apm_8.7/p29.png) 
+![IBM Cloud Account](/img/apm_8.7/p29.png)
 
 2. Under `Resources` click on your cluster resource.
 ![Choose Cluster Resource](/img/apm_8.7/p30.png) 
@@ -149,13 +149,13 @@ select your `account` from the drop down menu and click `Clusters`
 ![Choose Cluster](/img/apm_8.7/p33.png) 
 
 5. Click on `Project`. Search on `Predict` and Click on `Project`
-![Choose Cluster](/img/apm_8.7/p35.png) 
+![Choose Cluster](/img/apm_8.7/p35.png)
 
 6. Click on `Project`. Search on `Predict` and Click on `Project`
 ![Choose Cluster](/img/apm_8.7/p36.png) 
 
 7. Click on `Project`. Search on `Predict` and Click on `Project`
-![Choose Cluster](/img/apm_8.7/p35.png) 
+![Choose Cluster](/img/apm_8.7/p35.png)
 
 8. Pick location
 
@@ -203,7 +203,7 @@ For example:
 
 The final URL becomes:
 
-    https://masws.predict.ivt09rel86.fake.suite.maximo.com/ibm/pmi/service/rest/ds/f3fake48/n7gssk_fake_l_fake_486_fake_967_fake_jm8/lib/download
+    https://masws.predict.ivt09rel86.fake.suite.maximo.com/ibm/pmi/service/rest/ds/f3fake48/n7gssk_fake_l_fake_486_fake_967_fake_jm8/file/download
 
 1. Make note of the values and create the URL you can use in the browser to download the zip file. 
 Here is an example download URL for Predict model notebook templates zip file using the values from the previous steps. 

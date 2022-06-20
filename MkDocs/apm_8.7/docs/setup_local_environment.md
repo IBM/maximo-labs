@@ -4,7 +4,7 @@ You can skip this exercise if you already have data loaded in your environment o
 
 In this exercise you will setup your local development environment so that you can use Python to setup and load data into Health and Predict.
 
--  [Install and Create a Virtual Environment](#install_ve)  for Python v3.7.9
+-  [Install and Create a Virtual Environment](#install_ve)  for Python v3.8
 
 -  [Setup and Activate a Virtual Environment](#activate_ve)  Install Python dependencies, clone repository 
     and verify environment
@@ -18,7 +18,7 @@ In this exercise you will setup your local development environment so that you c
 -  [Debug Functions](#debug)
 
 !!! note
-    These directions for are a Mac. Using Python v3.7.9 for Maximo Application Suite v8.7.
+    These directions for are a Mac. Using Python v3.8 for Maximo Application Suite v8.7.
     Download Python for Windows at  https://www.python.org/downloads/windows/ 
     
 ## Install and Create a Virtual Environment
@@ -28,7 +28,7 @@ In this exercise you will setup your local development environment so that you c
 
 2\.  Install Brew Follow directions here: https://brew.sh/
 
-3\. Install the right Python Version v3.7.9
+3\. Install the right Python Version v3.8
 
 ```shell script
 brew install python 
@@ -53,7 +53,7 @@ sudo pip install virtualenv
 pip install virtualenv      
 ```
 
-6\.  Create a virtual environment use Python 3.7.9 for Maximo Application Suite v8.7
+6\.  Create a virtual environment use Python 3.8 for Maximo Application Suite v8.7
 
 ```shell script
 python3 -m venv apm-python3
@@ -120,8 +120,8 @@ pip install -r requirements.txt
 
 ```shell script
 cd "<replace with the git cloned project directory name>"
-export DYLD_LIBRARY_PATH=<"replace with your virtual env directory>"/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
-export DYLD_LIBRARY_PATH=/Users/carlosferreira/ve/apm-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=<"replace with your virtual env directory>"/lib/python3.8/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/Users/carlosferreira/ve/apm-python3/lib/python3.8/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
 ``` 
 
 8\.  Set PYTHONPATH to your project directory where you installed your virtual environment.
@@ -159,7 +159,7 @@ cd /Users/student01/ve/apm-python3/bin
 source activate
 cd /Users/student01/MAS_AutoAI
 export PYTHONPATH=/Users/student01/MAS_AutoAI
-export DYLD_LIBRARY_PATH=/Users/student01/ve/apm-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/Users/student01/ve/apm-python3/lib/python3.8/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
 ```
 
 3\. Launch Jupyter Notebook to edit Linear Regression Models.
@@ -218,7 +218,7 @@ example settings below.
 4\.  Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of your virtual environment.
 
 ```shell script
-PYTHONUNBUFFERED=1;DYLD_LIBRARY_PATH=/Users/student01/ve/apm-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH;PYTHONPATH=/Users/student01/MAS_AutoAI
+PYTHONUNBUFFERED=1;DYLD_LIBRARY_PATH=/Users/student01/ve/apm-python3/lib/python3.8/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH;PYTHONPATH=/Users/student01/MAS_AutoAI
 ```
     
 5\.  Set the `Python interpreter` to your virtual environment.
