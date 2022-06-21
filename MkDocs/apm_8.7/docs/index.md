@@ -7,10 +7,12 @@ This lab provides step-by-step instructions and code examples to help you learn 
 
 You will:
 
-* Learn how to setup Watson Studio  with the Maximo Applciation Suite Predict model templates.
-* Understand what models and notebook templates are included with Maximo Health and Predict - Utilities. 
-* Install and configure App Connect for use with Maximo Health & Predict - Utilities v8.7.
-* Install and configure App Connect Integration server to load asset data into Health and Predict - Utilities.
+- Learn how to setup and configure Watson Studio with the Maximo Applciation Suite Predict model templates. 
+- Understand what models and notebook templates are included with Maximo Health and Predict - Utilities. 
+- Install and configure App Connect for use with Maximo Health & Predict - Utilities v8.7. 
+- Install and configure App Connect Integration server to load asset data into Health and Predict - Utilities.
+- Create a pump failure Prediction Model using Predict.
+- Create a pump Anomaly Detection Model using Predict.
 
 Before getting started ensure you have completed the prerequisites. [Prerequisites](prereqs.md):
 

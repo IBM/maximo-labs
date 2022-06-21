@@ -3,7 +3,6 @@ In this Maximo Health and Predict - Utility AI Lab you wil learn how to use an e
 Maximo Health and Predict-Utilities in MAS v8.7 to understand the health and failure risks of your assets.
   
 
-   
 ## Description
 Maximo EAM includes the ability to manage assets. Reliability Engineers can use that data to better plan their asset
 maintenance and repairs  however you may want to create custom machine learning models to make predictions or 
@@ -17,32 +16,16 @@ plan to address poor asset health and risk with an asset investment plan to repa
 
 ### Asset Data 
 
-You must first set up your local development environment with asset data used in the lab.  You will create `X` assets `assetid X` and 
-`asset id Y`.  Some assets will have timeseries metered data that will be used to predict failures.   The lab provides a 
-Python script `x_simulator.py` to send asset meter data to the `X` assets.  This lab includes real `X` device data in 
-the csv file named `tbd_data.csv`.  
+You will use a publicly available [pump data set from Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download) for predicting a pump failure.   You will also create an Anomaly Detection model for the pump.
 
-The asset data metric readings include:  TBD 
-
-|   Metric Name        | Metric Description                                               |
-|----------------------|------------------------------------------------------------------|
-|   evt_timestamp      | Reading timestamp metric data was read by sensor                                               |
-|   speed	           | Pump impeller speed                                              |
-|   head               | Pump head                                                        |
-|   device_id          | The device identifier for the 2 pump devices 11111096 and 111137F8|
-|   pump_mode          | Pump mode a for automatic or h for manually operated by hand     |
-|   flow               | Pump flow                                                        |
-|   voltage            | Pump voltage                                                     |
-|   POWER              | Pump power consumption                                           |
-|   CURRENT            | Pump current                                                     |
-
+The [pump data definition](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data/discussion/131429?resource=download) is for the pump is explained in the Kaggle site 
 
 **Pre-requisites**
 
 Ensure you have access to :
 
 -  MAS v8.7  Health and Predict.
--  Cloud Pak for Data Watson Studio.
+-  Cloud Pak for Data Watson Studio compatible with MAS v8.7
 -  App Connect. You can use the App Connect add on included with Maximo Application Suite as an Add On. Or install it yourself using the App Connect exercises.
 -  Asset Class setup and data load scripts for the Labs provided by the Instructor.
 
@@ -62,17 +45,21 @@ You must choose one of the following ways to load asset data into Health and Pre
 
 3. [Data loading meter data  and asset types using App Connect](dataload_appconnect.md) requires that you do the App Connect Exercise.
 
-Here are excercises that we would like to add to this lab.  We are requesting contributors for these exercies .  Email me <carlos.ferreira1@ibm.com> if 
+
+
+## Contributors Meeded for these exercises:
+
+Here are other exercises that we would like to add to this lab.  We are requesting contributors for these exercises .  Email me <carlos.ferreira1@ibm.com> if 
 you would like to volunteer as a contributor.  
 
-## Manage Assets
+### Manage Assets
 1. Creating a New Asset in Maximo in Web UI
 2. Associating Meters w/ an Asset in Web UI
 3. Creating New Condition Monitoring Points & Job Plans
 4. Create a Saved Query or Asset Group*
 5. Edit the IOTHISTORIAN Cron Task & External Systems to synchronize Manage Asset data with Health.
 
-## Understand Asset Health
+### Understand Asset Health
 1. Setup health scores and groups for assets and locations
 2. Create historical work orders for Asset Timeline and scheduled preventive maintenance.
 3. View asset health on asset detail page.
@@ -81,18 +68,18 @@ you would like to volunteer as a contributor.
 6. Find assets that are missing data. View low health work queue.
 7. Health scores, and take action by opening a work order in EAM.
 
-## Predict Asset Failures and Detect Anomalies
+### Predict Asset Failures and Detect Anomalies
 1. Create asset group
 2. Set-up predictive end of life models using [Watson Studio and Predict](setup_watson_studio.md).
 3. Understanding asset anomalies.
 4. Understanding asset failure predictions.
 
-##  Optimize Asset Investment and Risk
+###  Optimize Asset Investment and Risk
 1. Compare Asset Investment Strategies. Understand costs associated with Refurbishment and Replacement Planning and the 
 long term impact on Asset health. 
 2. Analyze long term asset risk for a selected investment strategy.
 
-## Architecture
+### Architecture
 
 Here is the architectural deployment pattern these labs are targeted for:
 
