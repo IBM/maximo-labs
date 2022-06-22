@@ -1,14 +1,41 @@
 # Failure Prediction 
 
-Maximo Predict includes failure prediction models you can use to predict the date an asset will fail. 
+Maximo Predict includes [model templates](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850) you can use to predict the date an asset will fail or other asset condition predictions and scores.
 
-In this exercise you will use Monitor, Predict and Watson Studio to:
+Predict notebook names that start with `WS` are intended to be used within Watson Studio to assess algorithm performance by importing CSV Files and evaluating the model performance.
 
-1. [Train a model using a Failure Prediction notebook](#failure_prediction_notebook)
-2. Register a Failure Prediction algorith in Predict
+Notebooks that are pre-pended with `PMI` are intended to be used within Predict to score algorithm using data ingested by Monitor or available in Health and Predict.
+![two types of notebooks](/img/apm_8.7/p60.png) 
+
+
+In this exercise the Datascientist uses Predict Model Templates and Watson Studio to:
+
+- [Upload Predicted Failure Date notebook](open-notebook) named `WS - Predicted Failure Date-Survive Analysis.ipynb.` into your Project in Watson Studio
+- [Run the Predicted Failure Date notebook](run-notebook) using the Pump CSV data prepared in the previous exercise to evaluate the [Predicted Failure Date template](#failure_prediction_notebook) algorithm performance.
+
+In this exercise the Reliability Engineer  uses Predict to:
+
+- [Creates a Prediction Group](#prediction_group) for centrifugal pumps that will use the evaluated notebook template for predicting asset failure date.
 
 !!!!
-    You must complete the previous data [Data Load Loading Using Notebooks](dataload_python.md) exercise before you start this exercise.
+    You must complete the previous exercise for [Data Preparation and Loading Using Notebooks](data_preparation.md) exercise before you start this exercise.
+
+Pre-requisites 
+
+- Review Predict documentation for the [list of available models](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850).
+- Ensure your MAS Predict environment is running and you have access.  Try your server URL that might look something like: [https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info](https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info)
+
+## Upload the Predicted Failure Data Notebook
+<a name="open-notebook"></a>
+Upload or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md) Prepend your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
+
+## Run the notebook
+<a name="run-notebook"></a>
+
+
+## Create a Prediction Group
+<a name="prediction_group"></a>
+
 
 ## Train a Failure Prediction Model
 <a name="failure_prediction_notebook"></a>

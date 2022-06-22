@@ -3,11 +3,11 @@ Maximo Predict includes anomaly detection notebook templates you can use to dete
 
 In this exercise you will use Monitor, Predict and Watson Studio to:
 
-1. [Train a model using an Anomaly Detection notebook](#anomaly_notebook) using a template 
+1. [Train a model using an Anomaly Detection notebook](#anomaly_notebook) using a template. 
 2. Register an Anomaly Detection algorithm in Predict
 
 !!!!
-    You must complete the previous exercise for [Data Load Loading Using Notebooks](dataload_python.md) before you start this exercise.
+    You must complete the previous exercise for [Data Preparation and Loading Using Notebooks](data_preparation.md) exercise before you start this exercise.
 
 ## Train a Anomaly Detection Model
 <a name="data_preparation_notebook"></a>

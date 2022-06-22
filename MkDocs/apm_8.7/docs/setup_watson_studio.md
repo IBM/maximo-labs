@@ -7,7 +7,7 @@ In this exercise you will setup and configure Watson Studio to use the Health an
 - [Setup Database Connection]("db-connection") to allow Watson Studio to access DB.
 - [Get URL to Download the Healh and Predict Notebooks](download_URL).
 - [Create am environment ](create-environemnt-studio)to edit and run your notebooks.
-- [Upload the Predict Notebooks]("setup-studio") to Watson Studio Project.
+- [Add Notebook From File]("add-notebook-to-studio") to Watson Studio Project.
 
 
 
@@ -185,8 +185,7 @@ API keys are used by the notebooks to make program calls to the Health and Predi
 5. Click `Copy key` to get `APM_API_KEY` string you need to create the URL to download the zip file of Predict Notebooks.
 ![Choose Cluster](/img/apm_8.7/p34.png) 
 
-
-
+   
 ## Download the model template notebooks
 
 Using the key value pairs in the previous steps you wil create the URL to download the Predict notebooks from a browser.
@@ -208,11 +207,13 @@ The final URL becomes:
 1. Make note of the values and create the URL you can use in the browser to download the zip file. 
 Here is an example download URL for Predict model notebook templates zip file using the values from the previous steps. 
 
-2.  Open a browser and use the URL to download and save the Predict Model templates zip file locally.  
+2. Open a browser and use the URL to download and save the Predict Model templates zip file locally.  
 
 3. Unzip the models file and then upload the notebooks one at a time into your Watson Studio Project Assets. In your finder or file explorer, double click on the zip file to extract the notebooks. Make note of where you unzipped the file, as you will need it for the next steps.
-![setup assets](/img/apm_8.7/p02.png) 
+![setup assets](/img/apm_8.7/p02.png)
 
+!!! note
+   Be sure to prepend your name initials to any model you upload to shared project areas when doing labs so you can remember which project notebook template was yours.
 
 
 ##  Set up an `Environment` to train and test your models in Watson Studio
@@ -228,16 +229,17 @@ The default environment is only 1 vCPU.  You must have an environment with at le
 
 
 
-##  Add Predict Model to a Watson Studio Project
-<a name="setup-studio"></a>
+##  Add Notebook From File to a Watson Studio Project
+<a name="add-notebook-to-studio"></a>
+You can use the steps below to add any notebook from File to your Watson Studio Project.   Notebooks are used to create scores, predictions and for other algorithms in Health and Predict - Utilities.  In this exercise you will add a Predict Notebooks you will use to your Project.   Select the `WS - Predicted Failure Date-Survive Analysis.ipynb` notebook template that you will use in the next exercise to predict failure dates of the pump.
 
-1. Add one of the Predict notebooks to your Watson Studio Project.  Return to your Cloud Pak for Data project.  Search for your `project` by name.  Click on the `project name` link to open your project.  
+1. Add a Predict notebook by file option to your Watson Studio Project.  Return to your Cloud Pak for Data project.  Search for your `project` by name.  Click on the `project name` link to open your project.  
 ![add_to project](/img/apm_8.7/p46.png) 
 
 2. Add one of Predict notebook you unzipped earlier.  Click `Add to Project` and select `notebook` option.
 ![setup assets](/img/apm_8.7/p11.png) 
 
-3. Click the `From File" tab.
+3. Click the `From File` tab.  Drag and drop the notebook you would like to add to the area to add notebooks.  To save time in the next exercise choose the notebook for `WS - Predicted Failure Date-Survive Analysis` replace `WS` with your initials when naming the notebook.
 ![setup assets](/img/apm_8.7/p12.png) 
 
 4. Prepend your name initials to the name of the model file template you uploaded.   Select the runtime environment you created in the previous step that has 4 vCPUs.  Drag and drop your notebook template file into the area indicated below.  Click on the `Create` button to create the notebook. 
@@ -252,4 +254,17 @@ The default environment is only 1 vCPU.  You must have an environment with at le
 7. If you had to change the `environment`,  click the `Confirm` button to restart the notebook editor in Waston Studio
 ![add_to project](/img/apm_8.7/p43.png) 
     
-Congratulations you have seen how to upload a Predict notebook into Watson Studio.   In the next exercises you will learn how to use these notebook templates to detect anomalies and predict asset failures.   You will start by update and running setup notebooks to create asset types in Health and Predict.
+
+##  To Stop and Restart a Predict Model to a Watson Studio Project
+<a name="setup-studio"></a>
+
+If your notebook environment fails to start you can restart the environment by following the steps below.
+
+1. Add one of the Predict notebooks to your Watson Studio Project. Click the `information` icon, `environment` tab and `restart` from the `Runtime Status` select box.
+![add_to project](/img/apm_8.7/p54.png) 
+
+2. Confirm your selection to restart the notebook by pressing the `Change` button. 
+![add_to project](/img/apm_8.7/p55.png) 
+
+
+Congratulations you have seen how to upload, start and restart a Predict notebook into Watson Studio.   In the next exercises you will learn how to use these notebook templates to detect anomalies and predict asset failures.   You will start by update and running setup notebooks to create asset types in Health and Predict.

@@ -1,17 +1,91 @@
 # Data Preparation and Loading Using Notebooks
 
-In this exercise you will use Monitor, Predict and Watson Studio to:
+In this exercise you will use Predict libraries and notebook in Watson Studio to:
 
-1. [Prepare data using a notebook](data_preparation_notebook) to clean, format and load data into Predict so that you can train an anomaly model and a failure prediction model.
-2. [Setup Asset Types, Devices and Device Types](#setup_assetypes) asset and device metadata using a notebook. 
+- [Download Pump Data and Import into Watson Studio Notebook](download_ddata) from Kaggle website
+- [Add the data prepration notebook template](data_preparation) included with this lab to prepare the pump data.
+- [Create an asset information file](asset_information_file) to describe the pump used in later exercises for EOL Curve algorithm. 
+- [Create an asset metrics file](asset_metrics_file) used to train and test the Failure Prediction algorithm.
+- [Create an asset failure file](asset_failure_file) used to train and test the Failure Prediction algorithm.
 
-!!!
 
-    You can skip this exercise if you are loading data into Health and Utilities using App Connect or your instructor has already loaded asset data into your environment.
+## Download Pump Data and Import to Watson Studio Notebook
+
+1. Download data from [Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download). Name the file `kaggle-pump-sensor.csv`.  If the file is already present in your project you can skip this step. 
+![Dowload_Pump_data](/img/amp_8.7/p40.png) 
+
+2. Click on `Assets` tab.  Click on `Add to Project` button.  Select `Data`.  Browse to and select the CSV file you downloaded from the Kaggle Web site. Alternatively just drag the CSV file into data asset project on the right. 
+![credentials](/img/amp_8.7/p24b.png) 
+
+
+## Add the Data Preparation Notebook to Watson Studio
+<a name="asset_information_file"></a>
+Data preparation involves cleaning data,  reshaping the data columns and rows into the format and values needed for each notebook template.   In some cases it involves removing rows or columns that have invalid or blank values (NaN).  Or imputing values to replace blank values (NaN).  The data preparation notebook has already been created for you for use. 
+
+1. Use the step from the previous exercises [Add Notebook From File to a Watson Studio Project](add-notebook-to-studio) to add the `data_preparation.ipynb`to your Watson Studio Project or the Project suggested by your facilitator.  Rename your notebook by pre-pending your initials to the notebook.   
+Use the steps below to understand or recreate the notebook yourself.
+
+2. Create a new notebook from file to prepare the date to be used by Predict for predicting failures.  
+Browse to open the `./notebooks/data_preparation.ipynb` be sure to pre-pend your initials and pick the v4CPU Python 3.8 environment. 
+ 
+!!! note
+    Be sure to prepend your initials on all the data asset files you create in this exercise so that you can be sure you are creating the files correctly.
+
+
+4. Study the each notebook cell.  The first cell loads needed libraries to process the data using Pandas and Numpy which are open source libraries used to analyze and process timeseries data. The explanation of these libraries is outside the scope of this lab and is a pre-requisite.
+
+```shell script
+import pandas as pd
+import numpy as np
+import time
+import sys
+```
+
+5. The next cell sets the display values to be able to see the data tables and logs in the Jupyter notebook for df head()
+
+```shell script
+pd.set_option('display.max_columns', None)
+pd.set_option('max_colwidth', 1000)
+pd.set_option('max_rows', 100)
+pd.set_option('display.max_rows', 100)
+pd.set_option('display.max_columns', 100)
+```
+
+6. Insert the code to load the sensor_data.csv that you uploaded earlier in the exercise. Click on the code generator icon at the top of Watson Studio.  Click on the sensor data csv file you downloaded earlier and named 'kaggle-pump-sensor.csv'. You don't have to download the file if someone else has.
+![Insert Code Credentials](/img/amp_8.7/p49.png)
+
+7. The code is inserted into a new cell below where you are currently active.
+![Code](/img/amp_8.7/p50.png)
+
+### Set Environment Variables
+
+Set the environment variables you will use throughout data preparation.  See [Setup Watson Studio](setup_watson_studio.md) for how to find these values.
+
+    ASSET_ID                 =  ID of each asset ie pump in your CSV files.
+    APM_ID	                 =  Value for the mxe.PMIId system property.                                                         | Used to train and score all notebooks  | 
+    APM_API_BASEURL	         =  Root of the URL value for the PREDICTAPI endpoint.                                               | Used to train and score all notebooks  |
+    EXTERNAL_APM_API_BASEURL =  Route location for the Predict project retrieved from the Red Hat® OpenShift® Container Platform. | Used to download the notebooks         |
+    APM_API_KEY              =  API Key to make secure programmatic calls to APM
+
+**Sample Code** 
+
+    import os 
+    os.environ['ASSET_ID'] = 'your_asset_id'
+    os.environ['APM_ID'] = 'your_APM_ID' 
+    os.environ['APM_API_BASEURL'] = 'your_https://main.fake.suite.maximo.com/maximo/'
+    os.environ['EXTERNAL_APM_API_BASEURL'] = 'your_https://main.fake.maximo.com/maximo/'
+    os.environ['APM_API_KEY'] = 'your_APM_API_KEY'
+
+### Verify Environment Variables
+
+You can check the environment variables and reference them by using the auto insert code in Watson Studio.  Click on the code generator icon at the top of Watson Studio.  Click on the sensor data csv file you loaded earlier and nameed 'kaggle-pump-sensor.csv'  
+![Insert Environment Variables](/img/amp_8.7/p52.png)
 
 
 ## Prepare Asset Information Data** 
-<a name="data_preparation_notebook"></a>
+<a name="asset_information_file"></a>
+Used for End Of Life Curve.   This step can be skipped if you don't want to create an End of Life Curve in Predict.
+
 You must load metadata describing your asset and meter data describing the timeseries metrics and failure dates.  There are 3 files needed.  Each file is described below.
 
 To load asset data into Health you must have asset date. an anomaly model or failure prediction model using Predict you must include For model training using Predict you must include this file.  If you are using Health and have an existing installation of Manage
@@ -115,9 +189,9 @@ pump_df = data_df_1[['timestamp','sensor_10', 'sensor_04','sensor_02', 'sensor_1
 
 ## Prepare Asset Failure Data 
 
-Asset failure data is time series data that describes when the asset failure periods happened.   Asset failure data must have the following column formats:
+Asset failure data is time series data that describes when the asset failure periods happen.   Asset failure data must have the  column formats in the table below.
 
-The failure dates includes the failure CSV data which identifies start and end  failure dates for each asset id with the following columns:
+The failure dates includes the failure CSV data which identifies the start and end of failure dates for each asset id with the following columns:
 
 | Column Name  | Description                                                                                      |
 |--------------|--------------------------------------------------------------------------------------------------|
@@ -148,94 +222,8 @@ Create an asset failure file for the pump data.  Since the Kaggle pump data is f
 
 In this step you will create the CSV file and save it to your project assets in Watson Studio.   You will use a Watson Studio Python library named `ibm_watson_studio_lib` that is available in your environment by default.  See this [API reference](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=lib-watson-studio-python) for more information. 
 
-**Code:**
-
-    ASSET_INFO_FILE = "pumps_asset_info.csv"
-    asset_info_list = [ ['pump_00',pd.Timestamp('2008-01-08'),""]]
-    df_asset_info = pd.DataFrame(asset_info_list, columns=['asset_id','installation_date','decommission_date'])
-    print(df_asset_info)
-    
-    from ibm_watson_studio_lib import access_project_or_space
-    wslib = access_project_or_space()
-    wslib.save_data(ASSET_INFO_FILE, df_asset_info.to_csv(index=False).encode())
-
-**Example CSV File that will be created:**
-
-    asset_id,installation_date,decommission_date
-    pump_00,2008-01-08,
-
-### Download and import data into Watson Studio Notebook
-
-1. Download data from [Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download). Name the file `kaggle-pump-sensor.csv`
-![Dowload_Pump_data](/img/amp_8.7/p40.png) 
-
-2. Drag the csv file into data asset project
-![credentials](/img/amp_8.7/p40.png) 
-
-3. Create a new notebook from file to prepare the date to be used by Predict for predicting failures.  
-Browse to open the .notebooks/data_preparation.ipynb
-
-4. The first cell loads needed libraries to process the data.
-
-```shell script
-import pandas as pd
-import numpy as np
-import time
-import sys
-```
-
-5. The next cell sets the display values to be able to see the data tables and logs in the Jupyter notebook for df head()
-
-```shell script
-pd.set_option('display.max_columns', None)
-pd.set_option('max_colwidth', 1000)
-pd.set_option('max_rows', 100)
-pd.set_option('display.max_rows', 100)
-pd.set_option('display.max_columns', 100)
-```
-
-6. Insert the code to load the sensor_data.csv that you uploaded earlier in the exercise. Click on the code generator icon at the top of Watson Studio.  Click on the sensor data csv file you loaded earlier and named 'kaggle-pump-sensor.csv'  
-![Insert Code Credentials](/img/amp_8.7/p49.png)
-
-7. The code is inserted into a new cell below where you are currently active.
-![Code](/img/amp_8.7/p50.png)
-
-### Set Environment Variables
-
-Set the environment variables you will use throughout data preparation.  See [Setup Watson Studio](setup_watson_studio.md) for how to find these values.
-
-    ASSET_ID                 =  ID of each asset ie pump in your CSV files.
-    APM_ID	                 =  Value for the mxe.PMIId system property.                                                         | Used to train and score all notebooks  | 
-    APM_API_BASEURL	         =  Root of the URL value for the PREDICTAPI endpoint.                                               | Used to train and score all notebooks  |
-    EXTERNAL_APM_API_BASEURL =  Route location for the Predict project retrieved from the Red Hat® OpenShift® Container Platform. | Used to download the notebooks         |
-    APM_API_KEY              =  API Key to make secure programmatic calls to APM
-
-**Sample Code** 
-
-    import os 
-    os.environ['ASSET_ID'] = 'your_asset_id'
-    os.environ['APM_ID'] = 'your_APM_ID' 
-    os.environ['APM_API_BASEURL'] = 'your_https://main.fake.suite.maximo.com/maximo/'
-    os.environ['EXTERNAL_APM_API_BASEURL'] = 'your_https://main.fake.maximo.com/maximo/'
-    os.environ['APM_API_KEY'] = 'your_APM_API_KEY'
-
-### Verify Environment Variables
-
-You can check the environment variables and reference them by using the auto insert code in Watson Studio.  Click on the code generator icon at the top of Watson Studio.  Click on the sensor data csv file you loaded earlier and nameed 'kaggle-pump-sensor.csv'  
-![Insert Environment Variables](/img/amp_8.7/p52.png)
+Review the code cells to understand how to drop columns and add columns to using Pandas to create the right format for the Asset Failure CSV file.
 
 
-
-### Transform source data into meter data
-
-
-
-## Setup Asset Types
-<a name="setup_assetypes"></a>
-
-    
-## Load data into Health Predict and Utilities
-<a name="load_asset_data_python"></a>
-
-Congratulations.  You now have sample data you can work with.
+Congratulations.  You now have the data files in the format you can work use for doing predictions in the next exercises.
 
