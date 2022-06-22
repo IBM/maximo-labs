@@ -25,11 +25,18 @@ Pre-requisites
 - Review Predict documentation for the [list of available models](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850).
 - Ensure your MAS Predict environment is running and you have access.  Try your server URL that might look something like: [https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info](https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info)
 
-## Upload the Predicted Failure Data Notebook
-<a name="open-notebook"></a>
-Upload or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md) Prepend your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
 
-## Run the notebook
+## Upload and Start the Predicted Failure Data Notebook
+<a name="open-notebook"></a>
+1. Upload or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  Rename the notebook template by prepending your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
+Select the `WS - Predicted Failure Date-Survive Analysis.ipynb` notebook template that you have renamed with your initials. 
+
+2. Open the notebook.  Click on the `pencil` icon next to your notebook 
+
+3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
+
+
+## Run the notebook and Evaluate 
 <a name="run-notebook"></a>
 
 
@@ -37,14 +44,19 @@ Upload or open the Predicted Failure Data template notebook to your Project.  Us
 <a name="prediction_group"></a>
 
 
-## Train a Failure Prediction Model
+## Load Historical Pump Data
+<a name="prediction_group"></a>
+
+To enable look back period for new scoring/prediction.
+
+## Deploy a Failure Prediction Model
 <a name="failure_prediction_notebook"></a>
 You must load metadata describing your asset and meter data describing the timeseries metrics and failure dates.  There are 3 files needed.  Each file is described below.
 
 
 **Asset Information Data** 
 
-To load asset data into Health you must have asset date. an anomaly model or failure prediction model using Predict you must include For model training using Predict you must include this file.  If you are using Health and have an existing installation of Manage
+The Asset To load asset data into Health you must have asset date. an anomaly model or failure prediction model using Predict you must include For model training using Predict you must include this file.  If you are using Health and have an existing installation of Manage
 
 
 Meter data with the following columns:

@@ -2,14 +2,15 @@
 
 In this exercise you will use Predict libraries and notebook in Watson Studio to:
 
-- [Download Pump Data and Import into Watson Studio Notebook](download_ddata) from Kaggle website
+- [Download Pump Data and Import into Watson Studio Notebook](download_data) from Kaggle website
 - [Add the data prepration notebook template](data_preparation) included with this lab to prepare the pump data.
 - [Create an asset information file](asset_information_file) to describe the pump used in later exercises for EOL Curve algorithm. 
-- [Create an asset metrics file](asset_metrics_file) used to train and test the Failure Prediction algorithm.
-- [Create an asset failure file](asset_failure_file) used to train and test the Failure Prediction algorithm.
+- [Create an asset metrics file](asset_metrics_file) used to train and test the Failure Prediction Date algorithm.
+- [Create an asset failure file](asset_failure_file) used to train and test the Failure Prediction Date algorithm.
 
 
 ## Download Pump Data and Import to Watson Studio Notebook
+<a name="download_data"></a>
 
 1. Download data from [Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download). Name the file `kaggle-pump-sensor.csv`.  If the file is already present in your project you can skip this step. 
 ![Dowload_Pump_data](/img/amp_8.7/p40.png) 
@@ -82,7 +83,7 @@ You can check the environment variables and reference them by using the auto ins
 ![Insert Environment Variables](/img/amp_8.7/p52.png)
 
 
-## Prepare Asset Information Data** 
+## Prepare Asset Information Data
 <a name="asset_information_file"></a>
 Used for End Of Life Curve.   This step can be skipped if you don't want to create an End of Life Curve in Predict.
 
@@ -224,6 +225,5 @@ In this step you will create the CSV file and save it to your project assets in 
 
 Review the code cells to understand how to drop columns and add columns to using Pandas to create the right format for the Asset Failure CSV file.
 
-
-Congratulations.  You now have the data files in the format you can work use for doing predictions in the next exercises.
+Congratulations.  You now have the pump data files in the files and format required for evaluating algorithm and prediction performance in the next exercises.
 

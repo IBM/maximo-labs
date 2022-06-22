@@ -8,7 +8,7 @@ In this exercise you will setup and configure Watson Studio to use the Health an
 - [Get URL to Download the Healh and Predict Notebooks](download_URL).
 - [Create am environment ](create-environemnt-studio)to edit and run your notebooks.
 - [Add Notebook From File]("add-notebook-to-studio") to Watson Studio Project.
-
+- [Download the Predict pmlib Python Library Documentation](download-pmlib-doc) used for working with Predict algorithms and automating device and data tasks in Monitor.
 
 
 ## Get URL and User credentials to access Watson Studio
@@ -28,7 +28,6 @@ API keys and URL that you will use to connect to Watson Studio.  You or he can u
 
 4. Open a browser to the URL and use the credentials from the previous steps to login to Cloud Pak for Data.  After logging in you see your Watson Studio Overview page.
 ![setup assets](/img/apm_8.7/p04.png) 
-
 
 
 ## Create a Project in Watson Studio
@@ -267,4 +266,22 @@ If your notebook environment fails to start you can restart the environment by f
 ![add_to project](/img/apm_8.7/p55.png) 
 
 
-Congratulations you have seen how to upload, start and restart a Predict notebook into Watson Studio.   In the next exercises you will learn how to use these notebook templates to detect anomalies and predict asset failures.   You will start by update and running setup notebooks to create asset types in Health and Predict.
+## Download Predict pmlib Python Library Documentation
+<a name="download-pmlib-doc"></a>
+Predict pmlib Python Library is used for working with Predict algorithms and automating device and data tasks in Monitor.or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md) Prepend your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
+
+1. You can download the documentation using a URL similar to the one you create in the previous Exercise for downloading the `doc-8.5.1.zip` that contains the html files for the `pmilib` documentation.
+
+For example: 
+
+    https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download
+
+2. Unzip the `doc-8.5.1.zip` file you downloaded
+
+3. Click on the file `index.html` file you unzipped.  The browser should open with the documentation below.
+![add_to project](/img/apm_8.7/p59.png)   
+
+
+Congratulations you have seen how to upload, start and restart Predict notebook in Watson Studio.    You have also learned how to download and access the pmilib documentation that you will use in the next exercises.
+
+In the next exercises you will learn how to use these notebook templates to detect anomalies and predict asset failures.   You will start by update and running setup notebooks to create asset types in Health and Predict.  

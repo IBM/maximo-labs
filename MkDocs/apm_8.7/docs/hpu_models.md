@@ -1,6 +1,11 @@
 # Understand Health and Predict - Utilities Models
 
-In this exercise, you will learn about the Substation Transformer Model included with Health and Predict - Utilities (HPU).   The exercises explain how the model works in HPU and how to modify and debug the model notebooks.
+In this exercise, you will learn:
+
+- About the [Substation Transformer Models](hpu_notebooks) included with Health and Predict - Utilities (HPU).   
+- [Create a Score Group](score_groups)
+- [To modify and debug](modify_debug) the model notebooks.
+
 
 **Pre-requisites**
 
@@ -18,6 +23,7 @@ Ensure you have access to :
 
 
 ## Health and Predict Utilities Out Of The Box Models
+<a name="hpu_notebooks"></a>
 
 ### Supported Asset Classes listed in below table
 
@@ -51,6 +57,7 @@ Ensure you have access to :
 
 
 ## Create a Score Group for ST Assets
+<a name="score_groups"></a>
 
 1\. Login and go to Health and Predict Utilities application.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_0.png)
@@ -81,15 +88,16 @@ Ensure you have access to :
 
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_8.png)    
 
-9\. After activing all the scores, click the `Recalculate scores` to start the analysis.
+9\. After activating all the scores, click the `Recalculate scores` to start the analysis.
 
 ## Watson Studio Notebooks and Jobs
+<a name="modify_debug"></a>
 
-In Health and Predict -Utilities, the calculation happens in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks `Recalculate scores` on UI, it triggers the job to run, do the calculation, and save results to the Database.  
+In Health and Predict - Utilities, the calculation happens in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks `Recalculate scores` on UI, it triggers the job to run, do the calculation, and save results to the Database.  
 
-### ST Model Configuration 
+### Substation Transformer Model Configuration 
 
-For ST(Substation Transformer), configuration file is IBM-Transformers-Tap-Changers-DGA-4.0.0.cfg.
+For ST (Substation Transformer), configuration file is IBM-Transformers-Tap-Changers-DGA-4.0.0.cfg.
 ![drawing](/img/apm_8.7/hpu_model_ws_cfg.png)  
 
 In the configuration file, under `Common` section `defaultsetup.components` has all the scores group, contributors listed, and functions and paramteres for each item. In `defaultsetup.dependencies` describes the dependency. E.g Health depends on `Transformer health index` and `Tap changer health index`, `Transformer health index` group calculated base on several contributors, function details can be found in `[ext_function_name]` in the file. E.g For `Health` ext_function_name is configured as `[Health Weighted]`, the implementation is `common_calculate_weighted` which is pre-defined in healthlib.
@@ -234,7 +242,7 @@ calctype = NONE
 Below is the dependency of out of the box Substation Transformer scores.  
 ![drawing](/img/apm_8.7/hpu_model_ws_cfg_sample.png){ width=70% height=70% }  
 
-### ST Model Notebook 
+### Substation Transformer Model Notebook 
 
 For ST(Substation Transformer), notebook is IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb as configured in cfg file.
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook.png)   
