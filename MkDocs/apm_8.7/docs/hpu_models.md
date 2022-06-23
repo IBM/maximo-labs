@@ -6,7 +6,6 @@ In this exercise, you will learn:
 - [Create a Score Group](score_groups)
 - [To modify and debug](modify_debug) the model notebooks.
 
-
 **Pre-requisites**
 
 Ensure you have access to :
@@ -332,3 +331,6 @@ os.environ['maximo_context'] = '{"maximoUrl":"https://<health/manage host>/maxim
 !!! note
 
     When debugging in notebook directly, do not save as latest version, since it's hardcoded.  You should instead get those inputs from Health.
+
+Congratulation you learned about the Substation Transformer Models included with Health and Predict - Utilities (HPU).   
+and create a Score Groups.  You also can now modify and debug the model notebooks.

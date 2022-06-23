@@ -12,12 +12,15 @@ nav:
     - Get Started: get_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:
-      - Setup Watson Studio for Predict: setup_watson_studio.md
-      - Setup Local Python Environment : setup_local_environment.md
-      - Setup Assets Using Python: dataload_python.md
-      - Understand Health and Predict - Utilities Models: hpu_models.md
-      - Install and Configure App Connect: appconnect_install.md
-      - Setup Asset Data Load With App Connect: dataload_appconnect.md
+    - Data Dictionary: data_dictionary.md
+    - Setup Watson Studio for Predict: setup_watson_studio.md
+    - Data Preparation: data_preparation.md
+    - Failure Prediction Model : failure_prediction.md
+    - Anomaly Detection Model: anomaly_detection.md
+    - Create Prediction Group: create_prediction_group.md
+    - Understand Health and Predict - Utilities Models: hpu_models.md
+    - Asset Health Scoring: health_score.md
+    - Install and Configure App Connect: appconnect_install.md
   - About: about.md
 
 theme: readthedocs

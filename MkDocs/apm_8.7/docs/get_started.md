@@ -1,53 +1,70 @@
-# Summary
-In this Maximo Health and Predict - Utility AI Lab you wil learn how to use an existing Maximo EAM v7.6.1 instance with 
-Maximo Health and Predict-Utilities in MAS v8.7 to understand the health and failure risks of your assets.
-  
+# Get Started
+In this Lab you wil learn how to use Maximo Health and Predict-Utilities to understand the asset health and failure risks for pumps and other utility assets.
+
+The version of Health and Predict - Utilities used in this Lab is for Maximo Application Suite v8.7.
 
 ## Description
-Maximo EAM includes the ability to manage assets. Reliability Engineers can use that data to better plan their asset
-maintenance and repairs  however you may want to create custom machine learning models to make predictions or 
-classifications using asset data. With Auto AI the process of selecting the right model and identifying the right 
-feature inputs to make metric prediction is greatly simplified.
 
-The intended audience for this tutorial are data scientists who will set up the Maximo Environment and  analyze their 
+Maximo Manage includes the ability to manage assets.  Reliability Engineers can use asset data stored in Manage and other data sources to better plan their asset
+maintenance and repairs to ensure asset reliability and reduce operational risks.  By leveraging asset health scoring and AI algorithms to detect anomalies and predict asset failures in time to mitigate or avoid their negative impacts. 
+
+Health and Predict - Utilities includes proven  machine learning model templates to make predictions or 
+classify asset condition using asset data.  These lab exercises provide you the best practices and guided instructions for how to use Health and Predict - Utilities to set up and asses your asset condition scoring, failure prediction dates and anomaly detection using a real world public pump data set..
+
+The intended audience for this lab are reliability engineers and data scientists who will set up the Maximo Environment and  analyze their 
 data to create prediction models for asset end of life using Predict model templates.  Reliability Engineers who need to
-plan to address poor asset health and risk with an asset investment plan to repair or replace the assets.
-
-
-### Asset Data 
+plan to address poor asset health and risk with an asset investment plan to repair or replace their assets.
 
 You will use a publicly available [pump data set from Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download) for predicting a pump failure.   You will also create an Anomaly Detection model for the pump.
 
-The [pump data definition](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data/discussion/131429?resource=download) is for the pump is explained in the Kaggle site 
+The [pump data definition](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data/discussion/131429?resource=download) explains what sensor readings are available based on the known information about the data set provided on the Kaggle site 
 
 **Pre-requisites**
 
-Ensure you have access to :
+For this exercise ensure you have access to :
 
--  MAS v8.7  Health and Predict.
+-  MAS v8.7  Health and Predict.    
 -  Cloud Pak for Data Watson Studio compatible with MAS v8.7
--  App Connect. You can use the App Connect add on included with Maximo Application Suite as an Add On. Or install it yourself using the App Connect exercises.
--  Asset Class setup and data load scripts for the Labs provided by the Instructor.
+-  App Connect (optional). You can use the App Connect add on included with Maximo Application Suite as an Add On. Or install it yourself using the App Connect exercises.
+-  Access to the Jupyter Notebooks used to in this Lab exercise.  They can be provided by the instructor. 
 
 # Exercises
 
-This lab only includes the exercises in the flows outlined in red below:
+This lab only includes some of the exercises below:
 
 ![Lab Flows by User](/img/apm_8.7/lab_flow.png) 
 
-You must choose one of the following ways to load asset data into Health and Predict and Utilities.:
 
 ## Asset Setup and Data Loading
+There are three possible ways to get data into Health and Predict - Utilities.
 
-1. [Data loading using Python](dataload_python.md) requires that you have [set up a local Python Development environment](setup_local_environment.md).
+1. [Data loading Python Notebooks](hpu_models.md) requires that you have [set up Watson Studio with Predict Libraries and Notebooks ](setup_watson_studio.md).
 
-2. Data loading meter data using EAM CronTask  - Not yet available
+2. Data loading meter data using EAM CronTask  - Not yet available in this lab
 
 3. [Data loading meter data  and asset types using App Connect](dataload_appconnect.md) requires that you do the App Connect Exercise.
 
 
+## Exercises 
+These are the exercises available in this lab.
 
-## Contributors Meeded for these exercises:
+1. [Data Dictionary](data_dictionary.md) explains the public pump data that will be used in this hands on lab
+
+2. [Setup Watson Studio](setup_watson_studio.md) with Health and Predict - Utilities libraries and Notebook templates
+
+3. [Failure Prediction Model](failure_prediction.md) explains how to assess the performance of a failure date prediction model using  Health and Predict - Utilities with Watson Studio.
+
+4. [Anomaly Detection Model](anomaly_detection.md) explains how to assess the performance of an anomaly prediction model using  Health and Predict - Utilities with Watson Studio.
+
+4. [Create Prediction Group](create_prediction_group.md) to link a deployed prediction model or algorithm with a selected a group of assets using Health, Predict and Watson Studio.
+
+5. [Understand Health and Predict - Utilities Models](hpu_models.md) explains how to prepare your asset data to be analyzed by Health and Predict - Utilities.
+
+6. [Install and Configure App Connect](appconnect_install.md) flows to load asset metadata and timeseries data into Health and Predict - Utilities.  (Optional)
+
+7. [Asset Health Scoring](appconnect_install.md) Reliability Engineer uses the MAS Health and Predict applications to review the asset conditions and ensure that there aren't any failures predicted before planned maintenance.
+
+## Contributors are needed for the exercises below:
 
 Here are other exercises that we would like to add to this lab.  We are requesting contributors for these exercises .  Email me <carlos.ferreira1@ibm.com> if 
 you would like to volunteer as a contributor.  

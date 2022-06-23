@@ -2,22 +2,20 @@
 
 Maximo Predict includes [model templates](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850) you can use to predict the date an asset will fail or other asset condition predictions and scores.
 
-Predict notebook names that start with `WS` are intended to be used within Watson Studio to assess algorithm performance by importing CSV Files and evaluating the model performance.
+In this exercise the Datascientist uses Predict model templates and Watson Studio to:
 
-Notebooks that are pre-pended with `PMI` are intended to be used within Predict to score algorithm using data ingested by Monitor or available in Health and Predict.
-![two types of notebooks](/img/apm_8.7/p60.png) 
-
-
-In this exercise the Datascientist uses Predict Model Templates and Watson Studio to:
-
-- [Upload Predicted Failure Date notebook](open-notebook) named `WS - Predicted Failure Date-Survive Analysis.ipynb.` into your Project in Watson Studio
+- [Upload Predicted Failure Date notebook](open-notebook) named `WS - Predicted Failure Date-Survive Analysis.ipynb.` into a Watson Studio Project.
 - [Run the Predicted Failure Date notebook](run-notebook) using the Pump CSV data prepared in the previous exercise to evaluate the [Predicted Failure Date template](#failure_prediction_notebook) algorithm performance.
 
 In this exercise the Reliability Engineer  uses Predict to:
 
 - [Creates a Prediction Group](#prediction_group) for centrifugal pumps that will use the evaluated notebook template for predicting asset failure date.
 
-!!!!
+Predict notebook names that start with `WS` are intended to be used within Watson Studio to assess algorithm performance by importing CSV Files and evaluating the model performance.  Notebooks that are pre-pended with `PMI` are intended to be used with deployed Predict algorithm to score ingested data from Monitor or data sources.
+![two types of notebooks](/img/apm_8.7/p60.png) 
+
+
+!!!
     You must complete the previous exercise for [Data Preparation and Loading Using Notebooks](data_preparation.md) exercise before you start this exercise.
 
 Pre-requisites 
@@ -28,6 +26,7 @@ Pre-requisites
 
 ## Upload and Start the Predicted Failure Data Notebook
 <a name="open-notebook"></a>
+
 1. Upload or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  Rename the notebook template by prepending your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
 Select the `WS - Predicted Failure Date-Survive Analysis.ipynb` notebook template that you have renamed with your initials. 
 
@@ -145,38 +144,38 @@ Example CSV File:
 
 
 1. Download data from Kaggle. Name the file `kaggle-pump-sensor.csv`
-![Dowload_Pump_data](/img/amp_8.7/p40.png) 
+![Dowload_Pump_data](/img/apm_8.7/p40.png) 
 
 2. Drag the csv file into data asset project
-![credentials](/img/amp_8.7/p40.png) 
+![credentials](/img/apm_8.7/p40.png) 
 
 3. Create a new notebook from file to prepare the date to be used by Predict for predicting failures.  
 Browse to open the .notebooks/data_preparation.ipynb
 
 4. The first cell loads needed libraries to process the data.
 
-```shell script
-import pandas as pd
-import numpy as np
-import time
-import sys
-```
+**Sample Code**
+
+    import pandas as pd
+    import numpy as np
+    import time
+    import sys
 
 5. The next cell sets the display values to be able to see the data tables and logs in the Jupyter notebook for df head()
 
-```shell script
-pd.set_option('display.max_columns', None)
-pd.set_option('max_colwidth', 1000)
-pd.set_option('max_rows', 100)
-pd.set_option('display.max_rows', 100)
-pd.set_option('display.max_columns', 100)
-```
+**Sample Code**
+
+    pd.set_option('display.max_columns', None)
+    pd.set_option('max_colwidth', 1000)
+    pd.set_option('max_rows', 100)
+    pd.set_option('display.max_rows', 100)
+    pd.set_option('display.max_columns', 100)
 
 6. Insert the code to load the sensor_data.csv that you uploaded earlier in the exercise. Click on the code generator icon at the top of Watson Studio.  Click on the sensor data csv file you loaded earlier and nameed 'kaggle-pump-sensor.csv'  
-![credentials](/img/amp_8.7/p49.png)
+![credentials](/img/apm_8.7/p49.png)
 
 7. The code is added into a new cell below where you are currently active.
-![credentials](/img/amp_8.7/p50.png)
+![credentials](/img/apm_8.7/p50.png)
 
 ## Setup Asset Types
 <a name="setup_assetypes"></a>

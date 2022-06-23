@@ -1,10 +1,11 @@
 # Anomaly Detection
-Maximo Predict includes anomaly detection notebook templates you can use to detect asset anomalies. 
+Maximo Predict includes anomaly detection notebook templates that you can use to detect asset anomalies. 
 
 In this exercise you will use Monitor, Predict and Watson Studio to:
 
 1. [Train a model using an Anomaly Detection notebook](#anomaly_notebook) using a template. 
 2. Register an Anomaly Detection algorithm in Predict
+3. Assess the Anomaly model performance
 
 !!!!
     You must complete the previous exercise for [Data Preparation and Loading Using Notebooks](data_preparation.md) exercise before you start this exercise.
@@ -104,45 +105,43 @@ Example CSV File:
 
 
 1. Download data from Kaggle. Name the file `kaggle-pump-sensor.csv`
-![Dowload_Pump_data](/img/amp_8.7/p40.png) 
+![Dowload_Pump_data](/img/apm_8.7/p40.png) 
 
 2. Drag the csv file into data asset project
-![credentials](/img/amp_8.7/p40.png) 
+![credentials](/img/apm_8.7/p40.png) 
 
 3. Create a new notebook from file to prepare the date to be used by Predict for predicting failures.  
 Browse to open the .notebooks/data_preparation.ipynb
 
 4. The first cell loads needed libraries to process the data.
 
-```shell script
-import pandas as pd
-import numpy as np
-import time
-import sys
-```
+**Sample Code**
+
+    import pandas as pd
+    import numpy as np
+    import time
+    import sys
 
 5. The next cell sets the display values to be able to see the data tables and logs in the Jupyter notebook for df head()
 
-```shell script
-pd.set_option('display.max_columns', None)
-pd.set_option('max_colwidth', 1000)
-pd.set_option('max_rows', 100)
-pd.set_option('display.max_rows', 100)
-pd.set_option('display.max_columns', 100)
-```
+**Sample Code**
+
+    pd.set_option('display.max_columns', None)
+    pd.set_option('max_colwidth', 1000)
+    pd.set_option('max_rows', 100)
+    pd.set_option('display.max_rows', 100)
+    pd.set_option('display.max_columns', 100)
 
 6. Insert the code to load the sensor_data.csv that you uploaded earlier in the exercise. Click on the code generator icon at the top of Watson Studio.  Click on the sensor data csv file you loaded earlier and nameed 'kaggle-pump-sensor.csv'  
-![credentials](/img/amp_8.7/p49.png)
+![credentials](/img/apm_8.7/p49.png)
 
 7. The code is added into a new cell below where you are currently active.
-![credentials](/img/amp_8.7/p50.png)
+![credentials](/img/apm_8.7/p50.png)
 
 ## Setup Asset Types
 <a name="setup_assetypes"></a>
 
-    
-## Load data into Health Predict and Utilities
-<a name="load_asset_data_python"></a>
 
-Congratulations.  You now have sample data you can work with.
+
+Congratulations.  You now have added evaluated the performance of an anomaly model using the pump data.
 

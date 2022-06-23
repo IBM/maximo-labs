@@ -31,17 +31,10 @@ This Hands on Lab requires:
 
 # Optional Exercises
 
-You can skip the App Connect Data Load Exercises if you are loading data using Python.  Or if your instructor has already loaded asset data for you into your environment.
+You can skip [Install and Configure App Connect](appconnect_install.md) exercise if you are loading data using notebooks or if your instructor has already loaded asset data into your environment.
 
-The App Connect data loading exercises require that you either use the provided App Connect Add On included with Maximo Applicaiton Suite.  Or follow the Lab exercises to install and setup App Connect.  
+The [Install and Configure App Connect](appconnect_install.md) exercise requires that you either use the provided App Connect `Add On` included with Maximo Application Suite or follow the Lab exercises instructions to install and setup App Connect.  
 
-2. OpenShift version 4.6 or 4.8 installed & Administration access to OpenShift Platform so that you can complete the App Connect installation and setup steps.
-
-3. Verify the IBM App Connect `Operator`is available in OpenShift Platform.  If IBM App Connect is not available as `Operator`, then you need to make it available using standard operator.
-
-![img](img/apm_8.7/App_Connect_Operator.png)
-
-If an Operator is not available, use the [documenation](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=access-enabling-operator-catalog) to make an operator available in OpenShift Platform.
 
 
 

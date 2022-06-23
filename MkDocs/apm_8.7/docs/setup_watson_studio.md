@@ -1,6 +1,6 @@
 # Setup Watson Studio
 
-In this exercise you will setup and configure Watson Studio to use the Health and Predict notebook templates.  The templates can be used for detecting anomalies and predicitng failures of assets and for other purposes using Health and Predict and Utilities.
+In this exercise you will setup and configure Watson Studio to use the Health and Predict notebook templates.  The templates can be used for detecting anomalies and predicting asset failures of assets and for other purposes using Health and Predict - Utilities.
 
 - [Get URL and User credentials](#get-credentials) to access Watson Studio.
 - [Create a project](#create-project) and add the setup notebook to your project in Watson Studio.
@@ -60,7 +60,6 @@ Create a project so that you can add and setup Health, Predict and Utilities not
 ![setup assets](/img/apm_8.7/p10.png) 
 
 This is how you will add the Predict notebook templates to your project that you download later in this exercise.
-
 
 
 ## Setup Database Connection in Watson Studio

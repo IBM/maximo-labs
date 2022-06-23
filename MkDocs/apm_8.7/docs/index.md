@@ -7,36 +7,27 @@ This lab provides step-by-step instructions and code examples to help you learn 
 
 You will:
 
-- Learn how to setup and configure Watson Studio with the Maximo Applciation Suite Predict model templates. 
-- Understand what models and notebook templates are included with Maximo Health and Predict - Utilities. 
-- Install and configure App Connect for use with Maximo Health & Predict - Utilities v8.7. 
-- Install and configure App Connect Integration server to load asset data into Health and Predict - Utilities.
-- Create a pump failure Prediction Model using Predict.
+- Learn how to setup and configure Watson Studio with the Maximo Application Suite Predict model templates. 
+- Understand what models and notebook templates are included with Maximo Health Predict and Utilities. 
+- Create a pump Failure Prediction Date Model using Predict.
 - Create a pump Anomaly Detection Model using Predict.
+- Creates a Prediction Group to identify which assets to use with a Predict trained model or algorithm.
+- Use Asset Health Scoring to understand asset condition.
+- Install and configure App Connect Integration server to load asset data into Health and Predict - Utilities. (Optional)
 
 Before getting started ensure you have completed the prerequisites. [Prerequisites](prereqs.md):
 
-[Getting Started](get_started.md) by following the instructions on the next page.
-
-
 ## Learn more
 
-**Maximo Developer Site**
-
-This lab is part of the [Maximo Hands On Labs](https://mam-hol.eu-gb.mybluemix.net/) for Operational Support Engineers,  Reliability Engineers, Data scientists and Developers. 
-Enjoy this lab? Check out our datascientist and developer resources on the [Maximo Developer site](https://developer.ibm.com/components/maximo/).
-
-**Maximo Application Suite Knowledge Center**  
-
-[Maximo Application Suite Documentation](https://www.ibm.com/docs/en/mas)
+- [Maximo Developer Site](https://developer.ibm.com/components/maximo/)
+- [Maximo Application Suite Documentation](https://www.ibm.com/docs/en/mas)
 
 ## License
 
-This Maximo Hands on Lab is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked 
-within this lab are licensed by their respective providers pursuant to their own separate licenses.
+See the [About page](about.md) for how this Maximo Hands on Lab Exercise is licensed.
 
 ---
 
-**Updated: 2021-06-12**
+**Updated: 2021-06-22**
 
 ---
