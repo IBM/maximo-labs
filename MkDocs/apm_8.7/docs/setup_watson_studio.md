@@ -253,12 +253,12 @@ You can use the steps below to add any notebook from File to your Watson Studio 
 ![add_to project](/img/apm_8.7/p43.png) 
     
 
-##  To Stop and Restart a Predict Model to a Watson Studio Project
+##  To Stop and Restart a Notebook Template in a Watson Studio Project
 <a name="setup-studio"></a>
 
 If your notebook environment fails to start you can restart the environment by following the steps below.
 
-1. Add one of the Predict notebooks to your Watson Studio Project. Click the `information` icon, `environment` tab and `restart` from the `Runtime Status` select box.
+1. Add one of the [Predict notebook templates](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850) to your Watson Studio Project. Click the `information` icon, `environment` tab and `restart` from the `Runtime Status` select box.
 ![add_to project](/img/apm_8.7/p54.png) 
 
 2. Confirm your selection to restart the notebook by pressing the `Change` button. 
@@ -267,6 +267,7 @@ If your notebook environment fails to start you can restart the environment by f
 
 ## Download Predict pmlib Python Library Documentation
 <a name="download-pmlib-doc"></a>
+
 Predict pmlib Python Library is used for working with Predict algorithms and automating device and data tasks in Monitor.or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md) Prepend your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
 
 1. You can download the documentation using a URL similar to the one you create in the previous Exercise for downloading the `doc-8.5.1.zip` that contains the html files for the `pmilib` documentation.
@@ -281,6 +282,78 @@ For example:
 ![add_to project](/img/apm_8.7/p59.png)   
 
 
-Congratulations you have seen how to upload, start and restart Predict notebook in Watson Studio.    You have also learned how to download and access the pmilib documentation that you will use in the next exercises.
+
+## Setup Environment Variables for Predict in Notebook Templates
+
+One of the earlier steps explained how to manually find the environment variables used in Predict to do things like download the zip file with the Predict Notebooks.  When using a Predict Notebook in Watson Studio you can also programatically discover these environment variables since they are set for you in the Cloud Pack for Data Environment that was installed with Maximo Application Suite.  Use the code below  if it isn't already included in the notebook templates to get the required Predict environment variables.
+
+**Sample Code**
+
+    import json
+    import os
+
+    # Try to open environment variables json file if it already exists.
+    try:
+      f = open('/project_data/data_asset/hc_Predict_Envs.json',)
+    except:
+      f = {}
+      print("No execution json found, initialising with current notebook information")
+
+    data = json.load(f)
+    f.close()
+
+    os.environ['APM_ID'] = data['APM_ID']
+    os.environ['APM_API_BASEURL'] = data['APM_API_BASEURL']
+    os.environ['APM_API_KEY'] = data['APM_API_KEY']
+
+    # README: Change to true if Health/Predict are deployed on different cluster from this CP4D environment
+    use_external = False
+    if use_external:
+        import os
+        os.environ['USER_PROVIDED_HEALTH_URL'] = data['USER_PROVIDED_HEALTH_URL']
+        os.environ['USER_PROVIDED_DB_CONNECTION_STRING'] = data['USER_PROVIDED_DB_CONNECTION_STRING']
+        os.environ['USER_PROVIDED_URL'] = data['USER_PROVIDED_URL']
+    import os
+
+    os.environ['SSL_VERIFY_APM'] = 'False'
+    os.environ['SSL_VERIFY_AS'] = 'False'
+
+    os.environ['TRUST_PREDICT'] = os.getenv('APM_API_BASEURL')[8:]
+    print(os.getenv('TRUST_PREDICT'))
+    main.predict.ivt11rel87.ivt.suite.maximo.com
+    import os
+    os.environ['TRUST_PREDICT'] = os.getenv('APM_API_BASEURL')[8:]
+    print(os.getenv('TRUST_PREDICT'))
+
+
+## PIP Install PMLib Predict in Notebook Templates
+
+Install the Predict Python Software Develop Kit (SDK) called PMLib using pip install.
+
+**Sample Code**
+
+    # Initialize the Maximo-Predict environment variables
+    import pmlib
+    from pmlib import api
+    api.init_environ()
+
+
+##  Using Watson Studio Library
+
+The Watson Studio Python Library named `ibm_watson_studio_lib` allows you to do to work with data assets in your project.  Some examples you will learn later are reading and writing data from your project.    Another example is getting the Watson Studio Project Information. 
+
+You will use a Watson Studio Python library named `ibm_watson_studio_lib` that is available in your environment by default to get your project information.  See this [API reference](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=lib-watson-studio-python) for more information. 
+
+**Sample Code**
+
+    #  Get the Watson Studio Project Information
+    from ibm_watson_studio_lib import access_project_or_space
+    wslib = access_project_or_space()
+    project_name = wslib.here.get_name()
+    wslib.show(project_name)
+    project_id = wslib.here.get_ID()
+    wslib.show(project_id)
+
+Congratulations you have seen how to upload, start and restart Predict notebook in Watson Studio.    You have also learned how to download and access the pmilib documentation that you will use in the next exercises.  Finally you learned how to use the `ibm_watson_studio_lib` to work with assets in your project.
 
 In the next exercises you will learn how to use these notebook templates to detect anomalies and predict asset failures.   You will start by update and running setup notebooks to create asset types in Health and Predict.  

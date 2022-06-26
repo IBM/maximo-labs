@@ -54,6 +54,8 @@ Note: Follow the `Actions` steps in bold to navigate through the lab procedures.
 
 ## Glossary
 
+
+
 **Age** is the actual age is the current date minus the installation date.
 
 **Anomaly Detection** helps identify unusual patterns in the behavior of the asset, which might indicate potential failures or pre-failure behaviors. 
