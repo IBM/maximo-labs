@@ -41,6 +41,7 @@ In this exercise the Reliability Engineer uses Health to:
 IBM Maximo® Application Suite (MAS) provides your clients with a comprehensive and innovative answer for physical asset management. This flexible solution provides a unified platform that delivers asset performance and maintenance management, with end-to-end asset lifecycle management, across the enterprise. 
 
 Maximo Application Suite is built to scale client’s digital transformation journey with integrated solutions, simplified licensing, and Multicloud deployments. Maximo Application Suite includes Manage, Monitor, Health, Predict, Visual Inspection, and more to come. This lab exercise guide is for Maximo Health and Predict. 
+![product wheel](/img/apm_8.7/h1.png) 
 
 Maximo Predict uses historical and real-time asset performance data, maintenance records, inspection reports, and environmental data to correlate performance factors that predict asset degradation or failure. Predict uses artificial intelligence to optimize predict model accuracy.
 
