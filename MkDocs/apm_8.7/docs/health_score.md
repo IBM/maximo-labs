@@ -46,6 +46,7 @@ Maximo Application Suite is built to scale client’s digital transformation jou
 Maximo Predict uses historical and real-time asset performance data, maintenance records, inspection reports, and environmental data to correlate performance factors that predict asset degradation or failure. Predict uses artificial intelligence to optimize predict model accuracy.
 
 Maximo Health introduced the concept of work queues to provide a consolidated view of the Assets and their health.  It provides Asset Performance KPI view and fleet wide view and health drill down. It also allows you to take actions based on conditions. This may be based on either Inspection or Sensor Data.
+![sample wheel](/img/apm_8.7/h2.png)
 
 Maximo Predict allows for increasing the life of asset. It reduces maintenance costs and improves asset utilization by reducing unnecessary and redundant maintenance based on condition monitoring infused with IoT, AI, and ML. Also, it helps in conducting the proactive maintenances for assets that need attention. 
 
