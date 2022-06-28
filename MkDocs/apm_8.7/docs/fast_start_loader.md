@@ -43,21 +43,45 @@ Select the `FastStart2021-New.ipynb` notebook template that you have renamed wit
    2. Change `default_device_type = 'Pump_AFM'` to `default_device_type = '{initials}_Pump_AFM'`
    3. Change `device_ids_oem = ['PMPDEVICE002', 'PMPDEVICE004', 'PMPDEVICE006', 'PMPDEVICE008', 'PMPDEVICE010']` to `device_ids_oem = ['{initials}_PMPDEVICE00']`
 9. Run the cell and make a note of the resulting output. This will be needed in future notebooks to call your assets.
-![Environment JSON](./img/apm_8.7/hpu_fs2.png) 
+![Cell Updates](./img/apm_8.7/hpu_fs3.png) 
 10. Run the following cell to store the variables just created
-11. Update the following cell's values to match the data column headers used in the csv files uploaded to watson studio. Run the cell.
+11. Run the cell to set the preferred column names for Maximo's system
 ### Part 3 - Load the Data Into Dataframes
 1. Update `asset_installation_decommission_dates_df = pd.read_csv('/project_data/data_asset/asset_installation_decommission_date_afm.csv')` to match the filename for your asset information (containing asset id, installation date and decommission date).
-2. Run the cell and ensure the output matches your data.
-
-
-
-
-
+2. If your Installation Date column header or your Decommission date column header do not match the values called in this cell (`installation_date` and `decommission_date`), update to match your column headers.
+3. Run the cell to load the asset attributes and ensure the output matches your data. Note that the column headers in the output should match the variables defined in the previous cell.
+4. Repeat these steps for each csv file being imported for the remainder of part 3.
+5. Note: Not all of these cells are redefining the column headers. If you get errors down the line, you may need to update the column header in the data frame created here. See [Update DateFrame Headers](#update_df_headers).
+### Part 4 - Add Timeshift to Make Data More Recent
+1. Run the first cell to view the current date range of the data.
+2. Run the second cell to calculate and view the shift in time that will be applied
+3. Run the third cell to perform the time shift
+4. Run the fourth cell to view the new range of dates for the sensor dataframe
+![Timeshift Outputs](./img/apm_8.7/hpu_fs4.png) 
+5. Repeat these steps for the remainder of part 4 to perform the timeshift on the failure data
+### Part 5 - Clean up DataFrames
+1. Run these two cells to clean up dataframes and reformat to Maximo's standards
+![Clean up Outputs](./img/apm_8.7/hpu_fs5.png) 
+### Part 6 - Delete Existing Data
+Note: This section is REQUIRED if you are refreshing asset data or uploading new data for an existing asset. If you get errors in this section, you may need to update the column header in the data frame created here. See [Update DateFrame Headers](#update_df_headers).
+1. Run the first four cells to delete data from Maximo to be replaced. Wait five minutes after the final cell to allow for the data to be fully deleted
+2. Run the next two cells to delete the asset group
+## Part 7 - Insert Data
 
 ## Confirm Data Upload
 <a name="confirm_upload"></a>
 
+## Update DataFrame Headers
+<a name="update_df_headers"></a>
+   1. Click into the cell that resulted in an error
+   2. In the menu, go to `Insert > Cell Above` 
+   ![Insert Cell Above](./img/apm_8.7/hpu_fs6.png) 
+   3. Add the following code in the cell:
+`{DataFrame_to_Change}.rename(columns={'{current_column_header}': site_id_col_name}, inplace=True)`
+`{DataFrame_to_Change}.head()`
+   4. Run the cell. The output should show the new header in the table
+    For example: in order to change the `failure_data_afm_df` column header from `'site'` to the preffered header:
+ ![Renamed Header](./img/apm_8.7/hpu_fs7.png) 
 
 
 
