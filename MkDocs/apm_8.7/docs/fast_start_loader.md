@@ -64,48 +64,86 @@ Select the `FastStart2021-New.ipynb` notebook template that you have renamed wit
 ![Clean up Outputs](./img/apm_8.7/hpu_fs5.png) 
 ### Part 6 - Delete Existing Data
 Note: This section is REQUIRED if you are refreshing asset data or uploading new data for an existing asset. If you get errors in this section, you may need to update the column header in the data frame created here. See [Update DateFrame Headers](#update_df_headers).
+
 1. Run the first four cells to delete data from Maximo to be replaced. Wait five minutes after the final cell to allow for the data to be fully deleted
+
 2. Run the next two cells to delete the asset group
+
 ## Part 7 - Insert Data
 The following steps will update the MAS database to include the data from the CSV files.
 1. Run the cell to view the DataFrame to be imported and run the following cell to use the pmlib library to create the assets in the list.
+
 2. Run the cell to view the assets attributes that will be imported into MAS. Run the following cell to update those values.
+
 3. Run the cell to view the failure history that will be imported into MAS. Run the following cell to import the failure data.
+
 4. Run the cell to write the function definitions required to create your asset group. Run the following cell to create teh asset group.
+
 5. Run the cell to print the asset group name and the asset group id. Take a note of the results as they may be needed in future notebooks.
+
 ![Asset Group Details](./img/apm_8.7/hpu_fs8.png) 
+
 6. Run the following cell to store the notebook results
+
 7. Set up the IOT Devices:
+
    1. Update DataFrame columns from `[timestamp_col_name, asset_id_col_name, 'VELOCITYX', 'VELOCITYY', 'VELOCITYZ', 'MOTORTEMP', 'WINDINGTEMP', 'CURRENT', 'PRESSURE', 'LOAD', device_id_col_name, device_type_col_name]` to match the sensor readings for your asset. For example, the line may now read:
-   `sensor_data_afm_df.columns = [asset_id_col_name,timestamp_col_name, '10_Motor_Phase_Current_A', '4_Motor_Speed', '2_Motor_Frequency_B','12_Motor_Phase_Current_C', '5_Motor_Current', '00_Motor_Casing_Vibration', '11_Motor_Phase_Current_B','13_Motor_Coupling_Vibration','6_Motor_Active_Power','1_Pump_Casing_Vibration','9_Motor_Shaft_Power','26_Pump_Stage_2_Impeller_Speed',device_id_col_name, device_type_col_name]`
+   `sensor_data_afm_df.columns = [asset_id_col_name,timestamp_col_name, 'Current_10', 'Speed_4', 'Frequency_2','Current_12','Current_5', 'Vibration_00', 'Current_11','Vibration_13','Power_6','Vibration_1','Power_9','Speed_26',device_id_col_name, device_type_col_name]`
+  
    ![Sensor Columns](./img/apm_8.7/hpu_fs9.png)
-   2. Run the cell
-   3. Take the same column list used in step one, and remove the Timestamp, Asset id, Device Id and the Device Type leaving only the sensor column headers and update the value of `columns`
+   
+   4. Run the cell
+   
+   5. Click into the next cell
+   
+   6. In the menu, go to `Insert > Cell Above` 
+   
+   ![Insert Cell Above](./img/apm_8.7/hpu_fs6.png) 
+   
+   8. In that cell, insert the following code and run:
+   `features_for_training=list(set(list(sensor_data_afm_df.columns))- set(['asset_id','evt_timestamp','deviceid','devicetype']))
+features_for_training`
+   
+   9. Update the value of `columns` to `columns=features_for_training`
+   
    ![Sensor Columns](./img/apm_8.7/hpu_fs10.png)
-   4. Run the cell and ensure there are no errors
-   5. Run the following cell to import the asset device mappings
-   6. Continue to part 8 or scroll down to run the final cell to save the results.
+   
+   12. Run the cell and ensure there are no errors
+   
+   13. Run the following cell to import the asset device mappings
+   
+   14. Continue to part 8 or scroll down to run the final cell to save the results.
+
 ## Part 8 - Additional Data 
 This portion of the notebook is optional. If there is additional data to be uploaded you can use this section and customize the data being sent to MAS.
 ## Confirm Data Upload
 <a name="confirm_upload"></a>
 1. Navigate to Predict within your environment
+
 2. Use the left-hand menu to go into 'Predict Grouping'
    ![Predict Grouping](./img/apm_8.7/hpu_fs11.png) 
+
 3. Ensure your asset group is available in the list
 ![Asset Group](./img/apm_8.7/hpu_fs12.png)
+
 4. Navigate to IOT within your environment
+
 5. Under devices, search to ensure yor device is there
 ![IOT Device](./img/apm_8.7/hpu_fs13.png)
-6. Navigate to 'Device Types' and find your device type. Check that your physical and logical interfaces are okay
+
+6. Navigate to 'Device Types' and find your device type. Check that your physical and logical interfaces are active
+
 ## Update DataFrame Headers
 <a name="update_df_headers"></a>
    1. Click into the cell that resulted in an error
+
    2. In the menu, go to `Insert > Cell Above` 
    ![Insert Cell Above](./img/apm_8.7/hpu_fs6.png) 
+
    3. Add the following code in the cell:
 `{DataFrame_to_Change}.rename(columns={'{current_column_header}': site_id_col_name}, inplace=True)`
 `{DataFrame_to_Change}.head()`
+
    4. Run the cell. The output should show the new header in the table
     For example: in order to change the `failure_data_afm_df` column header from `'site'` to the preferred header:
  ![Renamed Header](./img/apm_8.7/hpu_fs7.png) 
