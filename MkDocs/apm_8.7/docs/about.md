@@ -32,10 +32,11 @@ It is the customer’s responsibility to ensure its own compliance with legal re
 
 # Change Information
 
-| Date            | By                                                       | Description         |
-|:----------------|:---------------------------------------------------------|:--------------------|
-| 2022-06-16      | Balaji Santhanakrishna, Carlos Ferreira and John Douglas | Asset Health Scores |
-| 2022-06-16      | Carlos Ferreira and Kewei Yang                           | Added setup Watson Studio exercise. Wrote getting started and pre-requisites and overall editing of content. |
-| 2022-06-16      | Juan Gu and Carlos Ferreira                              | Added overview of Health and Predict - Utilities models.                                                     |
-| 2022-06-16      | Satish Narasimha                                         | Added how to install and configure App Connect for use with Health and Predict asset data loading.           |
+| Date       | By                                                       | Description                                                                                                                  |
+|:-----------|:---------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| 2022-06-16 | Balaji Santhanakrishna, Carlos Ferreira and John Douglas | Asset Health Scores                                                                                                          |
+| 2022-06-16 | Carlos Ferreira and Kewei Yang                           | Added setup Watson Studio exercise. Wrote getting started and pre-requisites and overall editing of content.                 |
+| 2022-06-16 | Juan Gu and Carlos Ferreira                              | Added overview of Health and Predict - Utilities models.                                                                     |
+| 2022-06-16 | Satish Narasimha                                         | Added how to install and configure App Connect for use with Health and Predict asset data loading.                           |
+| 2022-07-01 | Hannah Carr                                              | Added how to upload asset failure history, sensor and device data and create a predict group using out of the box notebooks. |
 ---
