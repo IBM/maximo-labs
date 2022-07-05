@@ -32,7 +32,7 @@ Select the `FastStart2021-New.ipynb` notebook template that you have renamed wit
 1. Ensure you have a 'Predict_Envs.json' file uploaded. If one is not provided, follow the instructions in [set up Watson Studio](setup_watson_studio.md)under the 'Get URL' section to gather the `APM_ID`, `APM_API_BASE_URL`, and `APM_API_KEY` to create a JSON file containing the credentials and upload to Watson Studio with your initials prepended to the file name.
 2. Run the cell to open the JSON file. If you have created a JSON file with your initials prepended, update `f = open('/project_data/data_asset/Predict_Envs.json,)` to include your initials on the file name. See example image.
 
-![Environment JSON](./img/apm_8.7/hpu_fs1.png) 
+![Environment JSON](/img/apm_8.7/hpu_fs1.png) 
 
 4. Run the following two cells to set up variables required for the environment. Note that both should produce an output without errors similar to `main.predict.ivt11rel87.ivt.suite.maximo.com`
 5. Run the cell to install the pmlib using the pip install command
@@ -43,7 +43,7 @@ Select the `FastStart2021-New.ipynb` notebook template that you have renamed wit
    2. Change `default_device_type = 'Pump_AFM'` to `default_device_type = '{initials}_Pump_AFM'`
    3. Change `device_ids_oem = ['PMPDEVICE002', 'PMPDEVICE004', 'PMPDEVICE006', 'PMPDEVICE008', 'PMPDEVICE010']` to `device_ids_oem = ['{initials}_PMPDEVICE00']`
 9. Run the cell and make a note of the resulting output. This will be needed in future notebooks to call your assets.
-![Cell Updates](./img/apm_8.7/hpu_fs3.png) 
+![Cell Updates](/img/apm_8.7/hpu_fs3.png) 
 10. Run the following cell to store the variables just created
 11. Run the cell to set the preferred column names for Maximo's system
 ### Part 3 - Load the Data Into Dataframes
@@ -57,11 +57,11 @@ Select the `FastStart2021-New.ipynb` notebook template that you have renamed wit
 2. Run the second cell to calculate and view the shift in time that will be applied
 3. Run the third cell to perform the time shift
 4. Run the fourth cell to view the new range of dates for the sensor dataframe
-![Timeshift Outputs](./img/apm_8.7/hpu_fs4.png) 
+![Timeshift Outputs](/img/apm_8.7/hpu_fs4.png) 
 5. Repeat these steps for the remainder of part 4 to perform the timeshift on the failure data
 ### Part 5 - Clean up DataFrames
 1. Run these two cells to clean up dataframes and reformat to Maximo's standards
-![Clean up Outputs](./img/apm_8.7/hpu_fs5.png) 
+![Clean up Outputs](/img/apm_8.7/hpu_fs5.png) 
 ### Part 6 - Delete Existing Data
 Note: This section is REQUIRED if you are refreshing asset data or uploading new data for an existing asset. If you get errors in this section, you may need to update the column header in the data frame created here. See [Update DateFrame Headers](#update_df_headers).
 
@@ -81,7 +81,7 @@ The following steps will update the MAS database to include the data from the CS
 
 5. Run the cell to print the asset group name and the asset group id. Take a note of the results as they may be needed in future notebooks.
 
-![Asset Group Details](./img/apm_8.7/hpu_fs8.png) 
+![Asset Group Details](/img/apm_8.7/hpu_fs8.png) 
 
 6. Run the following cell to store the notebook results
 
@@ -90,7 +90,7 @@ The following steps will update the MAS database to include the data from the CS
    1. Update DataFrame columns from `[timestamp_col_name, asset_id_col_name, 'VELOCITYX', 'VELOCITYY', 'VELOCITYZ', 'MOTORTEMP', 'WINDINGTEMP', 'CURRENT', 'PRESSURE', 'LOAD', device_id_col_name, device_type_col_name]` to match the sensor readings for your asset. For example, the line may now read:
    `sensor_data_afm_df.columns = [asset_id_col_name,timestamp_col_name, 'Current_10', 'Speed_4', 'Frequency_2','Current_12','Current_5', 'Vibration_00', 'Current_11','Vibration_13','Power_6','Vibration_1','Power_9','Speed_26',device_id_col_name, device_type_col_name]`
   
-   ![Sensor Columns](./img/apm_8.7/hpu_fs9.png)
+   ![Sensor Columns](/img/apm_8.7/hpu_fs9.png)
    
    4. Run the cell
    
@@ -98,7 +98,7 @@ The following steps will update the MAS database to include the data from the CS
    
    6. In the menu, go to `Insert > Cell Above` 
    
-   ![Insert Cell Above](./img/apm_8.7/hpu_fs6.png) 
+   ![Insert Cell Above](/img/apm_8.7/hpu_fs6.png) 
    
    8. In that cell, insert the following code and run:
    `features_for_training=list(set(list(sensor_data_afm_df.columns))- set(['asset_id','evt_timestamp','deviceid','devicetype']))
@@ -106,7 +106,7 @@ features_for_training`
    
    9. Update the value of `columns` to `columns=features_for_training`
    
-   ![Sensor Columns](./img/apm_8.7/hpu_fs10.png)
+   ![Sensor Columns](/img/apm_8.7/hpu_fs10.png)
    
    12. Run the cell and ensure there are no errors
    
@@ -121,15 +121,15 @@ This portion of the notebook is optional. If there is additional data to be uplo
 1. Navigate to Predict within your environment
 
 2. Use the left-hand menu to go into 'Predict Grouping'
-   ![Predict Grouping](./img/apm_8.7/hpu_fs11.png) 
+   ![Predict Grouping](/img/apm_8.7/hpu_fs11.png) 
 
 3. Ensure your asset group is available in the list
-![Asset Group](./img/apm_8.7/hpu_fs12.png)
+![Asset Group](/img/apm_8.7/hpu_fs12.png)
 
 4. Navigate to IOT within your environment
 
 5. Under devices, search to ensure yor device is there
-![IOT Device](./img/apm_8.7/hpu_fs13.png)
+![IOT Device](/img/apm_8.7/hpu_fs13.png)
 
 6. Navigate to 'Device Types' and find your device type. Check that your physical and logical interfaces are active
 
@@ -138,7 +138,7 @@ This portion of the notebook is optional. If there is additional data to be uplo
    1. Click into the cell that resulted in an error
 
    2. In the menu, go to `Insert > Cell Above` 
-   ![Insert Cell Above](./img/apm_8.7/hpu_fs6.png) 
+   ![Insert Cell Above](/img/apm_8.7/hpu_fs6.png) 
 
    3. Add the following code in the cell:
 `{DataFrame_to_Change}.rename(columns={'{current_column_header}': site_id_col_name}, inplace=True)`
@@ -146,7 +146,7 @@ This portion of the notebook is optional. If there is additional data to be uplo
 
    4. Run the cell. The output should show the new header in the table
     For example: in order to change the `failure_data_afm_df` column header from `'site'` to the preferred header:
- ![Renamed Header](./img/apm_8.7/hpu_fs7.png) 
+ ![Renamed Header](/img/apm_8.7/hpu_fs7.png) 
 
 
 
