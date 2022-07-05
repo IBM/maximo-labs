@@ -17,9 +17,11 @@ nav:
     - Data Preparation: data_preparation.md
     - Failure Prediction Model : failure_prediction.md
     - Anomaly Detection Model: anomaly_detection.md
+    - Load Historical Data: fast_start_loader.md
     - Create Prediction Group: create_prediction_group.md
     - Understand Health and Predict - Utilities Models: hpu_models.md
     - Asset Health Scoring: health_score.md
+    - Asset Investment Optimization: asset_investment.md
     - Install and Configure App Connect: appconnect_install.md
   - About: about.md
 
