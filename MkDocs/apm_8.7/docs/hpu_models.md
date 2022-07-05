@@ -1,10 +1,11 @@
-# Understand Health and Predict - Utilities Models
+# Understand Utilities Models
 
 In this exercise, you will learn:
 
-- About the [Substation Transformer Models](hpu_notebooks) included with Health and Predict - Utilities (HPU).   
-- [Create a Score Group](score_groups)
-- [To modify and debug](modify_debug) the model notebooks.
+- To use the [Substation Transformer Models](hpu_notebooks) included with Health and Predict - Utilities (HPU).   
+- [Create a Score Group](score_groups)for Substation Transformer Assets.
+- [Update and Schedule Notebooks](modify_debug) for Utilities.
+- [Troubleshoot Notebooks](troubleshoot) for Utilities.
 
 **Pre-requisites**
 
@@ -21,10 +22,9 @@ Ensure you have access to :
 ![drawing](/img/apm_8.7/hpu_model_st_sample_data_overview.png)
 
 
-## Health and Predict Utilities Out Of The Box Models
+## Out Of The Box Models
 <a name="hpu_notebooks"></a>
-
-### Supported Asset Classes listed in below table
+Health and Predict - Utilities includes the supported Asset Classes listed in table below:
 
 |  Asset class  | Model |
 |--|--|
@@ -55,8 +55,10 @@ Ensure you have access to :
 ![drawing](/img/apm_8.7/hpu_model_bctc.png)   
 
 
-## Create a Score Group for ST Assets
+## Create a Score Group
 <a name="score_groups"></a>
+
+Create a Score Group for Substation Transformer Assets
 
 1\. Login and go to Health and Predict Utilities application.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_0.png)
@@ -89,10 +91,11 @@ Ensure you have access to :
 
 9\. After activating all the scores, click the `Recalculate scores` to start the analysis.
 
-## Watson Studio Notebooks and Jobs
+## Update and Debug Notebooks
+
 <a name="modify_debug"></a>
 
-In Health and Predict - Utilities, the calculation happens in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks `Recalculate scores` on UI, it triggers the job to run, do the calculation, and save results to the Database.  
+In this exercise you will update the Utilities notebooks using Watson Studio.  You will also schedule `Jobs` to run the notebooks and do asset scoring.  In Health and Predict - Utilities, the scoring calculation happen in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks `Recalculate scores` on UI, it triggers the job to run, do the calculation, and save results to the Database.  
 
 ### Substation Transformer Model Configuration 
 
@@ -100,7 +103,6 @@ For ST (Substation Transformer), configuration file is IBM-Transformers-Tap-Chan
 ![drawing](/img/apm_8.7/hpu_model_ws_cfg.png)  
 
 In the configuration file, under `Common` section `defaultsetup.components` has all the scores group, contributors listed, and functions and paramteres for each item. In `defaultsetup.dependencies` describes the dependency. E.g Health depends on `Transformer health index` and `Tap changer health index`, `Transformer health index` group calculated base on several contributors, function details can be found in `[ext_function_name]` in the file. E.g For `Health` ext_function_name is configured as `[Health Weighted]`, the implementation is `common_calculate_weighted` which is pre-defined in healthlib.
-
 
 **Example Configuration**
 
@@ -287,23 +289,22 @@ def calculate_number_of_customer(context,targetType=None):
     return result
 ```
 
+## Troubleshoot
+
 ### Enable Debug Mode
 
 For a small group of assets, user can enable debug mode for debugging the model.
 
-1\. Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`, click the pencil icon to edit,find the cell `healthlib.set_log_level(level='INFO')`, change to `healthlib.set_log_level(level='DEBUG')`.Then save to a latest version.
-
-2\. Login Health and Predict Utilities application, go to `Scoring and DGA settings`, enter the related group, click the `Recalculate scores` to trigger a new analysis.
-
-3\. After the calculation finishes, go back to Watson Studio, click the `Job` tab, then click the correspoding job for the score group. 
-
-4\. A new page will open where user can edit the job and or check the job history. Click latest finished job history to check the debug logs. 
+1. Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`, click the pencil icon to edit,find the cell `healthlib.set_log_level(level='INFO')`, change to `healthlib.set_log_level(level='DEBUG')`.Then save to a latest version.
+2. Login Health and Predict Utilities application, go to `Scoring and DGA settings`, enter the related group, click the `Recalculate scores` to trigger a new analysis.
+3. After the calculation finishes, go back to Watson Studio, click the `Job` tab, then click the correspoding job for the score group. 
+4. A new page will open where user can edit the job and or check the job history. Click latest finished job history to check the debug logs. 
 
 ### Run Notebook Directly for Debugging Purpose
 
 If user want to directly run the notebook to calculate the score for debug purpose instead of the job, user can add some enviroment variables in notebook temporary.
 
-1\. Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`, click the pencil icon to edit. Click plus button to add a new cell, and put below code with actual value.
+1. Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`, click the pencil icon to edit. Click plus button to add a new cell, and put below code with actual value.
 
 `maximoApiKey` can be found in Application administration page. Login Health and Predict – Utilities and click the Application administration page, click to the Start Center and in the Go To section, click Administration.On the API Keys tab, search and find maxadmin's apikey.
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_apikey_01.png)  
@@ -312,25 +313,23 @@ If user want to directly run the notebook to calculate the score for debug purpo
 `expgroupname` can be found in score group detail page.
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_expgroupname.png){ width=50% height=50% }  
 
-2\.  Here is a code example for debugging on a certain score group.
+2.  Here is a code example for debugging on a certain score group.
 ```
 import os
 os.environ['maximo_context'] = '{"maximoUrl":"https://<health/manage host>/maximo/","maximoApiKey":"**************","expgroupname":"1033"}'
 ```
 
-3\. Code example for debugging on an individule asset.
+3. Code example for debugging on an individule asset.
 ```
 import os
 os.environ['maximo_context'] = '{"maximoUrl":"https://<health/manage host>/maximo/","maximoApiKey":"**************","expgroupname":"1033","siteid":"***","assetnum":"***"}'
 ```
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_debug.png)  
 
-4\. Click `Run` to run cell by cell or restart the kernel run the whole notebook.
+4. Click `Run` to run cell by cell or restart the kernel run the whole notebook.
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_run.png)
 
 !!! note
-
     When debugging in notebook directly, do not save as latest version, since it's hardcoded.  You should instead get those inputs from Health.
 
-Congratulation you learned about the Substation Transformer Models included with Health and Predict - Utilities (HPU).   
-and create a Score Groups.  You also can now modify and debug the model notebooks.
+Congratulation you learned about the Substation Transformer Models included with Health and Predict - Utilities (HPU) and create a Score Groups.  You also can now modify, schedule and debug the model notebooks.
