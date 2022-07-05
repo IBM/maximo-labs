@@ -2,10 +2,10 @@
 
 In this exercise, you will learn:
 
-- To use the [Substation Transformer Models](hpu_notebooks) included with Health and Predict - Utilities (HPU).   
-- [Create a Score Group](score_groups)for Substation Transformer Assets.
-- [Update and Schedule Notebooks](modify_debug) for Utilities.
-- [Troubleshoot Notebooks](troubleshoot) for Utilities.
+- To use the [Substation Transformer Models](#hpu_notebooks) included with Health and Predict - Utilities (HPU).   
+- [Create a Score Group](#score_groups)for Substation Transformer Assets.
+- [Update and Schedule Notebooks](#modify_schedule) for Utilities.
+- [Troubleshoot Notebooks](#troubleshoot) for Utilities.
 
 **Pre-requisites**
 
@@ -24,6 +24,7 @@ Ensure you have access to :
 
 ## Out Of The Box Models
 <a name="hpu_notebooks"></a>
+
 Health and Predict - Utilities includes the supported Asset Classes listed in table below:
 
 |  Asset class  | Model |
@@ -47,13 +48,11 @@ Health and Predict - Utilities includes the supported Asset Classes listed in ta
 | UNDERGROUNDTRANSMISSIONCABLE - Self Contained Gas Filled (SCGF) Submarine Cables | IBM SCGF Cables 4.0.0 |
 | UNDERGROUNDTRANSMISSIONCABLE - Extruded Cross Linked Polyethylene (XLPE) Cables | IBM XLPE Cables 4.0.0 |
 
-**Note**, some asset classes have subtype, like CIRCUITBREAKER or UNDERGROUNDTRANSMISSIONCABLE
+!!! note
+    Some asset classes have subtype, like CIRCUITBREAKER or UNDERGROUNDTRANSMISSIONCABLE
 
-
-### HPU Model Calculation Methodology
-
-![drawing](/img/apm_8.7/hpu_model_bctc.png)   
-
+**HPU Model Calculation Methodology**
+![drawing](/img/apm_8.7/hpu_model_bctc.png)
 
 ## Create a Score Group
 <a name="score_groups"></a>
@@ -91,9 +90,8 @@ Create a Score Group for Substation Transformer Assets
 
 9\. After activating all the scores, click the `Recalculate scores` to start the analysis.
 
-## Update and Debug Notebooks
-
-<a name="modify_debug"></a>
+## Update and Schedule Notebooks
+<a name="modify_schedule"></a>
 
 In this exercise you will update the Utilities notebooks using Watson Studio.  You will also schedule `Jobs` to run the notebooks and do asset scoring.  In Health and Predict - Utilities, the scoring calculation happen in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks `Recalculate scores` on UI, it triggers the job to run, do the calculation, and save results to the Database.  
 
@@ -290,6 +288,7 @@ def calculate_number_of_customer(context,targetType=None):
 ```
 
 ## Troubleshoot
+<a name="troubleshoot"></a>
 
 ### Enable Debug Mode
 

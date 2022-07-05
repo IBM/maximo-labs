@@ -2,11 +2,11 @@
 
 In this exercise you will use Predict libraries and notebook in Watson Studio to:
 
-- [Download Pump Data and Import into Watson Studio Notebook](download_data) from Kaggle website
-- [Add the data prepration notebook template](data_preparation) included with this lab to prepare the pump data.
-- [Create an asset information file](asset_information_file) to describe the pump used in later exercises for EOL Curve algorithm. 
-- [Create an asset metrics file](asset_metrics_file) used to train and test the Failure Prediction Date algorithm.
-- [Create an asset failure file](asset_failure_file) used to train and test the Failure Prediction Date algorithm.
+- [Download Pump Data and Import into Watson Studio Notebook](#download_data) from Kaggle website
+- [Add the data prepration notebook template](#data_preparation) included with this lab to prepare the pump data.
+- [Create an asset information file](#asset_information_file) to describe the pump used in later exercises for EOL Curve algorithm. 
+- [Create an asset metrics file](#asset_metrics_file) used to train and test the Failure Prediction Date algorithm.
+- [Create an asset failure file](#asset_failure_file) used to train and test the Failure Prediction Date algorithm.
 
 !!! note
     Be sure to prepend your initials on all the data asset files you create in this exercise so that you can be sure you are creating the files correctly.
@@ -20,7 +20,8 @@ In this exercise you will use Predict libraries and notebook in Watson Studio to
 ![Dowload_Pump_data](/img/apm_8.7/p64.png)
 
 ## Add the Data Preparation Notebook to Watson Studio
-<a name="asset_information_file"></a>
+<a name="data_preparation"></a>
+
 Data preparation involves cleaning data,  reshaping the data columns and rows into the format and values needed for each notebook template.   In some cases it involves removing rows or columns that have invalid or blank values (NaN).  Or imputing values to replace blank values (NaN).  The data preparation notebook has already been created for you for use. 
 
 1. Use the steps from the previous exercises [Add Notebook From File to a Watson Studio Project](add-notebook-to-studio) to add the `data_preparation.ipynb`to your Watson Studio Project or the Project suggested by your facilitator.  Rename your notebook by pre-pending your initials to the notebook.   
@@ -82,6 +83,7 @@ You can check the environment variables and reference them by using the auto ins
 
 ## Prepare Asset Information Data
 <a name="asset_information_file"></a>
+
 The Asset Information file is used for End Of Life Curve.   This step can be skipped if you don't want to create an End of Life Curve in Predict.
 
 You must load metadata describing your asset and meter data describing the timeseries metrics and failure dates.  There are 3 files needed.  Each file is described below.
@@ -136,6 +138,7 @@ In this step you will create the CSV file and save it to your project assets in 
     pump_00,2008-01-08,
 
 ## Prepare Asset Metrics Data
+<a name="asset_metrics_file"></a>
 
 Asset metrics data is time series data that must have the following column formats:
 
@@ -167,6 +170,8 @@ Asset metrics data is time series data that must have the following column forma
 
 
 ### Create an Asset Metrics File
+<a name="asset_metrics_file"></a>
+
 
 Since the Kaggle pump data is for a single pump you can create a file with a single asset.  Since the pump data doesn't have decommission dates you can leave them blank.
 Also since not all the columns are needed to make a failure prediction we can reduce the columns down to the minimum number.   Reduce the 'data_df_1' that you read in earlier and add the required columns for `ASSET_ID`,`deviceid`, `devicetype`.
@@ -190,6 +195,7 @@ Assign constant values for the columns that are needed for pump predicting failu
     pump_df.head()
 
 ## Prepare Asset Failure Data 
+<a name="asset_failure_file"></a>
 
 Asset failure data is time series data that describes when the asset failure periods happen.   Asset failure data must have the  column formats in the table below.
 
