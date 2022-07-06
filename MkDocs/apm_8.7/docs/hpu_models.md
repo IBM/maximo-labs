@@ -72,7 +72,7 @@ Ensure you have access to :
 
 5\. Scroll down `query` part, click `Select` to open query dialog, user can select an existing query, or click `+` button to create a new query for ST assets.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_3.png)   
-
+E.g Select site and classification    
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_4.png)   
 
 6\. After select the notebook and query, click `Create` to create the score group.
@@ -266,7 +266,7 @@ Job is `Run-IBM-Transformers-Tap-Changers-DGA-4-0-0.Details`and can be checked u
 
 ### Customize Notebook Model for NOC
 
-Users can change  how the scores are calculated as needed in the Notebooks.  
+Users can change how the scores are calculated as needed in the Notebooks.  
 
 For example, for customize the `Criticality` which is calculated 100% weight of NOC (Number Of Customers) by default.
 Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`,find the cell which defined function `calculate_number_of_customer`, comment out the old code, and write new customize NOC functiion based on customer's own methodology. Then save a latest version.
@@ -301,7 +301,7 @@ For a small group of assets, user can enable debug mode for debugging the model.
 
 ### Run Notebook Directly for Debugging Purpose
 
-If user want to directly run the notebook to calculate the score for debug purpose instead of the job, user can add some enviroment variables in notebook temporary.
+If user want to directly run the notebook to calculate the score for debug purpose instead of the job, user can add some enviroment variables in notebook temporarily.
 
 1\. Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`, click the pencil icon to edit. Click plus button to add a new cell, and put below code with actual value.
 
@@ -330,7 +330,7 @@ os.environ['maximo_context'] = '{"maximoUrl":"https://<health/manage host>/maxim
 
 !!! note
 
-    When debugging in notebook directly, do not save as latest version, since it's hardcoded.  You should instead get those inputs from Health.
+    When debugging in notebook directly, do not save as latest version, since it's hardcoded.  The corresponding job should instead get those inputs from Health during the runtime.
 
 Congratulation you learned about the Substation Transformer Models included with Health and Predict - Utilities (HPU).   
 and create a Score Groups.  You also can now modify and debug the model notebooks.
