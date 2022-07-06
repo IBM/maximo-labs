@@ -32,10 +32,7 @@ In this exercise the Reliability Engineer uses Health to:
 
 ## Introduction
 
-IBM Maximo® Application Suite (MAS) provides your clients with a comprehensive and innovative answer for physical asset management. This flexible solution provides a unified platform that delivers asset performance and maintenance management, with end-to-end asset lifecycle management, across the enterprise. 
-
-Maximo Application Suite is built to scale client’s digital transformation journey with integrated solutions, simplified licensing, and Multicloud deployments. Maximo Application Suite includes Manage, Monitor, Health, Predict, Visual Inspection, and more to come. This lab exercise guide is for Maximo Health and Predict. 
-![product wheel](/img/apm_8.7/h1.png) 
+This lab exercise guide is for Maximo Health and Predict. 
 
 Maximo Predict uses historical and real-time asset performance data, maintenance records, inspection reports, and environmental data to correlate performance factors that predict asset degradation or failure. Predict uses artificial intelligence to optimize predict model accuracy.
 
@@ -44,6 +41,7 @@ Maximo Health introduced the concept of work queues to provide a consolidated vi
 Maximo Predict allows for increasing the life of asset. It reduces maintenance costs and improves asset utilization by reducing unnecessary and redundant maintenance based on condition monitoring infused with IoT, AI, and ML. Also, it helps in conducting the proactive maintenances for assets that need attention. 
 
 Through this Maximo Health and Predict lab exercise, you will learn how to
+
 - Get better insight into the health of assets and predict failures well in advance
 - Reduce unnecessary Preventive Maintenance or doing condition-based monitoring.
 
@@ -116,42 +114,60 @@ Reliability Engineer manages the reliability risk by ensuring the asset is avail
 
 ## Application Launch 
 
-Value: Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance costs, and eliminate unplanned downtime. You can identify assets that need attention, investigate those assets, and finally take an action to avoid unplanned downtime.
+**Value:** Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance costs, and eliminate unplanned downtime. You can identify assets that need attention, investigate those assets, and finally take an action to avoid unplanned downtime.
 
 Follow the actions below to get to launch the application. 
 
 `Action:`
-1.	Click the App Switcher icon on the top right side of the home page. 
+
+1.	Click the App Switcher icon on the top right side of the home page.
+![Click on App Switch](/img/apm_8.7/healthscoring_1.png)
 
 2.	Select `Health` application from the menu bar and you will view the assets list.
+![Select "Health" application](/img/apm_8.7/healthscoring_2.png)
+![Health assets page](/img/apm_8.7/healthscoring_3.png)
 
 
 ## Asset Group View Creation
 
-Follow the actions below to create and view your pump group. This view will allow the Reliability Engineer to view their asset conditions in a tabular and map view.  
-Value: You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.
+Follow the actions below to create and view your pump group. This view will allow the Reliability Engineer to view their asset conditions in a tabular and map view.
 
-Action
+**Value:** You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.
 
-1. Click on the `search icon` and type `pmpd` to view all the pumps from the assets list.
+`Action:`
+
+1. Click on the `Search` icon and type `pmpd` to view all the pumps from the assets list.
+![Search icon](/img/apm_8.7/healthscoring_4.png)
+![Search for pump](/img/apm_8.7/healthscoring_5.png)
 
 2. Create your pump group by selecting the menu option `Save as` and typing your Maximo lab login as your pump view name. Save your view.
+![Save as](/img/apm_8.7/healthscoring_6.png)
+![Sae as new view](/img/apm_8.7/healthscoring_7.png)
 
 3. You can view the pump group you have created using the `drop-down` menu.
 
 4. View both IT and OT data of your pumps in a single view. 
+![View in single view](/img/apm_8.7/healthscoring_8.png)
  
-5. Click column selection menu icon.
+5. Click on the `Column Selection` menu icon.
+![Click column selection menu icon](/img/apm_8.7/healthscoring_9.png)
+![Column selection view](/img/apm_8.7/healthscoring_10.png)
 
-6. Click `Manage` columns.
+6. Click `Manage columns`.
+![Click manage columns](/img/apm_8.7/healthscoring_11.png)
 
 7. Type `manufacturer` in the search field and press enter key on your keyboard. 
+![Type in search fields](/img/apm_8.7/healthscoring_12.png)
+![Type "manufacturer"](/img/apm_8.7/healthscoring_13.png)
 
-8. Select the check box for `Manufacturer` and click `OK`
+8. Select the check box for `manufacturer` and click `Ok`
+![Check box](/img/apm_8.7/healthscoring_14.png)
  
-9. Click on `Column Selection` icon. 
+9. Click on the `Column Selection` icon.
+![Click on "Column selection"](/img/apm_8.7/healthscoring_15.png)
 
-10. Check if you can see the added new field (Manufacturer) in your view. 
+10. Check if you can see the added new field `Manufacturer` in your view.
+ ![Check for "Manufacturer" column](/img/apm_8.7/healthscoring_16.png)
  
 
 ##  Asset Map View
