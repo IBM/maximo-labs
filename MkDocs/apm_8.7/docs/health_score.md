@@ -3,13 +3,8 @@
 Maximo Health includes [health scores](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850) for understanding asset conditions. Allowing you to identify which assets are most critical and in need of maintenance or replacement.
 
 In this exercise the Reliability Engineer uses Health to:
+	
 
-1 INTRODUCTION	
-2 END-TO-END OVERVIEW LAB SCRIPT	
-2.1 STORY	
-2.2 PERSONAS	
-2.2.1 RELIABILITY ENGINEER	
-3 LAB ENVIRONMENT ACCESS INFORMATION	
 4 MAXIMO APPLICATION SUITE LAUNCH
 5 GETTING STARTED HEALTH & PREDICT LAB - IDENTIFYING ASSETS AT RISK	
 5.1 APPLICATION LAUNCH	
@@ -33,8 +28,7 @@ In this exercise the Reliability Engineer uses Health to:
 ## Pre-requisites 
 
 - Review Health documentation for the [list of available models](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850).
-- Ensure your MAS Health environment is running and you have access.  Try your server URL that might look something like: [https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info](https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info)
-- Your instructor has populated the environment with Asset Data.
+- Ensure your MAS v8.7 Health environment is running and you have access.
 
 ## Introduction
 
@@ -49,7 +43,11 @@ Maximo Health introduced the concept of work queues to provide a consolidated vi
 
 Maximo Predict allows for increasing the life of asset. It reduces maintenance costs and improves asset utilization by reducing unnecessary and redundant maintenance based on condition monitoring infused with IoT, AI, and ML. Also, it helps in conducting the proactive maintenances for assets that need attention. 
 
-Through this Maximo Health and Predict lab exercise, you will learn how you can get better insight into the health of assets and predict failures well in advance. You will also learn how you can reduce unnecessary Preventive Maintenance or doing condition-based monitoring. It would take about 60 minutes to go through the lab exercise and learn about the Maximo Health and Predict applications. 
+Through this Maximo Health and Predict lab exercise, you will learn how to
+- Get better insight into the health of assets and predict failures well in advance
+- Reduce unnecessary Preventive Maintenance or doing condition-based monitoring.
+
+It would take about 60 minutes to go through the lab exercise and learn about the Maximo Health and Predict applications. 
 
 Note: Follow the `Actions` steps in bold to navigate through the lab procedures. 
 
@@ -57,7 +55,7 @@ Note: Follow the `Actions` steps in bold to navigate through the lab procedures.
 
 
 
-**Age** is the actual age is the current date minus the installation date.
+**Age** is the actual age. It is the current date minus the installation date.
 
 **Anomaly Detection** helps identify unusual patterns in the behavior of the asset, which might indicate potential failures or pre-failure behaviors. 
 
@@ -105,40 +103,16 @@ Note: Follow the `Actions` steps in bold to navigate through the lab procedures.
 
 
 
-## Lab Environment Access Information 
+## Lab Overview
 Through this lab exercise, you will learn how a Reliability Engineer uses the MAS Health and Predict applications to review the asset conditions and ensure that there aren't any failures predicted before planned maintenance. Together, MAS Health and Predict applications provide a view of an enterprise's assets' current state and project future conditions of those assets.
- 
-The storyline for this lab is that a Water Resource Authority needs to manage wastewater treatment assets across multiple cities and regions from a single application. Pumps are one of the critical assets in the wastewater plant. In this lab exercise, we will learn how a reliability engineer uses the MAS Health and Predict applications to review the pump conditions and ensure that there aren't any failures predicted before planned maintenance.
 
-The persona for this lab is a Reliability Engineer who manage the reliability risk by ensuring the asset is available and functions without failure. Based on the industry and market, reliability engineers manage multiple assets and processes.
 
-Follow the actions below to log in to the Maximo Application Suite Lab environment. 
+## Story 
+A Water Resource Authority needs to manage wastewater treatment assets across multiple cities and regions from a single application. Pumps are one of the critical assets in the wastewater plant. In this lab exercise, we will learn how a reliability engineer uses the MAS Health and Predict applications to review the pump conditions and ensure that there aren't any failures predicted before planned maintenance.
 
-1. Check and make sure you are on the correct lab session (T 1119 - Anticipate asset failure and improve reliability with IBM Maximo Health and Predict). Then click `Start My Lab`. 
+## Persona
+Reliability Engineer manages the reliability risk by ensuring the asset is available and functions without failure. Based on the industry and market, reliability engineers manage multiple assets and processes.
 
-2. Register using the same email address you have used for Think'22 registration.
-
-3. Note down the username and password and click on "Launch Lab."
-
-4. Lunch the VM by clicking on the computer monitor   icon.
-
-5. Wait for the operating system to load.
-
-6.	Open the Google Chrome browser (preferred browser) on your workstation. If not available, you can open Firefox browser.
-
-7.	Open the lab portal page and click on "Login" icon.
-
-8.	Login to the portal page using the credentials (see above step #3).
-
-## Maximo Application Suite Launch
-
-Action
-
-1.	After login, select the option "Maybe Later" for lab exercise option and click `Done`. If you want to learn about Maximo Application Suite, select the option "Let's Go" and follow the instructions.
-
-2.	If the application tiles (Your applications) are not loaded, you can continue with the lab using the application switcher option described in the next session (4.1 Application Launch).
-
-3.  Getting Started Health & Predict Lab - Identifying Assets at Risk
 
 ## Application Launch 
 
@@ -146,8 +120,8 @@ Value: Health and Predict arm the Reliability Engineer with AI-powered insights 
 
 Follow the actions below to get to launch the application. 
 
-Action
-1.	Click the App Switcher   icon on the top right side of the home page. 
+`Action:`
+1.	Click the App Switcher icon on the top right side of the home page. 
 
 2.	Select `Health` application from the menu bar and you will view the assets list.
 
