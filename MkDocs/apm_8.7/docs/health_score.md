@@ -3,13 +3,8 @@
 Maximo Health includes [health scores](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850) for understanding asset conditions. Allowing you to identify which assets are most critical and in need of maintenance or replacement.
 
 In this exercise the Reliability Engineer uses Health to:
+	
 
-1 INTRODUCTION	
-2 END-TO-END OVERVIEW LAB SCRIPT	
-2.1 STORY	
-2.2 PERSONAS	
-2.2.1 RELIABILITY ENGINEER	
-3 LAB ENVIRONMENT ACCESS INFORMATION	
 4 MAXIMO APPLICATION SUITE LAUNCH
 5 GETTING STARTED HEALTH & PREDICT LAB - IDENTIFYING ASSETS AT RISK	
 5.1 APPLICATION LAUNCH	
@@ -33,15 +28,11 @@ In this exercise the Reliability Engineer uses Health to:
 ## Pre-requisites 
 
 - Review Health documentation for the [list of available models](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850).
-- Ensure your MAS Health environment is running and you have access.  Try your server URL that might look something like: [https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info](https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info)
-- Your instructor has populated the environment with Asset Data.
+- Ensure your MAS v8.7 Health environment is running and you have access.
 
 ## Introduction
 
-IBM Maximo® Application Suite (MAS) provides your clients with a comprehensive and innovative answer for physical asset management. This flexible solution provides a unified platform that delivers asset performance and maintenance management, with end-to-end asset lifecycle management, across the enterprise. 
-
-Maximo Application Suite is built to scale client’s digital transformation journey with integrated solutions, simplified licensing, and Multicloud deployments. Maximo Application Suite includes Manage, Monitor, Health, Predict, Visual Inspection, and more to come. This lab exercise guide is for Maximo Health and Predict. 
-![product wheel](/img/apm_8.7/h1.png) 
+This lab exercise guide is for Maximo Health and Predict. 
 
 Maximo Predict uses historical and real-time asset performance data, maintenance records, inspection reports, and environmental data to correlate performance factors that predict asset degradation or failure. Predict uses artificial intelligence to optimize predict model accuracy.
 
@@ -49,7 +40,12 @@ Maximo Health introduced the concept of work queues to provide a consolidated vi
 
 Maximo Predict allows for increasing the life of asset. It reduces maintenance costs and improves asset utilization by reducing unnecessary and redundant maintenance based on condition monitoring infused with IoT, AI, and ML. Also, it helps in conducting the proactive maintenances for assets that need attention. 
 
-Through this Maximo Health and Predict lab exercise, you will learn how you can get better insight into the health of assets and predict failures well in advance. You will also learn how you can reduce unnecessary Preventive Maintenance or doing condition-based monitoring. It would take about 60 minutes to go through the lab exercise and learn about the Maximo Health and Predict applications. 
+Through this Maximo Health and Predict lab exercise, you will learn how to
+
+- Get better insight into the health of assets and predict failures well in advance
+- Reduce unnecessary Preventive Maintenance or doing condition-based monitoring.
+
+It would take about 60 minutes to go through the lab exercise and learn about the Maximo Health and Predict applications. 
 
 Note: Follow the `Actions` steps in bold to navigate through the lab procedures. 
 
@@ -57,7 +53,7 @@ Note: Follow the `Actions` steps in bold to navigate through the lab procedures.
 
 
 
-**Age** is the actual age is the current date minus the installation date.
+**Age** is the actual age. It is the current date minus the installation date.
 
 **Anomaly Detection** helps identify unusual patterns in the behavior of the asset, which might indicate potential failures or pre-failure behaviors. 
 
@@ -105,112 +101,125 @@ Note: Follow the `Actions` steps in bold to navigate through the lab procedures.
 
 
 
-## Lab Environment Access Information 
+## Lab Overview
 Through this lab exercise, you will learn how a Reliability Engineer uses the MAS Health and Predict applications to review the asset conditions and ensure that there aren't any failures predicted before planned maintenance. Together, MAS Health and Predict applications provide a view of an enterprise's assets' current state and project future conditions of those assets.
- 
-The storyline for this lab is that a Water Resource Authority needs to manage wastewater treatment assets across multiple cities and regions from a single application. Pumps are one of the critical assets in the wastewater plant. In this lab exercise, we will learn how a reliability engineer uses the MAS Health and Predict applications to review the pump conditions and ensure that there aren't any failures predicted before planned maintenance.
 
-The persona for this lab is a Reliability Engineer who manage the reliability risk by ensuring the asset is available and functions without failure. Based on the industry and market, reliability engineers manage multiple assets and processes.
 
-Follow the actions below to log in to the Maximo Application Suite Lab environment. 
+## Story 
+A Water Resource Authority needs to manage wastewater treatment assets across multiple cities and regions from a single application. Pumps are one of the critical assets in the wastewater plant. In this lab exercise, we will learn how a reliability engineer uses the MAS Health and Predict applications to review the pump conditions and ensure that there aren't any failures predicted before planned maintenance.
 
-1. Check and make sure you are on the correct lab session (T 1119 - Anticipate asset failure and improve reliability with IBM Maximo Health and Predict). Then click `Start My Lab`. 
+## Persona
+Reliability Engineer manages the reliability risk by ensuring the asset is available and functions without failure. Based on the industry and market, reliability engineers manage multiple assets and processes.
 
-2. Register using the same email address you have used for Think'22 registration.
-
-3. Note down the username and password and click on "Launch Lab."
-
-4. Lunch the VM by clicking on the computer monitor   icon.
-
-5. Wait for the operating system to load.
-
-6.	Open the Google Chrome browser (preferred browser) on your workstation. If not available, you can open Firefox browser.
-
-7.	Open the lab portal page and click on "Login" icon.
-
-8.	Login to the portal page using the credentials (see above step #3).
-
-## Maximo Application Suite Launch
-
-Action
-
-1.	After login, select the option "Maybe Later" for lab exercise option and click `Done`. If you want to learn about Maximo Application Suite, select the option "Let's Go" and follow the instructions.
-
-2.	If the application tiles (Your applications) are not loaded, you can continue with the lab using the application switcher option described in the next session (4.1 Application Launch).
-
-3.  Getting Started Health & Predict Lab - Identifying Assets at Risk
 
 ## Application Launch 
 
-Value: Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance costs, and eliminate unplanned downtime. You can identify assets that need attention, investigate those assets, and finally take an action to avoid unplanned downtime.
+**Value:** Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance costs, and eliminate unplanned downtime. You can identify assets that need attention, investigate those assets, and finally take an action to avoid unplanned downtime.
 
 Follow the actions below to get to launch the application. 
 
-Action
-1.	Click the App Switcher   icon on the top right side of the home page. 
+`Action:`
+
+1.	Click the App Switcher icon on the top right side of the home page.
+![Click on App Switch](/img/apm_8.7/healthscoring_1.png)
 
 2.	Select `Health` application from the menu bar and you will view the assets list.
+![Select "Health" application](/img/apm_8.7/healthscoring_2.png)
+![Health assets page](/img/apm_8.7/healthscoring_3.png)
 
 
 ## Asset Group View Creation
 
-Follow the actions below to create and view your pump group. This view will allow the Reliability Engineer to view their asset conditions in a tabular and map view.  
-Value: You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.
+Follow the actions below to create and view your pump group. This view will allow the Reliability Engineer to view their asset conditions in a tabular and map view.
 
-Action
+**Value:** You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.
 
-1. Click on the `search icon` and type `pmpd` to view all the pumps from the assets list.
+`Action:`
+
+1. Click on the `Search` icon and type `pmpd` to view all the pumps from the assets list.
+![Search icon](/img/apm_8.7/healthscoring_4.png)
+![Search for pump](/img/apm_8.7/healthscoring_5.png)
 
 2. Create your pump group by selecting the menu option `Save as` and typing your Maximo lab login as your pump view name. Save your view.
+![Save as](/img/apm_8.7/healthscoring_6.png)
+![Sae as new view](/img/apm_8.7/healthscoring_7.png)
 
 3. You can view the pump group you have created using the `drop-down` menu.
 
 4. View both IT and OT data of your pumps in a single view. 
+![View in single view](/img/apm_8.7/healthscoring_8.png)
  
-5. Click column selection menu icon.
+5. Click on the `Column Selection` menu icon.
+![Click column selection menu icon](/img/apm_8.7/healthscoring_9.png)
+![Column selection view](/img/apm_8.7/healthscoring_10.png)
 
-6. Click `Manage` columns.
+6. Click `Manage columns`.
+![Click manage columns](/img/apm_8.7/healthscoring_11.png)
 
 7. Type `manufacturer` in the search field and press enter key on your keyboard. 
+![Type in search fields](/img/apm_8.7/healthscoring_12.png)
+![Type "manufacturer"](/img/apm_8.7/healthscoring_13.png)
 
-8. Select the check box for `Manufacturer` and click `OK`
+8. Select the check box for `manufacturer` and click `Ok`
+![Check box](/img/apm_8.7/healthscoring_14.png)
  
-9. Click on `Column Selection` icon. 
+9. Click on the `Column Selection` icon.
+![Click on "Column selection"](/img/apm_8.7/healthscoring_15.png)
 
-10. Check if you can see the added new field (Manufacturer) in your view. 
+10. Check if you can see the added new field `Manufacturer` in your view.
+ ![Check for "Manufacturer" column](/img/apm_8.7/healthscoring_16.png)
  
 
 ##  Asset Map View
 
-Value: Seeing how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
-1. Click the Map icon to view the asset & its health condition in a map view 
+**Value:** Seeing how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
+
+`Action:`
+
+1. Click the `Map` icon to view the asset and its health condition in a map view.
+![Navigate to map view](/img/apm_8.7/healthscoring_17.png)
  
-2. Click and select the pump PMPDEVICE007, which has a poor health score on the map. Use the zoom in/out feature to adjust your map view.  
+2. Click and select the pump `PMPDEVICE007`, which has a poor health score on the map. Use the zoom in/out feature to adjust your map view.  
+![Select pump](/img/apm_8.7/healthscoring_18.png)
  
 3. Use the zoom in/out features to adjust your map view.
+![Zoom in/out features](/img/apm_8.7/healthscoring_19.png)
+![Adjust map view](/img/apm_8.7/healthscoring_20.png)
  
-4. Click on Actions and choose the option `Add Flag`. 
+4. Click on `Actions` and choose the option `Add Flag`. 
+![Add flag](/img/apm_8.7/healthscoring_21.png)
 
-5. Select the Flag option "Replace" and click "Add Flag". You will see the "Replace" tag added to the pump.
+5. Select the Flag option `Replace` and click `Add Flag`. You will see the `Replace` tag added to the pump.
+![Choose "Replace"](/img/apm_8.7/healthscoring_22.png)
+![Click "add flag"](/img/apm_8.7/healthscoring_23.png)
+![See `Replace` tag added](/img/apm_8.7/healthscoring_24.png)
 
-!!!
-    Note: If the pump is already tagged with `Replace`, you will see a system message (see below). Close the system message and go to the next exercise if you see this message.
+!!! note
+    If the pump is already tagged with `Replace`, you will see a system message (see below). Close the system message and go to the next exercise if you see this message.
 
+![System message](/img/apm_8.7/healthscoring_25.png)
  
 
 ## Work Queues
 
 Follow the actions below to view the work queue of the asset group you have. Work queues are preconfigured views designed to help you find what you're looking for and manage your day-to-day activities.
-Value: Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.
 
-Action
-1.	Click on the navigation menu in the upper left corner and select the Work Queues tab. View the Work Queues list. Reliability Engineers can view the queues based on preconfigured categories.
+**Value:** Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.
 
-2.	Click the hamburger menu again to close the tab, and select the "Failing before PM" work queue to view the assets that could fail before scheduled preventive maintenance is completed.
+`Action:`
+
+1.	Click on the navigation menu in the upper left corner and select the `Work Queues` tab. View the Work Queues list. Reliability Engineers can view the queues based on preconfigured categories.
+![Navigate to work queues](/img/apm_8.7/healthscoring_26.png)
+
+2.	Click the hamburger menu again to close the tab, and select the `Failing before PM` work queue to view the assets that could fail before scheduled preventive maintenance is completed.
+![Assets that coudl fail before PM](/img/apm_8.7/healthscoring_27.png)
 
 3.	Expand the column width of "Asset" to view the full asset names.
+![Expand column width](/img/apm_8.7/healthscoring_28.png)
+![Expand column width](/img/apm_8.7/healthscoring_29.png)
   
 4.	View the list of pumps and their predicted failure dates. Check for the pump that has the lowest Health Score. 
+![List of pumps and their PM dates](/img/apm_8.7/healthscoring_30.png)
 
 
 ## Health scores and Predictive models – Investigating Assets at Risk
