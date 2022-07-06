@@ -174,6 +174,8 @@ Follow the actions below to create and view your pump group. This view will allo
 
 **Value:** Seeing how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
 
+`Action:`
+
 1. Click the `Map` icon to view the asset and its health condition in a map view.
 ![Navigate to map view](/img/apm_8.7/healthscoring_17.png)
  
@@ -201,16 +203,23 @@ Follow the actions below to create and view your pump group. This view will allo
 ## Work Queues
 
 Follow the actions below to view the work queue of the asset group you have. Work queues are preconfigured views designed to help you find what you're looking for and manage your day-to-day activities.
-Value: Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.
 
-Action
-1.	Click on the navigation menu in the upper left corner and select the Work Queues tab. View the Work Queues list. Reliability Engineers can view the queues based on preconfigured categories.
+**Value:** Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.
 
-2.	Click the hamburger menu again to close the tab, and select the "Failing before PM" work queue to view the assets that could fail before scheduled preventive maintenance is completed.
+`Action:`
+
+1.	Click on the navigation menu in the upper left corner and select the `Work Queues` tab. View the Work Queues list. Reliability Engineers can view the queues based on preconfigured categories.
+![Navigate to work queues](/img/apm_8.7/healthscoring_26.png)
+
+2.	Click the hamburger menu again to close the tab, and select the `Failing before PM` work queue to view the assets that could fail before scheduled preventive maintenance is completed.
+![Assets that coudl fail before PM](/img/apm_8.7/healthscoring_27.png)
 
 3.	Expand the column width of "Asset" to view the full asset names.
+![Expand column width](/img/apm_8.7/healthscoring_28.png)
+![Expand column width](/img/apm_8.7/healthscoring_29.png)
   
 4.	View the list of pumps and their predicted failure dates. Check for the pump that has the lowest Health Score. 
+![List of pumps and their PM dates](/img/apm_8.7/healthscoring_30.png)
 
 
 ## Health scores and Predictive models – Investigating Assets at Risk
