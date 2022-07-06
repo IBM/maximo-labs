@@ -172,20 +172,30 @@ Follow the actions below to create and view your pump group. This view will allo
 
 ##  Asset Map View
 
-Value: Seeing how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
-1. Click the Map icon to view the asset & its health condition in a map view 
+**Value:** Seeing how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
+
+1. Click the `Map` icon to view the asset and its health condition in a map view.
+![Navigate to map view](/img/apm_8.7/healthscoring_17.png)
  
-2. Click and select the pump PMPDEVICE007, which has a poor health score on the map. Use the zoom in/out feature to adjust your map view.  
+2. Click and select the pump `PMPDEVICE007`, which has a poor health score on the map. Use the zoom in/out feature to adjust your map view.  
+![Select pump](/img/apm_8.7/healthscoring_18.png)
  
 3. Use the zoom in/out features to adjust your map view.
+![Zoom in/out features](/img/apm_8.7/healthscoring_19.png)
+![Adjust map view](/img/apm_8.7/healthscoring_20.png)
  
-4. Click on Actions and choose the option `Add Flag`. 
+4. Click on `Actions` and choose the option `Add Flag`. 
+![Add flag](/img/apm_8.7/healthscoring_21.png)
 
-5. Select the Flag option "Replace" and click "Add Flag". You will see the "Replace" tag added to the pump.
+5. Select the Flag option `Replace` and click `Add Flag`. You will see the `Replace` tag added to the pump.
+![Choose "Replace"](/img/apm_8.7/healthscoring_22.png)
+![Click "add flag"](/img/apm_8.7/healthscoring_23.png)
+![See `Replace` tag added](/img/apm_8.7/healthscoring_24.png)
 
-!!!
-    Note: If the pump is already tagged with `Replace`, you will see a system message (see below). Close the system message and go to the next exercise if you see this message.
+!!! note
+    If the pump is already tagged with `Replace`, you will see a system message (see below). Close the system message and go to the next exercise if you see this message.
 
+![System message](/img/apm_8.7/healthscoring_25.png)
  
 
 ## Work Queues
