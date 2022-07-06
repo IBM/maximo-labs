@@ -1,10 +1,13 @@
 
-# Contributors to IBM Maximo Template
+# Contributors to IBM Maximo APM V8.7 Lab
 
 - Carlos Ferreira - <carlosyells@yahoo.com>
 - Juan Gu - <gujuan@cn.ibm.com>
 - Satish Narasimha - <ssnarasi@in.ibm.com>
 - Kewei Yang
+- John Douglas
+- Hannah Carr
+
 ---
 
 © 2022 International Business Machines Corporation. No part of this lab document may be reproduced or transmitted in any form without written permission from IBM.
@@ -37,6 +40,7 @@ It is the customer’s responsibility to ensure its own compliance with legal re
 | 2022-06-16 | Balaji Santhanakrishna, Carlos Ferreira and John Douglas | Asset Health Scores                                                                                                          |
 | 2022-06-16 | Carlos Ferreira and Kewei Yang                           | Added setup Watson Studio exercise. Wrote getting started and pre-requisites and overall editing of content.                 |
 | 2022-06-16 | Juan Gu and Carlos Ferreira                              | Added overview of Health and Predict - Utilities models.                                                                     |
-| 2022-06-16 | Satish Narasimha                                         | Added how to install and configure App Connect for use with Health and Predict asset data loading.                           |
+| 2022-06-16 | Satish Narasimha and Carlos Ferreira                     | Added how to install and configure App Connect for use with Health and Predict asset data loading.                           |
+| 2022-07-01 | Carlos Ferreira                                          | Data preparation lab and data dictionary lab.                                                                                |
 | 2022-07-01 | Hannah Carr                                              | Added how to upload asset failure history, sensor and device data and create a predict group using out of the box notebooks. |
 ---
