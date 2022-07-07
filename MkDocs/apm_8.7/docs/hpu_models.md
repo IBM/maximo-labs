@@ -27,26 +27,26 @@ Ensure you have access to :
 
 Health and Predict - Utilities includes the supported Asset Classes listed in table below:
 
-|  Asset class  | Model |
-|--|--|
-| DISTRIBUTION TRANSFORMER | IBM Transformers Tap Changers 4.0.0 |
-| SUBSTATION TRANSFORMER | IBM Transformers Tap Changers 4.0.0,IBM Transformers Tap Changers DGA 4.0.0 |
-| INSTRUMENT TRANSFORMER   | IBM Instrument Transformers Oil Filled CTs 4.0.0 |
-| SWITCHGEAR | IBM Gas Insulated Switchgear 4.0.0 |
-| UNDERGROUND TRANSMISSION MANHOLE | IBM Underground Transmission Manholes 4.0.0 |
-| METAL SUPPORT STRUCTURE | IBM Metal Support Structures 4.0.0 |
-| OVERHEAD TRANSMISSION WIRE| IBM Conductors 4.0.0 |
-| POLE -  Wood Power Pole | IBM Wood Pole Structures 4.0.0 |
-| CIRCUITBREAKER - Oil Circuit Breaker | IBM Circuit Breakers Oil 4.0.0 |
-| CIRCUITBREAKER - Air Blast Circuit Breaker | IBM Circuit Breakers Air Blast 4.0.0 |
-| CIRCUITBREAKER - Air Magnetic Circuit Breaker | IBM Circuit Breakers Air Magnetic 4.0.0 |
-| CIRCUITBREAKER - Vacuum Circuit Breaker | IBM Circuit Breakers Vacuum 4.0.0 |
-| CIRCUITBREAKER - SF6 Circuit Breaker | IBM Circuit Breakers SF6 4.0.0 |
-| UNDERGROUNDTRANSMISSIONCABLE - High Pressure Fluid Filled Pipe Type (HPFF) Cables | IBM HPFF Cables 4.0.0 |
-| UNDERGROUNDTRANSMISSIONCABLE - Mass Impregnated (MI) Cables | IBM MI Cables 4.0.0 |
-| UNDERGROUNDTRANSMISSIONCABLE - Self Contained Fluid Filled (SCFF) Cables | IBM SCFF Cables 4.0.0 |
-| UNDERGROUNDTRANSMISSIONCABLE - Self Contained Gas Filled (SCGF) Submarine Cables | IBM SCGF Cables 4.0.0 |
-| UNDERGROUNDTRANSMISSIONCABLE - Extruded Cross Linked Polyethylene (XLPE) Cables | IBM XLPE Cables 4.0.0 |
+| Asset class                                                                         | Model                                                                               |
+|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| DISTRIBUTION TRANSFORMER                                                            | IBM Transformers Tap Changers 4.0.0                                                 |
+| SUBSTATION TRANSFORMER                                                              | IBM Transformers Tap Changers 4.0.0,IBM Transformers Tap Changers DGA 4.0.0         |
+| INSTRUMENT TRANSFORMER                                                              | IBM Instrument Transformers Oil Filled CTs 4.0.0                                    |
+| SWITCHGEAR                                                                          | IBM Gas Insulated Switchgear 4.0.0                                                  |
+| UNDERGROUND TRANSMISSION MANHOLE                                                    | IBM Underground Transmission Manholes 4.0.0                                         |
+| METAL SUPPORT STRUCTURE                                                             | IBM Metal Support Structures 4.0.0                                                  |
+| OVERHEAD TRANSMISSION WIRE                                                          | IBM Conductors 4.0.0                                                                |
+| POLE -  Wood Power Pole                                                             | IBM Wood Pole Structures 4.0.0                                                      |
+| CIRCUITBREAKER - Oil Circuit Breaker                                                | IBM Circuit Breakers Oil 4.0.0                                                      |
+| CIRCUITBREAKER - Air Blast Circuit Breaker                                          | IBM Circuit Breakers Air Blast 4.0.0                                                |
+| CIRCUITBREAKER - Air Magnetic Circuit Breaker                                       | IBM Circuit Breakers Air Magnetic 4.0.0                                             |
+| CIRCUITBREAKER - Vacuum Circuit Breaker                                             | IBM Circuit Breakers Vacuum 4.0.0                                                   |
+| CIRCUITBREAKER - SF6 Circuit Breaker                                                | IBM Circuit Breakers SF6 4.0.0                                                      |
+| UNDERGROUNDTRANSMISSIONCABLE - High Pressure Fluid Filled Pipe Type (HPFF) Cables   | IBM HPFF Cables 4.0.0                                                               |
+| UNDERGROUNDTRANSMISSIONCABLE - Mass Impregnated (MI) Cables                         | IBM MI Cables 4.0.0                                                                 |
+| UNDERGROUNDTRANSMISSIONCABLE - Self Contained Fluid Filled (SCFF) Cables            | IBM SCFF Cables 4.0.0                                                               |
+| UNDERGROUNDTRANSMISSIONCABLE - Self Contained Gas Filled (SCGF) Submarine Cables    | IBM SCGF Cables 4.0.0                                                               |
+| UNDERGROUNDTRANSMISSIONCABLE - Extruded Cross Linked Polyethylene (XLPE) Cables     | IBM XLPE Cables 4.0.0                                                               |
 
 !!! note
     Some asset classes have subtype, like CIRCUITBREAKER or UNDERGROUNDTRANSMISSIONCABLE

@@ -23,11 +23,17 @@ API keys and URL that you will use to connect to Watson Studio.  You or he can u
 2. Click on `Configurations` and `Watson Studio`
 ![setup assets](/img/apm_8.7/p02.png) 
 
-3. Click on `System`  Make note of the URL, user name and password.  You will use it to login to Cloud Pak for Data. 
+3. Click on `System`  After you create the Watson Studio User be sure to make note of the URL, user name and password.  You will use it to login to Cloud Pak for Data later with it. 
 ![setup assets](/img/apm_8.7/p03.png)
 
 4. Open a browser to the URL and use the credentials from the previous steps to login to Cloud Pak for Data.  After logging in you see your Watson Studio Overview page.
 ![setup assets](/img/apm_8.7/p04.png) 
+
+!!! note
+
+    Ensure Datascience User Belongs to Predict Security Group.   In Maximo Manage, add the user to the PREDICT and PREDICTGROUPING group in the user definition as shown in the screen below.
+    
+![Security Groups](/img/apm_8.7/p15.png) 
 
 
 ## Create a Project in Watson Studio
@@ -67,7 +73,7 @@ This is how you will add the Predict notebook templates to your project that you
 
 Setup database security to allow Watson Studio to access the Maximo Application Suite databases.   
 
-1. Follow the instructions in the documentation to download the database security certificate file  [Database PEM file](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=started-getting-application-administrators#concept_ir4_mc2_jmb__db2cert)
+1. Follow the instructions in the documentation to download the database security certificate file  [Database PEM file](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=started-getting-application-administrators#concept_ir4_mc2_jmb__db2cert) If your database was deployed within CP4D use the directions below.
 
 2. Open a separate browser window and login to Cloud Pak For Data Console to get the database pem file.  Click on the `Hamburger` menu, `Instances` Select the database name used by Maximo Monitor.  The database name should include `IOT` in the name. 
 ![Database instance](/img/apm_8.7/p20.png) 
@@ -81,13 +87,14 @@ Setup database security to allow Watson Studio to access the Maximo Application 
 5. Return to the browser window that has Watson Studio Project you created earlier.  Add the database pem file as a data asset.  Drag and drop the database pem file into the data assets. 
 ![drag pem file](/img/apm_8.7/p22.png) 
 
-!!! note
 
-    Ensure Datascience User Belongs to Predict Security Group.   In Maximo Manage, add the user to the PREDICT and PREDICTGROUPING group in the user definition as shown in the screen below.
-    
-![Security Groups](/img/apm_8.7/p15.png) 
+!!!
+   If your database was deployed outside of CP4D you will have to use the directions below.
 
+1. Login to Openshift Cluster. 
 
+2. Select `Project db2u`, select `workloads`,  select `Secrets`, search for `db2u-certificate`. Select it.  In `Details` tab `Data` section choose `ca.crt` copy certificate.  Save it in a text based file named database.pem on your location machine.  You will upload this file to CP4D Watson Studio project later as a data asset. 
+   
 ## Get URL to Download the Health and Predict and Utilities Notebooks
 <a name="download_URL"></a>
 
