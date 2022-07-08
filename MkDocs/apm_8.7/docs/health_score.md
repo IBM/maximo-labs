@@ -4,25 +4,15 @@ Maximo Health includes [health scores](https://www.ibm.com/docs/en/mhmpmh-and-p-
 
 In this exercise the Reliability Engineer uses Health to:
 	
-
-4 MAXIMO APPLICATION SUITE LAUNCH
-5 GETTING STARTED HEALTH & PREDICT LAB - IDENTIFYING ASSETS AT RISK	
-5.1 APPLICATION LAUNCH	
-5.2 ASSET GROUP VIEW CREATION	
-5.2.1 ASSET MAP VIEW	
-5.3 WORK QUEUES	
-6 HEALTH SCORES AND PREDICTIVE MODELS – INVESTIGATING ASSETS AT RISK	
-6.1 CREATING HEALTH SCORES
-6.2 ASSET DETAIL PAGE
-6.3 PREDICT OVERVIEW
-6.4 PREDICT MODEL
-6.5 ASSET TIMELINE
-7 TAKING ACTION
-7.1 ACTIONS
-8 CLOSING REMARKS
-8.1 HOW TO REMOVE THE TEMPORARY PUMP VIEWS
-8.2 HOW TO REMOVE THE TEMPORARY GROUPS
-8.3 LAB SESSION LOG OUT	
+1. Create an asset group view
+2. View asset map	
+3. View work queues
+4. Create health scores, view predictive models, and investigate assets at risk
+5. View asset details page
+6. View predict model
+7. View asset timeline
+8. Take action by creating service request
+9. Remove temporary views and groups
 
 
 ## Pre-requisites 
@@ -118,7 +108,7 @@ Reliability Engineer manages the reliability risk by ensuring the asset is avail
 
 Follow the actions below to get to launch the application. 
 
-`Action:`
+`Action:` Follow the steps to launch Health and Predict.
 
 1.	Click the App Switcher icon on the top right side of the home page.
 ![Click on App Switch](/img/apm_8.7/healthscoring_1.png)
@@ -134,7 +124,7 @@ Follow the actions below to create and view your pump group. This view will allo
 
 **Value:** You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.
 
-`Action:`
+`Action:` Follow the steps to create asset group view.
 
 1. Click on the `Search` icon and type `pmpd` to view all the pumps from the assets list.
 ![Search icon](/img/apm_8.7/healthscoring_4.png)
@@ -174,7 +164,7 @@ Follow the actions below to create and view your pump group. This view will allo
 
 **Value:** Seeing how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
 
-`Action:`
+`Action:` Follow the steps to view asset map.
 
 1. Click the `Map` icon to view the asset and its health condition in a map view.
 ![Navigate to map view](/img/apm_8.7/healthscoring_17.png)
@@ -206,7 +196,7 @@ Follow the actions below to view the work queue of the asset group you have. Wor
 
 **Value:** Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.
 
-`Action:`
+`Action:` Follow the seps to view the work queues.
 
 1.	Click on the navigation menu in the upper left corner and select the `Work Queues` tab. View the Work Queues list. Reliability Engineers can view the queues based on preconfigured categories.
 ![Navigate to work queues](/img/apm_8.7/healthscoring_26.png)
@@ -217,9 +207,10 @@ Follow the actions below to view the work queue of the asset group you have. Wor
 3.	Expand the column width of "Asset" to view the full asset names.
 ![Expand column width](/img/apm_8.7/healthscoring_28.png)
 ![Expand column width](/img/apm_8.7/healthscoring_29.png)
+![List of pumps and their PM dates](/img/apm_8.7/healthscoring_30.png)
   
 4.	View the list of pumps and their predicted failure dates. Check for the pump that has the lowest Health Score. 
-![List of pumps and their PM dates](/img/apm_8.7/healthscoring_30.png)
+![List of pumps with health scores](/img/apm_8.7/healthscoring_31.png)
 
 
 ## Health scores and Predictive models – Investigating Assets at Risk
@@ -228,163 +219,238 @@ Follow the actions below to view the work queue of the asset group you have. Wor
 
 Before we continue to investigate our assets at risk, we’ll learn how to create health, criticality, and risk scores.  All three types of scores are created in a similar manner.  We’ll create a health score for our lab.
 
-Action
+`Action:` Follow the steps to create health scores.
 
-1. Select "Scoring" from the left navigation bar to open the scoring feature in Maximo Health
+1. Select `Scoring` from the left navigation bar to open the scoring feature in Maximo Health
+![Select scoring](/img/apm_8.7/healthscoring_32.png)
+
 The initial view will show the `Groups` of assets that have already been created.  You’ll also see a tab for `Ranges` and `Contributors`.
 
 2. Select the `Ranges` tab so that we can explore how ranges are created.
+!["Ranges" tab](/img/apm_8.7/healthscoring_33.png)
+
 On this page, you can see that custom ranges have already been created for health, criticality, and risk scores.  In addition to creating custom ranges, you can also name them, and assign different colors and symbols to each range.
-Value:  The ability to customize ranges, and scores, is important since each enterprise has different preferences, as well as different risk tolerances. 
+
+**Value:**  The ability to customize ranges, and scores, is important since each enterprise has different preferences, as well as different risk tolerances. 
 
 3. Let’s review the ranges for Health that have already been established. Click on `Health` at the top of the Health score box.
+![Health score box](/img/apm_8.7/healthscoring_34.png)
+![Health scoring page](/img/apm_8.7/healthscoring_35.png)
 
-4. Three ranges have been created for the health scores.  Each range has limits, a name, color, and symbol assigned to it.  Select the `Scoring` breadcrumb at the top of the page to return to the main scoring page.
+Three ranges have been created for the health scores.  Each range has limits, a name, color, and symbol assigned to it.
+
+4. Select the `Scoring` breadcrumb at the top of the page to return to the main scoring page.
+!["Scoring" bedcrumb](/img/apm_8.7/healthscoring_36.png)
+![Main scoring page](/img/apm_8.7/healthscoring_37.png)
 
 5. Select the `Contributors` tab so that we can explore what contributors are available to use when creating scores. 
- 
+![`Contributors` tab](/img/apm_8.7/healthscoring_38.png)
+
 6. Select the `FACRULYEARSSAMPLE` highlighted blue text in a box to review one of the sample formulas included with Maximo Health.  This contributor holds a formula that describes the asset’s remaining useful life in years.
+![Select contibutor](/img/apm_8.7/healthscoring_39.png)
+![Contributor formula](/img/apm_8.7/healthscoring_40.png)
 
 7. Once you’ve reviewed the page, select the `Scoring` breadcrumb at the top of the page to return to the Contributors page.  Then select the `Groups` tab. 
+![`Scoring` breadcrumb](/img/apm_8.7/healthscoring_41.png)
+![`Groups` tab](/img/apm_8.7/healthscoring_42.png)
 
-8. From the Groups page, we’ll create a custom health score.  Your health score will use the ranges, and the contributor that we just reviewed.  Select the `Create Group +` button to create your own group.
+8. From the `Groups` page, we’ll create a custom health score.  Your health score will use the ranges, and the contributor that we just reviewed. Select the `Create Group +` button to create your own group.
+![Create your own group](/img/apm_8.7/healthscoring_43.png)
 
 9. Create your own group with the following information.
 
+    - **Name:**  The username you used to login to this lab (example:  s123think22)
+    - **Description:**  Think2022 Lab Sample Group
+    - **Object:**  Asset
 
-    Name:  The username you used to login to this lab (example:  s123think22)
-    Description:  Think2022 Lab Sample Group
-    Object:  Asset
+10. Select `Select` to select a group. 
+![Select a group](/img/apm_8.7/healthscoring_44.png)
 
-11. Select `Select` to select a group. 
+11. In the `Select a Query` box, type in `Pumps` in the search box, and select the check mark at the end of line. This will search for a prebuilt query for pumps.
+![Search for pumps query](/img/apm_8.7/healthscoring_45.png)
 
-12. In the `Select a Query` box, type in `Pumps` in the search box, and select the check mark at the end of line. This will search for a prebuilt query for pumps.
+12. Select `Pumps` from the resulting search and click `Apply`.
+![Select pumps query](/img/apm_8.7/healthscoring_46.png)
 
-13. Select `Pumps` from the resulting search and click `Apply`.
 
-14. On the next page, click `Create` to create your unique group of 10 pumps. 
+13. On the next page, click `Create` to create your unique group of 10 pumps. 
+![Create pump group](/img/apm_8.7/healthscoring_47.png)
 
-15. On the group page that you just created, click `Add Score` to create a health score for your pumps.
+14. On the group page that you just created, click `Add Score` to create a health score for your pumps.
+![Add score for group](/img/apm_8.7/healthscoring_48.png)
 
-16. In the popup, click on the `Health` score box to highlight it, then click `Done`.
+15. In the popup, click on the `Health` score box to highlight it, then click `Done`.
+![Add a score](/img/apm_8.7/healthscoring_49.png)
 
-17. We’ll create a health score that is a weighted average of several contributors, including sensor readings, and a field from Manage.  Click on the `+` symbol to add our first contributor, a pre-built formula for Remaining Useful Life. 
+16. We’ll create a health score that is a weighted average of several contributors, including sensor readings, and a field from Manage.  Click on the `+` symbol to add our first contributor, a pre-built formula for Remaining Useful Life.
+![Add first contributor](/img/apm_8.7/healthscoring_50.png)
 
-18. From the Add a Contributor pop-up, FIRST select the box for `FACRULYEARSSAMPLE`, and then click `Add`. If you do not see the blue bar or `Add` option, select the circled check mark in the upper right corner of the `FACRULYEARSSAMPLE` box. 
+17. From the `Add a Contributor` pop-up, FIRST select the box for `FACRULYEARSSAMPLE`, and then click `Add`. If you do not see the blue bar or `Add` option, select the circled check mark in the upper right corner of the `FACRULYEARSSAMPLE` box. 
+![Add a contributor popup](/img/apm_8.7/healthscoring_51.png)
 
-19. Click on the `x` symbol to add a second contributor, a formula we’ll write to get the number count from a field in Manage.
+18. Click on the `ƒx` symbol to add a second contributor, a formula we’ll write to get the number count from a field in Manage.
+![Add a second contributor](/img/apm_8.7/healthscoring_52.png)
 
-20. On the pop up, complete the form with the following inputs:
+19. On the pop up, complete the form with the following inputs:
 
-    Name:  Open Work Orders
-    Description:  A count of open work orders in Manage
-    Formula:  count$openwo
+    - **Name:**  Open Work Orders
+    - **Description:**  A count of open work orders in Manage
+    - **Formula:**  count$openwo
 
-21. Scroll down the screen and enter the following values
+20. Scroll down the screen and enter the following values:
 
-    Best possible value:  0
-    Worst possible value:  5
+    - **Best possible value:**  0
+    - **Worst possible value:**  5
 
-22. Then click `Add formula to score`.
+21. Then click `Add formula to score`.
+![Add formula to score](/img/apm_8.7/healthscoring_53.png)
 
-23. Click on the hierarchy symbol to add a contributor group, which will consist of multiple sensor readings.
+22. Click on the hierarchy symbol to add a contributor group, which will consist of multiple sensor readings.
+![Add contributor group button](/img/apm_8.7/healthscoring_54.png)
 
-24. On the pop up, complete the form as follow, the click `Create`.
+23. On the pop up, complete the form as follow, the click `Create`.
 
-    Name:  Meter Health
-    Description:  Contributor group of meters
+    - **Name:**  Meter Health
+    - **Description:**  Contributor group of meters
+![Add contributor group](/img/apm_8.7/healthscoring_55.png)
 
-25. Click on the contributor group `Meter Health` that you just created to add contributors.
+24. Click on the contributor group `Meter Health` that you just created to add contributors.
+![Contributor group "Meter Health"](/img/apm_8.7/healthscoring_56.png)
 
-26. Click on the `+` to add multiple contributors to your group.
+25. Click on the `+` to add multiple contributors to your group.
+![Add contributors to group](/img/apm_8.7/healthscoring_57.png)
 
-27. Scroll down the screen and Click on the following boxes to select them, then click `Add`.
+26. Scroll down the screen and click on the following boxes to select them, then click `Add`.
     
+    - MOTORTEMP
+    - VELOCITYZ
+    - VELOCITYX
+    - VELOCITYY
 
-    MOTORTEMP
-    VELOCITYZ
-    VELOCITYX
-    VELOCITYY
+![Select contributors](/img/apm_8.7/healthscoring_58.png)
 
-28. Click on the pencil icon to edit the percentage each contributor contributes to the group.
+27. Click on the pencil icon to edit the percentage each contributor contributes to the group.
+![Edit contributors](/img/apm_8.7/healthscoring_59.png)
 
-29. On the Edit contributor settings pop up, adjust the `Weight` to 25 for each of the 4 contributors, and click `Save`.
+28. On the `Edit contributor settings` pop up, adjust the `Weight` to 25 for each of the 4 contributors, and click `Save`.
+![Adjust contributor weight](/img/apm_8.7/healthscoring_60.png)
 
-30. Return to your Health score page by clicking Health in the breadcrumbs.
+29. Return to your Health score page by clicking `Health` in the breadcrumbs.
+![Go back via breadcrumbs](/img/apm_8.7/healthscoring_61.png)
 
-31. Click on the pencil icon to edit the percentage each contributor contributes to the overall Health score.
+30. Click on the pencil icon to edit the percentage each contributor contributes to the overall Health score.
+![Edit overall health score contributors](/img/apm_8.7/healthscoring_62.png)
 
-32. On the Edit contributor settings pop up, adjust the `Weight` to 60% for FACRULYEARSSAMPLE, 20% for Open Work Orders, and 20% for Meter Health, then click `Save`.
+31. On the `Edit contributor settings` pop up, adjust the `Weight` to 60% for `FACRULYEARSSAMPLE`, 20% for `Open Work Orders`, and 20% for `Meter Health`, then click `Save`.
+![Adjust contributor weight](/img/apm_8.7/healthscoring_63.png)
 
-33. Return to your main score page by clicking Scoring in the breadcrumbs.
+32. Return to your main score page by clicking `Scoring` in the breadcrumbs.
+![Return to main score page](/img/apm_8.7/healthscoring_64.png)
 
-You have successfully created a health score for your group of pumps.  You will see your scoring group, along with scoring groups on the page.
-
+33. You have successfully created a health score for your group of pumps.  You will see your scoring group, along with scoring groups on the page.
+![Successfully added new health score for pumps group](/img/apm_8.7/healthscoring_65.png)
 
 ## Asset detail page
 
-1.	Click the "Work Queues" icon on the left side of the menu screen.
+`Action:` Follow the steps to view the asset details page.
 
-2.	Select `Failing before PM` from the Queue Names
+1.	Click the `Work Queues` icon on the left side of the menu screen.
+![Work queues icon](/img/apm_8.7/healthscoring_66.png)
+
+2.	Select `Failing before PM` from the queue names.
+![Select from work queue list](/img/apm_8.7/healthscoring_67.png)
 
 3.	Adjust the "Asset: column width to view the full asset names and click on `PMPDEVICE003`
+![Adjust column width and click on asset](/img/apm_8.7/healthscoring_68.png)
+![Asset details page](/img/apm_8.7/healthscoring_69.png)
 
 4.	View pump `PMPDEVICE003` and click and view details under `Asset Health` section. 
+![Asset health section](/img/apm_8.7/healthscoring_70.png)
 
 5.	Scroll down to the health history section. Select `1 month` period and view the health history data for the last 30 days. The graph here has the Score on the y-axis with the date on the x-axis and maps the Health score and its contributors. This way, we can see a view of how this information contributes to the overall Health of the asset.
+![Health history section](/img/apm_8.7/healthscoring_71.png)
  
 ### Predict Model
 
+**Value:** IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate the probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome. 
+
+`Action:` Follow the steps to view predict model.
+
 1. Click and expand `Predictions` section and wait for the predictive model results to load.
-Value: IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate the probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome. 
+![Predictions section](/img/apm_8.7/healthscoring_72.png)
 
-2. Wait for the Predict failure data table and graph to load for the pump "PMPDEVICE003".
+2. Wait for the Predict failure data table and graph to load for the pump `PMPDEVICE003`.
 
-3. Scroll down to the Failure probability trend card 
+3. Scroll down to the `Failure probability trend` card.
 
 4. Maximize the `Failure probability trend` and view the data. 
+![Maximize trend card](/img/apm_8.7/healthscoring_73.png)
 
 5. Close the maximized view by clicking on the close icon. 
+![Close maximized view](/img/apm_8.7/healthscoring_74.png)
  
-6. Scroll down to `Factors that contribute to failures` card and view the results or full analysis tree. 
+6. Scroll down to `Factors that contribute to failures` card and view the results or full analysis tree.
+![View analysis tree for factors that contribute to failures](/img/apm_8.7/healthscoring_75.png)
  
 ### Asset Timeline
 
-1.	Open Asset Timeline tab.
-2.	Hover over predicted failure. While each piece of information, or widget, gives you insight into the state of our asset, all of the information together, gives us a richer view. This helps us make a data-driven decision on how to address this asset.
+`Action:` Follow the steps to view asset timeline.
+
+1.	Open the `Asset timeline` tab.
+2.	Hover over `Predicted failure`. While each piece of information, or widget, gives you insight into the state of our asset, all of the information together, gives us a richer view. This helps us make a data-driven decision on how to address this asset.
+![Predicted failure information](/img/apm_8.7/healthscoring_76.png)
  
 ### Taking action
 
+`Action:` Follow the steps to take action.
+
 1.	 Scroll the screen up until you see the `PMPDEVICE003` and click `Actions` and select `Create Service Request`.
+![Create service request](/img/apm_8.7/healthscoring_77.png)
  
 2. Type the following and select priority as `High`. Create the ticket by clicking on `Create`. 
 
 
-    Summary: Test Summary
-    Description: Test Description
+    - Summary: Test Summary
+    - Description: Test Description
+
+![Create service request](/img/apm_8.7/healthscoring_78.png)
  
 ## Closing
 
-This exercise explains how to remove the temporary pump views. You will remove the pump views you have created.   Follow the steps below to exit.
+This exercise explains how to remove the temporary pump views. You will remove the pump views you have created.
 
-1.	Go to Asset icon located in the top left side of the menu bar.
+`Action:` Follow the steps below to exit.
+
+1.	Go to `Asset` icon located in the top left side of the menu bar.
+![Asset icon navigation](/img/apm_8.7/healthscoring_79.png)
  
-2.	Click the Asset menu located in the top left side of the menu bar.
+2.	Click the `Asset` menu located in the top left side of the menu bar.
+![Asset icon navigation](/img/apm_8.7/healthscoring_80.png)
  
 3.	Select the pump view you have created (as part of the exercise section 4.2)
+![Select Pump view](/img/apm_8.7/healthscoring_81.png)
 
-4.	Click on the menu option   and select "Delete"
+4.	Click on the menu option and select `Delete`.
+![Delete saved view](/img/apm_8.7/healthscoring_82.png)
 
-5.	Check if you have selected the pump view you have created and click delete.
+
+5.	Check if you have selected the pump view you have created and click `Delete`.
+![Confirm delete](/img/apm_8.7/healthscoring_83.png)
 
 
-How to remove the temporary groups 
+### How to remove the temporary groups 
 
-1.	Click the Scoring menu located in the top left side of the menu bar.
+`Action:` Follow the steps to remove temporary groups.
 
-2.	Go to the group you have created (Section 5.1, Step 9) and delete it
+1.	Click the `Scoring` menu located in the top left side of the menu bar.
+![Navigate to scoring](/img/apm_8.7/healthscoring_84.png)
 
-3.	Check if you have selected the group you have created and click delete.
+2.	Go to the group you have created and delete it.
+![Delete scoring group](/img/apm_8.7/healthscoring_85.png)
+
+3.	Check if you have selected the group you have created and click `Delete`.
+![Confirm delete scoring group](/img/apm_8.7/healthscoring_86.png)
+
 
 Congratulations!  You have experienced how a Reliability Engineer continued the investigation, using Maximo Health and Predict to better understand the current and future states of the pumps, identify potential problems, and take actions using AI-driven insights to avoid unplanned downtime. 
 
