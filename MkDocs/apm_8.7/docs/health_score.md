@@ -95,36 +95,32 @@ Note: Follow the `Actions` steps in bold to navigate through the lab procedures.
 Through this lab exercise, you will learn how a Reliability Engineer uses the MAS Health and Predict applications to review the asset conditions and ensure that there aren't any failures predicted before planned maintenance. Together, MAS Health and Predict applications provide a view of an enterprise's assets' current state and project future conditions of those assets.
 
 
-## Story 
+**Story** 
+
 A Water Resource Authority needs to manage wastewater treatment assets across multiple cities and regions from a single application. Pumps are one of the critical assets in the wastewater plant. In this lab exercise, we will learn how a reliability engineer uses the MAS Health and Predict applications to review the pump conditions and ensure that there aren't any failures predicted before planned maintenance.
 
-## Persona
+Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance costs, and eliminate unplanned downtime. You can identify assets that need attention, investigate those assets, and finally take an action to avoid unplanned downtime.
+
+**Persona**
+
 Reliability Engineer manages the reliability risk by ensuring the asset is available and functions without failure. Based on the industry and market, reliability engineers manage multiple assets and processes.
 
 
-## Application Launch 
-
-**Value:** Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance costs, and eliminate unplanned downtime. You can identify assets that need attention, investigate those assets, and finally take an action to avoid unplanned downtime.
-
-Follow the actions below to get to launch the application. 
-
-`Action:` Follow the steps to launch Health and Predict.
-
-1.	Click the App Switcher icon on the top right side of the home page.
+1. Launch the Maximo Aplication Suite Application for Health and Predict - Utilities.  Click the App Switcher icon on the top right side of the home page.
 ![Click on App Switch](/img/apm_8.7/healthscoring_1.png)
 
-2.	Select `Health` application from the menu bar and you will view the assets list.
+2. Select `Health` application from the `menu` bar and you will view the assets list.
 ![Select "Health" application](/img/apm_8.7/healthscoring_2.png)
 ![Health assets page](/img/apm_8.7/healthscoring_3.png)
 
 
-## Asset Group View Creation
+## Create an Asset Group View
 
 Follow the actions below to create and view your pump group. This view will allow the Reliability Engineer to view their asset conditions in a tabular and map view.
 
-**Value:** You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.
+You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.
 
-`Action:` Follow the steps to create asset group view.
+Follow the steps to create asset group view.
 
 1. Click on the `Search` icon and type `pmpd` to view all the pumps from the assets list.
 ![Search icon](/img/apm_8.7/healthscoring_4.png)
@@ -162,9 +158,9 @@ Follow the actions below to create and view your pump group. This view will allo
 
 ##  Asset Map View
 
-**Value:** Seeing how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
+See how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
 
-`Action:` Follow the steps to view asset map.
+Follow the steps to view asset map.
 
 1. Click the `Map` icon to view the asset and its health condition in a map view.
 ![Navigate to map view](/img/apm_8.7/healthscoring_17.png)
@@ -194,9 +190,9 @@ Follow the actions below to create and view your pump group. This view will allo
 
 Follow the actions below to view the work queue of the asset group you have. Work queues are preconfigured views designed to help you find what you're looking for and manage your day-to-day activities.
 
-**Value:** Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.
+Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.
 
-`Action:` Follow the seps to view the work queues.
+Follow the steps to view the work queues.
 
 1.	Click on the navigation menu in the upper left corner and select the `Work Queues` tab. View the Work Queues list. Reliability Engineers can view the queues based on preconfigured categories.
 ![Navigate to work queues](/img/apm_8.7/healthscoring_26.png)
@@ -213,13 +209,11 @@ Follow the actions below to view the work queue of the asset group you have. Wor
 ![List of pumps with health scores](/img/apm_8.7/healthscoring_31.png)
 
 
-## Health scores and Predictive models – Investigating Assets at Risk
-
-### Creating health scores
+## Create health scores
 
 Before we continue to investigate our assets at risk, we’ll learn how to create health, criticality, and risk scores.  All three types of scores are created in a similar manner.  We’ll create a health score for our lab.
 
-`Action:` Follow the steps to create health scores.
+Follow the steps to create health scores.
 
 1. Select `Scoring` from the left navigation bar to open the scoring feature in Maximo Health
 ![Select scoring](/img/apm_8.7/healthscoring_32.png)
@@ -231,7 +225,7 @@ The initial view will show the `Groups` of assets that have already been created
 
 On this page, you can see that custom ranges have already been created for health, criticality, and risk scores.  In addition to creating custom ranges, you can also name them, and assign different colors and symbols to each range.
 
-**Value:**  The ability to customize ranges, and scores, is important since each enterprise has different preferences, as well as different risk tolerances. 
+The ability to customize ranges, and scores, is important since each enterprise has different preferences, as well as different risk tolerances. 
 
 3. Let’s review the ranges for Health that have already been established. Click on `Health` at the top of the Health score box.
 ![Health score box](/img/apm_8.7/healthscoring_34.png)
@@ -350,9 +344,11 @@ Three ranges have been created for the health scores.  Each range has limits, a 
 33. You have successfully created a health score for your group of pumps.  You will see your scoring group, along with scoring groups on the page.
 ![Successfully added new health score for pumps group](/img/apm_8.7/healthscoring_65.png)
 
-## Asset detail page
+## Asset Details
 
-`Action:` Follow the steps to view the asset details page.
+Understand asset Health using the Asset details page.
+
+Follow the steps to view the asset details page.
 
 1.	Click the `Work Queues` icon on the left side of the menu screen.
 ![Work queues icon](/img/apm_8.7/healthscoring_66.png)
@@ -370,11 +366,11 @@ Three ranges have been created for the health scores.  Each range has limits, a 
 5.	Scroll down to the health history section. Select `1 month` period and view the health history data for the last 30 days. The graph here has the Score on the y-axis with the date on the x-axis and maps the Health score and its contributors. This way, we can see a view of how this information contributes to the overall Health of the asset.
 ![Health history section](/img/apm_8.7/healthscoring_71.png)
  
-### Predict Model
+### Asset Failure Probability
 
-**Value:** IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate the probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome. 
+IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate the probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome. 
 
-`Action:` Follow the steps to view predict model.
+Follow the steps to view predict model.
 
 1. Click and expand `Predictions` section and wait for the predictive model results to load.
 ![Predictions section](/img/apm_8.7/healthscoring_72.png)
@@ -394,7 +390,7 @@ Three ranges have been created for the health scores.  Each range has limits, a 
  
 ### Asset Timeline
 
-`Action:` Follow the steps to view asset timeline.
+Follow the steps to view asset timeline.
 
 1.	Open the `Asset timeline` tab.
 2.	Hover over `Predicted failure`. While each piece of information, or widget, gives you insight into the state of our asset, all of the information together, gives us a richer view. This helps us make a data-driven decision on how to address this asset.
@@ -402,16 +398,15 @@ Three ranges have been created for the health scores.  Each range has limits, a 
  
 ### Taking action
 
-`Action:` Follow the steps to take action.
+Follow the steps to take action on resolving the asset health issues and risks you have uncovered.
 
 1.	 Scroll the screen up until you see the `PMPDEVICE003` and click `Actions` and select `Create Service Request`.
 ![Create service request](/img/apm_8.7/healthscoring_77.png)
  
 2. Type the following and select priority as `High`. Create the ticket by clicking on `Create`. 
 
-
-    - Summary: Test Summary
-    - Description: Test Description
+  - Summary: Test Summary
+  - Description: Test Description
 
 ![Create service request](/img/apm_8.7/healthscoring_78.png)
  
@@ -419,7 +414,7 @@ Three ranges have been created for the health scores.  Each range has limits, a 
 
 This exercise explains how to remove the temporary pump views. You will remove the pump views you have created.
 
-`Action:` Follow the steps below to exit.
+Follow the steps below to exit.
 
 1.	Go to `Asset` icon located in the top left side of the menu bar.
 ![Asset icon navigation](/img/apm_8.7/healthscoring_79.png)
@@ -440,7 +435,7 @@ This exercise explains how to remove the temporary pump views. You will remove t
 
 ### How to remove the temporary groups 
 
-`Action:` Follow the steps to remove temporary groups.
+Follow the steps to remove temporary groups.
 
 1.	Click the `Scoring` menu located in the top left side of the menu bar.
 ![Navigate to scoring](/img/apm_8.7/healthscoring_84.png)

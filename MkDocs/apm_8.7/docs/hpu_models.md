@@ -73,27 +73,31 @@ Create a Score Group for Substation Transformer Assets
 
 5\. Scroll down `query` part, click `Select` to open query dialog, user can select an existing query, or click `+` button to create a new query for ST assets.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_3.png)   
-E.g Select site and classification    
+
+6\. Select `Site` and `Classification`    
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_4.png)   
 
-6\. After select the notebook and query, click `Create` to create the score group.
+7\. After select the notebook and query, click `Create` to create the score group.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_5.png)   
 
-
-7\. After score group is created, system will redirect to the score group detail page, in this page, user can see all the scores and the asset list.
+8\. After score group is created, system will redirect to the score group detail page, in this page, user can see all the scores and the asset list.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_6.png)   
 
-8\. Click the score in the table, and active it on the right, scores need to be activated one by one based on the dependency.
+9\. Click the `score` in the table, and enable `active` to activate the scores one by one based on the dependency.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_7.png)   
 
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_8.png)    
 
-9\. After activating all the scores, click the `Recalculate scores` to start the analysis.
+10\. After activating all the scores, click `Recalculate scores` link  to start the analysis.
 
 ## Update and Schedule Notebooks
 <a name="modify_schedule"></a>
 
-In this exercise you will update the Utilities notebooks using Watson Studio.  You will also schedule `Jobs` to run the notebooks and do asset scoring.  In Health and Predict - Utilities, the scoring calculation happen in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks `Recalculate scores` on UI, it triggers the job to run, do the calculation, and save results to the Database.  
+In this exercise you will update the Utilities notebooks using Watson Studio.  
+
+You will also schedule `Cron Tasks` to run the notebooks and do asset scoring.  In Health and Predict - Utilities, the health scoring calculation happen in Maximo `Cron Tasks`. Each asset type has a configure file with .cfg extension, notebook, and cron task. 
+
+You can also trigger  scoring on demand by clicking `Recalculate scores` which triggers the scoring to be run and be saved to the database.  
 
 ### Substation Transformer Model Configuration 
 
