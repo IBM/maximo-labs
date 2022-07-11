@@ -329,11 +329,7 @@ os.environ['maximo_context'] = '{"maximoUrl":"https://<health/manage host>/maxim
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_run.png)
 
 !!! note
-<<<<<<< HEAD
-    When debugging in notebook directly, do not save as latest version, since it's hardcoded.  You should instead get those inputs from Health.
-=======
 
     When debugging in notebook directly, do not save as latest version, since it's hardcoded.  The corresponding job should instead get those inputs from Health during the runtime.
->>>>>>> d311f86fcf34ca4e0862534797536142d78df0de
 
 Congratulation you learned about the Substation Transformer Models included with Health and Predict - Utilities (HPU) and create a Score Groups.  You also can now modify, schedule and debug the model notebooks.
