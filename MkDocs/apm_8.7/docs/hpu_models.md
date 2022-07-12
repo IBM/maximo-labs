@@ -19,7 +19,7 @@ Ensure you have access to :
 
 - Sample ST(Substation Transformer) data for HPU, and make sure required data are loaded through dataloader via App Connect. Check out the sample data folder structure as below. 
 
-![drawing](/img/apm_8.7/hpu_model_st_sample_data_overview.png)
+![drawing](/img/apm_8.7/hpu_model_st_sample_data_overview.png){ width=70% height=70% }<br>   
 
 
 ## Out Of The Box Models
@@ -73,31 +73,29 @@ Create a Score Group for Substation Transformer Assets
 
 5\. Scroll down `query` part, click `Select` to open query dialog, user can select an existing query, or click `+` button to create a new query for ST assets.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_3.png)   
-
-6\. Select `Site` and `Classification`    
+E.g Select site and classification for the new query.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_4.png)   
 
-7\. After select the notebook and query, click `Create` to create the score group.
+6\. After select the notebook and query, click `Create` to create the score group.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_5.png)   
 
-8\. After score group is created, system will redirect to the score group detail page, in this page, user can see all the scores and the asset list.
+
+7\. After score group is created, system will redirect to the score group detail page, in this page, user can see all the scores and the asset list.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_6.png)   
 
-9\. Click the `score` in the table, and enable `active` to activate the scores one by one based on the dependency.
+8\. Click the score in the table, and active it on the right, scores need to be activated one by one based on the dependency.
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_7.png)   
 
 ![drawing](/img/apm_8.7/hpu_model_sc_setup_8.png)    
 
-10\. After activating all the scores, click `Recalculate scores` link  to start the analysis.
+9\. After activating all the scores, click the `Recalculate scores` to start the analysis.
 
 ## Update and Schedule Notebooks
 <a name="modify_schedule"></a>
 
-In this exercise you will update the Utilities notebooks using Watson Studio.  
+In this exercise you will check the notebook configuration file, notebook and the job, also update the notebook and save to latest version.  You will also schedule `Jobs` to run the notebooks and do asset scoring by changing the cron task schedule.  
 
-You will also schedule `Cron Tasks` to run the notebooks and do asset scoring.  In Health and Predict - Utilities, the health scoring calculation happen in Maximo `Cron Tasks`. Each asset type has a configure file with .cfg extension, notebook, and cron task. 
-
-You can also trigger  scoring on demand by clicking `Recalculate scores` which triggers the scoring to be run and be saved to the database.  
+In Health and Predict - Utilities, the scoring calculation happen in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks `Recalculate scores` on UI, it triggers the job to run, do the calculation, and save results to the Database.  
 
 ### Substation Transformer Model Configuration 
 
@@ -279,7 +277,7 @@ Login Watson Studio, enter the project, click the `Assets` tab, enter the notebo
 //Code example.
 @maximo_function
 def calculate_number_of_customer(context,targetType=None):
-    //Input customized logic here.
+    //Input customized logic here......
     logger = healthlib.get_logger()
     noc_attr = context.get_parameter(name='NOC attribute')
     logger.debug('Noc attribute=%s', noc_attr)
@@ -290,6 +288,30 @@ def calculate_number_of_customer(context,targetType=None):
     result = min(100,max(0, 100 * noc/10000))
     return result
 ```
+### Update scheduler for cron task instance created during score group set up [Create a Score Group](#score_groups) 
+
+User can change the schedule by changing the crontask instance's schedule.
+
+1\. Login and go to Health and Predict Utilities application, click `Scoring and DGA settings` in the menu, and search for the score group just created, click to enter the group details page to get the group id which later will be used to find the corresponding crontask instance.
+![drawing](/img/apm_8.7/hpu_model_crontask_1.png){ width=50% height=50% }
+
+
+2\. Click Administration administration to go to Administration page. Then click `Cron Task Setup` to enter the crontask application.<br>
+![drawing](/img/apm_8.7/hpu_model_crontask_2.png){ width=30% height=30% }
+
+![drawing](/img/apm_8.7/hpu_model_crontask_3.png)
+
+3\. Search for `AHSCORINGGROUP` cron task. And click to enter the crontask detail page.
+![drawing](/img/apm_8.7/hpu_model_crontask_4.png)   
+
+User can trigger the analysis by clcik `Reload Request` under `More actions`, choose the crontask instance that matches score group id.
+![drawing](/img/apm_8.7/hpu_model_crontask_5.png)   
+
+User can also click calendar icon to update the schedule for the cron task instance which has the same id as group id.
+![drawing](/img/apm_8.7/hpu_model_crontask_6.png)   
+
+![drawing](/img/apm_8.7/hpu_model_crontask_7.png){ width=50% height=50% }
+
 
 ## Troubleshoot
 <a name="troubleshoot"></a>
@@ -307,29 +329,37 @@ For a small group of assets, user can enable debug mode for debugging the model.
 
 If user want to directly run the notebook to calculate the score for debug purpose instead of the job, user can add some enviroment variables in notebook temporarily.
 
-1. Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`, click the pencil icon to edit. Click plus button to add a new cell, and put below code with actual value.
+1\. Login Watson Studio, enter the project, click the `Assets` tab, enter the notebook `IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb`, click the pencil icon to edit. Click plus button to add a new cell on top, and put below [code](#code_sample) sample with actual value.
+
+Here are some code examples for debugging<a name="code_sample"></a>.
+
+Code example for debugging on a certain score group.
+```
+import os
+os.environ['maximo_context'] = '{"maximoUrl":"https://<health or manage host>/maximo/","maximoApiKey":"**************","expgroupname":"1003"}'
+```
+
+Code example for debugging on an individule asset.
+```
+import os
+os.environ['maximo_context'] = '{"maximoUrl":"https://<health or manage host>/maximo/","maximoApiKey":"**************","expgroupname":"1003","siteid":"***","assetnum":"***"}'
+```
+![drawing](/img/apm_8.7/hpu_model_ws_notebook_debug.png)  
+
 
 `maximoApiKey` can be found in Application administration page. Login Health and Predict – Utilities and click the Application administration page, click to the Start Center and in the Go To section, click Administration.On the API Keys tab, search and find maxadmin's apikey.
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_apikey_01.png)  
+
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_apikey_02.png)
 
 `expgroupname` can be found in score group detail page.
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_expgroupname.png){ width=50% height=50% }  
 
-2.  Here is a code example for debugging on a certain score group.
-```
-import os
-os.environ['maximo_context'] = '{"maximoUrl":"https://<health/manage host>/maximo/","maximoApiKey":"**************","expgroupname":"1033"}'
-```
+For `<health or manage host>` in `maximoUrl` can be extracted from health url.
+![drawing](/img/apm_8.7/hpu_model_ws_notebook_host.png){ width=50% height=50% }  
 
-3. Code example for debugging on an individule asset.
-```
-import os
-os.environ['maximo_context'] = '{"maximoUrl":"https://<health/manage host>/maximo/","maximoApiKey":"**************","expgroupname":"1033","siteid":"***","assetnum":"***"}'
-```
-![drawing](/img/apm_8.7/hpu_model_ws_notebook_debug.png)  
 
-4. Click `Run` to run cell by cell or restart the kernel run the whole notebook.
+2\. Click `Run` to run cell by cell or restart the kernel run the whole notebook.
 ![drawing](/img/apm_8.7/hpu_model_ws_notebook_run.png)
 
 !!! note
