@@ -3,7 +3,7 @@
 In this exercise, you will learn:
 
 - To use the [Substation Transformer Models](#hpu_notebooks) included with Health and Predict - Utilities (HPU).   
-- [Create a Score Group](#score_groups)for Substation Transformer Assets.
+- [Create a Score Group](#score_groups) for Substation Transformer Assets.
 - [Update and Schedule Notebooks](#modify_schedule) for Utilities.
 - [Troubleshoot Notebooks](#troubleshoot) for Utilities.
 
