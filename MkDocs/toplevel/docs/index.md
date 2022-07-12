@@ -12,6 +12,9 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ### Maximo Application Suite 8.7
 
   ![Not Started](./img/not_started.png)[Health, Predict and Utilities](/apm_8.7/) <span style="color:red">*Under development!*</span><br/>
+  ![Not Started](./img/not_started.png)[Monitor Asset Hierarchy](/mas_monitor_hierarchy/) <span style="color:red">*Under development!*</span><br/>
+  
+
   
 ### Maximo Application Suite 8.6
 
