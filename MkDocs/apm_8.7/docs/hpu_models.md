@@ -288,7 +288,7 @@ def calculate_number_of_customer(context,targetType=None):
     result = min(100,max(0, 100 * noc/10000))
     return result
 ```
-### Update scheduler for cron task instance created during score group set up [Create a Score Group](#score_groups) 
+### Update scheduler for cron task instance created during [score group set up](#score_groups) 
 
 User can change the schedule by changing the crontask instance's schedule.
 
