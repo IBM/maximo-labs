@@ -41,7 +41,7 @@ Select the `FastStart2021-New.ipynb` notebook template that you have renamed wit
 5. Ensure the output runs without errors. (Warnings are Okay) then run the cell to import pmlib into the project
 6. Run the cell to import the additional required libraries
 7. Update the following values in the cell with your initials:
- - Change `newAssetPrefix = 'New_'` to `newAssetPrefix = '{initials}_New_'`
+ - Change `newAssetPrefix = 'New_'` to `newAssetPrefix = '{initials}_'`
  - Change `default_device_type = 'Pump_AFM'` to `default_device_type = '{initials}_Pump_AFM'`
  - Change `device_ids_oem = ['PMPDEVICE002', 'PMPDEVICE004', 'PMPDEVICE006', 'PMPDEVICE008', 'PMPDEVICE010']` to `device_ids_oem = ['{initials}_PMPDEVICE00']`
 8. Run the cell and make a note of the resulting output. This will be needed in future notebooks to call your assets.
@@ -107,6 +107,14 @@ features_for_training`
 14. Run the following cell to import the asset device mappings
 15. Continue to part 8 or scroll down to run the final cell to save the results.
 
+## Part 8 - Add additional Data (Optional)
+This portion of the notebook is optional. If there is additional data to be uploaded you can use this section and customize the data being sent to MAS and creating scoring data for your assets. These cells would have to be updated for your data.
+
+!!! note
+    
+    Ensure you run the final cell with:
+    `store_json = json.dumps(store)
+    project.save_data("fast_execution.json", store_json, overwrite=True)`
 
 ## Confirm Data Upload and Prediction Groups
 <a name="confirm_upload"></a>
@@ -114,10 +122,10 @@ features_for_training`
 Confirm that the historical data was uploaded to Monitor.  Confirm that the Prediction group was created and linked to the model notebook template you created.
 
 1. Navigate to Predict within your environment
-2. Use the left-hand menu to go into 'Predict Grouping'
+2. Use the left-hand menu to go into `Predict Grouping`
    ![Predict Grouping](/img/apm_8.7/hpu_fs11.png) 
 
-3. Ensure your `asset group` is available in the list.
+3. Ensure your asset group is available in the list and confirm your asset is available within the group.
 ![Asset Group](/img/apm_8.7/hpu_fs12.png)
 
 4. Navigate to IOT within your environment.  Under `devices`, search to ensure your `device` is there
@@ -125,11 +133,15 @@ Confirm that the historical data was uploaded to Monitor.  Confirm that the Pred
 
 5. Navigate to `Device Types` and find your device type. Check that your `physical` and `logical interfaces` are active.
 
+6. Navigate to Monitor and ensure your devices have data
+
 ## Error Handling
 <a name="error_handling"></a>
 
-This portion of the notebook is optional. If there is additional data to be uploaded you can use this section and customize the data being sent to MAS.   In order for 'Failure Prediction' notebook template to work you must have specific columns.
-
+### Update DateFrame Header
+If you receive an object attribute error for pandas, with a column header initialized in [Part 2](#part-2---install-the-maximo-predict-sdk) step 10 listed similar to:
+![Error](/img/apm_8.7/hpu_fsl_error.png) 
+Then follow these steps to replace your dataframe header to resolve this error.
 1. Click into the cell that resulted in an error.
 
 2. In the menu, go to `Insert > Cell Above` 
