@@ -4,8 +4,9 @@ Maximo Predict includes notebook templates that you can use to quickly upload yo
 In this exercise you will use Watson Studio, Monitor and Predict to:
 
 1. [Upload historical Data](#faststart_notebook) using the FastStart Loader notebook template. 
-2. [Confirm](#confirm_upload) the Predict Group has been created for your Asset(s)and linked to your notebook template.
-3. [Confirm](#confirm_upload) Monitor has your device type and device(s) available
+2. [Run Notebooks](#run_notebooks) to load your device type and device metrics into Monitor and creates Predict groups.
+3. [Confirm Monitor Data Upload and Prediction Groups](#confirm_upload)
+4. [Error Handling](#error_handling) for data column name format
 
 !!! note
     You must complete the previous exercise for [Data Preparation and Loading Using Notebooks](data_preparation.md) exercise before you start this exercise.
@@ -25,7 +26,7 @@ Select the `FastStart2021-New.ipynb` notebook template that you have renamed wit
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
 
 ## Run the Notebook
-<a name="fasttart_notebook"></a>
+<a name="run_notebooks"></a>
 
 ### Part 1 - Introduction
 1. Run the first cell two cells. These cells are setting up the files required to complete the notebook.
@@ -124,8 +125,8 @@ Confirm that the historical data was uploaded to Monitor.  Confirm that the Pred
 
 5. Navigate to `Device Types` and find your device type. Check that your `physical` and `logical interfaces` are active.
 
-## Data Preparation
-<a name="update_df_headers"></a>
+## Error Handling
+<a name="error_handling"></a>
 
 This portion of the notebook is optional. If there is additional data to be uploaded you can use this section and customize the data being sent to MAS.   In order for 'Failure Prediction' notebook template to work you must have specific columns.
 
