@@ -4,15 +4,15 @@ Maximo Health includes [health scores](https://www.ibm.com/docs/en/mhmpmh-and-p-
 
 In this exercise the Reliability Engineer uses Health to:
 	
-1. Create an [asset group view](asset_group_view)
-2. View [asset map](asset_map_view)
-3. View [work queues](work_queues)
-4. Create [health group scores](create_health_scores)
-5. View [asset details](asset_details) page
-6. View [predict model](asset_failure) for asset failure probability
-7. View [asset timeline](asset_timeline)
-8. Take action by creating [service request](taking_action)
-9. Remove [temporary views and groups](remove_groups)
+1. Create an [asset group view](#asset_group_view)
+2. View [asset map](#asset_map_view)
+3. View [work queues](#work_queues)
+4. Create [health group scores](#create_health_scores)
+5. View [asset details](#asset_details) page
+6. View [predict model](#asset_failure) for asset failure probability
+7. View [asset timeline](#asset_timeline)
+8. Take action by creating [service request](#taking_action)
+9. Remove [temporary views and groups](#remove_groups)
 
 
 ## Pre-requisites 
@@ -43,8 +43,6 @@ It would take about 60 minutes to go through the lab exercise and learn about th
 Note: Follow the `Actions` steps in bold to navigate through the lab procedures. 
 
 ## Glossary
-
-
 
 **Age** is the actual age. It is the current date minus the installation date.
 

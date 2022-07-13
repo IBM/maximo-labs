@@ -15,9 +15,22 @@ The intended audience for this lab are reliability engineers and data scientists
 data to create prediction models for asset end of life using Predict model templates.  Reliability Engineers who need to
 plan to address poor asset health and risk with an asset investment plan to repair or replace their assets.
 
-You will use a publicly available [pump data set from Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download) for predicting a pump failure.   You will also create an Anomaly Detection model for the pump.
+You will use a publicly available [pump data set from Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download) to build a Anomaly Detection model.   
 
 The [pump data definition](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data/discussion/131429?resource=download) explains what sensor readings are available based on the known information about the data set provided on the Kaggle site 
+
+You will use instructor provided simulated CSV asset data for a set of substation transformers to create health scores and asset failure predictions using the automation notebooks provided.
+
+**Ways to Setup and Load Asset Data**
+
+There are three possible ways to get data into Health and Predict - Utilities.
+
+1. [Data loading Python Notebooks](hpu_models.md) requires that you have [set up Watson Studio with Predict Libraries and Notebooks ](setup_watson_studio.md).
+
+2. Data loading meter data using EAM CronTask  - Not covered in this lab
+
+3. [Data loading meter data  and asset types using App Connect](dataload_appconnect.md)- Not covered in this lab. Only the installation is covered.
+
 
 **Pre-requisites**
 
@@ -26,75 +39,38 @@ For this exercise ensure you have access to :
 -  MAS v8.7  Health and Predict.    
 -  Cloud Pak for Data Watson Studio compatible with MAS v8.7
 -  App Connect (optional). You can use the App Connect add on included with Maximo Application Suite as an Add On. Or install it yourself using the App Connect exercises.
--  Access to the Jupyter Notebooks used to in this Lab exercise.  They can be provided by the instructor. 
+-  Access to the asset csv data and Jupyter Notebooks used to in this Lab exercise.  They can be provided by the instructor. 
 
 # Exercises
 
-This lab only includes some of the exercises below:
-
-![Lab Flows by User](/img/apm_8.7/lab_flow.png) 
-
-
-## Asset Setup and Data Loading
-There are three possible ways to get data into Health and Predict - Utilities.
-
-1. [Data loading Python Notebooks](hpu_models.md) requires that you have [set up Watson Studio with Predict Libraries and Notebooks ](setup_watson_studio.md).
-
-2. Data loading meter data using EAM CronTask  - Not yet available in this lab
-
-3. [Data loading meter data  and asset types using App Connect](dataload_appconnect.md) requires that you do the App Connect Exercise.
-
-
-## Exercises 
 These are the exercises available in this lab.
 
-1. [Data Dictionary](data_dictionary.md) explains the public pump data that will be used in this hands on lab
+1. [Setup Watson Studio](setup_watson_studio.md) with Health and Predict - Utilities libraries and Notebook templates
 
-2. [Setup Watson Studio](setup_watson_studio.md) with Health and Predict - Utilities libraries and Notebook templates
+2. [Understand Health and Predict - Utilities Models](hpu_models.md) explains how to prepare your asset data to be analyzed by Health and Predict - Utilities. 
 
-3. [Failure Prediction Model](failure_prediction.md) explains how to assess the performance of a failure date prediction model using  Health and Predict - Utilities with Watson Studio.
+3. [Data Preparation](data_preparation.md) explains how to prepare and format your asset data into files needed for an example prediction model using  Health and Predict - Utilities with Watson Studio.
 
-4. [Anomaly Detection Model](anomaly_detection.md) explains how to assess the performance of an anomaly prediction model using  Health and Predict - Utilities with Watson Studio.
+4. [Load Historical Utilities Data](asset_data_loader.md) explains how to assess the performance of a failure date prediction model using  Health and Predict - Utilities with Watson Studio.
 
-4. [Create Prediction Group](create_prediction_group.md) to link a deployed prediction model or algorithm with a selected a group of assets using Health, Predict and Watson Studio.
+5. [Pump Data Dictionary](data_dictionary.md) explains the public pump data used in this lab from Kaggle.
 
-5. [Understand Health and Predict - Utilities Models](hpu_models.md) explains how to prepare your asset data to be analyzed by Health and Predict - Utilities.
+6. [Load Historical Pump Data](fast_start_loader.md) explains how to Load Historical Pump Data Into Monitor using  Health and Predict - Utilities with Watson Studio and create:
 
-6. [Install and Configure App Connect](appconnect_install.md) flows to load asset metadata and timeseries data into Health and Predict - Utilities.  (Optional)
+   - Failure Prediction Date Model 
+   - Failure Probability  Model 
+   - Anomaly Detection Model 
+   - Prediction Group to link  a group of assets to a deployed Predict models.
 
 7. [Asset Health Scoring](appconnect_install.md) Reliability Engineer uses the MAS Health and Predict applications to review the asset conditions and ensure that there aren't any failures predicted before planned maintenance.
 
-## Contributors are needed for the exercises below:
+8. [Asset Investment Optimization](asset_investment.md) to action assets in poor condition using the Health Web UI.
 
-Here are other exercises that we would like to add to this lab.  We are requesting contributors for these exercises .  Email me <carlos.ferreira1@ibm.com> if 
-you would like to volunteer as a contributor.  
+9. [Install and Configure App Connect](appconnect_install.md) flows to load asset metadata and timeseries data into Health and Predict - Utilities.  (Optional)
 
-### Manage Assets
-1. Creating a New Asset in Maximo in Web UI
-2. Associating Meters w/ an Asset in Web UI
-3. Creating New Condition Monitoring Points & Job Plans
-4. Create a Saved Query or Asset Group*
-5. Edit the IOTHISTORIAN Cron Task & External Systems to synchronize Manage Asset data with Health.
 
-### Understand Asset Health
-1. Setup health scores and groups for assets and locations
-2. Create historical work orders for Asset Timeline and scheduled preventive maintenance.
-3. View asset health on asset detail page.
-4. Identify high critical assets that need actioning.
-5. Action critical assets in poor health.
-6. Find assets that are missing data. View low health work queue.
-7. Health scores, and take action by opening a work order in EAM.
+![Lab Flows by User](/img/apm_8.7/lab_flow.png) 
 
-### Predict Asset Failures and Detect Anomalies
-1. Create asset group
-2. Set-up predictive end of life models using [Watson Studio and Predict](setup_watson_studio.md).
-3. Understanding asset anomalies.
-4. Understanding asset failure predictions.
-
-###  Optimize Asset Investment and Risk
-1. Compare Asset Investment Strategies. Understand costs associated with Refurbishment and Replacement Planning and the 
-long term impact on Asset health. 
-2. Analyze long term asset risk for a selected investment strategy.
 
 ### Architecture
 

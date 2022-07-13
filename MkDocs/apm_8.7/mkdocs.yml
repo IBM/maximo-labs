@@ -12,14 +12,12 @@ nav:
     - Get Started: get_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:
-    - Data Dictionary: data_dictionary.md
     - Setup Watson Studio for Predict: setup_watson_studio.md
-    - Data Preparation: data_preparation.md
-    - Failure Prediction Model : failure_prediction.md
-    - Anomaly Detection Model: anomaly_detection.md
-    - Load Historical Data: fast_start_loader.md
-    - Create Prediction Group: create_prediction_group.md
     - Understand Health and Predict - Utilities Models: hpu_models.md
+    - Data Preparation: data_preparation.md
+    - Load Utilities Data Into Manage: asset_data_loader.md
+    - Pump Data Dictionary: data_dictionary.md
+    - Load Pump Data Into Monitor: fast_start_loader.md
     - Asset Health Scoring: health_score.md
     - Asset Investment Optimization: asset_investment.md
     - Install and Configure App Connect: appconnect_install.md

@@ -7,13 +7,19 @@ This lab provides step-by-step instructions and code examples to help you learn 
 
 You will:
 
-- Learn how to setup and configure Watson Studio with the Maximo Application Suite Predict model templates. 
-- Understand what models and notebook templates are included with Maximo Health Predict and Utilities. 
-- Create a pump Failure Prediction Date Model using Predict.
-- Create a pump Anomaly Detection Model using Predict.
-- Creates a Prediction Group to identify which assets to use with a Predict trained model or algorithm.
-- Use Asset Health Scoring to understand asset condition.
-- Install and configure App Connect Integration server to load asset data into Health and Predict - Utilities. (Optional)
+- Setup Watson Studio for Health and Predict - Utilities model templates and SDKs. 
+- Understand what models and notebook templates are included with Maximo Health Predict and Utilities for understanding Utilities Asset Condition. 
+- Prepare asset data for model templates
+- Load Historical asset data for Substation Transformer assets into Manage.
+- Understand the Pump Data Dictionary
+- Load Historical Pump device data using real Kaggle Pump data into Monitor.
+- Create an Estimated Time to Asset Failure Prediction Model.
+- Create an asset Failure Probability Prediction Model.
+- Create an asset Anomaly Detection Model.
+- Create a Prediction Group to identify which assets to use with a Predict trained model or algorithm.
+- Create and use asset Health scoring to understand asset condition.
+- Create an Asset Investment Optimization project to address asset's that are in poor condition.
+- Optionally install and configure App Connect Integration server to load asset data into Health and Predict - Utilities. 
 
 Before getting started ensure you have completed the prerequisites. [Prerequisites](prereqs.md):
 
@@ -28,6 +34,6 @@ See the [About page](about.md) for how this Maximo Hands on Lab Exercise is lice
 
 ---
 
-**Updated: 2021-06-22**
+**Updated: 2021-07-13**
 
 ---

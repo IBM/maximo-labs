@@ -1,4 +1,4 @@
-# Fast Start Data Loader
+# Load Historical Pump Data Into Monitor
 Maximo Predict includes notebook templates that you can use to quickly upload your device data and associate them to newly created assets within Maximo. Out of the box, users are provided with a set of notebooks including multiple different Fast Start Data Loaders. These notebooks vary in what type of data they will be uploading into the Maximo System. In this lab, we will be uploading sensor data for new devices, failure data, and new assets.
 
 In this exercise you will use Watson Studio, Monitor and Predict to:
@@ -107,7 +107,7 @@ features_for_training`
 14. Run the following cell to import the asset device mappings
 15. Continue to part 8 or scroll down to run the final cell to save the results.
 
-## Part 8 - Add additional Data (Optional)
+### Part 8 - Add additional Data (Optional)
 This portion of the notebook is optional. If there is additional data to be uploaded you can use this section and customize the data being sent to MAS and creating scoring data for your assets. These cells would have to be updated for your data.
 
 !!! note

@@ -3,15 +3,15 @@ Maximo Health includes Asset Investment Optimization templates that you can use 
 
 In this exercise you will use Health to:
 
-1. [Identify Assets](identify_assets) in need of inspection, repair or replacement.
-2. [Create an Asset Investment Project](asset_investment_project)
-3. [Add Assets to a Project](add_assets_to_project)
-4. [Create an Investment Template](create_template) by asset type
-5. [Evaluate Investment Options](evaluate_options) to see which works best to maintain risk,  reduce maintenance costs etc.
-6. [Set maintain risk strategy](maintain_risk) to create a business as usual baseline
-7. [Set reduce risk strategy](reduce_risk) to adjust the risk of the project based on risk tolerance
-8. [Set stay in budget strategy](stay_in_budget) to adjust the budget for the project
-9. [Compare strategies](compare_strategy)
+1. [Identify Assets](#identify_assets) in need of inspection, repair or replacement.
+2. [Create an Asset Investment Project](#asset_investment_project)
+3. [Add Assets to a Project](#add_assets_to_project)
+4. [Create an Investment Template](#create_template) by asset type
+5. [Evaluate Investment Options](#evaluate_options) to see which works best to maintain risk,  reduce maintenance costs etc.
+6. [Set maintain risk strategy](#maintain_risk) to create a business as usual baseline
+7. [Set reduce risk strategy](#reduce_risk) to adjust the risk of the project based on risk tolerance
+8. [Set stay in budget strategy](#stay_in_budget) to adjust the budget for the project
+9. [Compare strategies](#compare_strategy)
 
    
 **Prerequisites**
