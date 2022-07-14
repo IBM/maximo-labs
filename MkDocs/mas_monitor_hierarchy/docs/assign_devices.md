@@ -3,7 +3,7 @@ In this Exercise you will learn how to:
 
 * Assign devices to the asset hierarchy
 
-Assign compressor and sensor devices to assets by using a CSV template file and import the assignment.
+Assign compressor devices to assets by using a CSV template file and import the assignment.
 
 ## 
 The CSV file to assign devices for our functional company Acme that manages transportation networks looks like this:
