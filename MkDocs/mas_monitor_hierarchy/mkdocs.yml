@@ -13,9 +13,8 @@ nav:
     - Pre-Requisites: prereqs.md
     - Exercises:
         - 1. Create hierarchy: create_hierarchy.md
-        - 2. Create devices: create_devices.md
-        - 3. Assign devices: assign_devices.md
-        - 4. Create dashboards: create_dashboards.md
+        - 2. Assign devices: assign_devices.md
+        - 3. Create dashboards: create_dashboards.md
   - About: about.md
 
 theme: readthedocs

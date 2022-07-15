@@ -3,14 +3,14 @@ In this Exercise you will learn how to:
 
 * Assign devices to the asset hierarchy
 
-Assign compressor and sensor devices to assets by using a CSV template file and import the assignment.
+Assign compressor devices to assets by using a CSV template file and import the assignment.
 
 ## 
 The CSV file to assign devices for our functional company Acme that manages transportation networks looks like this:
 ![Client-ABC hierarchy](/img/mas_monitor_hierarchy/Client-ABC-devices.png)&nbsp;&nbsp;
 
 ### Edit the assign devices CSV to match your hierarchy
-1. Download the [Client-ABC devices CSV](/csv/mas_monitor_hierarchy/Client-ABC-devices.csv) to your local system.
+1. Download the [Client-ABC devices CSV](https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv%20files/monitor_hierarchy/Client-ABC-devices.csv) to your local system.
 2. Open the file in your favorite text editor
 3. Find/Replace -MLL with -<your initials\>
 4. Save the file
