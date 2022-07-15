@@ -1,14 +1,14 @@
 # Create Utilities Predict Group and Upload Sensor Data
 
-Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo Manage. This notebook will create the following resources using provided csv files:
+Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo. This notebook will create the following resources using provided csv files:
 
 - Device Data in Monitor
 - Device Asset Mapping
 - Predict Groups
 
-These instructions use the notebook named '2_FastStartLoader-Predict.ipynb' file with the Substation Transformer for Health and Predict for Utilities Demo Assets. Note that this uses simulated Pump Data for the sensor readings.
+These instructions use the notebook named `2_FastStartLoader-Predict.ipynb` file with the Substation Transformer for Health and Predict for Utilities Demo Assets. Note that this uses simulated Pump Data for the sensor readings.
 
-In this exercise you will use Watson Studio, Manage and Predict - Utilities to:
+In this exercise you will use Watson Studio and Health and Predict - Utilities to:
 
 1. [Gather notebook and CSV files](#gather_files) for all data to be uploaded
 2. [Upload the and Run the Fast Start HPU Data Loader Notebooks](#FastStart_notebook) using a template to upload new Device Data and Predict Groups into Maximo
@@ -26,7 +26,7 @@ In this exercise you will use Watson Studio, Manage and Predict - Utilities to:
 - Ensure you have Access to Asset data files for the Health and Predict Utilities Demo Data
 - Complete the [Load Data into Manage](asset_data_loader.md) lab for the Utilities data.
 - Complete the [Load Utilities Health Scores via Notebook](utilities_score_notebook.md) lab 
-- Have the following information from the previous lab: `MX_BASE_URL`, `API_KEY`, `SITE_ID` and `ORG_ID`
+- Have the following information from the previous lab: `SITE_ID`
 
 !!! note
 
@@ -42,23 +42,22 @@ In this exercise you will use Watson Studio, Manage and Predict - Utilities to:
 3. Open the `hpu_st_failure_data_afm_vel_timeshifted_v17.csv` and update the Site ID to your site ID from [Load Data into Manage](asset_data_loader.md)
 ![Cell Updates](/img/apm_8.7/hpu_2fsl_1.png) 
 
-
-5. In the `notebooks` folder there should be a file titled `2_FastStartLoader-Predict.ipynb`
+4. In the `notebooks` folder there should be a file titled `2_FastStartLoader-Predict.ipynb`
 
 ## Upload and Start the Fast Start Data Loader Notebook
 <a name="FastStart_notebook"></a>
 
-1. Upload or open the Fast Start Data Loader template notebook to your Project. These instructions will be based off using the 'FastStart2021-New.ipynb' file.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  Rename the notebook template by prepending your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
-Select the `2_FastStartLoader-Predict.ipynb` notebook template that you have renamed with your initials. 
+1. Upload or open the Fast Start Data Loader template notebook to your Project. Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  Rename the notebook template by prepending your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
+Select the `2_FastStartLoader-Predict.ipynb` notebook template. 
 
 2. Open the notebook.  Click on the `pencil` icon next to your notebook 
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
+![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
 
 ## Run the Notebook
 <a name="run_notebooks"></a>
 
-### Part 1 - Load the Data
 1. Run the first cell two cells. These cells are setting up the files required to complete the notebook.
 
 2. Read the introduction for details on the notebook and how it fits into the Maximo Predict process.
@@ -142,7 +141,7 @@ Select the `2_FastStartLoader-Predict.ipynb` notebook template that you have ren
 
 Confirm that the historical data was uploaded to Monitor.  Confirm that the Prediction group was created and linked to the model notebook template you created.
 
-1. Navigate to Predict within your environment
+1. Navigate to Maximo Health and Predict for Utilities within your environment
 
 2. Use the left-hand menu to go into `Predict Grouping`
    ![Predict Grouping](/img/apm_8.7/hpu_fs11.png) 
@@ -177,6 +176,6 @@ Then follow these steps to replace your dataframe header to resolve this error.
  ![Renamed Header](/img/apm_8.7/hpu_fs7.png) 
 
 
-Congratulations you have loaded historical data and created Predict Groups linking your devices metrics inputs to list of assets and notebook template that will be used to score predictions using Predict with Monitor device data!
+Congratulations you have loaded historical data and created Predict Groups linking your device's metrics inputs to list of assets and notebook template that will be used to score predictions using Predict with Monitor device data!
 
 
