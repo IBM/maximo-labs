@@ -46,6 +46,7 @@ In this exercise you will use Watson Studio, Manage and Predict - Utilities to:
 5. In the `notebooks` folder there should be a file titled `2_FastStartLoader-Predict.ipynb`
 
 ## Upload and Start the Fast Start Data Loader Notebook
+<a name="FastStart_notebook"></a>
 
 1. Upload or open the Fast Start Data Loader template notebook to your Project. These instructions will be based off using the 'FastStart2021-New.ipynb' file.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  Rename the notebook template by prepending your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
 Select the `2_FastStartLoader-Predict.ipynb` notebook template that you have renamed with your initials. 
