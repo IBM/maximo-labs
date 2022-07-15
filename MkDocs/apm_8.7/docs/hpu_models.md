@@ -49,7 +49,7 @@ Health and Predict - Utilities includes the supported Asset Classes listed in ta
 | UNDERGROUNDTRANSMISSIONCABLE - Extruded Cross Linked Polyethylene (XLPE) Cables     | IBM XLPE Cables 4.0.0                                                               |
 
 !!! note
-    Some asset classes have subtype, like CIRCUITBREAKER or UNDERGROUNDTRANSMISSIONCABLE
+    Some asset classes have subtype, like Circuit Breaker or Underground Transmission Cable
 
 **HPU Model Calculation Methodology**
 ![drawing](/img/apm_8.7/hpu_model_bctc.png)
@@ -99,10 +99,10 @@ In Health and Predict - Utilities, the scoring calculation happen in Watson Stud
 
 ### Substation Transformer Model Configuration 
 
-For ST (Substation Transformer), configuration file is IBM-Transformers-Tap-Changers-DGA-4.0.0.cfg.
+For ST (Substation Transformer), configuration file is named `IBM-Transformers-Tap-Changers-DGA-4.0.0.cfg`.
 ![drawing](/img/apm_8.7/hpu_model_ws_cfg.png)  
 
-In the configuration file, under `Common` section `defaultsetup.components` has all the scores group, contributors listed, and functions and paramteres for each item. In `defaultsetup.dependencies` describes the dependency. E.g Health depends on `Transformer health index` and `Tap changer health index`, `Transformer health index` group calculated base on several contributors, function details can be found in `[ext_function_name]` in the file. E.g For `Health` ext_function_name is configured as `[Health Weighted]`, the implementation is `common_calculate_weighted` which is pre-defined in healthlib.
+In the configuration file, under `Common` section `defaultsetup.components` has all the scores group, contributors listed, and functions and parameters for each item. In `defaultsetup.dependencies` section describes the dependencies. E.g Health depends on `Transformer health index` and `Tap changer health index`, `Transformer health index` group calculated based on several contributors.  Function details can be found in `[ext_function_name]` in the file named. E.g For `Health` ext_function_name is configured as `[Health Weighted]`, the implementation is `common_calculate_weighted` which is pre-defined in healthlib.
 
 **Example Configuration**
 

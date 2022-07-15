@@ -1,7 +1,17 @@
-# Load Data Into Manage
-Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo Manage. This notebook will Create Locations, Assets, Meters, Meter groups, and even Sites and/or Organizations if needed all from csv files. These instructions will be based off using the '0_HPU-DataLoader.ipynb' file with the Substation Transformer Health and Predict for Utilities Demo Assets.
+# Load Utilities Data Into Manage
 
-In this exercise you will use Watson Studio, Manage and Predict to:
+Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo Manage. This notebook will create the following resources using provided csv files:
+
+- Organizations 
+- Sites
+- Locations
+- Assets
+- Meters
+- Meter groups
+
+These instructions use the notebook named '0_HPU-DataLoader.ipynb' file with the Substation Transformer for Health and Predict for Utilities Demo Assets.
+
+In this exercise you will use Watson Studio, Manage and Predict - Utilities to:
 
 1. [Gather notebooks and CSV files](asset_data_loader.md#gather_files) for all data to be uploaded
 2. [Upload the and Run the HPU Data Loader Notebooks](#FastStart_notebook) using a template to upload new Asset and Location Data to Maximo Manage. 
@@ -12,7 +22,7 @@ In this exercise you will use Watson Studio, Manage and Predict to:
 
     You must complete the previous exercise for [Setup Watson Studio](setup_watson_studio.md) before you start this exercise.
 
-This notebook can only be run once per environment per site with the same data set. Prior to uploading data, ensure this data set is not available in Maximo or create a new site or choose a different asset set before running the notebook cells specific to the data to be uploaded. For example, if Substation Transformers are already uploaded for the desired site/location, only run the cell to upload a new asset csv for that location. 
+This notebook can only be run once per environment per site with the same data set. Prior to uploading data, ensure this data set is not available in Maximo or create a new site or choose a different asset set before running the notebook cells specific to the data to be uploaded. For example, if Substation Transformers are already uploaded for the desired site nad location, only run the cell to upload a new asset csv for that location. 
 
 ## Pre-requisites 
 
@@ -43,6 +53,8 @@ This notebook can only be run once per environment per site with the same data s
 ![Zip Scripts](/img/apm_8.7/HPU_dataloader_0.png)
 6. Gather the Base url by logging into your Maximo environment, opening the Manage Application and copying the url. Save that and the API key from the previous step to be inserted into this notebook. Follow the instructions in [set up Watson Studio](setup_watson_studio.md)under the 'Get URL' section to gather the `APM_API_KEY`.
 ![Base URL](/img/apm_8.7/HPU_dataloader_2.png)
+
+
 ## Upload files and run the Data Loader Notebook
 
 1. Add both the ZIP files to the data assets in your Watson Studio Project.

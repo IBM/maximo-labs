@@ -1,6 +1,6 @@
 # Data Load App Connect
 
-In this exercise you will load asset class data into Maximo Manage application using App Connect on IBM Cloud.
+In this exercise you will install App Connect on IBM Cloud so that you can use load asset class data into Maximo Manage.  Only App Connect installation is covered in this lab. 
 
 You can skip these exercise steps if you are loading data using Python.  Or your instructor has already loaded asset data into your environment.
 

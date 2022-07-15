@@ -4,21 +4,23 @@ Maximo Health includes [health scores](https://www.ibm.com/docs/en/mhmpmh-and-p-
 
 In this exercise the Reliability Engineer uses Health to:
 	
-1. Create an asset group view
-2. View asset map	
-3. View work queues
-4. Create health scores, view predictive models, and investigate assets at risk
-5. View asset details page
-6. View predict model
-7. View asset timeline
-8. Take action by creating service request
-9. Remove temporary views and groups
+1. Create an [asset group view](#asset_group_view)
+2. View [asset map](#asset_map_view)
+3. View [work queues](#work_queues)
+4. Create [health group scores](#create_health_scores)
+5. View [asset details](#asset_details) page
+6. View [predict model](#asset_failure) for asset failure probability
+7. View [asset timeline](#asset_timeline)
+8. Take action by creating [service request](#taking_action)
+9. Remove [temporary views and groups](#remove_groups)
 
 
 ## Pre-requisites 
 
 - Review Health documentation for the [list of available models](https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850).
 - Ensure your MAS v8.7 Health environment is running and you have access.
+
+Please note that the MAS Worldwide (WW) demo environment is NOT a suitable environment for this lab.  The WW demo environment is shared, and making ANY changes to that environment will impact other users’ ability to demonstrate MAS.
 
 ## Introduction
 
@@ -41,8 +43,6 @@ It would take about 60 minutes to go through the lab exercise and learn about th
 Note: Follow the `Actions` steps in bold to navigate through the lab procedures. 
 
 ## Glossary
-
-
 
 **Age** is the actual age. It is the current date minus the installation date.
 
@@ -116,6 +116,7 @@ Reliability Engineer manages the reliability risk by ensuring the asset is avail
 
 
 ## Create an Asset Group View
+<a name="asset_group_view"></a>
 
 Follow the actions below to create and view your pump group. This view will allow the Reliability Engineer to view their asset conditions in a tabular and map view.
 
@@ -158,6 +159,8 @@ Follow the steps to create asset group view.
  
 
 ##  Asset Map View
+<a name="asset_map_view"></a>
+
 
 See how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. 
 
@@ -188,6 +191,8 @@ Follow the steps to view asset map.
  
 
 ## Work Queues
+<a name="work_queues"></a>
+
 
 Follow the actions below to view the work queue of the asset group you have. Work queues are preconfigured views designed to help you find what you're looking for and manage your day-to-day activities.
 
@@ -211,6 +216,8 @@ Follow the steps to view the work queues.
 
 
 ## Create health scores
+<a name="create_health_scores"></a>
+
 
 Before we continue to investigate our assets at risk, we’ll learn how to create health, criticality, and risk scores.  All three types of scores are created in a similar manner.  We’ll create a health score for our lab.
 
@@ -346,6 +353,8 @@ Three ranges have been created for the health scores.  Each range has limits, a 
 ![Successfully added new health score for pumps group](/img/apm_8.7/healthscoring_65.png)
 
 ## Asset Details
+<a name="asset_details"></a>
+
 
 Understand asset Health using the Asset details page.
 
@@ -368,6 +377,8 @@ Follow the steps to view the asset details page.
 ![Health history section](/img/apm_8.7/healthscoring_71.png)
  
 ### Asset Failure Probability
+<a name="asset_failure"></a>
+
 
 IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate the probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome. 
 
@@ -390,6 +401,8 @@ Follow the steps to view predict model.
 ![View analysis tree for factors that contribute to failures](/img/apm_8.7/healthscoring_75.png)
  
 ### Asset Timeline
+<a name="asset_timeline"></a>
+
 
 Follow the steps to view asset timeline.
 
@@ -398,6 +411,8 @@ Follow the steps to view asset timeline.
 ![Predicted failure information](/img/apm_8.7/healthscoring_76.png)
  
 ### Taking action
+<a name="taking_action"></a>
+
 
 Follow the steps to take action on resolving the asset health issues and risks you have uncovered.
 
@@ -412,6 +427,8 @@ Follow the steps to take action on resolving the asset health issues and risks y
 ![Create service request](/img/apm_8.7/healthscoring_78.png)
  
 ## Closing
+<a name="closing"></a>
+
 
 This exercise explains how to remove the temporary pump views. You will remove the pump views you have created.
 
@@ -434,7 +451,9 @@ Follow the steps below to exit.
 ![Confirm delete](/img/apm_8.7/healthscoring_83.png)
 
 
-### How to remove the temporary groups 
+### How to remove the temporary groups
+<a name="remove_groups"></a>
+
 
 Follow the steps to remove temporary groups.
 
