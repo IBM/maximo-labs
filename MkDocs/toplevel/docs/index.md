@@ -11,21 +11,18 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ---
 ### Maximo Application Suite 8.7
 
-  ![Not Started](./img/not_started.png)[Health, Predict and Utilities](/apm_8.7/) <span style="color:red">*Under development!*</span><br/>
-  ![Not Started](./img/not_started.png)[Monitor Asset Hierarchy](/mas_monitor_hierarchy/) <span style="color:red">*Under development!*</span><br/>
-  
-
+  ![Ready](./img/not_started.png)[Health, Predict and Utilities](/apm_8.7/) <span style="color:red">*New!*</span><br/>
+  ![Ready](./img/not_started.png)[Monitor Asset Hierarchy](/mas_monitor_hierarchy/) <span style="color:red">*New!*</span><br/>
   
 ### Maximo Application Suite 8.6
 
-  ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.6/) <span style="color:red">*New!*</span><br/>
+  ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.6/)<br/>
   ![Ready](./img/readynew.png)[Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/) <span style="color:red">*New!*</span><br/>
   ![Ready](./img/readynew.png)[Suite Overview](/mas_8.6/)<br/>
-  ![Ready](./img/readynew.png)[Health and Predict Utilities v8.6](/hpu_8.6/) <span style="color:red">*New!*</span>
+  ![Ready](./img/readynew.png)[Health and Predict Utilities v8.6](/hpu_8.6/)
 
 ### Maximo Application Suite 8.5
 
-  ![Ready](./img/readynew.png)[MAS Installation](/ocp_8.5/) <span style="color:red">*Updated!*</span><br/>
   ![Ready](./img/readynew.png)[Monitor Functions](/monitor_8.5/)<br/>
   ![Ready](./img/readynew.png)[Monitor Auto AI](/monitor_autoai_8.5/)<br/>
   ![Ready](./img/readynew.png)[MAS Environmental Monitoring](/sustain_mas/)
