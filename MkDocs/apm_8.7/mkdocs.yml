@@ -18,6 +18,7 @@ nav:
       - Load Utilities Data Into Manage: asset_data_loader.md
       - Create Health Scores Using Utilities Notebooks: utilities_score_notebook.md
       - Create Utilities Predict Group and Upload Sensor Data: utilities_devicedata.md
+      - Train and Register Anomaly Detection Model for Utilities Assets: utilities_anomaly_detection.md
       - Pump Data Dictionary: data_dictionary.md
       - Load Pump Data Into Monitor: fast_start_loader.md
       - Asset Health Scoring: health_score.md
