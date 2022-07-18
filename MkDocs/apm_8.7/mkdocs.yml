@@ -19,6 +19,9 @@ nav:
       - Create Health Scores Using Utilities Notebooks: utilities_score_notebook.md
       - Create Utilities Predict Group and Upload Sensor Data: utilities_devicedata.md
       - Train and Register Anomaly Detection Model for Utilities Assets: utilities_anomaly_detection.md
+      - Train and Register End of Life Curve for Utilities Assets: utilities_EOL.md
+      - Train and Register Predicted Failure Date for Utilities Assets: utilities_Failure_date.md
+      - Train and Register Failure Probability for Utilities Assets: utilities_Failure_Probability.md
       - Pump Data Dictionary: data_dictionary.md
       - Load Pump Data Into Monitor: fast_start_loader.md
       - Asset Health Scoring: health_score.md
