@@ -1,12 +1,12 @@
-# Create End of Life Model
+# Create Failure Probability Model
 
-Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo. This notebook will create the Predicted Failure Date using provided csv files.
+Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo. This notebook will create the Failure Probability using provided csv files.
 
-These instructions use the notebook named `5_PMI - Predicted Failure Date-Smart Regression-HPU` file with the Substation Transformer for Health and Predict for Utilities Demo Assets. Note that this uses simulated Pump Data for the sensor readings.
+These instructions use the notebook named `6_PMI-Failure Probability-BinaryClassification-HPU` file with the Substation Transformer for Health and Predict for Utilities Demo Assets. Note that this uses simulated Pump Data for the sensor readings.
 
 In this exercise you will use Watson Studio and Health and Predict - Utilities to:
 
-2. [Upload the and Run the Predicted Failure Notebook](#FP_notebook) using a template to Train and Display an Predicted Failure Date
+2. [Upload the and Run the Failure Probability Notebook](#FP_notebook) using a template to Train and Display a Failure Probability value
 3. [Confirm](#confirm_upload) the Data Has been uploaded for your assets
 
 !!! note
@@ -31,12 +31,13 @@ In this exercise you will use Watson Studio and Health and Predict - Utilities t
 ## Upload and Start the Predicted Failure Date Notebook
 <a name="FP_notebook"></a>
 
-1. Upload or open the Predicted Failure Date template notebook to your Project. Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  If you are using a shared project, rename the notebook template by prepending your initials to the template. If this is done, ensure any paths or file names within the notebook are updated as well. If you already have uploaded the notebook, open it with Watson Studio.
-Select the `5_PMI - Predicted Failure Date-Smart Regression-HPU` notebook template. 
+1. Upload or open the Failure Probability template notebook to your Project. Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  If you are using a shared project, rename the notebook template by prepending your initials to the template. If this is done, ensure any paths or file names within the notebook are updated as well. If you already have uploaded the notebook, open it with Watson Studio.
+Select the `6_PMI-Failure Probability-BinaryClassification-HPU` notebook template. 
 
 2. Open the notebook. Click on the `pencil` icon next to your notebook.
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
+
 ![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
 
 ## Run the Notebook
@@ -45,22 +46,25 @@ Select the `5_PMI - Predicted Failure Date-Smart Regression-HPU` notebook templa
 
 ### Install the Maximo Predict SDK
 
-1. Read the introduction to the Predicted Failure Date Notebook.
+1. Read the introduction to the Failure Probability Notebook.
 
-2. Run the first cell to define the requirements and some environment variables to run this notebook. This cell also checks that the precusor notebook has been run. Additionally, this cell sets the `device_type` and the `asset_group_id` from the stored device type and asset group id in the JSON file produced from the Fast Start Data Loader notebook. Ensure the printed values match your asset group and device.
+2. Run the first cell to install `pyspark` and set up the error logs.
 
-!!!!!ADD IMAGE
-![Asset Group ID](/img/apm_8.7/HPU_AD_1.png)
+3. Run the second cell to define the requirements and some environment variables to run this notebook. This cell also checks that the precursor notebook has been run. Additionally, this cell sets the `device_type` and the `asset_group_id` from the stored device type and asset group id in the JSON file produced from the Fast Start Data Loader notebook. Ensure the printed values match your asset group and device. 
 
-4. Run the next cell to uninstall the `pmlib` and `srom` libraries. This is done to ensure the correct version is installed.
+![Asset Group ID](/img/apm_8.7/hpu_failureprob_0.png)
+
+4. Run the next cell to uninstall the `pmlib` library. This is done to ensure the correct version is installed.
 
 5. Run the next cell to define the API keys used to call Maximo Predict from the `Predict_Envs.JSON` file
 
-6. Run the next cell to import the os, trim the provided base url to be used when downloading `pmlib` later in the environment.
+6. Skip the next cell. It should be commented out, but it would be used to define the API and Predict Environment variables manually if the `Predict_Envs.JSON`file was not available.
 
-7. Run the following cell to reinstall the `pmlib` library. 
+7. Run the next cell to import the os, trim the provided base url to be used when downloading `pmlib` later in the notebook and used to contact the environment via API.
 
-8. Run the next four cells to import the `srom`, `sklearn` and other necessary packages and libraries
+8. Skip the next cell. It should be commented out. This cell is used to hardcode some API information that is not needed here.
+
+9. Run the following five cells to reinstall the `pmlib` and import `sklearn` and other necessary libraries. 
 
 ### Set up the Model Training Pipeline, Train, Register and Enable the Model
 
@@ -68,21 +72,19 @@ Select the `5_PMI - Predicted Failure Date-Smart Regression-HPU` notebook templa
 
 2. Run the second cell to define the sensor readings columns to be considered in the model
 
-3. !!!DOES THIS CELL NEED TO BE UNCOMMENTED TO GET THE FAILURE DATA
+3. Skip the next few cells until you reach the `How to Custom Model` section. In this section, we customize the pipeline settings and the models to be considered.
 
-4. Run the next cell to import the models to be tested and trained
+4. Run the first cell to import the necessary models for the pipeline
 
-5. Run the next cell to view the asset group the desired features will be used in the model training pipeline.
+5. Run the next cell to transform the desired features and define some additional settings for the pipeline. Some of these settings include determining which models to consider and how to process the features
 
-6. Run the next cell to define the model settings for the Pipeline.
+6. Skip the next cell, those are some alternate settings.
 
-!!give more info????
+7. Run the next cell to define the pipeline and standard settings for the modeling process
 
-7. Run the next cell to train the model. Some models take time to train.
+8. Run the next cell to train the model. This cell can take some time for some models. 
 
-8. Once that process is complete, run the next cell to view the resulting dataframe
-
-9. Run the following cell to register the model to your asset group by running the next cell
+9. Once this process is complete, run the following cell to register the model to your asset group.
 
 10. Finally, Run the next cell to enable it and determine how often it will be run in monitor. This is the last cell to be run in this notebook.
 
@@ -97,22 +99,19 @@ Select the `5_PMI - Predicted Failure Date-Smart Regression-HPU` notebook templa
 3. Select your asset group
 ![Predict Grouping](/img/apm_8.7/hpu_2fsl_8.png)
 
-4. Click into your asset group and ensure you have Predicted Failure Date listed under `Trained instances registered for this group` and select an asset to go to the Health Dashboard
-!!! Get new Image
-![Predict Grouping](/img/apm_8.7/HPU_AD_3.png)
+4. Click into your asset group and ensure you have Failure Probability listed under `Trained instances registered for this group` and select an asset to go to the Health Dashboard 
 
-5. Ensure `Next Failure` box is populated at the top of the dashboard. Notice that most of these assets will have `0` in that box
-!!! Accurate? if so get image
+![Predict Grouping](/img/apm_8.7/hpu_failureprob_1.png)
 
-7. Scroll down and expand the `Predict` section to ensure the Predicted Failure Date is visible. 
+5. Scroll down and expand the `Predict` section to ensure the `Failure Probability`, `Failure Probability Trend` and `Factors that Contribute to Failures`
+  is visible. 
 
-![Predict Grouping](/img/apm_8.7/HPU_AD_4.png)
+![Predict Results](/img/apm_8.7/hpu_failureprob_2.png)
 
 !!! note
 
     Recall in the [Create Utilities Predict Group and Upload Sensor Data](utilities_devicedata.md) lab only some assets have sensor data. If an asset does not have sensor data, it will not have Predict data. Additionally, most the assets with data will have a Predicted Failure date of `0 \plusminus x` The following assets should have a future failure date when the notebook is ran:
-!!!!GETLIST CONFIRM STATEMENTS
 
 
-Congratulations you have created an Anomaly Detection model and associated it to your assets!
+Congratulations you have created a Failure Probability model and associated it to your assets!
 

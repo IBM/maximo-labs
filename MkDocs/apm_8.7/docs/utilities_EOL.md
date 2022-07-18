@@ -37,6 +37,7 @@ Select the `4_PMI - End of Life Curve HPU` notebook template.
 2. Open the notebook. Click on the `pencil` icon next to your notebook.
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
+
 ![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
 
 ## Run the Notebook
