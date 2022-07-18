@@ -1,4 +1,4 @@
-# Create Utilities Predict Group and Upload Sensor Data
+# Create Utilities Anomaly Detection Model
 
 Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo. This notebook will create the following resources using provided csv files:
 
@@ -9,7 +9,7 @@ These instructions use the notebook named `3_PMI - Anomaly Detection -UnSupervis
 
 In this exercise you will use Watson Studio and Health and Predict - Utilities to:
 
-2. [Upload the and Run the Anomaly Detection Notebooks](#AD_notebook) using a template to Train and Display an Anomaly Detection Model
+2. [Upload the and Run the Anomaly Detection Notebook](#AD_notebook) using a template to Train and Display an Anomaly Detection Model
 3. [Confirm](#confirm_upload) the Data Has been uploaded for your assets
 
 !!! note
@@ -34,7 +34,7 @@ In this exercise you will use Watson Studio and Health and Predict - Utilities t
 ## Upload and Start the Anomaly Detection Unsupervised Notebook
 <a name="AD_notebook"></a>
 
-1. Upload or open the Anomaly Detection template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  Rename the notebook template by prepending your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
+1. Upload or open the Anomaly Detection template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md)  If you are using a shared project, rename the notebook template by prepending your initials to the template. If this is done, ensure any paths or file names within the notebook are updated as well. If you already have uploaded the notebook, open it with Watson Studio.
 Select the `3_PMI - Anomaly Detection -UnSupervised-HPU.ipynb` notebook template. 
 
 2. Open the notebook.  Click on the `pencil` icon next to your notebook 
@@ -58,7 +58,7 @@ Select the `3_PMI - Anomaly Detection -UnSupervised-HPU.ipynb` notebook template
 
 5. Run the final 4 cells in this section to import the `pmlib`, `srom`, and `logging` libraries
 
-### Setup the Model Training Pipeline
+### Set up the Model Training Pipeline
 
 1. Run the first cell to obtain the Asset Group ID from the JSON file produced in the [Create Utilities Predict Group and Upload Sensor Data](utilities_devicedata.md) lab. Note that it prints out the Predict Group ID after being extracted.
 ![Asset Group ID](/img/apm_8.7/HPU_AD_1.png)
