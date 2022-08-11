@@ -80,8 +80,21 @@ Reliability engineer can also easily config the different matrix versions, like 
 
 ## Config Matrix version
 
-We have by default configuration(include the category cell color/default version etc) for matrix versions, but those configuration can also be changed.
+We have by default configuration(include the category cell color/default version etc) for matrix versions, but those configuration can also be changed. For this execise, we will change the cell color.
 
 `Action:`
 1. Click the Config icon in the top right corner
   ![matrix view](./img/matrix_home_config.png)
+  ![matrix view](./img/matrix_config.png)
+
+2. Click the Edit button under the Categories section
+3. Click the Add button to add a new category 'Medium High' by input the name, color, icon and click the order icon to adjust the sequence.
+  ![matrix view](./img/matrix_config_edit.png)
+4. Click the save button to save the changes
+5. Select the new added category 'Medium High' and then click the cells that should be marked as the orange
+  ![matrix view](./img/matrix_config_color.png)
+  ![matrix view](./img/matrix_config_orange.png)
+6. Click the save button, and the new Matrix view is updated
+  ![matrix view](./img/matrix_home_new.png)
+
+Congratulations.  You now have identified at risk assets from the matrix view and take actions to improve their condition.
