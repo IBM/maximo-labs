@@ -15,7 +15,7 @@ This lab requires the following
 
 - A working Maximo Application Suite (MAS) 8.8+ environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed
 - Make sure the exercise [Understand Health and Predict - Utilities Models](hpu_models.md) is done, so that Sample ST(Substation Transformer) assets have the EOL/Risk/Health scores
-- Members of the EUSCORING security group can configure settings for the matrix(exercise 3), such as which version of the matrix is the default version and the colors and placement of cells.
+- Members of the EUSCORING security group can [configure settings for the matrix](#config-matrix-version), such as which version of the matrix is the default version and the colors and placement of cells.
 
 Please note that the MAS Worldwide (WW) demo environment is NOT a suitable environment for this lab.  The WW demo environment is shared, and making ANY changes to that environment will impact other users’ ability to demonstrate MAS.
 
