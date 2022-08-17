@@ -9,6 +9,9 @@ portfolio.  The labs are in different states of readiness for use shown below. F
  ![Deprecated](./img/deprecated.png)Has been deprecated.<br/>
  
 ---
+### Maximo Application Suite 8.8
+  ![Under Development](./img/under_development.png)[Health, Predict and Utilities](/apm_8.8/) <span style="color:red">*New!*</span><br/>
+
 ### Maximo Application Suite 8.7
 
   ![Ready](./img/not_started.png)[Health, Predict and Utilities](/apm_8.7/) <span style="color:red">*New!*</span><br/>

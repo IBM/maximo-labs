@@ -13,7 +13,7 @@ In this exercise the Reliability Engineer uses HP Utilities to:
 
 This lab requires the following
 
-- A working Maximo Application Suite (MAS) environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed
+- A working Maximo Application Suite (MAS) 8.8+ environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed
 - Make sure the exercise [Understand Health and Predict - Utilities Models](hpu_models.md) is done, so that Sample ST(Substation Transformer) assets have the EOL/Risk/Health scores
 - Members of the EUSCORING security group can configure settings for the matrix(exercise 3), such as which version of the matrix is the default version and the colors and placement of cells.
 
@@ -21,7 +21,7 @@ Please note that the MAS Worldwide (WW) demo environment is NOT a suitable envir
 
 ## Introduction
 
-This lab is intended to demonstrate the Matrix view capability in HPU which is another view besides the existing Grid view, Map view, Charts View. It allows Reliability engineer to esaily idenfity the high risk assets from a matrix distribution view and take actions based on the distributions.
+This lab is intended to demonstrate the Matrix view capability in HPU which is another view added in MAS v8.8 to the existing Grid view, Map view, Charts View. It allows Reliability engineer to esaily idenfity the high risk assets from a matrix distribution view and take actions based on the distributions.
 Reliability engineer can also easily config the different matrix versions, like to change the default version, disable version, change the matrix cells' color(category) etc.
 
 
@@ -41,7 +41,7 @@ Reliability engineer can also easily config the different matrix versions, like 
 ## View Matrix for Criticality and End of life, Criticality and Risk, Criticality and Health
 
 `Action:`
-1. From the main grid view, click the Matrix tab, you will see the matrix, each cell contains the assets count which fall in the x-axis and y-axis range.
+1. From the asset grid view, click the Matrix icon, you will see the matrix, each cell contains the assets count which fall in the x-axis and y-axis range.
    For example, the red cell in the top right corner shows the assets that End of Life is high and Criticality is also High which means high risks.
    Besides cells, there are also several cards which is summarized count for the different categories of assets, normally High is for assets that need to take action in high priority.
 
@@ -59,7 +59,7 @@ Reliability engineer can also easily config the different matrix versions, like 
 
 ## View the drilled in assets list for one distribution
 `Action:`
-1. Click any cell of Matrix or any card with the blue text of number, you can see the detailed assets list.
+1. Click any red cell of Matrix or 'High' need for action card with the blue text of number, you can see the detailed assets list.
   ![matrix view](./img/matrix_home_click.png)
   ![matrix view](./img/matrix_drillin.png)
 2. In the drill in page, you can filter out the interested assets list by click the filter icon.
@@ -80,7 +80,7 @@ Reliability engineer can also easily config the different matrix versions, like 
 
 ## Config Matrix version
 
-We have by default configuration(include the category cell color/default version etc) for matrix versions, but those configuration can also be changed. For this execise, we will change the cell color.
+We have by default configuration(including the Matrix cell category color/default version etc) for matrix versions, but those configuration can also be customized per business requirements. By default, High End of life with Criticality A/B are marked as High risk assets with red color, but for a short/mid-term maintainence plan, we can also add a new Matrix cell category color 'Medium High' to pay attentions. For this execise, we will change the cell color.
 
 `Action:`
 1. Click the Config icon in the top right corner
@@ -91,7 +91,7 @@ We have by default configuration(include the category cell color/default version
 3. Click the Add button to add a new category 'Medium High' by input the name, color, icon and click the order icon to adjust the sequence.
   ![matrix view](./img/matrix_config_edit.png)
 4. Click the save button to save the changes
-5. Select the new added category 'Medium High' and then click the cells that should be marked as the orange
+5. Select the new added Matrix cell color category 'Medium High' and then click the cells that should be marked as the orange
   ![matrix view](./img/matrix_config_color.png)
   ![matrix view](./img/matrix_config_orange.png)
 6. Click the save button, and the new Matrix view is updated
