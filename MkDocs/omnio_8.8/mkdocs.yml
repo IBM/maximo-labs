@@ -1,0 +1,23 @@
+site_name: Monitor integration with Omnio Lab
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Jan Ekstrøm & Contributors
+site_description: "Maximo Monitor Integration With Omnio Edge Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/omnio_8.8
+
+nav:
+  - Get back to Maximo Labs: /
+  - Monitor Node-RED CSV Importer Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Setup environment: setup.md
+        - 2. Create Monitor Devices: monitor_devices.md
+        - 3. Create Omnio Configuration: omnio_configuration.md
+        - 4. Initiate and verify integration: initiate.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
