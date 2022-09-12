@@ -1,7 +1,7 @@
 # Pre-Requisite Instructions
 
 Here are the pre-requisites for the Omnio Edge integration with Maximo Monitor exercises.  
-These exercises are designed for MAS Monitor and not the Maximo Asset Monitor SaaS edition.
+*These exercises are designed for MAS Monitor and not the Maximo Asset Monitor SaaS edition.*
 
 # All Exercises
 
@@ -20,7 +20,7 @@ o Click `Create an IBM ID` link
 
 # Exercise 1
 
-For exercise 1 make sure you have access to a Windows machine with a static IP Address. 
+For exercise 1 make sure you have access to a Windows machine with a static IP Address.</br>
 I have deployed a Windows Server 2019 on IBM Cloud classic infrastructure while building this lab.
 Make sure the firewall is accepting incoming traffic on port 502.
 

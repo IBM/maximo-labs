@@ -1,7 +1,7 @@
 # Welcome to the </br>Maximo Monitor Integration With Omnio Edge Lab
 You will learn about how to setup the integration between Omnio Edge and Maximo Monitor
 
-In this lab I will show you the steps needed to successfully setup the integration with some virtual Variable Frequency Drives.</br>
+In this lab I will show you the steps needed to successfully setup the integration using some virtual Variable Frequency Drives that will deliver the device data over Modbus/TCP over an Omnio Edge gateway and into Maximo Monitor.</br></br>
 The steps will cover:
 
 * Setting up your environment
