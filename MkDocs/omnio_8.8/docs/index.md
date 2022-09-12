@@ -5,9 +5,9 @@ In this lab I will show you the steps needed to successfully setup the integrati
 The steps will cover:
 
 * Setting up your environment
-* 2
-* 3
-* 4
+* Create the needed device types in Maximo moniotr
+* Create the Omnio Edge configuration
+* Verify data flow from Modbus/TCP variable frequency drives all the way into Maximo monitor
 * Have fun
 
 !!! note
@@ -15,6 +15,6 @@ The steps will cover:
 
 ---
 
-**Updated: 2022-09-09**
+**Updated: 2022-09-12**
 
 ---

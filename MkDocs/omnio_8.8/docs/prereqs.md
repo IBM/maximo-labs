@@ -1,6 +1,7 @@
 # Pre-Requisite Instructions
 
-Here are the pre-requisites for the Maximo Monitor Node-RED CSV Importer exercises that are designed for MAS Monitor and not the Maximo Asset Monitor SaaS edition.
+Here are the pre-requisites for the Omnio Edge integration with Maximo Monitor exercises.  
+These exercises are designed for MAS Monitor and not the Maximo Asset Monitor SaaS edition.
 
 # All Exercises
 
@@ -17,23 +18,14 @@ o Click `Create an IBM ID` link
 
 4.  Test your access to the Maximo Application Suite environment.
 
+# Exercise 1
+
+For exercise 1 make sure you have access to a Windows machine with a static IP Address. 
+I have deployed a Windows Server 2019 on IBM Cloud classic infrastructure while building this lab.
+Make sure the firewall is accepting incoming traffic on port 502.
+
 # Exercise 3
 
-For exercise 3 make sure you have the following in place:
+Access to the Omnio Configurator is needed to create the configuration that will run on the Omnio Edge gateway. Your Exercise facilitator should have provided you with the information on your access.
 
-At this point you have installed Node-RED and imported the script. You are ready to adjust the script with your credentials, which you should ask the Exercise facilitator or the MAS Administrator to provide. You need the following information:</br>
-
-Monitor API credentials:
-
-1.  The Monitor API URL, which could look like this `https://demo.api.monitor.maximo35.innovationcloud.info/api/`
-2.  The API Key, which is a very long string of characters
-3.  The API Token, which is a very long string of characters
-
-Monitor DB2 Warehouse credentials:
-
-1.  Hostname
-2.  Database
-3.  Username
-4.  Password
-5.  Port number
-
+For IBM'ers contact Jan Ekstrøm (jan.ekstrom@dk.ibm.com) for access to an IBM account on the Omnio Configurator.
