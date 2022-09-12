@@ -9,6 +9,6 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2022-09-09|Jan Ekstrøm|Init the lab structure. |
+|2022-09-12|Jan Ekstrøm|Initialization of the lab structure. |
 
 ---
