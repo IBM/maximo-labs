@@ -11,7 +11,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ---
 ### Maximo Application Suite 8.8
 
-  ![Ready](./img/not_started.png)[Omnio integration with Monitor](/Omnio_8.8/) <span style="color:red">*New!*</span><br/>
+  ![Ready](./img/not_started.png)[Omnio integration with Monitor](/omnio_8.8/) <span style="color:red">*New!*</span><br/>
 
 ### Maximo Application Suite 8.7
 

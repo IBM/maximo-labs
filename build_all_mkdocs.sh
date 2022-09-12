@@ -131,7 +131,7 @@ mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the Omnio - Monitor integration:
-lab=Omnio_8.8
+lab=omnio_8.8
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
