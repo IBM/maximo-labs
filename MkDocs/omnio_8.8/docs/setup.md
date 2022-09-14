@@ -50,7 +50,7 @@ Start by renaming it to save a copy:
 
 then download the `config.json` that contains the holding registers for 10 Lenze i550 VFD's.</br>
 You can get it here: [config.json](/omnio_8.8/config/config.json){target=_blank}</br>
-Copy it into the Windows environment:
+Copy it into the Windows environment in the unslave folder:
 ![Copy config.json](/img/omnio_8.8/setup_06.png)</br></br>
 
 Double-click on the `unslave` application to start the simulator:
