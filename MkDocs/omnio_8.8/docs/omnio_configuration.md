@@ -12,7 +12,8 @@ This Exercise requires that you have:
 1. completed the pre-requisites required for [all labs](../prereqs) and for this exercise
 2. completed the previous exercises
  
-A good starting point is to get the IP address of the Windows Server as that will be the IP address of the devices. Open a CMD window and execute `ipconfig` so you can see the public ethernet IP address:
+A good starting point is to get the IP address of the Windows Server as that will be the IP address of the simulated devices.</br>
+Open a CMD window and execute `ipconfig` so you can see the public ethernet IP address:
 ![ipconfig](/img/omnio_8.8/omnio_configuration_00.png)</br>
 In my case the IP address is 149.81.201.83.
 
@@ -61,7 +62,7 @@ Select the eight first tags. Change the Base Frequency to 60000 ms (1 minute), w
 Once the first Lenze device is created it is easy to clone it for the second one:
 ![Clone device](/img/omnio_8.8/omnio_configuration_12.png)</br></br>
 
-Enter the Device label and slave ID. Click `Next`:
+Enter the Device label and slave ID 2. Click `Next`:
 ![Configure protocol](/img/omnio_8.8/omnio_configuration_13.png)</br></br>
 
 The data point settings are cloned automatically. Click `Finish`:
