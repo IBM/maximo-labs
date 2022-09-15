@@ -38,7 +38,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2022-09-12|Jan Ekstrøm|Added the initial Omnio-Monitor Integration lab.|
+|2022-09-15|Jan Ekstrøm|Added the initial Monitor-Omnio Integration Lab.|
 |2022-02-26|Cecilia |MAS v8.6 Suite Overview Lab. |
 |2022-02-22|Jan Ekstrøm|Added the Monitor Node-RED CSV Importer lab.|
 |2022-02-18|Carlos Ferreira|Added the MAS 8.7 APM lab.|
