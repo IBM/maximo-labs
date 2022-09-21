@@ -3,6 +3,9 @@
 Here are the pre-requisites for the Omnio Edge integration with Maximo Monitor exercises.  
 *These exercises are designed for MAS Monitor and not the Maximo Asset Monitor SaaS edition.*
 
+!!! attention
+    This lab requires Maximo Monitor 8.8.1 or later.
+
 # All Exercises
 
 All Exercises require that you have:
