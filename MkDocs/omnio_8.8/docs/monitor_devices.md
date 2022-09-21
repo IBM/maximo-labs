@@ -30,6 +30,10 @@ Login to MAS and navigate to Monitor:
 Go into Setup:
 ![Monitor Connect](/img/omnio_8.8/device_02.png)</br></br>
 
+Select `Devices`:
+![Monitor Connect](/img/omnio_8.8/device_02a.png)</br></br>
+
+
 Click on `Add device type`:
 ![Add device type](/img/omnio_8.8/device_03.png)</br></br>
 
@@ -93,4 +97,4 @@ The gateway is now created in Monitor and it will appear as Disconnected until t
 
 
 ---
-Congratulations you have successfully creted the needed device types and gateway in Monitor.</br>
+Congratulations you have successfully created the needed device types and gateway in Monitor.</br>
