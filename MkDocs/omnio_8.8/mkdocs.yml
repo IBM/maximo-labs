@@ -11,7 +11,7 @@ nav:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:
-        - 1. Setup Similator Environment: setup.md
+        - 1. Setup Simulator Environment: setup.md
         - 2. Create Monitor Devices: monitor_devices.md
         - 3. Create Omnio Configuration: omnio_configuration.md
         - 4. Deploy and verify integration: deploy.md
