@@ -25,7 +25,7 @@ Open a terminal window on the Omnio Edge gateway (in my case my Mac) and then pa
 
 ## Verify data flowing into Maximo Monitor
 
-Navigate to Monitor / Connect and verify the Omnio_Edge_01 is in Connected state - and the two deviecs have been created automatically by the gateway.
+Navigate to Monitor / Connect and verify the Omnio_Edge_01 is in Connected state - and the two devices have been created automatically by the gateway.
 ![Omnio devices in Monitor Connect](/img/omnio_8.8/omnio_configuration_18.png)</br></br>
 
 Double click on one of the two simulated Lenze i550 devices:

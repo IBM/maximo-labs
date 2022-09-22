@@ -14,7 +14,7 @@ This Exercise requires that you have:
 The Omnio Edge gateway uses the Maximo Monitor capability to use the priveledged gateway device type, which enables the automatic creation of new devices when data is delivered from the gateway on behalf of them.
 
 !!! attention
-    This execise will use the new version of device types introduced in MAS 8.8 which do not require physical and logical interfaces before saving the data in the database and making it accessible within Monitor.</br>
+    This exercise will use the new version of device types introduced in MAS 8.8 which do not require physical and logical interfaces before saving the data in the database and making it accessible within Monitor.</br>
     However, this currently require you to create the device type for the VFDs manually up front, as automatically creating that through the gateway will result in the classic version of the device type which will require the physical and logical interfaces before the data is available in Monitor.
 
 
