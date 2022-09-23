@@ -42,7 +42,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2022-09-15**
+**UPDATED: 2022-09-23**
 ---
 
 © 2022 International Business Machines Corporation.
