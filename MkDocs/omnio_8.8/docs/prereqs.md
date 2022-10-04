@@ -25,7 +25,7 @@ o Click `Create an IBM ID` link
 # Exercise 1
 
 For exercise 1 make sure you have access to a Windows machine with a static IP Address.</br>
-I have deployed a Windows Server 2019 on IBM Cloud classic infrastructure while building this lab.
+This lab uses a Windows Server 2019 on IBM Cloud classic infrastructure.</br>
 Make sure the firewall is accepting incoming traffic on port 502.
 
 # Exercise 3
@@ -33,3 +33,5 @@ Make sure the firewall is accepting incoming traffic on port 502.
 Access to the Omnio Configurator is needed to create the configuration that will run on the Omnio Edge gateway. Your Exercise facilitator should have provided you with the information on your access.
 
 For IBM'ers contact Jan Ekstrøm (jan.ekstrom@dk.ibm.com) for access to an IBM account on the Omnio Configurator.
+
+Business Partners should contact their Partner Technical Support team for access to an IBM account on the Omnio Configurator.
