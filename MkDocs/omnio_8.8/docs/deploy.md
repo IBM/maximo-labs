@@ -20,7 +20,7 @@ At the end of the previous exercise the Deployment Guide appeared. </br>
 Click on the docker command to copy it to the clipboard :
 ![Deployment Guide](/img/omnio_8.8/omnio_configuration_16.png)</br></br>
 
-Open a terminal window on the Omnio Edge gateway (in my case my Mac) and then paste the docker command line from the clipboard. Click enter to execute it, and you should see the following:
+Open a terminal window (Mac/Linux) or Caommand window (Windows) on the Omnio Edge gateway and then paste the docker command line from the clipboard. Click enter to execute it, and you should see the following:
 ![Start Omnio Edge](/img/omnio_8.8/omnio_configuration_17.png)</br></br>
 
 ## Verify data flowing into Maximo Monitor
