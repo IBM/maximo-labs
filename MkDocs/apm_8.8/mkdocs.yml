@@ -1,0 +1,36 @@
+site_name: Maximo APM V8.8 Hands On Lab
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Carlos Ferreira & Contributors
+site_description: "Maximo Asset Performance Management v8.8 Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/apm_8.8
+
+nav:
+  - Get back to Maximo Labs: /
+  - Maximo APM V8.8.0 Lab:
+    - Welcome to the Lab: index.md
+    - Get Started: get_started.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+      - Setup Watson Studio for Predict: setup_watson_studio
+      - Understand Health and Predict - Utilities Models: hpu_models.md
+      - Data Preparation: data_preparation.md
+      - Load Utilities Data Into Manage: asset_data_loader.md
+      - Create Health Scores Using Utilities Notebooks: utilities_score_notebook.md
+      - Create Utilities Predict Group and Upload Sensor Data: utilities_devicedata.md
+      - Train and Register Anomaly Detection Model for Utilities Assets: utilities_anomaly_detection.md
+      - Train and Register End of Life Curve for Utilities Assets: utilities_EOL.md
+      - Train and Register Predicted Failure Date for Utilities Assets: utilities_Failure_date.md
+      - Train and Register Failure Probability for Utilities Assets: utilities_Failure_Probability.md
+      - Pump Data Dictionary: data_dictionary.md
+      - Load Pump Data Into Monitor: fast_start_loader.md
+      - Asset Health Scoring: health_score.md
+      - Asset Investment Optimization: asset_investment.md
+      - View and config Asset Matrix: matrix.md
+      - Install and Configure App Connect: appconnect_install.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
