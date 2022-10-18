@@ -106,6 +106,15 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
+# Build the MAS v8.7 deployment for Health Predict and Utilities Lab level:
+lab=apm_8.8
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
+mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
+
+
 # Build the MAS deployment on OCP lab level:
 lab=ocp_8.6
 cd $root_dir/MkDocs/$lab
