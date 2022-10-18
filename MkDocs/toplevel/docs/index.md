@@ -8,14 +8,15 @@ portfolio.  The labs are in different states of readiness for use shown below. F
  ![Not Started](./img/not_started.png)Not yet available.<br/>
  ![Deprecated](./img/deprecated.png)Has been deprecated.<br/>
  
----
 ### Maximo Application Suite 8.8
+
+  ![Under Development](./img/under_development.png)[Omnio integration with Monitor](/omnio_8.8/) <span style="color:red">*New!*</span><br/>
   ![Under Development](./img/under_development.png)[Health, Predict and Utilities](/apm_8.8/) <span style="color:red">*New!*</span><br/>
 
 ### Maximo Application Suite 8.7
 
-  ![Ready](./img/not_started.png)[Health, Predict and Utilities](/apm_8.7/) <span style="color:red">*New!*</span><br/>
-  ![Ready](./img/not_started.png)[Monitor Asset Hierarchy](/mas_monitor_hierarchy/) <span style="color:red">*New!*</span><br/>
+  ![Not Started](./img/not_started.png)[Health, Predict and Utilities](/apm_8.7/) <span style="color:red">*New!*</span><br/>
+  ![Not Started](./img/not_started.png)[Monitor Asset Hierarchy](/mas_monitor_hierarchy/) <span style="color:red">*New!*</span><br/>
   
 ### Maximo Application Suite 8.6
 
@@ -32,7 +33,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 ### Maximo SaaS
 
-  ![Ready](./img/readynew.png)[Monitor](/monitor_saas/) <span style="color:red">*Updated!*</span><br/>
+  ![Ready](./img/readynew.png)[Monitor](/monitor_saas/)<br/>
   ![Ready](./img/readynew.png)[Visual Inspection (1.3.0)](/mvi_saas/)  
  
 ### CONTRIBUTE
@@ -41,7 +42,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   ![Ready](./img/readynew.png)[New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2022-02-26**
+**UPDATED: 2022-09-23**
 ---
 
 © 2022 International Business Machines Corporation.
