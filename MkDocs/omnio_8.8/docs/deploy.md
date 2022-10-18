@@ -8,7 +8,7 @@ In this Exercise you will learn how to:
 *Before you begin:*  
 This Exercise requires that you have:
 
-1. completed the pre-requisites required for [all labs](../prereqs)
+1. completed the pre-requisites required for [all labs](../prereqs) and for this exercise
 2. completed the previous exercises
 3. ensured the simulator is running as described in [exercise 1](/omnio_8.8/setup/#configure-the-modbus-simulator){target=_blank}.</br>
 

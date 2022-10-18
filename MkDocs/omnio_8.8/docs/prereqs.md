@@ -35,3 +35,8 @@ Access to the Omnio Configurator is needed to create the configuration that will
 For IBM'ers contact Jan Ekstrøm (jan.ekstrom@dk.ibm.com) for access to an IBM account on the Omnio Configurator.
 
 Business Partners should contact their Partner Technical Support team for access to an IBM account on the Omnio Configurator.
+
+# Exercise 4
+
+Docker must be running on your local machine while acting as the Omnio Edge gateway.</br>
+It can be installed from the [Docker website](https://www.docker.com/){target=_blank}.
