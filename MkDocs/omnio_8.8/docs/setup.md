@@ -15,8 +15,9 @@ This Exercise requires that you have:
 !!! tip 
     You can Right-Click on the images in this lab and select `Open Image in New Tab` </br>
     to view the details in the screen shots:</br></br>
-    ![View details](/img/omnio_8.8/setup_00.png)</br></br>
-    or use the browsers zoom function.
+    ![View details](/img/omnio_8.8/setup_00.png)</br>
+    or use the browsers zoom function.</br></br>
+    *NOTE: Information about the Modbus simulator can be found further down in this lab.
 
 
 ---
