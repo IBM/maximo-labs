@@ -50,7 +50,7 @@ Add those files to git:
 
 Commit the changes:
 
-    git commit -m "Write a descriptive message of your changes"
+    git commit -sm "Write a descriptive message of your changes"
 
 Push the changes to the Github branch:
 
