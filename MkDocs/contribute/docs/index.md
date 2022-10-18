@@ -12,6 +12,6 @@ You can also simply [open issues](https://github.com/IBM/monitor-hands-on-lab/is
 
 ---
 
-**Updated: 2021-02-25**
+**Updated: 2022-10-18**
 
 ---

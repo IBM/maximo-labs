@@ -9,6 +9,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2022-10-18|Jan Ekstrøm|Updated commit to be signed in Add content.|
 |2021-02-25|Jan Ekstrøm|Clearifying the Pre-requisite chapter.|
 |2021-01-06|Jan Ekstrøm|Added admonitions in "Add content" and "Create new lab".|
 |2021-01-05|Jan Ekstrøm|Added more specific instructions in "Add content" and "Create new lab".|
