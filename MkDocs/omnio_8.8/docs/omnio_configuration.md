@@ -15,7 +15,7 @@ This Exercise requires that you have:
 A good starting point is to get the IP address of the Windows Server as that will be the IP address of the simulated devices.</br>
 Open a CMD window and execute `ipconfig` so you can see the public ethernet IP address:
 ![ipconfig](/img/omnio_8.8/omnio_configuration_00.png)</br>
-In my case the IP address is 149.81.201.83.
+In this case the IP address is 149.81.201.83.
 
 
 ---
@@ -38,7 +38,12 @@ Select Maximo Application Suite:
 ![Select MAS](/img/omnio_8.8/omnio_configuration_05.png)</br></br>
 
 Add the credentials you saved in the previous exercise and click `Finish`:
-![Enter credentials](/img/omnio_8.8/omnio_configuration_06.png)</br></br>
+![Enter credentials](/img/omnio_8.8/omnio_configuration_06.png)</br>
+
+
+!!! tip 
+    The URL is defined by `<MAS tenant id>.messaging.iot.<MAS domain>`</br>
+</br></br>
 
 ## Add devices
 
