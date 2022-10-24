@@ -8,25 +8,25 @@ portfolio.  The labs are in different states of readiness for use shown below. F
  
 ### Maximo Application Suite 8.8
 
-  [Omnio integration with Monitor](/omnio_8.8/) <span style="color:red">*New!*</span><br/>
-  [Health, Predict and Utilities](/apm_8.8/) <span style="color:red">*New!*</span><br/>
+  [Omnio integration with Monitor](/omnio_8.8/) <span style="color:red">*New!*</span>  
+  [Health, Predict and Utilities](/apm_8.8/) <span style="color:red">*Under Development!*</span>  
 
 ### Maximo Application Suite 8.7
 
-  [Health, Predict and Utilities](/apm_8.7/)
+  [Health, Predict and Utilities](/apm_8.7/)  
   [Monitor Asset Hierarchy](/mas_monitor_hierarchy/)
   
 ### Maximo Application Suite 8.6
 
-  [MAS Installation](/ocp_8.6/)<br/>
-  [Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/)
-  [Suite Overview](/mas_8.6/)<br/>
+  [MAS Installation](/ocp_8.6/)  
+  [Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/)  
+  [Suite Overview](/mas_8.6/)  
   [Health and Predict Utilities v8.6](/hpu_8.6/)
 
 ### Maximo Application Suite 8.5
 
-  [Monitor Functions](/monitor_8.5/)<br/>
-  [Monitor Auto AI](/monitor_autoai_8.5/)<br/>
+  [Monitor Functions](/monitor_8.5/)  
+  [Monitor Auto AI](/monitor_autoai_8.5/)  
   [MAS Environmental Monitoring](/sustain_mas/)
 
 ### Maximo SaaS
