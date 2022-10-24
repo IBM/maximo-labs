@@ -38,6 +38,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2022-10-18|Jan Ekstrøm|Updated Monitor-Omnio Integration Lab and the Maximo Lab landing page.|
 |2022-09-23|Jan Ekstrøm|Added the Monitor-Omnio Integration Lab.|
 |2022-02-26|Cecilia |MAS v8.6 Suite Overview Lab. |
 |2022-02-22|Jan Ekstrøm|Added the Monitor Node-RED CSV Importer lab.|

@@ -8,7 +8,7 @@ In this Exercise you will learn how to:
 *Before you begin:*  
 This Exercise requires that you have:
 
-1. completed the pre-requisites required for [all labs](../prereqs)
+1. completed the pre-requisites required for [all labs](../prereqs) and for this exercise
 2. completed the previous exercises
 3. ensured the simulator is running as described in [exercise 1](/omnio_8.8/setup/#configure-the-modbus-simulator){target=_blank}.</br>
 
@@ -20,7 +20,7 @@ At the end of the previous exercise the Deployment Guide appeared. </br>
 Click on the docker command to copy it to the clipboard :
 ![Deployment Guide](/img/omnio_8.8/omnio_configuration_16.png)</br></br>
 
-Open a terminal window on the Omnio Edge gateway (in my case my Mac) and then paste the docker command line from the clipboard. Click enter to execute it, and you should see the following:
+Open a terminal window (Mac/Linux) or Command window (Windows) on the Omnio Edge gateway and then paste the docker command line from the clipboard. Click enter to execute it, and you should see the following:
 ![Start Omnio Edge](/img/omnio_8.8/omnio_configuration_17.png)</br></br>
 
 ## Verify data flowing into Maximo Monitor
