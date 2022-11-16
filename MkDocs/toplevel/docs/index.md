@@ -5,6 +5,11 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 !!! tip
     Using the Search capability in the upper left hand corner might help you find things quicker.
+
+### Maximo Application Suite 8.9
+
+  [Health, Predict and Utilities](/apm_8.9/) <span style="color:red">*Under Development!*</span>  
+
  
 ### Maximo Application Suite 8.8
 
