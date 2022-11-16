@@ -1,5 +1,5 @@
 # Get Started
-In this Lab you wil learn how to use Maximo Health and Predict-Utilities capabilities manage the condition and performance of your assets.
+In this Lab you wil learn how to use Maximo Health and Predict-Utilities capabilities to manage the reliability, condition and performance of your assets.
 
 The version of Health and Predict - Utilities used in this Lab is for Maximo Application Suite v8.9.
 

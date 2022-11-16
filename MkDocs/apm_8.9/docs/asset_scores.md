@@ -1,12 +1,14 @@
 # Asset Custom Scores
 
 Health Predict and Utilities already provide the ability to score asset condition using the out-of-the-box scores for:
+-
 - Health
 - Risk
 - Criticallty
 - End of Life 
 
 The new asset custom scores in  Maximo Health and Maximo Health and Predict - Utilities (HPU) of Maximo Application Suite (MAS) allow the user to create their own scores using
+
 - **Formula based** which is in Health today. Doesn't require any coding and uses an Excel style approach for calculating a custom score
 - **Notebook based** deployed as Watson Studio job which provides greater customization using Python and enables the score to also be calculated into the future.
 - **Notebook based** deployed IBM Machine Learning Service.  provides greater customization using Python and enables the score to also be calculated into the future. 
@@ -38,7 +40,7 @@ Custom scores allow me to apply my knowledge as an SME (subject matter expert) t
 
 ###  Navigate to Health and Predict - Utilities
 
-You will start from the main MAS screen, and select the Health application.    You will create a custom score for a subset of these assets.
+You will start from the main MAS screen, and select the Health application from the `Suite navigator` page or from `Industry solutions` tab.    You will create a custom score for a subset of these assets.
 
 1. You will start from the main MAS screen, and select the Health Predict - Utilities application.  Select the `Industry solutions` tab.
 
