@@ -19,16 +19,35 @@ Maximo Health includes Asset Investment Optimization templates that you can use 
 
 In this exercise you will use Health to:
 
-1. [Setup Scores](#setup_scores) to calculate asset condition.
-2. [Matrix Page](#matrix_page) to identify and quantify the number of assets that need attention.
-3. [Asset Investment Project](#asset_investment_project)to decide which strategy is best to action the assets 
+1. [Setup View](#setup_view) to have a group of assets that you can view and work with.
+2. [Setup Scores](#setup_scores) to calculate asset condition.
+3. [Matrix Page](#matrix_page) to identify and quantify the number of assets that need attention.
+4. [Asset Investment Project](#asset_investment_project) to decide which strategy is best to action the assets 
  
 **Prerequisites**
 
-This lab requires the following
+This lab requires the following:
 
 - A working Maximo Application Suite (MAS) environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed.
 - Sufficient asset data to run the analysis and get insights
+
+## Setup View
+<a name="setup_view"></a>
+
+Create a private view so that you can work with your pumps in the `Assets Grid` page.  
+
+1. Go to the Asset Grid page. Enter `PUMP-100` without last digit as shown below.
+![query](/img/apm_8.9/P18.png)	
+
+2. Click the dropdown with the `view:` names.  Scroll up to save your query. Name it `Centrifugal Pumps`.
+![query](/img/apm_8.9/P19.png)	
+
+3. Save the `view` as a `private view` so that no one but you can see it.   
+![query](/img/apm_8.9/P20.png)	
+
+
+Value:  By creating a view, query and adding your custom score to your asset grid you can more quickly find the assets that aren't performing well. This makes it easier to analyze and take action to repair or replace poor performing assets. 
+
 
 ## Setup Scores
 <a name="setup_scores"></a>
@@ -40,123 +59,159 @@ Custom scores allow me to apply my knowledge as an SME (subject matter expert) t
 
 ###  Navigate to Health and Predict - Utilities
 
-You will start from the main MAS screen, and select the Health application from the `Suite navigator` page or from `Industry solutions` tab.    You will create a custom score for a subset of these assets.
+You will start from the main MAS screen, and select the `Health` application from the `Suite navigator` page or from `Industry solutions` tab.    You will create a custom score for a subset of these assets.
 
 1. You will start from the main MAS screen, and select the Health Predict - Utilities application.  Select the `Industry solutions` tab.
-
 ![navigate_to_health](/img/apm_8.9/P1.png)	
 
 2. Review the assets in the Assets Grid page to see over 10 thousand assets under management.
 ![assets_grid](/img/apm_8.9/P2.png)	
 
 
-###  Create a Score Type
+###  Setup Score Type
 
 To create a custom score, You will select the  `Scoring and DGA Setting` tab on the left navigation bar in Maximo Health.  This is where You can create and view asset groups, score types, and contributors.  You will click on the `Create new score type` button to create a custom score type, complete the fields in the pop-up box, and save it.
 
 1. Click `Scoring and DGA Setting` from the left nav 
 ![score_dga_settings](/img/apm_8.9/P3.png)	
 
-2. Click `Create new score type +` 
+2. Click `Score Types` tab. 
 ![create_new_score_type](/img/apm_8.9/P4.png)	
 
-3. Click the screen to auto-fill the pop-up box
-![pop_up](/img/apm_8.9/P5.png)	
+3. Click `Create new score type +` button.
+![new_score_type form](/img/apm_8.9/P5.png)	
 
-4. Click `Save`
+4. Enter the values below in the form:
+
+- Set name to: `Centrifugal Pump Efficiency`
+- Set Description to : `Centrifugal Pump Efficiency`
+- Set Maximum to : `95`
+- Set Minimum to : '40' 
+- Where you check the radio box `Needs attention` to when the value get closer to `40 - Minimum`
+- Adjust the ranges so that they align with the maximum and minimum ranges. See image below to check the settings. 
+- Click `Save`
 ![save_score_settings](/img/apm_8.9/P6.png)	
 
-Value:  Creating custom ranges allows me to enforce my unique tolerance to the score.
+6. Review your Score settings that you just created.
+![review_score_settings](/img/apm_8.9/P7.png)	
 
 
-###  Create a Score Group
+Value:  Creating custom ranges allows me to enforce my company specific measurement method for the asset condition score or using engineering formulas.
 
-You can build out a custom score to apply only to a specific group of assets.  Groups allow you to scope the score to a query of assets and a method for calculating the scores.
+###  Setup Score Group
 
-For substation transformers, You can see there’s already a group called `ST_EUDEMO_A_TEST`.  There are several scores already created using a notebook included with Health and Predict – Utilities.
+You can build out a custom score to apply to a specific group of assets.  Groups allow you to scope the score to a query of assets and a method for calculating the scores.
+
+For substation transformers, You can see there’s already a group called `Chilled water pump`.  There are several scores already created using a notebook included with Health and Predict – Utilities.
 
 To create a custom score for these assets, You will return to the `Groups` tab, and click the `Create a scoring and DGA group`.
 
 You will complete the fields.  For this example, we’ll create our score using the `Building Scores` capability rather than the `Connecting group to notebook` option.  You will use the query function to identify the assets in my group then create the group.
 
-1. Click the `Groups` tab
-![groups](/img/apm_8.9/P7.png)	
+1. Click the `Groups` tab.
+![groups](/img/apm_8.9/P8.png)	
 
-2. Click the `ST_EUDEMO_A_TEST` group 
-![eu_group](/img/apm_8.9/P8.png)	
+2. If you don't have a group for pumps you can click `Create a scoring and DGA group` and fill in the form. Click button `Create a scoring DGA group` to specify the assets, query to use and method of calculation.  `Building scores` uses the easy to use forumula based approach.  The notebook approach requires access to Watson Studio which comes with Predict.
+![creat groups](/img/apm_8.9/P8A.png)	
 
-3. Click the `Scoring and DGA Setting` breadcrumb 
-![dgs_settings](/img/apm_8.9/P9.png)	
+3. Fill in the form with the options below. Adding a `name`, `description`, `object`, Scoring method and `query`  for the group.  Search for the query name or select one of the available queries in the list and press the `apply` button.
+![form groups](/img/apm_8.9/P8B.png)	
 
-4. Click the `Create a scoring and DGA group +` button to create a scoring group 
-![dga_group](/img/apm_8.9/P10.png)	
+4. Create and save the score group by pressing the `Create` button. 
+![save groups](/img/apm_8.9/P8C.png)	
 
-5. Click the screen to auto-fill the pop-up box 
-![auto_fill](/img/apm_8.9/P11.png)	
+5. Another option is to use an existing group.  Click the `Chilled water pump` or another group. 
+![select_group](/img/apm_8.9/P8D.png)	
 
-6. Click `Create`
-![create_group](/img/apm_8.9/P12.png)	
+6. Click the `Add Score` button if you already have added your custom score type. 
+![add score ](/img/apm_8.9/P8E.png)	
 
-Value:  Grouping common assets together allows us to apply our custom score to multiple assets rather than one at a time.
+7. Select `Centrifugal Pump Efficieny` and the `Done` button to add this score to the pump group. If the Contributors haven't yet been setup continue on to the next exercise to create them and add them.
+![save_group](/img/apm_8.9/P8F.png)	 
 
-
-###  Add a Contributor
-
-With groups created, You will click `Add score` and select `Wear` from the pop-up box.
-
-You will use a simple formula to represent wear.  You will click the `+` symbol.  From the selections, You will pick `FACRULYEARSSAMPLE`.
-
-1. Click the `Add score` 
-![add_score](/img/apm_8.9/P13.png)	
-
-2. Click the `Wear` 
-![wear](/img/apm_8.9/P14.png)	
-
-3. Click `Done` 
-![done](/img/apm_8.9/P15.png)	
-
-4. Click `+` 
-![plus](/img/apm_8.9/P16.png)	
-
-5. Click `FACRULYEARSSAMPLE` 
-![facrulyearsample](/img/apm_8.9/P17.png)	
-
-6. Click `Add`
-![add](/img/apm_8.9/P18.png)	
+Value:  Grouping common assets together allows us to apply our custom custom condition score to multiple assets rather than one at a time thus easing administration.
 
 
-###  Activate Scores
+###  Setup Contributor
 
-Activating a scores communicates to other users that the score is available to be used to measure asset conditions.   The custom score will appear available for other users to use.  Before You can activate the score, You have to assign the factor that You selected a percentage that this measure contributes to overall normalized score value.  Since there’s only 1 factor, You will assign it 100%.
+With groups created, you will click `Add score` and contributors to the score.   Efficiency may be made of one or more calculated or metered data.   In this example you
+will use a duplicate an existing contributor.  You will click the `+` symbol.  From the selections, You will pick `PU`.
 
-1. Click the pencil icon 
-![pencil](/img/apm_8.9/P19.png)
+1. If  you haven't opened your score group.  Open it now.  Once on your score group, your first options is to click the `+` icon to add an existing contributor to your Centrifugal efficiency.  This could be made up of previous contributors to a score that you created. 
+![open score_group](/img/apm_8.9/P8G.png)	
 
-2. Click the screen to autofill the form 
-![autofill](/img/apm_8.9/P20.png)
+2. Click the `Contributor` tile and click `Add` button.
+![open score_group](/img/apm_8.9/P8H.png)
 
-3. Click “Save 
-![save](/img/apm_8.9/P21.png)
+3. Your second option is to create a new contributor for your `CENTRIFUGALPUMPEFFICIENCY` and enter the values in the form.  Do the latter.  After clicking `+` icon click `Create Contributor` button.
+![create new contributor](/img/apm_8.9/P8I.png)	
 
-4. Click ”Active” to activate the score. 
-![acive](/img/apm_8.9/P22.png)
+4. The third option is to `Duplicate`an existing contributor button to copy and reuse an existing contributor `PUMPEFFICIENCY` to fill in the `Contributor` form with.
+![duplicate](/img/apm_8.9/P8J.png)
+![duplicate contributor](/img/apm_8.9/P8K.png)
 
-5. Click the “Scoring and DGA Setting” breadcrumb
-![dga_settings](/img/apm_8.9/P23.png)
+5. Review the values that were filled in. Make changes you need. Adjust what that maximum and minimum allowed values are.  
+Click the `Create` button to save your changes to your duplicated contributor.  Click the adjust the `worst` and `best` 
+score to reflect your score ranges for low, medium and high. Click on `CENTRIFUGALPUMPEFFICIENCY` score to expand and see 
+all the contributors that contribute to it.
+![contributor](/img/apm_8.9/P14.png)
+
+6. Click the `pencil` icon.  Set each contributor the percent to 50% since this score will only have two contributor which will then contribute 100% together.  Click 'Save'
+![score name](/img/apm_8.9/P15.png)	
+
+7. Confirm the changes that `100%` of the contributors value will be allocated to the `CENTRIFUGALPUMPEFFICIENCY` score.
 
 
-## Assets Matrix Page
+### Activate Score
+
+Activating a score lets other users know that the score is available to be used to measure asset conditions.   The custom score will appear available for other users to use.  Before You can activate the score, You have to assign the factor that You selected a percentage that this measure contributes to overall normalized score value.  Since there’s only 1 factor, You will assign it 100%.
+
+1. If  you haven't opened your score group.  Open it now.
+
+2. Click `Active` slider to enable the score to start calculating when invoked. 
+![done](/img/apm_8.9/P16.png)	
+
+3. Click the breadcrumbs for `Chilled water pump` to return to the score group.
+![done](/img/apm_8.9/P17.png)
+
+4. Once on your score group, check to make sure the column for the `Centrifugal Pump Efficiency Score` is `Y` in the `Active` column in the `Scores` table.
+Click the `Calculate Scores` link at the top right to immediately have the system calculate the scores for the current group of assets.
+![plus](/img/apm_8.9/P18.png)
+
+
+### Add Custom Score to Asset Grid Table
+
+1. Navigate to the Asset Grids page.  Select a pump query from the drop down.
+
+2. In the assets table, click on `Manage Columns` icon and then `Manage Columns` link.
+![query](/img/apm_8.9/P22.png)	
+
+3. Search on `Centrifugal Pumps` in the search bar and then check the row that has  `Centrifugal Pumps` score in the description column.
+![query](/img/apm_8.9/P23.png)	
+
+4. From the `Assets Grid` page select your saved query for the  `Centrifugal Pumps`. Click on the on `Centrifugal Pump Efficiency` score column header to sort the asset rows by the worst performing scoring pump.
+![query](/img/apm_8.9/P24.png)	
+
+5. Click on the `Pump-1001` to ensure the `Centrifugal score` shows up as a value card on the `Asset Details` page
+![query](/img/apm_8.9/P21.png)	
+
+
+## Setup Assets Matrix
 <a name="matrix_page"></a>
 
-###  Identify Worn Assets Using Matrix Page
-
-To identify assets that are worn and in poor health, You will use my new `wear` score along with the Matrix page.
+In this step you will identify assets that need attention by using the `Matrix` page.  To identify assets that are having poor 
+'Centrifugal Pump Efficiency Score' and in poor health, You will use the new `CENTRIFUGALPUMPEFFICIENCY` score along with the Matrix page.
 
 From the left nav, You will click `assets`, and then the `Matrix` icon  on the upper right of the screen.
 
-You will create a matrix using my new score `wear`, and `health`.  But first, You will filter my assets to substation transformers.
+You will create a matrix using my new score `Criticality`, and `Centrifugal Efficiency`.  But first, You will first select the query for Centrifugal Pumps.
 
-The results show only the substation transformers on the matrix.
+The results will then only show Centrifugal Pumps on the Assets Grid, Risk, Charts and Map pages.  To customize the matrix, You will click the `Gear` icon in the upper right of the screen on the `Matrix`.  You will adjust the fields so that `Criticality` appears on the Y axis, and `Centrifugal Pump Efficiency` on the X axis.
+
+You will also fill in the colors of the Matrix so that the assets with poor health and poor `Centrifugal Pump Efficiency` score show up in the lower right corner.
+
+Finally, you'll save the Matrix configuration so others will be able to use it.
+
 
 1. Click `Assets` icon in the left nav 
 ![assets](/img/apm_8.9/P24.png)
@@ -164,68 +219,53 @@ The results show only the substation transformers on the matrix.
 2. Click the `Matrix` icon on the upper right of the screen 
 ![matrix_icon](/img/apm_8.9/P25.png)
 
-3. Click the `filter` symbol 
+3. Note that the default Matrix doesn't show any asset counts in Matrix becuase none of the assets in the query have values for both `Health and Centrifugal Pump Efficiency`. 
 ![filter](/img/apm_8.9/P26.png)
 
-4. Click the `pencil` icon next to `type` 
+4. Click the `Version` drop down select box and choose `Health and Criticality`
 ![pencil](/img/apm_8.9/P27.png)
 
-5. Select `substation transformers` 
-![substation](/img/apm_8.9/P28.png)
+5. Notice how the Matrix now populates with asset counts in each row and column for `Criticality`  `A` to `E` ranges and `Health` `Good`, `Fair` and `Poor` ranges.
+Click the `Gear` icon to configure a new `Matrix` version. 
+![pencil](/img/apm_8.9/P28.png)
 
-6. Click `Ok` 
-![ok](/img/apm_8.9/P29.png)
+6. After choosing `Criticaly` for `Centrifugal Pump Efficiency` score for the X axis notice how the table cells turn gray.  
+You must manually set the color ranges to reflect what cells you want the reliability engineer to focus on.  Click on each range color in the legen and then click on each Matrix cell you want to have that color.
+![substation](/img/apm_8.9/P30.png)
 
-7. Click `Apply`
-![apply](/img/apm_8.9/P30.png)
+7. Give the Matrix Version a new name and description and check that the direction of each axis for good versus bad is correct.   Click `Save As` to save it as a new Matrix version.
+![substation](/img/apm_8.9/P31.png)
 
-   
-###  Customize Matrix Configurations
-
-To customize the matrix, You will click the cog in the upper right of the screen.  You will adjust the fields so that Health appears on the y axis, and Wear on the x axis.
-
-You will also fill in the colors of the matrix so that the assets with poor health and poor wear show up in the upper right corner.
-
-Finally, you'll save the Matrix configuration.
+Value:  By adding your custom score to your asset Matrix page you can more quickly find the assets that aren't performing well. This makes it easier to take action to replace them using Asset Investment Optimization. 
+![substation](/img/apm_8.9/P32.png)
 
 
-1. Click the `Cog` icon
-![apply](/img/apm_8.9/P31.png)
-
-2. Click the screen to autofill the form
-![apply](/img/apm_8.9/P32.png)
-
-3. Click the screen to update colors
-![apply](/img/apm_8.9/P33.png)
-
-4. Click `Save as` in the upper right
-![apply](/img/apm_8.9/P34.png)
-
-   
 ###  Investigate Assets by Drilling in to the Assets Matrix 
 
-My new matrix shows me shows counts of the number of assets in the current query that have wear scores and health scores that fall into the defined score ranges for each score.
+In this example you will use a different view and asset class to see the asset condition for `Substation transformers` For the current selected asset view,  The  Matrix configuration shows me shows counts of the number of assets in the current query that have `Centrifugal Pump Efficiency` scores and `Criticality` scores that fall into the defined score ranges for each score.
 
-You can see that a high number of my substation transformers are showing poor wear score, and most are in fair or poor health.  You can click through to drill down into each category, or into each colored cell in the matrix.
+You can see the number of my pumps are showing fair `wear` score or poor `Health`  .  You can click through to drill down into each category, or into each colored cell in the matrix.
 
-Given the overall condition of my substation transformers, You will build an investment project, from my matrix, to determine when You should replace them.
+Given the overall condition of my substation transformers, You will build an investment project, from my Matrix, to determine when You should replace them.
 
-1. Click on the high box, and add those assets to a new investment project.  Click the “high” box to show those assets in a grid
+
+1. Click on any cell in your Matrix to see the list of assets in the cell.  You can then add those assets to an Asset Investment Optimization project to action them to be replaced or decommissioned.
+![substation](/img/apm_8.9/P32.png)
+
+2. Click on the high box, and add those assets to a new investment project.  Click the `high box to show those assets in a grid
 ![apply](/img/apm_8.9/P35.png)
 
-2. Click the screen to select them all
+3. Click the screen to select them all
 ![apply](/img/apm_8.9/P36.png)
 
-3. From the grid view, You will select all of the assets, and then create a new investment project. Click `Create investment project`
+4. From the grid view, You will select all the assets, and then create a new investment project. Click `Create investment project`
 ![apply](/img/apm_8.9/P37.png)
 
 
 ## Asset Investment Project
 <a name="asset_investment_project"></a>
 
-###  Create an Asset Investment Project 
-   
-By drilling into the value card or individual asset counts in each cell of the Asset Matrix You can see which assets are included in the count of assets in that range.
+In this exercise you will create an Asset Investment Project by drilling into the value card or individual asset counts in each cell of the Asset Matrix You can see which assets are included in the count of assets in that range.
 You action the assets by choosing the assets in the drilled in table list that You want to add to a new or existing asset investment project.  
 Since You already have created an asset investment project template for substation transformers You can evaluate different investment strategies with these assets.
 You specify the time duration of the project.   You run a 30 year project, starting in 2023.  I’m directed to the main Asset Investment Optimizer (AIO) page.  
