@@ -1,7 +1,7 @@
 # Asset Custom Scores
 
 Health Predict and Utilities already provide the ability to score asset condition using the out-of-the-box scores for:
--
+
 - Health
 - Risk
 - Criticallty
@@ -19,8 +19,8 @@ Maximo Health includes Asset Investment Optimization templates that you can use 
 
 In this exercise you will use Health to:
 
-1. [Setup View](#setup_view) to have a group of assets that you can view and work with.
-2. [Setup Scores](#setup_scores) to calculate asset condition.
+1. [Setup Score](#setup_scores) to calculate asset condition.
+2. [Create Health Asset Scoring Group](#create_group) to have a group of assets that you can view and work with.
 3. [Matrix Page](#matrix_page) to identify and quantify the number of assets that need attention.
 4. [Asset Investment Project](#asset_investment_project) to decide which strategy is best to action the assets 
  
@@ -30,23 +30,6 @@ This lab requires the following:
 
 - A working Maximo Application Suite (MAS) environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed.
 - Sufficient asset data to run the analysis and get insights
-
-## Setup View
-<a name="setup_view"></a>
-
-Create a private view so that you can work with your pumps in the `Assets Grid` page.  
-
-1. Go to the Asset Grid page. Enter `PUMP-100` without last digit as shown below.
-![query](/img/apm_8.9/P18.png)	
-
-2. Click the dropdown with the `view:` names.  Scroll up to save your query. Name it `Centrifugal Pumps`.
-![query](/img/apm_8.9/P19.png)	
-
-3. Save the `view` as a `private view` so that no one but you can see it.   
-![query](/img/apm_8.9/P20.png)	
-
-
-Value:  By creating a view, query and adding your custom score to your asset grid you can more quickly find the assets that aren't performing well. This makes it easier to analyze and take action to repair or replace poor performing assets. 
 
 
 ## Setup Scores
@@ -95,38 +78,53 @@ To create a custom score, You will select the  `Scoring and DGA Setting` tab on 
 6. Review your Score settings that you just created.
 ![review_score_settings](/img/apm_8.9/P7.png)	
 
-
 Value:  Creating custom ranges allows me to enforce my company specific measurement method for the asset condition score or using engineering formulas.
 
-###  Setup Score Group
 
-You can build out a custom score to apply to a specific group of assets.  Groups allow you to scope the score to a query of assets and a method for calculating the scores.
-
-For substation transformers, You can see there’s already a group called `Chilled water pump`.  There are several scores already created using a notebook included with Health and Predict – Utilities.
-
-To create a custom score for these assets, You will return to the `Groups` tab, and click the `Create a scoring and DGA group`.
+## Create Health Score Group
+<a name="create_group"></a>
+Create a Health Asset scoring view so that you can work with your custom asset scores in the `Assets Grid`, `Assets Details`,
+`Map` and `Matrix` pages.  You can build out a custom score to apply to a specific group of assets.  Groups allow you to 
+scope the score to a query of assets and a method for calculating the scores.
+ return to the `Groups` tab, and click the `Create a scoring and DGA group`.
 
 You will complete the fields.  For this example, we’ll create our score using the `Building Scores` capability rather than the `Connecting group to notebook` option.  You will use the query function to identify the assets in my group then create the group.
 
-1. Click the `Groups` tab.
+1. From the left cascading menu click `Scoring and DGA settings`.  Click the `Groups` tab.
 ![groups](/img/apm_8.9/P8.png)	
 
 2. If you don't have a group for pumps you can click `Create a scoring and DGA group` and fill in the form. Click button `Create a scoring DGA group` to specify the assets, query to use and method of calculation.  `Building scores` uses the easy to use forumula based approach.  The notebook approach requires access to Watson Studio which comes with Predict.
 ![creat groups](/img/apm_8.9/P8A.png)	
 
-3. Fill in the form with the options below. Adding a `name`, `description`, `object`, Scoring method and `query`  for the group.  Search for the query name or select one of the available queries in the list and press the `apply` button.
+3. Select a query that matches the assets you would like to include in this group. Search for the `Query name` and click `Apply` button.  If you don't see one that fits your need
+the next steps explains how to create a query to choose the right assets to add your score to.
 ![form groups](/img/apm_8.9/P8B.png)	
 
-4. Create and save the score group by pressing the `Create` button. 
+4. You can create a query if you don't see one that matches the assets where you want to use your new score. Edit your 
+group by clicking on the `pencil` icon.
+![form groups](/img/apm_8.9/Q1.png)
+
+5. Click `+` to add a new query instead of selecting one.
+![form groups](/img/apm_8.9/Q2.png)	
+
+6. Enter the values required in the query form for `name`, `description`, and `filters` to use to query Health for the 
+right assets. Click `Create and apply` button to save the query.
+![form groups](/img/apm_8.9/Q3.png)	
+
+7. Review the assets in the scored assets list to ensure the assets you want to have this score in are are listed.
+![assets in group](/img/apm_8.9/Q4.png)	
+
+8. If this is a new group, you must create and apply your changes to save it. Create and save the score group by pressing the `Create` button. 
 ![save groups](/img/apm_8.9/P8C.png)	
 
-5. Another option is to use an existing group.  Click the `Chilled water pump` or another group. 
+9. You can not add scores to your Health Score group. Click the `Add Score` button.
 ![select_group](/img/apm_8.9/P8D.png)	
 
-6. Click the `Add Score` button if you already have added your custom score type. 
+10. if you already have added your custom score type. Choose the score by clicking on the `Score name` tile and the `Done` button.
 ![add score ](/img/apm_8.9/P8E.png)	
 
-7. Select `Centrifugal Pump Efficieny` and the `Done` button to add this score to the pump group. If the Contributors haven't yet been setup continue on to the next exercise to create them and add them.
+11. For example select `Centrifugal Pump Efficieny` score and the `Done` button to add this score to the pump group. If 
+the Contributors haven't yet been setup continue on to the next exercise to create them and add them.  
 ![save_group](/img/apm_8.9/P8F.png)	 
 
 Value:  Grouping common assets together allows us to apply our custom custom condition score to multiple assets rather than one at a time thus easing administration.
@@ -134,10 +132,13 @@ Value:  Grouping common assets together allows us to apply our custom custom con
 
 ###  Setup Contributor
 
-With groups created, you will click `Add score` and contributors to the score.   Efficiency may be made of one or more calculated or metered data.   In this example you
-will use a duplicate an existing contributor.  You will click the `+` symbol.  From the selections, You will pick `PU`.
+Contributors describe what child metrics, meter readings, inspections, KPIs and other values should be considered as part
+of the overall normalized score.  With groups created, you will click `Add score` and contributors to the score.   Efficiency 
+may be made of one or more calculated or metered data.   In this example you will learn the different ways of creating a contributor.
+Including  duplicating an existing contributor and creating a new contributor.
 
-1. If  you haven't opened your score group.  Open it now.  Once on your score group, your first options is to click the `+` icon to add an existing contributor to your Centrifugal efficiency.  This could be made up of previous contributors to a score that you created. 
+1. If you haven't opened your score group.  Open it now.  Once on your score group, your first options is to click the `+`
+icon to add an existing contributor to your group.  This could be made up of previous contributors to a score that you created. 
 ![open score_group](/img/apm_8.9/P8G.png)	
 
 2. Click the `Contributor` tile and click `Add` button.
@@ -196,6 +197,22 @@ Click the `Calculate Scores` link at the top right to immediately have the syste
 ![query](/img/apm_8.9/P21.png)	
 
 
+### Create View
+Create a Health Asset scoring view so that you can work with your custom asset scores in the `Assets Grid` pages and see the score as column .  
+
+1. Go to the Asset Grid page. Enter `PUMP-100` without last digit as shown below.
+![query](/img/apm_8.9/P18Q.png)	
+
+2. Click the dropdown with the `view:` names.  Scroll up to save your view. Name it `Centrifugal Pumps`.
+![query](/img/apm_8.9/P19.png)	
+
+3. Save the `view` as a `private view` so that no one but you can see it.   
+![query](/img/apm_8.9/P20.png)	
+
+
+Value:  By creating a view and adding your custom score to your asset grid you can more quickly find the assets that aren't performing well. This makes it easier to analyze and take action to repair or replace poor performing assets. 
+
+
 ## Setup Assets Matrix
 <a name="matrix_page"></a>
 
@@ -239,168 +256,30 @@ You must manually set the color ranges to reflect what cells you want the reliab
 Value:  By adding your custom score to your asset Matrix page you can more quickly find the assets that aren't performing well. This makes it easier to take action to replace them using Asset Investment Optimization. 
 ![substation](/img/apm_8.9/P32.png)
 
-
-###  Investigate Assets by Drilling in to the Assets Matrix 
-
-In this example you will use a different view and asset class to see the asset condition for `Substation transformers` For the current selected asset view,  The  Matrix configuration shows me shows counts of the number of assets in the current query that have `Centrifugal Pump Efficiency` scores and `Criticality` scores that fall into the defined score ranges for each score.
-
-You can see the number of my pumps are showing fair `wear` score or poor `Health`  .  You can click through to drill down into each category, or into each colored cell in the matrix.
-
-Given the overall condition of my substation transformers, You will build an investment project, from my Matrix, to determine when You should replace them.
-
-
-1. Click on any cell in your Matrix to see the list of assets in the cell.  You can then add those assets to an Asset Investment Optimization project to action them to be replaced or decommissioned.
-![substation](/img/apm_8.9/P32.png)
-
-2. Click on the high box, and add those assets to a new investment project.  Click the `high box to show those assets in a grid
-![apply](/img/apm_8.9/P35.png)
-
-3. Click the screen to select them all
-![apply](/img/apm_8.9/P36.png)
-
-4. From the grid view, You will select all the assets, and then create a new investment project. Click `Create investment project`
-![apply](/img/apm_8.9/P37.png)
-
-
-## Asset Investment Project
+## Add Assets to an Exiting Asset Investment Project 
 <a name="asset_investment_project"></a>
 
-In this exercise you will create an Asset Investment Project by drilling into the value card or individual asset counts in each cell of the Asset Matrix You can see which assets are included in the count of assets in that range.
-You action the assets by choosing the assets in the drilled in table list that You want to add to a new or existing asset investment project.  
-Since You already have created an asset investment project template for substation transformers You can evaluate different investment strategies with these assets.
-You specify the time duration of the project.   You run a 30 year project, starting in 2023.  I’m directed to the main Asset Investment Optimizer (AIO) page.  
-However, before You run my project, You want to add the remaining substation transformers that need attention to the project.
+In this exercise you will drill into the poor condition scored assets. Evaluate and choose the ones you would like to add to
+and existing Asset Investment Project.  By clicking on each matrix cell you can drill into asset counts to see which assets 
+are included in the count of assets in that range.  You action the assets by choosing the assets in the drilled in table 
+list and adding to a new or existing asset  investment project. 
 
 Actions:
 
-1. Click the `Create Investment Project` button, I’m prompted to complete details of the project.  Click the screen to autofill the form.
+1. Click the `Red` cell links in the Matrix.
 ![apply](/img/apm_8.9/P38.png)
 
-2. Click `Create` 
+2. Review the list of assets. 
 ![apply](/img/apm_8.9/P39.png)
  
-4. You will go back to my assets, in the `Matrix`, using the left nav panel.  Select `Assets` from the left nav panel
+3. Select all the assets by clicking the top `check box` or choose individual assets by clicking 
+the check boxes next to that assets you want.  You can click the icon on the top right to `Add to an existing investment project` 
+or `create new investment project`  Choose the latter.
 ![apply](/img/apm_8.9/P40.png)
-
-
-###  Add Assets to an Exiting Asset Investment Project 
-
-You are able to add more assets to an existing Asset Investment Optimization project.   This time You will select the medium box, and add the assets to the investment project.  
-However, once You select the assets, You can click the `Add to investment project` button, find my project, click `add`, and then `save` those assets to the existing project.
-
-When adding assets to an existing project, the system will let me know that by doing so, You will impact any analysis that has already been completed.
-
-You are returned to the asset list.  You will skip the final step of adding the asset from the `low` box, and move right to the investment project.
-
-1. Click the `medium` box to show those assets in a grid 
-![apply](/img/apm_8.9/P41.png)
-
-2. Click the screen to select them all 
-![apply](/img/apm_8.9/P42.png)
-
-3. Click `Add to investment project`
-![apply](/img/apm_8.9/P43.png)
-
-4. Select the `Substation Transformer` project 
-![apply](/img/apm_8.9/P44.png)
-
-5. Click `Add`
-![apply](/img/apm_8.9/P45.png)
-
-6. Click `Save` from the Edit Project page 
-![apply](/img/apm_8.9/P46.png)
-
-7. Click `Save` in the pop-up
-![apply](/img/apm_8.9/P47.png)
-
-
-###  Choose an Asset Investment Template for your Project 
-
-Asset investment templates reflect the operational and capital costs that reflect the group of assets you address together and have similar performance and cost characteristics.
-
-You will select the `Asset investment optimizer` from the left nav panel.   Before You start working on my project, You want to review my template for substation transformers.  This template is necessary for the AIO.  It details the impact of refurbishing or replacing a substation transformer.  If this template isn’t already in place, You would have been prompted to complete one when You created my project.
-
-You will return to the list, and select my Substation Transformers project.
-
-
-1. Click the `Asset investment optimizer` from the left nav panel
-![apply](/img/apm_8.9/P48.png)
-
-2. Select the `Plan templates` tab
-![apply](/img/apm_8.9/P49.png)
-
-3. Click the `Substation_Transformer` template from the list
-![apply](/img/apm_8.9/P50.png)
-
-4. Click the `Asset Investment Optimizer` breadcrumb
-![apply](/img/apm_8.9/P51.png)
-
-5. Click the `Projects` tab
-![apply](/img/apm_8.9/P52.png)
-
-6. Click the `Substation Transformers` project
-![apply](/img/apm_8.9/P53.png)
-
-
-
-###  Choose an Asset Investment Strategy for your Project 
-
-This step is intended to demonstrate the Asset Investment Optimizer (AIO) capability in HPU.  The AIO allows a Reliability Engineer (RE) to build a project of assets, assign a length of the project, and run multiple strategies to determine which assets should to be replaced over the life of the project, and when.  The RE can compare strategies, export details, and ultimately execute the one that meets their needs. The strategies are…
-
-- Maintain risk
-- Reduce risk (the RE can select the risk value)
-- Work within a budget (the RE can select the budget)
-
-When a project is started, the default scenario is to `Maintain` risk.  This system will determine the average risk of the assets in my project, and calculate which assets need to be replaced over the 30 year project, and when, to maintain the risk.
-
-Here, I’ve already added a second scenario to reduce risk.  I’ve selected a risk score of 10.  When You run that scenario, the system will calculate which assets need to be replaced over the 30 year project, and when, to reduce the risk score.
-
-You will demonstrate the 3rd scenario, which is to determine which assets need to be replaced over the 30 year project, and when, to stay within a budget.
-
-You will click the “+”, and follow the prompts, to create a new investment strategy to `Stay in Budget`.
-
-When You run the analysis, You will see an indication to show that the analysis is in progress.
-
-Once complete, a summary of the results appears.  You can click on the list icon to see the details of the replacement plan.
-
-1. Click the `+`
-![apply](/img/apm_8.9/P54.png)
-
-2. Click on the screen to autofill the popup for a “Stay in budget” scenario
-![apply](/img/apm_8.9/P55.png)
-
-3. Click `Create`
-![apply](/img/apm_8.9/P56.png)
-
-4. Click `Run analysis`
-![apply](/img/apm_8.9/P57.png)
-
-5. Click the screen to advance
-![apply](/img/apm_8.9/P58.png)
-
-6. Click the `list` icon
-![apply](/img/apm_8.9/P59.png)
-
-
-###  Choose an Asset Investment Strategy for your Project 
-
-You can compare my 3 strategies side-by-side and determine which one I’d like to implement.
-
-You will simply click the “Compare strategies” button at the top of the page, select all 3 strategies, and click “Compare”.
-
-From the side-by-side view, Youcan decide which to implement, and export the details to a file.
-
-1. Click the “Compare strategies” button
-![apply](/img/apm_8.9/P60.png)
-
-2. Click on the screen to select all three strategies
-![apply](/img/apm_8.9/P61.png)
-
-3. Click “Compare”
-![apply](/img/apm_8.9/P62.png)Click the screen to show the export options
 
 
 ## Summary
 <a name="summary"></a>
 
-Congratulations.  You now have identified worn and unhealthy assets and have added them to an asset investment optimization project to improve their condition.
+Congratulations.  You now have identified inefficient or poor scoring assets using a custom score.   You added poor condition assets
+to an asset investment optimization project to improve their condition.

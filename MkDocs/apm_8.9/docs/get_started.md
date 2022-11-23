@@ -29,7 +29,8 @@ For this exercise ensure you have access to :
 
 These are the exercises available in this lab.
 
-1. [Custom_Asset Scores](asset_scores.md) with Health and Predict - Utilities.
+1. [Setup Watson Studio for Predict](setup_watson_studio.md)
+2. [Custom_Asset Scores](asset_scores.md) with Health and Predict - Utilities.
 
 
 ### Architecture
