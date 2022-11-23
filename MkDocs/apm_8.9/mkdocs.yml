@@ -12,6 +12,7 @@ nav:
     - Get Started: get_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:
+      - Setup Watson Studi for Predict: setup_watson_studio.md
       - Custom Scores: asset_scores.md
   - About: about.md
 
