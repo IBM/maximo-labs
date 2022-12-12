@@ -24,6 +24,7 @@ In this exercise you will use Health to:
 3. [Matrix Page](#matrix_page) to identify and quantify the number of assets that need attention.
 4. [Asset Investment Project](#asset_investment_project) to decide which strategy is best to action the assets 
  
+ 
 **Prerequisites**
 
 This lab requires the following:
@@ -156,6 +157,10 @@ Click the `Create` button to save your changes to your duplicated contributor.  
 score to reflect your score ranges for low, medium and high. Click on `CENTRIFUGALPUMPEFFICIENCY` score to expand and see 
 all the contributors that contribute to it.
 ![contributor](/img/apm_8.9/P14.png)
+
+!!! note
+
+    The contributor formula is related to the pump meter data, for example, asset could be using different meter name will results a different formula, e.g `((METERVAL("P-HEAD") * 0.3 * 9.8 * METERVAL("P-FLOW") * 0.0037 * 60) * 100) / (((METERVAL("P-VOLTAGE") * METERVAL("P-CURRENT") * 1.732050807569 * 0.75 * 0.8 * 0.9)/1000)*3600)`, `P-HEAD`,`P-FLOW` .etc is defined in hpu_csv_demo data set at `https://github.ibm.com/Watson-IoT/eam-hpu-lab/csv-files`
 
 6. Click the `pencil` icon.  Set each contributor the percent to 50% since this score will only have two contributor which will then contribute 100% together.  Click 'Save'
 ![score name](/img/apm_8.9/P15.png)	

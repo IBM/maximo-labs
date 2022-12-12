@@ -1,5 +1,5 @@
 
-# Contributors to IBM Maximo APM V8.7 Lab
+# Contributors to IBM Maximo APM V8.9 Lab
 
 - Carlos Ferreira - <carlosyells@yahoo.com>
 - John Douglas

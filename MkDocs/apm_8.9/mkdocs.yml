@@ -13,7 +13,9 @@ nav:
     - Pre-Requisites: prereqs.md
   - Exercises:
       - Setup Watson Studio for Predict: setup_watson_studio.md
+      - Create Custom Scores and Score Group Using Notebook: utilities_pump_score_notebook.md
       - Custom Scores: asset_scores.md
+
   - About: about.md
 
 theme: readthedocs
