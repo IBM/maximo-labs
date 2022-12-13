@@ -15,7 +15,7 @@ This notebook can only be run once per environment per site with the same set of
 
 ## Pre-requisites 
 
-- Ensure you have Access to Asset data files for the Health and Predict Utilities Demo Data
+- Ensure you have access to asset data files for the Health and Predict Utilities Demo Data
 - Ensure you have loaded the hpu_csv_demo data into the Health and Predict Utilities system.
 - Complete the [Load Data into Manage](../../apm_8.7/asset_data_loader) lab for the Utilities data, ensure you have loaded the hpu_csv_demo data into the Health and Predict Utilities system.
 
@@ -86,7 +86,7 @@ The following steps will confirm that the score group was created properly
 
 2. Go to the `Scoring and DGA Settings` application within Maximo H&PU
 
-3. Search for your Org or Site and notice that there are one score groups created for Pump Assets. 
+3. Search for your Org or Site and notice that there are one score group created for Pump Assets. 
 
     ![Score Groups](/img/apm_8.9/pump_sg4.png)
 4. Click into the Score Groups and notice all the score types created via the the notebook listed in the `Group Details` section, click any score to check the score details.

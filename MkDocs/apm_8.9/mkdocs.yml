@@ -15,6 +15,7 @@ nav:
       - Setup Watson Studio for Predict: setup_watson_studio.md
       - Create Custom Scores and Score Group Using Notebook: utilities_pump_score_notebook.md
       - Custom Scores: asset_scores.md
+      - Scoring Substation Transformer Using Forecast Notebook: utilities_st_futurescore_demo_notebook.md
 
   - About: about.md
 
