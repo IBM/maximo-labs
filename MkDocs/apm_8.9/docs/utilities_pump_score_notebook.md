@@ -31,7 +31,7 @@ Click 'New asset' button in the project, and filter for notebook type.
    
     ![New Asset](/img/apm_8.9/pump_sg1.png)   
        
-    ![Choose notebook type](/img/apm_8.9/pump_sg2.png)   
+    ![Choose notebook type](/img/apm_8.9/pump_sg2.png){ width=70% height=70% } 
 
 2. Select the `1.2_Create-PUMP-SG_CustomScoreType.ipynb` notebook, and then click Create button. 
     ![Choose notebook](/img/apm_8.9/pump_sg3.png)   
@@ -40,7 +40,7 @@ Click 'New asset' button in the project, and filter for notebook type.
 
 4. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` dropdown select box and choose `Restart`
 
-    ![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
+    ![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png){ width=30% height=30% } 
 
 5. Run the first code cell to import packages
 
@@ -49,7 +49,7 @@ Click 'New asset' button in the project, and filter for notebook type.
     {
     "Instruction":{
         "MX_BASE_URL":"Extract health or manage host, and replace ******* in https://*******/maximo/, e.g Get main.manage.ivt13rel88.ivt.suite.maximo.com from https://main.manage.ivt13rel88.ivt.suite.maximo.com/maximo/oslc/graphite/relengineer/index.html",
-        "MX_APIKEY":"Application Administration -> Go To Administration -> Integration -> API Keys -> Copy key from admin user card (e.g. 6805t46gn3tef37pu0picpg9vcq3hsmamm1enc43), or Add API key if not exist."
+        "MX_APIKEY":"Application Administration -> Search and enter the API Keys application-> Copy key from admin user card (e.g. 6805t46gn3tef37pu0picpg9vcq3hsmamm1enc43), or Add API key if not exist."
     },
     "MX_APIKEY":"********************",
     "MX_BASE_URL":"http://health-team31.fyre.ibm.com:9084/maximo/"

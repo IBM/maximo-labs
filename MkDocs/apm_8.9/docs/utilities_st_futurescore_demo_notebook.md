@@ -55,7 +55,7 @@ Click 'New asset' button in the project, and filter for notebook type.And select
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` dropdown select box and choose `Restart`
 
-    ![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
+    ![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png){ width=30% height=30% } 
 
 4. Run the first code cell to import packages
 
