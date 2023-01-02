@@ -22,8 +22,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   [Monitor Asset Hierarchy](/mas_monitor_hierarchy/)
   
 ### Maximo Application Suite 8.6
-
-  [MAS Installation](/ocp_8.6/)  
+ 
   [Monitor Node-RED CSV Importer](/monitor_nodered_csv_importer_1.0/)  
   [Suite Overview](/mas_8.6/)  
   [Health and Predict Utilities v8.6](/hpu_8.6/)
