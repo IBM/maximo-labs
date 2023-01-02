@@ -1,47 +1,46 @@
 
-# Getting Started with the IBM Maximo Template Lab!
+# Getting Started
 
-< This is what you need to know while getting started on this lab >
- 
-Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](../prereqs).
+## IBM Maximo Application Suite deployment Lab!
 
-See [Contributing to Labs](../../about) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
-welcome your contributions to existing or new exercises. 
+Following this deployment lab, you will be able to provision the Maximo Application Suite core and all of its dependencies, as well as Maximo Manage and Maximo Monitor with a DB2 database on IBM Cloud's managed-hosted OpenShift cluster (aka ROKS). You could also provision Cloud Pak for Data for optionally dependent components such as Watson Machine Learning. 
 
-## Learning Paths (If such exists)
+## Maximo Application Suite
 
-|  Your Learning Goals                                     | Recommended Exercises    | Time Needed   |
-|:--------------------------------------------------------:|: ------------------:|:------------------:|
-|  XXXXXXX   | 1 and 2             |     2 hours        |
-|  YYYYYYY                | 3 and 4             |     2 hours        |
-|  ZZZZZZZ                             | 5, 6 and 7          |     2 hours        |
+This lab will guide you through the process of creating a working instance of Maximo Application Suite using the officially available Ansible automation method. The lab includes all of the necessary Ansible variables in a handy script. 
 
+### Disclaimer and limitation
 
-## Overview of Maximo Template
+This deployment lab is only suitable for sandbox environments. A sandbox environment is typically used only for testing. Self-signed certificates with a default domain will be used in this lab. This lab is not intended for use in production-deployment scenarios. Only IBM Cloud ROKS Classic OpenShift and/or OpenShift with Data Foundation storage are supported by this lab. It may not work with all OpenShift flavors running on various other platforms.
 
-< Describe describe the product and what it helps the client to do >
+### Overview of Maximo Application Suite
 
-##  Demonstration (If exists)
+Maximo Application Suite is IBM's next generation Asset Management platform. It offers intelligent asset management, monitoring, predictive maintenance and reliability in a single platform.
 
-Ask your facilitator for a demonstration of Maxiom Template or watch this short [video demonstration](https://youtu.be/XXXXXX)
+##  Demonstration (Video)
+
+TBA: watch this short [video demonstration](https://youtu.be/XXXXXX)
 
 ## Business Benefits
 
-< Describe the business benefits >
+The Maximo Application Suite allows users to sign on to a single, integrated platform to access key monitoring, maintenance, and reliability applications across the business. Not only does it help remove data silos, it enhances data sharing with integrated user experience and shared administrative controls for enterprise-scale execution. https://www.ibm.com/products/maximo
 
-## Architecture
 
-Here is a high level functional architecture of Maximo Template:
+## Component diagram
 
-![Template Architecture](/img/template_1.0/architecture.png)
+Here is a high level architecture (component diagram) of Maximo Application Suite:
+
+![Architecture](/img/ocp_8.9/architecture.png)
 
 # Included Services
-IBM Maximo Template includes the following IBM Cloud services that help you achieve the above business benefits:
+IBM Maximo Maximo Application Suite includes the following IBM services that help you achieve the above business benefits:
 
-## Template Service 1
-* < Describe what it does and add a link to the relevant Knowledge Center e.g. [Connection Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/connect_mon.html) >
-* < Another service 1 description >
+## Cloud Pak for Data
 
-## Template Service 2
-* < Describe what it does and add a link to the relevant Knowledge Center e.g. [Connection Service](https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/connect_mon.html) >
-* < Another service 2 description >
+* CP4D offers a wide selection of IBM and third-party services spanning the entire data lifecycle. [Cloud Pak for Data](https://www.ibm.com/products/cloud-pak-for-data)
+
+## Watson Studio & Machine Learning
+* IBM Watson Studio empowers data scientists, developers and analysts to build, run and manage AI models, and optimize decisions anywhere on IBM Cloud Pak for Data. [Watson Studio](https://www.ibm.com/cloud/watson-studio)
+
+## AMQ Kafka
+* The Red Hat AMQ streams component is a massively scalable, distributed, and high-performance data streaming platform based on the Apache Kafka project [AMQ Streams](https://www.redhat.com/en/resources/amq-streams-datasheet)

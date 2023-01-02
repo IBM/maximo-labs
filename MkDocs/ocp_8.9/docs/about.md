@@ -1,7 +1,7 @@
 
-# Contributors to IBM Maximo Template
+# Contributors to IBM Maximo Application Suite deployment using Ansible automation
 
-- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
+- Arif Ali - <aali@us.ibm.com>
 
 ---
 
@@ -9,7 +9,6 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2021-01-04|Jan Ekstrøm|Added the About page and Updated information into Index. |
-|2020-12-30|Jan Ekstrøm|First step on the Template section. |
+|2023-01-03|Arif Ali|Added the About page and Updated information into Index. |
 
 ---

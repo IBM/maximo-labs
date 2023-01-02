@@ -1,7 +1,10 @@
-# Welcome to the IBM Maximo Application Suite Deployment Lab<br>(Version: 1.0)
-You will learn about MAS deployment using Ansible automation to:
+# Welcome to the IBM Maximo Application Suite Deployment Lab
 
-* Acquire AppPoint license
+### (Version: 1.0)
+
+You will learn about IBM Maximo Application Suite deployment with Ansible automation to:
+
+* Acquire AppPoint license.
 * Acquire access to container software.
 * Arrange OpenShift cluster.
 * Prepare needed scripts for deployment.

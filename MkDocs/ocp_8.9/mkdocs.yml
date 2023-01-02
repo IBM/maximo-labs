@@ -12,10 +12,11 @@ nav:
     - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
     - Exercises:
-        - 1. Arrange Logistics: logistics.md
-        - 2. Arrange Technical: technical.md
-        - 3. Get Started - Prepration: preparation.md
-        - 4. Get Started - Deployment: deployment.md
+        - 1. Exercise - Logistics: logistics.md
+        - 2. Exercise - Technical: technical.md
+        - 3. Exercise - Prepration: preparation.md
+        - 4. Exercise - Deployment: deployment.md
+        - 5. Exercise - Post-deployment: post_deployment.md
   - About: about.md
 
 theme: readthedocs
