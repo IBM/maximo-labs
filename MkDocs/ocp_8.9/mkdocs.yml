@@ -1,0 +1,24 @@
+site_name: Maximo Application Suite deployment (Ansible automation)
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Arif Ali & Contributors
+site_description: "MAS Ansible deployment - Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/ocp_8.9
+
+nav:
+  - Get back to Maximo Labs: /
+  - MAS 8.9 deployment Labs:
+    - Welcome to the MAS 8.9 deployment Labs: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: prereqs.md
+    - Exercises:
+        - 1. Arrange Logistics: logistics.md
+        - 2. Arrange Technical: technical.md
+        - 3. Get Started - Prepration: preparation.md
+        - 4. Get Started - Deployment: deployment.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
