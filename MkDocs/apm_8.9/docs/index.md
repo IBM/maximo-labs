@@ -1,4 +1,4 @@
-# Welcome to the IBM Maximo Health, Predict and Utilities Lab for MAS version v8.8
+# Welcome to the IBM Maximo Health, Predict and Utilities Lab for MAS version v8.9
 
 !!! note
     This lab is still being developed, incomplete and may have errors.  We provide it to get your [feedback](https://github.com/IBM/monitor-hands-on-lab/issues/new) and allow you to reference the materials as the labs are built.
