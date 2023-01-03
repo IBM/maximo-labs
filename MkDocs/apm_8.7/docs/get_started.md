@@ -27,9 +27,9 @@ There are three possible ways to get data into Health and Predict - Utilities.
 
 1. [Data loading Python Notebooks](hpu_models.md) requires that you have [set up Watson Studio with Predict Libraries and Notebooks ](setup_watson_studio.md).
 
-2. Data loading meter data using EAM CronTask  - Not covered in this lab
+2. Data loading meter data using EAM CronTask is not covered in this lab
 
-3. [Data loading meter data  and asset types using App Connect](dataload_appconnect.md)- Not covered in this lab. Only the installation is covered.
+3. Data loading meter data and asset types using App Connect is not covered in this lab. Only the installation is covered.
 
 
 **Pre-requisites**

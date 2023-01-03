@@ -1,13 +1,13 @@
-# Exercise 3 - Prepration
+# Exercise 3 - Preparation
 
-## Objectives
+**Objectives**
 
 In this Exercise you will learn how to:
 
 * Prepare your local laptop with docker.
 * Download the convenience scripts for the deployment.
 
-### Get Started with the preparation
+**Setup Local Files**
 
 1\. Create a local folder (present working directory) for the deployment. Change directory (cd)
 

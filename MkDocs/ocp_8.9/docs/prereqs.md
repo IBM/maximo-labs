@@ -2,8 +2,6 @@
 
 Here are the required pre-requisites for the exercises.
 
-# All Exercises
-
 All Exercises require that you have:
 
 1\. A computer with a Chrome browser and internet connectivity.
@@ -17,12 +15,11 @@ All Exercises require that you have:
 - Click `Login to MY IBM` button<br>
 - Click `Create an IBM ID` link
 
-
-# Exercise 1 - Gather logistical components
+**Exercise 1 - Gather logistical components**
 
 Complete this exercise to acquire logistical items like AppPoint license file and container software access key.
 
-# Exercise 2 - Gather technical components
+**Exercise 2 - Gather technical components**
 
 Complete this exercise to acquire technical items like Red Hat Openshift cluster and docker desktop utility (Mac or Windows).
 

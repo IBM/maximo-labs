@@ -1,4 +1,4 @@
-# Load Utitlies Health and Custom Scores via Notebook
+# Create Custom Score Using a Notebook
 This notebook will create a health scoring group and the associated health, and custom score - `PUMP HYDRAULIC EFFICIENCY`. These instructions will be based off using the '1.2_Create-PUMP-SG_CustomScoreType.ipynb' file with the Pump demo data which included in hpu_csv_demo data set at `https://github.ibm.com/Watson-IoT/eam-hpu-lab/csv-files`.
 
 In this exercise you will use Watson Studio, MAS Health and Predict Utilities to:
@@ -7,7 +7,7 @@ In this exercise you will use Watson Studio, MAS Health and Predict Utilities to
 2. [Confirm](#confirm_upload) Scoring groups have been created and scores have been calculated
 3. [Handle Errors](#error_handling) that may come up in the process
 
-!!! note
+!!! note****
 
     You must complete the previous exercise for [Setup Watson Studio](setup_watson_studio.md) before you start this exercise.
 

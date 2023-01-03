@@ -1,6 +1,6 @@
 # Exercise 5 - Post-deployment
 
-## Objectives
+**Objectives**
 
 In this Exercise you will learn how to:
 
@@ -8,7 +8,9 @@ In this Exercise you will learn how to:
 * Log in to MAS using out-of-the-box credentials.
 * Prepare Manage EAM's admin user: `maxadmin`.
 
-### Accept self-signed certificate warnings.
+## Accept Certificates
+
+Accept self-signed certificate warnings.
 
 1\. Go to OpenShift project `mas-masdemo-core`, Networking, Routes.
 
@@ -22,18 +24,20 @@ In this Exercise you will learn how to:
 
     Please note that you will be accepting multiple self-signed certificate warnings as you progress further. This is a normal behavior for all browsers. 
 
-### Log in using superuser credentials.
+## Login
+
+Log in using superuser credentials.
 
 1\. Go to OpenShift project `mas-masdemo-core`, Secrets.
 
 2\. Search for "superuser". Click reveal username and password. Log in.
 
-### Update/sync `maxadmin` user.
+## Update User
+
+Update/sync `maxadmin` user.
 
 1\. Edit `maxadmin` user. Supply a dummy email address and change password (15 characters).
 
 2\. Log in using maxadmin account. Access Manage and Monitor.
 
-!!! success
-
-    🎉 👏 🎉 **Congratulations! You have completed the deployment of IBM Maximo Application Suite with Manage, IoT and Monitor.**
+🎉 👏 🎉 **Congratulations! You have completed the deployment of IBM Maximo Application Suite with Manage, IoT and Monitor.**

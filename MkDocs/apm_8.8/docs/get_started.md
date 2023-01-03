@@ -5,15 +5,20 @@ The version of Health and Predict - Utilities used in this Lab is for Maximo App
 
 ## Description
 
-Maximo Manage includes the ability to manage assets.  Reliability Engineers can use asset data stored in Manage and other data sources to better plan their asset
-maintenance and repairs to ensure asset reliability and reduce operational risks.  By leveraging asset health scoring and AI algorithms to detect anomalies and predict asset failures in time to mitigate or avoid their negative impacts. 
+Maximo Manage includes the ability to manage assets.  Reliability Engineers can use asset data stored in Manage and other 
+data sources to better plan their asset maintenance and repairs to ensure asset reliability and reduce operational risks.  
+By leveraging asset health scoring and AI algorithms to detect anomalies and predict asset failures in time to mitigate 
+or avoid their negative impacts. 
 
-Health and Predict - Utilities includes proven  machine learning model templates to make predictions or 
-classify asset condition using asset data.  These lab exercises provide you the best practices and guided instructions for how to use Health and Predict - Utilities to set up and asses your asset condition scoring, failure prediction dates and anomaly detection using a real world public pump data set..
+Health and Predict - Utilities includes proven  machine learning model templates to make predictions or classify asset 
+condition using asset data.  These lab exercises provide you the best practices and guided instructions for how to use 
+Health and Predict - Utilities to set up and asses your asset condition scoring, failure prediction dates and anomaly 
+detection using a real world public pump data set.
 
-The intended audience for this lab are reliability engineers and data scientists who will set up the Maximo Environment and  analyze their 
-data to create prediction models for asset end of life using Predict model templates.  Reliability Engineers who need to
-plan to address poor asset health and risk with an asset investment plan to repair or replace their assets.
+The intended audience for this lab are reliability engineers and data scientists who will set up the Maximo Environment 
+and  analyze their data to create prediction models for asset end of life using Predict model templates.  Reliability 
+Engineers who need to plan to address poor asset health and risk with an asset investment plan to repair or replace their 
+assets.
 
 You will use a publicly available [pump data set from Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download) to build a Anomaly Detection model.   
 

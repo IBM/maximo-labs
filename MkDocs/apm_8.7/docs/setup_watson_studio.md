@@ -8,7 +8,7 @@ In this exercise you will setup and configure Watson Studio to use the Health an
 - [Get URL to Download the Healh and Predict Notebooks](download_URL).
 - [Create am environment ](create-environemnt-studio)to edit and run your notebooks.
 - [Add Notebook From File]("add-notebook-to-studio") to Watson Studio Project.
-- [Download the Predict pmlib Python Library Documentation](download-pmlib-doc) used for working with Predict algorithms and automating device and data tasks in Monitor.
+- [Download the Predict `pmlib` Python Library Documentation](download-pmlib-doc) used for working with Predict algorithms and automating device and data tasks in Monitor.
 
 
 ## Get URL and User credentials to access Watson Studio
@@ -148,25 +148,21 @@ select your `account` from the drop down menu and click `Clusters`
 ![Choose Cluster Resource](/img/apm_8.7/p30.png) 
 
 3. Click on `Openshift Web Console`
-![Openshift Console](/img/apm_8.7/p31.png) 
+![Openshift Console](/img/apm_8.7/p31.png)
 
-4. Click on `Projects`. Search on `Predict` and Click on `Project`
-![Choose Cluster](/img/apm_8.7/p33.png) 
-
-5. Click on `Project`. Search on `Predict` and Click on `Project`
+4. Click on `Project`. Search on `Predict` and Click on `Project`
 ![Choose Cluster](/img/apm_8.7/p35.png)
 
-6. Click on `Project`. Search on `Predict` and Click on `Project`
-![Choose Cluster](/img/apm_8.7/p36.png) 
+5. Search `Predict`
 
-7. Click on `Project`. Search on `Predict` and Click on `Project`
-![Choose Cluster](/img/apm_8.7/p35.png)
+6. Navigate to `Routes`
 
-8. Pick location
+7. Search for `masdev-masdemo-predict-api` The `URL` should be under the location tab and look similar as the one below.
+
 
     https://masdev.predict.devtest.hpdevcloud-6xxxxxxxxxxxxxx91ab-0000.us-south.containers.appdomain.cloud/ibm/pmi/service
 
-5. Trim the URL end to get the  `APM_API_BASEURL`  by removing `/ibm/pmi/service`.
+8. Trim the URL end to get the  `APM_API_BASEURL`  by removing `/ibm/pmi/service`.
 
 It should look like:
 `EXTERNAL_APM_API_BASEURL` = https://masdev.predict.devtest.hpdevcloud-6xxxxxxxxxxxxxe91ab-0000.us-south.containers.appdomain.cloud
@@ -275,13 +271,13 @@ If your notebook environment fails to start you can restart the environment by f
 ## Download Predict pmlib Python Library Documentation
 <a name="download-pmlib-doc"></a>
 
-Predict pmlib Python Library is used for working with Predict algorithms and automating device and data tasks in Monitor.or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md) Prepend your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
+Predict `pmlib` Python Library is used for working with Predict algorithms and automating device and data tasks in Monitor.or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise [Add Notebook From File to a Watson Studio Project](setup_watson_studio.md) Prepend your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
 
 1. You can download the documentation using a URL similar to the one you create in the previous Exercise for downloading the `doc-8.5.1.zip` that contains the html files for the `pmilib` documentation.
 
 For example: 
 
-    https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download
+    https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/doc/download
 
 2. Unzip the `doc-8.5.1.zip` file you downloaded
 

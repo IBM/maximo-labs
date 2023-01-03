@@ -1,12 +1,13 @@
 
 # Contributors to IBM Maximo APM V8.9 Lab
 
+- Juan Gu -  <gujuan@cn.ibm.com>
 - Carlos Ferreira - <carlosyells@yahoo.com>
 - John Douglas
 
 ---
 
-© 2022 International Business Machines Corporation. No part of this lab document may be reproduced or transmitted in any form without written permission from IBM.
+© 2023 International Business Machines Corporation. No part of this lab document may be reproduced or transmitted in any form without written permission from IBM.
 
 U.S. Government Users Restricted Rights — use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM.
 
@@ -30,7 +31,11 @@ It is the customer’s responsibility to ensure its own compliance with legal re
 
 # Change Information
 
-| Date       | By                                                     | Description         |
-|:-----------|:-------------------------------------------------------|:--------------------|
-| 2022-11-16 | Carlos Ferreira and John Douglas                       | Custom Asset Scores |
+| Date       | By                               | Description         |
+|:-----------|:---------------------------------|:--------------------|
+| 2023-01-03 | Juan Gu,  gujuan@cn.ibm.com      | Custom Asset Scores |
+| 2022-11-16 | Carlos Ferreira and John Douglas | Custom Asset Scores |
 
+3. [Create Custom Score using a notebook](utilities_pump_score_notebook.md)  to create Custom Scores in Health to calculate a Pump's hydraulic efficiency.
+4. [Forecast Custom Scores using a Notebook](utilities_st_futurescore_demo_notebook.md) using a notebook to load Health Scores and Future Scores.
+5. [Forecast Custom Scores using a Machine Learning Model](utilities_st_futurescore_using_wml_model.md) by training the model using historical data.

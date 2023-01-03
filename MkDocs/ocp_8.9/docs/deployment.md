@@ -1,6 +1,4 @@
-# Exercise 4 - Deployment
-
-## Objectives
+# Deployment
 
 In this Exercise you will learn how to:
 
@@ -8,13 +6,13 @@ In this Exercise you will learn how to:
 * Provide needed information for Ansible to store as variables.
 * Install MAS using Ansible playbooks.
 
-### Deployment decision
+##Factors to Consider**
 
 This recipe employs self-signed certificates and Ansible playbooks to deploy MAS with the default OpenShift domain (suitable for sandbox and learning purposes with limited mobile support). If you want to use valid SSL (CA-signed) certificates with a domain name of your own, contact the author with your sales opportunity (suitable for production, proof-of-concept, and MVPs with full mobile support).
 
 ![deployment_decision](/img/ocp_8.9/deployment_decision.png)
 
-### Get started with the deployment
+##Steps
 
 1\. OpenShift login. Locate your `oc login` token of the day and log in to OpenShift from inside the docker.  
 

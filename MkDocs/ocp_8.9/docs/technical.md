@@ -1,12 +1,10 @@
-# Exercise 2 - Technical
-
-## Objectives
+# Exercise 2 - Infrastructure
 
 In this Exercise you will learn how to:
 
 * Acquire Red Hat OpenShift cluster from IBM's Technology Zone.
 
-### Infrastructure decision
+## Infrastructure
 
 This lab employs IBM Cloud-managed OpenShift (Classic version 4.10). The lab was created and validated by the author using IBM's [Tech Zone platform](https://techzone.ibm.com/my/reservations/create/60da20f935e6ac001f1c4086) (available to IBMers and Business Partners).
 
@@ -14,7 +12,7 @@ This lab employs IBM Cloud-managed OpenShift (Classic version 4.10). The lab was
 ![infrastructure_decision](/img/ocp_8.9/infrastructure_decision.png)
 
 
-### OpenShift instance via IBM's Tech Zone
+## Reserve Instance
 
 1\. Reserve an instance of OpenShift 4.10 via IBM's Technology Zone - [ROKS](https://techzone.ibm.com/collection/custom-roks-vmware-requests).
 

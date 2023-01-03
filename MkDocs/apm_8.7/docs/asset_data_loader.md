@@ -145,7 +145,7 @@ The following steps will confirm that the data was uploaded properly
 
 !!! note
 
-    Containers should be Grey until health scores are configured in [Uploading HPU Health Scores via Notebooks](healthscore_notebook.md)
+    Containers should be Grey until health scores are configured in Uploading HPU Health Scores via Notebooks.
  
 ![Containers](/img/apm_8.7/HPU_dataloader_13.png) 
 ## Error Handling

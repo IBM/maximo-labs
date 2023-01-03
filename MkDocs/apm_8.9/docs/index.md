@@ -11,6 +11,7 @@ You will:
 - Use the Matrix to evaluate a group of assets using your custom asset score.
 - Add assets with needs attention condition that are critical to an investment project.
 - Compare and choose the best investment strategies using stay within budget, reduce risk or maintain risk.   
+- See the impact of custom scores in the future. 
 
 Before getting started ensure you have completed the prerequisites: [Prerequisites](prereqs.md)
 

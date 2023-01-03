@@ -4,22 +4,22 @@ In these hands-on labs you will learn how to get started with the different prod
 portfolio.  The labs are in different states of readiness for use shown below. Feel free to [open issues](https://github.com/IBM/monitor-hands-on-lab/issues/new) and provide us feedback.
 
 !!! tip
-    Using the Search capability in the upper left hand corner might help you find things quicker.
+    Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
 ### Maximo Application Suite 8.9
 
   [Deploy MAS 8.9](/ocp_8.9/) <span style="color:red">*Under Development!*</span>  
-  [Health, Predict and Utilities](/apm_8.9/) <span style="color:red">*Under Development!*</span>  
+  [Health, Predict and Utilities](/apm_8.9/) <span style="color:red">*Updated with new exercises*</span>  
 
  
 ### Maximo Application Suite 8.8
 
-  [Omnio integration with Monitor](/omnio_8.8/) <span style="color:red">*New!*</span>  
-  [Health, Predict and Utilities](/apm_8.8/) <span style="color:red">*Under Development!*</span>  
+[Omnio integration with Monitor](/omnio_8.8/)<br/>
+[Health, Predict and Utilities](/apm_8.8/)
 
 ### Maximo Application Suite 8.7
 
-  [Health, Predict and Utilities](/apm_8.7/)  
+  [Health, Predict and Utilities](/apm_8.7/)
   [Monitor Asset Hierarchy](/mas_monitor_hierarchy/)
   
 ### Maximo Application Suite 8.6
@@ -45,7 +45,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   [New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2022-10-18**
+**UPDATED: 2023-01-03**
 ---
 
-© 2022 International Business Machines Corporation.
+© 2023 International Business Machines Corporation

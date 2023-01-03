@@ -118,9 +118,9 @@ For steps 6-14 you will be uploading data from the CSV files. Some cells may tak
 
 ## Confirm Proper Data Upload
 <a name="confirm_upload"></a>
-The following steps will confirm that the data was uploaded properly
+The following steps will allow you confirm that the data was uploaded properly. 
 
-1. Navigate to Maximo Manage for the environment provided to the notebook
+1. Navigate to `Maximo Manage` for the environment provided to the notebook
 
 2. Go to the `Assets` application
 
@@ -138,37 +138,43 @@ The following steps will confirm that the data was uploaded properly
 7. Navigate to `Maximo Health`
 
 8. Click on the `Map` view and turn `Containers` on
-
-
 ![Turn on Containers](/img/apm_8.7/HPU_dataloader_12.png) 
+
 9. Filter by your site/assets and ensure you can see containers
 
 !!! note
 
-    Containers should be Grey until health scores are configured in [Uploading HPU Health Scores via Notebooks](healthscore_notebook.md)
+    Containers should be Grey until health scores are configured.
  
 ![Containers](/img/apm_8.7/HPU_dataloader_13.png) 
+
 ## Error Handling
 <a name="error_handling"></a>
-### Unable to unzip the file
+
+**Unable to unzip the file**
 <a name="unable_to_unzip"></a>
+
 If when running the cell to unzip the files containing the scripts and the data, rather than getting the full file list in the output this is received:
    ![Unzipped File Output](/img/apm_8.7/HPU_dataloader_5.png) 
-Or when running any of the cells to create or load data, you receive this error:
-![File Note Found Error](./img/apm_8.7/HPU_dataloader_6.png) 
-Then follow these steps to ensure your file is zipped/compressed properly:
+Or when running any of the cells to create or load data, you receive an error.
+
+Follow the steps below to ensure your file is zipped/compressed properly:
+
+1. Open the file that needs to be re-zipped and select all the files within that folder
+
+2. `Right Click` > `Compress`
+![Compress/Zip Files](/img/apm_8.7/HPU_dataloader_7.png) 
+
+3. Rename the resulting file to the correct file name indicated in [Gather Notebooks and CSV files](gather_files)
+![Renamed File](/img/apm_8.7/HPU_dataloader_8.png) 
+
+4. Re-upload the file to your Watson Studio project and run the first cell again
+
 !!! note
 
     If you are using a Windows Machine, the following steps may need to be altered.
 
-   1. Open the file that needs to be re-zipped and select all the files within that folder
-   2. `Right Click` > `Compress`
-![Compress/Zip Files](/img/apm_8.7/HPU_dataloader_7.png) 
-   3. Rename the resulting file to the correct file name indicated in [Gather Notebooks and CSV files](gather_files)
-![Renamed File](/img/apm_8.7/HPU_dataloader_8.png) 
-   4. Re-upload the file to your Watson Studio project and run the first cell again
 
-
-Congratulations you have seen how to upload Health and Predict for utilities data via a notebook. You have also gained experience using Jupyter Notebooks in Watson Studio!
+Congratulations you have learned how to upload `Health and Predict - Utilities` data via a notebook. You have also gained experience using Jupyter Notebooks in Watson Studio!
 
 In the next exercises you will learn how to use the `1_Create-HPU-ScoreGroups.ipynb` Notebook template to create health scores for Health and Predict for Utilities assets and associate the asset notebook to that created group.
