@@ -1,24 +1,47 @@
 # Exercise 1 - Logistics
 
+## Objectives
+
 In this Exercise you will learn how to:
 
-* Arrange the logistical requirements like:
+* Arrange the logistical requirements like ...
 
 - AppPoint license file.
 - Container software entitlement key.
 
-## AppPoint License File
+### AppPoint license file
 
-* Business Partners should ensure you have a valid and renewed Partner Package with the IBM. Follow IBM [License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page) and ensure you can log in to the License Key Center website. 
+**Business Partners:** Ensure you have a valid and renewed Partner Package with the IBM. Follow IBM [License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page) and ensure you can log in to the License Key Center website. 
 
-* IBMers should locate Intranet's w3Publisher site of ibm-license-key-mgmt and follow instructions to acquire access to [License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page).
+**IBMers:** Locate Intranet's w3Publisher site of ibm-license-key-mgmt and follow instructions to acquire access to [License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page).
 
-* Existing IBM's Maximo customers** should work with your IBM sales team to renew or acquire an evaluation license.
+**IBM's current Maximo customers:** Work with your IBM sales team to renew or acquire an evaluation license.
 
-* New customers should contact IBM's business partners or IBM's tech sales to get started.
+**New customers**: Contact IBM's business partners or IBM's tech sales to get started.
 
-## Entitlement Key
+Download or make available your license.dat file. Use the following guide to make your choices.
 
-1\. To be added soon - How to download the AppPoint License file. 
+![apppoint-license-download-process](/img/ocp_8.9/apppoint-license-download-process.png)
 
-2\. Log in using your IBM ID and create or copy your container software entitlement key: [IBM Security Access Manager](https://myibm.ibm.com/products-services/containerlibrary). Save this long string key somewhere safe.
+1\. Type the number of AppPoints.
+
+2\. Drop-down and select Ethernet Address
+
+3\. Create a 12-digit random hex number. This random hex number becomes your **Host ID**. The same Host ID becomes **SLS_LICENSE_ID** which you will enter in `env.sh` file.
+
+```shell
+hexdump -vn 6 -e ' /1 "%02x"'  /dev/urandom ; echo
+```
+
+4\. Type the Hostname: sls.ibm-sls.svc
+
+5\. Type the port number: 27000
+
+6\. Write down a note as description.
+
+7\. Click Generate.
+
+
+### Container software entitlement key
+
+1\. Log in using your IBM ID and create or copy your entitlement key: [IBM Container Software library](https://myibm.ibm.com/products-services/containerlibrary). Save this long string key somewhere safe.

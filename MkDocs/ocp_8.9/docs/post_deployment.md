@@ -12,7 +12,7 @@ In this Exercise you will learn how to:
 
 Accept self-signed certificate warnings.
 
-1\. Go to OpenShift project `mas-masdemo-core`, Networking, Routes.
+1\. Go to OpenShift project `mas-maximo89-core`, Networking, Routes.
 
 2\. Click the "admin" URL. Accept the default self-signed certificate warning.
 
@@ -28,7 +28,7 @@ Accept self-signed certificate warnings.
 
 Log in using superuser credentials.
 
-1\. Go to OpenShift project `mas-masdemo-core`, Secrets.
+1\. Go to OpenShift project `mas-maximo89-core`, Secrets.
 
 2\. Search for "superuser". Click reveal username and password. Log in.
 
