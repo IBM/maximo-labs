@@ -11,7 +11,7 @@ In this Exercise you will learn how to:
 
 ### AppPoint license file
 
-**Business Partners:** Ensure you have a valid and renewed Partner Package with the IBM. Follow IBM [License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page) and ensure you can log in to the License Key Center website. 
+**Business Partners:** Ensure you have a valid and renewed Partner Package with the IBM. Follow IBM [License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page) and ensure your Primary Resource Contact can log in to the License Key Center website. 
 
 **IBMers:** Locate Intranet's w3Publisher site of ibm-license-key-mgmt and follow instructions to acquire access to [License Key Center](https://www.ibm.com/support/pages/ibm-support-licensing-start-page).
 
