@@ -6,13 +6,17 @@ In this Exercise you will learn how to:
 * Provide needed information for Ansible to store as variables.
 * Install MAS using Ansible playbooks.
 
-##Factors to Consider**
+## Factors to Consider
 
 This recipe employs self-signed certificates and Ansible playbooks to deploy MAS with the default OpenShift domain (suitable for sandbox and learning purposes with limited mobile support). If you want to use valid SSL (CA-signed) certificates with a domain name of your own, contact the author with your sales opportunity (suitable for production, proof-of-concept, and MVPs with full mobile support).
 
 ![deployment_decision](/img/ocp_8.9/deployment_decision.png)
 
-##Steps
+## Steps
+
+!!! note
+
+    [Watch demo video](https://ibm.box.com/s/1jvi1dwky5c7s33ckeizp9f5j4i7kpn2)
 
 1\. OpenShift login. Locate your `oc login` token of the day and log in to OpenShift from inside the docker.  
 

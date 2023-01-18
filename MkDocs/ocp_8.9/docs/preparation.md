@@ -23,16 +23,16 @@ mkdir mas89; cd $_
 docker run -it --rm --pull always -v ${PWD}:/scripts --name ibmmas quay.io/ibmmas/cli
 ```
 
-4\. Download author's script files
-
-```shell
-bash <(curl -sL https://ibm.biz/deploymasmanage)
-```
-
-5\. Change directory.
+4\. Change directory.
 
 ```shell
 cd /scripts
+```
+
+5\. Download author's script files
+
+```shell
+bash <(curl -sL https://ibm.biz/deploymasmanage)
 ```
 
 !!! note

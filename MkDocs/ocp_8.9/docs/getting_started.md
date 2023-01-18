@@ -15,7 +15,7 @@ This deployment lab is only suitable for sandbox environments. A sandbox environ
 
 **Demonstration Video**
 
-Coming Soon: [video demonstration](https://youtu.be/XXXXXX)
+[video demonstration](https://ibm.box.com/s/1jvi1dwky5c7s33ckeizp9f5j4i7kpn2)
 
 
 **Architecture**
