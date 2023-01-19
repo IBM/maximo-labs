@@ -9,8 +9,8 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ### Maximo Application Suite 8.9
 
   [Deploy MAS 8.9](/ocp_8.9/) <span style="color:red">*Under Development!*</span>  
-  [Health, Predict and Utilities](/apm_8.9/) <span style="color:red">*Updated with new exercises*</span>  
-
+  [Health, Predict and Utilities](/apm_8.9/) <span style="color:red">*Updated with new exercises*</span>
+  <br>[Monitor Connect (also works with MAS 8.8)](/mas_monitor_connect/)  
  
 ### Maximo Application Suite 8.8
 
