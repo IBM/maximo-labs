@@ -1,5 +1,12 @@
 # Objectives
-In this Exercise you will verify the data that was sent from your mobile device is in Monitor
+In this Exercise you will verify the data is being sent and is persisted in Monitor
+
+## Verify events are being sent to Monitor
+1. Go to Connect in Monitor
+2. Search for the name of your Device created in a previous step
+3. See the events coming in
+4. Click on an event to see the payload being sent from your mobile device
+![Event Payload](/img/mas_monitor_connect/event_payload.png)
 
 ## Verify data is in Monitor
 
