@@ -86,7 +86,7 @@ Note:  This is not the DEVICEID in your CSV file
 
 Note:  if you did the previous exercise with the device you can skip these steps
 
-Collect the following
+Collect the following:
 <br>
 * name of the device type created above
 <br>
