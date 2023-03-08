@@ -48,13 +48,13 @@ The metrics should look like this:
 
 ## Create a device in Monitor representing the device in the CSV file
 
-1. Click the blue Setup in the top left which will take you to the device types list
+1. Click the blue Setup link in the top left which will take you to the device types list
 2. The device type you created should be selected
 3. Add device
 4. Enter 1BY6WEcLGh8j5v7 for name
 5. Choose Custom token
 6. Enter Pasword1!
-6. Click Add
+6. Click Add and Close
 
 ## Import Node-RED flow to import the CSV
 
