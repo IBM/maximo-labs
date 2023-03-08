@@ -1,5 +1,5 @@
 # Welcome to the </br>Maximo Monitor Node-RED CSV Importer Lab
-You will learn about how to import historical data into Maximo Monitor (on MAS) using CSV files and Node-RED.
+You will learn about how to import historical data into Maximo Monitor (on MAS) through MQTT using CSV files and Node-RED.
 
 In this lab I will show you the steps needed to successfully import the historical data.</br>
 The steps will cover:
