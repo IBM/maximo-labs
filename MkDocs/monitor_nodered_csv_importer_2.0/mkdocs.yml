@@ -9,9 +9,11 @@ nav:
   - Get back to Maximo Labs: /
   - Monitor Node-RED CSV Importer Lab:
     - Welcome: index.md
+    - Pre-Requisites: prereqs.md
   - Exercises:
-        - 1. Simulate a device in Monitor using the CSV file and Node-RED: setup_device.md
-        - 2. Simulate a gateway in Monitor using the CSV file and Node-RED: setup_gateway.md
+        - 1. Setup Node-RED environment: setup.md
+        - 2. Simulate a device in Monitor using the CSV file and Node-RED: setup_device.md
+        - 3. Simulate a gateway in Monitor using the CSV file and Node-RED: setup_gateway.md
   - About: about.md
 
 theme: readthedocs
