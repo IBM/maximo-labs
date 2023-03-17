@@ -71,8 +71,8 @@ Collect the following:
 <br>
     * name of the device type created above
 <br>
-    * Messaging hostname which should look like this [tenant/workspace].messaging.iot.[domain]
-    <br>i.e. masdev.messaging.iot.monitordemo2.ibmmam.com
+    * Messaging hostname which should look like this [tenant/workspace].messaging.iot.[domain]<br>
+    &ensp;e.g. masdev.messaging.iot.monitordemo2.ibmmam.com
 <br>
 
 1. Double click on the purple node named "Send MQTT event to a device to MAS Monitor"
@@ -90,17 +90,18 @@ Collect the following:
 
 ## Run the Node-RED flow for a single device
 
-1. Download the [solar_device.csv](https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv-files/monitor_devices_solar/device_solar.csv){target=_blank}
-2. Click on the down arrow in the upper right corner and choose Dashboard
-3. Click on the launch arrow
-![Launch dashboard](/img/monitor_nodered_csv_importer_2.0/device_list.png)
-5. Click on Choose File under "Upload CSV with a single device"
+1. Download [solar_device.csv](https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv-files/monitor_devices_solar/device_solar.csv){target=_blank} from github
+2. Click on the down arrow in the upper right corner in Node-RED and choose Dashboard<br>
+![Choose dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_choose.png)
+3. Click on the launch arrow<br>
+![Launch dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_launch.png)
+5. Click on Choose File under "Upload CSV with a single device"<br>
 ![Upload CSV single device](/img/monitor_nodered_csv_importer_2.0/upload_csv_single_device.png)
 6. Click the right arrow play button
 7. Go back to the Node-RED flow window
 8. Under the light purple node it shows the amount of messages left to send to Monitor
 9. Under the green Progress node it shows the amount of messages that have been sent to Monitor
-10. Wait till the number under the light purple node shows 0.  Progress node should say 1659.
+10. Wait till the number under the light purple node shows 0.  Progress node should say 1659.<br>
 ![Single device run](/img/monitor_nodered_csv_importer_2.0/single_device_run.png)
 11. All the data has been ingested into Monitor
 
@@ -109,8 +110,8 @@ Collect the following:
 1. Go to Setup in Monitor
 2. Click on the Device Type created earlier in the lab
 3. Click on the black button "Set up device type"
-4. On the left side open Metric
-5. Click on Data table to see the values of that metric
+4. On the left side open Metric and then select AC_POWER
+5. Click on Data table to see the values of that metric<br>
 ![Data table](/img/monitor_nodered_csv_importer_2.0/data_table.png)
 9. Congratulations!  You have ingested data from a CSV file into Monitor
 10. Now you can explore creating calculated data metrics and dashboards in Monitor
