@@ -67,13 +67,11 @@ The metrics should look like this:
 
 ## Configure Node-RED flow for your MAS Monitor environment
 
-Collect the following:
-<br>
-    * name of the device type created above
-<br>
-    * Messaging hostname which should look like this [tenant/workspace].messaging.iot.[domain]<br>
-    &ensp;e.g. masdev.messaging.iot.monitordemo2.ibmmam.com
-<br>
+Collect the following:<br>
+* name of the device type created above<br>
+* Messaging hostname which should look like this<br>
+&ensp;[tenant/workspace].messaging.iot.[domain]<br>
+&ensp;e.g. masdev.messaging.iot.monitordemo2.ibmmam.com<br>
 
 1. Double click on the purple node named "Send MQTT event to a device to MAS Monitor"
 2. Click on the pencil icon next to Server
