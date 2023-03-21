@@ -4,6 +4,15 @@
 - Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 - Mike Lamb   - <mllamb@us.ibm.com>
 
+# Change Information
+
+|Date     |By             | Description                                           |
+|:--------|:--------------|:------------------------------------------------------|
+|2023-03-21|Jan Ekstrøm|Updated to use MQTT as ingestion path. |
+|2022-02-22|Jan Ekstrøm|Dry runs performed, ready for Release. |
+|2022-02-17|Jan Ekstrøm|Ready for dry run. |
+|2022-02-16|Jan Ekstrøm|First draft version. |
+
 ---
 
 © 2023 International Business Machines Corporation. No part of this lab document may be reproduced or transmitted in any form without written permission from IBM.
@@ -27,13 +36,5 @@ Workshops, sessions and associated materials may have been prepared by independe
 
 It is the customer’s responsibility to ensure its own compliance with legal requirements and to obtain advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulatory requirements that may affect the customer’s business and any actions the customer may need to take to comply with such laws. IBM does not provide legal advice or represent or warrant that its services or products will ensure that the customer follows any law.
 
-
-# Change Information
-
-|Date     |By             | Description                                           |
-|:--------|:--------------|:------------------------------------------------------|
-|2022-02-22|Jan Ekstrøm|Dry runs performed, ready for Release. |
-|2022-02-17|Jan Ekstrøm|Ready for dry run. |
-|2022-02-16|Jan Ekstrøm|First draft version. |
 
 ---
