@@ -58,9 +58,10 @@ It is the customer’s responsibility to ensure its own compliance with legal re
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2023-03-21|Jan Ekstrøm|Added Monitor Node-RED CSV Importer Lab V2.0|
 |2022-10-18|Jan Ekstrøm|Updated Monitor-Omnio Integration Lab and the Maximo Lab landing page.|
 |2022-09-23|Jan Ekstrøm|Added the Monitor-Omnio Integration Lab.|
-|2022-02-26|Cecilia |MAS v8.6 Suite Overview Lab. |
+|2022-02-26|Cecilia Stark|MAS v8.6 Suite Overview Lab. |
 |2022-02-22|Jan Ekstrøm|Added the Monitor Node-RED CSV Importer lab.|
 |2022-02-18|Carlos Ferreira|Added the MAS 8.7 APM lab.|
 |2021-03-16|Cecilia Stark|Updated the status of Fast Start 2021 Labs.|
