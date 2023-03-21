@@ -29,7 +29,6 @@ Node-RED library dependencies:</br>
 - node-red-dashboard</br>
 - node-red-contrib-ui-upload</br>
 - node-red-contrib-chunks-to-lines</br>
-- node-red-nodes-cf-sqldb-dashdb</br>
 
 1. Click on the burger menu in upper right hand corner and select `Manage palette`.
 ![Manage palette](/img/monitor_nodered_csv_importer_1.0/Setup_01.png)</br></br>
