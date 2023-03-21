@@ -115,7 +115,8 @@ Collect the following (or skip if done in previous exercise):<br>
 10. Click Update
 11. Click Done
 12. Click Deploy in the top right corner
-13. You should now see a green dot and `Connected` below the MQTT node if all credentials were entered correctly
+13. You should now see a green dot and `connected` below the MQTT node if all credentials were entered correctly<br>
+![Connected device](/img/monitor_nodered_csv_importer_2.0/connected_gateway.png)
 
 ## Run the Node-RED flow for a gateway
 
