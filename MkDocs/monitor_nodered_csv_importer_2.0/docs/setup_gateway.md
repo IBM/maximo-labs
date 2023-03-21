@@ -9,6 +9,9 @@ In this Exercise you will learn how to setup Monitor to receive data from a CSV 
 
 ## Create a device type and setup metrics in Monitor
 
+!!! tip
+    If you have already done the previous exercise, then skip to [Create a gateway in IoT and register a device](#create-a-gateway-in-iot-and-register-a-device) and reuse the device type setup.
+
 ### Create a device type
 
 1. Go to Setup in Monitor
@@ -51,7 +54,8 @@ The metrics should look like this:
 
 ## Create a gateway in IoT and register a device
 
-1. Click the menu in the top right corner and choose IoT
+1. Click the AppSwitcher in the top right corner and choose IoT</br>
+![Open IoT Tool](/img/monitor_nodered_csv_importer_2.0/select_iot.png)
 2. Click on Device Types
 3. Click on Add Device Type
 4. Click on Type Gateway
@@ -66,9 +70,10 @@ Note:  This is not the DEVICEID in your CSV file
 9. Click Next
 10. Click Next
 11. Click Next
-12. In Authenticaton Token enter Pasword1!
+12. Click Next
+13. In Authenticaton Token enter Pasword1! and click Next
 ![Add Device](/img/monitor_nodered_csv_importer_2.0/add_device_gateway.png)
-13. Click Finish
+14. Click Finish
 ![Add Device](/img/monitor_nodered_csv_importer_2.0/device_credentials.png)
 
 ## Import Node-RED flow to import the CSV
@@ -84,25 +89,11 @@ Note:  This is not the DEVICEID in your CSV file
 
 ### Configure Node-RED flow for your MAS Monitor environment
 
-Note:  if you did the previous exercise with the device you can skip these steps
-
-Collect the following:
-<br>
-* name of the device type created above
-<br>
-* Messaging hostname which should look like this
-     [tenant/workspace].messaging.iot.[domain]
-     <br>
-     i.e. masdev.messaging.iot.monitordemo2.ibmmam.com
-<br>
-
-1. Double click on the purple node named "Send MQTT event to a gateway to MAS Monitor"
-2. Click on the pencil icon next to Server
-3. In the Server box replace with your Messaging hostname
-4. Click on the pencil icon next to TLS configuration
-5. In the Server Name box replace with your Messaging hostname
-6. Click Update
-7. Click Done
+Collect the following (or skip if done in previous exercise):<br>
+* name of the device type created above<br>
+* Messaging hostname which should look like this<br>
+&ensp;[tenant/workspace].messaging.iot.[domain]<br>
+&ensp;e.g. masdev.messaging.iot.monitordemo2.ibmmam.com<br>
 
 ### Update the device type
 
@@ -112,30 +103,35 @@ Collect the following:
 
 ### Update the Client ID
 
-1. Double click on the purple node named "Send MQTT event to a gateway to MAS Monitor"
+1. Double click on the purple MQTT node named "Send MQTT event to a gateway to MAS Monitor"
 2. Click on the pencil icon next to Server
-3. The Client ID field should already contain your tenant/workspace name
-4. In the Client ID field replace MLL_GatewayType with your device type created above
-5. In the Client ID field replace MLL_GatewayDevice with your device created above
-6. Click on the Security tab, leave use-token-auth as the username and enter Pasword1! as the Password
-7. Click Update
-8. Click Done
-9. Click Deploy in the top right corner
+3. In the Server box replace with your Messaging hostname
+4. Click on the pencil icon next to TLS configuration
+5. In the Server Name box replace with your Messaging hostname
+6. The Client ID field should already contain your tenant/workspace name
+7. In the Client ID field replace MLL_GatewayType with your gateway device type created above
+8. In the Client ID field replace MLL_GatewayDevice with the device Id of your gateway created above
+9. Click on the Security tab, write `use-token-auth` as the username and write `Pasword1!` as the Password
+10. Click Update
+11. Click Done
+12. Click Deploy in the top right corner
+13. You should now see a green dot and `Connected` below the MQTT node if all credentials were entered correctly
 
 ## Run the Node-RED flow for a gateway
 
 1. Download the [plant_solar.csv](https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv-files/monitor_devices_solar/plant_solar.csv){target=_blank}.
-2. Click on the down arrow in the upper right corner and choose Dashboard
-3. Click on the launch arrow
-![Launch dashboard](/img/monitor_nodered_csv_importer_2.0/device_list.png)
-4. Click on Choose File under "Upload CSV with multiple devices"
+2. Click on the down arrow in the upper right corner in Node-RED and choose Dashboard<br>
+![Choose dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_choose.png)
+3. Click on the launch arrow<br>
+![Launch dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_launch.png)
+4. Click on Choose File or Browse under "Upload CSV with multiple devices" and select the recently downloadet CSV file.<br>
 ![Upload CSV multiple devices](/img/monitor_nodered_csv_importer_2.0/upload_csv_multiple_devices.png)
 5. Click the right arrow play button
 6. Go back to the Node-RED flow window
 7. Under the light purple node it shows the amount of messages left to send to Monitor
 8. Under the green Progress node it shows the amount of messages that have been sent to Monitor
-9. All the data is ingested into Monitor once the number under the light purple node shows 0 but you can go ahead to the next step to verify data is going into Monitor
-10. ![Single device run](/img/monitor_nodered_csv_importer_2.0/gateway_run.png)
+9. All the data is ingested into Monitor once the number under the light purple node shows 0 but you can go ahead to the next step to verify data is going into Monitor<br>
+![Single device run](/img/monitor_nodered_csv_importer_2.0/gateway_run.png)
 
 ## Verify the devices and data in Monitor
 
