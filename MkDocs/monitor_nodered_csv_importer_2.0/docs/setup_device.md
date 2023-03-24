@@ -58,7 +58,7 @@ The metrics should look like this:
 
 ## Import Node-RED flow to import the CSV
 
-1. Download the [flow](https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv-files/monitor_devices_solar/monitor_device_gateway.json){target=_blank}
+1. Download the [flow](https://github.com/ekstrom-ibm/monitor_csv_importer/blob/main/V2/Monitor_CSV_to_MQTT_flow.json){target=_blank}
 2. Launch Node-RED
 3. Click on the burger menu and choose Import
 4. Click on select a file to import
@@ -91,7 +91,7 @@ Collect the following:<br>
 
 ## Run the Node-RED flow for a single device
 
-1. Download [solar_device.csv](https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv-files/monitor_devices_solar/device_solar.csv){target=_blank} from github
+1. Download [single_solar_panel.csv](https://github.com/ekstrom-ibm/monitor_csv_importer/blob/main/V2/single_solar_panel.csv){target=_blank} from github
 2. Click on the down arrow in the upper right corner in Node-RED and choose Dashboard<br>
 ![Choose dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_choose.png)
 3. Click on the launch arrow<br>
