@@ -5,11 +5,17 @@ In this lab you will learn the steps needed to successfully import historical da
 The steps will cover:
 
 * Setting up your local Node-RED environment
-* Simulate a device in Monitor using the CSV file and Node-RED
-* Simulate a gateway in Monitor using a CSV file and Node-RED
+* Inject device data directly to Monitor using a CSV file and Node-RED
+* Inject device data from multiple devices through a gateway to Monitor<br>
+  using a CSV file and Node-RED
+* Have fun
+
+!!! note
+    Expected time needed to run the complete lab: less than 1 hour
+
 
 ---
 
-**Updated: 2023-03-21**
+**Updated: 2023-03-24**
 
 ---
