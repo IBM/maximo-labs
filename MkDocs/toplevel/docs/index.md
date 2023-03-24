@@ -8,11 +8,11 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 
 ### Maximo Application Suite 8.10
-| Lab                                                                   | Exercise                                                                                                         |
-|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| [Monitor Node-RED CSV Importer V2](/monitor_nodered_csv_importer_2.0/)| [Setup Environment](/monitor_nodered_csv_importer_2.0/setup)                                                     |
-|                                                                       | [Simulate a device in Monitor using the CSV file and Node-RED](/monitor_nodered_csv_importer_2.0/setup_device)   |
-|                                                                       | [Simulate a gateway in Monitor using the CSV file and Node-RED](/monitor_nodered_csv_importer_2.0/setup_gateway) |
+| Lab                                                                   | Exercise                                                                                           |
+|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [Monitor Node-RED CSV Importer V2](/monitor_nodered_csv_importer_2.0/)| [Setup Node-RED Environment](/monitor_nodered_csv_importer_2.0/setup)                              |
+|                                                                       | [Inject device data directly to Monitor](/monitor_nodered_csv_importer_2.0/setup_device)           |
+|                                                                       | [Inject device data through a gateway to Monitor](/monitor_nodered_csv_importer_2.0/setup_gateway) |
 
 ### Maximo Application Suite 8.9
 | Lab                                        | Exercise                                                                                      |
@@ -136,7 +136,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   [New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2023-03-21**
+**UPDATED: 2023-03-24**
 ---
 
 © 2023 International Business Machines Corporation
