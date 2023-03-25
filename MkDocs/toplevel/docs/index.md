@@ -7,6 +7,13 @@ portfolio.  The labs are in different states of readiness for use shown below. F
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
 
+### Maximo Application Suite 8.10
+| Lab                                                                   | Exercise                                                                                           |
+|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [Monitor Node-RED CSV Importer V2](/monitor_nodered_csv_importer_2.0/)| [Setup Node-RED Environment](/monitor_nodered_csv_importer_2.0/setup)                              |
+|                                                                       | [Inject device data directly to Monitor](/monitor_nodered_csv_importer_2.0/setup_device)           |
+|                                                                       | [Inject device data through a gateway to Monitor](/monitor_nodered_csv_importer_2.0/setup_gateway) |
+
 ### Maximo Application Suite 8.9
 | Lab                                        | Exercise                                                                                      |
 |--------------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -129,7 +136,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   [New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2023-02-05**
+**UPDATED: 2023-03-24**
 ---
 
 © 2023 International Business Machines Corporation

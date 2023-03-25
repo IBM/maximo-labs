@@ -1,0 +1,22 @@
+site_name: Monitor Node-RED CSV Importer Lab
+site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_author: Jan Ekstrøm & Contributors
+site_description: "Maximo Monitor Node-RED CSV Importer Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/monitor_nodered_csv_importer_2.0
+
+nav:
+  - Get back to Maximo Labs: /
+  - Monitor Node-RED CSV Importer Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Setup Node-RED environment: setup.md
+        - 2. Inject device data directly to Monitor: setup_device.md
+        - 3. Inject device data through a gateway to Monitor: setup_gateway.md
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
