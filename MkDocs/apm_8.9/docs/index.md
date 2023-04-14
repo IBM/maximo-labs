@@ -7,6 +7,7 @@ This lab provides step-by-step instructions and code examples to help you learn 
 
 You will:
 
+- Set up a demonstration of Maximo Health and Predict.
 - Create a custom asset score to measure the condition of your assets.
 - Use the Matrix to evaluate a group of assets using your custom asset score.
 - Add assets with needs attention condition that are critical to an investment project.

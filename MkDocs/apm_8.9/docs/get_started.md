@@ -29,11 +29,13 @@ For this exercise ensure you have access to :
 
 These are the exercises available in this lab.
 
-1. [Setup Watson Studio for Predict](setup_watson_studio.md)
-2. [Create Custom Scores using Web UI](asset_scores.md)in Health and Predict - Utilities.
-3. [Create Custom Score using a notebook](utilities_pump_score_notebook.md)  to create Custom Scores in Health to calculate a Pump's hydraulic efficiency.
-4. [Forecast Custom Scores using a Notebook](utilities_st_futurescore_demo_notebook.md) using a notebook to load Health Scores and Future Scores.
-5. [Forecast Custom Scores using a Machine Learning Model](utilities_st_futurescore_using_wml_model.md) by training the model using historical data.
+1. [Build a Demonstration of Maximo Health and Predict](build_demo.md)
+2. [Demonstration of Maximo Health and Predict ](setup_watson_studio.md)
+3. [Setup Watson Studio for Predict](setup_watson_studio.md)
+4. [Create Custom Scores using Web UI](asset_scores.md)in Health and Predict - Utilities.
+5. [Create Custom Score using a notebook](utilities_pump_score_notebook.md)  to create Custom Scores in Health to calculate a Pump's hydraulic efficiency.
+6. [Forecast Custom Scores using a Notebook](utilities_st_futurescore_demo_notebook.md) using a notebook to load Health Scores and Future Scores.
+7. [Forecast Custom Scores using a Machine Learning Model](utilities_st_futurescore_using_wml_model.md) by training the model using historical data.
 
 ### Architecture
 
