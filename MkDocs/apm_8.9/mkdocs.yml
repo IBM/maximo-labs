@@ -12,6 +12,7 @@ nav:
     - Get Started: get_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:
+      - Setup Health and Predict demonstration: build_demo.md
       - Setup Watson Studio for Predict: setup_watson_studio.md
       - Setup Custom Scores: asset_scores.md
       - Create Custom Scores Using a Notebook: utilities_pump_score_notebook.md
