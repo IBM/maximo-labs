@@ -1,9 +1,11 @@
-# MAS v8.9 Health and Predict - Utilities (HPU) Demo Script
+# MAS Health and Predict - Utilities Overview Task Guide
 
+This task guide is based on the MAS v8.9 and MAS v8.10.  This workshop will use a common environment provided by your instructor.
+Please follow the steps in this task guide.  Any deviation from the task guide and or changes you make to the system will 
+also appear and may impact other users.  Since this is a live system, some changes are inevitable, and you may find that 
+some of the details of the task guide do not match the system.
 
-This script is based on the MAS v8.9 worldwide demo system.  If you are using that system to demonstrate HPU, please follow this script.  Any deviation from the script, or changes made to the system will impact other users.  Since this is a live system, some changes are inevitable, and you may find that some of the details of the script do not match the system.
-
-For this demo, the following are required, and not automatically created with the demo data load.
+For this overview, the following are required, and have been created by your instructor.
 
 | Lab Section         | Data Required                |
 |---------------------|------------------------------|
@@ -15,22 +17,31 @@ For this demo, the following are required, and not automatically created with th
 | Plan Template       | SUBSTATION_TRANSFORMER       |
 
 
-These are already built in the demo environment, so there is no need to recreate them
+If your instructor hasn't added the data, ask him to follow the steps in [Build MAS Health and Predict Demonstration](build_demo.md)
 
-### Narrative
-My name is Marcia.  I’m a Reliability Engineer (RE), my role is to maintain the reliability of the grid.  My main responsibility is to ensure that the grid stays up and operational.  I’m also responsible for making short, medium and long term investment decisions that drive maintenance and replacement policies.  I use asset condition and operational data to gain insights into Asset Health, Probability of Failure and Risk, both today and into the future. 
+## Introduction
+In this overview task guide you will be Marcia.  She is a Reliability Engineer (RE), whose role is to maintain the 
+reliability of the grid.  Her main responsibility is to ensure that the grid stays up and operational.  She is also 
+responsible for making short, medium and long term investment decisions that drive maintenance and replacement policies.  
+She uses asset condition and operational data to gain insights into Asset Health, Probability of Failure and Risk, both
+today and into the future. 
 
-Thankfully, I have a Health and Predict - Utilities solution from IBM with advanced analytics that help me do my work efficiently and confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.   Health and Predict - Utilities incorporates multiple data sources such as Asset Master and Work order data, historical failure data, GeoSpatial Data, Inspection and Test Logs, IoT and Sensor data.   Health and Predict - Utilities provides a flexible Asset condition framework for mining the asset condition data. Health and Predict - Utilities helps me identifying assets that are at greatest risk of failure, across different circuits/feeders, substations and regions.  The risk assessment helps me drive asset and work management activities in Maximo Manage or other EAM systems to keep the grid up, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.
+Thankfully, You will have a Health and Predict - Utilities solution from IBM with advanced analytics to help you do your 
+work efficiently and confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.   
+Health and Predict - Utilities incorporates multiple data sources such as Asset Meter and Work order data, historical 
+failure data, GeoSpatial Data, Inspection and Test Logs, IoT and Sensor data.   Health and Predict - Utilities provides 
+a flexible Asset condition framework for mining the asset condition data. Health and Predict - Utilities helps you 
+identify assets that are at the greatest risk of failure, across different circuits/feeders, substations and regions.  
+The risk assessment helps you drive asset and work management activities in Maximo Manage or other EAM systems to keep 
+the grid up, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.
 
-### Intro
-Maximo Health and Maximo Predict are targeted to the RE, and provide a view of the current state of an enterprise's assets, and projects future conditions of those assets.  HPU is an extension of Health and Predict designed specifically for the Utilities industry.  Health, Predict, and HPU share the same User Interface (UI).
 
+Maximo Health and Maximo Predict are targeted to the RE, and provide a view of the current state of an enterprise's 
+assets, and projects future conditions of those assets.  HPU is an extension of Health and Predict designed specifically 
+for the Utilities industry.  Health, Predict, and HPU share the same User Interface (UI).
 
-## Start of Demo Script
-<a name="demo_script"></a>
-
-
-###  Identify
+##  Identify
+<a name="identify"></a>
 
 On the “Applications” tab, there are tiles for each of the applications that the admin has loaded from the Maximo Application Suite (MAS).  On the “Industry Solution” tab, there is a tile for Health and Predict – Utilities.
 
@@ -179,7 +190,8 @@ Zoom in and click on each of the pins to view the key KPIs of the selected asset
 
 Here there’s a substation transformer that likely needs attention.
 
-Note that a user CAN click on the name to open the asset detail page.  However, there are other methods to identify assets in poor health and focus on substation transformers.
+Note that a user can click on the name to open the asset detail page.  However, there are other methods to identify 
+assets in poor health and focus on substation transformers.
 
 The charts view offers an alternative way to identify assets at risk.
 
@@ -209,7 +221,8 @@ This page shows 3 charts:
 - a chart showing failure rate per manufacturer
 
 !!! note "Value"
-    Seeing key KPIs for multi-assets by health distribution, categorized by unplanned downtime or failure rate per manufacture can help understand assets failure trends.
+    Seeing key KPIs for multi-assets by health distribution, categorized by unplanned downtime or failure rate per 
+manufacture can help understand assets failure trends.
 
 Drill-down through each of these charts to see the assets details of each category.
 
@@ -223,7 +236,8 @@ For example, clicking on the manufacturer Boggs shows a 100% failure rate.  So a
 2. Return to the charts page by using the breadcrumb at the top of the page
 ![setup_assets](./img/HPU_8.9/HPU 84.png)
 
-Using “work queues” is another way to identify assets in trouble, and to take an action to avoid unplanned downtime and be more proactive in maintenance planning.
+Using “work queues” is another way to identify assets in trouble, and to take an action to avoid unplanned downtime and 
+be more proactive in maintenance planning.
 
 !!! attention "Actions"
     Follow the action items below.
@@ -234,10 +248,12 @@ Using “work queues” is another way to identify assets in trouble, and to tak
 3. Select `Failing Before PM` work queue
 ![setup_assets](./img/HPU_8.9/HPU 86.png)
 
-Work queues are preconfigured views designed to help find assets that meet specific conditions.  They can be used by the reliability engineer to systematically address each asset on the list, in turn, and “work down” the list.
+Work queues are preconfigured views designed to help find assets that meet specific conditions.  They can be used by the
+reliability engineer to systematically address each asset on the list, in turn, and “work down” the list.
 
 !!! note "Value"
-    These are particularly valuable to a RE who needs to address a specific problem, like a utility, trying to avoid unplanned downtime.
+    These are particularly valuable to a RE who needs to address a specific problem, like a utility, trying to avoid 
+unplanned downtime.
 
 There are a number of work queues included with Health and Predict.
 - There are work queues specific to Predict, like assets with a High Probability of Failure.
@@ -246,7 +262,7 @@ There are a number of work queues included with Health and Predict.
 And there are work queues that show assets with missing data.
 
 !!! note "Value"
-    The missing data work queues are extremely useful to a RE as they can help identify gaps in data necessary to create health scores or predictive failure models.
+    The missing data work queues are useful for an RE to help identify gaps in data necessary to create health scores or predictive failure models.
 
 The “Failing before PM” work queue shows all of the assets with scores in that work queue.  As a RE at a Utilities plant, it is critical to avoid failures.
 - In this work queue, there are several pumps and substation transformers that have a predicted failure before their next planned maintenance date.
@@ -259,9 +275,8 @@ The “Failing before PM” work queue shows all of the assets with scores in th
 1. Select `ST_1400518` which opens the asset detail page [DETAILS ON THIS PAGE WILL VARY AS THIS IS A LIVE DEMO SYSTEM]
 ![setup_assets](./img/HPU_8.9/HPU 87.png)
 
-
-
-### Investigate
+## Investigate
+<a name="investigate"></a>
 
 On the top of the asset detail page there are the resulting scores from the predefined notebook for this substation transformer.  These are health, criticality, risk, end of life and effective age score.  Note that effective age is a calculation using the actual age and the health score.  An asset in poor health will have an effective age greater than its actual age.
 
@@ -272,7 +287,7 @@ On the second line, there are custom scores, like the Substation Efficiency scor
 The next Preventive Maintenance date and the MRR come directly from Maximo Manage.
 
 !!! note "Value"
-    The asset detail page is an incredibly useful tool for investigating assets.  All of the asset information is presented on a single page, in easy-to-read tables, charts and graphs.
+    The asset detail page is an useful for investigating assets.  Asset condition information is presented on a single page, in easy-to-read tables, charts and graphs.
 
 - On the top of the page, there are details about the asset, and KPIs that give a snapshot of its current state.
 - For this asset, there is a health score of 44, which is in the medium “fair” zone.  

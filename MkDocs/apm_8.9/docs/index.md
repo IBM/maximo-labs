@@ -1,13 +1,15 @@
-# Welcome to the IBM Maximo Health, Predict and Utilities Lab for MAS version v8.9
+# Welcome to the IBM Maximo Health, Predict and Utilities Lab for MAS
 
 !!! note
     This lab is still being developed, incomplete and may have errors.  We provide it to get your [feedback](https://github.com/IBM/monitor-hands-on-lab/issues/new) and allow you to reference the materials as the labs are built.
 
-This lab provides step-by-step instructions and code examples to help you learn about the product capabilities in IBM Maximo, Health and Predict - Utilities v8.9.  
+This lab provides step-by-step instructions and code examples to help you learn about the product capabilities in IBM 
+Maximo, Health and Predict - Utilities v8.9 and some labs can also be use v8.10.  
 
 You will:
 
-- Set up a demonstration of Maximo Health and Predict.
+- Set up a demonstration of Maximo Health and Predict.  Also support v8.10.
+- Task guide overview of using Maximo Health and Predict. Also support v8.10.
 - Create a custom asset score to measure the condition of your assets.
 - Use the Matrix to evaluate a group of assets using your custom asset score.
 - Add assets with needs attention condition that are critical to an investment project.

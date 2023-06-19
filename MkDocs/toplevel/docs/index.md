@@ -13,6 +13,9 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | [Monitor Node-RED CSV Importer V2](/monitor_nodered_csv_importer_2.0/) | [Setup Node-RED Environment](/monitor_nodered_csv_importer_2.0/setup)                              |
 |                                                                        | [Inject device data directly to Monitor](/monitor_nodered_csv_importer_2.0/setup_device)           |
 |                                                                        | [Inject device data through a gateway to Monitor](/monitor_nodered_csv_importer_2.0/setup_gateway) |
+| [Health, Predict and Utilities](/apm_8.9/)                             | [Setup Demonstration](/apm_8.9/build_demo)                                                         |
+|                                                                        | [Overview Task Guide](/apm_8.9/demo_script)                                                        |
+
 
 ### Maximo Application Suite 8.9
 | Lab                                        | Exercise                                                                                      |
@@ -23,6 +26,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                            | [Deployment](/ocp_8.9/deployment)                                                             |
 |                                            | [Post Deployment](/ocp_8.9/post_deployment)                                                   |
 | [Health, Predict and Utilities](/apm_8.9/) | [Setup Demonstration](/apm_8.9/build_demo)                                                    |
+|                                            | [Overview Task Guide](/apm_8.9/demo_script)                                                   |
 |                                            | [Setup Watson Studio](/apm_8.9/setup_watson_studio)                                           |
 |                                            | [Setup Custom Scores](/apm_8.9/asset_scores)                                                  |
 |                                            | [Create a Custom Score Using a Notebook](/apm_8.9/utilities_pump_score_notebook)              |

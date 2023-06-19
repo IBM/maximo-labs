@@ -1,4 +1,4 @@
-site_name: Maximo APM V8.9 Hands On Lab
+site_name: Maximo APM Hands On Lab
 site_url: https://mam-hol.eu-gb.mybluemix.net/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Asset Performance Management v8.9 Hands on Lab"
@@ -7,12 +7,13 @@ site_dir: ../../site/apm_8.9
 
 nav:
   - Get back to Maximo Labs: /
-  - Maximo APM V8.9 Lab:
+  - Maximo APM Lab:
     - Welcome to the Lab: index.md
     - Get Started: get_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:
-      - Setup Health and Predict demonstration: build_demo.md
+      - Setup Health and Predict Demonstration: build_demo.md
+      - Health and Predict Overview Task Guide: demo_script.md
       - Setup Watson Studio for Predict: setup_watson_studio.md
       - Setup Custom Scores: asset_scores.md
       - Create Custom Scores Using a Notebook: utilities_pump_score_notebook.md

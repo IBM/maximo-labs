@@ -1,4 +1,4 @@
-# Build MAS v8.9 Health and Predict Demo
+# Build MAS Health and Predict Demonstration
 
 Follow the steps in this lab in your own environment to create the necessary components to deliver the MAS v8.9 Health and 
 Predict Demo Script. The data for your system can be provided by the instructor.
