@@ -1,0 +1,28 @@
+site_name: Maximo APM Hands On Lab
+site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_author: Carlos Ferreira & Contributors
+site_description: "Maximo Asset Performance Management v8.11 Hands on Lab"
+google_analytics: ['UA-159649729-1', 'auto']
+site_dir: ../../site/apm_8.11
+
+nav:
+  - Get back to Maximo Labs: /
+  - Maximo APM Lab:
+    - Welcome to the Lab: index.md
+    - Get Started: get_started.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+      - Setup Health and Predict Demonstration: build_demo.md
+      - Health and Predict Overview Task Guide: demo_script.md
+      - Setup Watson Studio for Predict: setup_watson_studio.md
+      - Setup Custom Scores: asset_scores.md
+      - Create Custom Scores Using a Notebook: utilities_pump_score_notebook.md
+      - Create Custom Score Forecast via Notebook: utilities_st_futurescore_demo_notebook.md
+      - Create Custom Score Forecast via WML Model: utilities_st_futurescore_using_wml_model.md
+
+  - About: about.md
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
