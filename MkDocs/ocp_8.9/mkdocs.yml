@@ -1,5 +1,5 @@
 site_name: MAS 8.9 Deployment Lab
-site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Arif Ali & Contributors
 site_description: "MAS 8.9 Deployment Lab"
 google_analytics: ['UA-159649729-1', 'auto']

@@ -23,7 +23,7 @@ welcome your contributions to existing or new exercises.
 
 ## Overview of Maximo Monitor
 
-Read an [overview of Maximo Monitor](https://mam-hol.eu-gb.mybluemix.net/monitor_saas/getting_started/)
+Read an [overview of Maximo Monitor](http://maximo-lab.monitordemo4.ibmmam.com/monitor_saas/getting_started/)
 
 ##  Demonstration of Monitor
 

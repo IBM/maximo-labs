@@ -11,7 +11,7 @@ This Hands on Lab requires:
 
 * Access to a Maximo Application Suite v8.9 environment. Request access from your instructor. 
 
-* Internet access to these [lab instructions](https://mam-hol.eu-gb.mybluemix.net/apm_8.7/)
+* Internet access to these [lab instructions](http://maximo-lab.monitordemo4.ibmmam.com/apm_8.7/)
 
 * User access to a Maximo Application Suite environment.  Your Exercise facilitator can provide you with the information to access the environment.
 

@@ -62,7 +62,7 @@ You can deactivate the virtual environment with this command:
 3. Access the Github repo of the IBM Maximo Labs here:<br>
 [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab){target=_blank}
 4. Access the latest published labs here:<br>
-[https://mam-hol.eu-gb.mybluemix.net/](https://mam-hol.eu-gb.mybluemix.net/){target=_blank}<br>
+[http://maximo-lab.monitordemo4.ibmmam.com/](http://maximo-lab.monitordemo4.ibmmam.com/){target=_blank}<br>
 (This might not contain the latest changes from the Github repository)
 
 Clone the github repository down to your local machine:

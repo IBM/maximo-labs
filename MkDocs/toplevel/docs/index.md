@@ -6,6 +6,12 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 !!! tip
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
+### Maximo Application Suite 8.11  (Under Development)
+| Lab                                                                    | Exercise                                                                                           |
+|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [Health, Predict and Utilities](/apm_8.9/)                             | [Setup Demonstration](/apm_8.9/build_demo)                                                         |
+|                                                                        | [Overview Task Guide](/apm_8.9/demo_script)                                                        |
+
 
 ### Maximo Application Suite 8.10
 | Lab                                                                    | Exercise                                                                                           |

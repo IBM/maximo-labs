@@ -1,5 +1,5 @@
 site_name: Monitor Node-RED CSV Importer Lab
-site_url: https://mam-hol.eu-gb.mybluemix.net/
+site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Jan Ekstrøm & Contributors
 site_description: "Maximo Monitor Node-RED CSV Importer Hands on Lab"
 google_analytics: ['UA-159649729-1', 'auto']
