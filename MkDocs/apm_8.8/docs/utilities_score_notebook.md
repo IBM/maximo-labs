@@ -1,4 +1,4 @@
-# Load Utitlies Health Scores via Notebook
+# Load Utilities Health Scores via Notebook
 Maximo Predict comes with notebook templates to assist in streamlining data uploads of the industry standard health score for utilities assets into Maximo Health. This notebook will Create a health scoring group and the associated health, risk, criticality, effective age, end of life, duval triangle and the history of combustible gases scores. These instructions will be based off using the '1_Create-HPU-ScoreGroups.ipynb' file with the Substation Transformer Health and Predict for Utilities Demo Assets.
 
 In this exercise you will use Watson Studio, Manage and Predict to:

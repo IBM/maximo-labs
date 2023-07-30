@@ -1,4 +1,4 @@
-# Load Utitlies Health Scores via Notebook
+# Load Utilities Health Scores via Notebook
 Maximo Predict comes with notebook templates to assist in streamlining data uploads of the industry standard health score for utilities assets into Maximo Health. This notebook will Create a health scoring group and the associated health, risk, criticality, effective age, end of life, duval triangle and the history of combustible gases scores. These instructions will be based off using the '1_Create-HPU-ScoreGroups.ipynb' file with the Substation Transformer Health and Predict for Utilities Demo Assets.
 
 In this exercise you will use Watson Studio, Manage and Predict to:
@@ -42,13 +42,17 @@ This notebook can only be run once per environment per site with the same set of
 
 5. Run the first cell to import packages
 
-6. Add the `MX_BASE_URL` and `API_KEY` from the previous lab to cell 2
+6. Add the `MX_BASE_URL` and `API_KEY` from the previous lab to cell 2.  
 
-7. Update the site id value to your `SITE_ID` and the prefix value to your org id `ORG_ID` in the second cell
+7. Make sure to added api key value to `ENDPOINT EXTENGINEAPI`. 
 
-8. Uncomment the asset class you will be uploading. In this lab we will be focusing on only Substation Transformer, so the first `ASSET_CLASS` list containing only one item is uncommented. If we were uploading all demo asset classes available in the github, uncomment the second section. If you have additional assets, use the third list and uncomment as needed.
+8. Update the site id value to your `SITE_ID` and the prefix value to your org id `ORG_ID` in the second cell .
 
-   1. Here are two ways to comment out a cell: add a `#` to the beginning of each line or add `'''` to the beginning and end of a section of code for it to be ignored when run
+9. Uncomment the asset class you will be uploading. In this lab we will be focusing on only Substation Transformer, so 
+the first `ASSET_CLASS` list containing only one item is uncommented. If we were uploading all demo asset classes 
+available in the github, uncomment the second section. If you have additional assets, use the third list and uncomment 
+as needed.  Here are two ways to comment out a cell: add a `#` to the beginning of each line or add `'''` to the 
+beginning and end of a section of code for it to be ignored when run
 
 ![Updated Cell](/img/apm_8.7/HPU_ScoreGroup_1.png)
 
@@ -56,11 +60,11 @@ This notebook can only be run once per environment per site with the same set of
 
 10. Run the next 3 cells to define function for creating the following:
 
-    1. The query that will be used to build the health scores
+    - The query that will be used to build the health scores
     
-    2. Get the scores list and activate the scores
+    - Get the scores list and activate the scores
     
-    3. Create the asset group, create scores for the asset group and clean up
+    - Create the asset group, create scores for the asset group and clean up
     
 11. Run the next cell to delete any existing asset score groups for your data. If none exists, the cell will output `None`. 
 
@@ -69,6 +73,7 @@ This notebook can only be run once per environment per site with the same set of
 13. Run the next cell to create the query for the Asset Scoring Group. This query will be made up of Asset Type and Site ID
 
 14. Run the next cell to create the Asset Scoring Group using the query from the previous cell, Build the scores from the Industry Standard Provided notebooks, and activate the scores.
+
 
 ## Confirm Proper Data Upload
 <a name="confirm_upload"></a>

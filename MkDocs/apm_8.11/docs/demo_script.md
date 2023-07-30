@@ -1,13 +1,12 @@
-# MAS Health and Predict - Utilities Overview Task Guide
+# MAS Health and Predict Overview Task Guide
 
-This task guide is based on the MAS v8.9 and MAS v8.10.  This workshop will use a common environment provided by your instructor.
-Please follow the steps in this task guide.  Any deviation from the task guide and or changes you make to the system will 
-also appear and may impact other users.  Since this is a live system, some changes are inevitable, and you may find that 
-some of the details of the task guide do not match the system.
+This task guide is based on the MAS v8.11 early program.  Please follow the steps in this task guide.  Any deviation from 
+the task guide and or changes you make to the system will also appear and may impact other users.  Since this is a live 
+system, some changes are inevitable, and you may find that some of the details of the task guide do not match the system.
 
 For this overview, the following are required, and have been created by your instructor.
 
-| Lab Section         | Data Required                |
+| Capability          | Data Required                |
 |---------------------|------------------------------|
 | Group (with scores) | EUORG1_EUDEMO_ST_A           |
 | Group (with scores) | ST_EFFICIENCY                |
@@ -20,94 +19,157 @@ For this overview, the following are required, and have been created by your ins
 If your instructor hasn't added the data, ask him to follow the steps in [Build MAS Health and Predict Demonstration](build_demo.md)
 
 ## Introduction
-In this overview task guide you will be Marcia.  She is a Reliability Engineer (RE), whose role is to maintain the 
-reliability of the grid.  Her main responsibility is to ensure that the grid stays up and operational.  She is also 
-responsible for making short, medium and long term investment decisions that drive maintenance and replacement policies.  
-She uses asset condition and operational data to gain insights into Asset Health, Probability of Failure and Risk, both
-today and into the future. 
+My name is Marcia, I’m a reliability engineer, my role is to maintain the reliability of the grid.  My major 
+responsibility is to ensure that the grid stays up and operational.  I’m also responsible for making short, medium and 
+long term investment decisions that drive maintenance and replacement policies. I use asset condition and operational 
+data to gain insights into Asset Health, Probability of Failure and Risk, both today and into the future.
 
-Thankfully, You will have a Health and Predict - Utilities solution from IBM with advanced analytics to help you do your 
-work efficiently and confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.   
-Health and Predict - Utilities incorporates multiple data sources such as Asset Meter and Work order data, historical 
-failure data, GeoSpatial Data, Inspection and Test Logs, IoT and Sensor data.   Health and Predict - Utilities provides 
-a flexible Asset condition framework for mining the asset condition data. Health and Predict - Utilities helps you 
-identify assets that are at the greatest risk of failure, across different circuits/feeders, substations and regions.  
-The risk assessment helps you drive asset and work management activities in Maximo Manage or other EAM systems to keep 
-the grid up, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.
+Thankfully I have a Health and Predict solution from IBM with advanced analytics that help me do my work efficiently and 
+confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.  Health and Predict 
+incorporates multiple data sources such as Asset Master and Work order data, historical failure data, GeoSpatial Data, 
+Inspection and Test Logs, IoT and Sensor data.  Health and Predict provides a flexible Asset condition framework for 
+mining the asset condition data. Health and Predict helps me identifying assets that are at greatest risk of failure, 
+across different circuits/feeders, substations and regions. The risk assessment helps me drive asset and work management 
+activities in Maximo Manage or other EAM systems to keep the grid up, reduce operational expense, optimize and defend 
+capital expenditures resulting in better outcomes. 
 
-
-Maximo Health and Maximo Predict are targeted to the RE, and provide a view of the current state of an enterprise's 
-assets, and projects future conditions of those assets.  HPU is an extension of Health and Predict designed specifically 
-for the Utilities industry.  Health, Predict, and HPU share the same User Interface (UI).
+Maximo Health and Predict are applications in Maximo Application Suite (MAS).  They are targeted to the reliability engineer, 
+and provide a view of the current state and future state of an enterprise's assets.  IBM Maximo Models for Electrical 
+Distribution is an accelerator that extends Health and Predict designed for understanding the condition of electrical 
+distribution asset classes used by the utilities industry.
 
 ##  Identify
 <a name="identify"></a>
 
-On the “Applications” tab, there are tiles for each of the applications that the admin has loaded from the Maximo Application Suite (MAS).  On the “Industry Solution” tab, there is a tile for Health and Predict – Utilities.
+On the “Applications” tab, there are tiles for each of the applications that the admin has loaded from the Maximo 
+Application Suite (MAS).  On the “Industry Solution” tab, there is a tile for Health and Predict – Utilities.
 
 !!! note "Value"
-     Health and Predict - Utilities arm the RE with AI-powered insights to take actions to extend the life of the Utility’s assets, reduce maintenance costs, and eliminate unplanned downtime.
+     Health and Predict arm the reliability engineer with AI-powered insights to take actions to extend the life of the Utility’s assets, reduce maintenance costs, and eliminate unplanned downtime.
 
 !!! attention "Actions"
     Follow the action items below.
     
-1. From the main MAS page, select the `Industry solutions` tab
-![navigate_to_health](../apm_8.9/docs/img/HPU_8.9/HPU 1.png)	
+1. From the main MAS page, select the `Applications` tab
+![navigate_to_health](../img/hpu_8.11/health1.png)	
 
-2. Click the Health and Predict – Utilities tile
-![setup_assets](./img/HPU_8.9/HPU 2.png)	
+2. Click the `Launch` link `Health` tile
 
-On the main screen, there is a universal view of all managed assets in a familiar table view.
+
+##  Table View
+<a name="grid_view"></a>
+
+On the main screen, there is a table view of all managed assets in a familiar table grid view. From this page
+you can quickly choose the asset query that reflects the assets you are responsible for. You can filter those assets to 
+quickly identify the assets that have poor scores by sorting the assets or by searching for assets using key words so that
+you can get the latest asset details on an individual asset.
 
 !!! note "Value"
     This is particularly valuable because it shows a mix of both IT data (from Manage) and OT data (from Monitor) together in a single view.
 
-This asset data is coming from Maximo Manage, but MAS can connect to other EAM systems.
+This asset data is coming from Maximo Manage, but MAS can connect to other EAM systems with or App Connect, via API or using Monitor Connectors.
 
 Different views of the data can be generated to make it easier to identify critical assets. On this grid, the user can add and move columns, filter, search and sort.
 
 !!! attention "Actions"
     Follow the action items below.
 
-1. Select the icon next to the magnifying glass to show the column options
+1. Select the icon above to the magnifying glass to show the left navigation menus. This shows how you can navigate to other
+perspectives like locations to understand location health. There are other menu options to setup health scores, asset investment analysis or and prediction capabilities.
 ![setup_assets](./img/HPU_8.9/HPU 3.png)
-2. Click it again to close
-![setup_assets](./img/HPU_8.9/HPU 30.png)
+
+2. Click it again to close the menu slider.
+
 
 There’s an option to create private views, and public views which are available to everyone.
+![saved_views](./img/hpu_8.11/savedviews.png) 
 
 !!! note "Value"
-    Saved views allow the user to return to a particular view so that they don’t have to start over every time.
+    Saved views allow the user to return to a particular view so that they don’t have to start over every time.  This view filters on my Substation Transformers.
 
 !!! attention "Actions"
-    Follow the action items below.
+    Use the selection box to show your saved view.
 
-1. Use the selection box to SHOW the saved view.
-![setup_assets](./img/HPU_8.9/HPU 31.png)
+1. Click the selection box to show the saved views then click on the `Substation Transformers` view.
+![select_views](./img/hpu_8.11/substationtransformerview.png) 
+
 
 In the grid view, there are columns with calculated data.  There are Health scores, which are created for groups of assets from the Scoring tab.
 
 !!! note "Value"
-    Included with Health and Predict – Utilities are notebooks with predefined industry standard formulas to calculate health, criticality, risk, end of life and effective age scores for assets in the Utilities industry.
+    Included with IBM Maximo Models for Electrical Distribution are notebooks with predefined industry standard formulas to calculate health, criticality, risk, end of life and effective age scores for assets in the utilities industry.  
 
-Similarly, information in the Days to Failure column comes from a predictive model scheduled from the Predict grouping tab
+!!! attention "Actions"
+    Follow the actions below
 
-![setup_assets](./img/HPU_8.9/HPU 32.png)
+1. You can display the data in the grid that is most important to you. Use the selection box to choose which asset data columns to display in your grid.
+![setup_assets](./img/HPU_8.9/HPU 30.png)
 
-Another view to help identify assets in trouble is the map view.  Using a container with a grid is a particulary good way to demonstrate the capabilities of the map.
 
-Select a group of assets, or a container, that contains a mixture of transformers, circuit breakers, cables (OTWs), and switches.
+2.  The `Days to Failure` column comes from a predictive model scheduled from the Predict grouping tab. 
+![assets_grid](./img/hpu_8.11/assets_grid.png)
+
+
+The IBM Maximo Models for Electrical Distribution includes the following model templates:
+
+- Substation Transformers / Substation Power (IBM Transformers Tap Changers) 
+
+- Circuit Breaker 
+
+    - Air Blast Circuit Breaker (IBM Circuit Breakers Air Blast) 
+
+    - Air Magnetic Circuit Breaker 
+
+    - Circuit Breaker 
+
+    - Oil Circuit Breaker (IBM Circuit Breakers Oil) 
+
+    - SF6 Circuit Breaker 
+
+    - Vacuum Circuit Breaker 
+
+- Distribution Transformers (IBM Transformers Tap Changers) 
+
+    - Overheads (multiple) 
+
+    - Undergrounds (multiple) 
+
+- Instrument Transformers 
+
+    - Dry Current Transformer 
+
+    - Oil Filled Capacitive Voltage Transformer 
+
+    - Oil Filled Current Transformer (IBM Instrument Oil Filled CTs) 
+
+    - Oil Filled Voltage Transformer 
+
+    - SF6 Filled Current Transformer 
+
+- Switch gear / Gas Insulated Switch gear (IBM Gas Insulated Switchgear) 
+
+
+##  Map View
+<a name="map_view"></a>
+
+Another view to help identify assets in trouble is the map view.  Using a map view focused to a container  is a good way to
+demonstrate the capabilities and benefits of the map. Containers enable to you reflect a region related to your business 
+needs.  It could be a region, town, service subscriber area you are responsible for servicing.
+
+We’ll look at a region that contains a mixture of transformers, circuit breakers, cables (OTWs), and switches. 
+Select a group of assets, or a container, that contains a mixture of transformers, circuit breakers, cables (OTWs), and 
+switches.
 
 !!! note "Value"
-    Seeing how assets are spatially distributed may assist with identifying and investigating assets at risk.  This is particularly true in the Utilities industry.
+    Seeing how assets are spatially distributed may assist with identifying and investigating assets at risk.  This is especially true in the utilities industry that have geo location dependencies on interconnectivity, weather or area of responsibility.
 
 !!! attention "Actions"
     Follow the action items below.
 
 1. Reset the view to show ALL assets as needed.
-2. Click the “filter” symbol
+2. Click the `filter` symbol
 ![setup_assets](./img/HPU_8.9/HPU 33.png)
-3. Select the “pencil’ symbol for containers
+3. Select the `pencil` symbol for containers
 ![setup_assets](./img/HPU_8.9/HPU 34.png)
 4. Select  `NIXON9098`
 5. Click `OK`
@@ -115,10 +177,13 @@ Select a group of assets, or a container, that contains a mixture of transformer
 6. Click `Apply`
 ![setup_assets](./img/HPU_8.9/HPU 36.png)
 
-There are 261 assets in this container.  Sorting by the health score from low to high shows that there are many assets in poor health.  This is concerning given the importance of these assets to the grid performance in the distribution network.
+We can see there are 261 assets in this container. When we sort by the health score from low to high, we find there are 
+many assets with health scores in poor health and many of them have a criticality score of 0.  This is concerning.  
+Criticality can be measured by understandin the importance of these assets to the grid performance in the distribution 
+network.  For a distribution network asset risk is measured by multiplying the criticality times the asset health score. 
 
 !!! note "Value"
-    Several column headers can be used to sort to help visualize the data in different ways.
+    Several column headers can be used to sort to help visualize the data in different ways. Sort by most critical assets and with the worst health.
 
 !!! attention "Actions"
     Follow the action items below.
@@ -126,9 +191,9 @@ There are 261 assets in this container.  Sorting by the health score from low to
 1. Click `Health` in the title bar to sort
 ![setup_assets](./img/HPU_8.9/HPU 37.png)
 
-Selecting the pin icon in the upper right of the screen shows the selected assets on a map view.
+Selecting the `pin` icon in the upper right of the screen shows the selected assets on a map view.
 
-The different pin colors and icons represents the health of the assets, according to the legend at the bottom left of the screen.  This is one more way to quickly understanding which assets are in poor health.
+The different `pin` colors and icons represents the health of the assets, according to the legend at the bottom left of the screen.  This is one more way to quickly understanding which assets are in poor health.
 
 !!! attention "Actions"
     Follow the action items below.
@@ -193,6 +258,10 @@ Here there’s a substation transformer that likely needs attention.
 Note that a user can click on the name to open the asset detail page.  However, there are other methods to identify 
 assets in poor health and focus on substation transformers.
 
+
+##  Charts View
+<a name="charts_view"></a>
+
 The charts view offers an alternative way to identify assets at risk.
 
 Select all substation transformers from the “type” filter, and select the charts view.
@@ -215,14 +284,13 @@ Select all substation transformers from the “type” filter, and select the ch
 7. Select the 3rdth icon in the upper right of the screen to see the selected assets on a chart view
 ![setup_assets](./img/HPU_8.9/HPU 82.png)
 
-This page shows 3 charts:
-- a health wheel categorizing all of the assets by health
-- an unplanned downtime view showing hours of downtime by month
-- a chart showing failure rate per manufacturer
+This charts view shows 3 charts:
+- A health wheel categorizing all of the assets by health.
+- Unplanned downtime view showing hours of downtime by month.
+- A chart showing failure rate per manufacturer.
 
 !!! note "Value"
-    Seeing key KPIs for multi-assets by health distribution, categorized by unplanned downtime or failure rate per 
-manufacture can help understand assets failure trends.
+    Seeing key KPIs for multi-assets by health distribution, categorized by unplanned downtime or failure rate per manufacture can help understand assets failure trends.
 
 Drill-down through each of these charts to see the assets details of each category.
 
@@ -252,8 +320,7 @@ Work queues are preconfigured views designed to help find assets that meet speci
 reliability engineer to systematically address each asset on the list, in turn, and “work down” the list.
 
 !!! note "Value"
-    These are particularly valuable to a RE who needs to address a specific problem, like a utility, trying to avoid 
-unplanned downtime.
+    These are particularly valuable to a reliability engineer who needs to address a specific problem, like a utility, trying to avoid unplanned downtime.
 
 There are a number of work queues included with Health and Predict.
 - There are work queues specific to Predict, like assets with a High Probability of Failure.
@@ -262,9 +329,9 @@ There are a number of work queues included with Health and Predict.
 And there are work queues that show assets with missing data.
 
 !!! note "Value"
-    The missing data work queues are useful for an RE to help identify gaps in data necessary to create health scores or predictive failure models.
+    The missing data work queues are useful for an reliability engineer to help identify gaps in data necessary to create health scores or predictive failure models.
 
-The “Failing before PM” work queue shows all of the assets with scores in that work queue.  As a RE at a Utilities plant, it is critical to avoid failures.
+The “Failing before PM” work queue shows all of the assets with scores in that work queue.  As a reliability engineer at a Utilities plant, it is critical to avoid failures.
 - In this work queue, there are several pumps and substation transformers that have a predicted failure before their next planned maintenance date.
 - 2 of the transformers are in the container that was viewed earlier.
 - Select “ST_1400518” in the queue to start managing the workload for the day, investigating and addressing all of the assets in the queue.
@@ -343,7 +410,7 @@ Note that also included with MAS is Watson Studio and Watson Machine Learning, b
 
 In the case of this asset, the model tells us that it is projected to fail in 0 days...plus or minus 1 day. 
 
-- Depending on the richness of the failure history, a Data Scientist can build predictive models for specific failure modes.  And the RE can select those failure modes within the widget to see the projection for each.
+- Depending on the richness of the failure history, a Data Scientist can build predictive models for specific failure modes.  And the reliability engineer can select those failure modes within the widget to see the projection for each.
 - Also in the widget, there is information about the training data to help decide when a 
 
 The Failure probability widget can show how different failure modes impact predictions.  For example, it might show the asset has a 20% probability of failure in the next 2 months due to overheating.
@@ -547,6 +614,8 @@ Up to three strategies can be compared side-by-side and the details can be expor
 ## Summary
 <a name="summary"></a>
 
-As the Reliability Engineer, maintaining the grid, I was able to use IBM Maximo Health and Predict – Utilities to identify assets at risk, investigate those assets, and finally take an action to prevent a failure and unplanned downtown…saving thousands of dollars, and maintaining the integrity of the grid.
+As the Reliability Engineer, maintaining the grid, I was able to use IBM Maximo Health and Predict to identify assets at 
+risk, investigate those assets, and finally take an action to prevent a failure and unplanned downtown…saving thousands 
+of dollars, and maintaining the integrity of the grid.
 
 My actions will also help short, medium and long term investment decisions that drive maintenance and replacement policies.
