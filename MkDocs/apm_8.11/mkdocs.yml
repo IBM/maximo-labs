@@ -14,12 +14,6 @@ nav:
   - Exercises:
       - Setup Health and Predict Demonstration: build_demo.md
       - Health and Predict Overview Task Guide: demo_script.md
-      - Setup Watson Studio for Predict: setup_watson_studio.md
-      - Setup Custom Scores: asset_scores.md
-      - Create Custom Scores Using a Notebook: utilities_pump_score_notebook.md
-      - Create Custom Score Forecast via Notebook: utilities_st_futurescore_demo_notebook.md
-      - Create Custom Score Forecast via WML Model: utilities_st_futurescore_using_wml_model.md
-
   - About: about.md
 
 theme: readthedocs
