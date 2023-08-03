@@ -7,7 +7,7 @@ site_dir: ../../site/apm_8.11
 
 nav:
   - Get back to Maximo Labs: /
-  - Maximo APM Lab:
+  - Maximo Health and Predict Lab:
     - Welcome to the Lab: index.md
     - Get Started: get_started.md
     - Pre-Requisites: prereqs.md

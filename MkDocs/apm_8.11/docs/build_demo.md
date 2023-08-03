@@ -23,6 +23,27 @@ system, Maximo Health, Maximo Health and Predict, IBM Maximo Models for Electric
 - User id with access to a site. Otherwise you will get a warning `This user doesn't have access to any site. Site access is required to access ASSET object`
 
 
+## Setup Health Asset Permissions
+
+In order to allow users to `edit source record` on `Action` button to navigate from the Health asset details page to the 
+Manage Asset page you must configure the Health application security groups in manage using the steps below.
+
+1. Go to Manage.
+![assets_page](./img/hpu_8.11/select_manage.png)
+2. Choose the `Security group` application. 
+![assets_page](./img/hpu_8.11/select_security_groups.png)
+3. Search on the `HEALTH` group and click `enter` key. 
+![assets_page](./img/hpu_8.11/search_health_group.png)
+4. Click the `Applications` tab.
+5. Select `Assets`
+![assets_page](./img/hpu_8.11/click_applications_assets.png)
+6. Click the `Grant listed options for the application` 
+7. Enable options for asset actions
+![assets_page](./img/hpu_8.11/turn_on_options.png)
+8. Click `Save Group`. 
+![assets_page](./img/hpu_8.11/confirmation_save.png)
+9. Go back to `Health`application and login using the user to ensure the operation is now possible.
+
 ## Create Asset Scoring Groups using Notebooks
 <a name="create_group_notebooks"></a>
 Coming soon.
@@ -33,10 +54,10 @@ Launch `Health` on the `Applications` tab.  If `Health` tile is not present on a
 
 1. After you login using the credentials provided by your instructor,  navigate to the 
 2. From the main MAS page, select the `Applications` tab
-![navigate_to_health](./img/HPU_8.11/Health1.png)
+![navigate_to_health](./img/hpu_8.11/health1.png)
 3. Click the `Launch` link on the `Health` or `Predict` tile 
 4. This displays the assets grid page with a table of assets and their health scores for the user's currently assigned site.
-![assets_page](./img/HPU_8.11/assets_grid_page.png)
+![assets_page](./img/hpu_8.11/assets_grid_page.png)
 
 **Note if  the user isn't assigned to a site they will not see any assets. ** 
 
@@ -369,4 +390,4 @@ Create the third investment strategy `Stay in budget` and run it.
 ## Summary
 <a name="summary"></a>
 
-Congratulations.  You now have completed the MAS v8.9 Health and Predict Demo setup lab and are ready to demo.
+Congratulations.  You now have completed the MAS v8.11 Health and Predict Demo setup lab and are ready to demo.
