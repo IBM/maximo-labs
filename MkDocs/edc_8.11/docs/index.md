@@ -13,8 +13,8 @@ The steps will cover:
 
 * Setting up your environment
 * Create the needed device types in Maximo Monitor
-* Create an Edge Data Collector configuration
-* Verify data flow from Modbus/TCP variable frequency drives all the way into Maximo Monitor
+* Create an Edge Data Collector integration
+* Verify data flow from Modbus/TCP Variable Frequency Drives all the way into Maximo Monitor
 * Have fun
 
 !!! note
