@@ -1,8 +1,7 @@
 # Objectives
 In this Exercise you will learn how to:
 
-* pre-create the device type for the VFDs
-* create the credentials for the Omnio Edge gateway
+* create the metrics for the devices in Monitor
 
 ---
 *Before you begin:*  

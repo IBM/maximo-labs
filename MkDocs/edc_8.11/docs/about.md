@@ -1,9 +1,21 @@
 
-# Contributors to the</br>Maximo Monitor Integration With Omnio Edge Lab
+# Contributors to the</br>Maximo Monitor Edge Data Collector Lab
 
 - Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 
 ---
+
+# Change Information
+
+|Date     |By             | Description                                           |
+|:--------|:--------------|:------------------------------------------------------|
+|2023-09-23|Jan Ekstrøm|Lab is ready for the first release. |
+|2023-09-16|Jan Ekstrøm|Replicated the Omnio Edge lab to this Edge Data Collector lab. |
+
+
+---
+
+# Copyright Information
 
 © 2023 International Business Machines Corporation. No part of this lab document may be reproduced or transmitted in any form without written permission from IBM.
 
@@ -25,14 +37,5 @@ References in this document to IBM products, programs, or services does not impl
 Workshops, sessions and associated materials may have been prepared by independent session speakers, and do not necessarily reflect the views of IBM. All materials and discussions are provided for informational purposes only, and are neither intended to, nor shall constitute legal or other guidance or advice to any individual participant or their specific situation.
 
 It is the customer’s responsibility to ensure its own compliance with legal requirements and to obtain advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulatory requirements that may affect the customer’s business and any actions the customer may need to take to comply with such laws. IBM does not provide legal advice or represent or warrant that its services or products will ensure that the customer follows any law.
-
-
-# Change Information
-
-|Date     |By             | Description                                           |
-|:--------|:--------------|:------------------------------------------------------|
-|2022-10-18|Jan Ekstrøm|Lab has been updated with smaller findings from reviews. |
-|2022-09-15|Jan Ekstrøm|Lab is ready for dry run. |
-|2022-09-12|Jan Ekstrøm|Initialization of the lab structure. |
 
 ---

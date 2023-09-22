@@ -1,4 +1,4 @@
-site_name: Monitor-Omnio Integration Lab
+site_name: Edge Data Collector Lab
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Jan Ekstrøm & Contributors
 site_description: "Maximo Monitor Edge Data Collector Hands on Lab"
@@ -13,8 +13,9 @@ nav:
   - Exercises:
         - 1. Setup Simulator Environment: setup.md
         - 2. Create Monitor Devices: monitor_devices.md
-        - 3. Create EDC Configuration: edc_configuration.md
+        - 3. Create EDC Integration: edc_integration.md
         - 4. Deploy and verify integration: deploy.md
+        - 5. Create Monitor metric: monitor_metrics.md
   - About: about.md
 
 theme: readthedocs
