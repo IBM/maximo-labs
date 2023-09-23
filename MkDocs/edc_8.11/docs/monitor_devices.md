@@ -96,7 +96,7 @@ Define the Device type name as `VariableFrequencyDrives` (*exactly like this*), 
 ![Template identity](/img/edc_8.11/monitor_devices_06.png)</br></br>
 
 !!! note
-    We will define the metrics in a later exersice</br>
+    We will define the metrics in a later exersice once we have defined the data points in the EDC Integration.</br>
 
 
 !!! tip
