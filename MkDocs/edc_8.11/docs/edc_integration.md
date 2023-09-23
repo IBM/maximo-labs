@@ -56,7 +56,7 @@ Select the i550 product and click `Next`:
 
 Give the device a name. This will become the Device ID in Monitor.</br>
 Select Modbus TCP. Enter the IP Address acquired in the beginning.</br>
-Select Slave ID 1, which will refer to the first device defined in the `config.json` of the Unslave simulator. Click `Next`:
+Select Server ID 1, which will refer to the first device defined in the `config.json` of the Unslave simulator. Click `Next`:
 ![Configure protocol](/img/edc_8.11/edc_integration_09.png)</br></br>
 
 Select the eight first tags. Change the Base Frequency to 60000 ms (1 minute), which will change all the Frequency fields of the selected tags. Click `Finish`:
@@ -69,7 +69,7 @@ Select the eight first tags. Change the Base Frequency to 60000 ms (1 minute), w
 Once the first Lenze device is created it is easy to duplicate it for the second one:
 ![Duplicate device](/img/edc_8.11/edc_integration_11.png)</br></br>
 
-Enter the Device label and slave ID 2. Click `Next`:
+Enter the Device name and Server ID 2. Click `Next`:
 ![Configure protocol](/img/edc_8.11/edc_integration_12.png)</br></br>
 
 The data point settings are cloned automatically. Click `Finish`.</br>
