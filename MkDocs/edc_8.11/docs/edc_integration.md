@@ -17,6 +17,9 @@ Open a CMD window and execute `ipconfig` so you can see the public ethernet IP a
 ![ipconfig](/img/edc_8.11/edc_integration_00.png)</br>
 In this case the IP address is 149.81.201.83.
 
+!!! attention
+    DO NOT USE THIS IP ADDRESS !!</br>
+    It might be in use for other purposes and should not be interrupted by other EDC edges connecting.
 
 ---
 ##  Create a new Edge Data Collector (EDC) Integration in Monitor
@@ -59,7 +62,8 @@ Select the i550 product and click `Next`:
 
 Give the device a name. This will become the Device ID in Monitor.</br>
 Select Modbus TCP. Enter the IP Address acquired in the beginning.</br>
-Select Server ID 1, which will refer to the first device defined in the `config.json` of the Unslave simulator. Click `Next`:
+Select Server ID 1, which will refer to the first device defined in the</br>
+`config.json` of the Unslave simulator. Click `Next`:
 ![Configure protocol](/img/edc_8.11/edc_integration_09.png)</br></br>
 
 Select the eight first tags. Change the Base Frequency to 60000 ms (1 minute), which will change all the Frequency fields of the selected tags. Click `Finish`:

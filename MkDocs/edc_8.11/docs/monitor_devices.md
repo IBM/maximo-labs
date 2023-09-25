@@ -89,7 +89,7 @@ Select `Devices`:
 Click on `Add device type`:
 ![Add device type](/img/edc_8.11/monitor_devices_04.png)</br></br>
 
-Select `Empty template` as this will create the new version of the device type and click `Next`:
+Select `Basic template` as this will create the new version of the device type and click `Next`:
 ![Empty template](/img/edc_8.11/monitor_devices_05.png)</br></br>
 
 Define the Device type name as `VariableFrequencyDrives` (*exactly like this*), give it a description and press `Create`:

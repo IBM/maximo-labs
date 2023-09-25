@@ -16,8 +16,6 @@ This Exercise requires that you have:
 
 ---
 
-Now is the time to define the metrics that you want Monitor to save and use.</br>
-
 Navigate to Setup from the Monitor Home page:
 ![Navigate to Setup](/img/edc_8.11/monitor_metrics_01.png)</br></br>
 
@@ -56,7 +54,8 @@ and click `Add`.</br>
 !!! attention
     Be aware that the Event name and the Metric names are case sensitive - and all in small letters.
 
-Click on the twinkle left for `status`. Select the `Use this as the default timestamp` so you use the timestamp provided from the devices rather than from the time of the data injection. Click `Save`:
+Click on the toggle to the left of `status`.</br> 
+Select the `Use this as the default timestamp` so you use the timestamp provided from the devices rather than from the time of the data injection. Click `Save`:
 ![Default timestamp](/img/edc_8.11/monitor_metrics_09.png)</br></br>
 
 
@@ -75,7 +74,6 @@ Congratulations you have successfully:
 * created an Edge Data Collector Integration by defining endpoint, devices and their tags (metrics)
 * deployed the EDC Integration on an EDC Edge and the device data has been collected, unified and send to Maximo Monitor
 * received the unified data in the IoT Tool and selected a subset of the metrics to be stored in the Maximo Monitor database to be available for further analysis and visualization
-
 
 
 

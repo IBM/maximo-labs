@@ -1,19 +1,16 @@
 # Welcome to the </br>Maximo Monitor Edge Data Collector Lab
 You will learn about how to setup an integration for an Edge Data Collector within Maximo Monitor.
 
-In this lab you will learn the steps needed to successfully setup an integration using some virtual Variable Frequency Drives that will deliver the device data over Modbus/TCP via an Edge Data Collector gateway into Maximo Monitor.</br></br>
+In this lab you will learn the steps needed to successfully setup an integration using some virtual Variable Frequency Drives (VFD) that will deliver the device data over Modbus/TCP via Edge Data Collector into Maximo Monitor using the pre-configured connector for Lenze i550 VFD from the Device Connector Library.</br></br>
 
 ![Architecture](/img/edc_8.11/index_01.png)</br></br>
 
 
+The exercises will cover:
 
-
-
-The steps will cover:
-
-* Setting up your environment
+* Setting up the simulator environment
 * Create the needed device types in Maximo Monitor
-* Create an Edge Data Collector integration
+* Create an Edge Data Collector Integration
 * Verify data flow from Modbus/TCP Variable Frequency Drives all the way into Maximo Monitor
 * Have fun
 

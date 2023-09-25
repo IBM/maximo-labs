@@ -20,10 +20,11 @@ At the end of the previous exercise the Deployment guide appeared. </br>
 Click on the docker command to copy it to the clipboard:
 ![Deployment Guide](/img/edc_8.11/edc_integration_14.png)</br></br>
 
-Open a terminal window (Mac/Linux) or Command window (Windows) on the EDC edge and then paste the docker command line from the clipboard. Click enter to execute it, and you should see something similar to the following:
+Open a terminal window (Mac/Linux) or Command window (Windows) on the EDC edge and then paste the docker command line from the clipboard.</br>
+Click enter to execute it, and you should see something similar to the following:
 ![Start EDC edge](/img/edc_8.11/deploy_01.png)</br></br>
 
-## Verify data flowing into Maximo Monitor
+## Verify data flowing into the IoT Tool
 
 Navigate to the IoT Tool from the Monitor Home page:
 ![Navigate to IoT Tool](/img/edc_8.11/deploy_02.png)</br></br>

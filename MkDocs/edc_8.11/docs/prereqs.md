@@ -31,5 +31,5 @@ Make sure the firewall is accepting incoming traffic on port 502.
 
 # Exercise 4
 
-Docker must be running on your local machine while acting as the Edge Data Collector edge.</br>
+Docker must be running on your local machine while acting as the Edge Data Collector instance.</br>
 It can be installed from the [Docker website](https://www.docker.com/){target=_blank}.
