@@ -32,6 +32,7 @@ Give it a name:
 
 
 ##  Add an endpoint
+The endpoint of the Integration configuration is where the gateway connection credentials we defined previously has to be added. This is where the EDC edge will send the unified data from the devices.</br></br>
 Click on `Add endpoint` and the select `Maximo`:
 ![Add endpoint](/img/edc_8.11/edc_integration_04.png)</br></br>
 
@@ -44,6 +45,8 @@ Add the credentials you saved in the previous exercise and click `Finish`:
 </br></br>
 
 ## Add devices
+
+EDC provides a vast library of pre-configured connectors for a range of industrial devices.</br></br>
 
 It is time to add the Lenze i550 devices. Click on `Add device`;
 ![Add device](/img/edc_8.11/edc_integration_06.png)</br></br>
