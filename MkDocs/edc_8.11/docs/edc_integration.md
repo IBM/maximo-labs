@@ -32,7 +32,7 @@ Give it a name:
 
 
 ##  Add an endpoint
-The endpoint of the Integration configuration is where the gateway connection credentials we defined previously has to be added. This is where the EDC edge will send the unified data from the devices.</br></br>
+The endpoint of the Integration configuration is where the gateway connection credentials we defined previously has to be added. This is where the EDC edge will send the unified data to once collected from the industrial devices.</br></br>
 Click on `Add endpoint` and the select `Maximo`:
 ![Add endpoint](/img/edc_8.11/edc_integration_04.png)</br></br>
 
