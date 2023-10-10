@@ -6,6 +6,16 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 !!! tip
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
+### Maximo Application Suite 8.11
+| Lab                                              | Exercise                                                      |
+|--------------------------------------------------|---------------------------------------------------------------|
+| [Maximo Monitor Edge Data Collector](/edc_8.11/) | [Setup Simulator Environment](/edc_8.11/setup)                |
+|                                                  | [Create Monitor Devices](/edc_8.11/monitor_devices)           |
+|                                                  | [Create EDC Integration](/edc_8.11/edc_integration)           |
+|                                                  | [Deploy and Verify Integration](/edc_8.11/deploy)             |
+|                                                  | [Create Monitor Metrics](/edc_8.11/monitor_metrics)           |
+
+
 ### Maximo Application Suite 8.11  (Under Development)
 | Lab                                         | Exercise                                     |
 |---------------------------------------------|----------------------------------------------|
@@ -61,10 +71,6 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Asset Investment Optimization](/apm_8.8/asset_investment)                           |
 |                                               | [View and Configure Asset Matrix](/apm_8.8/matrix)                                   |
 |                                               | [Installing App Connect for Data Loading](/apm_8.8/appconnect_install)               |
-| [Omnio integration with Monitor](/omnio_8.8/) | [Setup Simulator Environment](/omnio_8.8/setup)                                      |
-|                                               | [Create Monitor Devices](/omnio_8.8/monitor_devices)                                 |
-|                                               | [Create Omnio Configuration](/omnio_8.8/omnio_configuration)                         |
-|                                               | [Deploy and Verify Integration](/omnio_8.8/deploy)                                   |
 | [Monitor Connect](/mas_monitor_connect/)      | [Setup Mobile Device in Monitor](/mas_monitor_connect/setup_device)                  |              
 |                                               | [Connect Mobile Device in Monitor](/mas_monitor_connect/connect_device)              |              
 |                                               | [Verify Data Sent to Monitor](/mas_monitor_connect/verify_data)                      |
@@ -125,7 +131,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Add KPIs and Alerts to Dashboards](/monitor_autoai_8.5/update_dashboards) | 
 | [MAS Environmental Monitoring](/sustain_mas/) | [Sustainability Lab](/sustain_mas)                                         |
 
-### Maximo SaaS
+### Maximo SaaS (DEPRECATED)
 
 | Lab                                           | Exercise                                                                      |
 |-----------------------------------------------|-------------------------------------------------------------------------------|
@@ -147,7 +153,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   [New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2023-03-24**
+**UPDATED: 2023-09-25**
 ---
 
 © 2023 International Business Machines Corporation
