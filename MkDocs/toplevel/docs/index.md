@@ -153,7 +153,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
   [New Lab Template](/template_1.0/)  
 
 ---
-**UPDATED: 2023-09-25**
+**UPDATED: 2023-10-30**
 ---
 
 © 2023 International Business Machines Corporation

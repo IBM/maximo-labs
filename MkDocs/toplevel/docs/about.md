@@ -37,6 +37,7 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2023-10-30|Jan Ekstrøm|Removed deprecated Universal Analytics.|
 |2023-09-25|Jan Ekstrøm|Added the Maximo Monitor Edge Data Collector Lab.|
 |2023-03-24|Mike Lamb & Jan Ekstrøm|Added Monitor Node-RED CSV Importer Lab V2.0|
 |2022-10-18|Jan Ekstrøm|Updated Monitor-Omnio Integration Lab and the Maximo Lab landing page.|
