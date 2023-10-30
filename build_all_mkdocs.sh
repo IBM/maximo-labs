@@ -38,7 +38,6 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
-
 # Build the MVI Saas level:
 lab=mvi_saas
 cd $root_dir/MkDocs/$lab
@@ -47,7 +46,6 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
-
 # Build the Maximo Monitor Auto AI 8.5 level:
 lab=monitor_autoai_8.5
 cd $root_dir/MkDocs/$lab
@@ -55,15 +53,6 @@ mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 #mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 #echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
-
-# Build the Maximo Application Suite Overview 8.5 level:
-lab=mas_8.5
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the Maximo Application Suite Overview 8.6 level:
 lab=mas_8.6
@@ -129,7 +118,6 @@ echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM 
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
-
 # Build the MAS v8.11 deployment for Health Predict and Utilities Lab level:
 lab=apm_8.11
 cd $root_dir/MkDocs/$lab
@@ -137,14 +125,6 @@ mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
-# # Build the MAS deployment on OCP lab level:
-# lab=ocp_8.6
-# cd $root_dir/MkDocs/$lab
-# mkdocs build
-# echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-# mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-# echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the MAS deployment on OCP lab level:
 lab=ocp_8.9
@@ -156,14 +136,6 @@ echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the Monitor hierarchy level:
 lab=mas_monitor_hierarchy
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
-# Build the Omnio - Monitor integration:
-lab=omnio_8.8
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
@@ -187,7 +159,6 @@ mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 
-
 ########################################################################################
 #### DON't CHANGE THE BELOW MANDATORY SECTION WHICH IS PART OF THE TOPLEVEL CONTENT ####
 ########################################################################################
@@ -207,7 +178,6 @@ mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
 mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
 echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
-
 
 # Start the web server hosting the complete site - then open the following URL in a browser: http://127.0.0.1:8080
 cd $root_dir/site
