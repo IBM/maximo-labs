@@ -2,7 +2,6 @@ site_name: MAS Overview 8.6 Labs
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Application Suite Overview 8.6 Overview Hands on Lab"
-google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/mas_8.6
 
 nav:

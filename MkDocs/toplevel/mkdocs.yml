@@ -2,7 +2,6 @@ site_name: IBM Maximo Labs
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Carlos Ferreira & Contributors
 site_description: "IBM Maximo Hands on Lab"
-google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site
 
 
