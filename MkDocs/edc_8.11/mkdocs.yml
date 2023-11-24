@@ -2,7 +2,6 @@ site_name: Edge Data Collector Lab
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Jan Ekstrøm & Contributors
 site_description: "Maximo Monitor Edge Data Collector Hands on Lab"
-google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/edc_8.11
 
 nav:

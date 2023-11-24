@@ -2,7 +2,6 @@ site_name: Template 1.0 Labs
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Jan Ekstrøm & Contributors
 site_description: "Maximo Template 1.0 Hands on Lab"
-google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/template_1.0
 
 nav:

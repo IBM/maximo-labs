@@ -2,7 +2,6 @@ site_name: Monitor SaaS Labs
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Asset Monitor SaaS Hands on Lab"
-google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/monitor_saas
 
 nav:

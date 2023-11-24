@@ -2,7 +2,6 @@ site_name: MAS Monitor Connect Lab
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Mike Lamb
 site_description: "MAS Monitor Connect Lab"
-google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/mas_monitor_connect
 
 nav:

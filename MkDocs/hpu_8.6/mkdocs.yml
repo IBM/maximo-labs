@@ -2,7 +2,6 @@ site_name: MAS Health and Predict for Utilities 8.6 Lab
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
 site_author: Carlos Ferriera & Contributors
 site_description: "MAS Health and Predict for Utilities 8.6 Lab"
-google_analytics: ['UA-159649729-1', 'auto']
 site_dir: ../../site/hpu_8.6
 
 nav:
