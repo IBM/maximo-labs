@@ -9,7 +9,7 @@ nav:
   - Welcome to the Maximo Labs: index.md
   - Contribute: contribute_information.md
   - About:
-    - Release Notes: release-notes.md
+    - Release Notes: release_notes.md
     - Copyright: copyright.md
 
 theme: readthedocs
