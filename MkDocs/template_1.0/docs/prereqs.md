@@ -2,6 +2,10 @@
 
 Here are the required pre-requisites for the Maximo Template exercises.
 
+!!! attention
+    This lab requires Maximo Application Suite X.X or later.</br>
+    MAS application entitlement must be `Limited` or higher.
+
 # All Exercises
 
 All Exercises require that you have:

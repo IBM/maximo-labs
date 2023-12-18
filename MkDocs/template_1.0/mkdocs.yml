@@ -1,6 +1,6 @@
-site_name: Template 1.0 Labs
+site_name: Template 1.0 Lab
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
-site_author: Jan Ekstrøm & Contributors
+site_author: Jan Ekstrøm
 site_description: "Maximo Template 1.0 Hands on Lab"
 site_dir: ../../site/template_1.0
 
@@ -10,10 +10,13 @@ nav:
     - Welcome to the Template Labs: index.md
     - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
-    - Exercises:
-        - 1. Do something: something.md
-        - 2. Do something else: something_else.md
-  - About: about.md
+  - Exercises:
+    - 1. Do something: something.md
+    - 2. Do something else: something_else.md
+  - About:
+    - Release Notes: release-notes.md
+    - Copyright: copyright.md
+  
 
 theme: readthedocs
 markdown_extensions:

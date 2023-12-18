@@ -7,8 +7,11 @@ You will learn about Template's capabilities to:
 
 Maximo Template product information goes here.
 
+!!! note
+    Expected time needed to run the complete lab: 1 hour
+
 ---
 
-**Updated: 2021-01-04**
+**Updated: 2023-12-18**
 
 ---

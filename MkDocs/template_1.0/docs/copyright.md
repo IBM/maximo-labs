@@ -1,9 +1,4 @@
-
-# Contributors to IBM Maximo Template
-
-- Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
-
----
+# Copyright Information
 
 © 2023 International Business Machines Corporation. No part of this lab document may be reproduced or transmitted in any form without written permission from IBM.
 
@@ -25,13 +20,5 @@ References in this document to IBM products, programs, or services does not impl
 Workshops, sessions and associated materials may have been prepared by independent session speakers, and do not necessarily reflect the views of IBM. All materials and discussions are provided for informational purposes only, and are neither intended to, nor shall constitute legal or other guidance or advice to any individual participant or their specific situation.
 
 It is the customer’s responsibility to ensure its own compliance with legal requirements and to obtain advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulatory requirements that may affect the customer’s business and any actions the customer may need to take to comply with such laws. IBM does not provide legal advice or represent or warrant that its services or products will ensure that the customer follows any law.
-
-
-# Change Information
-
-|Date     |By             | Description                                           |
-|:--------|:--------------|:------------------------------------------------------|
-|2021-01-04|Jan Ekstrøm|Added the About page and Updated information into Index. |
-|2020-12-30|Jan Ekstrøm|First step on the Template section. |
 
 ---
