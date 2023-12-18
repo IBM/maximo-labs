@@ -14,7 +14,7 @@ nav:
     - 1. Do something: something.md
     - 2. Do something else: something_else.md
   - About:
-    - Release Notes: release-notes.md
+    - Release Notes: release_notes.md
     - Copyright: copyright.md
   
 

@@ -24,7 +24,7 @@ Locate the labs folder under the /MkDocs, e.g. /MkDocs/monitor_8.2<br>
 Make the changes in the markdown files, image files, and mkdocs.yml file.<br>  
 
 !!! attention "Remember to do this:"
-    Update the `about.md` file with Contributors and Change Information.<br>
+    Update the `release_notes.md` file with Contributors and Change Information.<br>
     Update the `index.md` file with a new Updated date (at the end of the file).
 
 
@@ -79,7 +79,7 @@ Give it a title and description. Hit the `Create pull request` button.
 
 Once the Pull request has been accepted and your commits are added to the master branch, it is time to clean up the branch locally and remotely (on Github).
 
-    git checkout master
+    git checkout main
     git branch -d [name_of_your_new_branch]
     git push origin :[name_of_your_new_branch]
 
