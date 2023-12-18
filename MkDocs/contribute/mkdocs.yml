@@ -10,10 +10,13 @@ nav:
     - Welcome to contribute: index.md
     - Get started: getting_started.md
     - Pre-Requisites: prereqs.md
+  - Exercises:
     - Add content: add_content.md
     - Create new lab: create_new.md
     - Deploy to IBM Cloud: deploy.md
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: copyright.md
 
 theme: readthedocs
 markdown_extensions:
