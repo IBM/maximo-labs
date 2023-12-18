@@ -89,7 +89,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                    | [Create Predict Asset Failure Date](/apm_8.7/utilities_Failure_date)                 |
 |                                                    | [Create Predict Asset Failure Probability](/apm_8.7/utilities_Failure_Probability)   |
 |                                                    | [Understand Asset Metrics Data](/apm_8.7/data_dictionary)                            |
-|                                                    | [Load Asset Meter Data into Monitor](/apm_8.7/fast_start_loader)                     |                           |
+|                                                    | [Load Asset Meter Data into Monitor](/apm_8.7/fast_start_loader)                     |
 |                                                    | [Installing App Connect for Data Loading](/apm_8.7/appconnect_install)               |
 | [Monitor Asset Hierarchy](/mas_monitor_hierarchy/) | [Create Hierarchy](/mas_monitor_hierarchy/create_hierarchy)                          |              
 |                                                    | [Assign Devices](/mas_monitor_hierarchy/assign_devices)                              |
@@ -126,7 +126,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Create Dahsboards](/monitor_autoai_8.5/create_dashboards)                 |    
 |                                               | [Identify Model](/monitor_autoai_8.5/create_model)                         |
 |                                               | [Deploy Model](/monitor_autoai_8.5/deploy_prediction_model_function)       | 
-|                                               | [Add KPIs and Alerts to Dashboards](/monitor_autoai_8.5/update_dashboards) | 
+|                                               | [Add KPIs and Alerts to Dashboards](/monitor_autoai_8.5/update_dashboards) |
 | [MAS Environmental Monitoring](/sustain_mas/) | [Sustainability Lab](/sustain_mas)                                         |
 
 ### Maximo SaaS (DEPRECATED)
@@ -145,13 +145,18 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Conduct Inspections](/mvi_saas/exerciseTwo/exercise2-2)                      |
 |                                               | [Setup Fail Pass Rate](/mvi_saas/exerciseTwo/exercise2-3)                     |
  
-### CONTRIBUTE
+### Contribute to Maximo Labs
 
-  [Contribute to Labs](/contribute/)  
-  [New Lab Template](/template_1.0/)  
+| Lab                                           | Exercise                                                                      |
+|-----------------------------------------------|-------------------------------------------------------------------------------|
+| [Contribute to Labs](/contribute/)            | [Add content](/contrbute/add_content)                                         |
+|                                               | [Create new lab](/contribute/create_new)                                      |
+| [New Lab Template](/template_1.0/)            | [Do something](/template_1.0/something)                                       |
+|                                               | [Do something else](/template_1.0/something_else)                             |
+
 
 ---
-**UPDATED: 2023-10-30**
+**UPDATED: 2023-12-18**
 ---
 
 © 2023 International Business Machines Corporation
