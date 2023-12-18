@@ -15,7 +15,7 @@ nav:
     - 2. Do something else: something_else.md
   - About:
     - Release Notes: 'release-notes.md'
-    - License: 'license.md'
+    - License: 'copyright.md'
   
 
 theme: readthedocs

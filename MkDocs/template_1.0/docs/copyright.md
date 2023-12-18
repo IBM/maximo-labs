@@ -1,4 +1,4 @@
-# License Information
+# Copyright Information
 
 © 2023 International Business Machines Corporation. No part of this lab document may be reproduced or transmitted in any form without written permission from IBM.
 
