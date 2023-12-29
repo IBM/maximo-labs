@@ -52,6 +52,9 @@ Commit the changes:
 
     git commit -sm "Write a descriptive message of your changes"
 
+!!! attention "Remember to do this:"
+    It is important to use the `-sm` switch on the commit command, as the `s` signes the commit which is needed to merge your changes into the main branch later on.
+
 Push the changes to the Github branch:
 
     git push origin [name_of_your_new_branch]
@@ -62,7 +65,7 @@ Push the changes to the Github branch:
 
 ## 4. Create Pull request
 
-Go to the Github repository [https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab){target=_blank}
+Go to the Github repository [https://github.com/IBM/maximo-labs](https://github.com/IBM/maximo-labs){target=_blank}
 
 Select your branch in the dropdown box:
 ![Select branch](/img/contribute/add_select_branch.png)
@@ -77,14 +80,15 @@ Give it a title and description. Hit the `Create pull request` button.
 
 ## 5. Clean up branches locally and remotely (Github)
 
-Once the Pull request has been accepted and your commits are added to the master branch, it is time to clean up the branch locally and remotely (on Github).
+Once the Pull Request has been accepted and your commits are added to the main branch, it is time to clean up the branch locally and remotely (on Github).
 
     git checkout main
     git branch -d [name_of_your_new_branch]
     git push origin :[name_of_your_new_branch]
 
 !!! note
-    The `:` before the [name_of_your_new_branch] in the last command will delete it on Github.
+    The `:` before the [name_of_your_new_branch] in the last command will delete it on Github.</br>
+    You might get an error if the branch was deleted on Github after the Pull Request was merged to the main branch.
 
 ---
 

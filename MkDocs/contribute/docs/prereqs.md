@@ -60,7 +60,7 @@ You can deactivate the virtual environment with this command:
 2. IBMers can get access to the IBM Github area here:<br>
 [https://w3.ibm.com/developer/opensource/contribute/ibm-github/](https://w3.ibm.com/developer/opensource/contribute/ibm-github/){target=_blank}
 3. Access the Github repo of the IBM Maximo Labs here:<br>
-[https://github.com/IBM/monitor-hands-on-lab](https://github.com/IBM/monitor-hands-on-lab){target=_blank}
+[https://github.com/IBM/maximo-labs](https://github.com/IBM/maximo-labs){target=_blank}
 4. Access the latest published labs here:<br>
 [http://maximo-lab.monitordemo4.ibmmam.com/](http://maximo-lab.monitordemo4.ibmmam.com/){target=_blank}<br>
 (This might not contain the latest changes from the Github repository)
@@ -70,8 +70,8 @@ Clone the github repository down to your local machine:
     cd ~
     mkdir Github
     cd ~/Github
-    git clone git@github.com:IBM/monitor-hands-on-lab.git
-    cd monitor-hands-on-lab
+    git clone git@github.com:IBM/maximo-labs.git
+    cd maximo-labs
 
 Now build the complete site on your local machine:
 

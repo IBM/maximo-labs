@@ -145,18 +145,35 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Conduct Inspections](/mvi_saas/exerciseTwo/exercise2-2)                      |
 |                                               | [Setup Fail Pass Rate](/mvi_saas/exerciseTwo/exercise2-3)                     |
  
-### Contribute to Maximo Labs
+### CONTRIBUTE TO MAXIMO LABS
+
+You can contribute by providing feedback or content for the Maximo Labs. 
+
+1.  Submit issues or enhancements that you would like to see to these labs.
+2.  Contribute Content by becoming an author contributor of the labs.
+
+
+***Submit issues or enhancements***
+
+You can submit any feedback, questions or issues on the labs.  We will address them in the issue or with improvements to
+future versions of the lab. Submit issues you encounter with the lab at [https://github.com/IBM/maximo-labs/issues](https://github.com/IBM/maximo-labs/issues).  Provide a description of the problem.  Steps to reproduce the problem.  What you expected should be there or happen in the lab.
+
+For bugs please include steps to reproduce your issue.  For enhancements please include why you need the improvement and suggestions for how we can improve a lab.
+
+***Contribute Content***
+
+If you want to write new labs or improve the existing labs, then find the instructions to do so here:<br>
 
 | Lab                                           | Exercise                                                                      |
 |-----------------------------------------------|-------------------------------------------------------------------------------|
-| [Contribute to Labs](/contribute/)            | [Add content](/contrbute/add_content)                                         |
+| [Contribute to Labs](/contribute/)            | [Add content](/contribute/add_content)                                        |
 |                                               | [Create new lab](/contribute/create_new)                                      |
 | [New Lab Template](/template_1.0/)            | [Do something](/template_1.0/something)                                       |
 |                                               | [Do something else](/template_1.0/something_else)                             |
 
 
 ---
-**UPDATED: 2023-12-18**
+**UPDATED: 2023-12-29**
 ---
 
 © 2023 International Business Machines Corporation

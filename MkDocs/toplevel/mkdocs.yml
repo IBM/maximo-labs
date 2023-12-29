@@ -1,13 +1,12 @@
 site_name: IBM Maximo Labs
 site_url: http://maximo-lab.monitordemo4.ibmmam.com/
-site_author: Carlos Ferreira & Contributors
+site_author: Carlos Ferreira, Jan Ekstrøm & Contributors
 site_description: "IBM Maximo Hands on Lab"
 site_dir: ../../site
 
 
 nav:
   - Welcome to the Maximo Labs: index.md
-  - Contribute: contribute_information.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: copyright.md
