@@ -17,6 +17,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 |------------------------------------------------------------------------|------------|
 | ***Maximo Labs Top Level***                                            | |
 | [Maximo Labs Top Level](./)                                            | ![Ready](img/ready_small.png)|
+| [Github Pages](github_pages/)                                          | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.11***                                    | |
 | [Maximo Monitor Edge Data Collector](edc_8.11/)                        | ![Not started](img/not_started_small.png)|
 | ***Maximo Application Suite 8.11 (Under Development)***                | |
