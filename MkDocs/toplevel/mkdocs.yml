@@ -1,5 +1,5 @@
 site_name: IBM Maximo Labs
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira, Jan Ekstrøm & Contributors
 site_description: "IBM Maximo Hands on Lab"
 site_dir: ../../site
