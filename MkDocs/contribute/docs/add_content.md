@@ -85,6 +85,7 @@ Once the Pull Request has been accepted and your commits are added to the main b
     git checkout main
     git branch -d [name_of_your_new_branch]
     git push origin :[name_of_your_new_branch]
+    git pull
 
 !!! note
     The `:` before the [name_of_your_new_branch] in the last command will delete it on Github.</br>
