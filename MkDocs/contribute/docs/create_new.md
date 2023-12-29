@@ -81,12 +81,9 @@ Save the file.
 
 ### 4. Modify the about.md file
 
-The `about.md` file contains a list of the contributors to this lab as well as the Change Information.  
+The `release_notes.md` file contains a list of the contributors to this lab as well as the Change Information.  
 
-Select and open the `about.md` file located in the `docs` folder of you new lab
-![Select about.md](/img/contribute/edit_about_1.png)
-
-Edit the file and make sure to change the marked areas suitable for your new lab
+Select and open the `release_notes.md` file located in the `docs` folder of you new lab. Edit the file and make sure to change the marked areas suitable for your new lab
 ![Edit about.md](/img/contribute/edit_about_2.png)
 
 Which could look like this

@@ -1,29 +1,20 @@
-# Deploy to IBM Cloud
+# Deploy to Github Pages
 
-This part of the contribution is performed by Carlos Ferreia (carlos.ferreira1@ibm.com).</br>
-Contact him to accept your Pull Request and then perform the build and deploy.
+This part of the contribution is performed by the repository administrators.</br>
+Contact one of them to accept your Pull Request and then perform the build and deploy.
 
-Build the site:
+Build the site locally from the `main` branch after accepting a Pull Request:
 
-    cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project
+    cd ~/Git-Repos/maximo-labs
     ./build_all_mkdocs.sh
  
-Kill MK Docs Process and copy site content:
+Once the build is complete, verify the changes works as expected - then press `Ctrl-C` to get back to the prompt.</br>
+
+The site directory contains the complete MKdocs build. This has to be pushed to the `gh-pages` branch with the following command:
  
-    ps -A | grep mkdocs
-    cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project
-    cp -R /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/site/* /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/mam-hol/public
-    cd mam-hol
+    ghp-import -po site
 
 
-Deploy using ibm cloud cf push:
-    
-    cd /Users/carlos.ferreira1ibm.com/ws/mkdocs/mam-hol-project/mam-hol
-    ibmcloud login -sso
-    ibmcloud account list
-    Select account 1. IBM (10b59068b84d48c48f8300f8e1e63dba)
-    ibmcloud target -c <<accpunt_id>>
-    ibmcloud api https://api.eu-gb.bluemix.net
-    ibmcloud target --cf-api https://api.eu-gb.bluemix.net -o carlos.ferreira1@ibm.com -s dev
-    ibmcloud cf push
+Further information about ghp-import, can be found here: [https://pypi.org/project/ghp-import/](https://pypi.org/project/ghp-import/){target=_blank}
 
+---

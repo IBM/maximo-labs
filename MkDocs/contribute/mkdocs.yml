@@ -5,7 +5,7 @@ site_description: "How to contribute to the IBM Maximo hands on abs"
 site_dir: ../../site/contribute
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - Contribute:
     - Welcome to contribute: index.md
     - Get started: getting_started.md
@@ -16,7 +16,7 @@ nav:
     - Deploy to IBM Cloud: deploy.md
   - About:
     - Release Notes: release_notes.md
-    - Copyright: copyright.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:
