@@ -29,7 +29,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Health, Predict and Utilities](apm_8.9/)                              | ![Ready](img/ready_small.png)|
 | [Monitor Connect](mas_monitor_connect/)                                | ![Not started](img/not_started_small.png)|              
 | ***Maximo Application Suite 8.8***                                     | |
-| [Health, Predict and Utilities](apm_8.8/)                              | ![Not started](img/not_started_small.png)|
+| [Health, Predict and Utilities](apm_8.8/)                              | ![Ready](img/ready_small.png)|
 | [Monitor Connect](mas_monitor_connect/)                                | ![Not started](img/not_started_small.png)|              
 | ***Maximo Application Suite 8.7***                                     | |
 | [Health, Predict and Utilities](apm_8.7/)                              | ![Not started](img/not_started_small.png)|

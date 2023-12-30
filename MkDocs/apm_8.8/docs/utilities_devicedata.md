@@ -40,7 +40,7 @@ In this exercise you will use Watson Studio and Health and Predict - Utilities t
 2. In that folder, ensure you have 3 csv files under `csv > predict_csv_st` containing asset installation information, asset failure dates and sensor data
 
 3. Open the `hpu_st_failure_data_afm_vel_timeshifted_v17.csv` and update the Site ID to your site ID from [Load Data into Manage](asset_data_loader.md)
-![Cell Updates](/img/apm_8.7/hpu_2fsl_1.png) 
+![Cell Updates](img/apm_8.7/hpu_2fsl_1.png) 
 
 4. In the `notebooks` folder there should be a file titled `2_FastStartLoader-Predict.ipynb`
 
@@ -53,7 +53,7 @@ Select the `2_FastStartLoader-Predict.ipynb` notebook template.
 2. Open the notebook.  Click on the `pencil` icon next to your notebook 
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
-![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
+![Restarting Environment](img/apm_8.7/HPU_dataloader_3.png)
 
 ## Run the Notebook
 <a name="run_notebooks"></a>
@@ -69,14 +69,14 @@ Select the `2_FastStartLoader-Predict.ipynb` notebook template.
 5. Run the cell to uninstall the pmlib. This is done to ensure the right version is installed later in the process.
 
 6. Run the following two cells to set up variables required for the environment and the structure of the JSON file that will be stored on completion of the notebook. Note that both should produce an output without error.
-![Cell Updates](/img/apm_8.7/hpu_2fsl_2.png) 
+![Cell Updates](img/apm_8.7/hpu_2fsl_2.png) 
 
 7. Run the following 3 cells to install pmlib and import the additional required libraries
 
 8. Update `default_site_id = 'EULARGE1'` to `default_site_id = '{your site id}'`
 
 9. Run the cell to define your device type name, site id, and your asset group label. Make a note of the resulting output. This is the asset group label that will be the name of your predict group.
-![Cell Updates](/img/apm_8.7/hpu_2fsl_3.png) 
+![Cell Updates](img/apm_8.7/hpu_2fsl_3.png) 
 
 10. Run the following cell to import the csv containing the asset data and update the dataframe's data types
 
@@ -85,14 +85,14 @@ Select the `2_FastStartLoader-Predict.ipynb` notebook template.
 12. Run the following cell to rename the `timestamp` column to the desired name and data type.
 
 13. Run the following cell to create a list of the different Device Ids that will be created. Note that not all the assets have an associated device data.
-![Device Ids](/img/apm_8.7/hpu_2fsl_4.png) 
+![Device Ids](img/apm_8.7/hpu_2fsl_4.png) 
 
 14. Run the next cell to upload the failure data as a dataframe
 
 15. Run the next cell to create add the devices to the asset data table imported in step 10
 
 16. Run the following cell to construct the asset device mapping table that will be needed for later in the notebook
-![asset device mapping](/img/apm_8.7/hpu_2fsl_5.png) 
+![asset device mapping](img/apm_8.7/hpu_2fsl_5.png) 
 
 17. Run the next 6 cells to delete the data. These cells do NOT have to be run if this is the first time uploading data. If you need to re-upload the sensor data or recreate the group then the cells are required to be run. The final cell has a 5 minute delay to ensure the data gets fully deleted. Notice there is a commented out cell that would delete your assets. This is because we uploaded assets using the [Load Data into Manage](asset_data_loader.md) and did not want to delete the extra data we uploaded.
 
@@ -106,7 +106,7 @@ Select the `2_FastStartLoader-Predict.ipynb` notebook template.
 
 22. Note that the data is now in the current year
 
-![Shifted Data](/img/apm_8.7/hpu_2fsl_6.png) 
+![Shifted Data](img/apm_8.7/hpu_2fsl_6.png) 
 
 23. The next two commented out cells will create the assets and asset attributes. Since this information was uploaded earlier in the lab, they do not have to be run
 
@@ -132,7 +132,7 @@ Select the `2_FastStartLoader-Predict.ipynb` notebook template.
 
 34. Run the final three cells to save and view the data in the `fast_execution.json` file. Ensure the `asset_group_id` and the 34. Run the final three cells to save and view the data in the `fast_execution.json` file. Ensure the `asset_group_id` and the `device_type` match the values displayed throughout the notebook
 
-![Shifted Data](/img/apm_8.7/hpu_2fsl_7.png) 
+![Shifted Data](img/apm_8.7/hpu_2fsl_7.png) 
 
 35. The remaining cells will create scoring data for the predict group created. This is not being done since in the following labs, models will be created and assets will be scored for the created predict group at that time.
 
@@ -144,13 +144,13 @@ Confirm that the historical data was uploaded to Monitor.  Confirm that the Pred
 1. Navigate to Maximo Health and Predict for Utilities within your environment
 
 2. Use the left-hand menu to go into `Predict Grouping`
-   ![Predict Grouping](/img/apm_8.7/hpu_fs11.png) 
+   ![Predict Grouping](img/apm_8.7/hpu_fs11.png) 
 
 3. Ensure your asset group is available in the list and confirm your asset is available within the group.
- ![Predict Grouping](/img/apm_8.7/hpu_2fsl_8.png) 
+ ![Predict Grouping](img/apm_8.7/hpu_2fsl_8.png) 
 
 4. Navigate to IOT within your environment.  Under `devices`, search to ensure your `device` is there
-![IOT Device](/img/apm_8.7/hpu_2fsl_9.png)
+![IOT Device](img/apm_8.7/hpu_2fsl_9.png)
 
 5. Navigate to `Device Types` and find your device type. Check that your `physical` and `logical interfaces` are active.
 
@@ -161,19 +161,19 @@ Confirm that the historical data was uploaded to Monitor.  Confirm that the Pred
 
 ### Update DateFrame Header
 If you receive an object attribute error for pandas, with a column header initialized in [Part 2](#part-2---install-the-maximo-predict-sdk) step 10 listed similar to:
-![Error](/img/apm_8.7/hpu_fsl_error.png) 
+![Error](img/apm_8.7/hpu_fsl_error.png) 
 Then follow these steps to replace your dataframe header to resolve this error.
 1. Click into the cell that resulted in an error.
 
 2. In the menu, go to `Insert > Cell Above` 
-![Insert Cell Above](/img/apm_8.7/hpu_fs6.png) 
+![Insert Cell Above](img/apm_8.7/hpu_fs6.png) 
 
 3. Rename the columns by adding the following code in the cell:
 `{DataFrame_to_Change}.rename(columns={'{current_column_header}': site_id_col_name}, inplace=True)`
 `{DataFrame_to_Change}.head()`
 
 4. Run the cell. The output should show the new header in the table.  For example: in order to change the `failure_data_afm_df` column header from `'site'` to the preferred header:
- ![Renamed Header](/img/apm_8.7/hpu_fs7.png) 
+ ![Renamed Header](img/apm_8.7/hpu_fs7.png) 
 
 
 Congratulations you have loaded historical data and created Predict Groups linking your device's metrics inputs to list of assets and notebook template that will be used to score predictions using Predict with Monitor device data!

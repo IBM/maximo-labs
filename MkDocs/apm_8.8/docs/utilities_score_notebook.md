@@ -38,7 +38,7 @@ This notebook can only be run once per environment per site with the same set of
 
 4. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` dropdown select box and choose `Restart`
 
-![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
+![Restarting Environment](img/apm_8.7/HPU_dataloader_3.png)
 
 5. Run the first cell to import packages
 
@@ -50,7 +50,7 @@ This notebook can only be run once per environment per site with the same set of
 
    1. Here are two ways to comment out a cell: add a `#` to the beginning of each line or add `'''` to the beginning and end of a section of code for it to be ignored when run
 
-![Updated Cell](/img/apm_8.7/HPU_ScoreGroup_1.png)
+![Updated Cell](img/apm_8.7/HPU_ScoreGroup_1.png)
 
 9. Run the next cell to define the API call for Maximo
 
@@ -64,7 +64,7 @@ This notebook can only be run once per environment per site with the same set of
     
 11. Run the next cell to delete any existing asset score groups for your data. If none exists, the cell will output `None`. 
 
-![Output](/img/apm_8.7/HPU_ScoreGroup_2.png)
+![Output](img/apm_8.7/HPU_ScoreGroup_2.png)
 
 13. Run the next cell to create the query for the Asset Scoring Group. This query will be made up of Asset Type and Site ID
 
@@ -80,15 +80,15 @@ The following steps will confirm that the data was uploaded properly
 
 3. Search for your Org or Site and notice that there are two score groups created - One for Assets and One for Locations. Notice the calculation type is `Connect group to notebook` since the scores are built via notebooks for the specific Asset Classification
 
-![Score Groups](/img/apm_8.7/HPU_ScoreGroup_3.png)
+![Score Groups](img/apm_8.7/HPU_ScoreGroup_3.png)
 4. Click into the Score Groups and notice all the score types created via the Asset Type specific notebook listed in the `Group Details` section
 
-![Group Configuration](/img/apm_8.7/HPU_ScoreGroup_4.png)
+![Group Configuration](img/apm_8.7/HPU_ScoreGroup_4.png)
 5. Click `Recalculate Scores` and allow the scores to calculate
 
-![Recalculate Scores](/img/apm_8.7/HPU_ScoreGroup_5.png)
+![Recalculate Scores](img/apm_8.7/HPU_ScoreGroup_5.png)
 6. Click into any asset and see that the scores have calculated
-![Scores](/img/apm_8.7/HPU_ScoreGroup_6.png)
+![Scores](img/apm_8.7/HPU_ScoreGroup_6.png)
 
 Congratulations you have seen how to upload Health and Predict for utilities data via a notebook. You have also gained experience using Jupyter Notebooks in Watson Studio!
 
