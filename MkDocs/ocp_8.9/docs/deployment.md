@@ -10,7 +10,7 @@ In this Exercise you will learn how to:
 
 This recipe employs self-signed certificates and Ansible playbooks to deploy MAS with the default OpenShift domain (suitable for sandbox and learning purposes with limited mobile support). If you want to use valid SSL (CA-signed) certificates with a domain name of your own, contact the author with your sales opportunity (suitable for production, proof-of-concept, and MVPs with full mobile support).
 
-![deployment_decision](/img/ocp_8.9/deployment_decision.png)
+![deployment_decision](img/deployment_decision.png)
 
 ## Steps
 
@@ -37,13 +37,13 @@ export UDS_CONTACT_LASTNAME=
 export SLS_LICENSE_ID=
 ```
 
-3\. Deploy MAS. Run playbook (MAS Core) ⏰40 minutes.
+3\. Deploy MAS. Run playbook (MAS Core) ⏰ 40 minutes.
 
 ```shell
 ./1_core.sh
 ```
 
-4\. Deploy Manage (with Health). Run playbook (Manage) ⏰3+ hours. 
+4\. Deploy Manage (with Health). Run playbook (Manage) ⏰ 3+ hours. 
 
 !!! bug
 
@@ -53,7 +53,7 @@ export SLS_LICENSE_ID=
 ./2_manage.sh
 ```
 
-5\. Deploy Monitor. Run playbook (Monitor) ⏰1+ hours. 
+5\. Deploy Monitor. Run playbook (Monitor) ⏰ 1+ hours. 
 
 !!! note
 
@@ -63,7 +63,7 @@ export SLS_LICENSE_ID=
 ./3_monitor.sh
 ```
 
-6\. OPTIONAL: Install Cloud Pak for Data (for Watson Studio & ML). Run playbook (cp4d) ⏰4+ hours.
+6\. OPTIONAL: Install Cloud Pak for Data (for Watson Studio & ML). Run playbook (cp4d) ⏰ 4+ hours.
 
 ```shell
 ./cp4d.sh
