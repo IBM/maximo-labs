@@ -1,11 +1,11 @@
 site_name: Visual Inspection SaaS Labs
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
-site_author: Cecilia Duffus & Contributors
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Cecilia Stark & Contributors
 site_description: "Visual Inspection SaaS Hands on Lab"
 site_dir: ../../site/mvi_saas
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - MVI SaaS Labs:
     - Welcome to the MVI Labs: index.md
     - Pre-Requisites: prereqs.md
@@ -18,7 +18,9 @@ nav:
         - 2.3 Dashboard Configuration: exerciseTwo/exercise2-3.md
     - Next Steps: nextsteps.md
     - Troubleshooting: troubleshoot.md
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:

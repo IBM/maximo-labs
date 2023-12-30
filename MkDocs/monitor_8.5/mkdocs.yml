@@ -1,11 +1,11 @@
 site_name: Maximo Hands on Labs
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Hands on Lab for Monitor v8.5"
 site_dir: ../../site/monitor_8.5
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - Monitor v8.5 Labs:
     - Welcome to the Monitor Labs: index.md
     - Get Started: getting_started.md
@@ -17,7 +17,9 @@ nav:
         - 4. Create Python Functions : python_function.md
         - 5. Create Python Expressions : python_expressions.md
         - 6. Add Value Card : add_value_card.md
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:

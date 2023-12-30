@@ -1,11 +1,11 @@
 site_name: Edge Data Collector Lab
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Jan Ekstrøm & Contributors
 site_description: "Maximo Monitor Edge Data Collector Hands on Lab"
 site_dir: ../../site/edc_8.11
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - Monitor Edge Data Collector Lab:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
@@ -15,7 +15,9 @@ nav:
         - 3. Create EDC Integration: edc_integration.md
         - 4. Deploy and verify integration: deploy.md
         - 5. Create Monitor metric: monitor_metrics.md
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 

@@ -1,11 +1,11 @@
 site_name: MAS 8.9 Deployment Lab
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Arif Ali & Contributors
 site_description: "MAS 8.9 Deployment Lab"
 site_dir: ../../site/ocp_8.9
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - MAS 8.9 Deployment Labs:
     - Welcome to the Lab: index.md
     - Get Started: getting_started.md
@@ -16,7 +16,9 @@ nav:
         - 3. Preparation: preparation.md
         - 4. Deployment: deployment.md
         - 5. Post-deployment: post_deployment.md
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:

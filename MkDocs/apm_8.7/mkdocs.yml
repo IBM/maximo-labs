@@ -1,11 +1,11 @@
 site_name: Maximo APM V8.7 Hands On Lab
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Asset Performance Management v8.7 Hands on Lab"
 site_dir: ../../site/apm_8.7
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - Maximo APM V8.7.0 Lab:
     - Welcome to the Lab: index.md
     - Get Started: get_started.md
@@ -26,7 +26,10 @@ nav:
       - Asset Health Scoring: health_score.md
       - Asset Investment Optimization: asset_investment.md
       - Install and Configure App Connect: appconnect_install.md
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
 
 theme: readthedocs
 markdown_extensions:

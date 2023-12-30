@@ -1,18 +1,20 @@
 site_name: MAS Health and Predict for Utilities 8.6 Lab
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferriera & Contributors
 site_description: "MAS Health and Predict for Utilities 8.6 Lab"
 site_dir: ../../site/hpu_8.6
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - MAS HPU 8.6 Lab:
     - Welcome to the Maximo Application Suite Overview 8.6 Overview Lab: index.md
     - Pre-Requisites: prereqs.md
     - Exercises:
       - 1. Health - Predict: demo-health-predict.md
       - 2. Closing: closing.md 
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:
