@@ -23,7 +23,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | ***Maximo Application Suite 8.11 (Under Development)***                | |
 | [Health, Predict and Utilities](apm_8.11/)                             | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.10***                                    | |
-| [Monitor Node-RED CSV Importer V2](monitor_nodered_csv_importer_2.0/)  | ![Not started](img/not_started_small.png)|
+| [Monitor Node-RED CSV Importer V2](monitor_nodered_csv_importer_2.0/)  | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.9***                                     | |
 | [Deploy MAS 8.9](ocp_8.9/)                                             | ![Not started](img/not_started_small.png)|
 | [Health, Predict and Utilities](apm_8.9/)                              | ![Not started](img/not_started_small.png)|
@@ -218,8 +218,13 @@ If you want to write new labs or improve the existing labs, then find the instru
 |                                               | [Do something else](template_1.0/something_else)                             |
 
 
----
-**UPDATED: 2023-12-29**
+
+## License
+
+See the [Copyright page](copyright.md) for how the Maximo Hands on Labs are licensed.
+
 ---
 
-© 2023 International Business Machines Corporation
+**UPDATED: 2023-12-30**
+
+---

@@ -50,13 +50,13 @@ In this Exercise you will learn how to setup Monitor to receive data from a CSV 
 7. Click Add
 8. Apply checkmark in the box to `Use this as the default timestamp`
 9. The metrics should look like this: <br>
-![Metrics](/img/monitor_nodered_csv_importer_2.0/solarpanel_metrics.png)
+![Metrics](img/solarpanel_metrics.png)
 9. Click Save
 
 ## Create a device in Monitor representing the device in the CSV file
 
 1. Click the blue Setup link in the top left which will take you to the device types list<br>
-![Navigate to Setup](/img/monitor_nodered_csv_importer_2.0/navigate_to_setup.png)
+![Navigate to Setup](img/navigate_to_setup.png)
 2. The device type you created should be selected
 3. Click on `Add device +`
 4. Enter 1BY6WEcLGh8j5v7 for name
@@ -97,25 +97,25 @@ Collect the following:<br>
 12. Click Deploy in the top right corner
 13. You should now see a green dot and `connected` below the `mqtt out` node <br>
 if all credentials were entered correctly:<br>
-![Connected device](/img/monitor_nodered_csv_importer_2.0/connected_device.png)
+![Connected device](img/connected_device.png)
 
 
 ## Run the Node-RED flow for a single device
 
 1. Download [single_solar_panel.csv](https://github.com/ekstrom-ibm/monitor_csv_importer/blob/main/V2/single_solar_panel.csv){target=_blank} from github
 2. Click on the down arrow in the upper right corner in Node-RED and choose Dashboard<br>
-![Choose dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_choose.png)
+![Choose dashboard](img/dashboard_choose.png)
 3. Click on the launch arrow<br>
-![Launch dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_launch.png)
+![Launch dashboard](img/dashboard_launch.png)
 5. Click on Choose File or Browse under "Upload CSV with a single device"<br>
-![Upload CSV single device](/img/monitor_nodered_csv_importer_2.0/upload_csv_single_device.png)
+![Upload CSV single device](img/upload_csv_single_device.png)
 6. Select the `single_solar_panel.csv` file and click the right arrow play button
 7. Go back to the Node-RED flow window
 8. Under the light purple `delay` node it shows the amount of messages left to send to Monitor
 9. Under the green `debug` Progress node it shows the amount of messages that have been sent to Monitor
 10. Wait till the number under the light purple `delay` node shows 0.<br>
 Progress node should say 1659.<br>
-![Single device run](/img/monitor_nodered_csv_importer_2.0/single_device_run.png)
+![Single device run](img/single_device_run.png)
 11. All the data has been ingested into Monitor
 
 ## Verify the data is in Monitor
@@ -125,19 +125,15 @@ Progress node should say 1659.<br>
 3. Click on the black button "Set up device type"
 4. On the left side open Metric and then select AC_POWER
 5. Click on Data table to see the values of that metric<br>
-![Data table](/img/monitor_nodered_csv_importer_2.0/data_table.png)<br><br>
+![Data table](img/data_table.png)<br><br>
 
 ---
 
 Congratulations!  You have ingested data from a CSV file into Monitor.<br>
 Now you can explore creating calculated data metrics and dashboards in Monitor.<br>
 Which could be something like this:<br>
-![Single Device Dashboard](/img/monitor_nodered_csv_importer_2.0/single_device_dashboard.png)<br><br>
+![Single Device Dashboard](img/single_device_dashboard.png)<br><br>
 
 !!! attention
     Please archive and delete your device type when it is no longer being used.
-
-
-
-
 

@@ -56,14 +56,14 @@ In this Exercise you will learn how to setup Monitor to receive data from a CSV 
 7. Click Add
 8. Apply checkmark in the box to `Use this as the default timestamp`
 9. The metrics should look like this: <br>
-![Metrics](/img/monitor_nodered_csv_importer_2.0/solarpanel_metrics.png)
+![Metrics](img/solarpanel_metrics.png)
 9. Click Save
 
 
 ## Create a gateway in IoT and register a device
 
 1. Click the AppSwitcher in the top right corner and choose IoT</br>
-![Open IoT Tool](/img/monitor_nodered_csv_importer_2.0/select_iot.png)
+![Open IoT Tool](img/select_iot.png)
 2. Click on Device Types
 3. Click on Add Device Type
 4. Click on Type Gateway
@@ -72,14 +72,14 @@ In this Exercise you will learn how to setup Monitor to receive data from a CSV 
 5. Click Next
 6. Click Finish
 7. Click Register Devices
-![Upload CSV multiple devices](/img/monitor_nodered_csv_importer_2.0/create_gateway.png)
+![Upload CSV multiple devices](img/create_gateway.png)
 8. Enter a name for the gateway device, e.g. XX_SolarPanel_GW01 (replace XX with your initials).<br>
 Note:  This is not the DEVICEID in your CSV file
 9. Click Next 4 times
 13. In Authenticaton Token enter Pasword1! and click Next
-![Add Device](/img/monitor_nodered_csv_importer_2.0/add_device_gateway.png)
+![Add Device](img/add_device_gateway.png)
 14. Click Finish
-![Add Device](/img/monitor_nodered_csv_importer_2.0/device_credentials.png)
+![Add Device](img/device_credentials.png)
 
 ## Import Node-RED flow to import the CSV
 
@@ -130,17 +130,17 @@ Collect the following (or skip if done in previous exercise):<br>
 14. Click Deploy in the top right corner
 15. You should now see a green dot and `connected` below the `mqtt out` node <br>
 if all credentials were entered correctly:<br>
-![Connected device](/img/monitor_nodered_csv_importer_2.0/connected_gateway.png)
+![Connected device](img/connected_gateway.png)
 
 ## Run the Node-RED flow for a gateway
 
 1. Download [multiple_solar_panels.csv](https://github.com/ekstrom-ibm/monitor_csv_importer/blob/main/V2/multiple_solar_panels.csv){target=_blank} from github
 2. Click on the down arrow in the upper right corner in Node-RED and choose Dashboard<br>
-![Choose dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_choose.png)
+![Choose dashboard](img/dashboard_choose.png)
 3. Click on the launch arrow<br>
-![Launch dashboard](/img/monitor_nodered_csv_importer_2.0/dashboard_launch.png)
+![Launch dashboard](img/dashboard_launch.png)
 4. Click on Choose File or Browse under "Upload CSV with multiple devices" and select the recently downloadet CSV file.<br>
-![Upload CSV multiple devices](/img/monitor_nodered_csv_importer_2.0/upload_csv_multiple_devices.png)
+![Upload CSV multiple devices](img/upload_csv_multiple_devices.png)
 5. Select the `multiple_solar_panels.csv` file and click the right arrow play button
 6. Go back to the Node-RED flow window
 7. Under the light purple `delay` node it shows the amount of messages left to send to Monitor
@@ -148,35 +148,26 @@ if all credentials were entered correctly:<br>
 9. All the data is ingested into Monitor once the number under the light purple `delay` node<br>
    shows 0 but you can go ahead to the next step to verify data is going into Monitor.<br>
    It will take approx. 11 minutes.<br>
-![Single device run](/img/monitor_nodered_csv_importer_2.0/gateway_run.png)
+![Single device run](img/gateway_run.png)
 
 ## Verify the devices and data in Monitor
 
 1. Go to Setup in Monitor
 2. Click on the Device Type created earlier in the lab
 3. See that 21 (+1 from previous exercise) devices were created in Monitor under the device type
-![Device list](/img/monitor_nodered_csv_importer_2.0/device_list.png)
+![Device list](img/device_list.png)
 3. Click on the black button "Set up device type"
 4. On the left side open Metric and then select DAILY_YIELD
 5. Click on Data table to see the values of that metric and notice the different Device ID's<br>
-![Data table](/img/monitor_nodered_csv_importer_2.0/data_table_devices.png)
+![Data table](img/data_table_devices.png)
 
 ---
 
 Congratulations!  You have ingested data from a CSV file into Monitor for several devices through a gateway. 
 Now you can explore creating calculated data metrics and dashboards in Monitor.<br>
 Which could be something like this:<br>
-![Single Device Dashboard](/img/monitor_nodered_csv_importer_2.0/summary_dashboard.png)<br><br>
+![Single Device Dashboard](img/summary_dashboard.png)<br><br>
 
 !!! attention
     Please archive and delete your device type when it is no longer being used.
-
-
-
-
-
-
-
-
-
 
