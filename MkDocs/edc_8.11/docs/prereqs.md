@@ -17,7 +17,7 @@ o Your user must have access to Monitor and the IoT Tool</br>
 o Your user must have administrator access to Maximo Application Suite.</br>
 Your Exercise facilitator should have provided you with the information on your access.
 
-3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?):<br>
+3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?){target=_blank}:<br>
 o Click `Login to MY IBM` button<br>
 o Click `Create an IBM ID` link
 
