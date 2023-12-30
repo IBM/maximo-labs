@@ -19,6 +19,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2023-09-23**
+**Updated: 2023-12-30**
 
 ---
