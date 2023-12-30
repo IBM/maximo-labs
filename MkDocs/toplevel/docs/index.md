@@ -21,7 +21,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | ***Maximo Application Suite 8.11***                                    | |
 | [Maximo Monitor Edge Data Collector](edc_8.11/)                        | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.11 (Under Development)***                | |
-| [Health, Predict and Utilities](apm_8.11/)                             | ![Not started](img/not_started_small.png)|
+| [Health, Predict and Utilities](apm_8.11/)                             | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.10***                                    | |
 | [Monitor Node-RED CSV Importer V2](monitor_nodered_csv_importer_2.0/)  | ![Not started](img/not_started_small.png)|
 | ***Maximo Application Suite 8.9***                                     | |
