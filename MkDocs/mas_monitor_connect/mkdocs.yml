@@ -9,10 +9,10 @@ nav:
   - MAS Monitor Connect Lab:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
-    - Exercises:
-        - 1. Setup mobile device in Monitor: setup_device.md
-        - 2. Connect mobile device to Monitor: connect_device.md
-        - 3. Verify event data is being sent and persisted in Monitor: verify_data.md
+  - Exercises:
+    - 1. Setup mobile device in Monitor: setup_device.md
+    - 2. Connect mobile device to Monitor: connect_device.md
+    - 3. Verify event data is being sent and persisted in Monitor: verify_data.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright

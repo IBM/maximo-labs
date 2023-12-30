@@ -27,10 +27,10 @@ Instructions for the migration: [Github Pages](github_pages/)
 | ***Maximo Application Suite 8.9***                                     | |
 | [Deploy MAS 8.9](ocp_8.9/)                                             | ![Ready](img/ready_small.png)|
 | [Health, Predict and Utilities](apm_8.9/)                              | ![Ready](img/ready_small.png)|
-| [Monitor Connect](mas_monitor_connect/)                                | ![Not started](img/not_started_small.png)|              
+| [Monitor Connect](mas_monitor_connect/)                                | ![Ready](img/ready_small.png)|              
 | ***Maximo Application Suite 8.8***                                     | |
 | [Health, Predict and Utilities](apm_8.8/)                              | ![Ready](img/ready_small.png)|
-| [Monitor Connect](mas_monitor_connect/)                                | ![Not started](img/not_started_small.png)|              
+| [Monitor Connect](mas_monitor_connect/)                                | ![Ready](img/ready_small.png)|              
 | ***Maximo Application Suite 8.7***                                     | |
 | [Health, Predict and Utilities](apm_8.7/)                              | ![Not started](img/not_started_small.png)|
 | [Monitor Asset Hierarchy](mas_monitor_hierarchy/)                      | ![Not started](img/not_started_small.png)|
