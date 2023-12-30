@@ -29,18 +29,18 @@ This notebook can only be run once per environment per site with the same set of
 1. Upload the Creat PUMP Score Groups' notebook from the github in the `https://github.ibm.com/Watson-IoT/eam-hpu-lab/notebooks` to your project.    
 Click 'New asset' button in the project, and filter for notebook type.
    
-    ![New Asset](/img/apm_8.9/pump_sg1.png)   
+    ![New Asset](img/apm_8.9/pump_sg1.png)   
        
-    ![Choose notebook type](/img/apm_8.9/pump_sg2.png){ width=70% height=70% } 
+    ![Choose notebook type](img/apm_8.9/pump_sg2.png){ width=70% height=70% } 
 
 2. Select the `1.2_Create-PUMP-SG_CustomScoreType.ipynb` notebook, and then click Create button. 
-    ![Choose notebook](/img/apm_8.9/pump_sg3.png)   
+    ![Choose notebook](img/apm_8.9/pump_sg3.png)   
 
 3. Click on the `pencil` icon next to your notebook to open it in edit mode.
 
 4. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` dropdown select box and choose `Restart`
 
-    ![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png){ width=30% height=30% } 
+    ![Restarting Environment](img/apm_8.7/HPU_dataloader_3.png){ width=30% height=30% } 
 
 5. Run the first code cell to import packages
 
@@ -88,18 +88,18 @@ The following steps will confirm that the score group was created properly
 
 3. Search for your Org or Site and notice that there are one score group created for Pump Assets. 
 
-    ![Score Groups](/img/apm_8.9/pump_sg4.png)
+    ![Score Groups](img/apm_8.9/pump_sg4.png)
 4. Click into the Score Groups and notice all the score types created via the the notebook listed in the `Group Details` section, click any score to check the score details.
 
-    ![Group Configuration](/img/apm_8.9/pump_sg5.png)
-    ![Health Score Details](/img/apm_8.9/pump_sg6.png)   
-    ![PUMP HYDRAULIC EFFICIENCY Score Details](/img/apm_8.9/pump_sg7.png)   
+    ![Group Configuration](img/apm_8.9/pump_sg5.png)
+    ![Health Score Details](img/apm_8.9/pump_sg6.png)   
+    ![PUMP HYDRAULIC EFFICIENCY Score Details](img/apm_8.9/pump_sg7.png)   
 
 5. Back to Score group detail, click `Calculate Scores` and allow the scores to calculate.
 
-    ![Calculate Scores](/img/apm_8.9/pump_sg8.png)
+    ![Calculate Scores](img/apm_8.9/pump_sg8.png)
 6. Click into any asset and see that the scores have calculated
-    ![Scores](/img/apm_8.9/pump_sg9.png)
+    ![Scores](img/apm_8.9/pump_sg9.png)
 
 Congratulations you have seen how to use this notebook to create new custom score and used it in a score group. You have also gained experience using Jupyter Notebooks in Watson Studio!
 

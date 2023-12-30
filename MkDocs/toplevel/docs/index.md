@@ -26,7 +26,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Monitor Node-RED CSV Importer V2](monitor_nodered_csv_importer_2.0/)  | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.9***                                     | |
 | [Deploy MAS 8.9](ocp_8.9/)                                             | ![Ready](img/ready_small.png)|
-| [Health, Predict and Utilities](apm_8.9/)                              | ![Not started](img/not_started_small.png)|
+| [Health, Predict and Utilities](apm_8.9/)                              | ![Ready](img/ready_small.png)|
 | [Monitor Connect](mas_monitor_connect/)                                | ![Not started](img/not_started_small.png)|              
 | ***Maximo Application Suite 8.8***                                     | |
 | [Health, Predict and Utilities](apm_8.8/)                              | ![Not started](img/not_started_small.png)|

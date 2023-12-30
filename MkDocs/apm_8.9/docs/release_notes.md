@@ -10,9 +10,10 @@
 
 # Change Information
 
-| Date       | By                               | Description         |
-|:-----------|:---------------------------------|:--------------------|
-| 2023-01-03 | Juan Gu,  gujuan@cn.ibm.com      | Custom Asset Scores |
-| 2022-11-16 | Carlos Ferreira and John Douglas | Custom Asset Scores |
+| Date     | By                               | Description         |
+|:---------|:---------------------------------|:--------------------|
+|2023-12-30|Jan Ekstrøm|Converted to work on Github Pages. |
+|2023-01-03| Juan Gu,  gujuan@cn.ibm.com      | Custom Asset Scores |
+|2022-11-16| Carlos Ferreira and John Douglas | Custom Asset Scores |
 
 ---

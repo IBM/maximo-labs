@@ -1,7 +1,7 @@
 # Deploy to Github Pages
 
 This part of the contribution is performed by the repository administrators.</br>
-Contact one of them to accept your Pull Request and then perform the build and deploy.
+Contact one of them to accept your Pull Request and then they will perform the build and deploy.
 
 Build the site locally from the `main` branch after accepting a Pull Request:
 
