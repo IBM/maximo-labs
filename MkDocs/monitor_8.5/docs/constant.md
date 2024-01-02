@@ -18,7 +18,7 @@ modifying the value of the constant all the functions and alerts will use the ne
 ---
 *Before you begin:* 
  
-- You have completed the [pre-requisites](../prereqs) required for all Exercises
+- You have completed the [pre-requisites](prereqs.md) required for all Exercises
 - You have completed the prior exercise in this lab.
 ---
 
@@ -73,7 +73,8 @@ project
 
 6.  The script  `register_constanty.py` provided in the `watson--classifier` Github project uses IOT Functions SDK to 
 create a constant.  [IOT Functions SDK](https://www.ibm.com/docs/en/mapms/1_cloud?topic=asr-sdks)  In the PyCharm project 
-tab, navigate to and expand the scripts folder.  Right click on `register_constant.py` and select the `run` menu. ![Run](/img/monitor_8.5/fun19.png)
+tab, navigate to and expand the scripts folder.  Right click on `register_constant.py` and select the `run` menu. 
+![Run](img/fun19.png)
 
 Script code:
 
@@ -110,7 +111,8 @@ and `edit configurations`.  Make sure to pick  `run` and `edit configuration` fo
 
 8.  Make sure you have setup your [virtual environment in Pycharm](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html). 
 Once you have you can select the name of the virtual environment in PyCharm.  In the projet window click on `register_constant.py`
-then from the Pycharm menu select `run` and `edit configuration`   ![Run Edit Configurations Virtual Environment](/img/monitor_8.5/fun21.png)
+then from the Pycharm menu select `run` and `edit configuration`   
+![Run Edit Configurations Virtual Environment](img/fun21.png)
  
 ## Assign a Constant a Value in Monitor
 In this exercise you will quickly create a constant named `max_temp_yourinitials` a that you will use in next exercises.  
@@ -118,21 +120,23 @@ In this exercise you will quickly create a constant named `max_temp_yourinitials
 1.  Set the value of the constant from the UI.   Login to  Monitor. 
 
 2.  Select  `Setup Assets` tab, search for `Sample_Packaging_Hopper_Type_yourinitials` .
-Click on your `Asset Type` and click on   `Setup Asset Type` button.  ![Setup Asset Type](/img/monitor_8.5/fun03.png) 
+Click on your `Asset Type` and click on   `Setup Asset Type` button.  
+![Setup Asset Type](img/fun03.png) 
 
-3.  Click on the `data` tab,  ![Search catalog for the Python Function](/img/monitor_8.5/fun05.png)
+3.  Click on the `data` tab,  
+![Search catalog for the Python Function](img/fun05.png)
  
 4.  Click on `gear` icon  and select `Manage constants` menu option
- ![Constant](/img/monitor_8.5/fun22.png)
+ ![Constant](img/fun22.png)
  
 5.  A list of constants is displayed.  Select the constant named `max_temp_yourinitials`  Click `Configure`.
- ![Constant](/img/monitor_8.5/fun23.png)
+ ![Constant](img/fun23.png)
  
 6. Assign a value of `27` and click `Save`.
- ![Constant](/img/monitor_8.5/fun24.png)
+ ![Constant](img/fun24.png)
 
 7. Click `Save`.
- ![Constant](/img/monitor_8.5/fun24_1.png)
+ ![Constant](img/fun24_1.png)
  
 ## Next Step
 

@@ -14,7 +14,7 @@ The PythonExpression will add a new calculated metric `temperature_deviation` th
 
 *Before you begin:*  
 
-- This exercise requires that you have completed the [pre-requisites](../prereqs) required for all Exercises.
+- This exercise requires that you have completed the [pre-requisites](prereqs.md) required for all Exercises.
 
 - This exercise requires that you have completed the previous exercise.
 
@@ -23,12 +23,15 @@ The PythonExpression will add a new calculated metric `temperature_deviation` th
 ## Create a Python Expression in Monitor
 
 1. In Monitor, select `Setup Assets` tab, search for `Sample_Packaging_Hopper_Type_yourinitials` .
-Click on your `Device Type` and click on `Setup Asset Type` button.  ![Setup Asset Type](/img/monitor_8.5/fun03.png) 
+Click on your `Device Type` and click on `Setup Asset Type` button.  
+![Setup Asset Type](img/fun03.png) 
 
 2.  Click `Data` tab, `+` button  to add a new calculated metric from the catalog. Enter `Puthon` in the search field of 
-the Monitor catalog. ![Search catalog for the Python Function](/img/monitor_8.5/fun05.png)
+the Monitor catalog.  
+![Search catalog for the Python Function](img/fun05.png)
 
-3.  Click `PythonExpression` option and the`Select` button to add the function to your `Asset Type`.  ![Create a Python Function](/img/monitor_8.5/fun28.png) &nbsp;
+3.  Click `PythonExpression` option and the`Select` button to add the function to your `Asset Type`.  
+![Create a Python Function](img/fun28.png) &nbsp;
 
 4.  Set the calculation data item `expression` to the value below.  This will calculate the difference between the ambient 
 temperature and the maximum temperature constant you added in the previous exercise.
@@ -37,9 +40,10 @@ temperature and the maximum temperature constant you added in the previous exerc
     df['ambient_temp']-c['max_temp_cf']
     ```
 
- ![Choose input metric](/img/monitor_8.5/fun08.png) &nbsp;
+ ![Choose input metric](img/fun08.png) &nbsp;
 
-5.  Set the output name to `temperature_deviation`   ![Choose input metric](/img/monitor_8.5/fun34.png)
+5.  Set the output name to `temperature_deviation`   
+![Choose input metric](img/fun34.png)
 
 ## Next Step
 Nice work getting to here.  In the next exercise, you will add your calculated metrics `ambient_temp_over_max_status`, 

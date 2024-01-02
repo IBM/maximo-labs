@@ -1,9 +1,9 @@
 
 # Getting Started with the IBM Maximo Monitor v8.5 Lab!
  
-Students doing these exercises and facilitators preparing for delivering the exercises should read the [instructions](../prereqs).
+Students doing these exercises and facilitators preparing for delivering the exercises should read the [instructions](prereqs.md).
 
-These labs are still under development as Monitor v8.5 was just released.  Please  [Contributing to Labs](../../about) 
+These labs are still under development as Monitor v8.5 was just released.  Please  [Contributing to Labs](../../contribute/) 
 providing us feedback by enhancements or bugs via Survicate Net Promoter score surveys if you are asked.  We also 
 welcome your contributions to existing or new exercises. 
 
@@ -11,19 +11,19 @@ welcome your contributions to existing or new exercises.
 
 |   Goal                                     | Recommended Activities                                       | Time Needed   |
 |:------------------------------------------:|: -----------------------------------------------------------:|:-------------:|
-|  Setup local development environment       | Setup your local development environment                     |   1.5 hours  |
-|  Create a Packaging Asset                  | Exercise 1                                                   |   15 mins    |
-|  Create a Constant                         | Exercise 2                                                   |   15 mins    |
-|  Create a Python Function                  | Exercise 3                                                   |   30 mins    |
-|  Create a Python Expression                | Exercise 4                                                   |   5 mins    |
-|  Add a Value card to an Asset Dashboard    | Exercise 5                                                   |   5  hours   |
+|  Setup local development environment       | Setup your local development environment                     |   1.5 hours   |
+|  Create a Packaging Asset                  | Exercise 1                                                   |   15 mins     |
+|  Create a Constant                         | Exercise 2                                                   |   15 mins     |
+|  Create a Python Function                  | Exercise 3                                                   |   30 mins     |
+|  Create a Python Expression                | Exercise 4                                                   |   5 mins      |
+|  Add a Value card to an Asset Dashboard    | Exercise 5                                                   |   5  hours    |
 |  Create a Custom Function                  | [Exercise 6](https://www.ibm.com/docs/en/maximo-monitor/8.5.0?topic=calculations-using-custom-functions) |   2  hours   |
 
 <br/>
 
 ## Overview of Maximo Monitor
 
-Read an [overview of Maximo Monitor](http://maximo-lab.monitordemo4.ibmmam.com/monitor_saas/getting_started/)
+Read an [overview of Maximo Monitor](https://ibm.github.io/maximo-labs/monitor_saas/getting_started/)
 
 ##  Demonstration of Monitor
 
