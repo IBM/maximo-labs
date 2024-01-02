@@ -13,7 +13,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2023-12-30|Jan Ekstrøm|Restructured to work on Github Pages.|
+|2024-01-02|Jan Ekstrøm|Restructured to work on Github Pages.|
 |2022-02-26|Cecilia Stark| Uploaded 8.6 labs. |
 
 ---
