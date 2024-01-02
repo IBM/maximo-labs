@@ -1,6 +1,6 @@
 # Welcome to the IBM Maximo Visual Inspection Lab<br>(Version: 1.3.0)
-![img](/img/mvi_saas/img-index/mvi26.png){:style="height:390px;width:350px;"}
-![img](/img/mvi_saas/img-index/coke.png){:style="height:390px;width:200px;margin-left:40px"}
+![img](img/img-index/mvi26.png){:style="height:390px;width:350px;"}
+![img](img/img-index/coke.png){:style="height:390px;width:200px;margin-left:40px"}
 
 
 

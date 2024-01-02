@@ -24,49 +24,49 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 
 1. Log into Maximo Visual Inspections using your credentials.
 
-     ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/login.png){: style="height:400px;width:700px;"}
+     ![img](img/img-exerciseOne/exercise1-1/login.png){: style="height:400px;width:700px;"}
 
     <br>
 
 2. Click `Get Started`.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/getstarted.png){: style="height:300px;width:700px;"}
+    ![img](img/img-exerciseOne/exercise1-1/getstarted.png){: style="height:300px;width:700px;"}
     
     <br>
 
 3. You should now be in the `Data Sets`tab.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/dataset.png){: style="height:120px;width:700px"}
+    ![img](img/img-exerciseOne/exercise1-1/dataset.png){: style="height:120px;width:700px"}
 
     <br>
 
 4. Select `Create new data set`.
 
-     ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/create.png){: style="height:400px;width:250px"}
+     ![img](img/img-exerciseOne/exercise1-1/create.png){: style="height:400px;width:250px"}
 
      <br>
 
 5. Name your net data set `Cans data set-YourInitials`. Then, `Create`.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/create3.png){: style="height:250px;width:500px"}
+    ![img](img/img-exerciseOne/exercise1-1/create3.png){: style="height:250px;width:500px"}
 
      <br>
 
 6. Select the bottom half of the data set you just created.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/create4.png){: style="height:400px;width:400px"}
+    ![img](img/img-exerciseOne/exercise1-1/create4.png){: style="height:400px;width:400px"}
 
     <br>
 
 7. You will now drag and drop the 5 images of cans we provided you onto the `Drop files here` box or click `Import files` and select the images.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/create6.png){: style="height:450px;width:650px"}
+    ![img](img/img-exerciseOne/exercise1-1/create6.png){: style="height:450px;width:650px"}
 
     <br>
 
 8. Select `Add files`.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/create7.png){: style="height:200px;width:700px"}
+    ![img](img/img-exerciseOne/exercise1-1/create7.png){: style="height:200px;width:700px"}
 
     <br>
 
@@ -76,7 +76,7 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 
 9. Click the `Select` check box next to the `Label actions` button. Then, click on the `Label objects` button.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/startD.png)
+    ![img](img/img-exerciseOne/exercise1-1/startD.png)
 
     <br>
 
@@ -86,42 +86,42 @@ Before you begin, make sure you followed the steps in the Prerequisites page.
 
 7. On the right-hand side of the page click `Add Label`. 
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/labell.png){: style="height:300px;width:700px"}
+    ![img](img/img-exerciseOne/exercise1-1/labell.png){: style="height:300px;width:700px"}
 
     <br>
 
 8. Type “good” and then hit the `Enter` key (or click the `Add` button). Then, type “bad_dented” and then hit the `Enter` key (or click the `Add` button). Click the `Ok` button when the labels are created.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/good.png)
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/addLabels.png)
+    ![img](img/img-exerciseOne/exercise1-1/good.png)
+    ![img](img/img-exerciseOne/exercise1-1/addLabels.png)
 
     <br>
 
 9. Look at the image and determine whether the can is “good” or “bad_dented”. Then, click the specific object name for the image and click the `Box` label.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/boxL.png){: style="height:500px;width:1200px"}
+    ![img](img/img-exerciseOne/exercise1-1/boxL.png){: style="height:500px;width:1200px"}
 
     <br>
 
 10. Click and drag your mouse over the can for each label. Labeling each can "good" or "bad_dented."
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/drag.png){: style="height:400px;width:900px"}
+    ![img](img/img-exerciseOne/exercise1-1/drag.png){: style="height:400px;width:900px"}
 
     <br>
 
 11. Try to get the boxes around the cans as close as possible. If you need to adjust your label, just <u>uncheck</u> the `Box` label first (box turns BLUE when ACTIVE, BLACK when not active) and use the 4 white corners to <u>adjust</u> the label. You may need to click on one of the can boxes to select it, if the 4 white corner boxes are not showing. You can also select the <u>trash</u> can symbol next to the label on the top right to delete it.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/mistakes.png){: style="height:400px;width:900px"}
+    ![img](img/img-exerciseOne/exercise1-1/mistakes.png){: style="height:400px;width:900px"}
 
     <br>
 
 12. Use the `Blue Arrow` to scroll up and down through all of the images or hover your mouse over and scroll. Label all of the “good” and “bad_dented” cans in all of the images.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/blueA.png){: style="height:400px;width:500px"}
+    ![img](img/img-exerciseOne/exercise1-1/blueA.png){: style="height:400px;width:500px"}
 
 13. Once finished, go back to the data set by clicking the back arrow.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/backA.png){: style="height:400px;width:900px"}
+    ![img](img/img-exerciseOne/exercise1-1/backA.png){: style="height:400px;width:900px"}
 
 
 
@@ -132,13 +132,13 @@ When building out a Deep Learning model the more images you add to your data set
 
 14. Now that your imaged have been labeled, let's begin to augment the data. You should be on our `Cans data Set-YourInitials` in the Data set tab. 
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/dataset1.png){: style="height:480px;width:500px"}
+    ![img](img/img-exerciseOne/exercise1-1/dataset1.png){: style="height:480px;width:500px"}
 
     <br>
 
 15. Now, click on the `Augment Data` button.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/augmentB.png){: style="height:450px;width:700px"}
+    ![img](img/img-exerciseOne/exercise1-1/augmentB.png){: style="height:450px;width:700px"}
 
 
     <br>
@@ -147,19 +147,19 @@ When building out a Deep Learning model the more images you add to your data set
 16. Click the `Vertical flip` checkbox, the `Horizontal flip` checkbox, and then the `Continue` button. (you may have to use the scroll bar to the right and scroll 
 down a little to display the vertical and horizontal flip options)  
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/aContinue.png){: style="height:400px;width:800px"}
+    ![img](img/img-exerciseOne/exercise1-1/aContinue.png){: style="height:400px;width:800px"}
     
 !!! note 
     Under `New Creations`, you can see how many new images will be created.
 17. When prompted, enter `Cans-Augmented-YourInitials` for the name of the new data set and then click the `Create data set` button. Wait until the augmentation process completes. (the running status appears in the top right corner)
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/createDataSet.png){: style="height:400px;width:800px"}
+    ![img](img/img-exerciseOne/exercise1-1/createDataSet.png){: style="height:400px;width:800px"}
 
     <br>
 
 18. Click on the back button to return to the main data sets page. 
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/back.png){: style="height:200px;width:900px"}
+    ![img](img/img-exerciseOne/exercise1-1/back.png){: style="height:200px;width:900px"}
 
     <br>
 
@@ -167,9 +167,9 @@ down a little to display the vertical and horizontal flip options)
 
     <br>
 
-20. Open this new data set that you just created by clicking in the lower half of the tile. You can see how MVI created these new images with each new image having a ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/symbol.png){: style="height:30px;width:30px"} symbol on it, saving you time from taking more photos.
+20. Open this new data set that you just created by clicking in the lower half of the tile. You can see how MVI created these new images with each new image having a ![img](img/img-exerciseOne/exercise1-1/symbol.png){: style="height:30px;width:30px"} symbol on it, saving you time from taking more photos.
 
-    ![img](/img/mvi_saas/img-exerciseOne/exercise1-1/new.png){: style="height:500px;width:600px"}
+    ![img](img/img-exerciseOne/exercise1-1/new.png){: style="height:500px;width:600px"}
 
 
 <b>Congrats, you have made a data set that is ready to be trained!</b>
