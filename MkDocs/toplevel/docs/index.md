@@ -42,6 +42,9 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Monitor Functions](monitor_8.5/)                                      | ![Not started](img/not_started_small.png)|
 | [Monitor Auto AI](monitor_autoai_8.5/)                                 | ![Not started](img/not_started_small.png)|
 | [MAS Environmental Monitoring](sustain_mas/)                           | ![Not started](img/not_started_small.png)|
+| ***Maximo SaaS (DEPRECATED)***                                         | |
+| [Monitor SaaS](monitor_saas/)                                          | ![Not started](img/not_started_small.png) |
+| [Visual Inspection (1.3.0)](mvi_saas/)                                 | ![Not started](img/not_started_small.png) |
 | ***CONTRIBUTE TO MAXIMO LABS***                                        | |
 | [Contribute to Labs](contribute/)                                      | ![Not started](img/not_started_small.png)|
 | [New Lab Template](template_1.0/)                                      | ![Not started](img/not_started_small.png)|
