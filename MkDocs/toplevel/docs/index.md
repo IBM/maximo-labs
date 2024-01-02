@@ -32,7 +32,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Health, Predict and Utilities](apm_8.8/)                              | ![Ready](img/ready_small.png)|
 | [Monitor Connect](mas_monitor_connect/)                                | ![Ready](img/ready_small.png)|              
 | ***Maximo Application Suite 8.7***                                     | |
-| [Health, Predict and Utilities](apm_8.7/)                              | ![Not started](img/not_started_small.png)|
+| [Health, Predict and Utilities](apm_8.7/)                              | ![Ready](img/ready_small.png)|
 | [Monitor Asset Hierarchy](mas_monitor_hierarchy/)                      | ![Not started](img/not_started_small.png)|
 | ***Maximo Application Suite 8.6***                                     | |
 | [Monitor Node-RED CSV Importer](monitor_nodered_csv_importer_1.0/)     | ![Not started](img/not_started_small.png)|
@@ -225,6 +225,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands on Labs are lice
 
 ---
 
-**UPDATED: 2023-12-30**
+**UPDATED: 2024-01-02**
 
 ---
