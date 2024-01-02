@@ -1,4 +1,4 @@
-![img](/img/mas_8.6/banner.png){:style="height:100px;width:800px"}
+![img](img/banner.png){:style="height:100px;width:800px"}
 
 
 # Contributors to IBM Maximo Application Suite 8.6 Overview Lab
@@ -13,6 +13,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2023-12-30|Jan Ekstrøm|Restructured to work on Github Pages.|
 |2022-02-26|Cecilia Stark| Uploaded 8.6 labs. |
 
 ---

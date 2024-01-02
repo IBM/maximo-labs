@@ -13,17 +13,17 @@ The Man Down event is communicated by the Event action (Shield) engine to the te
 As the Safety Officer, I'll use Maximo Safety to identify areas of concern based on the identified Hot Spots so those areas can be investigated, and action taken to avoid future incidents. 
 `Action:`  Go to Maximo Safety, examine the “HotSpots” on the Dashboard.  
 
-<!-- ![img](/img/mas_8.5/empty.png){:style="height:400px;width:800px"} -->
+<!-- ![img](img/empty.png){:style="height:400px;width:800px"} -->
  
 With the Hotspots the Safety Officer can determine areas of high risk, based upon the number of Safety events captured.  This leading metric may be identifying actual incidents as well as near misses.  If you minimize the “near misses” you minimize the number of minor and major events and thus the number of injuries.
 `Action:` Filter on identified Location to focus on that particular area.  Look at trend chart to determine the top events in that area are “fall detection” and “man down”. 
 
-<!-- ![img](/img/mas_8.5/empty.png){:style="height:400px;width:800px"} -->
+<!-- ![img](img/empty.png){:style="height:400px;width:800px"} -->
  
 The map view shows the exact location of the safety events, overlayed with the site floor plans.<br>   
 `Action:` Create a work order in MAS to investigate the area of concern for safety events.
 
-<!-- ![img](/img/mas_8.5/empty.png){:style="height:400px;width:800px"} -->
+<!-- ![img](img/empty.png){:style="height:400px;width:800px"} -->
  
 Upon investigation, it is discovered that there is a slippery surface due to an HVAC system causing condensation and a minor leak that is collecting in the AM when the system is first regulating the temperature for the environment.   Investigators knew exactly where to look at the time to look.  Additionally, poor lighting left this moisture undetected.  By addressing, the safety incidents were reduced saving the company 40K per actual incident.  
 

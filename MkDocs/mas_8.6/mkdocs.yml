@@ -7,17 +7,17 @@ site_dir: ../../site/mas_8.6
 nav:
   - Get back to Maximo Labs: ..
   - MAS Overview 8.6 Labs:
-    - Welcome to the Maximo Application Suite Overview 8.6 Overview Lab: index.md
+    - Welcome to the Maximo Application Suite 8.6 Overview Lab: index.md
     - Pre-Requisites: prereqs.md
-    - Exercises:
-      - 1. Monitor - MVI: demo-monitor-mvi.md
-      - 2. DTX - MVI: demo-dtx-mon-mvi.md
-      - 3. DTX - Manage(Under Construction): demo-dtx-manage.md
-      - 4. Mobile: demo-mobile-assist-safe.md
-      - 5. Safety(Under Construction): demo-safety.md
-      - 6. Health - Predict: demo-health-predict.md
-      - 7. Closing: closing.md 
-  - Lab Clean up: clean.md
+  - Exercises:
+    - 1. Monitor - MVI: demo-monitor-mvi.md
+    - 2. DTX - MVI: demo-dtx-mon-mvi.md
+    - 3. DTX - Manage(Under Construction): demo-dtx-manage.md
+    - 4. Mobile: demo-mobile-assist-safe.md
+    - 5. Safety(Under Construction): demo-safety.md
+    - 6. Health - Predict: demo-health-predict.md
+    - 7. Closing: closing.md 
+    - Lab Clean up: clean.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright

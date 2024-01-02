@@ -36,7 +36,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Monitor Asset Hierarchy](mas_monitor_hierarchy/)                      | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.6***                                     | |
 | [Monitor Node-RED CSV Importer](monitor_nodered_csv_importer_1.0/)     | ![Ready](img/ready_small.png)|
-| [Suite Overview](mas_8.6/)                                             | ![Not started](img/not_started_small.png)|
+| [Suite Overview](mas_8.6/)                                             | ![Ready](img/ready_small.png)|
 | [Health and Predict Utilities v8.6](hpu_8.6/)                          | ![Not started](img/not_started_small.png)|
 | ***Maximo Application Suite 8.5***                                     | |
 | [Monitor Functions](monitor_8.5/)                                      | ![Not started](img/not_started_small.png)|
