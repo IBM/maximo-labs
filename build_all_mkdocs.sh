@@ -24,6 +24,8 @@ echo "BUILD_INFO - The top level of IBM Maximo Labs is build."
 
 # Build the Monitor SaaS level:
 lab=monitor_saas
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
@@ -32,14 +34,18 @@ echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the HPU 8.6 level:
 lab=hpu_8.6
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
-echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
-mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
-echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+#mv $root_dir/site/$lab/img/$lab $root_dir/site/img/
+#echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the MVI Saas level:
 lab=mvi_saas
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
@@ -48,6 +54,8 @@ echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the Maximo Monitor Auto AI 8.5 level:
 lab=monitor_autoai_8.5
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
@@ -66,6 +74,8 @@ echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Ma
 
 # Build the Maximo Application Suite Sustainability Use Cases level:
 lab=sustain_mas
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."
@@ -74,6 +84,8 @@ echo "BUILD_INFO - The $lab lab images has been moved under /site/img/$lab."
 
 # Build the MAS v8.5 Monitor Lab level:
 lab=monitor_8.5
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab labs are build and added under the top level of IBM Maximo Labs."

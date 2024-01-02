@@ -1,4 +1,4 @@
-![img](/MkDocs/hpu_8.6/img/hpu_8.6/banner.png)
+![img](img/banner.png)
 
 # Contributors to IBM Maximo Application Suite Health and Predict for Utilities 8.6 Overview Lab
 
@@ -13,6 +13,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2024-01-02|Jan Ekstrøm|Restructured to work on Github Pages.|
 |2022-03-30|Taylor Luong| Uploaded 8.6 HPU lab. |
 
 ---

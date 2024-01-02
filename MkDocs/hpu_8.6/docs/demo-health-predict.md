@@ -7,14 +7,14 @@
 
 I’m a Reliability Engineer (RE) and my role is to maintain the reliability of the grid. My main responsibility is to ensure that the grid stays up and operational. I’m also responsible for making short, medium and long term investment decisions that drive maintenance and replacement policies.  I use asset condition and operational data to gain insights into Asset Health, Probability of Failure and Risk, both today and into the future. 
 
- ![img](/img/hpu_8.6/ObjectivesRE.png)
+ ![img](img/ObjectivesRE.png)
 
 
 Thankfully I have a Health and Predict - Utilities solution from IBM with advanced analytics that help me do my work efficiently and confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.   Health and Predict - Utilities incorporates multiple data sources such as Asset Master and Work order data, historical failure data, GeoSpatial Data, Inspection and Test Logs, IoT and Sensor data.   
 
 Health and Predict - Utilities provides a flexible Asset condition framework for mining the asset condition data. Health and Predict - Utilities helps me identifying assets that are at greatest risk of failure, across different circuits/feeders, substations and regions.  The risk assessment helps me drive asset and work management activities in Maximo Manage or other EAM systems to keep the grid up, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.
 
- ![img](/img/hpu_8.6/Goals2RE.png)
+ ![img](img/Goals2RE.png)
 
 ## Identify Assets at Risk
 
@@ -27,12 +27,12 @@ proactive in my maintenance planning.   The easiest way to do this is by using t
 
 `Action:`  From the main Maximo Application Suite (MAS) page, select the Industry solutions tab, then click Health and Predict – Utilities.
 
-![img](/img/hpu_8.6/Identify1.1.png)
-![img](/img/hpu_8.6/Identify1.2.png)
+![img](img/Identify1.1.png)
+![img](img/Identify1.2.png)
 
 On the main screen, we can see a universal view of our managed assets in a familiar grid view. 
 
-![img](/img/hpu_8.6/Identify2.1.png)
+![img](img/Identify2.1.png)
 
 <b>Value:</b> This is particularly valuable to me as the RE because we can see a mix of both IT data (from Manage) and OT data (from Monitor) together in a single view.
 
@@ -47,8 +47,8 @@ We can even create a private view and save it.
 
 `Action:` Use the selection box to show your saved view. If you do not see your saved view here, refer to the setup instructions. 
 
-![img](/img/hpu_8.6/Identify3.1.png)
-![img](/img/hpu_8.6/Identify4.1.png)
+![img](img/Identify3.1.png)
+![img](img/Identify4.1.png)
 
 
 In this view, we can see some columns with calculated data. We can see Health scores, which are created for groups of assets from the Scoring tab.   
@@ -86,15 +86,15 @@ We’ll look at a region that contains a mixture of transformers, circuit breake
 
 `Action:` First, reset your view to show ALL assets.  Then, click the filter symbol, select the edit symbol for containers, select  "NIXON9098",  click OK, then click Apply.
 
-![img](/img/hpu_8.6/Identify5.1.png)
-![img](/img/hpu_8.6/Identify5.2.png)
-![img](/img/hpu_8.6/Identify5.3.png)
+![img](img/Identify5.1.png)
+![img](img/Identify5.2.png)
+![img](img/Identify5.3.png)
 
 We can see there are 261 assets in this container.  When we sort by the health score from low to high, we find there are many assets in health scores in poor health, and many of them have a Criticality score of 0.  This is concerning given the importance of these assets to the grid performance in the distribution network.
 
 `Action:` Click “Health” in the title bar to sort
 
-![img](/img/hpu_8.6/Identify6.1.png)
+![img](img/Identify6.1.png)
 
 By selecting the icon in the upper right of the screen, we can see the selected assets on a map view.
 
@@ -103,26 +103,26 @@ The different pin colors and icons represents the health of the assets, accordin
 
 `Action:` Click "Map" button
 
-![img](/img/hpu_8.6/Identify7.1.png)
-![img](/img/hpu_8.6/Identify7.2.png)
+![img](img/Identify7.1.png)
+![img](img/Identify7.2.png)
 
 By turning on the Container selection, a polygon will appear around the assets in the container.  The color of the container will reflect the overall health of the container.
 
 `Action:` Click the "Container" icon, and toggle on the "Container".  Zoom out to see the container color.
 
-![img](/img/hpu_8.6/Identify7.3.png)
+![img](img/Identify7.3.png)
 
 We can also switch between different scores by clicking the Score icon and selecting another score.  The asset colors, and container color, will change accordingly.
 
 `Action:` Click the Score icon and select another score like “End of Life”
 
-![img](/img/hpu_8.6/Identify7.4.png)
+![img](img/Identify7.4.png)
 
 We’ll return to the Health score view, and hover over different assets, and the container, to see health scores.
 
 `Action:` Click the Score icon and “Health” to return to the original view.  Hover over assets and the container. 
 
-![img](/img/hpu_8.6/Identify7.5.png)
+![img](img/Identify7.5.png)
 
 By clicking on the container, we can see all of the scores on a single card. 
 
@@ -130,7 +130,7 @@ By clicking on the container, we can see all of the scores on a single card.
 
 <b>Value:</b> The KPIs displayed on the preview card gives us an overall summary of the assets in this region, or the container. 
 
-![img](/img/hpu_8.6/Identify7.6.png)
+![img](img/Identify7.6.png)
 
 We can also zoom in and click on each of the pins to view the key KPIs of the selected asset.  From this view, we can create plans, add a flag, or submit a work order by clicking the "Action" button. 
 
@@ -138,7 +138,7 @@ We can also zoom in and click on each of the pins to view the key KPIs of the se
 
 Note that we CAN click on the name to open the asset detail page.  However, we’ll continue the identification of asset in poor health through another process.
 
-![img](/img/hpu_8.6/Identify7.7.png)
+![img](img/Identify7.7.png)
 
 ## Work Queues
 
@@ -150,7 +150,7 @@ Work queues are preconfigured views designed to help us find what we're looking 
 
 <b>Value:</b> These are particularly valuable to a RE who needs to address a specific problem, like a utility, trying to avoid unplanned downtime.
 
-![img](/img/hpu_8.6/Identify8.1.png)
+![img](img/Identify8.1.png)
 
 There are a number of work queues included with Health and Predict.   
 -	There are work queues specific to Predict, like assets with a High Probability of Failure.   
@@ -168,7 +168,7 @@ We'll select the Failing Before PM work queue to see all of the assets with scor
 
 `Action:` Select “ST_1400518” which opens the asset detail page [DETAILS ON THIS PAGE WILL VARY AS THIS IS A LIVE DEMO SYSTEM]
 
-![img](/img/hpu_8.6/Identify8.2.png)
+![img](img/Identify8.2.png)
 
 ## Investigate Further into Asset Details
 
@@ -180,7 +180,7 @@ We can also see the next Preventive Maintenance date and the MRR…coming from M
 
 On the top of the page, we see details about our asset, and KPIs that give us a snapshot of its current state.
 
-![img](/img/hpu_8.6/Investigate1.1.png)
+![img](img/Investigate1.1.png)
 
 For this asset, we have a health score of 7, which is in our red zone.  We can also see that it has increased 7 points since it was last calculated.
 
@@ -196,7 +196,7 @@ To learn more about the health of our asset, we can go to the Health breakdown w
 
 `Action:` Scroll down the page
 
-![img](/img/hpu_8.6/Investigate2.1.png)
+![img](img/Investigate2.1.png)
 
 We can expend the view to see the contributors by clicking the chevrons to view the details.
 
@@ -208,7 +208,7 @@ The application supports critical asset-specific calculations and visualizations
 
 `Action:` Scroll down the page
 
-![img](/img/hpu_8.6/Investigate3.1.png)
+![img](img/Investigate3.1.png)
 
 The first one is Duval triangle. It tells us the current dissolved gas situation.  We can click on each of the dots to get detailed information.
 
@@ -222,7 +222,7 @@ We can hover on each of the assessment dates to get the detailed information.
 
 `Action:` Scroll down the page
 
-![img](/img/hpu_8.6/Investigate3.1.png)
+![img](img/Investigate3.1.png)
 
 There are several predictive models built to score against incoming sensor data for our asset.   
 
@@ -251,8 +251,8 @@ The end of life curve is built based on training data for assets that have been 
 The effective age of our transformer is 51 years.  The curve produces an end of life probability of  100%...one more piece of evidence to show that this asset needs to be attended to immediately.   
 
 `Action:` Hover NEAR the point where the effective age crosses the curve.  Scroll down the page.
-![img](/img/hpu_8.6/Investigate4.1.png)
-![img](/img/hpu_8.6/Investigate5.1.png)
+![img](img/Investigate4.1.png)
+![img](img/Investigate5.1.png)
 
 As we continue to scroll down the page, we can see the "Asset timeline" which shows predicted failures, planned preventive maintenance, past failures, work orders and inspections.
 
@@ -266,7 +266,7 @@ At the bottom of the page, is an asset timeline that shows us several pieces of 
 While each piece of information, or widget, gives us insight into the state of our asset, all of the information together, gives us a richer view, and helps us make a data-driven decision on how to address this asset.
 
 `Action:` Hover over a point on the timeline.  Scroll down the page.
-![img](/img/hpu_8.6/Investigate6.1.png)
+![img](img/Investigate6.1.png)
 
 
 ## Take Action
@@ -276,12 +276,12 @@ We now have enough evidence from our investigation to take some action against t
 We can add a replacement flag to this asset to make sure it is marked and will be replaced in the next cycle of the replacement planning.
 
 `Action:` Scroll to the top of the page and click the Actions drop down. 
-![img](/img/hpu_8.6/Action1.1.png)
+![img](img/Action1.1.png)
 
 If necessary, we can create a plan directly for this selected asset.
 
 `Action:` Click the Add Flag option. 
-![img](/img/hpu_8.6/Action1.2.png)
+![img](img/Action1.2.png)
 
 However, this asset is still needed urgent maintenance before the replacement. 
 
@@ -289,10 +289,10 @@ However, this asset is still needed urgent maintenance before the replacement.
 
 The risk assessment helps me drive asset and work management activities in Maximo/SAP, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.
 
-![img](/img/hpu_8.6/Action1.3.png)
+![img](img/Action1.3.png)
 
 `Action:` Review the options, but do not actually create the work order. 
-![img](/img/hpu_8.6/Action1.4.png)
+![img](img/Action1.4.png)
 
 As the Reliability Engineer, maintaining the grid, I was able to use IBM Maximo Health and Predict – Utilities to identify assets at risk, investigate those assets, and finally take an action to prevent a failure and unplanned downtown…saving thousands of dollars, and maintaining the integrity of the grid.
 

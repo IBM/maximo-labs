@@ -7,11 +7,11 @@ site_dir: ../../site/hpu_8.6
 nav:
   - Get back to Maximo Labs: ..
   - MAS HPU 8.6 Lab:
-    - Welcome to the Maximo Application Suite Overview 8.6 Overview Lab: index.md
+    - Welcome to the Maximo Application Suite HPU 8.6 Overview Lab: index.md
     - Pre-Requisites: prereqs.md
-    - Exercises:
-      - 1. Health - Predict: demo-health-predict.md
-      - 2. Closing: closing.md 
+  - Exercises:
+    - 1. Health - Predict: demo-health-predict.md
+    - 2. Closing: closing.md 
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright
