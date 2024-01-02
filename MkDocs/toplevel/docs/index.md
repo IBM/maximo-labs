@@ -47,7 +47,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Visual Inspection (1.3.0)](mvi_saas/)                                 | ![Ready](img/ready_small.png) |
 | ***CONTRIBUTE TO MAXIMO LABS***                                        | |
 | [Contribute to Labs](contribute/)                                      | ![Not started](img/not_started_small.png)|
-| [New Lab Template](template_1.0/)                                      | ![Not started](img/not_started_small.png)|
+| [New Lab Template](template_1.0/)                                      | ![Ready](img/ready_small.png)|
 
 ![Not started](img/not_started_small.png)
 ![Under Development](img/under_development_small.png)
