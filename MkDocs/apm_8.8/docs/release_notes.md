@@ -17,7 +17,7 @@
 
 | Date       | By                                                       | Description                                                                                                                  |
 |:-----------|:---------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
-|2023-12-30|Jan Ekstrøm|Converted to work on Github Pages. |
+|2023-12-30|Jan Ekstrøm|Restructured to work on Github Pages. |
 | 2022-06-16 | Balaji Santhanakrishna, Carlos Ferreira and John Douglas | Asset Health Scores                                                                                                          |
 | 2022-06-16 | Carlos Ferreira and Kewei Yang                           | Added setup Watson Studio exercise. Wrote getting started and pre-requisites and overall editing of content.                 |
 | 2022-06-16 | Juan Gu and Carlos Ferreira                              | Added overview of Health and Predict - Utilities models.                                                                     |

@@ -22,6 +22,6 @@ See the [Copyright page](../copyright) for how this Maximo Hands on Lab Exercise
 
 ---
 
-**Updated: 2023-12-30**
+**Updated: 2022-06-16**
 
 ---
