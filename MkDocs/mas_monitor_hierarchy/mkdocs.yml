@@ -6,14 +6,14 @@ site_dir: ../../site/mas_monitor_hierarchy
 
 nav:
   - Get back to Maximo Labs: ..
-  - Monitor Labs:
-    - Welcome to the Monitor Labs: index.md
+  - Monitor Hierarchy Lab:
+    - Welcome to the Monitor Hierarchy Lab: index.md
     - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
-    - Exercises:
-        - 1. Create hierarchy: create_hierarchy.md
-        - 2. Assign devices: assign_devices.md
-        - 3. Create dashboards: create_dashboards.md
+  - Exercises:
+    - 1. Create hierarchy: create_hierarchy.md
+    - 2. Assign devices: assign_devices.md
+    - 3. Create dashboards: create_dashboards.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright

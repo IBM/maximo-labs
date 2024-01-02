@@ -1,4 +1,4 @@
-# Welcome to the IBM Maximo Monitor Lab<br>(Version: 1.0)
+# Welcome to the IBM Maximo Monitor Hierarchy Lab
 You will learn about Monitor's capabilities to:
 
 * Create an asset hierarchy
