@@ -155,7 +155,7 @@ The following steps will confirm that the data was uploaded properly
 If when running the cell to unzip the files containing the scripts and the data, rather than getting the full file list in the output this is received:
    ![Unzipped File Output](img/HPU_dataloader_5.png) 
 Or when running any of the cells to create or load data, you receive this error:
-![File Note Found Error](.img/HPU_dataloader_6.png) 
+![File Note Found Error](img/HPU_dataloader_6.png) 
 Then follow these steps to ensure your file is zipped/compressed properly:
 !!! note
 

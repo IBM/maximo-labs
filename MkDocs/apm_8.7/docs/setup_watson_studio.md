@@ -130,10 +130,10 @@ It should look like:
 ![Adminstration](img/p26.png) 
 
 3. Click in search field and search application for `End Points` 
-![End Points](img/p35.png) 
+![End Points](img/P35.png) 
 
 4. Note the URL for the `PREDICTAPI` endpoint.
-![End Points](img/p34.png) -
+![End Points](img/P34.png) -
 
 It should look like:
 `APM_API_BASEURL` = `PREDICTAPI` endpoint = https://main.predict.ivt11rel87.ivt.suite.maximo.com
@@ -142,16 +142,16 @@ It should look like:
 
 1. Open a browser and access the Openshift Console MAS is deployed on.  For IBM Cloud deployments goto `https://cloud.ibm.com`, 
 select your `account` from the drop down menu and click `Clusters`
-![IBM Cloud Account](img/p29.png)
+![IBM Cloud Account](img/P29.png)
 
 2. Under `Resources` click on your cluster resource.
-![Choose Cluster Resource](img/p30.png) 
+![Choose Cluster Resource](img/P30.png) 
 
 3. Click on `Openshift Web Console`
 ![Openshift Console](img/p31.png)
 
 4. Click on `Project`. Search on `Predict` and Click on `Project`
-![Choose Cluster](img/p35.png)
+![Choose Cluster](img/P35.png)
 
 5. Search `Predict`
 
@@ -184,7 +184,7 @@ API keys are used by the notebooks to make program calls to the Health and Predi
 ![Administration](img/p53.png)
 
 5. Click `Copy key` to get `APM_API_KEY` string you need to create the URL to download the zip file of Predict Notebooks.
-![Choose Cluster](img/p34.png) 
+![Choose Cluster](img/P34.png) 
 
    
 ## Download the model template notebooks
@@ -244,7 +244,7 @@ You can use the steps below to add any notebook from File to your Watson Studio 
 ![setup assets](img/p12.png) 
 
 4. Prepend your name initials to the name of the model file template you uploaded.   Select the runtime environment you created in the previous step that has 4 vCPUs.  Drag and drop your notebook template file into the area indicated below.  Click on the `Create` button to create the notebook. 
-![add_to notebook](img/p41.png) 
+![add_to notebook](img/P41.png) 
 
 5. Confirm that you see 4 vCPUs for the notebook as it starts. 
 ![confirm notebook](img/p45.png) 
