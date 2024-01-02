@@ -43,7 +43,7 @@ and Notebooks.
 
     - [Time series / date functionality](https://pandas.pydata.org/pandas-docs/dev/user_guide/timeseries.html)
 
-* Internet access to these [tutorial directions](http://maximo-lab.monitordemo4.ibmmam.com/monitor_autoai_8.4/)
+* Internet access to these [tutorial directions](https://ibm.github.io/maximo-labs/monitor_autoai_8.5/)
 
 ## Steps
 
@@ -52,7 +52,7 @@ Follow the [Getting Started](get_started.md) instructions on the next page.
 
 ## Learn more
 
-* This tutorial is part of the [Maximo Hands On Labs](http://maximo-lab.monitordemo4.ibmmam.com/) for Data scientists and Developers. 
+* This tutorial is part of the [Maximo Hands On Labs](https://ibm.github.io/maximo-labs/) for Data scientists and Developers. 
 
 * **Maximo Application Suite**: Enjoyed this Tutorial? Check out our other [Maximo Code Patterns](https://developer.ibm.com/components/maximo/patterns/).
 

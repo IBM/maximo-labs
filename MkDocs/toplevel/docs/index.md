@@ -40,7 +40,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Health and Predict Utilities v8.6](hpu_8.6/)                          | ![Ready](img/ready_small.png)|
 | ***Maximo Application Suite 8.5***                                     | |
 | [Monitor Functions](monitor_8.5/)                                      | ![Ready](img/ready_small.png)|
-| [Monitor Auto AI](monitor_autoai_8.5/)                                 | ![Not started](img/not_started_small.png)|
+| [Monitor Auto AI](monitor_autoai_8.5/)                                 | ![Ready](img/ready_small.png)|
 | [MAS Environmental Monitoring](sustain_mas/)                           | ![Not started](img/not_started_small.png)|
 | ***Maximo SaaS (DEPRECATED)***                                         | |
 | [Monitor SaaS](monitor_saas/)                                          | ![Not started](img/not_started_small.png) |

@@ -72,4 +72,4 @@ Find the detailed instructions in the each exercise below:
 ## Architecture
 
 Here is the Architecture flow for this tutorial
-![](/img/monitor_autoai_8.4/architecture.png)
+![](img/architecture.png)

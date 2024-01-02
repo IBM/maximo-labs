@@ -13,17 +13,17 @@ In this exercise you will, create a `Device Type` named `pump_co` and 2 `Devices
 `111137F8`.
 
 1.  Login to Monitor from the `Maximo Application Suite Navigator` page. Click  
-![Launch](/img/monitor_autoai_8.4/c01.png)
+![Launch](img/c01.png)
 
 2.  Click `Connect devices` tile or click On the `Connect menu`  
-![Connect devices tile](/img/monitor_autoai_8.4/c02.png) 
+![Connect devices tile](img/c02.png) 
 
 3.  Click `Open Platform Service application` in the top-right corner to open the Watson IoT 
 Platform tenant associated with this  Monitor tenant in a separate browser tab. 
-![Connect devices tile](/img/monitor_autoai_8.4/c03.png)
+![Connect devices tile](img/c03.png)
 
 4.  Go to the `Device Types` menu, and click `Add Device Type`. 
-![Connect devices tile](/img/monitor_autoai_8.4/c04.png)
+![Connect devices tile](img/c04.png)
 !!! note
     Make sure to replace `co` in the device type name with your own initials.
 
@@ -32,4 +32,4 @@ the rest of this lab,  Click `Next`.
 
 6. Enter`pump_co`  in the `Manufacturer` and `Device Class` fields.  Later you can `Dimensions` that can be used in Monitor to filter and aggregate assets in `Summary Dashboards`. Click `Finish` 
 to save your changes.  
-![Connect devices tile](/img/monitor_autoai_8.4/c05.png)
+![Connect devices tile](img/c05.png)

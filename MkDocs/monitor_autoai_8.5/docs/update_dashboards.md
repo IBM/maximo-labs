@@ -19,19 +19,19 @@ asset calculated metrics to calculate the maximum power prediction allowed.
     Remember to replace `co` with the initials that you used for your power prediction calculated metric.
 
 1.  Click `Setup` menu.  Search on `pump_co`.  Click `pump_co` 
-![Asset Setup](/img/monitor_autoai_8.4/u09.png)
+![Asset Setup](img/u09.png)
 
 2.  Click on `Manage Asset Type` to see the metrics that have already been added to your asset type  for your  `pump_co`.
-![Asset Setup](/img/monitor_autoai_8.4/u10.png)
+![Asset Setup](img/u10.png)
 
 3.  Click on the `Data` tab, expand the  `Metrics` and  `Calulated Metric`   These are the raw metrics sent by the 
 simulated pump time series data and the calculations used to operate on the data. Like making a prediction for power like 
 you did in the last exercise to [Deploy Model](#deploy_model).
-![Cacluated Metric](/img/monitor_autoai_8.4/u11.png)
+![Cacluated Metric](img/u11.png)
 
 4.  Add a calculation for what is the maximum acceptable  power consumption. Click  `+` button in the Asset view, and then 
 search for and select the `NewColFromCalculation` function.  Click on `select` button.
-![New Column From Calculation](/img/monitor_autoai_8.4/u12.png)
+![New Column From Calculation](img/u12.png)
 
 5.  From `sources` `Data Items` choose the `power_prediction` metric as the input to our calculation.  For the calculation `expression` 
 enter:
@@ -39,11 +39,11 @@ enter:
     1.2*df['power_prediction']
     ```
 and click the `Next` button
-![dashboard settings](/img/monitor_autoai_8.4/u13.png)
+![dashboard settings](img/u13.png)
 
 
 6. Set `Output metric` to  `predicted_power_co_max_deviation`.  Set `Output type` to  `Number`.  Finally click the `Next` button.
-![dashboard settings](/img/monitor_autoai_8.4/u14.png)
+![dashboard settings](img/u14.png)
 
 
 ## Add alerts
@@ -57,18 +57,18 @@ that check if the actual `POWER` is greater than the  `predicted_power_co_max_de
 
 1.  Click `Setup` menu.  Search on `pump_co` if you are in the instructor led class.  Otherwise search for `pump_Your_Initials` 
 to find the asset type you created and click on it.  Click `pump_Your_Initials`   
-![dashboard settings](/img/monitor_autoai_8.4/u09.png)
+![dashboard settings](img/u09.png)
 
 2.  Click on `Manage Asset Type` to see the metrics that have already been added to your asset type  for your `pump_Your_Initials`  
-![dashboard settings](/img/monitor_autoai_8.4/u10.png)
+![dashboard settings](img/u10.png)
 
 3.  Click on the `Data` tab, expand the  `Metrics` and  `Calulated Metric`   These are the raw metrics sent by the 
 simulated pump time series data and the calculations used to operate on the data. Like making a prediction for power like 
 you did in the last exercise to [Deploy Model](#deploy_model).
-![dashboard settings](/img/monitor_autoai_8.4/u11.png)
+![dashboard settings](img/u11.png)
 
 4.  Click  `+` button in the Asset view, and then search for and select the `AlertExpression` function. 
-![dashboard settings](/img/monitor_autoai_8.4/u15.png)
+![dashboard settings](img/u15.png)
 
 5.  Then, enter a condition indicating when the Alert should be triggered. In this case, we should get an alert whenever 
 `POWER` is greater `power_prediction_co_max_deviation`
@@ -76,7 +76,7 @@ you did in the last exercise to [Deploy Model](#deploy_model).
     ```
      df['POWER']>df['power_prediction_co_max_deviation']
     ```
-    Click `Next`![dashboard settings](/img/monitor_autoai_8.4/u16.png)
+    Click `Next`![dashboard settings](img/u16.png)
 
 7.  Set Output metric:  `power_prediction_co_max_deviation_alert`
 
@@ -84,7 +84,7 @@ you did in the last exercise to [Deploy Model](#deploy_model).
 
 9.  Click `Create` button.  The calculation of alerts will be checked every 5 minutes by default.  You can set a different
 schedule frequency as well for verifying calculations and alerts.
-![dashboard settings](/img/monitor_autoai_8.4/u17.png)
+![dashboard settings](img/u17.png)
 
 ## Update Dashboard Power Card
 
@@ -101,19 +101,19 @@ asset dashboard as a line series card.
 1.  Edit the Asset dashboard  selecting your recently created calculated metric for `power_prediction_co`.  Click on 
 `Monitor`,  search on `pump_co`,  click on `111137F8`, click on  `Asset Metrics Dashboard` tab and click on `Settings` 
 gear icon.
-![dashboard settings](/img/monitor_autoai_8.4/u01.png)
+![dashboard settings](img/u01.png)
 
 2. Click `Edit Dashboard` and then click `Continue` button in dialog.
-![dashboard settings](/img/monitor_autoai_8.4/u02.png)
+![dashboard settings](img/u02.png)
 
 3. Click on the `POWER` card.  In the  `card` window , `data` section click on `data item filter` and select `power_prediction_co`.
-![dashboard settings](/img/monitor_autoai_8.4/u03.png)
+![dashboard settings](img/u03.png)
 
 4. Click on the `Dashboard` menu tab.  In the  `card` window , `data` section click on `data item filter` and select `power_prediction_co`.
-![dashboard settings](/img/monitor_autoai_8.4/u04.png)
+![dashboard settings](img/u04.png)
 
 5. Click on the `POWER` card.  In the  `card` window , `data` section click on `data item filter` and select `power_prediction_co`.
-![dashboard settings](/img/monitor_autoai_8.4/u05.png)
+![dashboard settings](img/u05.png)
 
 6.  Click the `Save and close` button to save your changes to the dashboard.  All pumps will now get this same dashboard 
 change.  You can also create asset specific dashboards for each asset in the `Setup Asset Type` menu.
@@ -125,20 +125,20 @@ dashboard directly.
 1.  Edit the Asset dashboard  selecting your recently created calculated metric for `power_prediction_co`.  Click on 
 `Monitor`,  search on `pump_co`,  click on `111137F8`, click on  `Asset Metrics Dashboard` tab and click on `Settings` 
 gear icon.
-![dashboard settings](/img/monitor_autoai_8.4/u01.png)
+![dashboard settings](img/u01.png)
 
 2. Click `Edit Dashboard` and then click `Continue` button in dialog.
-![dashboard settings](/img/monitor_autoai_8.4/u02.png)
+![dashboard settings](img/u02.png)
 
 3. Click `Export Dashboard` and save the json file locally.
 
 4. Update and save the Json with the following code using a Python Editor or Monitor's Json editor in the Dashboard Editor.
-![dashboard settings](/img/monitor_autoai_8.4/u20.png)
+![dashboard settings](img/u20.png)
 
 5. Import the updated Json file and click the `Save and close` button to save your changes to the dashboard.  All pumps will now 
 get this same dashboard change.  You can also create asset specific dashboards for each asset in the `Setup Asset Type`
 menu.  You should now see the Asset Metrics Dashboard with alerts similar to the one below in the Asset Dashboard.
-![dashboard settings](/img/monitor_autoai_8.4/u21.png)
+![dashboard settings](img/u21.png)
 
 
 ## View Dashboard
@@ -151,20 +151,20 @@ menu.  You should now see the Asset Metrics Dashboard with alerts similar to the
 
 1.  View the Asset dashboard.  Click on  `Monitor` menu on the left,  search on `pump_co`,  click on `111137F8`, click on 
  `Asset Metrics Dashboard` and scroll down to see the Power card.
-![dashboard settings](/img/monitor_autoai_8.4/u05.png)
+![dashboard settings](img/u05.png)
 
 2.  Expand the  `POWER` card.  Click on the double square icon.  When the window opens click on `POWER` and Click on `power_prediction_co` 
 to toggle the lines off and on.   Notice the power values in the table below.   You can also export the data to a `csv` 
 file by clicking on the funnel icon.
-![dashboard settings](/img/monitor_autoai_8.4/u06.png)
+![dashboard settings](img/u06.png)
 
 
 ##  View Alerts 
-![dashboard settings](/img/monitor_autoai_8.4/u06.png)
+![dashboard settings](img/u06.png)
 
 1.  To see alerts for a specific asset,  click on  `Monitor`,  search on `pump_co` asset type,  click on `111137F8`, 
 click on  `Alerts` tab. 
-![dashboard settings](/img/monitor_autoai_8.4/u19.png)
+![dashboard settings](img/u19.png)
 
 2.  To see why there aren't any alerts modify the asset dashboard for `11111096`.  Add  `power_prediction_co_max_deviation` 
 to your asset dashboard.  Notice how the maximum value of the actual power never exceeds the `power_prediction_co_max_deviation`

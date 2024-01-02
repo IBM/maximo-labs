@@ -39,7 +39,7 @@ credentials file.
 }    
 ```     
 3. Get the values for fields like `TOKEN`,  `DEVICE_TYPE` for the devices you created in the [Create Devices](create_devices.md) 
-exercise for the 1 of pump devices `111137F8` ![Browse](/img/monitor_autoai_8.4/c13.png) 
+exercise for the 1 of pump devices `111137F8` ![Browse](img/c13.png) 
 
 4. For `SOURCE_DEVICE_ID` this is the name of the Device ID in the source data csv file.  See example file provided by the
  instructor named `/data/maximo-auto_ai_pump_data_111137F8.csv`
@@ -64,7 +64,7 @@ looks like:
      }
  ```    
 1. If you are using PyCharm as your Integrated Development Environment select `pump_simulator.py` and right mouse click 
-select `Run pump_simulator.py`   ![Run Simuilator](/img/monitor_autoai_8.4/s02.png)
+select `Run pump_simulator.py`   ![Run Simuilator](img/s02.png)
 
 2. If you are using a local virtual environment cd into `../scripts` and invoke the script by typing the following command: 
 
@@ -77,15 +77,15 @@ select `Run pump_simulator.py`   ![Run Simuilator](/img/monitor_autoai_8.4/s02.p
 In this exercise you will, create a `Device Type` named `pump_co` and 2 `Devices` named `11111096` and 
 `111137F8`.
 
-2.  Login to Monitor from the `Maximo Application Suite Navigator` page. Click  ![Launch](/img/monitor_autoai_8.4/c01.png)
+2.  Login to Monitor from the `Maximo Application Suite Navigator` page. Click  ![Launch](img/c01.png)
 
-3.  Click `Connect devices` tile ![Connect devices tile](/img/monitor_autoai_8.4/c02.png) Or click On the `Connect menu` 
+3.  Click `Connect devices` tile ![Connect devices tile](img/c02.png) Or click On the `Connect menu` 
 
 4.  Click `Open Platform Service application` in the top-right corner to open the Watson IoT Platform tenant associated 
-with this  Monitor tenant in a separate browser tab. ![Open Platform Services](/img/monitor_autoai_8.4/c03.png)
+with this  Monitor tenant in a separate browser tab. ![Open Platform Services](img/c03.png)
 
 5.  Go to the `Devices` menu.  Enter the Device ID `111137F8` in the search box.  Click `Recent Events`.  It might take 
-a moment to get values as shown in the image below.  ![Recent Events](/img/monitor_autoai_8.4/s03.png)
+a moment to get values as shown in the image below.  ![Recent Events](img/s03.png)
 
 Optionally you can repeat this exercise with the other pump 11111096 using it's [training data](https://github.com/fe01134/maximo_autoai/blob/main/data/maximo-auto_ai_pump_data_11111096.csv)
 
