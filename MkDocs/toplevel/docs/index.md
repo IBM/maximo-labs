@@ -41,7 +41,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | ***Maximo Application Suite 8.5***                                     | |
 | [Monitor Functions](monitor_8.5/)                                      | ![Ready](img/ready_small.png)|
 | [Monitor Auto AI](monitor_autoai_8.5/)                                 | ![Ready](img/ready_small.png)|
-| [MAS Environmental Monitoring](sustain_mas/)                           | ![Not started](img/not_started_small.png)|
+| [MAS Environmental Monitoring](sustain_mas/)                           | ![Ready](img/ready_small.png)|
 | ***Maximo SaaS (DEPRECATED)***                                         | |
 | [Monitor SaaS](monitor_saas/)                                          | ![Not started](img/not_started_small.png) |
 | [Visual Inspection (1.3.0)](mvi_saas/)                                 | ![Not started](img/not_started_small.png) |

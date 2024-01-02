@@ -13,18 +13,18 @@ I'm a Control Room Operator and I observed a Nitrogen Oxides (NOx) emission warn
 
 `Action:` Open Maximo HSE, then select the Operator Log Application and search in the Navigation Bar for Operations> Operator log> Look for SHIFT1B Log
 
-![img](/sustain_mas/img/operatorlog.png){:style="height:250px;width:800px"}
+![img](img/operatorlog.png){:style="height:250px;width:800px"}
 
 `Action:` Scroll down to Log Entry and see the three Logs entered by the Operator. Notice a high NOx warning on main boiler, reduced boiler steam, and high NOx warning on main boiler cleared. These were the 3 actions I took as soon as I saw the first warning. After reducing the boiler steam output, I saw the high NOx warning was cleared. 
 
-![img](/sustain_mas/img/logEntry.png){:style="height:250px;width:800px"}
+![img](img/logEntry.png){:style="height:250px;width:800px"}
 
 Even though the situation seems under control for now, I created a Service Request for this high NOx reading found to make sure it is investigated further. Another way to avoid future possible emissions is to log data records of near miss events as a leading indicator of future problems. To do this, I also created an incident record.
 
 
 `Action:`  Go to the Related Records tab and find the Service Request and incident for the high NOx warning. You can see that these have been correctly created, so now the Maintenance team will take it from here.
 
-![img](/sustain_mas/img/related-records.png){:style="height:400px;width:800px"}
+![img](img/related-records.png){:style="height:400px;width:800px"}
 
 Now the Service Request is routed to the Maintenance Manager who will investigate this and take further action in Part 2.
 
@@ -43,18 +43,18 @@ Now, the Maintenance Manager receives the Service Request from Operations and re
 
 I see the description of the SR, the date, and the Priority levels. The Reported Priority was set as 3, but I will escalate the Internal Priority to 1 because it was a near miss emission that could have resulted in a fine. 
 
-![img](/sustain_mas/img/sr1.png){:style="height:150px;width:400px;margin-left:100px"}
+![img](img/sr1.png){:style="height:150px;width:400px;margin-left:100px"}
 <br>
 
-![img](/sustain_mas/img/sr2.png){:style="height:300px;width:800px"}
+![img](img/sr2.png){:style="height:300px;width:800px"}
 
 <br>
 
-![img](/sustain_mas/img/sr3.png){:style="height:300px;width:800px"}
+![img](img/sr3.png){:style="height:300px;width:800px"}
 
 `Action:` Here is an example of the work order that the Maintenance Manager would need to create. Go to Related Records, see the Work Order. Then click more details > Go To > Work Order Tracking.
 
-![img](/sustain_mas/img/sr4.png){:style="height:400px;width:800px"}
+![img](img/sr4.png){:style="height:400px;width:800px"}
 
 !!! attention
     Now we are switching roles. Open your Maximo Mobile application.
@@ -67,7 +67,7 @@ I am Eli, the technician, I am going to complete a work order on the boiler to i
 
 In the IBM Maximo Mobile application on my device, I open the My Schedule tile. Here, I can see all the work orders for the day in a list view or a map view.    
 
-![img](/sustain_mas/img/worklist.png){: style="height:500px;width:300px;margin-left:40px"}
+![img](img/worklist.png){: style="height:500px;width:300px;margin-left:40px"}
 
 I see the work order sent over about the boiler control systems, and I can see it is of high priority, so I head over to start work on it.
 
@@ -78,17 +78,17 @@ I can add a log, add or review my attachments, and complete my inspection from t
 
 `Action:` Open Inspection in the work order and review the form.
 
-![img](/sustain_mas/img/inspectionform.png){: style="height:500px;width:300px;margin-left:40px"}
+![img](img/inspectionform.png){: style="height:500px;width:300px;margin-left:40px"}
 
 After completing the inspection, I spoke to the Maintenance team and reviewed the boiler control settings with engineering. You can see Wilson added a log documenting this conversation in the work order. 
 
 `Action:` Click the Open Log icon. Close and review the asset information. 
 
-![img](/sustain_mas/img/worklog.png){: style="height:500px;width:300px;margin-left:40px"}
+![img](img/worklog.png){: style="height:500px;width:300px;margin-left:40px"}
 
 `Action:` Open Failure Reporting. Report Failure> Failure Class: Boiler Failures, Problem: Parameter Deviation
 
-![img](/sustain_mas/img/failurecode.png){: style="height:500px;width:300px;margin-left:40px"}
+![img](img/failurecode.png){: style="height:500px;width:300px;margin-left:40px"}
 
 `Action:` Complete Work Order 
 
@@ -107,7 +107,7 @@ The technician noted the problem code as a parameter deviation, and the Maintena
 
 `Action:` Miller is the environmental officer, from his Start Center he will see the queued incident and will take ownership of the incident. He adds a regulation to the incident to make sure we are meeting compliance requirements. 
 
-![img](/sustain_mas/img/regulation.png){:style="height:200px;width:800px"}
+![img](img/regulation.png){:style="height:200px;width:800px"}
 
 `Action:` Navigate to the Related Records tab where you can see the work order that detonated this incident as well as the original log and the investigation that was done to further analyze the incident.
 
@@ -121,20 +121,20 @@ There are two different techniques that I can use to perform the root cause anal
 
 I agree with my team that the 5 Why's analysis technique should be used. This analysis identifies that the basic cause is that the Job Plan for the burner management system service references out of date vendor documentation. The root cause found was that there was Job Plan SOP did not include an engineering review.
 
-![img](/sustain_mas/img/causeanalysis.png){:style="height:400px;width:800px"}
+![img](img/causeanalysis.png){:style="height:400px;width:800px"}
 <br>
 
-![img](/sustain_mas/img/causeanalysis2.png){:style="height:400px;width:800px"}
+![img](img/causeanalysis2.png){:style="height:400px;width:800px"}
 
 `Action:` Next I go into the RCFA Results tab where I can add and review the cause of the incident. The RCFA is the summary of what we found from the analysis. Both of the causes have an action required.
 
-![img](/sustain_mas/img/rcfaresults.png){:style="height:150px;width:800px"}
+![img](img/rcfaresults.png){:style="height:150px;width:800px"}
 
 After discussion with engineering, I created a log to identify the opportunity to reduce nox emissions for an upgrade on the boiler control systems.
 
 `Action:` Move to Related Records tab.
 
-![img](/sustain_mas/img/relatedrecords.png){:style="height:350px;width:800px"}
+![img](img/relatedrecords.png){:style="height:350px;width:800px"}
 
 There is an action to correct the Job Plan, this can be done immediately as a follow up to this incident.
 
@@ -150,11 +150,11 @@ I created an MOC Request so that our management team is able to revise the possi
 
 Miller, the environmental officer, reviews the request for the MOC and considers it a good idea, so he raises a MOC record.  
 
-![img](/sustain_mas/img/moc.png){:style="height:400px;width:800px"}
+![img](img/moc.png){:style="height:400px;width:800px"}
 
 `Action:` Navigate to Related Records tab, where you can see the MOC.
 
-![img](/sustain_mas/img/moc.png){:style="height:400px;width:800px"}
+![img](img/moc.png){:style="height:400px;width:800px"}
 
 The MOC now has to be reviewed by Jenise the VP of Sustainability and Kazmier the HSE Manager, and approved by Chris Winter, the VP of Operations. Once approved, the project to upgrade the boiler control system can now begin and hopefully reduce future emissions. 
 
