@@ -9,6 +9,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2024-01-02|Jan Ekstrøm|Restructured to work on Github Pages.|
 |2023-12-29|Jan Ekstrøm|Renamed github URLs + follow new template + new git images.|
 |2022-10-18|Jan Ekstrøm|Updated commit to be signed in Add content.|
 |2021-02-25|Jan Ekstrøm|Clearifying the Pre-requisite chapter.|

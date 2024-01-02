@@ -10,7 +10,7 @@ nav:
     - Welcome to contribute: index.md
     - Get started: getting_started.md
     - Pre-Requisites: prereqs.md
-  - Exercises:
+  - Tasks:
     - Add content: add_content.md
     - Create new lab: create_new.md
     - Deploy to IBM Cloud: deploy.md

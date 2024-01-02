@@ -34,14 +34,14 @@ First lets get the python 3 virtual environment up and running:
     pip list
 
 
-![Create virtual environment](/img/contribute/pre-req_3.png)
+![Create virtual environment](img/pre-req_3.png)
 
 Then you will install the MkDocs packages and verify the packages has been installed:
 
     pip install mkdocs
     pip list
 
-![pip list after MkDocs package is installed](/img/contribute/pre-req_4.png)
+![pip list after MkDocs package is installed](img/pre-req_4.png)
 
 
 You can deactivate the virtual environment with this command:
@@ -62,7 +62,7 @@ You can deactivate the virtual environment with this command:
 3. Access the Github repo of the IBM Maximo Labs here:<br>
 [https://github.com/IBM/maximo-labs](https://github.com/IBM/maximo-labs){target=_blank}
 4. Access the latest published labs here:<br>
-[http://maximo-lab.monitordemo4.ibmmam.com/](http://maximo-lab.monitordemo4.ibmmam.com/){target=_blank}<br>
+[https://ibm.github.io/maximo-labs/](https://ibm.github.io/maximo-labs/){target=_blank}<br>
 (This might not contain the latest changes from the Github repository)
 
 Clone the github repository down to your local machine:
@@ -82,4 +82,4 @@ Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/){
 To find these contribute instructions navigate to [http://localhost:8080/contribute](http://localhost:8080/contribute){target=_blank}
 
 !!! tip "Next step"
-    You are now ready to either [add to an existing lab](../add_content/) or [create a new lab from scratch](../create_new/).
+    You are now ready to either [add to an existing lab](add_content.md) or [create a new lab from scratch](create_new.md).

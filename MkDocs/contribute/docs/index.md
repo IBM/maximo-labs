@@ -12,6 +12,6 @@ You can also simply [open issues](https://github.com/IBM/maximo-labs/issues/new)
 
 ---
 
-**Updated: 2023-12-29**
+**Updated: 2024-01-02**
 
 ---
