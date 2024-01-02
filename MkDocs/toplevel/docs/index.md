@@ -43,7 +43,7 @@ Instructions for the migration: [Github Pages](github_pages/)
 | [Monitor Auto AI](monitor_autoai_8.5/)                                 | ![Ready](img/ready_small.png)|
 | [MAS Environmental Monitoring](sustain_mas/)                           | ![Ready](img/ready_small.png)|
 | ***Maximo SaaS (DEPRECATED)***                                         | |
-| [Monitor SaaS](monitor_saas/)                                          | ![Not started](img/not_started_small.png) |
+| [Monitor SaaS](monitor_saas/)                                          | ![Ready](img/ready_small.png) |
 | [Visual Inspection (1.3.0)](mvi_saas/)                                 | ![Not started](img/not_started_small.png) |
 | ***CONTRIBUTE TO MAXIMO LABS***                                        | |
 | [Contribute to Labs](contribute/)                                      | ![Not started](img/not_started_small.png)|

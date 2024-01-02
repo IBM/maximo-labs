@@ -15,6 +15,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2024-01-02|Jan Ekstrøm|Restructured to work on Github Pages.|
 |2021-02-12|Jan Ekstrøm|Correction of a screen shot in the Connect Devices exercise. |
 |2021-01-29|Mike Lamb|Added dashboard UI widget sections. |
 |2021-01-05|Jan Ekstrøm|Added the missing JSON files for Monitor Anomalies. |

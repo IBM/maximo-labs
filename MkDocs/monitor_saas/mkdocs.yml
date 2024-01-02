@@ -10,14 +10,14 @@ nav:
     - Welcome to the Monitor Labs: index.md
     - Get Started: getting_started.md
     - Pre-Requisites: facilitator_instructions.md
-    - Exercises:
-        - 1.  Connect Devices: connect_device.md
-        - 2.  Monitor Assets: monitor_asset_devices.md
-        - 3.  Monitor Anomalies: monitor_anomalies.md
-        - 4.  Create Service Requests: service_request.md
-        - 5.  Add Image Cards: add_imagecard.md
-        - 6.  Add Dimensions: create_dimensions.md
-        - 7.  Add Value Cards: addvaluecard.md
+  - Exercises:
+    - 1.  Connect Devices: connect_device.md
+    - 2.  Monitor Assets: monitor_asset_devices.md
+    - 3.  Monitor Anomalies: monitor_anomalies.md
+    - 4.  Create Service Requests: service_request.md
+    - 5.  Add Image Cards: add_imagecard.md
+    - 6.  Add Dimensions: create_dimensions.md
+    - 7.  Add Value Cards: addvaluecard.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright
