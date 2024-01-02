@@ -10,6 +10,6 @@ Learn how easy it is to configure Monitor to send data from your mobile device u
 
 ---
 
-**Updated: 2023-12-30**
+**Updated: 2023-01-20**
 
 ---
