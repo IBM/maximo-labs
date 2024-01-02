@@ -56,7 +56,7 @@ Application Suite (MAS).  On the “Industry Solution” tab, there is a tile fo
 2. Click the `Launch` link `Health` tile.
 
 3. The `Asset Table View` is displayed with the default query of all assets.
-![navigate_to_health](img/hpu_8.11/asset_grid_page.png)	
+![navigate_to_health](img/hpu_8.11/assets_grid_page.png)	
 
 
 

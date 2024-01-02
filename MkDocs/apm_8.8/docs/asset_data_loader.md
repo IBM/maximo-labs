@@ -13,7 +13,7 @@ These instructions use the notebook named '0_HPU-DataLoader.ipynb' file with the
 
 In this exercise you will use Watson Studio, Manage and Predict - Utilities to:
 
-1. [Gather notebooks and CSV files](asset_data_loader.md#gather_files) for all data to be uploaded
+1. [Gather notebooks and CSV files](#gather_files) for all data to be uploaded
 2. [Upload the and Run the HPU Data Loader Notebooks](#FastStart_notebook) using a template to upload new Asset and Location Data to Maximo Manage. 
 3. [Confirm](#confirm_upload) the Data Has been uploaded for your assets
 4. [Handle Errors](#error_handling) that may come up in the process
@@ -77,7 +77,7 @@ This notebook can only be run once per environment per site with the same data s
 
 1. Run the first cell two cells. These cells are importing and unziping the files to be used and installing necessary packages.
 
-3. Confirm the output has all the necessary files. If it does not and only lists the folder name see [Unable to Unzip the Files](unable_to_unzip)
+3. Confirm the output has all the necessary files. If it does not and only lists the folder name see [Unable to Unzip the Files](#unable_to_unzip)
 ![Script File Structure](img/apm_8.7/HPU_dataloader_9.png) 
 
 4. Replace the values of `MX_BASE_URL` and `MX_APIKEY` with the URL and API key gathered at the start of this lab
@@ -165,7 +165,7 @@ Follow the steps below to ensure your file is zipped/compressed properly:
 2. `Right Click` > `Compress`
 ![Compress/Zip Files](img/apm_8.7/HPU_dataloader_7.png) 
 
-3. Rename the resulting file to the correct file name indicated in [Gather Notebooks and CSV files](gather_files)
+3. Rename the resulting file to the correct file name indicated in [Gather Notebooks and CSV files](#gather_files)
 ![Renamed File](img/apm_8.7/HPU_dataloader_8.png) 
 
 4. Re-upload the file to your Watson Studio project and run the first cell again

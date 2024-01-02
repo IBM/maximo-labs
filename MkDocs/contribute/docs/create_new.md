@@ -16,7 +16,7 @@ The only difference is in the first time you execute step "2. Make changes", so 
 
 ## Make first changes for new lab
 
-The following steps are used to crate a new lab based on the provided [template](../../template_1.0)
+The following steps are used to crate a new lab based on the provided [template](../../template_1.0/)
 
 ### 1. Replicate Template to your lab
 

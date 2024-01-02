@@ -11,7 +11,7 @@ nav:
     - Get Started: get_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:
-      - Setup Watson Studio for Predict: setup_watson_studio
+      - Setup Watson Studio for Predict: setup_watson_studio.md
       - Understand Health and Predict - Utilities Models: hpu_models.md
       - Data Preparation: data_preparation.md
       - Load Utilities Data Into Manage: asset_data_loader.md

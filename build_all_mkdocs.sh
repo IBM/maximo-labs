@@ -94,7 +94,6 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-
 # Build the MAS v8.7 deployment for Health Predict and Utilities Lab level:
 lab=apm_8.7
 echo "==================================================================================="
