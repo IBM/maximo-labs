@@ -40,7 +40,7 @@ Select the `3_PMI - Anomaly Detection -UnSupervised-HPU.ipynb` notebook template
 2. Open the notebook.  Click on the `pencil` icon next to your notebook 
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
-![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
+![Restarting Environment](img/HPU_dataloader_3.png)
 
 ## Run the Notebook
 <a name="run_notebooks"></a>
@@ -61,10 +61,10 @@ Select the `3_PMI - Anomaly Detection -UnSupervised-HPU.ipynb` notebook template
 ### Set up the Model Training Pipeline
 
 1. Run the first cell to obtain the Asset Group ID from the JSON file produced in the [Create Utilities Predict Group and Upload Sensor Data](utilities_devicedata.md) lab. Note that it prints out the Predict Group ID after being extracted.
-![Asset Group ID](/img/apm_8.7/HPU_AD_1.png)
+![Asset Group ID](img/HPU_AD_1.png)
 
 2. Run the next cell to extract the device type and the desired features to be considered in the anomaly model.
-![Asset Group ID](/img/apm_8.7/HPU_AD_2.png)
+![Asset Group ID](img/HPU_AD_2.png)
 
 3. Run the next cell to define the scoring strategy. There are three different scoring strategies shown to choose from.
 
@@ -88,17 +88,17 @@ Select the `3_PMI - Anomaly Detection -UnSupervised-HPU.ipynb` notebook template
 1. Navigate to Maximo Health and Predict for Utilities within your environment
 
 2. Use the left-hand menu to go into `Predict Grouping`
-   ![Predict Grouping](/img/apm_8.7/hpu_fs11.png) 
+   ![Predict Grouping](img/hpu_fs11.png) 
 
 3. Select your asset group
-![Predict Grouping](/img/apm_8.7/hpu_2fsl_8.png)
+![Predict Grouping](img/hpu_2fsl_8.png)
 
 4. Click into your asset group and ensure you have the Anomaly Detection Model listed under `Trained instances registered for this group` and select an asset to go to the Health Dashboard
-![Predict Grouping](/img/apm_8.7/HPU_AD_3.png)
+![Predict Grouping](img/HPU_AD_3.png)
 
 6. Scroll down and expand the `Predict` section to ensure the anomaly detection history and the anomaly detection score is visible.
 
-![Predict Grouping](/img/apm_8.7/HPU_AD_4.png)
+![Predict Grouping](img/HPU_AD_4.png)
 
 !!! note
 

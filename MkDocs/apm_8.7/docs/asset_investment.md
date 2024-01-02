@@ -44,10 +44,10 @@ The AIO capability is an action that can be taken by the RE to ultimately reduce
 `Action:`
 
 2. Navigate to Health and Predict - Utilities (HPU). From the main MAS page, select the `Industry solutions` tab.
-![setup assets](/img/apm_8.7/AIO 1.png)
+![setup assets](img/AIO 1.png)
 
 3. Then click `Health and Predict – Utilities` menu.
-![setup assets](/img/apm_8.7/AIO 2.png)	 
+![setup assets](img/AIO 2.png)	 
 
  
 ## Identify Assets for a Project
@@ -63,16 +63,16 @@ In most list/grid views in HPU, there is a selection box on each asset line that
 
 1. From the main grid view, click the filter icon, then select `Type`.
 
-    ![setup assets](/img/apm_8.7/AIO 3.png)
-    ![setup assets](/img/apm_8.7/AIO 4.png)
+    ![setup assets](img/AIO 3.png)
+    ![setup assets](img/AIO 4.png)
 
 2. From the pop-up, find `Substation Transformers`, select it, and press `OK`.  It may be necessary to use the search capability or scroll.
 
-    ![setup assets](/img/apm_8.7/AIO 5.png)
+    ![setup assets](img/AIO 5.png)
 
 3. Finally, press `Apply`.
 
-    ![setup assets](/img/apm_8.7/AIO 6.png)	 
+    ![setup assets](img/AIO 6.png)	 
 
 
 ## Create a Project
@@ -94,7 +94,7 @@ In this case, there are 13 substation transformers.
     - ST_1400517
     - ST_1400518
 
-    ![setup assets](/img/apm_8.7/AIO 7.png)
+    ![setup assets](img/AIO 7.png)
 
 2. On the `Create A Project` page, complete the required fields as follows, then press `Create`.
 
@@ -103,7 +103,7 @@ In this case, there are 13 substation transformers.
     - **Target start quarter:**  3Q 
     - **Target start year:**  2022
 
-    ![setup assets](/img/apm_8.7/AIO 8.png)
+    ![setup assets](img/AIO 8.png)
 
 !!! note
     If there is NOT a `Replacement plan template` already created for Substation Transformers, there will be a prompt to create one.  To complete the template, follow the steps later in this lab.
@@ -117,11 +117,11 @@ Once the project is successfully created, a summary screen of the project will b
 
 1. Follow the prompt on the left navigation panel to return to the `Assets` view, and to the list of substation transformers.  If this does not direct to the list of substation transformers, follow the previous steps to produce that list.
 
-    ![setup assets](/img/apm_8.7/AIO 9.png)
+    ![setup assets](img/AIO 9.png)
 
 2. From the resulting list, click through to page 2 of the substation transformer list.
 
-    ![setup assets](/img/apm_8.7/AIO 10.png)
+    ![setup assets](img/AIO 10.png)
 
 3. Select the remaining substation transformers (in bold):
 
@@ -133,19 +133,19 @@ Once the project is successfully created, a summary screen of the project will b
 
 5. Click `Add to investment project`.  In this case, it is the final 2 substation transformers on the following list.
 
-    ![setup assets](/img/apm_8.7/AIO 11.png)
+    ![setup assets](img/AIO 11.png)
 
 6. From the `Add to the investment project` popup, select the lab to which these assets will be added, in this case `AIO Lab`, and press `Add`.
 
-    ![setup assets](/img/apm_8.7/AIO 12.png)
+    ![setup assets](img/AIO 12.png)
 
 7. A popup will show that the assets are being added to the project, and the `Edit project` page will appear.  Click `Save` at the bottom of the page.
 
-    ![setup assets](/img/apm_8.7/AIO 13.png)
+    ![setup assets](img/AIO 13.png)
 
 8. An additional popup will appear as a reminder that adding additional assets to an existing project will invalidate previous results.  Click `Save` to confirm and proceed.
 
-    ![setup assets](/img/apm_8.7/AIO 14.png)	 
+    ![setup assets](img/AIO 14.png)	 
 
    
 ## Create a Replacement Plan Template
@@ -157,15 +157,15 @@ A replacement plan is required for each asset is the project.  The assets must e
 
 1. Navigate to the `Asset investment optimizer` using the left navigation bar.
 
-    ![setup assets](/img/apm_8.7/AIO 15.png)
+    ![setup assets](img/AIO 15.png)
 
 2. From the `Asset investment optimizer` page, select `Plan templates`.
 
-    ![setup assets](/img/apm_8.7/AIO 16.png)
+    ![setup assets](img/AIO 16.png)
 
 3. On the `Plan templates` page, select an existing template OR click the `+` symbol to create a new one.  In this case, select `substation transformers` since there is already a replacement plan template created.  The only additional step required when creating a new template is to identify the asset type.
 
-    ![setup assets](/img/apm_8.7/AIO 17.png)
+    ![setup assets](img/AIO 17.png)
 
 4. On the `Edit a replacement plan template`, complete the required fields as follows.
 
@@ -177,11 +177,11 @@ A replacement plan is required for each asset is the project.  The assets must e
 
 5. Then click `Save`.
 
-    ![setup assets](/img/apm_8.7/AIO 18.png)
+    ![setup assets](img/AIO 18.png)
 
 6. If prompted to `Confirm edit`, press `Continue`.
     
-    ![setup assets](/img/apm_8.7/AIO 19.png)
+    ![setup assets](img/AIO 19.png)
 
 
 ## Evaluate Investment Options
@@ -195,23 +195,23 @@ A project can be adjusted at any time.  However, making changes will invalidate 
 
 1. From the `Asset investment optimizer` page, select the `Project` tab.
 
-    ![setup assets](/img/apm_8.7/AIO 20.png)
+    ![setup assets](img/AIO 20.png)
 
 2. Select the project `AIO Lab`.
 
-    ![setup assets](/img/apm_8.7/AIO 21.png)
+    ![setup assets](img/AIO 21.png)
 
 3. From the `AIO Lab` project page, select the pencil icon to review the details of the project.
 
-    ![setup assets](/img/apm_8.7/AIO 22.png)
+    ![setup assets](img/AIO 22.png)
 
 4. Review the details of the project, and make any required adjustments.
 
-    ![setup assets](/img/apm_8.7/AIO 23.png)
+    ![setup assets](img/AIO 23.png)
 
 5. In this case, no changes are required.  Press `Cancel`.  If changes are made, an additional popup will appear as a reminder that changes to an existing project will invalidate previous results.  Click `Save` to confirm and proceed.
 
-    ![setup assets](/img/apm_8.7/AIO 24.png)	 
+    ![setup assets](img/AIO 24.png)	 
 
 
 ### Maintain Risk AIO Project
@@ -225,19 +225,19 @@ The first strategy, maintain risk, determines which assets need to be replaced, 
 
 1. On the main `AIO Lab` project page, the maintain risk strategy will already be available and selected in the left column.  The average risk score will be calculated.  In this case, it is 42.  Select the `Run analysis` button to execute the strategy.
 
-    ![setup assets](/img/apm_8.7/AIO 25.png)
+    ![setup assets](img/AIO 25.png)
 
 2. The analysis may take some time to run, during which there will be indicators.
 
-    ![setup assets](/img/apm_8.7/AIO 26.png)
+    ![setup assets](img/AIO 26.png)
 
 3. The results will automatically appear in the `report` view.  In this case, 4 of the 5 assets must be replaced for a total cost of $140,000, with an average risk score of 17.2, and the highest risk score of 31.7 for the duration.
 
-    ![setup assets](/img/apm_8.7/AIO 27.png)
+    ![setup assets](img/AIO 27.png)
 
 4. Select the `table` view to see which assets need to be replaced, and when.
 
-    ![setup assets](/img/apm_8.7/AIO 28.png)	 
+    ![setup assets](img/AIO 28.png)	 
 
  
 ### Reduce Risk AIO Project:  
@@ -249,31 +249,31 @@ The reduce risk strategy allows the RE to select the average risk score for the 
 
 1. From the main `AIO Lab` project page, in this case from the `table` view, click on the `+` symbol to add a new strategy.
 
-    ![setup assets](/img/apm_8.7/AIO 29.png)
+    ![setup assets](img/AIO 29.png)
 
 2. From the pop up box, use the pull down menu to select `Reduce risk`.
 
-    ![setup assets](/img/apm_8.7/AIO 30.png)
+    ![setup assets](img/AIO 30.png)
 
 3. From the next pop up box, enter a risk value of `10`, the click `Create`.
 
-    ![setup assets](/img/apm_8.7/AIO 31.png)
+    ![setup assets](img/AIO 31.png)
 
 4. On the main `AIO Lab` project page, the reduce risk strategy will be available and selected in the left column, above the last strategy executed, in this case, the maintain risk strategy.  Select the `Run analysis` button to execute the strategy.
 
-    ![setup assets](/img/apm_8.7/AIO 32.png)
+    ![setup assets](img/AIO 32.png)
 
 5. Once again, the analysis may take some time to run, during which there will be indicators.
 
-    ![setup assets](/img/apm_8.7/AIO 33.png)
+    ![setup assets](img/AIO 33.png)
 
 6. The results will automatically appear in the `report` view.  In this case, all 5 assets must be replaced for a total cost of $175,000, with an average risk score of 8.0, and the highest risk score of 19.1 for the duration.
 
-    ![setup assets](/img/apm_8.7/AIO 34.png)
+    ![setup assets](img/AIO 34.png)
 
 7. Select the `table` view to see which assets need to be replaced, and when.
 
-    ![setup assets](/img/apm_8.7/AIO 35.png)
+    ![setup assets](img/AIO 35.png)
 
 !!!Note 
     Multiple reduce risk strategies can be created using different target risk scores.	 
@@ -290,11 +290,11 @@ The stay in budget strategy allows the RE to set a budget for the project.  The 
 
 1. From the main `AIO Lab` project page, in this case from the `table` view, click on the `+` symbol to add a new strategy.
 
-    ![setup assets](/img/apm_8.7/AIO 36.png)
+    ![setup assets](img/AIO 36.png)
 
 2. From the pop up box, use the pull down menu to select `Stay in budget`.
 
-    ![setup assets](/img/apm_8.7/AIO 37.png)
+    ![setup assets](img/AIO 37.png)
 
 3. From the next pop up box, enter the following values below and the click `Create`.
 
@@ -302,23 +302,23 @@ The stay in budget strategy allows the RE to set a budget for the project.  The 
     - **Opex:**  80,000
     - **Total budget:**  140,000
 
-    ![setup assets](/img/apm_8.7/AIO 38.png)
+    ![setup assets](img/AIO 38.png)
 
 4. On the main `AIO Lab` project page, the stay in budget strategy will be available and selected in the left column, above the last strategy executed, in this case, the reduce risk strategy.  Select the `Run analysis` button to execute the strategy.
 
-    ![setup assets](/img/apm_8.7/AIO 39.png)
+    ![setup assets](img/AIO 39.png)
 
 5. Once again, the analysis may take some time to run, during which there will be indicators.
 
-    ![setup assets](/img/apm_8.7/AIO 40.png)
+    ![setup assets](img/AIO 40.png)
 
 6. The results will automatically appear in the `report` view.  In this case, 4 of the 5 assets must be replaced for a total cost of $140,000, with an average risk score of 17.2, and the highest risk score of 31.7 for the duration.
 
-    ![setup assets](/img/apm_8.7/AIO 41.png)
+    ![setup assets](img/AIO 41.png)
 
 7. Select the `list` view to see which assets need to be replace, and when.
 
-    ![setup assets](/img/apm_8.7/AIO 42.png)
+    ![setup assets](img/AIO 42.png)
 
 !!!Note 
     Multiple stay in budget strategies can be created using different budgets.
@@ -332,27 +332,27 @@ Within each AIO project, the RE can compare up to three strategies.  Since the R
 
 1. From the main `AIO Lab` project page, in this case from the `table` view, click on the `Compare strategies` button.
 
-    ![setup assets](/img/apm_8.7/AIO 43.png)
+    ![setup assets](img/AIO 43.png)
 
 2. From the popup, select all three strategies, press `Create`.
 
-    ![setup assets](/img/apm_8.7/AIO 44.png)
+    ![setup assets](img/AIO 44.png)
 
 3. The resulting comparison provides key information for the RE to decide which strategy to pursue.  To export details from one of the strategies, click export at the bottom of one of the strategies.  In this case, select Maintain risk.
 
-    ![setup assets](/img/apm_8.7/AIO 45.png)
+    ![setup assets](img/AIO 45.png)
 
 4. From the Export Data popup, select analysis report, and click `Export`.
 
-    ![setup assets](/img/apm_8.7/AIO 46.png)
+    ![setup assets](img/AIO 46.png)
 
 5. Open the results in an application, or save it.  The analysis report will show a summary of the selected strategy.
 
-    ![setup assets](/img/apm_8.7/AIO 47.png)
+    ![setup assets](img/AIO 47.png)
 
 6. Selecting Details for recommended replacements will produce details of the strategy.
 
-    ![setup assets](/img/apm_8.7/AIO 48.png)	 
+    ![setup assets](img/AIO 48.png)	 
 
 
 ## Summary
@@ -369,15 +369,15 @@ It may be necessary to experiment to get satisfactory results.
 
 1. From the breadcrumbs (or from the left navigation bar), select the Asset Investment Optimizer.
 
-    ![setup assets](/img/apm_8.7/AIO 49.png)
+    ![setup assets](img/AIO 49.png)
 
 2. On the Project tabs, hover the cursor to the far right of the project name, and select `Delete` when it appears.
 
-    ![setup assets](/img/apm_8.7/AIO 50.png)
+    ![setup assets](img/AIO 50.png)
 
 3. When prompted, confirm the deletion of the project.
 
-    ![setup assets](/img/apm_8.7/AIO 51.png)
+    ![setup assets](img/AIO 51.png)
 
 
 Congratulations.  You now have identified at risk assets and have added them to an asset investment optimization project to improve their condition.

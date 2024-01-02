@@ -17,7 +17,7 @@ In this exercise you will use Predict libraries and notebook in Watson Studio to
 1. Download data from [Kaggle](https://www.kaggle.com/datasets/nphantawee/pump-sensor-data?resource=download). Name the file `kaggle-pump-sensor.csv`.  If the file is already present in your project you can skip this step.
 
 2. Click on `Assets` tab.  Click on `Add to Project` button.  Select `Data`.  Browse to and select the CSV file you downloaded from the Kaggle Web site. Alternatively just drag the CSV file into data asset project on the right. 
-![Dowload_Pump_data](/img/apm_8.7/p64.png)
+![Dowload_Pump_data](img/p64.png)
 
 ## Add the Data Preparation Notebook to Watson Studio
 <a name="data_preparation"></a>
@@ -52,7 +52,7 @@ Use the steps below to understand or recreate the notebook yourself.
 5. Insert the code to load the `kaggle-pump-sensor.csv` that you uploaded earlier in the exercise. Click on the `code generator icon` at the top of Watson Studio.  Click on the `kaggle-pump-sensor.csv` file you downloaded earlier and named `kaggle-pump-sensor.csv`.
 
 6. The code is inserted into a new cell below where you are currently active.
-![Code](/img/apm_8.7/p50.png)
+![Code](img/p50.png)
 
 ### Set Environment Variables
 
@@ -78,7 +78,7 @@ Set the environment variables you will use throughout data preparation.  See [Se
 You can check the environment variables and reference them by using the auto insert code in Watson Studio.  Click on the code generator icon at the top of Watson Studio.  Click on the sensor data csv file you loaded earlier and nameed 'kaggle-pump-sensor.csv'  
 
 
-![Insert Environment Variables](/img/apm_8.7/p52.png)
+![Insert Environment Variables](img/p52.png)
 
 
 ## Prepare Asset Information Data
