@@ -147,7 +147,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Conduct Inspections](mvi_saas/exerciseTwo/exercise2-2)                      |
 |                                               | [Setup Fail Pass Rate](mvi_saas/exerciseTwo/exercise2-3)                     |
  
-### CONTRIBUTE TO MAXIMO LABS
+### Contribute to Maximo Labs
 
 You can contribute by providing feedback or content for the Maximo Labs. 
 
@@ -173,14 +173,14 @@ If you want to write new labs or improve the existing labs, then find the instru
 | [New Lab Template](template_1.0/)             | [Do something](template_1.0/something)                                       |
 |                                               | [Do something else](template_1.0/something_else)                             |
 
+---
 
-
-## License
+### License
 
 See the [Copyright page](copyright.md) for how the Maximo Hands on Labs are licensed.
 
 ---
 
-**UPDATED: 2024-01-05**
+### UPDATED: 2024-01-05
 
 ---
