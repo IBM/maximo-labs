@@ -7,7 +7,7 @@ site_dir: ../../site/template_1.0
 nav:
   - Get back to Maximo Labs: ..
   - Template 1.0 Lab:
-    - Welcome to the Template Lab: index.md
+    - Welcome to this lab: index.md
     - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
   - Exercises:

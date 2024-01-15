@@ -20,7 +20,7 @@ Students doing the exercises and Facilitators preparing for delivering the exerc
 
 ##  Demonstration (If exists)
 
-Ask your facilitator for a demonstration of Maxiom Template or watch this short [video demonstration](https://youtu.be/XXXXXX)
+Ask your facilitator for a demonstration of Maxiom Template or watch this short [video demonstration](https://youtu.be/XXXXXX){target=_blank}
 
 ## Business Benefits
 

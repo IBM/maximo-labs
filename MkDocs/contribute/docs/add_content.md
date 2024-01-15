@@ -20,8 +20,8 @@ Basically you need to do the following to create a new branch locally and on the
     on [Create new lab](create_new.md#make-first-changes-for-new-lab).
 
 
-Locate the labs folder under the /MkDocs, e.g. /MkDocs/monitor_8.2<br>
-Make the changes in the markdown files, image files, and mkdocs.yml file.<br>  
+Locate the labs folder under the `MkDocs` folder, e.g. `/MkDocs/edc_8.11`<br>
+Make the changes in the markdown files, image files, and `mkdocs.yml` file.<br>  
 
 !!! attention "Remember to do this:"
     Update the `release_notes.md` file with Contributors and Change Information.<br>
@@ -53,7 +53,7 @@ Commit the changes:
     git commit -sm "Write a descriptive message of your changes"
 
 !!! attention "Remember to do this:"
-    It is important to use the `-sm` switch on the commit command, as the `s` signes the commit which is needed to merge your changes into the main branch later on.
+    It is important to use the `-sm` switch on the commit command, as the `s` signs the commit which is needed to merge your changes into the main branch later on.
 
 Push the changes to the Github branch:
 
@@ -82,7 +82,7 @@ Give it a title and description. Hit the `Create pull request` button.
 
 Once the Pull Request has been accepted and your commits are added to the main branch, it is time to clean up the branch locally and remotely (on Github).
 
-    git checkout main
+    git switch main
     git branch -d [name_of_your_new_branch]
     git push origin :[name_of_your_new_branch]
     git pull
