@@ -189,7 +189,7 @@ echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Ma
 echo "==================================================================================="
 
 # Start the web server hosting the complete site if executed locally - then open the following URL in a browser: http://127.0.0.1:8080
-if [[ -z "${GITHUB_DEPLOY}" ]]; then
+if [[ -z "${MKDOCS_DEPLOY}" ]]; then
     cd $root_dir/site
     echo "BUILD_INFO - Starting the web server on http://127.0.0.1:8080."
     python -m http.server --cgi 8080
