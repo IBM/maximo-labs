@@ -79,7 +79,7 @@ Save the file.
 
 The `release_notes.md` file contains a list of the Contributors to this lab as well as the Change Information.  
 
-Select and open the `release_notes.md` file located in the `docs` folder of you new lab. Edit the file and make sure to change it so it's suitable for your new lab
+Select and open the `release_notes.md` file located in the `docs` folder of your new lab. Edit the file and make sure to change it so it's suitable for your new lab
 ![Edit about.md](img/edit_release_notes_1.png)
 
 Which could look like this
@@ -126,7 +126,7 @@ Wait until it has finished building the whole site.
 Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that the build was successful.  
 ![Edit build_all_mkdocs.sh](img/edit_build_6.png)
 
-If the new lab has not yet been added to the `index.md` in the `toplevel` page, then navigate directly to the new lab [http://localhost:8080/monitor_live_demo_asset](http://localhost:8080/monitor_live_demo_asset) in order to verify that your changes look as expected.  
+The new lab has not yet been added to the `index.md` in the `toplevel` page, so you need to navigate directly to the new lab, e.g. [http://localhost:8080/monitor_live_demo_asset](http://localhost:8080/monitor_live_demo_asset) in order to verify that your changes look as expected.  
 ![Edit build_all_mkdocs.sh](img/edit_build_7.png)
 
 !!! tip
@@ -136,9 +136,20 @@ Congratulations, you have now created the foundation for the new lab following t
 
 Now you "only" need to add all the content to the foundation, by adding markdown files and images according to the structure.  
 
+!!! tip
+    The mark down files in your new lab should contain examples on :</br>
+    - how to use chapters</br>
+    - how to link to other md files in your lab</br>
+    - how to link to chapters in your lab</br>
+    - how to link to external sites </br>
+    - how to link to images (please add plenty)</br>
+    - how to add a table</br>
+    - how to add admonitions (like this Tip section)
+
+
 !!! attention "Remember to do this:"
     Go back to [Add content](add_content.md#3-commit-and-push-your-changes) and run from step 3. (You are done here :-)
 
 
 !!! note
-    It is good practise to commit your changes once the foundation is in place - and again when you have created or updated every markdown files in the exercise.
+    It is good practise to commit your changes often and at least once the foundation is in place.

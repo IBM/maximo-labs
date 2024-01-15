@@ -9,6 +9,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2024-01-15|Jan Ekstrøm|The instructions and images are updated according to the new Github Pages structure.|
 |2024-01-02|Jan Ekstrøm|Restructured to work on Github Pages.|
 |2023-12-29|Jan Ekstrøm|Renamed github URLs + follow new template + new git images.|
 |2022-10-18|Jan Ekstrøm|Updated commit to be signed in Add content.|

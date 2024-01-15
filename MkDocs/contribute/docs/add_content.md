@@ -82,7 +82,7 @@ Give it a title and description. Hit the `Create pull request` button.
 
 Once the Pull Request has been accepted and your commits are added to the main branch, it is time to clean up the branch locally and remotely (on Github).
 
-    git checkout main
+    git switch main
     git branch -d [name_of_your_new_branch]
     git push origin :[name_of_your_new_branch]
     git pull
