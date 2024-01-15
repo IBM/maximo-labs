@@ -1,0 +1,24 @@
+site_name: Github Pages Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Jan Ekstrøm
+site_description: "Github Pages Hands on Lab"
+site_dir: ../../site/github_pages
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Github Pages Lab:
+    - Welcome to the Github Pages Lab: index.md
+  - Tasks:
+    - 1. Setup Github Pages: gh_pages.md
+    - 2. Update mkdocs.yml: mkdocs_yml.md
+    - 3. Change Image Location: image_locations.md
+    - 4. Change Links: links.md
+    - 5. Deploy to Github Pages: deploy.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition

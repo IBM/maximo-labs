@@ -1,24 +1,26 @@
 site_name: Monitor SaaS Labs
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Asset Monitor SaaS Hands on Lab"
 site_dir: ../../site/monitor_saas
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - Monitor SaaS Labs:
     - Welcome to the Monitor Labs: index.md
     - Get Started: getting_started.md
     - Pre-Requisites: facilitator_instructions.md
-    - Exercises:
-        - 1.  Connect Devices: connect_device.md
-        - 2.  Monitor Assets: monitor_asset_devices.md
-        - 3.  Monitor Anomalies: monitor_anomalies.md
-        - 4.  Create Service Requests: service_request.md
-        - 5.  Add Image Cards: add_imagecard.md
-        - 6.  Add Dimensions: create_dimensions.md
-        - 7.  Add Value Cards: addvaluecard.md
-  - About: about.md
+  - Exercises:
+    - 1.  Connect Devices: connect_device.md
+    - 2.  Monitor Assets: monitor_asset_devices.md
+    - 3.  Monitor Anomalies: monitor_anomalies.md
+    - 4.  Create Service Requests: service_request.md
+    - 5.  Add Image Cards: add_imagecard.md
+    - 6.  Add Dimensions: create_dimensions.md
+    - 7.  Add Value Cards: addvaluecard.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:

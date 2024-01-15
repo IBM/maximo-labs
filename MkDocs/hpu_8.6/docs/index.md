@@ -1,4 +1,4 @@
-![img](/img/hpu_8.6/banner.png)
+![img](img/banner.png)
 
 
 ## Story
@@ -7,6 +7,6 @@ Acting as the Reliability Engineer for a Utilities company, we will be using Hea
 
 ---
 
-**Updated: 2022-04-01
+**Updated: 2022-04-01**
 
 ---

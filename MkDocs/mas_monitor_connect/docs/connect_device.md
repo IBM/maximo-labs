@@ -3,11 +3,11 @@ Send data to Monitor using the MAS Monitor Device Ingestor mobile web app
 
 ## Use the MAS Monitor Device Ingestor mobile web app
 
-![MAS Monitor Device Ingestor](/img/mas_monitor_connect/mobile.png)
+![MAS Monitor Device Ingestor](img/mobile.png)
 
 1. Open the following link on your mobile device
 <br>Note: For IOS devices Safari must be used for the accelerometer to work
-<br>https://device-ingestor-mas-monitor-tool.monitordemo2-822c5cdfc486f5db3c3145c89ca6409d-0000.us-south.containers.appdomain.cloud/
+<br>[https://device-ingestor-mas-monitor-tool.monitordemo2-822c5cdfc486f5db3c3145c89ca6409d-0000.us-south.containers.appdomain.cloud/](https://device-ingestor-mas-monitor-tool.monitordemo2-822c5cdfc486f5db3c3145c89ca6409d-0000.us-south.containers.appdomain.cloud/)
 
 2. Fill in the information required
     <br>a. Device Type you created on the previous page
@@ -22,7 +22,7 @@ Send data to Monitor using the MAS Monitor Device Ingestor mobile web app
 6. Once Connected the screen will show the metrics being collected from GPS and the accelerometer
 7. Go for a walk while data is being sent on your mobile device so that the GPS and accelerometer data varies
 <br>
-![Publishing messages](/img/mas_monitor_connect/publish-messages.png)
+![Publishing messages](img/publish-messages.png)
 
 ## Troubleshooting
 

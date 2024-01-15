@@ -1,4 +1,4 @@
-![img](/img/hpu_8.6/banner.png)
+![img](img/banner.png)
 
 <h1>CLOSING REMARKS</h1> 
 

@@ -15,9 +15,9 @@ An asset manager, I can leverage the Digital Twin Exchange to purchase various a
 4.	Choose `Centrifugal Pump 12 month Job Plan` and `Centrifugal Pump Assembly Spare Parts Item`, add to basket 
 5.	Checkout and purchase(verbally)
 
-![img](/img/mas_8.6/dtx1.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.6/dtx2.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.6/dtx3.png){:style="height:400px;width:800px"} 
+![img](img/dtx1.png){:style="height:400px;width:800px"} 
+![img](img/dtx2.png){:style="height:400px;width:800px"} 
+![img](img/dtx3.png){:style="height:400px;width:800px"} 
 
 The availability of digital contents and integration between the DTX and Manage helps me save time and effort locating and registering the relevant information as well as ensuring the accuracy of the data If you are a provider of the contents, the DTX allows you to monetize on the digital contents such as data models, asset related information and IP some of which you have seen in our demo for Monitor and MVI.<br>
  
@@ -38,9 +38,9 @@ The availability of digital contents and integration between the DTX and Manage 
 10.	Go to Job Plans and search Job Plan with `DT`, confirm the imported job plan
 11.	Go to item master and search the item with `DT`, confirm 4 items are imported
 
-![img](/img/mas_8.6/manage1.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.6/manage2.png){:style="height:400px;width:800px"} 
-![img](/img/mas_8.6/manage3.png){:style="height:400px;width:800px"} 
+![img](img/manage1.png){:style="height:400px;width:800px"} 
+![img](img/manage2.png){:style="height:400px;width:800px"} 
+![img](img/manage3.png){:style="height:400px;width:800px"} 
 
 
 <b>TRANSITION:</b> I’m going to turn it over to the technician who is assigned to work on the pump.

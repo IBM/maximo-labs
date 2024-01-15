@@ -31,10 +31,10 @@ Reliability engineer can also easily config the different matrix versions, like 
 `Action:`
 
 1. Navigate to Health and Predict - Utilities (HPU). From the main MAS page, select the `Industry solutions` tab.
-![setup assets](/img/apm_8.7/AIO 1.png)
+![setup assets](img/apm_8.7/AIO 1.png)
 
 2. Then click `Health and Predict – Utilities` menu.
-![setup assets](/img/apm_8.7/AIO 2.png)	 
+![setup assets](img/apm_8.7/AIO 2.png)	 
 
 
 

@@ -7,7 +7,7 @@ The first things you need to understand is the way this site is build and how th
 
 Here is the structure of the IBM Maximo Labs:
 
-![Template Architecture](/img/contribute/architecture.png)
+![Template Architecture](img/architecture.png)
 
 1. Location of the git repositories
 2. The root folder of the monitor-hands-on-lab git repository. Basically only contain the build script and the MkDocs folder with all the MkDocs content folders.

@@ -11,7 +11,7 @@ In this exercise you will setup your local development environment.
 
 -  [Download,  Install and Configure CyberDuck for View Logs in Monitor](#cyberduck) 
 
--  [Download, Install and Configure PyCharm](#pycharme)  
+-  [Download, Install and Configure PyCharm](#pycharm)  
 
 -  [Debug Functions](#debug)
 
@@ -150,7 +150,7 @@ dependencies.
 9.  Save credentials to your project root folder.  If you are using Monitor SaaS, click on  `Services`, click `View Details` of Watson IOT Analytics.  Click on `Copy and paste` icon 
 and copy the credentials into a file named beta-1_credentials.json file.   Save the file in the project git cloned project 
 directory name directory `your custom functions project`. 
-![credentials](/img/monitor_autoai_8.4/s01.png) 
+![credentials](img/s01.png) 
 
 If you are using Monitor in MAS, ask the instructor for your credentials_as.json file or create your own using the instructions in "Establishing
 a Connection" section of the Monitor documentation.  [Establishing a Connection](https://www.ibm.com/docs/en/maximo-monitor/8.5.0?topic=calculations-using-custom-functions#env) 
@@ -222,7 +222,7 @@ service in Monitor under Services tab.  Use tool called Cyberduck.   Download f
 Web: https://cyberduck.io/download/ Configure the setting in CyberDuck to connect to the Object Storage service included 
 with Monitor.
 
-1.  In Monitor, click on `Services` menu.  Copy the settings for Object Storage as shown in the below into `CyberDuck`.  ![Configure CyberDuck](/img/monitor_autoai_8.4/l01.png) 
+1.  In Monitor, click on `Services` menu.  Copy the settings for Object Storage as shown in the below into `CyberDuck`.  ![Configure CyberDuck](img/l01.png) 
 
 2.  Open `CyberDuck` and create a `New Connection`.
 
@@ -254,16 +254,16 @@ for accessing the database service in Monitor under Services tab.  Use a univers
 access the table.   Download the free community edition from https://dbeaver.io/download/  Configure the setting in 
 Dbeaver to connect to the Database service included with Monitor.
 
-1.  In Monitor, click on `Services` menu.  Copy the settings for Database and enter them as as shown in `DBeaver`.  ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb00.png) 
+1.  In Monitor, click on `Services` menu.  Copy the settings for Database and enter them as as shown in `DBeaver`.  ![Get DB Connection Details](img/sdb00.png) 
 
 2.  Open `Dbeaver`.  Select a `New Database Connection` option from the `Database` menu.
- ![New DB Connection](/img/monitor_autoai_8.4/sdb01.png)
+ ![New DB Connection](img/sdb01.png)
 
 3.  Select  `IBM DB2` and click on  `Next` button.
- ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb02.png)
+ ![Get DB Connection Details](img/sdb02.png)
  
 4.  Enter the database settings from Monitor Database Service in `DBeaver` connection settings dialog.
- ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb03.png)
+ ![Get DB Connection Details](img/sdb03.png)
 
 5.  Click `test Connection` Button. 
 
@@ -279,7 +279,7 @@ log files for custom functions in Database use the following queries with Dbeave
 
 1.  Open `Dbeaver`.  Click a `Monitor Database Connection` for `BLUDB` schema.
 
-3.  Select  `New SQL Script` from the `SQL Editor` menu.  ![New SQL Statement](/img/monitor_autoai_8.4/sdb04.png)
+3.  Select  `New SQL Script` from the `SQL Editor` menu.  ![New SQL Statement](img/sdb04.png)
  
 4.  Enter the the following query to get status of execution for all functions.
 
@@ -325,7 +325,7 @@ to run to reference the virtual environment you setup earlier.
 
 3.  In the `Project` view, right click on the Python script file you want to run.  Select `edit configurations`.   See the
 example settings below.
-![setup assets](/img/monitor_autoai_8.4/l19.png) 
+![setup assets](img/l19.png) 
 
 4.  Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of 
 your virtual environment.
@@ -335,9 +335,9 @@ your virtual environment.
     ```
     
 5.  Set the `Python interpreter` to your virtual environment. ![Add virtual env to PyCharm](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html)
-    - Choose `Pycharm`, `Preferences` ![Run](/img/monitor_8.5/fun17.png)
+    - Choose `Pycharm`, `Preferences` ![Run](img/fun17.png)
     - Search on  `interpreter`, select `Virtual Environment`, select `Existing Environment`, 
-    - Browse and select your Python Virtual Environment ![Run](/img/monitor_8.5/fun17.png)
+    - Browse and select your Python Virtual Environment ![Run](img/fun17.png)
     
 6.  Each time you run a Python script in Pyscharm remember to select the name of the virtual environment inter
 
@@ -427,7 +427,7 @@ dependencies.
 9.  Save credentials to your project root folder.  If you are using Monitor SaaS, click on  `Services`, click `View Details` of Watson IOT Analytics.  Click on `Copy and paste` icon 
 and copy the credentials into a file named beta-1_credentials.json file.   Save the file in the project git cloned project 
 directory name directory `your custom functions project`. 
-![credentials](/img/monitor_autoai_8.4/s01.png) 
+![credentials](img/s01.png) 
 
 If you are using Monitor in MAS, ask the instructor for your credentials_as.json file or create your own using the instructions in "Establishing
 a Connection" section of the Monitor documentation.  [Establishing a Connection](https://www.ibm.com/docs/en/maximo-monitor/8.5.0?topic=calculations-using-custom-functions#env) 
@@ -499,7 +499,7 @@ service in Monitor under Services tab.  Use tool called Cyberduck.   Download f
 Web: https://cyberduck.io/download/ Configure the setting in CyberDuck to connect to the Object Storage service included 
 with Monitor.
 
-1.  In Monitor, click on `Services` menu.  Copy the settings for Object Storage as shown in the below into `CyberDuck`.  ![Configure CyberDuck](/img/monitor_autoai_8.4/l01.png) 
+1.  In Monitor, click on `Services` menu.  Copy the settings for Object Storage as shown in the below into `CyberDuck`.  ![Configure CyberDuck](img/l01.png) 
 
 2.  Open `CyberDuck` and create a `New Connection`.
 
@@ -531,16 +531,16 @@ for accessing the database service in Monitor under Services tab.  Use a univers
 access the table.   Download the free community edition from https://dbeaver.io/download/  Configure the setting in 
 Dbeaver to connect to the Database service included with Monitor.
 
-1.  In Monitor, click on `Services` menu.  Copy the settings for Database and enter them as as shown in `DBeaver`.  ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb00.png) 
+1.  In Monitor, click on `Services` menu.  Copy the settings for Database and enter them as as shown in `DBeaver`.  ![Get DB Connection Details](img/sdb00.png) 
 
 2.  Open `Dbeaver`.  Select a `New Database Connection` option from the `Database` menu.
- ![New DB Connection](/img/monitor_autoai_8.4/sdb01.png)
+ ![New DB Connection](img/sdb01.png)
 
 3.  Select  `IBM DB2` and click on  `Next` button.
- ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb02.png)
+ ![Get DB Connection Details](img/sdb02.png)
  
 4.  Enter the database settings from Monitor Database Service in `DBeaver` connection settings dialog.
- ![Get DB Connection Details](/img/monitor_autoai_8.4/sdb03.png)
+ ![Get DB Connection Details](img/sdb03.png)
 
 5.  Click `test Connection` Button. 
 
@@ -556,7 +556,7 @@ log files for custom functions in Database use the following queries with Dbeave
 
 1.  Open `Dbeaver`.  Click a `Monitor Database Connection` for `BLUDB` schema.
 
-3.  Select  `New SQL Script` from the `SQL Editor` menu.  ![New SQL Statement](/img/monitor_autoai_8.4/sdb04.png)
+3.  Select  `New SQL Script` from the `SQL Editor` menu.  ![New SQL Statement](img/sdb04.png)
  
 4.  Enter the the following query to get status of execution for all functions.
 
@@ -602,7 +602,7 @@ to run to reference the virtual environment you setup earlier.
 
 3.  In the `Project` view, right click on the Python script file you want to run.  Select `edit configurations`.   See the
 example settings below.
-![setup assets](/img/monitor_autoai_8.4/l19.png) 
+![setup assets](img/l19.png) 
 
 4.  Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of 
 your virtual environment.
@@ -614,7 +614,7 @@ your virtual environment.
 5.  Set the `Python interpreter` to your virtual environment. ![Add virtual env to PyCharm](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html)
 
 6.  Each time you run a Python script in Pyscharm remember to select the name of the virtual environment interpreter you 
-created in PyCharm.   ![Run Edit Configurations Virtual Environment](/img/monitor_8.5/fun18.png)
+created in PyCharm.   ![Run Edit Configurations Virtual Environment](img/fun18.png)
 
 ## Debug Functions
 <a name="debug"></a>
@@ -630,26 +630,9 @@ on on the  Device Type.  You should resolve those issues quickly so that others 
 own calculated metrics on the same Asset Type. If you see error message saying `Analysis Stopped` this means you have a 
 pipeline processing error and that a custom function likely is causing it. It may also mean an input or 
 output argument required by a calculated metric has been deleted or doesn't have a needed value. 
-![setup assets](/img/monitor_autoai_8.4/l20.png) 
+![setup assets](img/l20.png) 
 
 3.  If your calculate metric runs but doesn't give the desired results see the log files for that Device Type. 
 [Download, Install and Configure CyberDuck for View Logs in Monitor](#cyberduck)  
 
-## Debug Functions
-<a name="debug"></a>
-
-Functions can be run locally and also run within the pipeline.   You typically want to make sure your function works 
-locally before you git commit your function and register your function with Monitor.
-
-1.  To run your function locally run Python script `../scripts/local_test_of_function.py`
-
-2.  Git commit your function to a Github and they see if your data item for the calculated metric that calls your function 
-runs.  Functions that have a problem will cause an error and cause the pipeline to stop for all other function on on the 
-Entity Type.  You should resolve those issues quickly so that others aren't prevented from
-monitoring their own calculated metrics on the same Asset Type. If you see error message saying `Analysis Stopped` this 
-means you have a pipeline processing error and that a custom function likely is causing it. It may also mean an input or 
-output argument required by a calculated metric has been deleted or doesn't have a needed value. 
-![setup assets](/img/monitor_autoai_8.4/l20.png) 
-
-3.  If your calculate metric runs but doesn't give the desired results see the log files for that Asset Type. 
-[Download, Install and Configure CyberDuck for View Logs in Monitor](#cyberduck)  
+---

@@ -21,7 +21,7 @@ In this Exercise you will learn how to:
 
 Download or make available your license.dat file. Use the following guide to make your choices.
 
-![apppoint-license-download-process](/img/ocp_8.9/apppoint-license-download-process.png)
+![apppoint-license-download-process](img/apppoint-license-download-process.png)
 
 1\. Type the number of AppPoints.
 

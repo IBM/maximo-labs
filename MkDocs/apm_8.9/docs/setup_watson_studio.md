@@ -19,22 +19,22 @@ Ask your Maximo Application Suite administrator to get your user name and passwo
 API keys and URL that you will use to connect to Watson Studio.  You or he can use these steps to get them.
 
 1. To get the Watson Studio URL, login to Maximo Application Suite.  Click on `Adminstration`
-![setup assets](/img/apm_8.7/p01.png) 
+![setup assets](img/apm_8.7/p01.png) 
 
 2. Click on `Configurations` and `Watson Studio`
-![setup assets](/img/apm_8.7/p02.png) 
+![setup assets](img/apm_8.7/p02.png) 
 
 3. Click on `System`  After you create the Watson Studio User be sure to make note of the URL, user name and password.  You will use it to login to Cloud Pak for Data later with it. 
-![setup assets](/img/apm_8.7/p03.png)
+![setup assets](img/apm_8.7/p03.png)
 
 4. Open a browser to the URL and use the credentials from the previous steps to login to Cloud Pak for Data.  After logging in you see your Watson Studio Overview page.
-![setup assets](/img/apm_8.7/p04.png) 
+![setup assets](img/apm_8.7/p04.png) 
 
 !!! note
 
     Ensure Datascience User Belongs to Predict Security Group.   In Maximo Manage, add the user to the PREDICT and PREDICTGROUPING group in the user definition as shown in the screen below.
     
-![Security Groups](/img/apm_8.7/p15.png) 
+![Security Groups](img/apm_8.7/p15.png) 
 
 
 ## Create a Project in Watson Studio
@@ -50,22 +50,22 @@ Watson Studio projects are where you:
 Create a project so that you can add and setup Health, Predict and Utilities notebooks using the auto upload feature.
 
 1. Click on 'All Projects' where you will then create a new project.
-![setup assets](/img/apm_8.7/p05.png) 
+![setup assets](img/apm_8.7/p05.png) 
  
 2. Click 'New Project'. 
-![New Project](/img/apm_8.7/p06.png) 
+![New Project](img/apm_8.7/p06.png) 
 
 3. Accept default and click 'Next'. 
-![Default Value](/img/apm_8.7/p07.png) 
+![Default Value](img/apm_8.7/p07.png) 
 
 4. Click 'New Empty Project'. 
-![New Empty Project](/img/apm_8.7/p08.png)
+![New Empty Project](img/apm_8.7/p08.png)
 
 5. Enter a project name and description.
-![setup assets](/img/apm_8.7/p09.png) 
+![setup assets](img/apm_8.7/p09.png) 
 
 6. After creating the project, you can now continue to upload your Predict notebooks into Watson Studio.
-![Empty project](/img/apm_8.9/p86.png) 
+![Empty project](img/apm_8.9/p86.png) 
 
 
 ## Auto Upload Predict Notebooks
@@ -76,53 +76,53 @@ The new auto upload feature saves considerable amount of time and allows the use
 To start the auto upload, you need to get the Project ID from the Watson Studio project you just created and add it to Predict’s workspace configuration.
 
 1. Go to the `Manage` tab. Find and copy the Project ID. Alternatively, you can also retrieve it from the URL.
-![Copy project ID](/img/apm_8.9/p70.png) 
+![Copy project ID](img/apm_8.9/p70.png) 
 
 2. Login to MAS to enter the Project ID.
 
 3. Click on the `Administration` icon on the top right corner.
-![Enter project ID](/img/apm_8.9/p71.png) 
+![Enter project ID](img/apm_8.9/p71.png) 
 
 4. On the sidebar menu, select `Workspace`
-![Go to Workspace](/img/apm_8.9/p72.png)
+![Go to Workspace](img/apm_8.9/p72.png)
 
 5. Make sure that you are on the `Overview` tab. Scroll down to find the `Predict` widget.
-![Workspace page](/img/apm_8.9/p73.png)
+![Workspace page](img/apm_8.9/p73.png)
 
 6. Click on `Predict` to access the Predict workspace details.
-![Predict widget](/img/apm_8.9/p74.png)
+![Predict widget](img/apm_8.9/p74.png)
 
 7. Click on he `Action` menu. Click on `Update configurations`.
-![Action menu button](/img/apm_8.9/p75.png)
-![Update configurations](/img/apm_8.9/p76.png)
+![Action menu button](img/apm_8.9/p75.png)
+![Update configurations](img/apm_8.9/p76.png)
 
 8. Click the `Edit` button next to `IBM Watson Studio Settings` to update Predict configurations.
-![Edit configuration](/img/apm_8.9/p78.png)
+![Edit configuration](img/apm_8.9/p78.png)
 
 9. Scroll down to `Advanced settings` and find `IBM Watson Studio Project Settings`. The `System managed`setting is turned on by default. Toggle it off so that you can enter the project ID.
-![Toggle setting OFF](/img/apm_8.9/p79.png)
+![Toggle setting OFF](img/apm_8.9/p79.png)
 
 10. You should be able to see the project ID field after turning the toggle off. Paste the project ID that you retrieved from your Watson Studio project. For instances outside of of IBM hardware, you may need to specify the IBM Watson Machine Learning URL, for more details see [Setup IBM Watson Machine Learning URL](#setup-ibm-watson-machine-learning-url)
-![Paste project ID](/img/apm_8.9/p80.png)
+![Paste project ID](img/apm_8.9/p80.png)
 
 11. A popup will show up asking for confirmation to activate Predict. Click `Activate` to apply change and start activation.
-![Activate Predict](/img/apm_8.9/p81.png)
+![Activate Predict](img/apm_8.9/p81.png)
 
 12. It should take roughly 15 minutes to upload all the data files and notebooks into Watson Studio. You can see the status in a widget in the details section.
-![Preload status](/img/apm_8.9/p82.png)
+![Preload status](img/apm_8.9/p82.png)
 
 13. Once the upload is complete, go back to Cloud Pak for Data and go to your Watson Studio project. Click on the `Assets` tab, and you should see that all the data files are successfully uploaded, including the Predict Python PMlib zip file and the Db2 certificate file, in the data section.
-![PMlib and Db2 certification files](/img/apm_8.9/p83.png)
+![PMlib and Db2 certification files](img/apm_8.9/p83.png)
 
 14. The process also auto-constructs an environment file. This is done by automatically retrieving 3 credentials needed to construct the file: `APM _ID`, `APM_API_BASEURL`, and `EXTERNAL_APM_API_BASEURL`. The only piece that was not automatically constructed is the `APM_API_KEY`. Please refer to one of the previous lab versions if you would like to manually find environment variables used in Predict.
-![Environment file](/img/apm_8.9/p84.png)
-![Environment file preview](/img/apm_8.9/p85.png)
+![Environment file](img/apm_8.9/p84.png)
+![Environment file preview](img/apm_8.9/p85.png)
 
 !!! note
 
     If you are logging into Cloud Pak for Data with a user other than the standard admin user, you must grant the admin user access to your project. Failure to do so will prevent Manage from exporting the data into your project with an error 'Specified project ID does not exist'.
     
-![Add admin user](/img/apm_8.9/set-up-watson-studio-exception-01.png) 
+![Add admin user](img/apm_8.9/set-up-watson-studio-exception-01.png) 
 
 ##  Using Watson Studio Library
 <a name="watson-studio-library"></a>
@@ -153,34 +153,34 @@ This step should only be executed after all preceeding steps have been completed
 2. Login to MAS to enter the IBM Watson Machine Learning URL.
 
 3. Click on the `Administration` icon on the top right corner.
-![Enter project ID](/img/apm_8.9/p71.png) 
+![Enter project ID](img/apm_8.9/p71.png) 
 
 4. On the sidebar menu, select `Workspace`
-![Go to Workspace](/img/apm_8.9/p72.png)
+![Go to Workspace](img/apm_8.9/p72.png)
 
 5. Make sure that you are on the `Overview` tab. Scroll down to find the `Predict` widget.
-![Workspace page](/img/apm_8.9/p73.png)
+![Workspace page](img/apm_8.9/p73.png)
 
 6. Click on `Predict` to access the Predict workspace details.
-![Predict widget](/img/apm_8.9/p74.png)
+![Predict widget](img/apm_8.9/p74.png)
 
 7. Click on he `Action` menu. Click on `Update configurations`.
-![Action menu button](/img/apm_8.9/p75.png)
-![Update configurations](/img/apm_8.9/p76.png)
+![Action menu button](img/apm_8.9/p75.png)
+![Update configurations](img/apm_8.9/p76.png)
 
 8. Click the `Edit` button next to `IBM Watson Studio Settings` to update Predict configurations.
-![Edit configuration](/img/apm_8.9/p78.png)
+![Edit configuration](img/apm_8.9/p78.png)
 
 9. Scroll down to `Advanced settings` and find `IBM Watson Machine Learning`. The `System managed` setting is turned on by default. Toggle it off so that you can enter the URL.
-![Toggle setting OFF URL](/img/apm_8.9/set-up-wml-url-01.png)
+![Toggle setting OFF URL](img/apm_8.9/set-up-wml-url-01.png)
 
 10.  You should be able to see three fields; WML URL, WML Version and WML Instance ID. Select the first field labeled WML URL and paste the the Cloud Pak for Data URL.
-![Paste project ID](/img/apm_8.9/set-up-wml-url-02.png)
+![Paste project ID](img/apm_8.9/set-up-wml-url-02.png)
 
 11.  A popup will show up asking for confirmation to activate Predict. Click `Activate` to apply change and start activation.
-![Activate Predict](/img/apm_8.9/p81.png)
+![Activate Predict](img/apm_8.9/p81.png)
 
 12.  It should take roughly 15 minutes to upload all the data files and notebooks into Watson Studio. You can see the status in a widget in the details section.
-![Preload status](/img/apm_8.9/p82.png)
+![Preload status](img/apm_8.9/p82.png)
 
 [def]: #setup-ibm-watson-machine-learning-url

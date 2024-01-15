@@ -14,7 +14,7 @@ Managing and reducing emissions is one of the top priorities of the VP sustainab
 
 # Personas
 
-![img](/sustain_mas/img/personas.png){:style="height:800px;width:400px;margin-left:100px"}
+![img](img/personas.png){:style="height:800px;width:400px;margin-left:100px"}
 
 ---
 

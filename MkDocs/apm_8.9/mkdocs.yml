@@ -1,11 +1,11 @@
 site_name: Maximo APM Hands On Lab
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Asset Performance Management v8.9 Hands on Lab"
 site_dir: ../../site/apm_8.9
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - Maximo APM Lab:
     - Welcome to the Lab: index.md
     - Get Started: get_started.md
@@ -18,8 +18,9 @@ nav:
       - Create Custom Scores Using a Notebook: utilities_pump_score_notebook.md
       - Create Custom Score Forecast via Notebook: utilities_st_futurescore_demo_notebook.md
       - Create Custom Score Forecast via WML Model: utilities_st_futurescore_using_wml_model.md
-
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:

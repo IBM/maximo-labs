@@ -1,11 +1,11 @@
 site_name: Monitor Auto AI Hands on Lab
-site_url: http://maximo-lab.monitordemo4.ibmmam.com/
+site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira & Contributors
 site_description: "Maximo Auto AI Hands on Lab"
 site_dir: ../../site/monitor_autoai_8.5
 
 nav:
-  - Get back to Maximo Labs: /
+  - Get back to Maximo Labs: ..
   - Maximo Auto AI Hands on Lab:
     - Welcome to the Maximo Auto AI Hands on Lab: index.md
     - Get Started: get_started.md
@@ -20,7 +20,9 @@ nav:
     - 8. Train Model: train_test_save_model_in_monitor.md
     - 9. Deploy Model: deploy_prediction_model_function.md
     - 10. Update Dashboards: update_dashboards.md
-  - About: about.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
 
 theme: readthedocs
 markdown_extensions:

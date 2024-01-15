@@ -38,7 +38,7 @@ Select the `4_PMI - End of Life Curve HPU` notebook template.
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
 
-![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
+![Restarting Environment](img/apm_8.7/HPU_dataloader_3.png)
 
 ## Run the Notebook
 <a name="run_notebooks"></a>
@@ -52,7 +52,7 @@ Select the `4_PMI - End of Life Curve HPU` notebook template.
 
 3. Run the next cell to set the `asset_group_id` from the stored asset group id in the JSON file produced from the Fast Start Data Loader notebook. Ensure the printed asset group ID matches your asset group.
 
-![Asset Group ID](/img/apm_8.7/hpu_eol_1.png)
+![Asset Group ID](img/apm_8.7/hpu_eol_1.png)
 
 4. Run the next cell to define the API keys used to call Maximo Predict from the `Predict_Envs.JSON` file
 
@@ -78,18 +78,18 @@ Select the `4_PMI - End of Life Curve HPU` notebook template.
 1. Navigate to Maximo Health and Predict for Utilities within your environment
 
 2. Use the left-hand menu to go into `Predict Grouping`
-   ![Predict Grouping](/img/apm_8.7/hpu_fs11.png) 
+   ![Predict Grouping](img/apm_8.7/hpu_fs11.png) 
 
 3. Select your asset group
-![Predict Grouping](/img/apm_8.7/hpu_2fsl_8.png)
+![Predict Grouping](img/apm_8.7/hpu_2fsl_8.png)
 
 4. Click into your asset group and ensure you have End of Life Curve listed under `Trained instances registered for this group` and select an asset to go to the Health Dashboard
 
-![Predict Grouping](/img/apm_8.7/hpu_eol_2.png)
+![Predict Grouping](img/apm_8.7/hpu_eol_2.png)
 
 8. Scroll down and expand the `Predict` section to ensure the End of Life Curve is visible.
 
-![End Of Life Curve](/img/apm_8.7/hpu_eol_3.png)
+![End Of Life Curve](img/apm_8.7/hpu_eol_3.png)
 
 !!! note
 

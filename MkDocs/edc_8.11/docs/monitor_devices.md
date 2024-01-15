@@ -8,7 +8,7 @@ In this Exercise you will learn how to:
 *Before you begin:*  
 This Exercise requires that you have:
 
-1. completed the pre-requisites required for [all labs](../prereqs)
+1. completed the pre-requisites required for [all labs](prereqs.md)
 2. completed the previous exercises
  
 The Edge Data Collector edge uses the Maximo Monitor capability to use the priveledged gateway device type, which enables the automatic creation of new devices when data is delivered from the gateway on behalf of them.
@@ -25,48 +25,48 @@ The Edge Data Collector edge uses the Maximo Monitor capability to use the prive
 In this section you will create the credentials for the EDC edge gateway, so the EDC edge can connect to Maximo Monitor.</br>
 
 Login to MAS and navigate to Monitor:
-![MAS Monitor](/img/edc_8.11/monitor_devices_01.png)</br></br>
+![MAS Monitor](img/monitor_devices_01.png)</br></br>
 
 Navigate to the IoT Tool from the Monitor Home page:
-![IoT Tool](/img/edc_8.11/monitor_devices_10.png)</br></br>
+![IoT Tool](img/monitor_devices_10.png)</br></br>
 
 It opens a new tab. Navigate to Device Types:
-![Add device type](/img/edc_8.11/monitor_devices_11.png)</br></br>
+![Add device type](img/monitor_devices_11.png)</br></br>
 
 Select `Add Device Type`:
-![Add device type](/img/edc_8.11/monitor_devices_12.png)</br></br>
+![Add device type](img/monitor_devices_12.png)</br></br>
 
 Select `Gateway`, give it the name `XX_EDC_GW` and a short description.</br>
 Click `Next` and `Finish`:
-![Add new device type](/img/edc_8.11/monitor_devices_13.png)</br></br>
+![Add new device type](img/monitor_devices_13.png)</br></br>
 
 !!! tip
     XX in the device type name should be your initials in case other people are following this lab in the same Maximo Application Suite environment.</br>
 
 
 Select `Register Devices`:
-![Add new device type](/img/edc_8.11/monitor_devices_14.png)</br></br>
+![Add new device type](img/monitor_devices_14.png)</br></br>
 
 Define the Device Id `XX_EDC_GW_01`. Click `Next`:
-![Add new Edge device](/img/edc_8.11/monitor_devices_15.png)</br></br>
+![Add new Edge device](img/monitor_devices_15.png)</br></br>
 
 OPTIONAL: Add a Model name `Edge Data Collector` and Manufacturer name `IBM`. Click `Next`:
-![Add new Edge device](/img/edc_8.11/monitor_devices_16.png)</br></br>
+![Add new Edge device](img/monitor_devices_16.png)</br></br>
 
 Just click `Next`:
-![Add new Edge device](/img/edc_8.11/monitor_devices_17.png)</br></br>
+![Add new Edge device](img/monitor_devices_17.png)</br></br>
 
 Select `Privileged Gateway` and click `Next`:
-![Add new Edge device](/img/edc_8.11/monitor_devices_18.png)</br></br>
+![Add new Edge device](img/monitor_devices_18.png)</br></br>
 
 Click `Next` to let the system auto generate an authentication token:
-![Add new Edge device](/img/edc_8.11/monitor_devices_19.png)</br></br>
+![Add new Edge device](img/monitor_devices_19.png)</br></br>
 
 Just click `Finish`:
-![Add new Edge device](/img/edc_8.11/monitor_devices_20.png)</br></br>
+![Add new Edge device](img/monitor_devices_20.png)</br></br>
 
 You will see the created Device credentials:
-![Add new Edge device](/img/edc_8.11/monitor_devices_21.png)</br></br>
+![Add new Edge device](img/monitor_devices_21.png)</br></br>
 
 
 !!! attention "Save these credentials"
@@ -74,26 +74,26 @@ You will see the created Device credentials:
     AND the authentication token is non-recoverable once you navigate away from this page. 
 
 The gateway is now created in the IoT Tool and it will appear as `Disconnected` until the physical EDC Edge connects:
-![Add new Edge device](/img/edc_8.11/monitor_devices_22.png)</br></br>
+![Add new Edge device](img/monitor_devices_22.png)</br></br>
 
 ##  Pre-create device type for the VFDs
 
 You need to create the device type for the VFD´s manually in Monitor to ensure the right version of Device Type is being used later on.</br>
 
 Navigate to Setup from the Monitor Home page:
-![Monitor Setup](/img/edc_8.11/monitor_devices_02.png)</br></br>
+![Monitor Setup](img/monitor_devices_02.png)</br></br>
 
 Select `Devices`:
-![Monitor Setup](/img/edc_8.11/monitor_devices_03.png)</br></br>
+![Monitor Setup](img/monitor_devices_03.png)</br></br>
 
 Click on `Add device type`:
-![Add device type](/img/edc_8.11/monitor_devices_04.png)</br></br>
+![Add device type](img/monitor_devices_04.png)</br></br>
 
 Select `Basic template` as this will create the new version of the device type and click `Next`:
-![Empty template](/img/edc_8.11/monitor_devices_05.png)</br></br>
+![Empty template](img/monitor_devices_05.png)</br></br>
 
 Define the Device type name as `VariableFrequencyDrives` (*exactly like this*), give it a description and press `Create`:
-![Template identity](/img/edc_8.11/monitor_devices_06.png)</br></br>
+![Template identity](img/monitor_devices_06.png)</br></br>
 
 !!! note
     We will define the metrics in a later exersice once we have defined the data points in the EDC Integration.</br>

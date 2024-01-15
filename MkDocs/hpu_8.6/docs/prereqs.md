@@ -1,4 +1,4 @@
-![img](/img/hpu_8.6/banner.png)
+![img](img/banner.png)
 
 # Pre-Requisite Instructions
 
@@ -26,14 +26,14 @@ Your Exercise facilitator should have provided you with the information on your 
 1. From the grid view...
 2. To add the saved view...click on the `Filter` icon, click on `Edit` next to `Query`, and choose `EUDEMO_ST`. Click `Ok` and `Apply`. 
 
-    ![img](/img/hpu_8.6/prereq1.1.png)
-    ![img](/img/hpu_8.6/prereq1.2.png) 
-    ![img](/img/hpu_8.6/prereq2.1.png) 
+    ![img](img/prereq1.1.png)
+    ![img](img/prereq1.2.png) 
+    ![img](img/prereq2.1.png) 
 
 3. Click the three dots next to the drop down menu and choose `Save as` to save this group of assets. 
 
-    ![img](/img/hpu_8.6/prereq2.2.png) 
+    ![img](img/prereq2.2.png) 
 
 4. This user will now be able to see this view of assets when they login. 
 
-    ![img](/img/hpu_8.6/prereq4.1.png) 
+    ![img](img/prereq4.1.png) 

@@ -17,7 +17,7 @@ Basically you need to do the following to create a new branch locally and on the
 
 !!! note
     If you are making a new lab, then jump over to "Make first changes for new lab"<br>
-    on [Create new lab](../create_new/#make-first-changes-for-new-lab).
+    on [Create new lab](create_new.md#make-first-changes-for-new-lab).
 
 
 Locate the labs folder under the /MkDocs, e.g. /MkDocs/monitor_8.2<br>
@@ -68,15 +68,15 @@ Push the changes to the Github branch:
 Go to the Github repository [https://github.com/IBM/maximo-labs](https://github.com/IBM/maximo-labs){target=_blank}
 
 Select your branch in the dropdown box:
-![Select branch](/img/contribute/add_select_branch.png)
+![Select branch](img/add_select_branch.png)
 
 Create a Pull request:
-![Select Pull request](/img/contribute/add_select_pull_request.png)
+![Select Pull request](img/add_select_pull_request.png)
 
 Give it a title and description. Hit the `Create pull request` button.
 
 !!! attention "Remember to do this:"
-    Ask Carlos Ferreia (carlos.ferreira1@ibm.com) to review and accept your Pull Request.
+    Ask Carlos Ferreia (carlos.ferreira1@ibm.com) or one of the repository administrators to review and accept your Pull Request.
 
 ## 5. Clean up branches locally and remotely (Github)
 

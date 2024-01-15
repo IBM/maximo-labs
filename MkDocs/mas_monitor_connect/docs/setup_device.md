@@ -64,7 +64,7 @@ In this Exercise you will learn how to setup Monitor to receive data from your m
 
 The metrics should look like this:
 
-![Metrics](/img/mas_monitor_connect/metrics.png)
+![Metrics](img/metrics.png)
 
 ## Create a device in Monitor representing your mobile device
 

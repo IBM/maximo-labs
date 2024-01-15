@@ -3,9 +3,9 @@
 
 < This is what you need to know while getting started on this lab >
  
-Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](../prereqs).
+Students doing the exercises and Facilitators preparing for delivering the exercises should read the [instructions](prereqs.md).
 
-See [Contributing to Labs](../../about) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
+See [Contributing to Labs](../../contribute/) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
 welcome your contributions to existing or new exercises. 
 
 ## Learning Paths

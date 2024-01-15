@@ -13,7 +13,7 @@ All Exercises require that you have the following experience and setup complete.
 
 ## Setup
 -  Desktop  environment with network access to IBM Cloud
--  Setup your [Python v3.7 Development environment](../setup_local_environment/)
+-  Setup your [Python v3.7 Development environment](setup_local_environment.md)
 -  Your instructor has provided you the data and sample notebooks used in these labs.
 -  Ask your administrator or instructor for the credentials file to access Monitor programmatically.  See section [Establishing a Connection](https://www.ibm.com/docs/en/maximo-monitor/8.5.0?topic=calculations-using-custom-functions#env) 
 -  IBM ID and  IBM Cloud ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?):<br>

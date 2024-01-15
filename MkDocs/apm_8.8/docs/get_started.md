@@ -76,7 +76,7 @@ These are the exercises available in this lab.
 10. [Install and Configure App Connect](appconnect_install.md) flows to load asset metadata and timeseries data into Health and Predict - Utilities.  (Optional)
 
 
-![Lab Flows by User](/img/apm_8.7/lab_flow.png) 
+![Lab Flows by User](img/apm_8.7/lab_flow.png) 
 
 
 ### Architecture
@@ -84,8 +84,8 @@ These are the exercises available in this lab.
 Here is the architectural deployment pattern these labs are targeted for:
 
 Maximo v7.6.1 deployment with Maximo Application Suite Health Predict and Utilities
-![Deployment Pattern](/img/apm_8.7/EAMbase_architecture.png)
+![Deployment Pattern](img/apm_8.7/EAMbase_architecture.png)
 
 Maximo Application Suite Health Predict and Utilities deployed as a Manage Add On
-![Deployment Pattern](/img/apm_8.7/ManageBase_architecture.png)
+![Deployment Pattern](img/apm_8.7/ManageBase_architecture.png)
 

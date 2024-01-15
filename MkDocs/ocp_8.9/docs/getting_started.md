@@ -22,7 +22,7 @@ This deployment lab is only suitable for sandbox environments. A sandbox environ
 
 Here is a high level architecture (component diagram) of Maximo Application Suite:
 
-![Architecture](/img/ocp_8.9/architecture.png)
+![Architecture](img/architecture.png)
 
 **Available Services**
 
@@ -38,7 +38,7 @@ CP4D offers a wide selection of IBM and third-party services spanning the entire
 
 IBM Watson Studio empowers data scientists, developers and analysts to build, run and manage AI models, and optimize decisions anywhere on IBM Cloud Pak for Data. [Watson Studio](https://www.ibm.com/cloud/watson-studio)
 
-You can learn more about setting up and using Watson Studio in this ![Lab](/apm_8.9/setup_watson_studio/)
+You can learn more about setting up and using Watson Studio in this [Lab](../../apm_8.9/setup_watson_studio/)
 
 
 **AMQ Kafka**

@@ -42,8 +42,8 @@ These are the exercises available in this lab.
 Here is the architectural deployment pattern these labs are targeted for:
 
 Maximo v7.6.1 deployment with Maximo Application Suite Health Predict and Utilities
-![Deployment Pattern](/img/apm_8.7/EAMbase_architecture.png)
+![Deployment Pattern](img/apm_8.7/EAMbase_architecture.png)
 
 Maximo Application Suite Health Predict and Utilities deployed as an Add On to Manage 
-![Deployment Pattern](/img/apm_8.7/ManageBase_architecture.png)
+![Deployment Pattern](img/apm_8.7/ManageBase_architecture.png)
 

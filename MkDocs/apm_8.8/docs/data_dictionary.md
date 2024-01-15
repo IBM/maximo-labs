@@ -2,10 +2,10 @@
 
 In this exercise you will:
 
-- [Understand the Asset Data ](data_dictionary) that will be used in these labs for each exercise.
+- [Understand the Asset Data ](#data_dictionary) that will be used in these labs for each exercise.
 
 !!! note
-    This lab is still being developed, incomplete and may have errors.  We provide it to get your [feedback](https://github.com/IBM/monitor-hands-on-lab/issues/new) and allow you to reference the materials as the labs are built.
+    This lab is still being developed, incomplete and may have errors.  We provide it to get your [feedback](https://github.com/IBM/maximo-labs/issues/new) and allow you to reference the materials as the labs are built.
 
 
 ## Understand Asset Data

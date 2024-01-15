@@ -1,6 +1,6 @@
-![img](/img/mas_8.6/banner.png){:style="height:100px;width:800px"}
+![img](img/banner.png){:style="height:100px;width:800px"}
 
-# Welcome to the Maximo Application - End-to-End Overview Lab <br> (Version: 8.6)
+# Welcome to the Maximo Application</br>- End-to-End Overview Lab (Version: 8.6)
 
 You will learn a high level overview of the Maximo Application Suite applications: Monitor, Digital Twin Exchange, Visual Inspection, Manage, Mobile, Assist, Parts Identifier, Safety, Predict, and Health with a story of a waterwaste plant. You will understand how all of these applications work together to run operations within a business. 
 
@@ -10,9 +10,9 @@ Preparing for delivering the demo should read the Pre-Requisites located in the 
 
 
 
-![img](/img/mas_8.6/mkdocstab.png){:style="height:400px;width:400px"}
+![img](img/mkdocstab.png){:style="height:400px;width:400px"}
 
-See [Contributing to Labs](../../about) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
+See [Contributing to Labs](../../contribute/) if you are interested in providing feedback by submitting enhancements or bugs.  We also 
 welcome your contributions to existing or new exercises. 
 
 ## Story
@@ -78,7 +78,7 @@ A Water Resource Authority needs to manage water and wastewater treatment assets
 
 ## Demo Flow
 
-![img](/img/mas_8.6/demo_flow.png){:style="height:400px;width:800px"}
+![img](img/demo_flow.png){:style="height:400px;width:800px"}
 
 ---
 

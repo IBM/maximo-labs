@@ -8,7 +8,7 @@ In this Exercise you will learn how to:
 *Before you begin:*  
 This Exercise requires that you have:
 
-1. completed the pre-requisites required for [all labs](../prereqs)
+1. completed the pre-requisites required for [all labs](prereqs.md)
  
 ---
 ##  Install Node-RED locally
@@ -31,14 +31,14 @@ Node-RED library dependencies:</br>
 - node-red-contrib-chunks-to-lines</br>
 
 1. Click on the burger menu in upper right hand corner and select `Manage palette`.
-![Manage palette](/img/monitor_nodered_csv_importer_1.0/Setup_01.png)</br></br>
+![Manage palette](img/Setup_01.png)</br></br>
 2. Click on `Install` and write `node-red-dashboard`in the Search field - then click on `Install`.
-![Install node-red-dashboard](/img/monitor_nodered_csv_importer_1.0/Setup_02.png)</br></br>
+![Install node-red-dashboard](img/Setup_02.png)</br></br>
 3. Click on `Install` again.
-![Install node-red-dashboard](/img/monitor_nodered_csv_importer_1.0/Setup_03.png)</br></br>
+![Install node-red-dashboard](img/Setup_03.png)</br></br>
 4. Wait until you see the new nodes have been installed.
-![Install node-red-dashboard](/img/monitor_nodered_csv_importer_1.0/Setup_04.png)</br></br>
-5. Repeat step 2-4 for the other 3 libraries.
+![Install node-red-dashboard](img/Setup_04.png)</br></br>
+5. Repeat step 2-4 for the other 2 libraries: `node-red-contrib-ui-upload` and `node-red-contrib-chunks-to-lines`.
 
 
 ---

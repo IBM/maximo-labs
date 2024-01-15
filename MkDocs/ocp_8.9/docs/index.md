@@ -19,8 +19,7 @@ Before getting started ensure you have completed the prerequisites: [Prerequisit
 
 ## License
 
-See the [About page](about.md) for how this Maximo Hands on Lab Exercise is licensed.
-
+See the [Copyright page](../copyright) for how this Maximo Hands on Lab Exercise is licensed.
 
 ---
 

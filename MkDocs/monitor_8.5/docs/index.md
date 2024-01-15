@@ -14,7 +14,7 @@ visualizations such as time series line and bar charts, tabular reports, and int
 and its additional add-on services enable organizations to capture and explore data for devices, equipment and machines,
 and discover insights that can drive better decision-making.
 
-Watch the Maximo Application Suite Demonstration [![demonstration](/img/monitor_8.5/demo.png)](https://mediacenter.ibm.com/media/IBM+Maximo+Application+Suite+Demo/1_mv1gwisi
+Watch the Maximo Application Suite Demonstration [![demonstration](img/demo.png)](https://mediacenter.ibm.com/media/IBM+Maximo+Application+Suite+Demo/1_mv1gwisi
  "demonstration")
 
 ---

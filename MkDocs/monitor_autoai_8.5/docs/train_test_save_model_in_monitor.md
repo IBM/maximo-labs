@@ -19,7 +19,7 @@ In these exercises using the provided Jupyter Notebook you will:
     already installed.  Skip steps 3, 4 and 8 if you are using Windows Virtual Machine.
 
 1.  Open a terminal window on Mac or a command prompt window on Windows. 
-![Terminal](/img/monitor_autoai_8.4/tm03.png) ![Terminal](/img/monitor_autoai_8.4/tm01.png)
+![Terminal](img/tm03.png) ![Terminal](img/tm01.png)
     
 2.  Activate your virtual environment. 
 
@@ -86,12 +86,12 @@ Click on notebook named `maximo_auto_ai-extra-trees-pump.ipyn`
 7.   Make a copy of the Project Notebook  Rename the notebook, change the name of your notebook by appending your own 
 initials to the end of the Jupyter Notebook name. In the jupyter notebook, select `file` menu and `Save As`. Enter
 `notebooks/maximo_auto_ai-extra-trees-pump-co.ipynb` and click `Save`.
-![Save As Model](/img/monitor_autoai_8.4/tm02.png)
+![Save As Model](img/tm02.png)
 
 8.  This code in the notebook sets the Monitor credentials and entity type for your your instance of Monitor.  Copy your 
 credentials in Monitor from `Services` menu and Watson IOT Platform Analytics.  Save it in a file named `beta-1_credentials.json`
 in the directory shown in the code below.  
-![Copy Credentials for Analytics](/img/monitor_autoai_8.4/s01a.png)   
+![Copy Credentials for Analytics](img/s01a.png)   
     ```
     credentials = {}
     with open('/Users/carlos.ferreira1ibm.com/ws/autoai/beta-1_credentials.json', encoding='utf-8') as F:
@@ -144,7 +144,7 @@ log files.
     x_pos_predictions = extra_trees_model.predict(X_test)
     ```
      
-2. This code in the notebook plots the prediction accuracy by comparing prediction values versus true values.  ![Plot Compare Predictions](/img/monitor_autoai_8.4/t01.png)
+2. This code in the notebook plots the prediction accuracy by comparing prediction values versus true values.  ![Plot Compare Predictions](img/t01.png)
 
     ```
     plt.scatter(y_test, x_pos_predictions)
@@ -152,7 +152,7 @@ log files.
     plt.ylabel('Predictions')
     ```    
 
-3.  This code in the notebook calculates the model accuracy. Smaller values indicate better accuracy making predictions. ![RMSE](/img/monitor_autoai_8.4/t02.png)
+3.  This code in the notebook calculates the model accuracy. Smaller values indicate better accuracy making predictions. ![RMSE](img/t02.png)
 
     ```
     from sklearn import metrics

@@ -12,7 +12,7 @@ much each Hooper is operating outside the required operating ranges.
 
 *Before you begin:*  
 
-- This exercise requires that you have completed the [pre-requisites](../prereqs) required for all Exercises.
+- This exercise requires that you have completed the [pre-requisites](prereqs.md) required for all Exercises.
 
 - This exercise requires that you have completed the previous exercise.
 
@@ -23,33 +23,42 @@ Value cards allows you to display a metric or multiple metrics in a card.  It is
 asset. You are also able to set alert thresholds within the JSON to have different icons appear on the card to indicate 
 a normal or irregular status. 
 
-1.  In Monitor, select `Monitor` tab,  ![Monitor](/img/monitor_8.5/fun29.png) 
+1.  In Monitor, select `Monitor` tab,  
+![Monitor](img/fun29.png) 
 
 2.  Open your Asset Dashboard.  Search `Device types` for `Sample_Packaging_Hopper_Type_yourinitials`.  Click on your 
 `Device Type`,  Click on asset `730001` and  `Asset Metrics Dashboard` which is an built in dashboard Monitor created 
-for your asset metrics.  ![Search for Device Type Dashboards](/img/monitor_8.5/fun30.png) 
+for your asset metrics.  
+![Search for Device Type Dashboards](img/fun30.png) 
 
 3.  Edit the asset dashboard that you will add the Value card to.   Click on `gear` icon. Select `Edit Dashboard` and click 
-`Continue`  button.  ![Edit Dashboard](/img/monitor_8.5/fun32.png) 
+`Continue`  button.  
+![Edit Dashboard](img/fun32.png) 
   
-4.  Click on `value` card for  `temperature_deviation`.  ![Edit Value card](/img/monitor_8.5/fun31.png) 
+4.  Click on `value` card for  `temperature_deviation`.  
+![Edit Value card](img/fun31.png) 
 
-5.  Enter the values below for the `Value` card.  ![Value Card](/img/monitor_8.5/fun33.png) 
+5.  Enter the values below for the `Value` card.  
+![Value Card](img/fun33.png) 
 
-6.  Scroll up and click the `Save` button   ![Save Dashboard](/img/monitor_8.5/fun34.png)
+6.  Scroll up and click the `Save` button   
+![Save Dashboard](img/fun34.png)
 
-7.  Scroll down on the  `Asset Metrics Dashboard`  to see the new value Card. ![Temperature Deviation Value Card](/img/monitor_8.5/fun35.png) &nbsp;
+7.  Scroll down on the  `Asset Metrics Dashboard`  to see the new value Card. 
+![Temperature Deviation Value Card](img/fun35.png) &nbsp;
 
 8.  You can further customize cards by editing their settings.  Edit the dashboard again.  Click on `Value Card` for Deviation.  Click on `Settings`
-Change the font size to a smaller font.  ![Save Dashboard](/img/monitor_8.5/fun36.png)
+Change the font size to a smaller font.  
+![Save Dashboard](img/fun36.png)
 
 9.  Add another Value card for the `ambient_temp_over_max_status`,   Scroll down and click on `Add Card` button and repeat 
-the step 4 above.     ![Save Dashboard](/img/monitor_8.5/fun36_2.png)
+the step 4 above.     
+![Save Dashboard](img/fun36-2.png)
 
 Save your changes to the dashboard.
 
-10.  You can also edit dashboard cards directly by modifying the JSON. Click on your value card.  Click on `Edit Json`
- ![Save Dashboard](/img/monitor_8.5/fun37.png)
+10.  You can also edit dashboard cards directly by modifying the JSON. Click on your value card.  Click on `Edit Json`  
+![Save Dashboard](img/fun37.png)
   
 Some other important notes about the JSON:
 -	The `id` at the very top needs to be a unique name for this card. Use dashes instead of spaces.

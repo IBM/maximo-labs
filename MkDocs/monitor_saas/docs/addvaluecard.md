@@ -16,25 +16,25 @@ A great way to augment your Maximo Asset Monitor dashboards is with value cards.
 10. Add card
 11. Save and close
 
-![Value card widget](/img/monitor_saas/i208.png)
-![Value card](/img/monitor_saas/i209.png)
+![Value card widget](img/i208.png)
+![Value card](img/i209.png)
 
 ## Create Value Card using JSON
 ### Export Dashboard JSON
 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
-![Gear Edit](/img/monitor_saas/im21.png) &nbsp;
+![Gear Edit](img/im21.png) &nbsp;
 3. Click `Edit Dashboard`.
-![Edit Dashboard](/img/monitor_saas/im22.png) &nbsp;
+![Edit Dashboard](img/im22.png) &nbsp;
 4. Click `Export` and save your JSON into a folder that you can keep handy. Make sure to save the file with the file extension `.json`. Open the file in a text editor of your choice. Here are some good open source options: [Atom](https://atom.io/), [Brackets](http://brackets.io/), and [Sublime](https://www.sublimetext.com/).
 ### Add Value Card JSON
-![Sourdough Leavening Dashboard](/img/monitor_saas/im28.png) &nbsp;
+![Sourdough Leavening Dashboard](img/im28.png) &nbsp;
 In this Exercise, you will learn to make a more simple value card in order to best learn the theory behind the JSON mapping. You will make a value card that will look like the value card shown on the dashboard below.
 
-![Humidity Value Card](/img/monitor_saas/im29.png) &nbsp;
+![Humidity Value Card](img/im29.png) &nbsp;
 
 1. Please copy and paste the JSON code block below into the top of your `cards` array.
-![Card Array](/img/monitor_saas/im19.png) &nbsp;
+![Card Array](img/im19.png) &nbsp;
 ``` yaml
 {
         "id": "ambient-humidity-value",
@@ -77,7 +77,7 @@ In this Exercise, you will learn to make a more simple value card in order to be
     },
 ```
 2. The information below gives you the tools you need to map the data items in your Entity Type to the card you will display with your JSON code.
-![Value Card Mapping](/img/monitor_saas/im27.png) &nbsp;
+![Value Card Mapping](img/im27.png) &nbsp;
 Some other important notes about the JSON:
 -	The `id` at the very top needs to be a unique name for this card. Use dashes instead of spaces.
 -	The `size` is self explanatory. This size is `SMALLWIDE`
@@ -90,10 +90,10 @@ Some other important notes about the JSON:
 1. 1. Open up the landing page for your entity type and select the dashboard you will be uploading your image card to.
 2. Click on the gear in the top right of your chosen dashboard.
 
-![Gear Edit](/img/monitor_saas/im21.png) &nbsp;
+![Gear Edit](img/im21.png) &nbsp;
 
 3. Click `Edit Dashboard`.
 
-![Edit Dashboard](/img/monitor_saas/im22.png) &nbsp;
+![Edit Dashboard](img/im22.png) &nbsp;
 
 4. Click `Import` and select the file that you have just been working on. If you are successful, a small grey square will appear among your line graphs to drag and drop until you are satisfied with the layout. If you are unsuccessful, you will receive an error. The error message will notify you of something to change. Another option is to use a JSON parser on the internet that will notify you if your JSON has discrepancies. If at first you do not succeed, try, try again!

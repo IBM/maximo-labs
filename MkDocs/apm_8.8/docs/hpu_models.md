@@ -19,7 +19,7 @@ Ensure you have access to :
 
 - Sample ST(Substation Transformer) data for HPU, and make sure required data are loaded through dataloader via App Connect. Check out the sample data folder structure as below. 
 
-![drawing](/img/apm_8.7/hpu_model_st_sample_data_overview.png){ width=70% height=70% }<br>   
+![drawing](img/apm_8.7/hpu_model_st_sample_data_overview.png){ width=70% height=70% }<br>   
 
 
 ## Out Of The Box Models
@@ -52,7 +52,7 @@ Health and Predict - Utilities includes the supported Asset Classes listed in ta
     Some asset classes have subtype, like Circuit Breaker or Underground Transmission Cable
 
 **HPU Model Calculation Methodology**
-![drawing](/img/apm_8.7/hpu_model_bctc.png)
+![drawing](img/apm_8.7/hpu_model_bctc.png)
 
 ## Create a Score Group
 <a name="score_groups"></a>
@@ -60,33 +60,33 @@ Health and Predict - Utilities includes the supported Asset Classes listed in ta
 Create a Score Group for Substation Transformer Assets
 
 1\. Login and go to Health and Predict Utilities application.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_0.png)
+![drawing](img/apm_8.7/hpu_model_sc_setup_0.png)
    
 
 2\. Click `Scoring and DGA settings` in the menu,in Scoring and DGA settings page, click `Create a scoring and DGA group` button.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_1.png)    
+![drawing](img/apm_8.7/hpu_model_sc_setup_1.png)    
 
 3\. In the create score group page,fill in name,description, select `Asset` object,choose `Connectigng group to notebook`.
 
 4\. Then click `Select` to choose `IBM Transformers Tap Changers DGA 5.0.0` notebook in the notebook list dialog,click `Use notebook`.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_2.png)   
+![drawing](img/apm_8.7/hpu_model_sc_setup_2.png)   
 
 5\. Scroll down `query` part, click `Select` to open query dialog, user can select an existing query, or click `+` button to create a new query for ST assets.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_3.png)   
+![drawing](img/apm_8.7/hpu_model_sc_setup_3.png)   
 E.g Select site and classification for the new query.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_4.png)   
+![drawing](img/apm_8.7/hpu_model_sc_setup_4.png)   
 
 6\. After select the notebook and query, click `Create` to create the score group.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_5.png)   
+![drawing](img/apm_8.7/hpu_model_sc_setup_5.png)   
 
 
 7\. After score group is created, system will redirect to the score group detail page, in this page, user can see all the scores and the asset list.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_6.png)   
+![drawing](img/apm_8.7/hpu_model_sc_setup_6.png)   
 
 8\. Click the score in the table, and active it on the right, scores need to be activated one by one based on the dependency.
-![drawing](/img/apm_8.7/hpu_model_sc_setup_7.png)   
+![drawing](img/apm_8.7/hpu_model_sc_setup_7.png)   
 
-![drawing](/img/apm_8.7/hpu_model_sc_setup_8.png)    
+![drawing](img/apm_8.7/hpu_model_sc_setup_8.png)    
 
 9\. After activating all the scores, click the `Recalculate scores` to start the analysis.
 
@@ -100,7 +100,7 @@ In Health and Predict - Utilities, the scoring calculation happen in Watson Stud
 ### Substation Transformer Model Configuration 
 
 For ST (Substation Transformer), configuration file is named `IBM-Transformers-Tap-Changers-DGA-5.0.0.cfg`.
-![drawing](/img/apm_8.7/hpu_model_ws_cfg.png)  
+![drawing](img/apm_8.7/hpu_model_ws_cfg.png)  
 
 In the configuration file, under `Common` section `defaultsetup.components` has all the scores group, contributors listed, and functions and parameters for each item. In `defaultsetup.dependencies` section describes the dependencies. E.g Health depends on `Transformer health index` and `Tap changer health index`, `Transformer health index` group calculated based on several contributors.  Function details can be found in `[ext_function_name]` in the file named. E.g For `Health` ext_function_name is configured as `[Health Weighted]`, the implementation is `common_calculate_weighted` which is pre-defined in healthlib.
 
@@ -241,12 +241,12 @@ calctype = NONE
 ```
 
 Below is the dependency of out of the box Substation Transformer scores.  
-![drawing](/img/apm_8.7/hpu_model_ws_cfg_sample.png){ width=70% height=70% }  
+![drawing](img/apm_8.7/hpu_model_ws_cfg_sample.png){ width=70% height=70% }  
 
 ### Substation Transformer Model Notebook 
 
 For ST(Substation Transformer), notebook is IBM-Transformers-Tap-Changers-DGA-5.0.0.ipynb as configured in cfg file.
-![drawing](/img/apm_8.7/hpu_model_ws_notebook.png)   
+![drawing](img/apm_8.7/hpu_model_ws_notebook.png)   
 
 Any permenant modification on notebook, will need save to a latest version to take affect, because each job binds with a version of the notebook, by default it's the `Latest` version.
 
@@ -255,16 +255,16 @@ Any permenant modification on notebook, will need save to a latest version to ta
 Job is `Run-IBM-Transformers-Tap-Changers-DGA-4-0-0.Details`and can be checked using the steps below.
 
 1\. Login to Watson Studio, enter the project, and click the `Job` tab, click the job defined in configruation file, and then click `Edit Configuration`, click `Next` and `Next`, we can see by default it binds to `latest` version and runtime is `Default Python 3.8`, close the edit page by clicking `X` on the right corner.
-![drawing](/img/apm_8.7/hpu_model_ws_job.png)   
+![drawing](img/apm_8.7/hpu_model_ws_job.png)   
 
-![drawing](/img/apm_8.7/hpu_model_ws_job_02.png)   
+![drawing](img/apm_8.7/hpu_model_ws_job_02.png)   
 
-![drawing](/img/apm_8.7/hpu_model_ws_job_01.png)   
+![drawing](img/apm_8.7/hpu_model_ws_job_01.png)   
 
 2\. Log can be checked by clicking on one of the history runs, either check directly on the page or download to local.
-![drawing](/img/apm_8.7/hpu_model_ws_job_03.png)   
+![drawing](img/apm_8.7/hpu_model_ws_job_03.png)   
 
-![drawing](/img/apm_8.7/hpu_model_ws_job_04.png)   
+![drawing](img/apm_8.7/hpu_model_ws_job_04.png)   
 
 ### Customize Notebook Model for NOC
 
@@ -293,24 +293,24 @@ def calculate_number_of_customer(context,targetType=None):
 User can change the schedule by changing the crontask instance's schedule.
 
 1\. Login and go to Health and Predict Utilities application, click `Scoring and DGA settings` in the menu, and search for the score group just created, click to enter the group details page to get the group id which later will be used to find the corresponding crontask instance.
-![drawing](/img/apm_8.7/hpu_model_crontask_1.png){ width=50% height=50% }
+![drawing](img/apm_8.7/hpu_model_crontask_1.png){ width=50% height=50% }
 
 
 2\. Click Administration administration to go to Administration page. Then click `Cron Task Setup` to enter the crontask application.<br>
-![drawing](/img/apm_8.7/hpu_model_crontask_2.png){ width=30% height=30% }
+![drawing](img/apm_8.7/hpu_model_crontask_2.png){ width=30% height=30% }
 
-![drawing](/img/apm_8.7/hpu_model_crontask_3.png)
+![drawing](img/apm_8.7/hpu_model_crontask_3.png)
 
 3\. Search for `AHSCORINGGROUP` cron task. And click to enter the crontask detail page.
-![drawing](/img/apm_8.7/hpu_model_crontask_4.png)   
+![drawing](img/apm_8.7/hpu_model_crontask_4.png)   
 
 User can trigger the analysis by clcik `Reload Request` under `More actions`, choose the crontask instance that matches score group id.
-![drawing](/img/apm_8.7/hpu_model_crontask_5.png)   
+![drawing](img/apm_8.7/hpu_model_crontask_5.png)   
 
 User can also click calendar icon to update the schedule for the cron task instance which has the same id as group id.
-![drawing](/img/apm_8.7/hpu_model_crontask_6.png)   
+![drawing](img/apm_8.7/hpu_model_crontask_6.png)   
 
-![drawing](/img/apm_8.7/hpu_model_crontask_7.png){ width=50% height=50% }
+![drawing](img/apm_8.7/hpu_model_crontask_7.png){ width=50% height=50% }
 
 
 ## Troubleshoot
@@ -344,23 +344,23 @@ Code example for debugging on an individule asset.
 import os
 os.environ['maximo_context'] = '{"maximoUrl":"https://<health or manage host>/maximo/","maximoApiKey":"**************","expgroupname":"1003","siteid":"***","assetnum":"***"}'
 ```
-![drawing](/img/apm_8.7/hpu_model_ws_notebook_debug.png)  
+![drawing](img/apm_8.7/hpu_model_ws_notebook_debug.png)  
 
 
 `maximoApiKey` can be found in Application administration page. Login Health and Predict – Utilities and click the Application administration page, click to the Start Center and in the Go To section, click Administration.On the API Keys tab, search and find maxadmin's apikey.
-![drawing](/img/apm_8.7/hpu_model_ws_notebook_apikey_01.png)  
+![drawing](img/apm_8.7/hpu_model_ws_notebook_apikey_01.png)  
 
-![drawing](/img/apm_8.7/hpu_model_ws_notebook_apikey_02.png)
+![drawing](img/apm_8.7/hpu_model_ws_notebook_apikey_02.png)
 
 `expgroupname` can be found in score group detail page.
-![drawing](/img/apm_8.7/hpu_model_ws_notebook_expgroupname.png){ width=50% height=50% }  
+![drawing](img/apm_8.7/hpu_model_ws_notebook_expgroupname.png){ width=50% height=50% }  
 
 For `<health or manage host>` in `maximoUrl` can be extracted from health url.
-![drawing](/img/apm_8.7/hpu_model_ws_notebook_host.png){ width=50% height=50% }  
+![drawing](img/apm_8.7/hpu_model_ws_notebook_host.png){ width=50% height=50% }  
 
 
 2\. Click `Run` to run cell by cell or restart the kernel run the whole notebook.
-![drawing](/img/apm_8.7/hpu_model_ws_notebook_run.png)
+![drawing](img/apm_8.7/hpu_model_ws_notebook_run.png)
 
 !!! note
 

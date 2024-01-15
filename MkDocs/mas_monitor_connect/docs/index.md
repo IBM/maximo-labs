@@ -1,8 +1,8 @@
-# Welcome to the MAS Monitor Connect Lab<br>(Version: 1.0)
+# Welcome to the MAS Monitor Connect Lab
 
 Learn how easy it is to configure Monitor to send data from your mobile device using the MAS Monitor Device Ingestor web app.
 
-![Overview](/img/mas_monitor_connect/overview.png)
+![Overview](img/overview.png)
 
 * Setup mobile device in Monitor
 * Send data from your mobile device to Monitor

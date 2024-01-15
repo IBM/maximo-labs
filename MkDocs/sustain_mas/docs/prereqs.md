@@ -21,34 +21,34 @@ Your Exercise facilitator should have provided you with the information on your 
 
 1. Download <b>Maximo Mobile</b> application in your application store, accept all the terms and conditions and allow the app to send you notifications.
 
-    ![img](/img/mas_8.5/assist_ui.png){: style="height:200px;width:250px;margin-left:40px"}
+    ![img](img/assist_ui.png){: style="height:200px;width:250px;margin-left:40px"}
 
     <br>
 2. After you finish downloading the app from your app store Select `Agree` to the terms and conditions.
 
-    ![img](/img/mas_8.5/terms_conditions.png){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](img/terms_conditions.png){: style="height:400px;width:250px;margin-left:40px"}
 
      <br>
 3. Upload URL and credentials into the app. After you upload the URL, the login for MAS will pop up. 
 
-    ![img](/img/mas_8.5/assist_url.png){: style="height:200px;width:250px;margin-left:40px"}
-    ![img](/img/mas_8.5/assist_login.png){: style="height:200px;width:250px;margin-left:40px"}
+    ![img](img/assist_url.png){: style="height:200px;width:250px;margin-left:40px"}
+    ![img](img/assist_login.png){: style="height:200px;width:250px;margin-left:40px"}
 
      <br>
 4. Select `Next` for the next two screens.
 
-    ![img](/img/mas_8.5/next_1.png){: style="height:400px;width:250px;margin-left:40px"}
-    ![img](/img/mas_8.5/next_2.png){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](img/next_1.png){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](img/next_2.png){: style="height:400px;width:250px;margin-left:40px"}
 
      <br>
 5. Open the navigator.
 
-    ![img](/img/mas_8.5/open_nav.png){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](img/open_nav.png){: style="height:400px;width:250px;margin-left:40px"}
 
      <br>
 6. Wait for data to finishing loading. The tiles will build and the labels will go from grey to white as the data loads.  Wait until all the tiles appear white before proceeding. 
 
-![img](/img/mas_8.5/mobileUItiles.png){: style="height:350px;width:250px;margin-left:40px"}
+![img](img/mobileUItiles.png){: style="height:350px;width:250px;margin-left:40px"}
 
 !!! note
     If you would like to show this software on your computer you can use [Quicktime for macOS](https://support.apple.com/guide/quicktime-player/welcome/mac) or [Reflector](https://www.airsquirrels.com/reflector) as software to reflect your phone screen.

@@ -4,8 +4,8 @@ In this exercise you will install App Connect on IBM Cloud so that you can use l
 
 You can skip these exercise steps if you are loading data using Python.  Or your instructor has already loaded asset data into your environment.
 
-- [Install App Connect](appconnect_install) 
-- [Deploy App Connect Integration Flows](deploy_bar) to load data into Health Predict and Utilities
+- [Install App Connect](#appconnect_install) 
+- [Deploy App Connect Integration Flows](#deploy_bar) to load data into Health Predict and Utilities
 
 ## Pre-requisites
 
@@ -22,7 +22,7 @@ Ensure you have access to:
 5. Verify the IBM App Connect `Operator`is available in OpenShift Platform.  If IBM App Connect is not available as `Operator`, then you need to make it available using standard operator.  If an Operator is not available, use the [documenation](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=access-enabling-operator-catalog) to make an operator available in OpenShift Platform.
 
 
-![img](/img/apm_8.7/App_Connect_Operator.png)
+![img](img/apm_8.7/App_Connect_Operator.png)
 
 ## Install App Connect (optional)
 <a name="appconnect_install"></a>
@@ -39,7 +39,7 @@ Ensure you have access to:
 5.  Choose the License. Select the right license name in related to operator version is provided in below. [License-Details](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=resources-licensing-reference-app-connect-operator)
 
 6.  Choose the License use as "AppConnectEnterpriseProduction"
-![setup assets](/img/apm_8.7/App_Connect_License.png)
+![setup assets](img/apm_8.7/App_Connect_License.png)
 
 7.  Choose the right "Channel Version"
 It is important to choose the right `Channel Version`. Relevant channel version is mentioned in link above as part of Step-5
@@ -55,7 +55,7 @@ It is important to choose the right `Channel Version`. Relevant channel version 
 Link for App Connect installation --> [AppConn-Details](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=operator-installing-red-hat-openshift)
 
 12. Once the operator is installed successfully, there will `Integration` link created in `Networking` --> `Routes`. There is a URL created like `<appconnectName-ui>`
-![setup assets](/img/apm_8.7/App_Connect_Route_UI.png)
+![setup assets](img/apm_8.7/App_Connect_Route_UI.png)
 
 ## Deploy Integration Flows 
 <a name="deploy_bar"></a>

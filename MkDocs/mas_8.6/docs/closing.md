@@ -1,4 +1,4 @@
-![img](/img/mas_8.6/banner.png){:style="height:100px;width:800px"}
+![img](img/banner.png){:style="height:100px;width:800px"}
 
 <h1>CLOSING REMARKS</h1> 
 

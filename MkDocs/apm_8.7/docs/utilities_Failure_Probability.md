@@ -38,7 +38,7 @@ Select the `6_PMI-Failure Probability-BinaryClassification-HPU` notebook templat
 
 3. If the notebook fails to start, restart it.  Click on the `i` icon , `Environment` tab,  `Running status` drop down select box and choose `Restart`
 
-![Restarting Environment](/img/apm_8.7/HPU_dataloader_3.png)
+![Restarting Environment](img/HPU_dataloader_3.png)
 
 ## Run the Notebook
 <a name="run_notebooks"></a>
@@ -52,7 +52,7 @@ Select the `6_PMI-Failure Probability-BinaryClassification-HPU` notebook templat
 
 3. Run the second cell to define the requirements and some environment variables to run this notebook. This cell also checks that the precursor notebook has been run. Additionally, this cell sets the `device_type` and the `asset_group_id` from the stored device type and asset group id in the JSON file produced from the Fast Start Data Loader notebook. Ensure the printed values match your asset group and device. 
 
-![Asset Group ID](/img/apm_8.7/hpu_failureprob_0.png)
+![Asset Group ID](img/hpu_failureprob_0.png)
 
 4. Run the next cell to uninstall the `pmlib` library. This is done to ensure the correct version is installed.
 
@@ -94,19 +94,19 @@ Select the `6_PMI-Failure Probability-BinaryClassification-HPU` notebook templat
 1. Navigate to Maximo Health and Predict for Utilities within your environment
 
 2. Use the left-hand menu to go into `Predict Grouping`
-   ![Predict Grouping](/img/apm_8.7/hpu_fs11.png) 
+   ![Predict Grouping](img/hpu_fs11.png) 
 
 3. Select your asset group
-![Predict Grouping](/img/apm_8.7/hpu_2fsl_8.png)
+![Predict Grouping](img/hpu_2fsl_8.png)
 
 4. Click into your asset group and ensure you have Failure Probability listed under `Trained instances registered for this group` and select an asset to go to the Health Dashboard 
 
-![Predict Grouping](/img/apm_8.7/hpu_failureprob_1.png)
+![Predict Grouping](img/hpu_failureprob_1.png)
 
 5. Scroll down and expand the `Predict` section to ensure the `Failure Probability`, `Failure Probability Trend` and `Factors that Contribute to Failures`
   is visible. 
 
-![Predict Results](/img/apm_8.7/hpu_failureprob_2.png)
+![Predict Results](img/hpu_failureprob_2.png)
 
 !!! note
 
