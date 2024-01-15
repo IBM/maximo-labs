@@ -8,7 +8,7 @@ Creating a new lab follows the same process as under [Add content](add_content.m
 4. Create Pull request
 5. Clean up branches locally and remotely (Github)
 
-The only difference is in the first time you execute step "2. Make changes", so follow this process:
+The only difference is the first time you execute step "2. Make changes", then follow this process:
 
 * Follow step "1. Prepare your Git branch" under [Add content](add_content.md#1-prepare-your-git-branch).
 * Come back here and run the below "Make first changes for new lab".
@@ -26,15 +26,11 @@ Select the `template_1.0` folder
 Make a copy of the `template_1.0` folder
 ![Copy template folder](img/copy_template_2.png)
 
-Rename the `template_1.0 copy` folder to < product >_< version > for wich this new lab is intended,  
-e.g. `mvi_saas`
+Rename the `template_1.0 copy` folder to `<product>_<version>` for wich this new lab is intended,  
+e.g. `monitor_live_demo_asset` - it should now look like this:
 ![Rename template folder](img/copy_template_3.png)
 
-Also rename the folder under `img/template_1.0` using the same name lab name,  
-e.g. `img/mvi_saas`. 
-![Rename img/template folder](img/copy_template_4.png)
 
-Save the file.
 
 !!! attention "Important"
     It is important that this structure is kept consistent cross all labs in order to easily build and deploy the complete set of labs.
@@ -56,7 +52,7 @@ Save the file.
 
 !!! note
     The `nav:` definition holds the navigation menu for the new lab.<br>
-    It is only the `index.md` and `about.md` that need to have some mandatory information, as explained below. The rest of the markdown files and navigation menu is defined by the way the lab is structured and how many exercises it consist of.
+    It is only `index.md` and `release_notes.md` that need to have some mandatory information, as explained below. The rest of the markdown files and navigation menu is defined by the way the lab is structured and how many exercises it consist of.
 
 
 
@@ -79,15 +75,15 @@ Save the file.
     Update the `Updated` at the end of this file to current date once the new lab is ready.
 
 
-### 4. Modify the about.md file
+### 4. Modify the release_notes.md file
 
-The `release_notes.md` file contains a list of the contributors to this lab as well as the Change Information.  
+The `release_notes.md` file contains a list of the Contributors to this lab as well as the Change Information.  
 
-Select and open the `release_notes.md` file located in the `docs` folder of you new lab. Edit the file and make sure to change the marked areas suitable for your new lab
-![Edit about.md](img/edit_about_2.png)
+Select and open the `release_notes.md` file located in the `docs` folder of you new lab. Edit the file and make sure to change it so it's suitable for your new lab
+![Edit about.md](img/edit_release_notes_1.png)
 
 Which could look like this
-![Edit about.md](img/edit_about_3.png)
+![Edit about.md](img/edit_release_notes_2.png)
 
 Save the file.
 
@@ -97,7 +93,7 @@ Save the file.
 
 ### 5. Add the new lab to the build script
 
-First we need to update the `build_all_mkdocs.sh` file located in the root of the `monitor-hands-on-lab` folder.
+First we need to update the `build_all_mkdocs.sh` file located in the `maximo-labs` root folder.
 This file contains the shell script for building the entire IBM Maximo Labs static web site.  
 
 Select and open the `build_all_mkdocs.sh` file
@@ -130,7 +126,7 @@ Wait until it has finished building the whole site.
 Open a browser and navigate to [http://localhost:8080/](http://localhost:8080/) in order to verify that the build was successful.  
 ![Edit build_all_mkdocs.sh](img/edit_build_6.png)
 
-If the new lab has not yet been added to the `index.md` in the `toplevel` page, then navigate directly to the new lab [http://localhost:8080/mvi_saas](http://localhost:8080/mvi_ssas) in order to verify that your changes look as expected.  
+If the new lab has not yet been added to the `index.md` in the `toplevel` page, then navigate directly to the new lab [http://localhost:8080/monitor_live_demo_asset](http://localhost:8080/monitor_live_demo_asset) in order to verify that your changes look as expected.  
 ![Edit build_all_mkdocs.sh](img/edit_build_7.png)
 
 !!! tip
