@@ -181,6 +181,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands on Labs are lice
 
 ---
 
-### UPDATED: 2024-01-05
+### UPDATED: 2024-01-15
 
 ---
