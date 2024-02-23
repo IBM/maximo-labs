@@ -1,0 +1,28 @@
+site_name: Monitor Live Demo Asset Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Jan Ekstrøm
+site_description: "Maximo Monitor Live Demo Asset Hands on Lab"
+site_dir: ../../site/monitor_live_demo_asset
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Live Demo Asset Lab:
+    - Welcome to this lab: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Create devices: create_devices.md
+    - 2. Prepare Rasperry Pi: prepare_pi.md
+    - 3. Convert Pi to RPE: convert_pi.md
+    - 4. Verify RPE is working: verify_rpe.md
+    - 5. Do something: something.md
+    - 6. Do something else: something_else.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+  
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
