@@ -184,7 +184,7 @@ sudo shutdown -h now
 
 !!! tip
     Power off once the green LED stopped blinking.</br>
-    NOW is a good time to backup you SD card to e.g. \<date\>-Fresh Image.img
+    NOW is a good time to backup you SD card to e.g. `<date>-Fresh Image.img`
 
 
 **g.** This concludes this exercise.
