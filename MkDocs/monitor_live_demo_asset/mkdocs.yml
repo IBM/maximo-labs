@@ -8,14 +8,13 @@ nav:
   - Get back to Maximo Labs: ..
   - Monitor Live Demo Asset Lab:
     - Welcome to this lab: index.md
-    - Get Started: getting_started.md
     - Pre-Requisites: prereqs.md
+    - RPE User Guide: user_guide.md
   - Exercises:
     - 1. Create devices: create_devices.md
     - 2. Prepare Rasperry Pi: prepare_pi.md
     - 3. Convert Pi to RPE: convert_pi.md
     - 4. Verify RPE is working: verify_rpe.md
-    - 5. RPE User Guide: user_guide.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright

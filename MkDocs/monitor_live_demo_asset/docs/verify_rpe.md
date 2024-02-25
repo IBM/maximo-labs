@@ -1,9 +1,9 @@
 # Objectives
 In this Exercise you will learn how to verify that the data is bing delivered from RPE to MAS Monitor.
 
-Data is being send once all mqtt nodes are in state connected.
+Data is being send once all `mqtt out` nodes are in state connected.
 
-You will verify the setup by watching the data being send to MAS Maximo Montor instance you have access to.
+You will verify the setup by watching the data being send to the MAS Maximo Montor instance you have access to.
 
 ## 1. Login
 **a.** Login to your instance of Maximo Application Suite:</br>

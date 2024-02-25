@@ -7,8 +7,8 @@
 
 # Change Information
 
-|Date     |By             | Description                                           |
-|:--------|:--------------|:------------------------------------------------------|
-|2024-01-15|Jan Ekstrøm|First version of this lab.|
+|Date      |By             | Description                                           |
+|:---------|:--------------|:------------------------------------------------------|
+|2024-02-26|Jan Ekstrøm    |First version of this lab.                             |
 
 ---
