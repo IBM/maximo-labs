@@ -9,13 +9,17 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ---
 
 ### Maximo Application Suite 8.11
-| Lab                                              | Exercise                                                     |
-|--------------------------------------------------|--------------------------------------------------------------|
-| [Maximo Monitor Edge Data Collector](edc_8.11/)  | [Setup Simulator Environment](edc_8.11/setup)                |
-|                                                  | [Create Monitor Devices](edc_8.11/monitor_devices)           |
-|                                                  | [Create EDC Integration](edc_8.11/edc_integration)           |
-|                                                  | [Deploy and Verify Integration](edc_8.11/deploy)             |
-|                                                  | [Create Monitor Metrics](edc_8.11/monitor_metrics)           |
+| Lab                                                         | Exercise                                                     |
+|-------------------------------------------------------------|--------------------------------------------------------------|
+| [Maximo Monitor Edge Data Collector](edc_8.11/)             | [Setup Simulator Environment](edc_8.11/setup)                |
+|                                                             | [Create Monitor Devices](edc_8.11/monitor_devices)           |
+|                                                             | [Create EDC Integration](edc_8.11/edc_integration)           |
+|                                                             | [Deploy and Verify Integration](edc_8.11/deploy)             |
+|                                                             | [Create Monitor Metrics](edc_8.11/monitor_metrics)           |
+| [Maximo Monitor Live Demo Asset](monitor_live_demo_asset/)  | [Create Monitor Devices](monitor_live_demo_asset/create_devices)            |
+|                                                             | [Prepare Raspberry Pi](monitor_live_demo_asset/prepare_pi)                  |
+|                                                             | [Convert Pi to RPE Asset](monitor_live_demo_asset/convert_pi)               |
+|                                                             | [Verify RPE is working](monitor_live_demo_asset/verify_rpe)                 |
 
 
 ### Maximo Application Suite 8.11  (Under Development)
@@ -181,6 +185,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands on Labs are lice
 
 ---
 
-### UPDATED: 2024-01-15
+### UPDATED: 2024-02-26
 
 ---
