@@ -11,7 +11,7 @@ nav:
     - Pre-Requisites: prereqs.md
     - RPE User Guide: user_guide.md
   - Exercises:
-    - 1. Create devices: create_devices.md
+    - 1. Create Monitor devices: create_devices.md
     - 2. Prepare Rasperry Pi: prepare_pi.md
     - 3. Convert Pi to RPE: convert_pi.md
     - 4. Verify RPE is working: verify_rpe.md
