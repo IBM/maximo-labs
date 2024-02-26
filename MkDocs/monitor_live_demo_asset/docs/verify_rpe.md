@@ -32,7 +32,7 @@ After a few seconds you should see data being received:</br>
 
 !!! tip
     These properties are abbreviations for different measurements.</br>
-    They are explained in the RPE User Guide as well as the meaning of the SenseHAT LEDs.
+    They are explained in the [RPE User Guide](user_guide.md) as well as the meaning of the SenseHAT LEDs.
 
 **f.** This concludes this exercise.
 

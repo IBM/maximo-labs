@@ -25,8 +25,7 @@ wait until you get a message about the nodes been installed.</br>
 ![NR - Palette](img/convert_pi_05.png)
 
 ## 2. Import the RPE Node-RED flows.
-**a.** Download the newest version of `<date> RPE Flow <version>.json` from 
-[https://ibm.box.com/v/RP-Engine-Demo](https://ibm.box.com/v/RP-Engine-Demo){target=_blank} under the Node-RED Script folder.</br>
+**a.** Download the Node-RED [RPE Flows.json](config/RPE Flows.json).</br>
 
 **b.** Select Import from the burger menu:</br>
 ![NR - Import](img/convert_pi_06.png)

@@ -42,8 +42,8 @@ Further install a load test package and configure Node-RED to automatically star
 Click on Yes to overwrite the SD card and wait until the verification has finished.:</br>
 ![PI Software - Overwrite](img/prepare_pi_09.png)
 
-**i.** Once the SD card is ready you need to do some additional steps before inserting it into the Raspberry Pi. First copy over the following files to a local place on your laptop: 
-an empty SSH file, wpa_supplicant.conf and the config.txt:</br>
+**i.** Once the SD card is ready you need to do some additional steps before inserting it into the Raspberry Pi. First copy over the following files to a local place on your laptop:</br> 
+an empty [SSH file](config/ssh), [wpa_supplicant.conf](config/wpa_supplicant.conf) and the [config.txt](config/config.txt):</br>
 ![SSH and WiFi settings](img/prepare_pi_10.png)
 
 !!! tip

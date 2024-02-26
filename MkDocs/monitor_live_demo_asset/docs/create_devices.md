@@ -19,6 +19,9 @@ You need to create three device types (CPU, OSC and ENV) with the related metric
 ![MAS Login](img/create_devices_02.png)
 
 ## 2. Create the device types
+!!! note
+    Jump to [Create the devices](#3-create-the-devices) if the CPU, OSC and ENV device types have already been created.
+
 
 **a.** Go to the Setup tab:</br>
 ![Setup tab](img/create_devices_03.png)
