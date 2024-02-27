@@ -11,11 +11,15 @@ Here are the required pre-requisites for the Maximo Monitor Live Demo Asset lab.
 
 All Exercises require that you have:
 
-1. A Raspberry Pi (Have been tested with at least: Pi 3 Model B)
-2. An attached SenseHAT
+1. A Raspberry Pi (Has been tested with: Pi 3 Model B, Pi 4 Model B)
+2. A Raspberry Pi SenseHAT
 3. A fast SD Card of at least 16GB
 4. A Raspberry Pi Power supply
 5. [Optional] A case where there is room to the Raspberry Pi with a mounted SenseHAT
+6. [Optional] A USB Keyboard and mouse, e.g. Logitech K400 Plus
+7. [Optional] An HDMI cabel
+
+The first 4 items can be acquired at approx. 80 $ / 75 €.
 
 ## Software
 
