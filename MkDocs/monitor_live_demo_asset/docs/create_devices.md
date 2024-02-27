@@ -11,7 +11,8 @@ Your RPE asset will have three devices that measures different things:
 | OSC         | Oscillator related metrics from the Pi  |
 | ENV         | Environmental metrics from the SenseHAT |
 
-You need to create three device types (CPU, OSC and ENV) with the related metrics (as we already know what they are) and then later a device of each device type. The credentials for the three devices will be used in the next exercise when configuring the RPE Node-RED script to work in your environment.
+You need to create three device types (CPU, OSC and ENV) with the related metrics (as we already know what they are) and then later a device of each device type.</br>
+The credentials for the three devices will be used when configuring the RPE Node-RED script to work in your environment (in exercise [3. Convert Pi to RPE](convert_pi.md)).
 
 ## 1. Login
 
@@ -87,12 +88,13 @@ You need to create three device types (CPU, OSC and ENV) with the related metric
 
 ## 3. Create the devices
 
-**a.** It is now time to create the three devices for the first asset. The example shows how to do that for the asset called RPE042.</br>
+**a.** It is now time to create the three devices for the first asset.</br>
+The example shows how to do that for the asset called RPE042.
 
 **b.** Go to the Setup tab:</br>
 ![Setup tab](img/create_devices_03.png)
  
-**c.** Select the CPU device type and click the blue “Add a device   +” link (There might already be existing devices in your environment, just make sure you create your own set):</br>
+**c.** Select the `Devices`tab. Select the CPU device type and click the blue “Add a device   +” link (There might already be existing devices in your environment, just make sure you create your own set):</br>
 ![Add device](img/create_devices_10.png)
  
 **d.** Define your own Device ID, leave the Token type to be Auto-generated, and click Add:</br>
@@ -109,8 +111,17 @@ You need to create three device types (CPU, OSC and ENV) with the related metric
 
 **g.** For the OSC device repeat step 3c – 3e, e.g. RPE042-OSC-03</br>
 
-**h.** Here is how it could look like in the IoT Tool, once you have created all three devices:</br>
+**h.** Navigate to the IoT Tool.</br>
+This can either be done from the Monitor Home page:</br>
 ![RPE devices](img/create_devices_13.png)
 
-**i.** This concludes this exercise.
+or from the Application Switcher in the upper right corner: </br>
+![RPE devices](img/create_devices_14.png)
+
+A new browser tab opens with the MAS Watson IoT Platform Service.
+
+**i.** Here is how it could look like in the IoT Tool, once you have created all three devices and have used the `Search by Device ID`:</br>
+![RPE devices](img/create_devices_15.png)
+
+**j.** This concludes this exercise.
 

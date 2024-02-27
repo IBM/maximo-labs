@@ -154,6 +154,12 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/mast
 Answer y to both questions and the installation will start.</br>
 ![Install Node-RED](img/prepare_pi_18.png)
 
+Press Enter to create the settings file.</br>
+Enter your `Username` and `Password`.</br>
+Press Enter to select default settings, until the settings file has been written.
+![Install Node-RED](img/prepare_pi_19.png)
+
+
 **c.** Set the Pi to autostart Node-RED at every boot:
 ```
 sudo systemctl enable nodered.service
@@ -172,14 +178,14 @@ sudo apt install sysbench
 ```
 hostname -I
 ```
-![Get IP Addresses](img/prepare_pi_19.png)</br>
+![Get IP Addresses](img/prepare_pi_20.png)</br>
 (Showing both IP v4 and v6 addresses)
 
 **f.** Shutdown the RPE: 
 ```
 sudo shutdown -h now
 ```
-![Shutdown Pi](img/prepare_pi_20.png)
+![Shutdown Pi](img/prepare_pi_21.png)
 
 
 !!! tip

@@ -3,7 +3,7 @@ In this Exercise you will learn how to verify that the data is bing delivered fr
 
 Data is being send once all `mqtt out` nodes are in state connected.
 
-You will verify the setup by watching the data being send to the MAS Maximo Montor instance you have access to.
+You will verify the setup by watching the data being send to the MAS Maximo Monitor instance you have access to.
 
 ## 1. Login
 **a.** Login to your instance of Maximo Application Suite:</br>

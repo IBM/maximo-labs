@@ -30,7 +30,7 @@ wait until you get a message about the nodes been installed.</br>
 **b.** Select Import from the burger menu:</br>
 ![NR - Import](img/convert_pi_06.png)
 
-**c.** Click on `select a file to import` and select the file you just downloaded. It will create some new flows in Node-RED.
+**c.** Click on `select a file to import` and select the file you just downloaded. Click `Import` and it will create some new flows in Node-RED.
 
 **d.** Wait for something like this:</br>
 ![NR - Import](img/convert_pi_07.png)
@@ -43,7 +43,7 @@ wait until you get a message about the nodes been installed.</br>
 **b.** Locate the MQTT nodes, which are trying to connect:</br>
 ![NR - Modify nodes](img/convert_pi_08.png)
 
-**c.** In the Debug sidebar pane a couple of warnings tells you that the mqtt nodes failed to connect, which is only natural since the credentials are not transferred when you export and then import the flows. Further you also need to add your own credentials:</br>
+**c.** In the Debug sidebar pane a couple of warnings tells you that the mqtt nodes failed to connect, which is only natural since the credentials are not transferred when the script was exported. Further you need to add your own credentials after the import:</br>
 ![NR - Debug pane](img/convert_pi_09.png)
  
 **d.** Follow the comment nodes if you want to change the number of mqtt connections. [Not Default]</br>
@@ -93,8 +93,8 @@ The Password is the Authentication Token from when you created the device in Exe
 
 
 !!! tip
-    The interpretation of the SenseHAT LED’s and the usage of the joystick is explained in</br>
-    Exercise 5 – RPE User Guide.
+    The interpretation of the SenseHAT LED’s and the usage of the joystick is explained in the</br>
+    [RPE User Guide](user_guide.md).
 
 !!! tip
     The flows work in two different time intervals with different behavior:</br>
