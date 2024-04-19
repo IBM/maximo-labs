@@ -1,0 +1,1491 @@
+[
+    {
+        "id": "d3c4c3140d5ff4fc",
+        "type": "tab",
+        "label": "Server Port 10502 (Slave)",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "773d005b.cd22d8",
+        "type": "tab",
+        "label": "Server Port 20502 (Slave)",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5db606156cd4558f",
+        "type": "junction",
+        "z": "773d005b.cd22d8",
+        "x": 900,
+        "y": 500,
+        "wires": [
+            [
+                "a201fa81.71e298"
+            ]
+        ]
+    },
+    {
+        "id": "791e7f49619b99e7",
+        "type": "junction",
+        "z": "d3c4c3140d5ff4fc",
+        "x": 900,
+        "y": 500,
+        "wires": [
+            [
+                "2078cb8445e02774"
+            ]
+        ]
+    },
+    {
+        "id": "4483385.85f9ac8",
+        "type": "modbus-client",
+        "name": "Port 20502",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": true,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "20502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": false,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "5f287606748d38a2",
+        "type": "modbus-client",
+        "name": "Port 10502",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "10502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "9099cd034c2f647c",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "holding ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1560,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "381d5dd22446e561",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "coils ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1550,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bb1ff98cfacdf44d",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "input ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1550,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "4c95db44ee1ba74f",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "discrete inputs",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1580,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8aa41c75ea45526e",
+        "type": "modbus-flex-server",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "",
+        "logEnabled": true,
+        "serverAddress": "",
+        "serverPort": "10502",
+        "responseDelay": 100,
+        "unitId": 1,
+        "delayUnit": "ms",
+        "coilsBufferSize": 20000,
+        "registersBufferSize": 20000,
+        "minAddress": 0,
+        "splitAddress": 10000,
+        "funcGetCoil": "function getFlexCoil(addr, unitID) {\n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\treturn node.coils.readUInt8(addr * node.bufferFactor) \n\t}  \n}",
+        "funcGetDiscreteInput": "function getFlexDiscreteInput(addr, unitID) {\n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\treturn node.coils.readUInt8(addr * node.bufferFactor) \n\t}  \n}",
+        "funcGetInputRegister": "function getFlexInputRegister(addr, unitID) { \n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\treturn node.registers.readUInt16BE(addr * node.bufferFactor)  \n\t} \n}",
+        "funcGetHoldingRegister": "function getFlexHoldingRegsiter(addr, unitID) { \n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\treturn node.registers.readUInt16BE(addr * node.bufferFactor)  \n\t} \n}",
+        "funcSetCoil": "function setFlexCoil(addr, value, unitID) { \n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\tnode.coils.writeUInt8(value, addr * node.bufferFactor)  \n\t} \n}",
+        "funcSetRegister": "function setFlexRegister(addr, value, unitID) { \n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\tnode.registers.writeUInt16BE(value, addr * node.bufferFactor)  \n\t} \n}",
+        "showErrors": true,
+        "x": 1340,
+        "y": 500,
+        "wires": [
+            [
+                "9099cd034c2f647c"
+            ],
+            [
+                "381d5dd22446e561"
+            ],
+            [
+                "bb1ff98cfacdf44d"
+            ],
+            [
+                "4c95db44ee1ba74f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2078cb8445e02774",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Set holding register",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'holding', \n    'address': msg.topic,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 500,
+        "wires": [
+            [
+                "8aa41c75ea45526e"
+            ]
+        ]
+    },
+    {
+        "id": "ebd559dfc475d04e",
+        "type": "modbus-flex-getter",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Modbus Flexible Read",
+        "showStatusActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "5f287606748d38a2",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 540,
+        "y": 1080,
+        "wires": [
+            [
+                "99448a87c336aa6f",
+                "2676e0addff40b94",
+                "12a9abe37e1927f8"
+            ],
+            [
+                "de13c7d67aa71951",
+                "3ec03387145edcf8"
+            ]
+        ]
+    },
+    {
+        "id": "99448a87c336aa6f",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "payload",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "de13c7d67aa71951",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 770,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "3ec03387145edcf8",
+        "type": "modbus-response",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 810,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "12a9abe37e1927f8",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "complete": "true",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "2676e0addff40b94",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "complete": "responseBuffer",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "267abd856c0d37b2",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "FC3",
+        "func": "msg.payload = { 'fc': 3, 'unitid': 1, 'address': msg.address , 'quantity': 16 }\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1080,
+        "wires": [
+            [
+                "ebd559dfc475d04e"
+            ]
+        ]
+    },
+    {
+        "id": "04602c1b400f42ee",
+        "type": "comment",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Flexible Read Holding Registers",
+        "info": "",
+        "x": 170,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "90761fc8c0f51941",
+        "type": "inject",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Address 2000",
+        "props": [
+            {
+                "p": "address",
+                "v": "2000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1080,
+        "wires": [
+            [
+                "267abd856c0d37b2"
+            ]
+        ]
+    },
+    {
+        "id": "c5ab500396598af7",
+        "type": "inject",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Create new data points",
+        "props": [],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "af6679a0c95fb418",
+                "5617805485aca65c",
+                "cf628b9b790da53d",
+                "5440958f5d9bad4e",
+                "5e53b5c2f6ffa604",
+                "2443af37e9bb0467",
+                "cc7a0998051d0777",
+                "e24d86c49644a66b",
+                "78b28aacdd7116a3",
+                "937c2d586e409a70",
+                "8310fac252e13c84",
+                "07c7d211d2861e76",
+                "0d9c95862ed6e898",
+                "be1dc7b405b12b0b"
+            ]
+        ]
+    },
+    {
+        "id": "af6679a0c95fb418",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "R: Motor Torque (HR2012:660) [500-700]",
+        "func": "function generateRandomFloatInRange(min, max) {\n    return (Math.random() * (max - min)) + min;\n}\n\nmsg.payload = Math.round(generateRandomFloatInRange(500, 700));\nmsg.topic = 2012;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 700,
+        "wires": [
+            [
+                "38613b46411f158c",
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "5617805485aca65c",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "D: Motor Current (HR2005:96) [85-105]",
+        "func": "let upperLimit = 105;\nlet lowerLimit = 85;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('motorCurrent') || 96;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('motorCurrent', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2005;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "a2e629cfa7b60ead",
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "a2e629cfa7b60ead",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "HR2005",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "38613b46411f158c",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "HR2012",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "cc7a0998051d0777",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "D: Motor Voltage (HR2004:700) [690-710]",
+        "func": "let upperLimit = 710;\nlet lowerLimit = 690;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('motorVoltage') || 700;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('motorVoltage', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2004;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "ea4beb069d1f89ef",
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "cf628b9b790da53d",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: Drive Status (HR2003:7)",
+        "func": "// Static\nmsg.payload = 7;\nmsg.topic = 2003;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "5440958f5d9bad4e",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: Error Code (HR2002:0xff38)",
+        "func": "// Static\nmsg.payload = 65336;\nmsg.topic = 2002;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "5e53b5c2f6ffa604",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "D: Frequency (HR2001:3665) [3500-3700]",
+        "func": "let upperLimit = 3750;\nlet lowerLimit = 3500;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('frequency') || 3665;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('frequency', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2001;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "f5a2bd251e8d927d",
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "2443af37e9bb0467",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: AC Drive Status Word (HR2000:6)",
+        "func": "// Static Value\nmsg.payload = 6;\nmsg.topic = 2000;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "e24d86c49644a66b",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: Not Used (HR2006:11570)",
+        "func": "// Static - Not used\nmsg.payload = 11570;\nmsg.topic = 2006;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "07c7d211d2861e76",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "D: Control Card Temperature C (HR2009:230) [180-250]",
+        "func": "let upperLimit = 250;\nlet lowerLimit = 180;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('controlCardTemperature') || 230;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('controlCardTemperature', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2009;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 580,
+        "wires": [
+            [
+                "a8c0c98c17652080",
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "0d9c95862ed6e898",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "D: DC Bus Voltage (HR2010:401)",
+        "func": "let upperLimit = 425;\nlet lowerLimit = 375;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('busVoltageDC') || 400;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('busVoltageDC', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2010;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 620,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "be1dc7b405b12b0b",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: Frequency Command (HR2101:3665)",
+        "func": "// Static value\nmsg.payload = 3665;\nmsg.topic = 2101;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "ea4beb069d1f89ef",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "HR2004",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f5a2bd251e8d927d",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "HR2001",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "78b28aacdd7116a3",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: Not Used (HR2007:11570)",
+        "func": "// Static - Not used\nmsg.payload = 11570;\nmsg.topic = 2007;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "937c2d586e409a70",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: Digital Input Status (HR2011:11570)",
+        "func": "// Static\nmsg.payload = 11570;\nmsg.topic = 2011;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 660,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "8310fac252e13c84",
+        "type": "function",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "S: Not Used (HR2008:23)",
+        "func": "// Static - Not used\nmsg.payload = 23;\nmsg.topic = 2008;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 540,
+        "wires": [
+            [
+                "791e7f49619b99e7"
+            ]
+        ]
+    },
+    {
+        "id": "a8c0c98c17652080",
+        "type": "debug",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "HR2009",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6e1c45f088592281",
+        "type": "comment",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Write Holding Registers to the Modbus Flex Server (Slave)",
+        "info": "",
+        "x": 250,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ee168641d9b2a5c9",
+        "type": "comment",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Lenze i550 Variable frequency Drive (S: Static, D: Dynamic, R:Random)",
+        "info": "",
+        "x": 650,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a498dd9f9de6d03e",
+        "type": "comment",
+        "z": "d3c4c3140d5ff4fc",
+        "name": "Created by Jan Ekstrøm - 2024-04-16 - v1.01 (Open to view Version History)",
+        "info": "Author: Jan Ekstrøm, jan.ekstrom@dk.ibm.com, @ekstrom\n\nv1.01 2024-04-16:\n- Added version information to make it ready for a Maximo Hands-on Lab\n\nv1.00 2024-03-15:\n- First released Version\n- Changed port 502 to 20502 as Linux had difficulties using restricted port 502\n- Cleaned up in the flow visually\n\nv0.91 2024-03-10:\n- 2 Modbus Servers (one in each flow) on Ports: 502 and 10502\n\nv0.90 2024-02-17:\n- Perlin noise added to some of the data points\n- Data points generated every 30 seconds\n- Named the function nodes so it was easy to see Holding Ragister, Scope, Default value and whether static, random, or dynamic\n\nv0.82 2024-02-09:\n- Changed the Motor Torque to generate random values within a scope\n\nv0.81 2024-02-08:\n- Added a all static Holding Registers for the Lenze i550 VFD\n\nv0.80 2024-02-07:\n- Finally found out how the Modbus Flex Server could be used to simulate a Modbus Server (Slave)\n- Added a few static Holding Registers for the Lenze i550 VFD\n- Reading the holding registers added",
+        "x": 310,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c2a77416.0c366",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "holding ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1560,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ef53de42.56dfd8",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "coils ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1550,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "37d9456a.be0852",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "input ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1550,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2ba65ddb.5f27ca",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "discrete inputs",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1580,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7c7e0ef2.453118",
+        "type": "modbus-flex-server",
+        "z": "773d005b.cd22d8",
+        "name": "",
+        "logEnabled": true,
+        "serverAddress": "",
+        "serverPort": "20502",
+        "responseDelay": 100,
+        "unitId": 1,
+        "delayUnit": "ms",
+        "coilsBufferSize": 20000,
+        "registersBufferSize": 20000,
+        "minAddress": 0,
+        "splitAddress": 10000,
+        "funcGetCoil": "function getFlexCoil(addr, unitID) {\n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\treturn node.coils.readUInt8(addr * node.bufferFactor) \n\t}  \n}",
+        "funcGetDiscreteInput": "function getFlexDiscreteInput(addr, unitID) {\n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\treturn node.coils.readUInt8(addr * node.bufferFactor) \n\t}  \n}",
+        "funcGetInputRegister": "function getFlexInputRegister(addr, unitID) { \n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\treturn node.registers.readUInt16BE(addr * node.bufferFactor)  \n\t} \n}",
+        "funcGetHoldingRegister": "function getFlexHoldingRegsiter(addr, unitID) { \n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\treturn node.registers.readUInt16BE(addr * node.bufferFactor)  \n\t} \n}",
+        "funcSetCoil": "function setFlexCoil(addr, value, unitID) { \n\tif (unitID === node.unitId && \n\t\taddr >= node.minAddress && \n\t\taddr <= node.splitAddress) { \n\n\t\tnode.coils.writeUInt8(value, addr * node.bufferFactor)  \n\t} \n}",
+        "funcSetRegister": "function setFlexRegister(addr, value, unitID) { \n\taddr += node.splitAddress\n\tif (unitID === node.unitId && \n\t\taddr >= node.splitAddress && \n\t\taddr <= node.splitAddress * 2) { \n\n\t\tnode.registers.writeUInt16BE(value, addr * node.bufferFactor)  \n\t} \n}",
+        "showErrors": true,
+        "x": 1340,
+        "y": 500,
+        "wires": [
+            [
+                "c2a77416.0c366"
+            ],
+            [
+                "ef53de42.56dfd8"
+            ],
+            [
+                "37d9456a.be0852"
+            ],
+            [
+                "2ba65ddb.5f27ca"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a201fa81.71e298",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "Set holding register",
+        "func": "msg.payload = { \n    'value': msg.payload, \n    'register': 'holding', \n    'address': msg.topic,\n    'disablemsg' : 1\n} ;\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 500,
+        "wires": [
+            [
+                "7c7e0ef2.453118"
+            ]
+        ]
+    },
+    {
+        "id": "c673953e.4b3658",
+        "type": "modbus-flex-getter",
+        "z": "773d005b.cd22d8",
+        "name": "Modbus Flexible Read",
+        "showStatusActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "4483385.85f9ac8",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 540,
+        "y": 1080,
+        "wires": [
+            [
+                "5913ce4a.9fdbb",
+                "834e4b55.1558e8",
+                "905a2f03.a1a32"
+            ],
+            [
+                "98c58674.0cc79",
+                "622bfb4f.c83aec"
+            ]
+        ]
+    },
+    {
+        "id": "5913ce4a.9fdbb",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "payload",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "98c58674.0cc79",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 770,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "622bfb4f.c83aec",
+        "type": "modbus-response",
+        "z": "773d005b.cd22d8",
+        "name": "",
+        "registerShowMax": 20,
+        "x": 810,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "905a2f03.a1a32",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "complete": "true",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "834e4b55.1558e8",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "complete": "responseBuffer",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "6f9cbd7.c5650c4",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "FC3",
+        "func": "msg.payload = { 'fc': 3, 'unitid': 1, 'address': msg.address , 'quantity': 16 }\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1080,
+        "wires": [
+            [
+                "c673953e.4b3658"
+            ]
+        ]
+    },
+    {
+        "id": "653f1ec9.b19868",
+        "type": "comment",
+        "z": "773d005b.cd22d8",
+        "name": "Flexible Read Holding Registers",
+        "info": "",
+        "x": 170,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "627ed8f78695f268",
+        "type": "inject",
+        "z": "773d005b.cd22d8",
+        "name": "Address 2000",
+        "props": [
+            {
+                "p": "address",
+                "v": "2000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 1080,
+        "wires": [
+            [
+                "6f9cbd7.c5650c4"
+            ]
+        ]
+    },
+    {
+        "id": "f3bfea9c24b3b31e",
+        "type": "inject",
+        "z": "773d005b.cd22d8",
+        "name": "Create new data points",
+        "props": [],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "a8d2b2fd8ba3161d",
+                "287525f3b90f9eb6",
+                "9ea5f0d55701d2ba",
+                "2059dc1238f693bc",
+                "91f5cd544a3d659c",
+                "dca7cd6d94b07d06",
+                "c2e167c0e02c3557",
+                "a512f928710f9e47",
+                "91f7a2029ea64268",
+                "8d6a7fd02eb29611",
+                "c5dd43ece565cb73",
+                "6fcdef5761facbd8",
+                "634f8348be3c9337",
+                "f5cd6ce71ef75236"
+            ]
+        ]
+    },
+    {
+        "id": "a8d2b2fd8ba3161d",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "R: Motor Torque (HR2012:660) [500-700]",
+        "func": "function generateRandomFloatInRange(min, max) {\n    return (Math.random() * (max - min)) + min;\n}\n\nmsg.payload = Math.round(generateRandomFloatInRange(500, 700));\nmsg.topic = 2012;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 700,
+        "wires": [
+            [
+                "70c369038617dc3b",
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "287525f3b90f9eb6",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "D: Motor Current (HR2005:96) [85-105]",
+        "func": "let upperLimit = 105;\nlet lowerLimit = 85;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('motorCurrent') || 96;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('motorCurrent', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2005;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "d9a345108fcfca11",
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "d9a345108fcfca11",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "HR2005",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "70c369038617dc3b",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "HR2012",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "c2e167c0e02c3557",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "D: Motor Voltage (HR2004:700) [690-710]",
+        "func": "let upperLimit = 710;\nlet lowerLimit = 690;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('motorVoltage') || 700;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('motorVoltage', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2004;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "ff2c970972db8254",
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "9ea5f0d55701d2ba",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: Drive Status (HR2003:7)",
+        "func": "// Static\nmsg.payload = 7;\nmsg.topic = 2003;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "2059dc1238f693bc",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: Error Code (HR2002:0xff38)",
+        "func": "// Static\nmsg.payload = 65336;\nmsg.topic = 2002;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "91f5cd544a3d659c",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "D: Frequency (HR2001:3665) [3500-3700]",
+        "func": "let upperLimit = 3750;\nlet lowerLimit = 3500;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('frequency') || 3665;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('frequency', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2001;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "2506f73a58883fa5",
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "dca7cd6d94b07d06",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: AC Drive Status Word (HR2000:6)",
+        "func": "// Static Value\nmsg.payload = 6;\nmsg.topic = 2000;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "a512f928710f9e47",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: Not Used (HR2006:11570)",
+        "func": "// Static - Not used\nmsg.payload = 11570;\nmsg.topic = 2006;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "6fcdef5761facbd8",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "D: Control Card Temperature C (HR2009:230) [180-250]",
+        "func": "let upperLimit = 250;\nlet lowerLimit = 180;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('controlCardTemperature') || 230;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('controlCardTemperature', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2009;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 580,
+        "wires": [
+            [
+                "6c870f20f90a8af0",
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "634f8348be3c9337",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "D: DC Bus Voltage (HR2010:401)",
+        "func": "let upperLimit = 425;\nlet lowerLimit = 375;\nlet diff = upperLimit - lowerLimit;\nlet step = diff / 50;\nlet value = flow.get('busVoltageDC') || 400;\n\nlet newValue = value + ( Math.random() < 0.5 ? step : -step );\n\nif ( newValue < lowerLimit) {\n    let action = \"LL - was: \" + newValue + \"  new: \";\n    newValue = newValue + step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nif ( newValue > upperLimit) {\n    let action = \"UL - was: \" + newValue + \"  new: \";\n    newValue = newValue - step;\n    action = action + newValue;\n    node.warn(action);\n}\n\nflow.set('busVoltageDC', newValue);\n\n\nmsg.payload = newValue;\nmsg.topic = 2010;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 620,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "f5cd6ce71ef75236",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: Frequency Command (HR2101:3665)",
+        "func": "// Static value\nmsg.payload = 3665;\nmsg.topic = 2101;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "ff2c970972db8254",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "HR2004",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2506f73a58883fa5",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "HR2001",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "91f7a2029ea64268",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: Not Used (HR2007:11570)",
+        "func": "// Static - Not used\nmsg.payload = 11570;\nmsg.topic = 2007;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "8d6a7fd02eb29611",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: Digital Input Status (HR2011:11570)",
+        "func": "// Static\nmsg.payload = 11570;\nmsg.topic = 2011;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 660,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "c5dd43ece565cb73",
+        "type": "function",
+        "z": "773d005b.cd22d8",
+        "name": "S: Not Used (HR2008:23)",
+        "func": "// Static - Not used\nmsg.payload = 23;\nmsg.topic = 2008;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 540,
+        "wires": [
+            [
+                "5db606156cd4558f"
+            ]
+        ]
+    },
+    {
+        "id": "6c870f20f90a8af0",
+        "type": "debug",
+        "z": "773d005b.cd22d8",
+        "name": "HR2009",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "49126b3eb4936054",
+        "type": "comment",
+        "z": "773d005b.cd22d8",
+        "name": "Write Holding Registers to the Modbus Flex Server (Slave)",
+        "info": "",
+        "x": 250,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "94c78582fabe9849",
+        "type": "comment",
+        "z": "773d005b.cd22d8",
+        "name": "Lenze i550 Variable frequency Drive (S: Static, D: Dynamic, R:Random)",
+        "info": "",
+        "x": 650,
+        "y": 180,
+        "wires": []
+    }
+]

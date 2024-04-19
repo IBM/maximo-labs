@@ -20,6 +20,8 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                             | [Prepare Raspberry Pi](monitor_live_demo_asset/prepare_pi)                  |
 |                                                             | [Convert Pi to RPE Asset](monitor_live_demo_asset/convert_pi)               |
 |                                                             | [Verify RPE is working](monitor_live_demo_asset/verify_rpe)                 |
+| [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/)  | [Use the Docker image](monitor_modbus_simulator/docker)            |
+|                                                             | [Use the Node-RED script](monitor_modbus_simulator/node-red)                  |
 
 
 ### Maximo Application Suite 8.11  (Under Development)
@@ -185,6 +187,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands on Labs are lice
 
 ---
 
-### UPDATED: 2024-02-27
+### UPDATED: 2024-04-27
 
 ---
