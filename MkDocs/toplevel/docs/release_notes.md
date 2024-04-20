@@ -17,6 +17,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2024-04-20|Jan Ekstrøm|Added the Maximo Monitor Modbus Simulator lab.|
 |2024-02-27|Jan Ekstrøm|Added the Maximo Monitor Live Demo Asset lab.|
 |2024-01-15|Jan Ekstrøm|Restructured to work on Github Pages.|
 |2023-12-29|Jan Ekstrøm|Updated the contribute and template labs.|

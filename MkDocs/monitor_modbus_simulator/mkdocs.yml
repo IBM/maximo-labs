@@ -1,0 +1,23 @@
+site_name: Monitor Modbus Simulator Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Jan Ekstrøm
+site_description: "Maximo Monitor Modbus Simulator Hands on Lab"
+site_dir: ../../site/monitor_modbus_simulator
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Modbus Simulator Lab:
+    - Welcome to this lab: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Use the Docker image: docker.md
+    - 2. Use the Node-RED script: node-red.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+  
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
