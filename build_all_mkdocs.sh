@@ -22,6 +22,12 @@ echo "BUILD_INFO - The top level of IBM Maximo Labs is build."
 
 #### BELOW IS WHERE EACH LAB IS BEING BUILD                                   ####
 
+: '
+How to comment out a blog to lover build time during development. 
+Look at the character used above and belove these two lines of text.
+'
+
+
 # Build the Monitor SaaS level:
 lab=monitor_saas
 echo "==================================================================================="

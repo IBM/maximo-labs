@@ -46,5 +46,24 @@ Node-RED library dependencies:</br>
 9. Your local Modbus Simulator is now active and the random and dynamic values will change every 30 second.
 ![Complete flow](img/Setup_07.png)</br></br>
 
+## Customisation tips and tricks
+
+#### Changing port number
+
+If you need to change the port number, this is done in the Modbus Flex Server node:
+![Change Port](img/Setup_08.png)</br></br>
+
+#### Changing dynamic range
+
+The function nodes provide the the content of the holding registers (defined in msg.topic).</br>
+You can change the default value, the upper limit, and the lower limit if needed.
+![Change data range](img/Setup_09.png)</br></br>
+
+#### Adding another device
+
+You can add another device by duplicating one of the tabs. Just remember to change the port number in the Modbus Flex Server node in the new tab.
+![Tabs](img/Setup_10.png)</br></br>
+
+
 ---
 Congratulations you have successfully installed and prepared a local instance of Node-RED running as a modbus simulator.

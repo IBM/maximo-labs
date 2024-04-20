@@ -1,7 +1,14 @@
 # Objectives
 In this Exercise you will learn how to use Docker to run a fixed and ready docker container with the modbus simulator.
 
-## 1. Create the Docker container
+## 1. Install Docker
+
+There are different ways to install the Docker engine depending of the package and the OS.</br>
+One multi platform option is Rancher Desktop. It is a fairly easy to install Rancher Desktop,</br>
+as you just have to follow this guide: [Running Docker locally](https://docs.rancherdesktop.io/getting-started/installation/){target=_blank}</br>
+
+
+## 2. Create the Docker container
 Open a terminal or command window and run the following command:
 
     docker create -p 10502:10502 -p 20502:20502 -v node_red_data_vol:/data --name i550simulator ekstrom/modbus_simulator
@@ -14,7 +21,7 @@ It needs to pull the docker image. It has been given the name: `i550simulator`
 
 ![Create container](img/docker_01.png)
 
-## 2. Start the Docker container
+## 3. Start the Docker container
 
 Run the follwing command to start the container:
 
@@ -23,7 +30,7 @@ Run the follwing command to start the container:
 The simulator is now active and the random and dynamic values will change every 30 second.
 It will run in the background and not produce any output in the terminal/command window.
 
-## 3. Stop and remove the Docker container
+## 4. Stop and remove the Docker container
 
 Once you are done using the docker based simulator you can stop it with the following command:
 
