@@ -1,27 +1,26 @@
 # Welcome to the </br>IBM Maximo Monitor Modbus Simulator Lab
 This lab will describe how to install and setup a Modbus Simulater. 
 
-The rationale behind creating this lab is:
+The rationale behind creating this lab is to:
 
-- to provide an easy to use modbus simulator which can be used in other labs.
-- to fill the gap of missing some OT data from an industrial device - without actually having one available.
+- provide an easy to use modbus simulator which can be used in other labs or other custom demonstrations.
+- provide some OT data points from an industrial device (a Variable Frequency Drive) - without actually having one available.
 - provide a multi-platform simulator, that can be used on Windows, MacOS and Linux.
-- provide a simulator with dynamic OT data instead of a Windows based simulator that only provied fixed values (e.g. Unslave)
-- can be used in many different custom demonstrations, hence why it is a separate lab.
+- provide a simulator with dynamic OT data points instead of a Windows based simulator that only deliver fixed values (e.g. Unslave)
 
 ## Objectives
 
 After completing this lab, you will be able to either:</br></br>
 ►	Use a docker container. </br>
-A black box solution with all defined:</br>
-- easy to start and use</br>
-- no need to install Node-RED</br>
-- no possibility to change anything</br>
+&emsp;&emsp;A black box solution with all defined:</br>
+&emsp;&emsp;- easy to start and use</br>
+&emsp;&emsp;- no need to install Node-RED</br>
+&emsp;&emsp;- no possibility to change anything</br>
 </br>
-►	Install Node-RED somewhere and add a scripts.</br>
-A white box solution:</br>
-- takes a little longer to setup</br>
-- is fully customisable</br>
+►	Use a Node-RED installation with a provided script:</br>
+&emsp;&emsp;A white box solution:</br>
+&emsp;&emsp;- takes a little longer to setup</br>
+&emsp;&emsp;- is fully customisable</br>
 
 ## The Simulator
 The modbus simulator is simulating 2 independant Lenze i550 Variable Frequency Drives</br>
@@ -52,7 +51,7 @@ So you need to use the IP Address of the machine where the simulator is running 
 !!! tip
     The dynamic and random values will change every 30 second.</br>
     The dynamic values are created using [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise){target=_blank}</br>
-    The standard port number for Modbus devices is 502, but I decided to use 10502 and 20502 so there would be two independant devices AND to make sure it would be supporting multiple platforms.
+    The standard port number for Modbus devices is 502, but I decided to use port 10502 and 20502 providing two independant devices that would work on multiple platforms.
 
 
 </br>

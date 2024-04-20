@@ -4,7 +4,7 @@ In this Exercise you will learn how to use Docker to run a fixed and ready docke
 ## 1. Install Docker
 
 There are different ways to install the Docker engine depending of the package and the OS.</br>
-One multi platform option is Rancher Desktop. It is a fairly easy to install Rancher Desktop,</br>
+One multi platform option is Rancher Desktop. It is fairly easy to install Rancher Desktop,</br>
 as you just have to follow this guide: [Running Docker locally](https://docs.rancherdesktop.io/getting-started/installation/){target=_blank}</br>
 
 
