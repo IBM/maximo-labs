@@ -1,5 +1,8 @@
 # Welcome to the </br>IBM Maximo Monitor Modbus Simulator Lab
-This lab will describe how to install and setup a Modbus Simulater. 
+This Maximo Hands-on Lab will describe how to install and setup a Modbus Simulator, </br>
+that will simulate two Lenze i550 variable frequency drives (VFDs).
+
+It can be used in many different custom demonstrations, hence why it is a separate lab.
 
 The rationale behind creating this lab is to:
 
