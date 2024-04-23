@@ -12,14 +12,14 @@ This Exercise requires that you have:
 1. completed the pre-requisites required for [all labs](prereqs.md)
 2. completed the previous exercises
  
-A good starting point is to get the IP address of the Windows Server as that will be the IP address of the simulated devices.</br>
-Open a CMD window and execute `ipconfig` so you can see the public ethernet IP address:
-![ipconfig](img/edc_integration_00.png)</br>
-In this case the IP address is 149.81.201.83.
+A good starting point is to get the IP address of the industrial devices you need to collect the data from - in this case the machine the Modbus simulator is running on.
+The way to get it depends on the OS:
 
-!!! attention
-    DO NOT USE THIS IP ADDRESS !!</br>
-    It might be in use for other purposes and should not be interrupted by other EDC edges connecting.
+* Windows: Open a CMD window and execute `ipconfig` 
+* MacOS: Open a terminal and execute `ifconfig -en0`
+* Linux: Open a terminal and execute `hostname -I`
+
+I was running the simulator on my local network on a machine with the IP address: 192.168.1.42.
 
 ---
 ##  Create a new Edge Data Collector (EDC) Integration in Monitor
@@ -60,10 +60,7 @@ Search for Lenze in the manufacurer drop-down and select it:
 Select the i550 product and click `Next`:
 ![Select i550](img/edc_integration_08.png)</br></br>
 
-Give the device a name. This will become the Device ID in Monitor.</br>
-Select Modbus TCP. Enter the IP Address acquired in the beginning.</br>
-Select Server ID 1, which will refer to the first device defined in the</br>
-`config.json` of the Unslave simulator. Click `Next`:
+Give the device a name. This will become the Device ID in Monitor. Select Modbus TCP. Enter the IP Address where the Modbus simulator is running including the port number after the colon:</br>
 ![Configure protocol](img/edc_integration_09.png)</br></br>
 
 Select the eight first tags. Change the Base Frequency to 60000 ms (1 minute), which will change all the Frequency fields of the selected tags. Click `Finish`:
@@ -76,7 +73,7 @@ Select the eight first tags. Change the Base Frequency to 60000 ms (1 minute), w
 Once the first Lenze device is created it is easy to duplicate it for the second one:
 ![Duplicate device](img/edc_integration_11.png)</br></br>
 
-Enter the Device name and Server ID 2. Click `Next`:
+Enter the Device name and the IP address with port number of the other simulator. Click `Next`:
 ![Configure protocol](img/edc_integration_12.png)</br></br>
 
 The data point settings are cloned automatically. Click `Finish`.</br>
