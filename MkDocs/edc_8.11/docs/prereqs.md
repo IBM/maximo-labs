@@ -23,13 +23,10 @@ o Click `Create an IBM ID` link
 
 4.  Test your access to the Maximo Application Suite environment.
 
-# Exercise 1
-
-For exercise 1 make sure you have access to a Windows machine with a static IP Address.</br>
-This lab uses a Windows Server 2019 on IBM Cloud classic infrastructure.</br>
-Make sure the firewall is accepting incoming traffic on port 502.
-
 # Exercise 4
 
 Docker must be running on your local machine while acting as the Edge Data Collector instance.</br>
-It can be installed from the [Docker website](https://www.docker.com/){target=_blank}.
+There are different ways to install the Docker engine depending of the package and the OS.</br>
+One multi platform option is Rancher Desktop. It is fairly easy to install Rancher Desktop,</br>
+as you just have to follow this guide: [Running Docker locally](https://docs.rancherdesktop.io/getting-started/installation/){target=_blank}</br>
+</br>

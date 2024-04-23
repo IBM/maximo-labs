@@ -73,7 +73,10 @@ Congratulations you have successfully:
 * created the needed gateway in the IoT Tool and device type in Monitor 
 * created an Edge Data Collector Integration by defining endpoint, devices and their tags (metrics)
 * deployed the EDC Integration on an EDC Edge and the device data has been collected, unified and send to Maximo Monitor
-* received the unified data in the IoT Tool and selected a subset of the metrics to be stored in the Maximo Monitor database to be available for further analysis and visualization
+* received the unified data in the IoT Tool and selected a subset of the metrics to be stored in the Maximo Monitor database to be available for further analysis and visualization, like the example below:
+
+![Example Dashboard](img/monitor_metrics_11.png)</br></br>
+
 
 
 
