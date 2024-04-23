@@ -17,7 +17,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2024-04-23|Jan Ekstrøm|Updated the [Edge Data Collector lab](../edc_8.11) to yse a new modbus simulator.|
+|2024-04-23|Jan Ekstrøm|Updated the [Edge Data Collector lab](../edc_8.11) to use a new modbus simulator.|
 |2024-04-20|Jan Ekstrøm|Added the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/).|
 |2024-02-27|Jan Ekstrøm|Added the [Maximo Monitor Live Demo Asset lab](../monitor_live_demo_asset/).|
 |2024-01-15|Jan Ekstrøm|Restructured to work on Github Pages.|
