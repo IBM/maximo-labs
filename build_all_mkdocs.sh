@@ -164,7 +164,7 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Gifhub Pages level:
+# Build the Github Pages level:
 lab=github_pages
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -172,7 +172,7 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Gifhub Pages level:
+# Build the Github Pages level:
 lab=monitor_live_demo_asset
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -180,8 +180,16 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Gifhub Pages level:
+# Build the Github Pages level:
 lab=monitor_modbus_simulator
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the template level:
+lab=apm_9.0
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
