@@ -29,7 +29,7 @@ In order to allow users to `edit source record` on `Action` button to navigate f
 Manage Asset page you must configure the Health application security groups in manage using the steps below.
 
 1. Go to Manage.
-![assets_page](../../../apm_8.11/img/hpu_8.11/select_manage.png)
+![assets_page](../../../maximo-labs/apm_8.11/img/hpu_8.11/select_manage.png)
 2. Choose the `Security group` application. 
 ![assets_page](../../../apm_8.11/img/hpu_8.11/select_security_groups.png)
 3. Search on the `HEALTH` group and click `enter` key. 
