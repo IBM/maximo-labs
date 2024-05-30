@@ -4,7 +4,7 @@
     This lab is still being developed, incomplete and may have errors.  We provide it to get your [feedback](https://github.com/IBM/maximo-labs/issues/new) and allow you to reference the materials as the labs are built.
 
 This lab provides step-by-step instructions and code examples to help you learn about the product capabilities in IBM 
-Maximo Health and Predict v8.11.  
+Maximo Health and Predict v9.0.  
 
 You will:
 
