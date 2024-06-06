@@ -3,8 +3,8 @@ In this Exercise you will learn how to use Docker to run a fixed and ready docke
 
 !!! note
     The created docker container should work on the following architectures:</br>
-    - x86 (Windows/Linux/MaxOs)</br>
-    - ARM (Linux/MacOs).
+    - x86 (Windows/Linux/macOS)</br>
+    - ARM (Linux/macOS).
 
 ## 1. Install Docker
 
@@ -13,7 +13,7 @@ One multi platform option is Rancher Desktop. It is fairly easy to install Ranch
 as you just have to follow this guide: [Running Docker locally](https://docs.rancherdesktop.io/getting-started/installation/){target=_blank}</br>
 
 !!! tip
-    Podman and Docker Desktop should also work, but I have not testet it.
+    Podman and Docker Desktop should also work, but I have not tested it.
 
 ## 2. Create the Docker container
 Open a terminal or command window and run the following command:
