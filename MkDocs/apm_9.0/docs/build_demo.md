@@ -387,6 +387,39 @@ Create the third investment strategy `Stay in budget` and run it.
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 69.png)
 
 
+## Meantime Between Failure
+
+To calculated the count of how many assets are achieving or not achieving the meantime to failure requires that you 
+specify what the threshold is the number of hours an asset needs to be greater than to achieve the meantime of failure
+threshold goal.  Meantime between failure is calculated as being the amount of time an asset goes before it has an 
+unscheduled work order being either corrective maintenance or emergency maintenance.   The meantime between failure is calculated by summing the amount of time between installation 
+and the first unscheduled work order and time between each of the next consecutive unscheduled workers divide by the 
+total number of unscheduled work order events. 
+
+
+
+### Create Threshold
+
+To create a meantime between failure threshold consider the group of assets that you are measuring performance for.
+Consider creating separate thresholds for a groups of similar expected performance assets within an asset class like 
+pumps and other thresholds for assets that are part of a system and require similar performance considerations like an
+HVAC system.  
+
+For this exercise you wil create a pump threshold
+ a group for assets within a similar asset class, type, manufacture and model create
+a set of substation transformers to an investment project from the matrix page, filter the assets, and 
+`drill down` to the table view and add assets to a project. 
+
+1. Use the pulldown, and select `Substation Transformers (shared)` from the list. 
+![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 51.png)
+2. Select the `red` box in the matrix to show the table view of the assets. 
+![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 52.png)
+3. From the table view, select `50` from the pulldown at the bottom of the table. 
+4. Select the `box` at the top of the page to select all of the assets on the table. 
+![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 53.png)
+5. Select `Create investment project`. 
+![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 54.png)
+
 ## Summary
 <a name="summary"></a>
 
