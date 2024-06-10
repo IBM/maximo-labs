@@ -1,14 +1,19 @@
 # Build MAS Health and Predict Demonstration
 
-Follow the steps in this lab in your own environment to create the necessary components to deliver the MAS v8.11 Health and 
-Predict Demo Script. The data for your system can be provided by the instructor.
+Follow the steps in this lab in your own environment to create the necessary components to deliver the Maximo Application Suite (MAS) v9 Health and 
+Predict Demo Script. The data for your system can be provided by the instructor or you can create your own assets too for some of the exercises.
 
-1. Create group using notebooks
-2. Create score type
-3. Create group using Custom Scoring Methodology
-4. Create custom matrix
-5. Plan replacement plan template for Substation Transformers
-6. Create investment project
+1. Login to MAS Applications 
+2. Setup Health Asset Permissions 
+3. Setup Default Health Asset Condition Scores
+4. Create an Asset
+5. Setup Health Score Groups 
+6. Create a Score Group
+7. Create score type 
+8. Create group using Custom Scoring Methodology 
+9. Create custom matrix 
+10. Plan replacement plan template for Substation Transformers 
+11. Create investment project
 
 To keep track of the items that you create, append your initials to the end of the name, so that they’ll be easy to find and delete.
 
@@ -16,19 +21,31 @@ To keep track of the items that you create, append your initials to the end of t
 
 This lab requires the following:
 
-- A working Maximo Application Suite (MAS) environment with Maximo Manage, or another Enterprise Asset Management (EAM) 
+- A working MAS environment with Maximo Manage, or another Enterprise Asset Management (EAM) 
 system, Maximo Health, Maximo Health and Predict, IBM Maximo Models for Electrical Distribution and Maximo Optimizer installed.
 - Sufficient asset data to run the analysis and get insights
 - User id with application access to `Health` application.
 - User id with access to a site. Otherwise you will get a warning `This user doesn't have access to any site. Site access is required to access ASSET object`
 
+##  Login to MAS Applications
 
-## Setup Health Asset Permissions
+Launch `Health` on the `Applications` tab.  If `Health` tile is not present on applications tab,  ask your MAS admin has to enable it. 
 
-In order to allow users to `edit source record` on `Action` button to navigate from the Health asset details page to the 
-Manage Asset page you must configure the Health application security groups in manage using the steps below.
+1. After you login using the credentials provided by your instructor,  navigate to the 
+2. From the main MAS page, select the `Applications` tab
+![navigate_to_health](../../../maximo-labs/apm_8.11/img/hpu_8.11/health1.png)
+3. Click the `Launch` link on the `Manage`, `Health` or `Predict` tile.  To setup permissions in the next exercise you will go to Manage.
+4. This displays the assets grid page with a table of assets and their health scores for the user's currently assigned site.
+![assets_page](../../../maximo-labs/apm_8.11/img/hpu_8.11/assets_grid_page.png)
 
-1. Go to Manage.
+**Note if  the user isn't assigned to a site they will not see any assets. ** 
+
+## Setup Health Asset Permissions in Manage
+<a name="setup-health-asset-permissions"></a>
+
+In order to allow users to `edit source record` on `Action` button on the Health asset details page you must first configure the Health application security groups in Manage using the steps below.
+
+1. Go to Manage Application.
 ![assets_page](../../../maximo-labs/apm_8.11/img/hpu_8.11/select_manage.png)
 2. Choose the `Security group` application. 
 ![assets_page](../../../maximo-labs/apm_8.11/img/hpu_8.11/select_security_groups.png)
@@ -44,59 +61,118 @@ Manage Asset page you must configure the Health application security groups in m
 ![assets_page](../../../maximo-labs/apm_8.11/img/hpu_8.11/confirmation_save.png)
 9. Go back to `Health`application and login using the user to ensure the operation is now possible.
 
-## Create Asset Scoring Groups using Notebooks
-<a name="create_group_notebooks"></a>
-Coming soon.
+## Setup Default Health Asset Condition Scores
+<a name="default_score"></a>
 
-###  Navigate to Health
+Maximo Health v9 includes the ability to automatically active Asset Condition scoring for all assets that don't belong to
+a score group.  After you activate the default asset condition scores, any new asset you create will also use 
+the out of the box default score group to calculate asset condition for Health Risk and Criticality.   Asset that are 
+already part of score group will be skipped.
 
-Launch `Health` on the `Applications` tab.  If `Health` tile is not present on applications tab,  ask your MAS admin has to enable it. 
+### Activate the Default Score
 
-1. After you login using the credentials provided by your instructor,  navigate to the 
-2. From the main MAS page, select the `Applications` tab
-![navigate_to_health](../../../maximo-labs/apm_8.11/img/hpu_8.11/health1.png)
-3. Click the `Launch` link on the `Health` or `Predict` tile 
-4. This displays the assets grid page with a table of assets and their health scores for the user's currently assigned site.
-![assets_page](../../../maximo-labs/apm_8.11/img/hpu_8.11/assets_grid_page.png)
+In this exercise you enable the `Default Score`. 
 
-**Note if  the user isn't assigned to a site they will not see any assets. ** 
+1. After you Log into IBM Maximo for the first time you will be reminded to enable the `Default Score`. 
+2. Press the `Activate` Button to enable the Default Scores.
+![default_scores_form_](../../../maximo-labs/apm_8.11/img/hpu_8.11/default_scores_form.png)
+3. Make sure you have create assets and they have the required dependencies set.  An Asset Priority,  Work orders or 
+Service Requests set against the asset.  Asset installation date and asset expected life based on Manufacture.
+4. Optionally you can choose to `activate the scores later`.  Go to `Setting Group` and `Groups` tab to find the 
+`Default_Score` group to enable it.
 
+Asset scores will begin to be calculated using the `Default_Score` Group.  You can verify if the scoring is working by
+viewing assets using the `Asset Table List` page.  If the Health, Risk ad Criticality score don't apper it likely because
+there data missing for it to be calculated.   You can bulk update missing data for Installation Date in the `Asset Table 
+List` page simply by clicking on the column and row asset value and entering the information in the pop up dialog.   
+You can also view the Asset Condition Scores for `Health`, `Risk` and `Criticality` on the `Asset Details` page.
 
-###  Scoring Settings
+## Create an Asset
+<a name="create_asset"></a>
 
-On the main screen, there is a universal view of all managed assets in a familiar table view.
+In this exercise you create an asset in IBM Maximo Manage.  You will use this asset later to measure it's Meantime 
+Between Failure and see how it's value performs versus other assets using a Chart. 
 
-Scores that are shown in this view, and others, are created from the `Scoring and DGA settings` section on the left nav bar.
+In order for the Meantime Between Failure Score to be calculated you also are required also create an unscheduled emergency work 
+order.   Let's start by first creating the asset and then a work order.
 
-1. Hover over the left nav bar to expand it
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 3.png)	
+To create an example asset for Meantime Between Failure score make sure you enter the following asset fields:
 
-2. Select the `Scoring and DGA settings` section on the left nav bar
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 4.png)	
+- Asset Number: "AH016"
+- Description: "Submersible pump 20 hp rotary"
+- Asset Type: "Pump"
+- Status: Active
+- Installation Date: 6/1/20
+- Expected Life: 10  ( Manufacture suggested life - 20% for example)
+- Vendor: Armstrong
+- Manufacturer: Armstrong
 
+1. Log into IBM Maximo.  Open IBM Maximo Application Suite. 
+- Open your web browser and navigate to the IBM Maximo login page.
+- Enter your `username` and `password` to log in.
+- Launch `Manage` on the `Applications` tab.  If `Manage` tile is not present on `Applications` tab,  ask your MAS 
+administrator to enable it for your user id.
 
-### Create a Scoring Group
+2. Navigate to the `Asset` Module. Select to `Asset` Module.  From the main Maximo menu, select `Assets > Assets`.
 
-Creating a scoring group (i.e. grouping common assets together) is the first step to creating scores.
+3. Create a New Asset:
 
-If there are any scoring groups already created, they will appear on the `Groups` tab of the `Scoring and DGA settings` page.
+- Open `New Asset` Form. In the `Asset` module, click on the `New Asset` button to open the `asset creation` form.
 
-1. Scroll through the pages to see what groups have already been created.
+4. Fill in Asset Details:
+
+- Enter `Asset Number`. In the `Asset Number` field, enter a unique identifier for the asset (e.g., AH016).
+- Enter `Description`.  In the `Description` field, enter a detailed description of the asset (e.g., Submersible pump 20 hp rotary).
+- Select `Asset Type`. Locate the `Asset Type` field and select the appropriate type from the dropdown menu (e.g., Pump).
+- Enter `Installation Date`. Enter the `date` the asset was installed. Use the date picker to select the date (e.g., 2024-05-21).
+- Enter `Vendor Information`. In the `Vendor` field, enter the name of the vendor from which the asset was purchased (e.g., Siemens).
+- Enter `Manufacturer Information`. In the `Manufacturer` field, enter the name of the manufacturer of the asset (e.g., ABB).
+- Enter `Expected Life` in Years. In the `Expected Life` field, enter the expected operational life of the asset in years (e.g., 20).
+
+5. Save the `Asset`. After filling in all the required fields, click the `Save` button to create the asset record in Maximo.
+
+- Click `Save` to store the new asset record.
+
+6. Select  the asset status to `Active`:
+
+- From the `Common Actions` menu on the left, find the `Status` menu to launch the status Form.
+![change_asset_status](img/apm_9.0/change_asset_status.png)
+- Choose  `Active` from the `New Status` dropdown menu and click `Save` button.
+![change_asset_status](img/apm_9.0/change_asset_status.png)
+
+##  Setup Health Score Groups
+<a name="setup_health_score_group"></a>
+
+When you first login to the Health Application,  there is a universal table list view of all managed assets.
+
+Scores that are shown in this view, and others, are created from the `Scoring Settings` section on the left nav bar.
+
+1. Hover over the left nav bar to expand it. Select the `Scoring Settings` section on the left nav bar
+![setup_settings menu](../../../maximo-labs/apm_9.0/img/score_settings.png)	
+
+2. Create a scoring group by choosing assets that have similar behavior.  `Groups` are bound to an `asset query`. 
+
+If there are any scoring groups already created, they will appear on the `Groups` tab of the `Scoring settings` page.
+
+3. Scroll through the pages to see what groups have already been created.
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 5.png)
 
-There are 2 ways to develop scoring methodologies in Maximo Health and Predict – Utilities
-
-The first way is to develop the scoring methodology in a Jupyter notebook.  For many assets in the Transmission and Distribution space (T&D), IBM provides <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/continuous-delivery?topic=cm-asset-class-notebooks-in-maximo-health-predict-utilities">notebooks with prescribed scoring methodologies.</a>
+There are 2 ways to create asset condition scores in Maximo Health. The first way is using the [Maximo Formula Engine]( ).  
+The second way is use Watson Studio to customize the Jupyter notebook templates provided in Maximo Health or accelerators . 
+Each asset class has it's own notebook template.  See the <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/continuous-delivery?topic=cm-asset-class-notebooks-in-maximo-health-predict-utilities">documentation</a> 
+for the list of asset classes IBM provides.  You can configure the `Score Settings` using a text file with a `.cfg` 
+extension to specify how to calculate Asset Health, Risk and Criticality.
 
 Alternatively, scoring methodologies can be created from scratch directly in the UI.
 
 
 ### Create a Scoring Group
 
+
 To create a score group for Substation Transformers, click the `Create a scoring and DGA group` button, and complete the form.
 
-1. Click the `Create a scoring and DGA group` button. 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 6.png)
+1. Click the `Create a scoring group +` button. 
+![setup_assets](../../../maximo-labs/apm_9.0/img/create_score_group.png)
 2. Complete the open fields for `Name` and `Description`. 
 3. Select the radio button for `asset` to identify the `Object`. 
 4. Select the radio button `Connecting group to notebook` in response to `Configure scoring and DGA by`. 
@@ -109,7 +185,8 @@ To create a score group for Substation Transformers, click the `Create a scoring
 
 ### Pick a Query
 
-Complete the group by using a query to identify the assets in the group.  In this case, substation transformers. 
+To identify which assets each notebook your formula engine setting are applied to a the group of assets you must
+pick a asset query.  In this case select, substation transformers. 
 
 1. Click `select` to pick a query. 
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 9.png)
@@ -133,14 +210,13 @@ Once created, the group will display.  The next step is to activate each of the 
 
 
 ## Create Score Type
+<a name="create-score-type"></a>
 
-### Score Types
-
-To create a custom score methodology from the UI, return to the `Scoring and DGA settings` page by clicking the breadcrumb at the top of the page.
+To create your own asset conditions scores, you can use custom score from the UI, return to the `Scoring Settings` page by clicking the breadcrumb at the top of the page.
 
 Select the `Score types` tab on the page to create a new score type.  Existing score types will display on the page.
 
-1. Click the `Scoring and DGA settings` breadcrumb at the top of the page. 
+1. Click the `Scoring Settings` breadcrumb at the top of the page. 
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 15.png)
 2. Select the `Score types` tab. 
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 18.png)
@@ -158,7 +234,8 @@ Complete the form for the new custom score type.  The score type can be customiz
 4. Return to the `Groups` tab to set up the custom score methodology. Select the `Groups` tab. 
 
 
-## Create Group Using Custom Scoring Methodology
+## Create Group for Using Custom Score Using Notebooks
+<a name="create-group-custom-score"></a>
 
 ### Create a Scoring Group
 
@@ -216,6 +293,7 @@ For this example, only one contributor is used, but often there will be several 
 
 
 ## Create Custom Matrix
+<a name="create-group-custom-score"></a>
 
 ### View Matrix
 
@@ -230,6 +308,7 @@ To use the custom score in a matrix, a custom matrix must be created.
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 44.png)
 
 ## Configure Matrix
+<a name="create-group-custom-score"></a>
 
 To customize the matrix, click the `setting icon` in the upper right of the screen.  Adjust the fields so that Health 
 appears on the y-axis, and Substation Transformer Efficiency on the x-axis.
@@ -256,6 +335,7 @@ Also, fill in the colors of the matrix so that the assets with poor health and p
 
 
 ## Create Replacement Plan Template for Substation Transformers
+<a name="create-group-custom-score"></a>
 
 ### Replacement Plan Templates
 
@@ -289,6 +369,7 @@ Complete the form for the replacement plan template.
 
 
 ## Create Investment Project
+<a name="create-group-custom-score"></a>
 
 ### Assign Assets
 
@@ -388,6 +469,7 @@ Create the third investment strategy `Stay in budget` and run it.
 
 
 ## Meantime Between Failure
+<a name="create-group-custom-score"></a>
 
 To calculated the count of how many assets are achieving or not achieving the meantime to failure requires that you 
 specify what the threshold is the number of hours an asset needs to be greater than to achieve the meantime of failure

@@ -44,6 +44,8 @@ Manage Asset page you must configure the Health application security groups in m
 ![assets_page](img/hpu_8.11/confirmation_save.png)
 9. Go back to `Health`application and login using the user to ensure the operation is now possible.
 
+
+
 ## Create Asset Scoring Groups using Notebooks
 <a name="create_group_notebooks"></a>
 Coming soon.
