@@ -12,6 +12,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | Lab                                                     | Exercise                                                                                                                                         |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Health and Predict Setup](apm_9.0/build_demo)          | [Setup Health Asset Permissions](apm_9.0/build_demo/#setup-health-asset-permissions)                                                             |
+|                                                         | [Setup Default Health Asset Condition Scores](apm_9.0/build_demo/#default_score)                                                                 |
 |                                                         | [Create an Asset](apm_9.0/build_demo/#create_asset)                                                                                              |
 |                                                         | [Health Score Groups](apm_9.0/build_demo/#setup_health_score_group)                                                                              |
 |                                                         | [Create Score Type](apm_9.0/build_demo/#create-score-type)                                                                                       |
