@@ -136,9 +136,9 @@ administrator to enable it for your user id.
 6. Select  the asset status to `Active`:
 
 - From the `Common Actions` menu on the left, find the `Status` menu to launch the status Form.
-![change_asset_status](img/apm_9.0/change_asset_status.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/change_asset_status.png)
 - Choose  `Active` from the `New Status` dropdown menu and click `Save` button.
-![change_asset_status](img/apm_9.0/change_asset_status.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/change_asset_status.png)
 
 ##  Setup Health Score Groups
 <a name="setup_health_score_group"></a>
