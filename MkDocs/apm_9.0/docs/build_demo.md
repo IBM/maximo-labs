@@ -469,16 +469,16 @@ Create the third investment strategy `Stay in budget` and run it.
 
 
 ## Meantime Between Failure
-<a name="create-group-custom-score"></a>
+<a name="mtbf"></a>
 
 To calculated the count of how many assets are achieving or not achieving the meantime to failure requires that you 
-specify what the threshold is the number of hours an asset needs to be greater than to achieve the meantime of failure
-threshold goal.  Meantime between failure is calculated as being the amount of time an asset goes before it has an 
-unscheduled work order being either corrective maintenance or emergency maintenance.   The meantime between failure is calculated by summing the amount of time between installation 
-and the first unscheduled work order and time between each of the next consecutive unscheduled workers divide by the 
-total number of unscheduled work order events. 
-
-
+specify threshold goal to achieve.   For example what is the number of hours an asset needs to go to achieve the meantime 
+of failure goal.  Assets who have a meantime between failure less than the number of hours means they are failing earlier 
+than requierd and therefore aren't meeting the meantime between failure.   Meantime between failures is calculated using
+the amount of time an asset goes before it has an unscheduled work order.  Where the work order is either a corrective 
+maintenance or emergency maintenance.   The meantime between failure is calculated by summing the total amount of time 
+between installation and the first and subsequent unscheduled work order divided by the total number of unscheduled 
+worker order occurences.
 
 ### Create Threshold
 
