@@ -168,7 +168,6 @@ Alternatively, scoring methodologies can be created from scratch directly in the
 
 ### Create a Scoring Group
 
-
 To create a score group for Substation Transformers, click the `Create a scoring and DGA group` button, and complete the form.
 
 1. Click the `Create a scoring group +` button. 
@@ -474,7 +473,7 @@ Create the third investment strategy `Stay in budget` and run it.
 To calculated the count of how many assets are achieving or not achieving the meantime to failure requires that you 
 specify threshold goal to achieve.   For example what is the number of hours an asset needs to go to achieve the meantime 
 of failure goal.  Assets who have a meantime between failure less than the number of hours means they are failing earlier 
-than requierd and therefore aren't meeting the meantime between failure.   Meantime between failures is calculated using
+than required and therefore aren't meeting the meantime between failure.   Meantime between failures is calculated using
 the amount of time an asset goes before it has an unscheduled work order.  Where the work order is either a corrective 
 maintenance or emergency maintenance.   The meantime between failure is calculated by summing the total amount of time 
 between installation and the first and subsequent unscheduled work order divided by the total number of unscheduled 
@@ -501,6 +500,51 @@ a set of substation transformers to an investment project from the matrix page, 
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 53.png)
 5. Select `Create investment project`. 
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 54.png)
+
+
+### Add Required Data on Asset Details
+
+To calculate an asset's meantime between failure (MTBF), the asset's installation date must be known. Assets that are unable to
+display their MTBF value will show an `i` icon in the MTBF column and asset row in `Asset Table` Page or on the value card of 
+the `Asset Details` Page.  By clicking on the `i` icon, a dialog will open where you can set the installation date.  Suggested
+values for the installation date are also provided.
+
+1. Navigate to an `Asset Details` Page
+![change_asset_status](../../../maximo-labs/apm_9.0/asset_details_enter_installation_date.png)
+2. Click the an `i` icon on the MTBF value card.  
+3. Choose the installation date using the `Calendar` control inf the dialog.  If you don't know the installation date
+consider using the suggested value of when the asset was first added to Maximo.  
+4. Click `save` to save the installation date.
+5. The MTBF value card will be updated when the MTBF calculation is recalculated in the `crontask`.
+
+### Add Required Data on Asset Table
+
+1. Navigate to an `Asset Table` Page
+![change_asset_status](../../../maximo-labs/apm_9.0/asset_table_click_i_mtbf.png)
+2. Click the an `i` icon on the MTBF value card.  
+3. Choose the installation date using the `Calendar` control inf the dialog.  If you don't know the installation date
+consider using the suggested value of when the asset was first added to Maximo.  
+4. Click `save` button to save the installation date.
+![change_asset_status](../../../maximo-labs/apm_9.0/mtbf_asset_table_enter_installation_date.png)
+5. The MTBF value card will be updated when the MTBF calculation is recalculated in the `crontask`. You will see a status
+message letting you know the value will be calculated.
+![change_asset_status](../../../maximo-labs/apm_9.0/crontask_status.png)
+
+
+### Troubleshoot MTBF
+
+If an asset's MTBF value doesn't appear in the `Asset Details` page or `Asset Table` page after you have entered and the asset's installation date
+and the `crontask` has run then check to see if there are any filters applied to the `crontask` that remove your asset from
+the list of assets to be calculated for MTBF.
+
+1. Navigate to the `crontask` in Manage.
+![change_asset_status](../../../maximo-labs/apm_9.0/manage_select_crontask.png)
+2. Search on `MTBF` and click on the `MTBF crontask`.
+![change_asset_status](../../../maximo-labs/apm_9.0/search_mtbf_crontask.png)
+3. Review the  `crontask parameters`  to see if the value would descope your asset from being calculated.
+![change_asset_status](../../../maximo-labs/apm_9.0/mtbf_cron_task.png)
+3. Remove or correct any filters that my descope your asset from being included in the MTBF score calculation task.
+and click the `save` button to save the `crontask` settings.
 
 ## Summary
 <a name="summary"></a>
