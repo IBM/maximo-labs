@@ -136,9 +136,9 @@ administrator to enable it for your user id.
 6. Select  the asset status to `Active`:
 
 - From the `Common Actions` menu on the left, find the `Status` menu to launch the status Form.
-![change_asset_status](../../../maximo-labs/apm_9.0/change_asset_status.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/change_asset_status.png)
 - Choose  `Active` from the `New Status` dropdown menu and click `Save` button.
-![change_asset_status](../../../maximo-labs/apm_9.0/change_asset_status.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/change_asset_status.png)
 
 ##  Setup Health Score Groups
 <a name="setup_health_score_group"></a>
@@ -510,7 +510,7 @@ the `Asset Details` Page.  By clicking on the `i` icon, a dialog will open where
 values for the installation date are also provided.
 
 1. Navigate to an `Asset Details` Page
-![change_asset_status](../../../maximo-labs/apm_9.0/asset_details_enter_installation_date.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/asset_details_enter_installation_date.png)
 2. Click the an `i` icon on the MTBF value card.  
 3. Choose the installation date using the `Calendar` control inf the dialog.  If you don't know the installation date
 consider using the suggested value of when the asset was first added to Maximo.  
@@ -520,15 +520,15 @@ consider using the suggested value of when the asset was first added to Maximo.
 ### Add Required Data on Asset Table
 
 1. Navigate to an `Asset Table` Page
-![change_asset_status](../../../maximo-labs/apm_9.0/asset_table_click_i_mtbf.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/asset_table_click_i_mtbf.png)
 2. Click the an `i` icon on the MTBF value card.  
 3. Choose the installation date using the `Calendar` control inf the dialog.  If you don't know the installation date
 consider using the suggested value of when the asset was first added to Maximo.  
 4. Click `save` button to save the installation date.
-![change_asset_status](../../../maximo-labs/apm_9.0/mtbf_asset_table_enter_installation_date.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/mtbf_asset_table_enter_installation_date.png)
 5. The MTBF value card will be updated when the MTBF calculation is recalculated in the `crontask`. You will see a status
 message letting you know the value will be calculated.
-![change_asset_status](../../../maximo-labs/apm_9.0/crontask_status.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/crontask_status.png)
 
 
 ### Troubleshoot MTBF
@@ -538,11 +538,11 @@ and the `crontask` has run then check to see if there are any filters applied to
 the list of assets to be calculated for MTBF.
 
 1. Navigate to the `crontask` in Manage.
-![change_asset_status](../../../maximo-labs/apm_9.0/manage_select_crontask.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/manage_select_crontask.png)
 2. Search on `MTBF` and click on the `MTBF crontask`.
-![change_asset_status](../../../maximo-labs/apm_9.0/search_mtbf_crontask.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/search_mtbf_crontask.png)
 3. Review the  `crontask parameters`  to see if the value would descope your asset from being calculated.
-![change_asset_status](../../../maximo-labs/apm_9.0/mtbf_cron_task.png)
+![change_asset_status](../../../maximo-labs/apm_9.0/img/mtbf_cron_task.png)
 3. Remove or correct any filters that my descope your asset from being included in the MTBF score calculation task.
 and click the `save` button to save the `crontask` settings.
 
