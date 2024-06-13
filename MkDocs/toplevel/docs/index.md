@@ -9,31 +9,31 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ---
 
 ### Maximo Application Suite 9.0  (Under Development)
-| Lab                                                     | Exercise                                                                                                                                         |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Health and Predict Setup](apm_9.0/build_demo)          | [Setup Health Asset Permissions](apm_9.0/build_demo/#setup-health-asset-permissions)                                                             |
-|                                                         | [Setup Default Health Asset Condition Scores](apm_9.0/build_demo/#default_score)                                                                 |
-|                                                         | [Create an Asset](apm_9.0/build_demo/#create_asset)                                                                                              |
-|                                                         | [Health Score Groups](apm_9.0/build_demo/#setup_health_score_group)                                                                              |
-|                                                         | [Create Score Type](apm_9.0/build_demo/#create-score-type)                                                                                       |
-|                                                         | [Create Group Using Custom Score Notebooks](apm_9.0/build_demo/#create-group-custom-score)                                                       |
-|                                                         | [Introduction to Task Guide](apm_9.0/demo_script)                                                                                                |
-|                                                         | [Create Custom Matrix](apm_9.0/build_demo/#create-custom-matrix)                                                                                 |
-|                                                         | [Configure Matrix](apm_9.0/build_demo/#configure-matrix)                                                                                         |
-|                                                         | [Create Replacement Plan Template for Substation Transformers](apm_9.0/build_demo/#create-replacement-plan-template-for-substation-transformers) |
-|                                                         | [Create Investment Project](apm_9.0/build_demo/#create-investment-project   )                                                                    |
-|                                                         | [Setup Thresholds for Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                  |
-| [Health and Predict Demonstration](apm_9.0/demo_script) | [MAS Health and Predict Overview Task Guide](apm_9.0/#demo_script)                                                                               |
-|                                                         | [Using Asset Table View](apm_9.0/demo_script/#asset-table-view)                                                                                  |
-|                                                         | [Using Map View](apm_9.0/demo_script/#map_view)                                                                                                  |
-|                                                         | [Using Mean Time Between Failure Charts](apm_9.0/demo_script/#mtbf)                                                                              |
-|                                                         | [Use Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                                   |
-|                                                         | [Matrix View](apm_9.0/demo_script/#map_view)                                                                                                     |
-|                                                         | [Work Queues View](apm_9.0/demo_script/#work-queues-view)                                                                                        |
-|                                                         | [Investigate Asset Details](apm_9.0/demo_script/#assets-detail-view)                                                                             |
-|                                                         | [Action Asset Create Work Order](apm_9.0/demo_script/#take-action)                                                                               |
-|                                                         | [Action Multiple Assets in Matrix](/apm_9.0/demo_script/#identify-investigate-with-a-matrix)                                                     |
-|                                                         | [Compare Asset Investment Optimization Plans](apm_9.0/demo_script/#take-action-with-aio)                                                         |
+| Lab                                         | Exercise                                                                                                                                         |
+|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Health Setup](apm_9.0/build_demo)          | [Setup Health Asset Permissions](apm_9.0/build_demo/#setup-health-asset-permissions)                                                             |
+|                                             | [Setup Default Health Asset Condition Scores](apm_9.0/build_demo/#default_score)                                                                 |
+|                                             | [Create an Asset](apm_9.0/build_demo/#create_asset)                                                                                              |
+|                                             | [Health Score Groups](apm_9.0/build_demo/#setup_health_score_group)                                                                              |
+|                                             | [Create Score Type](apm_9.0/build_demo/#create-score-type)                                                                                       |
+|                                             | [Create Group Using Custom Score Notebooks](apm_9.0/build_demo/#create-group-custom-score)                                                       |
+|                                             | [Introduction to Task Guide](apm_9.0/demo_script)                                                                                                |
+|                                             | [Create Custom Matrix](apm_9.0/build_demo/#create-custom-matrix)                                                                                 |
+|                                             | [Configure Matrix](apm_9.0/build_demo/#configure-matrix)                                                                                         |
+|                                             | [Create Replacement Plan Template for Substation Transformers](apm_9.0/build_demo/#create-replacement-plan-template-for-substation-transformers) |
+|                                             | [Create Investment Project](apm_9.0/build_demo/#create-investment-project   )                                                                    |
+|                                             | [Setup Thresholds for Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                  |
+| [Health Demonstration](apm_9.0/demo_script) | [MAS Health and Predict Overview Task Guide](apm_9.0/#demo_script)                                                                               |
+|                                             | [Using Asset Table View](apm_9.0/demo_script/#asset-table-view)                                                                                  |
+|                                             | [Using Map View](apm_9.0/demo_script/#map_view)                                                                                                  |
+|                                             | [Using Mean Time Between Failure Charts](apm_9.0/demo_script/#mtbf)                                                                              |
+|                                             | [Use Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                                   |
+|                                             | [Matrix View](apm_9.0/demo_script/#map_view)                                                                                                     |
+|                                             | [Work Queues View](apm_9.0/demo_script/#work-queues-view)                                                                                        |
+|                                             | [Investigate Asset Details](apm_9.0/demo_script/#assets-detail-view)                                                                             |
+|                                             | [Action Asset Create Work Order](apm_9.0/demo_script/#take-action)                                                                               |
+|                                             | [Action Multiple Assets in Matrix](/apm_9.0/demo_script/#identify-investigate-with-a-matrix)                                                     |
+|                                             | [Compare Asset Investment Optimization Plans](apm_9.0/demo_script/#take-action-with-aio)                                                         |
 
 
 ### Maximo Application Suite 8.11
