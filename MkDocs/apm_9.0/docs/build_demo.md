@@ -519,6 +519,17 @@ consider using the suggested value of when the asset was first added to Maximo.
 
 ### Add Required Data on Asset Table
 
+1. Navigate to an `Asset Table` Page
+![change_asset_status](../../../maximo-labs/apm_9.0/asset_table_click_i_mtbf.png)
+2. Click the an `i` icon on the MTBF value card.  
+3. Choose the installation date using the `Calendar` control inf the dialog.  If you don't know the installation date
+consider using the suggested value of when the asset was first added to Maximo.  
+4. Click `save` button to save the installation date.
+![change_asset_status](../../../maximo-labs/apm_9.0/mtbf_asset_table_enter_installation_date.png)
+5. The MTBF value card will be updated when the MTBF calculation is recalculated in the `crontask`. You will see a status
+message letting you know the value will be calculated.
+![change_asset_status](../../../maximo-labs/apm_9.0/crontask_status.png)
+
 
 ### Troubleshoot MTBF
 
