@@ -348,11 +348,11 @@ The matrix provides a good view from which to select assets for an investment pr
 4. On the `Plan templates` tab, click the `+` symbol to create a new plan template. 
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 57.png)
 
-### Create a Template
+### Create an Asset Replacement Template
 
 Complete the form for the replacement plan template.
 
-1. Select `SUBSTATION_TRANSFORMER` from the selection list.  **Note if there is already a replacement plan template for an asset class, a new one cannot be created**
+1. Select `SUBSTATION_TRANSFORMER` from the selection list or other asset class.  **Note if there is already a replacement plan template for an asset class, a new one cannot be created**
 2. In the open field, type `Sample replacement plan template for Substation Transformer`
 3. Select `Replacement` for `Plan type`. 
 4. Enter `8` for `Expected downtime in hours`. 
@@ -479,23 +479,48 @@ maintenance or emergency maintenance.   The meantime between failure is calculat
 between installation and the first and subsequent unscheduled work order divided by the total number of unscheduled 
 worker order occurences.
 
-### Create Threshold
+### Create Threshold on Charts Page
 
 To create a meantime between failure threshold consider the group of assets that you are measuring performance for.
 Consider creating separate thresholds for a groups of similar expected performance assets within an asset class like 
 pumps and other thresholds for assets that are part of a system and require similar performance considerations like an
 HVAC system.  
 
-For this exercise you wil create a pump threshold
- a group for assets within a similar asset class, type, manufacture and model create
-a set of substation transformers to an investment project from the matrix page, filter the assets, and 
-`drill down` to the table view and add assets to a project. 
+For this exercise you will create a MTBF performance threshold for an asset class. You can use pumps that have a similar 
+asset class, type, manufacture and model.  There are two ways to create `Thresholds`.  One is on the `Asset Charts` page,
 
-1. Use the pulldown, and select `Substation Transformers (shared)` from the list. 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 51.png)
-2. Select the `red` box in the matrix to show the table view of the assets. 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 52.png)
-3. From the table view, select `50` from the pulldown at the bottom of the table. 
+If you haven't previously created any `Thresholds`. The other way to create them by going to the `Score Settings` page.
+
+1. Navigate to the `Asset Charts` page. 
+![setup_settings menu](../../../maximo-labs/apm_9.0/img/GoToChartsCreateThreshold.png)	
+2. Click `Create threshold` button.
+3. Fill in the form values and click the `Save` button.
+![setup_settings menu](../../../maximo-labs/apm_9.0/img/CreateThresholdPumpHours.png)
+4. Select the `box` at the top of the page to select all of the assets on the table. 
+![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 53.png)
+5. Select `Create investment project`. 
+![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 54.png)
+
+
+### Create Threshold on Score Settings Page
+
+ Create a `Threshold` anytime by navigating to the `Score Settings`  After you create the threshold it will be made
+ available as an option on `MTBF` chart on the `Charts` page.
+
+1. Navigate to the `Score Setting` page. 
+![setup_settings menu](../../../maximo-labs/apm_9.0/img/ClickOnFilterFunnelIcon.png)	
+2. Click `Funnel` button.
+3. Select the previously created Threshold you want to use for the current `View` and click the `Save` button.
+![setup_settings menu](../../../maximo-labs/apm_9.0/img/CreateThresholdPumpHours.png)
+
+
+ The other way to create them by going to the `Score Settings` page.
+
+1. Navigate to the `Asset Charts` page. 
+![setup_settings menu](../../../maximo-labs/apm_9.0/img/GoToChartsCreateThreshold.png)	
+2. Click `Create threshold` button.
+3. Fill in the form values and click the `Save` button.
+![setup_settings menu](../../../maximo-labs/apm_9.0/img/CreateThresholdPumpHours.png)
 4. Select the `box` at the top of the page to select all of the assets on the table. 
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 53.png)
 5. Select `Create investment project`. 
