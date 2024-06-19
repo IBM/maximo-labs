@@ -69,6 +69,8 @@ a score group.  After you activate the default asset condition scores, any new a
 the out of the box default score group to calculate asset condition for Health Risk and Criticality.   Asset that are 
 already part of score group will be skipped.
 
+Watch the [video on Default Asset Condition Scores](https://mediacenter.ibm.com/media/1_2k8jqivj)
+
 ### Activate the Default Score
 
 In this exercise you enable the `Default Score`. 

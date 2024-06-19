@@ -607,7 +607,13 @@ There’s a single page from which to conduct an investigation and take an actio
 
 In Health and Predict – Utilities, there’s also the ability to use a matrix (custom or OOTB) and do long-term replacement planning based on risk tolerance and available budget.
 
- 
+### Identify / Investigate with Maps
+
+Start building an investment project from the matrix view.
+
+!!! attention "Actions"
+    Follow the action items below.
+
 
 ### Identify / Investigate with a Matrix
 
