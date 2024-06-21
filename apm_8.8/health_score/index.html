@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/health_score/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Asset Health Scoring - Maximo APM V8.8 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Asset Health Scoring";
+        var mkdocs_page_input_path = "health_score.md";
+        var mkdocs_page_url = "/maximo-labs/health_score/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.8 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.8.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Asset Health Scoring</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lab-overview">Lab Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-an-asset-group-view">Create an Asset Group View</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#asset-map-view">Asset Map View</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#work-queues">Work Queues</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-health-scores">Create health scores</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#asset-details">Asset Details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#asset-failure-probability">Asset Failure Probability</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#asset-timeline">Asset Timeline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#taking-action">Taking action</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#closing">Closing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-remove-the-temporary-groups">How to remove the temporary groups</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matrix/">View and config Asset Matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.8 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Asset Health Scoring</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="asset-health-scoring">Asset Health Scoring</h1>
+<p>Maximo Health includes <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850">health scores</a> for understanding asset conditions. Allowing you to identify which assets are most critical and in need of maintenance or replacement.</p>
+<p>In this exercise the Reliability Engineer uses Health to:</p>
+<ol>
+<li>Create an <a href="#asset_group_view">asset group view</a></li>
+<li>View <a href="#asset_map_view">asset map</a></li>
+<li>View <a href="#work_queues">work queues</a></li>
+<li>Create <a href="#create_health_scores">health group scores</a></li>
+<li>View <a href="#asset_details">asset details</a> page</li>
+<li>View <a href="#asset_failure">predict model</a> for asset failure probability</li>
+<li>View <a href="#asset_timeline">asset timeline</a></li>
+<li>Take action by creating <a href="#taking_action">service request</a></li>
+<li>Remove <a href="#remove_groups">temporary views and groups</a></li>
+</ol>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ul>
+<li>Review Health documentation for the <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850">list of available models</a>.</li>
+<li>Ensure your MAS v8.7 Health environment is running and you have access.</li>
+</ul>
+<p>Please note that the MAS Worldwide (WW) demo environment is NOT a suitable environment for this lab.  The WW demo environment is shared, and making ANY changes to that environment will impact other users’ ability to demonstrate MAS.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This lab exercise guide is for Maximo Health and Predict. </p>
+<p>Maximo Predict uses historical and real-time asset performance data, maintenance records, inspection reports, and environmental data to correlate performance factors that predict asset degradation or failure. Predict uses artificial intelligence to optimize predict model accuracy.</p>
+<p>Maximo Health introduced the concept of work queues to provide a consolidated view of the Assets and their health.  It provides Asset Performance KPI view and fleet wide view and health drill down. It also allows you to take actions based on conditions. This may be based on either Inspection or Sensor Data.
+<img alt="sample wheel" src="../img/apm_8.7/h1.png" /></p>
+<p>Maximo Predict allows for increasing the life of asset. It reduces maintenance costs and improves asset utilization by reducing unnecessary and redundant maintenance based on condition monitoring infused with IoT, AI, and ML. Also, it helps in conducting the proactive maintenances for assets that need attention. </p>
+<p>Through this Maximo Health and Predict lab exercise, you will learn how to</p>
+<ul>
+<li>Get better insight into the health of assets and predict failures well in advance</li>
+<li>Reduce unnecessary Preventive Maintenance or doing condition-based monitoring.</li>
+</ul>
+<p>It would take about 60 minutes to go through the lab exercise and learn about the Maximo Health and Predict applications. </p>
+<p>Note: Follow the <code>Actions</code> steps in bold to navigate through the lab procedures. </p>
+<h2 id="glossary">Glossary</h2>
+<p><strong>Age</strong> is the actual age. It is the current date minus the installation date.</p>
+<p><strong>Anomaly Detection</strong> helps identify unusual patterns in the behavior of the asset, which might indicate potential failures or pre-failure behaviors. </p>
+<p><strong>Asset timeline</strong> provides insight into the state of your asset by time in a graphical view. </p>
+<p><strong>Asset health</strong> is the overall state of an asset might be based solely on observation or on a driver, such as condition, performance, or cost.</p>
+<p><strong>Asset type</strong> is a category for an asset used to manage assets with similar characteristics.</p>
+<p><strong>Criticality</strong> defines the importance of the asset to business processes. It configures how this score is calculated on the Scoring page.</p>
+<p><strong>End of Life Curve</strong> uses retirement and age data for similar assets to estimate the end of life.</p>
+<p><strong>Estimated Time to Failure</strong> is the number of remaining days the asset could operate before failure. If multiple failure modes are possible, the failure mode with the soonest failure estimate and the user can select a different failure mode to see its estimated failure date.</p>
+<p><strong>Factors that contribute to failures</strong> The factors that contribute to failure are the parameters used in the training model to predict the failure of an asset. You can view this information in the failure contribution analysis tree.</p>
+<p><strong>Fair</strong> is an asset health condition indicates that the asset is in minimum operability and can complete its basic functions.</p>
+<p><strong>Failure Probability</strong> is the percentage that the asset failure could occur in the selected prediction window.</p>
+<p><strong>Failure Probability Trend</strong> is the historical trend of failure probability of the asset during a period.</p>
+<p><strong>Good</strong> is asset health condition indicates that the asset is operating at a high level without problems.</p>
+<p><strong>Health</strong> is the overall condition of the asset. </p>
+<p><strong>Health History</strong> is the overall condition of the asset over a period.</p>
+<p><strong>Meters</strong> are readings for the asset to determine the operational status.</p>
+<p><strong>MRR</strong> is the maintenance-to-replacement ratio (MRR) for the asset. MRR is calculated by dividing the current total cost of all maintenance for the asset, including parts and labor, by the replacement cost. If the percentage is 100% or greater, the current total cost of the asset is greater than the cost to replace the asset.</p>
+<p><strong>Next Failure</strong> is the time remaining until the asset is expected to fail based on the predictive model.</p>
+<p><strong>Next PM</strong> is the number of days until the next scheduled generation of preventive maintenance (PM) work order. The card is empty if the generation date is the current date or in the past, and no other work order generations are scheduled.</p>
+<p><strong>Normalized score</strong> is a rating representing the adjustment of a health score to a common baseline.</p>
+<p><strong>Poor</strong> is an asset health condition indicates that the asset has serious problems keeping it from functioning as intended.</p>
+<p><strong>RUL</strong> is the remaining percentage of the asset's useful life. The remaining useful life (RUL) is calculated by subtracting the age from the manufacturer's expected life. If the age exceeds the expected life, the RUL is 0%.</p>
+<p><strong>Work Queues</strong> provide users with a list of tasks, work or items to review and display the outstanding number of records to be reviewed on an ongoing basis.</p>
+<h2 id="lab-overview">Lab Overview</h2>
+<p>Through this lab exercise, you will learn how a Reliability Engineer uses the MAS Health and Predict applications to review the asset conditions and ensure that there aren't any failures predicted before planned maintenance. Together, MAS Health and Predict applications provide a view of an enterprise's assets' current state and project future conditions of those assets.</p>
+<p><strong>Story</strong> </p>
+<p>A Water Resource Authority needs to manage wastewater treatment assets across multiple cities and regions from a single application. Pumps are one of the critical assets in the wastewater plant. In this lab exercise, we will learn how a reliability engineer uses the MAS Health and Predict applications to review the pump conditions and ensure that there aren't any failures predicted before planned maintenance.</p>
+<p>Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance costs, and eliminate unplanned downtime. You can identify assets that need attention, investigate those assets, and finally take an action to avoid unplanned downtime.</p>
+<p><strong>Persona</strong></p>
+<p>Reliability Engineer manages the reliability risk by ensuring the asset is available and functions without failure. Based on the industry and market, reliability engineers manage multiple assets and processes.</p>
+<ol>
+<li>
+<p>Launch the Maximo Aplication Suite Application for Health and Predict - Utilities.  Click the App Switcher icon on the top right side of the home page.
+<img alt="Click on App Switch" src="../img/apm_8.7/healthscoring_1.png" /></p>
+</li>
+<li>
+<p>Select <code>Health</code> application from the <code>menu</code> bar and you will view the assets list.
+<img alt="Select &quot;Health&quot; application" src="../img/apm_8.7/healthscoring_2.png" />
+<img alt="Health assets page" src="../img/apm_8.7/healthscoring_3.png" /></p>
+</li>
+</ol>
+<h2 id="create-an-asset-group-view">Create an Asset Group View</h2>
+<p><a name="asset_group_view"></a></p>
+<p>Follow the actions below to create and view your pump group. This view will allow the Reliability Engineer to view their asset conditions in a tabular and map view.</p>
+<p>You can create and save view so that you don’t have to start over every time. This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.</p>
+<p>Follow the steps to create asset group view.</p>
+<ol>
+<li>
+<p>Click on the <code>Search</code> icon and type <code>pmpd</code> to view all the pumps from the assets list.
+<img alt="Search icon" src="../img/apm_8.7/healthscoring_4.png" />
+<img alt="Search for pump" src="../img/apm_8.7/healthscoring_5.png" /></p>
+</li>
+<li>
+<p>Create your pump group by selecting the menu option <code>Save as</code> and typing your Maximo lab login as your pump view name. Save your view.
+<img alt="Save as" src="../img/apm_8.7/healthscoring_6.png" />
+<img alt="Sae as new view" src="../img/apm_8.7/healthscoring_7.png" /></p>
+</li>
+<li>
+<p>You can view the pump group you have created using the <code>drop-down</code> menu.</p>
+</li>
+<li>
+<p>View both IT and OT data of your pumps in a single view. 
+<img alt="View in single view" src="../img/apm_8.7/healthscoring_8.png" /></p>
+</li>
+<li>
+<p>Click on the <code>Column Selection</code> menu icon.
+<img alt="Click column selection menu icon" src="../img/apm_8.7/healthscoring_9.png" />
+<img alt="Column selection view" src="../img/apm_8.7/healthscoring_10.png" /></p>
+</li>
+<li>
+<p>Click <code>Manage columns</code>.
+<img alt="Click manage columns" src="../img/apm_8.7/healthscoring_11.png" /></p>
+</li>
+<li>
+<p>Type <code>manufacturer</code> in the search field and press enter key on your keyboard. 
+<img alt="Type in search fields" src="../img/apm_8.7/healthscoring_12.png" />
+<img alt="Type &quot;manufacturer&quot;" src="../img/apm_8.7/healthscoring_13.png" /></p>
+</li>
+<li>
+<p>Select the check box for <code>manufacturer</code> and click <code>Ok</code>
+<img alt="Check box" src="../img/apm_8.7/healthscoring_14.png" /></p>
+</li>
+<li>
+<p>Click on the <code>Column Selection</code> icon.
+<img alt="Click on &quot;Column selection&quot;" src="../img/apm_8.7/healthscoring_15.png" /></p>
+</li>
+<li>
+<p>Check if you can see the added new field <code>Manufacturer</code> in your view.
+ <img alt="Check for &quot;Manufacturer&quot; column" src="../img/apm_8.7/healthscoring_16.png" /></p>
+</li>
+</ol>
+<h2 id="asset-map-view">Asset Map View</h2>
+<p><a name="asset_map_view"></a></p>
+<p>See how the assets are spatially distributed may assist the Reliability Engineer with identifying and investigating assets at risk. </p>
+<p>Follow the steps to view asset map.</p>
+<ol>
+<li>
+<p>Click the <code>Map</code> icon to view the asset and its health condition in a map view.
+<img alt="Navigate to map view" src="../img/apm_8.7/healthscoring_17.png" /></p>
+</li>
+<li>
+<p>Click and select the pump <code>PMPDEVICE007</code>, which has a poor health score on the map. Use the zoom in/out feature to adjust your map view.<br />
+<img alt="Select pump" src="../img/apm_8.7/healthscoring_18.png" /></p>
+</li>
+<li>
+<p>Use the zoom in/out features to adjust your map view.
+<img alt="Zoom in/out features" src="../img/apm_8.7/healthscoring_19.png" />
+<img alt="Adjust map view" src="../img/apm_8.7/healthscoring_20.png" /></p>
+</li>
+<li>
+<p>Click on <code>Actions</code> and choose the option <code>Add Flag</code>. 
+<img alt="Add flag" src="../img/apm_8.7/healthscoring_21.png" /></p>
+</li>
+<li>
+<p>Select the Flag option <code>Replace</code> and click <code>Add Flag</code>. You will see the <code>Replace</code> tag added to the pump.
+<img alt="Choose &quot;Replace&quot;" src="../img/apm_8.7/healthscoring_22.png" />
+<img alt="Click &quot;add flag&quot;" src="../img/apm_8.7/healthscoring_23.png" />
+<img alt="See Replace tag added" src="../img/apm_8.7/healthscoring_24.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the pump is already tagged with <code>Replace</code>, you will see a system message (see below). Close the system message and go to the next exercise if you see this message.</p>
+</div>
+<p><img alt="System message" src="../img/apm_8.7/healthscoring_25.png" /></p>
+<h2 id="work-queues">Work Queues</h2>
+<p><a name="work_queues"></a></p>
+<p>Follow the actions below to view the work queue of the asset group you have. Work queues are preconfigured views designed to help you find what you're looking for and manage your day-to-day activities.</p>
+<p>Work Queues are particularly valuable to a Reliability Engineer who needs to address a specific problem, like at water treatment plant, to avoid unplanned downtime. The missing data Work Queues are extremely useful to a Reliability Engineer as they can help identify gaps in data necessary to create health scores or predictive failure models.</p>
+<p>Follow the steps to view the work queues.</p>
+<ol>
+<li>
+<p>Click on the navigation menu in the upper left corner and select the <code>Work Queues</code> tab. View the Work Queues list. Reliability Engineers can view the queues based on preconfigured categories.
+<img alt="Navigate to work queues" src="../img/apm_8.7/healthscoring_26.png" /></p>
+</li>
+<li>
+<p>Click the hamburger menu again to close the tab, and select the <code>Failing before PM</code> work queue to view the assets that could fail before scheduled preventive maintenance is completed.
+<img alt="Assets that coudl fail before PM" src="../img/apm_8.7/healthscoring_27.png" /></p>
+</li>
+<li>
+<p>Expand the column width of "Asset" to view the full asset names.
+<img alt="Expand column width" src="../img/apm_8.7/healthscoring_28.png" />
+<img alt="Expand column width" src="../img/apm_8.7/healthscoring_29.png" />
+<img alt="List of pumps and their PM dates" src="../img/apm_8.7/healthscoring_30.png" /></p>
+</li>
+<li>
+<p>View the list of pumps and their predicted failure dates. Check for the pump that has the lowest Health Score. 
+<img alt="List of pumps with health scores" src="../img/apm_8.7/healthscoring_31.png" /></p>
+</li>
+</ol>
+<h2 id="create-health-scores">Create health scores</h2>
+<p><a name="create_health_scores"></a></p>
+<p>Before we continue to investigate our assets at risk, we’ll learn how to create health, criticality, and risk scores.  All three types of scores are created in a similar manner.  We’ll create a health score for our lab.</p>
+<p>Follow the steps to create health scores.</p>
+<ol>
+<li>Select <code>Scoring</code> from the left navigation bar to open the scoring feature in Maximo Health
+<img alt="Select scoring" src="../img/apm_8.7/healthscoring_32.png" /></li>
+</ol>
+<p>The initial view will show the <code>Groups</code> of assets that have already been created.  You’ll also see a tab for <code>Ranges</code> and <code>Contributors</code>.</p>
+<ol>
+<li>Select the <code>Ranges</code> tab so that we can explore how ranges are created.
+<img alt="&quot;Ranges&quot; tab" src="../img/apm_8.7/healthscoring_33.png" /></li>
+</ol>
+<p>On this page, you can see that custom ranges have already been created for health, criticality, and risk scores.  In addition to creating custom ranges, you can also name them, and assign different colors and symbols to each range.</p>
+<p>The ability to customize ranges, and scores, is important since each enterprise has different preferences, as well as different risk tolerances. </p>
+<ol>
+<li>Let’s review the ranges for Health that have already been established. Click on <code>Health</code> at the top of the Health score box.
+<img alt="Health score box" src="../img/apm_8.7/healthscoring_34.png" />
+<img alt="Health scoring page" src="../img/apm_8.7/healthscoring_35.png" /></li>
+</ol>
+<p>Three ranges have been created for the health scores.  Each range has limits, a name, color, and symbol assigned to it.</p>
+<ol>
+<li>
+<p>Select the <code>Scoring</code> breadcrumb at the top of the page to return to the main scoring page.
+<img alt="&quot;Scoring&quot; bedcrumb" src="../img/apm_8.7/healthscoring_36.png" />
+<img alt="Main scoring page" src="../img/apm_8.7/healthscoring_37.png" /></p>
+</li>
+<li>
+<p>Select the <code>Contributors</code> tab so that we can explore what contributors are available to use when creating scores. 
+<img alt="Contributors tab" src="../img/apm_8.7/healthscoring_38.png" /></p>
+</li>
+<li>
+<p>Select the <code>FACRULYEARSSAMPLE</code> highlighted blue text in a box to review one of the sample formulas included with Maximo Health.  This contributor holds a formula that describes the asset’s remaining useful life in years.
+<img alt="Select contibutor" src="../img/apm_8.7/healthscoring_39.png" />
+<img alt="Contributor formula" src="../img/apm_8.7/healthscoring_40.png" /></p>
+</li>
+<li>
+<p>Once you’ve reviewed the page, select the <code>Scoring</code> breadcrumb at the top of the page to return to the Contributors page.  Then select the <code>Groups</code> tab. 
+<img alt="Scoring breadcrumb" src="../img/apm_8.7/healthscoring_41.png" />
+<img alt="Groups tab" src="../img/apm_8.7/healthscoring_42.png" /></p>
+</li>
+<li>
+<p>From the <code>Groups</code> page, we’ll create a custom health score.  Your health score will use the ranges, and the contributor that we just reviewed. Select the <code>Create Group +</code> button to create your own group.
+<img alt="Create your own group" src="../img/apm_8.7/healthscoring_43.png" /></p>
+</li>
+<li>
+<p>Create your own group with the following information.</p>
+<ul>
+<li><strong>Name:</strong>  The username you used to login to this lab (example:  s123think22)</li>
+<li><strong>Description:</strong>  Think2022 Lab Sample Group</li>
+<li><strong>Object:</strong>  Asset</li>
+</ul>
+</li>
+<li>
+<p>Select <code>Select</code> to select a group. 
+<img alt="Select a group" src="../img/apm_8.7/healthscoring_44.png" /></p>
+</li>
+<li>
+<p>In the <code>Select a Query</code> box, type in <code>Pumps</code> in the search box, and select the check mark at the end of line. This will search for a prebuilt query for pumps.
+<img alt="Search for pumps query" src="../img/apm_8.7/healthscoring_45.png" /></p>
+</li>
+<li>
+<p>Select <code>Pumps</code> from the resulting search and click <code>Apply</code>.
+<img alt="Select pumps query" src="../img/apm_8.7/healthscoring_46.png" /></p>
+</li>
+<li>
+<p>On the next page, click <code>Create</code> to create your unique group of 10 pumps. 
+<img alt="Create pump group" src="../img/apm_8.7/healthscoring_47.png" /></p>
+</li>
+<li>
+<p>On the group page that you just created, click <code>Add Score</code> to create a health score for your pumps.
+<img alt="Add score for group" src="../img/apm_8.7/healthscoring_48.png" /></p>
+</li>
+<li>
+<p>In the popup, click on the <code>Health</code> score box to highlight it, then click <code>Done</code>.
+<img alt="Add a score" src="../img/apm_8.7/healthscoring_49.png" /></p>
+</li>
+<li>
+<p>We’ll create a health score that is a weighted average of several contributors, including sensor readings, and a field from Manage.  Click on the <code>+</code> symbol to add our first contributor, a pre-built formula for Remaining Useful Life.
+<img alt="Add first contributor" src="../img/apm_8.7/healthscoring_50.png" /></p>
+</li>
+<li>
+<p>From the <code>Add a Contributor</code> pop-up, FIRST select the box for <code>FACRULYEARSSAMPLE</code>, and then click <code>Add</code>. If you do not see the blue bar or <code>Add</code> option, select the circled check mark in the upper right corner of the <code>FACRULYEARSSAMPLE</code> box. 
+<img alt="Add a contributor popup" src="../img/apm_8.7/healthscoring_51.png" /></p>
+</li>
+<li>
+<p>Click on the <code>ƒx</code> symbol to add a second contributor, a formula we’ll write to get the number count from a field in Manage.
+<img alt="Add a second contributor" src="../img/apm_8.7/healthscoring_52.png" /></p>
+</li>
+<li>
+<p>On the pop up, complete the form with the following inputs:</p>
+<ul>
+<li><strong>Name:</strong>  Open Work Orders</li>
+<li><strong>Description:</strong>  A count of open work orders in Manage</li>
+<li><strong>Formula:</strong>  count$openwo</li>
+</ul>
+</li>
+<li>
+<p>Scroll down the screen and enter the following values:</p>
+<ul>
+<li><strong>Best possible value:</strong>  0</li>
+<li><strong>Worst possible value:</strong>  5</li>
+</ul>
+</li>
+<li>
+<p>Then click <code>Add formula to score</code>.
+<img alt="Add formula to score" src="../img/apm_8.7/healthscoring_53.png" /></p>
+</li>
+<li>
+<p>Click on the hierarchy symbol to add a contributor group, which will consist of multiple sensor readings.
+<img alt="Add contributor group button" src="../img/apm_8.7/healthscoring_54.png" /></p>
+</li>
+<li>
+<p>On the pop up, complete the form as follow, the click <code>Create</code>.</p>
+<ul>
+<li><strong>Name:</strong>  Meter Health</li>
+<li><strong>Description:</strong>  Contributor group of meters
+<img alt="Add contributor group" src="../img/apm_8.7/healthscoring_55.png" /></li>
+</ul>
+</li>
+<li>
+<p>Click on the contributor group <code>Meter Health</code> that you just created to add contributors.
+<img alt="Contributor group &quot;Meter Health&quot;" src="../img/apm_8.7/healthscoring_56.png" /></p>
+</li>
+<li>
+<p>Click on the <code>+</code> to add multiple contributors to your group.
+<img alt="Add contributors to group" src="../img/apm_8.7/healthscoring_57.png" /></p>
+</li>
+<li>
+<p>Scroll down the screen and click on the following boxes to select them, then click <code>Add</code>.</p>
+<ul>
+<li>MOTORTEMP</li>
+<li>VELOCITYZ</li>
+<li>VELOCITYX</li>
+<li>VELOCITYY</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Select contributors" src="../img/apm_8.7/healthscoring_58.png" /></p>
+<ol>
+<li>
+<p>Click on the pencil icon to edit the percentage each contributor contributes to the group.
+<img alt="Edit contributors" src="../img/apm_8.7/healthscoring_59.png" /></p>
+</li>
+<li>
+<p>On the <code>Edit contributor settings</code> pop up, adjust the <code>Weight</code> to 25 for each of the 4 contributors, and click <code>Save</code>.
+<img alt="Adjust contributor weight" src="../img/apm_8.7/healthscoring_60.png" /></p>
+</li>
+<li>
+<p>Return to your Health score page by clicking <code>Health</code> in the breadcrumbs.
+<img alt="Go back via breadcrumbs" src="../img/apm_8.7/healthscoring_61.png" /></p>
+</li>
+<li>
+<p>Click on the pencil icon to edit the percentage each contributor contributes to the overall Health score.
+<img alt="Edit overall health score contributors" src="../img/apm_8.7/healthscoring_62.png" /></p>
+</li>
+<li>
+<p>On the <code>Edit contributor settings</code> pop up, adjust the <code>Weight</code> to 60% for <code>FACRULYEARSSAMPLE</code>, 20% for <code>Open Work Orders</code>, and 20% for <code>Meter Health</code>, then click <code>Save</code>.
+<img alt="Adjust contributor weight" src="../img/apm_8.7/healthscoring_63.png" /></p>
+</li>
+<li>
+<p>Return to your main score page by clicking <code>Scoring</code> in the breadcrumbs.
+<img alt="Return to main score page" src="../img/apm_8.7/healthscoring_64.png" /></p>
+</li>
+<li>
+<p>You have successfully created a health score for your group of pumps.  You will see your scoring group, along with scoring groups on the page.
+<img alt="Successfully added new health score for pumps group" src="../img/apm_8.7/healthscoring_65.png" /></p>
+</li>
+</ol>
+<h2 id="asset-details">Asset Details</h2>
+<p><a name="asset_details"></a></p>
+<p>Understand asset Health using the Asset details page.</p>
+<p>Follow the steps to view the asset details page.</p>
+<ol>
+<li>
+<p>Click the <code>Work Queues</code> icon on the left side of the menu screen.
+<img alt="Work queues icon" src="../img/apm_8.7/healthscoring_66.png" /></p>
+</li>
+<li>
+<p>Select <code>Failing before PM</code> from the queue names.
+<img alt="Select from work queue list" src="../img/apm_8.7/healthscoring_67.png" /></p>
+</li>
+<li>
+<p>Adjust the "Asset: column width to view the full asset names and click on <code>PMPDEVICE003</code>
+<img alt="Adjust column width and click on asset" src="../img/apm_8.7/healthscoring_68.png" />
+<img alt="Asset details page" src="../img/apm_8.7/healthscoring_69.png" /></p>
+</li>
+<li>
+<p>View pump <code>PMPDEVICE003</code> and click and view details under <code>Asset Health</code> section. 
+<img alt="Asset health section" src="../img/apm_8.7/healthscoring_70.png" /></p>
+</li>
+<li>
+<p>Scroll down to the health history section. Select <code>1 month</code> period and view the health history data for the last 30 days. The graph here has the Score on the y-axis with the date on the x-axis and maps the Health score and its contributors. This way, we can see a view of how this information contributes to the overall Health of the asset.
+<img alt="Health history section" src="../img/apm_8.7/healthscoring_71.png" /></p>
+</li>
+</ol>
+<h3 id="asset-failure-probability">Asset Failure Probability</h3>
+<p><a name="asset_failure"></a></p>
+<p>IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate the probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome. </p>
+<p>Follow the steps to view predict model.</p>
+<ol>
+<li>
+<p>Click and expand <code>Predictions</code> section and wait for the predictive model results to load.
+<img alt="Predictions section" src="../img/apm_8.7/healthscoring_72.png" /></p>
+</li>
+<li>
+<p>Wait for the Predict failure data table and graph to load for the pump <code>PMPDEVICE003</code>.</p>
+</li>
+<li>
+<p>Scroll down to the <code>Failure probability trend</code> card.</p>
+</li>
+<li>
+<p>Maximize the <code>Failure probability trend</code> and view the data. 
+<img alt="Maximize trend card" src="../img/apm_8.7/healthscoring_73.png" /></p>
+</li>
+<li>
+<p>Close the maximized view by clicking on the close icon. 
+<img alt="Close maximized view" src="../img/apm_8.7/healthscoring_74.png" /></p>
+</li>
+<li>
+<p>Scroll down to <code>Factors that contribute to failures</code> card and view the results or full analysis tree.
+<img alt="View analysis tree for factors that contribute to failures" src="../img/apm_8.7/healthscoring_75.png" /></p>
+</li>
+</ol>
+<h3 id="asset-timeline">Asset Timeline</h3>
+<p><a name="asset_timeline"></a></p>
+<p>Follow the steps to view asset timeline.</p>
+<ol>
+<li>Open the <code>Asset timeline</code> tab.</li>
+<li>Hover over <code>Predicted failure</code>. While each piece of information, or widget, gives you insight into the state of our asset, all of the information together, gives us a richer view. This helps us make a data-driven decision on how to address this asset.
+<img alt="Predicted failure information" src="../img/apm_8.7/healthscoring_76.png" /></li>
+</ol>
+<h3 id="taking-action">Taking action</h3>
+<p><a name="taking_action"></a></p>
+<p>Follow the steps to take action on resolving the asset health issues and risks you have uncovered.</p>
+<ol>
+<li>
+<p>Scroll the screen up until you see the <code>PMPDEVICE003</code> and click <code>Actions</code> and select <code>Create Service Request</code>.
+<img alt="Create service request" src="../img/apm_8.7/healthscoring_77.png" /></p>
+</li>
+<li>
+<p>Type the following and select priority as <code>High</code>. Create the ticket by clicking on <code>Create</code>. </p>
+</li>
+<li>
+<p>Summary: Test Summary</p>
+</li>
+<li>Description: Test Description</li>
+</ol>
+<p><img alt="Create service request" src="../img/apm_8.7/healthscoring_78.png" /></p>
+<h2 id="closing">Closing</h2>
+<p><a name="closing"></a></p>
+<p>This exercise explains how to remove the temporary pump views. You will remove the pump views you have created.</p>
+<p>Follow the steps below to exit.</p>
+<ol>
+<li>
+<p>Go to <code>Asset</code> icon located in the top left side of the menu bar.
+<img alt="Asset icon navigation" src="../img/apm_8.7/healthscoring_79.png" /></p>
+</li>
+<li>
+<p>Click the <code>Asset</code> menu located in the top left side of the menu bar.
+<img alt="Asset icon navigation" src="../img/apm_8.7/healthscoring_80.png" /></p>
+</li>
+<li>
+<p>Select the pump view you have created (as part of the exercise section 4.2)
+<img alt="Select Pump view" src="../img/apm_8.7/healthscoring_81.png" /></p>
+</li>
+<li>
+<p>Click on the menu option and select <code>Delete</code>.
+<img alt="Delete saved view" src="../img/apm_8.7/healthscoring_82.png" /></p>
+</li>
+<li>
+<p>Check if you have selected the pump view you have created and click <code>Delete</code>.
+<img alt="Confirm delete" src="../img/apm_8.7/healthscoring_83.png" /></p>
+</li>
+</ol>
+<h3 id="how-to-remove-the-temporary-groups">How to remove the temporary groups</h3>
+<p><a name="remove_groups"></a></p>
+<p>Follow the steps to remove temporary groups.</p>
+<ol>
+<li>
+<p>Click the <code>Scoring</code> menu located in the top left side of the menu bar.
+<img alt="Navigate to scoring" src="../img/apm_8.7/healthscoring_84.png" /></p>
+</li>
+<li>
+<p>Go to the group you have created and delete it.
+<img alt="Delete scoring group" src="../img/apm_8.7/healthscoring_85.png" /></p>
+</li>
+<li>
+<p>Check if you have selected the group you have created and click <code>Delete</code>.
+<img alt="Confirm delete scoring group" src="../img/apm_8.7/healthscoring_86.png" /></p>
+</li>
+</ol>
+<p>Congratulations!  You have experienced how a Reliability Engineer continued the investigation, using Maximo Health and Predict to better understand the current and future states of the pumps, identify potential problems, and take actions using AI-driven insights to avoid unplanned downtime. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../fast_start_loader/" class="btn btn-neutral float-left" title="Load Pump Data Into Monitor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../asset_investment/" class="btn btn-neutral float-right" title="Asset Investment Optimization">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../fast_start_loader/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../asset_investment/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

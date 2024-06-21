@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/usecase1/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. MAS Environmental Monitoring - Environmental Use Cases Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. MAS Environmental Monitoring";
+        var mkdocs_page_input_path = "usecase1.md";
+        var mkdocs_page_url = "/maximo-labs/usecase1/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Environmental Use Cases Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sustainability Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Sustainability Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">USE CASES</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. MAS Environmental Monitoring</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#scene-1-identification">Scene 1 - Identification</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#service-request-for-high-emission">Service Request for High Emission</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scene-2-inspection-and-repair">Scene 2 - Inspection and Repair</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-work-order-and-inspection">Part 2 - Work Order and Inspection</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scene-3-investigation-and-corrective-action">Scene 3 - Investigation and Corrective Action</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-three-investigation-analysis-and-root-cause">Part Three - Investigation, Analysis and Root Cause</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Environmental Use Cases Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">USE CASES</li>
+      <li class="breadcrumb-item active">1. MAS Environmental Monitoring</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="use-case-1">Use Case 1</h1>
+<h2 id="scene-1-identification">Scene 1 - Identification</h2>
+<p>Control room operator observes a NOx emission warning on the main boiler plant used to generate steam for process and district heating. The NOx level is at an intermediate warning level and does not exceed regulatory emission limits. The Operator takes immediate action to reduce steam output. They raise Operator Log Entries to record these, generate a near miss environmental incident and raise a Service Request to Maintenance to inspect the boiler control systems. Wilson navigates to the Operator Log from the Start Center and selects Shift1B. Show the Operator Log record and the Operator Log Entries. Show how the Operator can create records from a Log Entry and navigate to the Related Records tab to show the created Service Request and Incident.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can develop this scenario to provide the option of a Health/Predict generated event or an anomaly generated from a Watson model or Device input.
+(Next phase: In Monitor create a Device for a NOX sensor associated with Location BR400. Simulate Device data to create a NOx Alert (assume a threshold of 80 mg/NM3). We can show how an Operator can then create the Service Request from the Alert.)</p>
+</div>
+<h3 id="service-request-for-high-emission">Service Request for High Emission</h3>
+<p>I'm a Control Room Operator and I observed a Nitrogen Oxides (NOx) emission warning on the main boiler plant used to generate steam for process and district heating. The NOx level is at an intermediate warning level and does not exceed regulatory emission limits. I need to remedy the immediate situation and then record what happened here so that it is logged for future reference. First, I take immediate action and reduce the steam output on the boiler. Next, I raise Operator Log Entries to record these, generate a near miss environmental incident and raise a Service Request to Maintenance to inspect the boiler control systems. </p>
+<p><code>Action:</code> Open Maximo HSE, then select the Operator Log Application and search in the Navigation Bar for Operations&gt; Operator log&gt; Look for SHIFT1B Log</p>
+<p><img alt="img" src="../img/operatorlog.png" style="height:250px;width:800px" /></p>
+<p><code>Action:</code> Scroll down to Log Entry and see the three Logs entered by the Operator. Notice a high NOx warning on main boiler, reduced boiler steam, and high NOx warning on main boiler cleared. These were the 3 actions I took as soon as I saw the first warning. After reducing the boiler steam output, I saw the high NOx warning was cleared. </p>
+<p><img alt="img" src="../img/logEntry.png" style="height:250px;width:800px" /></p>
+<p>Even though the situation seems under control for now, I created a Service Request for this high NOx reading found to make sure it is investigated further. Another way to avoid future possible emissions is to log data records of near miss events as a leading indicator of future problems. To do this, I also created an incident record.</p>
+<p><code>Action:</code>  Go to the Related Records tab and find the Service Request and incident for the high NOx warning. You can see that these have been correctly created, so now the Maintenance team will take it from here.</p>
+<p><img alt="img" src="../img/related-records.png" style="height:400px;width:800px" /></p>
+<p>Now the Service Request is routed to the Maintenance Manager who will investigate this and take further action in Part 2.</p>
+<h2 id="scene-2-inspection-and-repair">Scene 2 - Inspection and Repair</h2>
+<p>Maintenance Manager receives the Service Request from Operations and recognises the potential for an emission event. They generate a high priority Inspection Work Order to check operation of the boiler control system linking it to an Inspection Form for a Fault Inspection. Because the boiler is in an area where gas may be present he links a Hot Work Permit to the Work Order and assigns the Work Order to Technician Eli. The Maintenance Manager approves the Work Order. Technician Eli receives the Work Order on his mobile device and his experience tells him that the most probable cause is an issue with the boiler controls. Having been issued a permit to work from Operations he goes to carry out an inspection of the control system. The Technician notices that the burner management settings were not correctly set during a recent boiler service. The Technician checks the setting with plant engineering (note this could be shown on Assist in future) and confirms that they should be restored to the documented settings. Eli then carries out this work, completes the Inspection  Results and records the Problem Code on the Work Order documentation.</p>
+<h3 id="part-2-work-order-and-inspection">Part 2 - Work Order and Inspection</h3>
+<p>In Part 1, the Control Room Operator noticed a high NOx level, took action by lowering the steam output, and documented the near miss incident. </p>
+<p>Now, the Maintenance Manager receives the Service Request from Operations and recognizes the potential for an emission event. Acting as the Maintenance Manager, we must generate a high priority Inspection Work Order to have a technician check the operation of the boiler control system. This high priority work order is assigned to the technician on their mobile device, and they obtain a permit to work from Operations to carry out an inspection of the control system. <br>
+ </p>
+<p><code>Action:</code> In Start Center (for the Maintenance Manager), open the the Nox warning Service Request. Show the SR details.</p>
+<p>I see the description of the SR, the date, and the Priority levels. The Reported Priority was set as 3, but I will escalate the Internal Priority to 1 because it was a near miss emission that could have resulted in a fine. </p>
+<p><img alt="img" src="../img/sr1.png" style="height:150px;width:400px;margin-left:100px" />
+<br></p>
+<p><img alt="img" src="../img/sr2.png" style="height:300px;width:800px" /></p>
+<p><br></p>
+<p><img alt="img" src="../img/sr3.png" style="height:300px;width:800px" /></p>
+<p><code>Action:</code> Here is an example of the work order that the Maintenance Manager would need to create. Go to Related Records, see the Work Order. Then click more details &gt; Go To &gt; Work Order Tracking.</p>
+<p><img alt="img" src="../img/sr4.png" style="height:400px;width:800px" /></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Now we are switching roles. Open your Maximo Mobile application.</p>
+</div>
+<p>Let's now act as the field technician who was assigned this work order to carry out an inspection of the control system. <br></p>
+<p>I am Eli, the technician, I am going to complete a work order on the boiler to investigate the high NOx warning. I know from experience that the boiler control system is a likely source of this emission problem.<br></p>
+<p>In the IBM Maximo Mobile application on my device, I open the My Schedule tile. Here, I can see all the work orders for the day in a list view or a map view.    </p>
+<p><img alt="img" src="../img/worklist.png" style="height:500px;width:300px;margin-left:40px" /></p>
+<p>I see the work order sent over about the boiler control systems, and I can see it is of high priority, so I head over to start work on it.</p>
+<p><code>Action:</code> Choose the " Investigate High Nox Warning on main boiler" Work Order on the list <br></p>
+<p>I can add a log, add or review my attachments, and complete my inspection from these touch-points</p>
+<p><code>Action:</code> Open Inspection in the work order and review the form.</p>
+<p><img alt="img" src="../img/inspectionform.png" style="height:500px;width:300px;margin-left:40px" /></p>
+<p>After completing the inspection, I spoke to the Maintenance team and reviewed the boiler control settings with engineering. You can see Wilson added a log documenting this conversation in the work order. </p>
+<p><code>Action:</code> Click the Open Log icon. Close and review the asset information. </p>
+<p><img alt="img" src="../img/worklog.png" style="height:500px;width:300px;margin-left:40px" /></p>
+<p><code>Action:</code> Open Failure Reporting. Report Failure&gt; Failure Class: Boiler Failures, Problem: Parameter Deviation</p>
+<p><img alt="img" src="../img/failurecode.png" style="height:500px;width:300px;margin-left:40px" /></p>
+<p><code>Action:</code> Complete Work Order </p>
+<p>During the inspection I found the burner controls of the boiler were not in line with the engineering specifications during a recent boiler service. I check the settings with Plant Engineering and confirm that they should be restored to the documented settings. They then carry out this work and complete the work order documentation.</p>
+<h2 id="scene-3-investigation-and-corrective-action">Scene 3 - Investigation and Corrective Action</h2>
+<p>The Maintenance Manager reviews the results of the inspection and the near miss incident updating the Incident Log with the work carried out and referencing the Work Order as a related record to the incident. He then then creates an Investigation record from the Incident to carry out the root cause analysis. He transfers ownership of the Incident to the Environmental team within the HSE department. The Investigation is assigned to Environmental Officer Miller. An investigation meeting is called later that week with participation from Operations, Maintenance and HSE. It is agreed that a 5 Whys analysis technique should be used. This analysis identifies that the Job Plan for the burner management system service references out of date vendor documentation. Note: Also show Systemic Cause Analysis method. An Action Tracking record is raised to amend the Job Plan. The root cause analysis identifies that a change in the approval process for Job Plans should be made to include an engineering review. During the analysis operations identify that long term NOX emissions could be improved by introduction of a vendor update to the burner management system. An MOC Request record is raised to address this. This passes initial review and an MOC is generated which is circulated more broadly for review and approval. Show that the VP Operations and VP Sustainability are part of the review process for the MOC.</p>
+<h3 id="part-three-investigation-analysis-and-root-cause">Part Three - Investigation, Analysis and Root Cause</h3>
+<p>In Parts 1 and 2, the potential emission has been handled and recorded. First, the Control Room Operator remedied the immediate issue and documented what happened. Next, the Maintenance Manager reviewed this and assigned a technician to do a follow-up investigation and inspection. Now, the investigation will be passed along to the HSE Environmental Team to do a root cause analysis to prevent further similar occurrences. </p>
+<p>The technician noted the problem code as a parameter deviation, and the Maintenance Manager confirmed this with the work order. The work order has been tied to the incident by the Maintenance Manager and now  Miller, the environmental officer from HSE, will have a queued incident awaiting for triage. </p>
+<p><code>Action:</code> Miller is the environmental officer, from his Start Center he will see the queued incident and will take ownership of the incident. He adds a regulation to the incident to make sure we are meeting compliance requirements. </p>
+<p><img alt="img" src="../img/regulation.png" style="height:200px;width:800px" /></p>
+<p><code>Action:</code> Navigate to the Related Records tab where you can see the work order that detonated this incident as well as the original log and the investigation that was done to further analyze the incident.</p>
+<p>Miller knows that if there is a near miss incident, he needs to create an investigation.</p>
+<p><code>Action:</code> Go into the investigation and see that it’s a mandatory root cause analysis and its assigned to Miller.
+ </p>
+<p>There are two different techniques that I can use to perform the root cause analysis. One is under the cause analysis tab and has the answers to the 5 Why's. The alternative is the Structured RCA, a systemic root cause analysis technique. </p>
+<p>I agree with my team that the 5 Why's analysis technique should be used. This analysis identifies that the basic cause is that the Job Plan for the burner management system service references out of date vendor documentation. The root cause found was that there was Job Plan SOP did not include an engineering review.</p>
+<p><img alt="img" src="../img/causeanalysis.png" style="height:400px;width:800px" />
+<br></p>
+<p><img alt="img" src="../img/causeanalysis2.png" style="height:400px;width:800px" /></p>
+<p><code>Action:</code> Next I go into the RCFA Results tab where I can add and review the cause of the incident. The RCFA is the summary of what we found from the analysis. Both of the causes have an action required.</p>
+<p><img alt="img" src="../img/rcfaresults.png" style="height:150px;width:800px" /></p>
+<p>After discussion with engineering, I created a log to identify the opportunity to reduce nox emissions for an upgrade on the boiler control systems.</p>
+<p><code>Action:</code> Move to Related Records tab.</p>
+<p><img alt="img" src="../img/relatedrecords.png" style="height:350px;width:800px" /></p>
+<p>There is an action to correct the Job Plan, this can be done immediately as a follow up to this incident.</p>
+<p>I have also added a managements of change (MOC) to update Job Plan Preparation SOP to include engineering review. Having the engineering team review the Job Plan can help prevent high NOx warnings going forward.</p>
+<p>I created an MOC Request so that our management team is able to revise the possibility of upgrading the boiler control systems. Although it might be a big investment it might be worth it considering the carbon profile of our assets. </p>
+<p><code>Action:</code> Open MOC Request from the Related Records tab in the Investigations.</p>
+<p>Miller, the environmental officer, reviews the request for the MOC and considers it a good idea, so he raises a MOC record.  </p>
+<p><img alt="img" src="../img/moc.png" style="height:400px;width:800px" /></p>
+<p><code>Action:</code> Navigate to Related Records tab, where you can see the MOC.</p>
+<p><img alt="img" src="../img/moc.png" style="height:400px;width:800px" /></p>
+<p>The MOC now has to be reviewed by Jenise the VP of Sustainability and Kazmier the HSE Manager, and approved by Chris Winter, the VP of Operations. Once approved, the project to upgrade the boiler control system can now begin and hopefully reduce future emissions. </p>
+<p>In summary, the high NOx level warning triggered a few actions that will avoid immediate catastrophe as well as prevent future potential emissions by investigating the root cause of the situation. In Part 1, the Control Room Operator adjusted the boiler steam output and created a record of the event. In Part 2, the Maintenance Manager reviewed this event and sent a technician to investigate the problem further and diagnose the reason for it. In Part 3, the Environmental Officer takes the investigation one step further by doing a root cause analysis of the situation and raising an MOC to potentially change how this process works in the future. You can understand the roles and responsibilities of the players at this company and how Maximo can be leveraged for Environmental Monitoring. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

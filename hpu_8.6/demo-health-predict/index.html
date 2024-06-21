@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferriera & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-health-predict/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Health - Predict - MAS Health and Predict for Utilities 8.6 Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Health - Predict";
+        var mkdocs_page_input_path = "demo-health-predict.md";
+        var mkdocs_page_url = "/maximo-labs/demo-health-predict/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS Health and Predict for Utilities 8.6 Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS HPU 8.6 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Application Suite HPU 8.6 Overview Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Health - Predict</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#intro">Intro</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#identify-assets-at-risk">Identify Assets at Risk</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#saved-asset-views">Saved Asset Views</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#map-view">Map View</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#work-queues">Work Queues</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#investigate-further-into-asset-details">Investigate Further into Asset Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#take-action">Take Action</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">2. Closing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS Health and Predict for Utilities 8.6 Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Health - Predict</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="health-predict-lab">Health - Predict Lab</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please follow the <code>Action</code> statements to navigate the steps and perform the lab.</p>
+</div>
+<h2 id="intro">Intro</h2>
+<p>I’m a Reliability Engineer (RE) and my role is to maintain the reliability of the grid. My main responsibility is to ensure that the grid stays up and operational. I’m also responsible for making short, medium and long term investment decisions that drive maintenance and replacement policies.  I use asset condition and operational data to gain insights into Asset Health, Probability of Failure and Risk, both today and into the future. </p>
+<p><img alt="img" src="../img/ObjectivesRE.png" /></p>
+<p>Thankfully I have a Health and Predict - Utilities solution from IBM with advanced analytics that help me do my work efficiently and confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.   Health and Predict - Utilities incorporates multiple data sources such as Asset Master and Work order data, historical failure data, GeoSpatial Data, Inspection and Test Logs, IoT and Sensor data.   </p>
+<p>Health and Predict - Utilities provides a flexible Asset condition framework for mining the asset condition data. Health and Predict - Utilities helps me identifying assets that are at greatest risk of failure, across different circuits/feeders, substations and regions.  The risk assessment helps me drive asset and work management activities in Maximo Manage or other EAM systems to keep the grid up, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.</p>
+<p><img alt="img" src="../img/Goals2RE.png" /></p>
+<h2 id="identify-assets-at-risk">Identify Assets at Risk</h2>
+<p>Maximo Health and Predict are targeted to the RE, and provide a view of the current state of an enterprise's assets, and projects future conditions of those assets.  </p>
+<p>Maximo Health and Predict – Utilities is an extension of Health and Predict designed specifically for the Utilities industry. </p>
+<p><b>Value:</b> Health and Predict - Utilities arm the RE with AI-powered insights to take actions to extend the life of the Utility’s assets, reduce maintenance costs, and eliminate unplanned downtime.
+proactive in my maintenance planning.   The easiest way to do this is by using the work queue feature.</p>
+<p><code>Action:</code>  From the main Maximo Application Suite (MAS) page, select the Industry solutions tab, then click Health and Predict – Utilities.</p>
+<p><img alt="img" src="../img/Identify1.1.png" />
+<img alt="img" src="../img/Identify1.2.png" /></p>
+<p>On the main screen, we can see a universal view of our managed assets in a familiar grid view. </p>
+<p><img alt="img" src="../img/Identify2.1.png" /></p>
+<p><b>Value:</b> This is particularly valuable to me as the RE because we can see a mix of both IT data (from Manage) and OT data (from Monitor) together in a single view.</p>
+<p>This asset data is coming from Maximo Manage, but we can connect to other EAM systems.</p>
+<h2 id="saved-asset-views">Saved Asset Views</h2>
+<p>Different views of the data can be generated to make it easier to identify critical assets. On this grid, we can add and move columns, filter, search and sort. 
+We can even create a private view and save it.</p>
+<p><b>Value:</b> We've created a saved view to so that we don’t have to start over every time.  This view filters on my Substation Transformers.</p>
+<p><code>Action:</code> Use the selection box to show your saved view. If you do not see your saved view here, refer to the setup instructions. </p>
+<p><img alt="img" src="../img/Identify3.1.png" />
+<img alt="img" src="../img/Identify4.1.png" /></p>
+<p>In this view, we can see some columns with calculated data. We can see Health scores, which are created for groups of assets from the Scoring tab.   </p>
+<p><b>Value:</b> Included with Health and Predict – Utilities are notebooks with predefined industry standard formulas to calculate health, criticality, risk, end of life and effective age scores for assets in the Utilities industry.</p>
+<p>Similarly, information in the Days to Failure column comes from a predictive model scheduled from the Predict grouping tab.</p>
+<p>Here is a list of asset classes loaded in the demo system. Note: this may change over time. <br>
+-   Substation Transformers / Substation Power (IBM Transformers Tap Changers) <br />
+-   Circuit Breaker <br />
+    -   Air Blast Circuit Breaker (IBM Circuit Breakers Air Blast) <br />
+    -   Air Magnetic Circuit Breaker 
+    -   Circuit Breaker <br />
+    -   Oil Circuit Breaker (IBM Circuit Breakers Oil) <br />
+    -   SF6 Circuit Breaker <br />
+    -   Vacuum Circuit Breaker <br />
+-   Distribution Transformers (IBM Transformers Tap Changers) <br />
+    -   Overheads (multiple)     <br />
+    -   Undergrounds (multiple) <br />
+-   Instrument Transformers  <br />
+    -   Dry Current Transformer <br />
+    -   Oil Filled Capacitive Voltage Transformer <br />
+    -   Oil Filled Current Transformer (IBM Instrument Oil Filled CTs) <br />
+    -   Oil Filled Voltage Transformer <br />
+    -   SF6 Filled Current Transformer <br />
+-   Switch gear / Gas Insulated Switch gear (IBM Gas Insulated Switchgear)   </p>
+<h2 id="map-view">Map View</h2>
+<p>Another view to help us identify assets in trouble is the map view.</p>
+<p><b>Value:</b> Seeing how the assets are spatially distributed may assist us with identifying and investigating assets at risk.  This is particularly true in the Utilities industry.</p>
+<p>We’ll look at a region that contains a mixture of transformers, circuit breakers, cables (OTWs), and switches.</p>
+<p><code>Action:</code> First, reset your view to show ALL assets.  Then, click the filter symbol, select the edit symbol for containers, select  "NIXON9098",  click OK, then click Apply.</p>
+<p><img alt="img" src="../img/Identify5.1.png" />
+<img alt="img" src="../img/Identify5.2.png" />
+<img alt="img" src="../img/Identify5.3.png" /></p>
+<p>We can see there are 261 assets in this container.  When we sort by the health score from low to high, we find there are many assets in health scores in poor health, and many of them have a Criticality score of 0.  This is concerning given the importance of these assets to the grid performance in the distribution network.</p>
+<p><code>Action:</code> Click “Health” in the title bar to sort</p>
+<p><img alt="img" src="../img/Identify6.1.png" /></p>
+<p>By selecting the icon in the upper right of the screen, we can see the selected assets on a map view.</p>
+<p>The different pin colors and icons represents the health of the assets, according to the legend at the bottom left of the screen.  We can quickly have a understanding of where the assets has the poor health.</p>
+<p><code>Action:</code> Click "Map" button</p>
+<p><img alt="img" src="../img/Identify7.1.png" />
+<img alt="img" src="../img/Identify7.2.png" /></p>
+<p>By turning on the Container selection, a polygon will appear around the assets in the container.  The color of the container will reflect the overall health of the container.</p>
+<p><code>Action:</code> Click the "Container" icon, and toggle on the "Container".  Zoom out to see the container color.</p>
+<p><img alt="img" src="../img/Identify7.3.png" /></p>
+<p>We can also switch between different scores by clicking the Score icon and selecting another score.  The asset colors, and container color, will change accordingly.</p>
+<p><code>Action:</code> Click the Score icon and select another score like “End of Life”</p>
+<p><img alt="img" src="../img/Identify7.4.png" /></p>
+<p>We’ll return to the Health score view, and hover over different assets, and the container, to see health scores.</p>
+<p><code>Action:</code> Click the Score icon and “Health” to return to the original view.  Hover over assets and the container. </p>
+<p><img alt="img" src="../img/Identify7.5.png" /></p>
+<p>By clicking on the container, we can see all of the scores on a single card. </p>
+<p><code>Action:</code> Click the container "NIXON9098"</p>
+<p><b>Value:</b> The KPIs displayed on the preview card gives us an overall summary of the assets in this region, or the container. </p>
+<p><img alt="img" src="../img/Identify7.6.png" /></p>
+<p>We can also zoom in and click on each of the pins to view the key KPIs of the selected asset.  From this view, we can create plans, add a flag, or submit a work order by clicking the "Action" button. </p>
+<p><code>Action:</code> Zoom in.  Click the pin for "ST_1400518" to see the card.  Click on the action tab to see the options.</p>
+<p>Note that we CAN click on the name to open the asset detail page.  However, we’ll continue the identification of asset in poor health through another process.</p>
+<p><img alt="img" src="../img/Identify7.7.png" /></p>
+<h2 id="work-queues">Work Queues</h2>
+<p>We’ll continue our process to identify assets in trouble.  We want to avoid unplanned downtime, and be more proactive in our maintenance planning. The easiest way to do this is by using the work queue feature.  </p>
+<p><code>Action:</code> Select “work queues” from the selections on the left</p>
+<p>Work queues are preconfigured views designed to help us find what we're looking for...and to manage our day-to-day activities.</p>
+<p><b>Value:</b> These are particularly valuable to a RE who needs to address a specific problem, like a utility, trying to avoid unplanned downtime.</p>
+<p><img alt="img" src="../img/Identify8.1.png" /></p>
+<p>There are a number of work queues included with Health and Predict. <br />
+-   There are work queues specific to Predict, like assets with a High Probability of Failure. <br />
+-   There's also a work queue for identifying assets in poor health. <br />
+-    And there are work queues that show assets with missing data.    </p>
+<p><b>Value:</b> The missing data work queues are extremely useful to a RE as they can help identify gaps in data necessary to create health scores or predictive failure models.  </p>
+<p><code>Action:</code> Select "Failing Before PM” work queue</p>
+<p>We'll select the Failing Before PM work queue to see all of the assets with scores in that work queue.  As a RE at a Utilities plant, it is critical for me to avoid failures. <br />
+-   In this work queue, we can see that there are several pumps and Substation  Transformers that have a predicted failure before their next planned maintenance date. <br />
+-   2 of the transformers are in our container that we viewed earlier. <br />
+-   We’ll select “ST_1400518” in the queue as we start to manage our workload for the day, investigating and addressing all of the assets in the queue.  </p>
+<p><code>Action:</code> Select “ST_1400518” which opens the asset detail page [DETAILS ON THIS PAGE WILL VARY AS THIS IS A LIVE DEMO SYSTEM]</p>
+<p><img alt="img" src="../img/Identify8.2.png" /></p>
+<h2 id="investigate-further-into-asset-details">Investigate Further into Asset Details</h2>
+<p>On the top of the asset detail page we see the resulting scores from the predefined notebook for this Substation Transformer.  These are health, criticality, risk, end of life and effective age score.  Note that effective age is a calculation using the actual age and the health score.  An asset in poor health will have an effective age greater than its actual age.</p>
+<p>We can also see the next Preventive Maintenance date and the MRR…coming from Maximo Manage.</p>
+<p><b>Value:</b> The asset detail page is an incredibly useful tool for investigating assets.  We can find all the asset information presented on a single page, in easy-to-read tables, charts and graphs.</p>
+<p>On the top of the page, we see details about our asset, and KPIs that give us a snapshot of its current state.</p>
+<p><img alt="img" src="../img/Investigate1.1.png" /></p>
+<p>For this asset, we have a health score of 7, which is in our red zone.  We can also see that it has increased 7 points since it was last calculated.</p>
+<p>This asset also has a criticality and risk score. </p>
+<p>We can see this asset has x.x% of its expected remaining useful life, based on the install date and manufacturers recommended life.</p>
+<p>We can see that our asset is projected to fail in the next 2 days, but our next maintenance isn't planned for 107 days.</p>
+<p>When we started our investigation, we knew the asset was expected to fail before its planned maintenance.  But, just by looking at the KPIs, we have additional evidence that this asset is in trouble, and that some action needs to be taken.</p>
+<p>To learn more about the health of our asset, we can go to the Health breakdown widget.</p>
+<p><code>Action:</code> Scroll down the page</p>
+<p><img alt="img" src="../img/Investigate2.1.png" /></p>
+<p>We can expend the view to see the contributors by clicking the chevrons to view the details.</p>
+<p>Similarly, we can view the Criticality breakdown widget.</p>
+<p>As we scroll down the page, we can see the health history of this asset. The asset health has been low for some time.  One more indication that this asset needs attention.</p>
+<p>The application supports critical asset-specific calculations and visualizations. Dissolved gas analysis is an example for the transformers.  It offers two types of visualization widgets.</p>
+<p><code>Action:</code> Scroll down the page</p>
+<p><img alt="img" src="../img/Investigate3.1.png" /></p>
+<p>The first one is Duval triangle. It tells us the current dissolved gas situation.  We can click on each of the dots to get detailed information.</p>
+<p>We can also click the switcher on the top-right corner to view the result in the list view.</p>
+<p>The other widget is the history of combustible gas concentrations. It shows  the combustible gas trend and rating over time</p>
+<p>The rating represents the average acceptability of detected gas concentrations. The rating is determined by the overall factor.</p>
+<p>We can hover on each of the assessment dates to get the detailed information.</p>
+<p><code>Action:</code> Scroll down the page</p>
+<p><img alt="img" src="../img/Investigate3.1.png" /></p>
+<p>There are several predictive models built to score against incoming sensor data for our asset.   </p>
+<p><b>Value:</b> IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.   </p>
+<p>These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome.  </p>
+<p>Note that also included with MAS is Watson Studio and Watson Machine Learning, both of which our Data Scientist can use for building, training, and maintaining predictive models.</p>
+<p>In the case of our asset, our model tells us that it is projected to fail in xx days...plus or minus x days.   </p>
+<ul>
+<li>Depending on the richness of our failure history, our Data Scientist can build predictive models for specific failure modes.  And we can select those failure modes within the widget to see the projection for each.   </li>
+<li>Also in the widget, we get information about our training data in the widget to help us decide when a model should be retrained.   </li>
+</ul>
+<p>The Failure probability widget can show us how different failure modes impact our predictions.  For example, it might show us our asset has a xx% probability of failure in the next xx months due to xx   </p>
+<ul>
+<li>Our Data Scientist can build specific models for time periods.  And just like the failure modes, we can look at the results by making different selections within our widget.   </li>
+<li>Failure probability history shows how the probability of failure for each mode has changed over time.</li>
+</ul>
+<p>The factors that contribute to failure show which factors from our training data impacted failures the most, giving us an indication of what may lead to future failures.   </p>
+<p>The anomaly detection model creates a threshold based on history, and we can see when our asset exceeds that threshold in our widget.   </p>
+<p>The end of life curve is built based on training data for assets that have been decommissioned.   By applying the effective age calculation from the notebook, we can use this curve to estimate our end of life.   </p>
+<p>The effective age of our transformer is 51 years.  The curve produces an end of life probability of  100%...one more piece of evidence to show that this asset needs to be attended to immediately.   </p>
+<p><code>Action:</code> Hover NEAR the point where the effective age crosses the curve.  Scroll down the page.
+<img alt="img" src="../img/Investigate4.1.png" />
+<img alt="img" src="../img/Investigate5.1.png" /></p>
+<p>As we continue to scroll down the page, we can see the "Asset timeline" which shows predicted failures, planned preventive maintenance, past failures, work orders and inspections.</p>
+<p>We can hover over the points to see more details.</p>
+<p><b>Value:</b> This view helps me to understand if the asset is being maintained well, or if I need to consider an update to the maintenance policy.  The hover details also give me an indication of potential future problems.</p>
+<p>At the bottom of the page, is an asset timeline that shows us several pieces of key information about our asset in the same graph. For example, we can see that I have a predicted failure (on the top line of the graph), that will occur before our next planned maintenance (on the second line of the graph).  </p>
+<p><b>Value:</b> Information on the chart, like past work orders and inspection, provide valuable insight into our asset's history, and may support what kind of action we take.
+While each piece of information, or widget, gives us insight into the state of our asset, all of the information together, gives us a richer view, and helps us make a data-driven decision on how to address this asset.</p>
+<p><code>Action:</code> Hover over a point on the timeline.  Scroll down the page.
+<img alt="img" src="../img/Investigate6.1.png" /></p>
+<h2 id="take-action">Take Action</h2>
+<p>We now have enough evidence from our investigation to take some action against this asset.  We can scroll to the top of the screen, and click the "Action" button to see our options.</p>
+<p>We can add a replacement flag to this asset to make sure it is marked and will be replaced in the next cycle of the replacement planning.</p>
+<p><code>Action:</code> Scroll to the top of the page and click the Actions drop down. 
+<img alt="img" src="../img/Action1.1.png" /></p>
+<p>If necessary, we can create a plan directly for this selected asset.</p>
+<p><code>Action:</code> Click the Add Flag option. 
+<img alt="img" src="../img/Action1.2.png" /></p>
+<p>However, this asset is still needed urgent maintenance before the replacement. </p>
+<p><code>Action:</code> Click the "Action" button, then "Create work order".  We’ll create an emergency maintenance work order for this asset.</p>
+<p>The risk assessment helps me drive asset and work management activities in Maximo/SAP, reduce operational expense, optimize and defend capital expenditures resulting in better outcomes.</p>
+<p><img alt="img" src="../img/Action1.3.png" /></p>
+<p><code>Action:</code> Review the options, but do not actually create the work order. 
+<img alt="img" src="../img/Action1.4.png" /></p>
+<p>As the Reliability Engineer, maintaining the grid, I was able to use IBM Maximo Health and Predict – Utilities to identify assets at risk, investigate those assets, and finally take an action to prevent a failure and unplanned downtown…saving thousands of dollars, and maintaining the integrity of the grid.</p>
+<p>My action with also help short, medium and long term investment decisions that drive maintenance and replacement policies.</p>
+<p>Thank you for following along!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../closing/" class="btn btn-neutral float-right" title="2. Closing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../closing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
