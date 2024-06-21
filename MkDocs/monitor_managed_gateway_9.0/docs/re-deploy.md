@@ -46,7 +46,7 @@ Select the `XX_Lenze_i550_01` device and then the `Metrics Dashboard`:
 ![Metrics Dashboard for 01](img/deploy_monitor_04.png)</br></br>
 
 !!! tip
-    This has been running for a while. 😎
+    This has been running for a while. 😉
 
 !!! note "New in MAS 9.0"
     When adding an OT device to a Managed Gateway, Maximo Monitor automatically add all the relevant metrics, as well as creating the Metrics Dashboard with all the metrics.
@@ -75,6 +75,9 @@ Finally click on the `Metrics` tab to view the selections you made when adding t
     The definition of Metrics has moved to a separate tab.</br>
 	In the `Overview` tab you'll find the definition of Dimensions as well as other information.
 
+
+You could now potentially create a dashboard like this 😎:
+![Potential Dashboard](img/monitor_metrics_1.png)</br></br>
 
 ---
 Congratulations you have successfully re-deployed and viewed data from both VFD's in the Monitor dashboard. This concludes this lab.</br></br>
