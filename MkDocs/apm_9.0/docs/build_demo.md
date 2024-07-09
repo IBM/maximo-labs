@@ -82,8 +82,11 @@ In this exercise you enable the `Default Score`.
 Service Requests set against the asset.  Asset installation date and asset expected life based on Manufacture.
 4. Optionally you can choose to `activate the scores later`.  Go to `Setting Group` and `Groups` tab to find the 
 `Default_Score` group to enable it.
+5. Check the group to see if the default scores have been activated.  You will see Health, Risk and Criticality 
+calculated for all your assets.
+![default_scores_group_](../../../maximo-labs/apm_8.11/img/hpu_8.11/defaultscores_activated.png)
 
-Asset scores will begin to be calculated using the `Default_Score` Group.  You can verify if the scoring is working by
+Asset scores will begin to be calculated using the `Default_Score` group.  You can also verify if the scoring is working by
 viewing assets using the `Asset Table List` page.  If the Health, Risk ad Criticality score don't apper it likely because
 there data missing for it to be calculated.   You can bulk update missing data for Installation Date in the `Asset Table 
 List` page simply by clicking on the column and row asset value and entering the information in the pop up dialog.   
@@ -472,14 +475,14 @@ Create the third investment strategy `Stay in budget` and run it.
 ## Meantime Between Failure
 <a name="mtbf"></a>
 
-To calculated the count of how many assets are achieving or not achieving the meantime to failure requires that you 
+To calculate the count of how many assets are achieving or not achieving the meantime to failure requires that you 
 specify threshold goal to achieve.   For example what is the number of hours an asset needs to go to achieve the meantime 
 of failure goal.  Assets who have a meantime between failure less than the number of hours means they are failing earlier 
 than required and therefore aren't meeting the meantime between failure.   Meantime between failures is calculated using
 the amount of time an asset goes before it has an unscheduled work order.  Where the work order is either a corrective 
 maintenance or emergency maintenance.   The meantime between failure is calculated by summing the total amount of time 
 between installation and the first and subsequent unscheduled work order divided by the total number of unscheduled 
-worker order occurences.
+worker order occurrences.
 
 ### Create Threshold on Charts Page
 
