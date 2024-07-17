@@ -7,6 +7,15 @@ portfolio.  The labs are in different states of readiness for use shown below. F
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
 ---
+| Lab                                                            | Exercise                                                                    |
+|----------------------------------------------------------------|-----------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway](monitor_managed_gateway_9.0/) | [Setup Simulator Environment](monitor_managed_gateway_9.0/setup_simulator)  |
+|                                                                | [Create a Managed Gateway](monitor_managed_gateway_9.0/create_gateway)      |
+|                                                                | [Add an industrial device](monitor_managed_gateway_9.0/add_device_1)        |
+|                                                                | [Deploy and verify connectivity](monitor_managed_gateway_9.0/deploy)        |
+|                                                                | [Add another industrial device](monitor_managed_gateway_9.0/add_device_2)   |
+|                                                                | [Deploy and view data in Monitor](monitor_managed_gateway_9.0/re-deploy)    |
+
 
 ### Maximo Application Suite 9.0
 | Lab                                                            | Exercise                                                                    |

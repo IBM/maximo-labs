@@ -2,14 +2,11 @@
 
 This Hands on Lab requires:
 
-* Your instructor has provide you the data used in the lab or has already added asset data to the environment.  
+* Your instructor has provide MAS v9 [Techzone environment](https://techzone.ibm.com/collection/ibm-sustainability-software-maximo-application-suite-811-for-cross-industry)  used in the lab.  
 
-* A student user id and password. Or you have an account for IBM ID that has access to the environment.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?):<br>
+* A student user id and password.
 
-    - Click `Login to MY IBM` button
-    - Click `Create an IBM ID` link
-
-* Access to a Maximo Application Suite v8.11 Early Program environment. Request access from your instructor. 
+* Network Access to a Maximo Application Suite v9 environment. 
 
 * Internet access to these [lab instructions](https://ibm.github.io/maximo-labs/apm_8.7/)
 
