@@ -7,8 +7,17 @@ portfolio.  The labs are in different states of readiness for use shown below. F
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
 ---
+| Lab                                                            | Exercise                                                                    |
+|----------------------------------------------------------------|-----------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway](monitor_managed_gateway_9.0/) | [Setup Simulator Environment](monitor_managed_gateway_9.0/setup_simulator)  |
+|                                                                | [Create a Managed Gateway](monitor_managed_gateway_9.0/create_gateway)      |
+|                                                                | [Add an industrial device](monitor_managed_gateway_9.0/add_device_1)        |
+|                                                                | [Deploy and verify connectivity](monitor_managed_gateway_9.0/deploy)        |
+|                                                                | [Add another industrial device](monitor_managed_gateway_9.0/add_device_2)   |
+|                                                                | [Deploy and view data in Monitor](monitor_managed_gateway_9.0/re-deploy)    |
 
-### Maximo Application Suite 9.0
+
+### Maximo Application Suite 9.0  (Under Development)
 | Lab                                         | Exercise                                                                                                                                         |
 |---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Health Setup](apm_9.0/build_demo)          | [Setup Health Asset Permissions](apm_9.0/build_demo/#setup-health-asset-permissions)                                                             |
@@ -37,21 +46,21 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 
 ### Maximo Application Suite 8.11
-| Lab                                                          | Exercise                                                       |
-|--------------------------------------------------------------|----------------------------------------------------------------|
-| [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/) | [Use the Docker image](monitor_modbus_simulator/docker)        |
-|                                                              | [Use the Node-RED script](monitor_modbus_simulator/node-red)   |
+| Lab                                                          | Exercise                                                         |
+|--------------------------------------------------------------|------------------------------------------------------------------|
+| [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/) | [Use the Docker image](monitor_modbus_simulator/docker)          |
+|                                                              | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
 | [Maximo Monitor Live Demo Asset](monitor_live_demo_asset/)   | [Create Monitor Devices](monitor_live_demo_asset/create_devices) |
-|                                                              | [Prepare Raspberry Pi](monitor_live_demo_asset/prepare_pi)     |
-|                                                              | [Convert Pi to RPE Asset](monitor_live_demo_asset/convert_pi)  |
-|                                                              | [Verify RPE is working](monitor_live_demo_asset/verify_rpe)    |
-| [Maximo Monitor Edge Data Collector](edc_8.11/)              | [Setup Simulator Environment](edc_8.11/setup)                  |
-|                                                              | [Create Monitor Devices](edc_8.11/monitor_devices)             |
-|                                                              | [Create EDC Integration](edc_8.11/edc_integration)             |
-|                                                              | [Deploy and Verify Integration](edc_8.11/deploy)               |
-|                                                              | [Create Monitor Metrics](edc_8.11/monitor_metrics)             |
-| [Health, Predict and Utilities](apm_8.11/)                   | [Setup Demonstration](apm_8.11/build_demo)                     |
-|                                                              | [Overview Task Guide](apm_8.11/demo_script)                    |
+|                                                              | [Prepare Raspberry Pi](monitor_live_demo_asset/prepare_pi)       |
+|                                                              | [Convert Pi to RPE Asset](monitor_live_demo_asset/convert_pi)    |
+|                                                              | [Verify RPE is working](monitor_live_demo_asset/verify_rpe)      |
+| [Maximo Monitor Edge Data Collector](edc_8.11/)              | [Setup Simulator Environment](edc_8.11/setup)                    |
+|                                                              | [Create Monitor Devices](edc_8.11/monitor_devices)               |
+|                                                              | [Create EDC Integration](edc_8.11/edc_integration)               |
+|                                                              | [Deploy and Verify Integration](edc_8.11/deploy)                 |
+|                                                              | [Create Monitor Metrics](edc_8.11/monitor_metrics)               |
+| [Health, Predict and Utilities](apm_8.11/)                   | [Setup Demonstration](apm_8.11/build_demo)                       |
+|                                                              | [Overview Task Guide](apm_8.11/demo_script)                      |
 
 
 ### Maximo Application Suite 8.10
