@@ -1,7 +1,15 @@
 
 # Contributors to IBM Maximo Monitor Modbus Simulator Lab
 
+#### Author & Developer:
+
 - Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
+
+#### Dockerization Assistance:
+
+- Celso Hernando Felipe (Building a docker image with Node-RED) - <celso.hernando@es.ibm.com>
+- Gregorio Guerretta (Adding support for Apple ARM processor) - <gregorio.guerretta@ibm.com>
+
 
 ---
 
@@ -9,6 +17,7 @@
 
 |Date      |By             | Description                                           |
 |:---------|:--------------|:------------------------------------------------------|
+|2024-06-06|Jan Ekstrøm    |Updated the Docker image to support Apple Silicon (ARM) as well as x86 chip architecture.|
 |2024-04-20|Jan Ekstrøm    |First version of this lab - after review.              |
 
 ---
