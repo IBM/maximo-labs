@@ -6,6 +6,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 !!! tip
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
+
 ---
 
 ### Maximo Application Suite 9.0 
