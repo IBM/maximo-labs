@@ -275,8 +275,71 @@ are responsible for.
 ###  Charts View
 <a name="charts_view"></a>
 
-The `Charts view` offers another way to identify assets that are not performing well relative to each other or based on a
-common grouping like manufacture and their relative health score ranges.  You want to focus on all substation transformers 
+The `Charts view` page offers another way to identify assets that are not performing well relative to each other.  There are 
+four out of the box charts available that count the number of assets in a particular category or range of condition.  
+
+1.  Navigate to the `Charts view` page. Click on the Charts Icon. ![chart_view_icon](/img/apm_9.0/chart_view_icon.png)
+2.  Choose a "View" for example select `Pumps with status` from the view drop down selection box. ![pumps_with_status](/img/apm_9.0/pumps_with_status.png)
+3.  Review the four charts that summarizes the currently selected views asset performance counts by range ![view_charts](/img/apm_9.0/view_charts.png)
+
+
+The `Charts view` shows 3 charts:
+
+- A health wheel chart categorizing all of the assets by health.
+- Unplanned downtime chart view showing hours of downtime by month.
+- A failure rate per manufacturer chart
+- A Mean time between failure that shows the count of asset meeting a performance threshold for mean time to failure duration.
+
+You will drill-down through each of these charts to see the assets details of each category.
+
+!!! note "Value"
+    Seeing key KPIs for multi-assets by health distribution, categorized by unplanned downtime or failure rate per manufacture can help you understand assets failure trends.
+
+
+!!! attention "Actions"
+    Follow the action items below.
+
+####  Failure rate chart
+
+1. On the Failure rate per manufacture click on the manufacturer `PUMPSRUS` to see the failures by that manufacturer. Clicking on the manufacturer Boggs shows a 100% failure rate.  So all assets from Boggs have failed.
+![drill_in_failure_rate](/img/apm_9.0/drillin_view_charts_failure_rate.png)
+2. On the Failure rate per manufacture click on the manufacturer `PUMPCO` to see the failures by that manufacturer. 
+3. Return to the charts page by using the breadcrumb at the top of the page. Click on the `Assets` breadcrumb to return to the charts page. ![assets_charts_breadcrumbs](/img/apm_9.0/assets_charts_breadcrumbs.png)
+
+
+####  Mean time between failure chart
+ 
+1. Notice the Mean time between failure chart is not configured. Each time you navigate to the charts page you must select 
+the thresholds to use on the current chart.  Click the filter `funnel icon` to see thresholds option to create or select
+an existing `threshold` value.  ![configure_chart_funnel](/img/apm_9.0/configure_chart_funnel.png)
+2. Click the `threshold pencil` icon.  ![choose_threshold](/img/apm_9.0/choose_threshold.png)
+3. Click the `threshold` radio box for 10k hours to indicate the asset must be running for more than 10k hours before it
+has an unscheduled maintenance. 
+3. Click the `OK` button. and `Apply` button.[configure_chart_funnel](/img/apm_9.0/configure_chart_funnel.png)
+4. Notice the Mean time between failure chart displays a bar chart with the count of assets:
+      - Meeting the threshold. Count and list of assets that went longer than 10k hours before having an unscheduled work order. 
+      - Not meeting threshold. Count and list of assets that were not able to achieve 10k hours before having an unscheduled work order.
+      - Missing data.  Count and list of assets that were missing data that prevented MTBF from being calculated.
+      - Assets that don't have Asset Class Definition defined.
+5. Hover on the `red` bar to see the count of assets not meeting the Mean time between threshold.
+6. Click on the `red` bar to see the list of assets that did not not meet the Mean time between threshold. [mtbf_results](/img/apm_9.0/mtbf_results.png)
+7. Click on the `asset name` to see the asset details to see how many mean time betwee failure hours the asset went before 
+having an unschedule maintenance. [mtbf_assets_notmeeting_mtbf](/img/apm_9.0/mtbf_assets_notmeeting_mtbf.png)
+8. Click on the `bread crumb` to return to the drilled in asset list. Or hit the next button to see the next asset that 
+didn't achieve mean time between failure hours threshold before having an unschedule maintenance. [mtbf_asset_details](/img/apm_9.0/mtbf_asset_details.png)
+
+###  Matrix View
+<a name="matrix_view"></a>
+
+Another view to help you identify the number of assets in different condition ranges is the `Matrix view`. 
+
+!!! note "Value"
+    Spend your time investigating and actioning assets that exhibit multiple conditions that meet your score range criteria. 
+
+!!! attention "Actions"
+    Follow the action items below.
+
+Now choose You want to focus on all substation transformers 
 by changing  the `type` filter, and select the `Charts view` to understand asset relative condition and performance.
 
 !!! attention "Actions"
@@ -294,66 +357,19 @@ by changing  the `type` filter, and select the `Charts view` to understand asset
 ![st_eudemo_a](../../../maximo-labs/apm_8.11/img/hpu_8.11/st_eudemo_a.png)
 7. Click `Apply`
 ![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 81.png)
-8. Select the 3rd icon in the upper right of the screen to see the selected assets on a `Charts` view
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 82.png)
-
-
-The `Charts view` shows 3 charts:
-
-
-- A health wheel categorizing all of the assets by health.
-- Unplanned downtime view showing hours of downtime by month.
-- A chart showing failure rate per manufacturer.
-
-You will drill-down through each of these charts to see the assets details of each category.  
-
-
-
-!!! note "Value"
-    Seeing key KPIs for multi-assets by health distribution, categorized by unplanned downtime or failure rate per manufacture can help you understand assets failure trends.
-
-
-!!! attention "Actions"
-    Follow the action items below.
-
-1. Click on the manufacturer `Boggs` to see the failures by that manufacturer. Clicking on the manufacturer Boggs shows a 100% failure rate.  So all assets from Boggs have failed.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 83.png)
-2. Return to the charts page by using the breadcrumb at the top of the page. 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 84.png)
-
-
-###  Matrix View
-<a name="matrix_view"></a>
-
-Another view to help you identify the number of assets in different condition ranges is the `Matrix view`. 
-
-!!! note "Value"
-    Spend your time investigating and actioning assets that exhibit multiple conditions that meet your score range criteria. 
-
-!!! attention "Actions"
-    Follow the action items below.
-
-1. You will look at all substation transformers.  Reset your `View` to `All (shared)` assets.
-![table_view_filter](../../../maximo-labs/apm_8.11/img/hpu_8.11/table_view_filter.png)
-2. Click the `filter` symbol
-3. Select the `edit` symbol for Query
-![query_filter](../../../maximo-labs/apm_8.11/img/hpu_8.11/query_filter.png)
-4. Input query string `EUORG1_EUDEMO_ST` and click `Enter` Select  `EUORG1_EUDEMO_ST` radio box filter.   Click `OK` button to accept.
-![edit_query_radio](../../../maximo-labs/apm_8.11/img/hpu_8.11/edit_query_radio.png)
-5. Click `Apply` to save the query.  Assets grid now only displays assets that match the query. 
-![apply_query](../../../maximo-labs/apm_8.11/img/hpu_8.11/apply_query.png)
-6. Select the 4th icon that looks like a Matrix in the upper right of the screen. 
+8. You will now see the results for all substation transformers. 
+9. Select the 4th icon that looks like a Matrix in the upper right of the screen. 
 ![view_matrix](../../../maximo-labs/apm_8.11/img/hpu_8.11/view_matrix.png)
-7. You can see the number of assets categorized on a Matrix view.
-8. Set the Matrix Version to `Criticality` and `End of life` to see the X and Y axis change and score ranges change to the different score range categories. Note how many assets are for `High Need For Action` which means they need to be actioned. 
+10. You can see the number of assets categorized on a Matrix view. 
+11. Set the Matrix Version to `Criticality` and `End of life` to see the X and Y axis change and score ranges change to the different score range categories. Note how many assets are for `High Need For Action` which means they need to be actioned. 
 ![set_matrix_version](../../../maximo-labs/apm_8.11/img/hpu_8.11/set_matrix_version.png)
-9. Click `Assets` breadcrumb to navigate back to the `Matrix` view.
+12. Click `Assets` breadcrumb to navigate back to the `Matrix` view.
 ![view_matrix](../../../maximo-labs/apm_8.11/img/hpu_8.11/asset_drill_in_view.png)
-10. Set the Matrix Version to `Criticality` and `End of life`.  
+13. Set the Matrix Version to `Criticality` and `End of life`.  
 ![set_matrix_version](../../../maximo-labs/apm_8.11/img/hpu_8.11/set_matrix_version.png)
-11. You can drill into the red cell with `Criticality` A and `End of life` High to see what assets are at close to the end of their life. Click the number of assets `#`. 
+14. You can drill into the red cell with `Criticality` A and `End of life` High to see what assets are at close to the end of their life. Click the number of assets `#`. 
 ![final_matrix](../../../maximo-labs/apm_8.11/img/hpu_8.11/final_matrix.png)
-12. You can also see the number of asset in the matrix in the future years if you have configured your forecast score notebooks.
+15. You can also see the number of asset in the matrix in the future years if you have configured your forecast score notebooks.
 
 ###  Work Queues View
 <a name="charts_view"></a>
