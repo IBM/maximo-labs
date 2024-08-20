@@ -17,6 +17,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
+|2024-06-21|Jan Ekstrøm|Updated the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).|
 |2024-06-21|Jan Ekstrøm|Added the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).|
 |2024-06-06|Jan Ekstrøm|Updated the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to support Apple Silicon (ARM) as well as x86 chip architecture.|
 |2024-05-29|Carlos Ferreira|Added the MAS 9.0 APM lab (Under Development).|

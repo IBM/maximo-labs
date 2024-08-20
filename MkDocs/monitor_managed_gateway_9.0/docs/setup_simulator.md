@@ -18,8 +18,9 @@ You need the IP address of the machine where you run the simulator no matter whi
 #### Get IP Adddress on macOS
 
 Use the following command:
-
-`ifconfig en0`
+```` bash
+ifconfig en0
+````
 
 ![Get IP Address](img/setup_01.png)</br>
 
@@ -29,17 +30,19 @@ Use the following command:
 
 #### Get IP Adddress on LINUX
 
-Use the following command:
-
-`hostname -I`
+Use the following command: 
+```` bash
+hostname -I
+````
 
 ![Get IP Address](img/setup_03.png)</br>
 
 #### Get IP Adddress on Windows
 
 Use the following command:
-
-`ipconfig`
+```` bash
+ipconfig
+````
 
 ![Get IP Address](img/setup_02.png)</br>
 
