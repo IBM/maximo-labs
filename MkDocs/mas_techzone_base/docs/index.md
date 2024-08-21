@@ -1,7 +1,12 @@
 # Welcome to the </br>MAS Techzone Certified Base Image Hands-on Lab
 
+
+
 !!! danger "Audience"
-    This hands-on lab is only applicable for IBM Business Partners and IBM'ers, as it requires access to IBM Technology Zone (aka TechZone).
+    <img src="img/index_00.png" style="float:left">
+    **This hands-on lab is only applicable for IBM Business Partners and IBM'ers,</br>as it requires access to IBM Technology Zone (aka TechZone).**</br></br>
+    If you don't have access to TechZone, you would be able to provision an OpenShift Cluster and install the various Maximo Application Suite applications by following the [MAS Devops Ansible Collection](https://ibm-mas.github.io/ansible-devops/){target=_blank}.
+
 
 ---
 

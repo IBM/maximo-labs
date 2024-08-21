@@ -24,7 +24,7 @@ Open the `inst1-credentials-superuser` secret and click on `Reveal values`:</br>
 
 ![Prepare for use](img/prepare_for_use_02.png)</br></br>
 
-Switch to the recently opened tab and login with the MAS Super User credentials:</br>
+Switch to the recently opened tab and login with the MAS Super User credentials in order to authenticate the MAS installation:</br>
 
 ![Prepare for use](img/prepare_for_use_03.png)</br>
 
@@ -39,9 +39,12 @@ Fill out the Identity fields `Display name`, `User ID`, and `Primary email` - an
 
 ![Prepare for use](img/prepare_for_use_05.png)</br></br>
 
-Add the propor entitlement, at least Premium Administration entitlement. Click `Create`:</br>
+Add the proper entitlement, at least Premium Administration entitlement. Click `Create`:</br>
 
 ![Prepare for use](img/prepare_for_use_06.png)</br></br>
+
+!!! tip
+    You can hover over the three Suite administration options to see what they type of access they grant.
 
 Copy and and save the credentials somewhere else for later use. Click `Close`:</br>
 
@@ -52,9 +55,10 @@ The new user will be syncronized. Click on the `Users` breadcrump link in the up
 ![Prepare for use](img/prepare_for_use_08.png)</br></br>
 
 
-!!! tip
-    Log out of the Suite Administration page and login with the new MAS Admin credentials to verify it is ready to be used.</br>
-     
+!!! tip "Tips"
+    * Log out of the Suite Administration page and login with the new MAS Admin credentials to verify it is ready to be used.
+    * You can now install the various Maximo Application Suite applications by following the [MAS Devops Ansible Collection](https://ibm-mas.github.io/ansible-devops/){target=_blank}.</br>
+
 
 ---
 Congratulations you have successfully instantiated a MAS Techzone Certified Base Image and prepared it for use.</br>
