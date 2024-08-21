@@ -23,10 +23,9 @@ echo "BUILD_INFO - The top level of IBM Maximo Labs is build."
 #### BELOW IS WHERE EACH LAB IS BEING BUILD                                   ####
 
 : '
-How to comment out a blog to lover build time during development. 
+How to comment out a blog to lower build time during development. 
 Look at the character used above and belove these two lines of text.
 '
-
 
 # Build the Monitor SaaS level:
 lab=monitor_saas
@@ -198,6 +197,14 @@ echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Ma
 
 # Build the Monitor Managed Gatewway 9.0 level:
 lab=monitor_managed_gateway_9.0
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the MAS TechZone Base Certified Image level:
+lab=mas_techzone_base
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
