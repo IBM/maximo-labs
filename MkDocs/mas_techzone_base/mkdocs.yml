@@ -1,0 +1,28 @@
+site_name: MAS Techzone Certified Base Image Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Jan Ekstrøm
+site_description: "MAS TechZone Certified Base Image Hands-on Lab"
+site_dir: ../../site/mas_techzone_base
+
+nav:
+  - Get back to Maximo Labs: ..
+  - MAS Techzone Certified Image Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Instantiate a Base Image: instantiate.md
+        - 2. Prepare For Use: prepare_for_use.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+extra_css:
+  - extra.css
+markdown_extensions:
+  - attr_list
+  - admonition
