@@ -1,7 +1,7 @@
 site_name: IBM Maximo Labs
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira, Jan Ekstrøm & Contributors
-site_description: "IBM Maximo Hands on Lab"
+site_description: "IBM Maximo Hands-on Lab"
 site_dir: ../../site
 
 
@@ -12,6 +12,9 @@ nav:
     - Copyright: copyright.md
 
 theme: readthedocs
+extra_css:
+  - extra.css
+
 
 markdown_extensions:
   - attr_list
