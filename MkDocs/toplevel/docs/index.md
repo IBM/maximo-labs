@@ -6,49 +6,57 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 !!! tip
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
 
-
 ---
+
+<empty line>
+[IMPORTANT HIDDEN COMMENT: Do not alter the header line of the below tables as they use the space accessible, but copy it to new tables when they are created]::
 
 ### Maximo Application Suite 9.0 
 
-| Lab                                                            | Exercise                                                                    |
-|----------------------------------------------------------------|-----------------------------------------------------------------------------|
-| [Maximo Monitor Managed Gateway](monitor_managed_gateway_9.0/) | [Setup Simulator Environment](monitor_managed_gateway_9.0/setup_simulator)  |
-|                                                                | [Create a Managed Gateway](monitor_managed_gateway_9.0/create_gateway)      |
-|                                                                | [Add an industrial device](monitor_managed_gateway_9.0/add_device_1)        |
-|                                                                | [Deploy and verify connectivity](monitor_managed_gateway_9.0/deploy)        |
-|                                                                | [Add another industrial device](monitor_managed_gateway_9.0/add_device_2)   |
-|                                                                | [Deploy and view data in Monitor](monitor_managed_gateway_9.0/re-deploy)    |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [MAS TechZone Base Certified Image](mas_techzone_base/)        | [Instantiate a TechZone Certified Base Image](mas_techzone_base/instantiate)       |
+|                                                                | [Prepare For Use](mas_techzone_base/prepare_for_use)                               |
 
-| Lab                                         | Exercise                                                                                                                                         |
-|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Health Setup](apm_9.0/build_demo)          | [Setup Health Asset Permissions](apm_9.0/build_demo/#setup-health-asset-permissions)                                                             |
-|                                             | [Setup Default Health Asset Condition Scores](apm_9.0/build_demo/#default_score)                                                                 |
-|                                             | [Create an Asset](apm_9.0/build_demo/#create_asset)                                                                                              |
-|                                             | [Health Score Groups](apm_9.0/build_demo/#setup_health_score_group)                                                                              |
-|                                             | [Create Score Type](apm_9.0/build_demo/#create-score-type)                                                                                       |
-|                                             | [Create Group Using Custom Score Notebooks](apm_9.0/build_demo/#create-group-custom-score)                                                       |
-|                                             | [Introduction to Task Guide](apm_9.0/demo_script)                                                                                                |
-|                                             | [Create Custom Matrix](apm_9.0/build_demo/#create-custom-matrix)                                                                                 |
-|                                             | [Configure Matrix](apm_9.0/build_demo/#configure-matrix)                                                                                         |
-|                                             | [Create Replacement Plan Template for Substation Transformers](apm_9.0/build_demo/#create-replacement-plan-template-for-substation-transformers) |
-|                                             | [Create Investment Project](apm_9.0/build_demo/#create-investment-project   )                                                                    |
-|                                             | [Setup Thresholds for Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                  |
-| [Health Demonstration](apm_9.0/demo_script) | [MAS Health and Predict Overview Task Guide](apm_9.0/#demo_script)                                                                               |
-|                                             | [Using Asset Table View](apm_9.0/demo_script/#asset-table-view)                                                                                  |
-|                                             | [Using Map View](apm_9.0/demo_script/#map_view)                                                                                                  |
-|                                             | [Using Mean Time Between Failure Charts](apm_9.0/demo_script/#mtbf)                                                                              |
-|                                             | [Use Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                                   |
-|                                             | [Matrix View](apm_9.0/demo_script/#map_view)                                                                                                     |
-|                                             | [Work Queues View](apm_9.0/demo_script/#work-queues-view)                                                                                        |
-|                                             | [Investigate Asset Details](apm_9.0/demo_script/#assets-detail-view)                                                                             |
-|                                             | [Action Asset Create Work Order](apm_9.0/demo_script/#take-action)                                                                               |
-|                                             | [Action Multiple Assets in Matrix](/apm_9.0/demo_script/#identify-investigate-with-a-matrix)                                                     |
-|                                             | [Compare Asset Investment Optimization Plans](apm_9.0/demo_script/#take-action-with-aio)                                                         |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway](monitor_managed_gateway_9.0/) | [Setup Simulator Environment](monitor_managed_gateway_9.0/setup_simulator)         |
+|                                                                | [Create a Managed Gateway](monitor_managed_gateway_9.0/create_gateway)             |
+|                                                                | [Add an industrial device](monitor_managed_gateway_9.0/add_device_1)               |
+|                                                                | [Deploy and verify connectivity](monitor_managed_gateway_9.0/deploy)               |
+|                                                                | [Add another industrial device](monitor_managed_gateway_9.0/add_device_2)          |
+|                                                                | [Deploy and view data in Monitor](monitor_managed_gateway_9.0/re-deploy)           |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| [IBM Maximo Health and Predict Lab for MAS](apm_9.0):          |                                                                                                                                                  |
+| [Health Setup](apm_9.0/build_demo)                             | [Setup Health Asset Permissions](apm_9.0/build_demo/#setup-health-asset-permissions)                                                             |
+|                                                                | [Setup Default Health Asset Condition Scores](apm_9.0/build_demo/#default_score)                                                                 |
+|                                                                | [Create an Asset](apm_9.0/build_demo/#create_asset)                                                                                              |
+|                                                                | [Health Score Groups](apm_9.0/build_demo/#setup_health_score_group)                                                                              |
+|                                                                | [Create Score Type](apm_9.0/build_demo/#create-score-type)                                                                                       |
+|                                                                | [Create Group Using Custom Score Notebooks](apm_9.0/build_demo/#create-group-custom-score)                                                       |
+|                                                                | [Introduction to Task Guide](apm_9.0/demo_script)                                                                                                |
+|                                                                | [Create Custom Matrix](apm_9.0/build_demo/#create-custom-matrix)                                                                                 |
+|                                                                | [Configure Matrix](apm_9.0/build_demo/#configure-matrix)                                                                                         |
+|                                                                | [Create Replacement Plan Template for Substation Transformers](apm_9.0/build_demo/#create-replacement-plan-template-for-substation-transformers) |
+|                                                                | [Create Investment Project](apm_9.0/build_demo/#create-investment-project   )                                                                    |
+|                                                                | [Setup Thresholds for Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                  |
+| [Health Demonstration](apm_9.0/demo_script)                    | [MAS Health and Predict Overview Task Guide](apm_9.0/#demo_script)                                                                               |
+|                                                                | [Using Asset Table View](apm_9.0/demo_script/#asset-table-view)                                                                                  |
+|                                                                | [Using Map View](apm_9.0/demo_script/#map_view)                                                                                                  |
+|                                                                | [Using Mean Time Between Failure Charts](apm_9.0/demo_script/#mtbf)                                                                              |
+|                                                                | [Use Meantime Between Failure Chart](apm_9.0/build_demo/#mtbf)                                                                                   |
+|                                                                | [Matrix View](apm_9.0/demo_script/#map_view)                                                                                                     |
+|                                                                | [Work Queues View](apm_9.0/demo_script/#work-queues-view)                                                                                        |
+|                                                                | [Investigate Asset Details](apm_9.0/demo_script/#assets-detail-view)                                                                             |
+|                                                                | [Action Asset Create Work Order](apm_9.0/demo_script/#take-action)                                                                               |
+|                                                                | [Action Multiple Assets in Matrix](/apm_9.0/demo_script/#identify-investigate-with-a-matrix)                                                     |
+|                                                                | [Compare Asset Investment Optimization Plans](apm_9.0/demo_script/#take-action-with-aio)                                                         |
 
 
 ### Maximo Application Suite 8.11
-| Lab                                                          | Exercise                                                         |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |--------------------------------------------------------------|------------------------------------------------------------------|
 | [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/) | [Use the Docker image](monitor_modbus_simulator/docker)          |
 |                                                              | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
@@ -66,7 +74,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 
 ### Maximo Application Suite 8.10
-| Lab                                                                    | Exercise                                                                                          |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | [Monitor Node-RED CSV Importer V2](monitor_nodered_csv_importer_2.0/)  | [Setup Node-RED Environment](monitor_nodered_csv_importer_2.0/setup)                              |
 |                                                                        | [Inject device data directly to Monitor](monitor_nodered_csv_importer_2.0/setup_device)           |
@@ -74,7 +82,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 
 ### Maximo Application Suite 8.9
-| Lab                                        | Exercise                                                                                     |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |--------------------------------------------|----------------------------------------------------------------------------------------------|
 | [Deploy MAS 8.9](ocp_8.9/)                 | [Logistics](ocp_8.9/logistics)                                                               |
 |                                            | [Infrastructure](ocp_8.9/technical)                                                          |
@@ -93,7 +101,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                            | [Verify Data Sent to Monitor](mas_monitor_connect/verify_data)                               |
  
 ### Maximo Application Suite 8.8
-| Lab                                           | Exercise                                                                            |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |-----------------------------------------------|-------------------------------------------------------------------------------------|
 | [Health, Predict and Utilities](apm_8.8/)     | [Setup Watson Studio](apm_8.8/setup_watson_studio)                                  |
 |                                               | [Understand Health and Predict Utilities Models](apm_8.8/hpu_models)                |
@@ -116,7 +124,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Verify Data Sent to Monitor](mas_monitor_connect/verify_data)                      |
 
 ### Maximo Application Suite 8.7
-| Lab                                                | Exercise                                                                            |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------|-------------------------------------------------------------------------------------|
 | [Health, Predict and Utilities](apm_8.7/)          | [Setup Watson Studio](apm_8.7/setup_watson_studio)                                  |
 |                                                    | [Understand Health and Predict Utilities Models](apm_8.7/hpu_models)                |
@@ -137,7 +145,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                    | [Assign Devices](mas_monitor_hierarchy/assign_devices)                              |
 
 ### Maximo Application Suite 8.6
-| Lab                                                                 | Exercise                                                                              |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |---------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | [Monitor Node-RED CSV Importer](monitor_nodered_csv_importer_1.0/)  | [Setup Environment](monitor_nodered_csv_importer_1.0/setup)                           |
 |                                                                     | [Get Node Red Script](monitor_nodered_csv_importer_1.0/get_script)                    |
@@ -152,7 +160,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 
 ### Maximo Application Suite 8.5
-| Lab                                           | Exercise                                                                  |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |-----------------------------------------------|---------------------------------------------------------------------------|
 | [Monitor Functions](monitor_8.5/)             | [Setup_Local Python Environment](monitor_8.5/setup_local_environment)     |
 |                                               | [Setup Device Types](monitor_8.5/hopper_asset)                            |
@@ -172,8 +180,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | [MAS Environmental Monitoring](sustain_mas/)  | [Sustainability Lab](sustain_mas)                                         |
 
 ### Maximo SaaS (DEPRECATED)
-
-| Lab                                           | Exercise                                                                     |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |-----------------------------------------------|------------------------------------------------------------------------------|
 | [Monitor SaaS](monitor_saas/)                 | [Connect Devices](monitor_saas/connect_device)                               |
 |                                               | [Monitor Anomalies](monitor_saas/monitor_anomalies)                          |
@@ -217,10 +224,10 @@ If you want to write new labs or improve the existing labs, then find the instru
 
 ### License
 
-See the [Copyright page](copyright.md) for how the Maximo Hands on Labs are licensed.
+See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are licensed.
 
 ---
 
-### UPDATED: 2024-09-20
+### UPDATED: 2024-09-21
 
 ---

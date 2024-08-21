@@ -7,7 +7,7 @@
 - Angelina Nicolella - <angelina.nicolella@ibm.com>
 - Arif Ali - <aali@us.ibm.com>
 - Juan Gu -  <gujuan@cn.ibm.com>
-- John Douglas 
+- John Douglas  - <jhdoug@us.ibm.com>
 - Eric Lowry - <elowry@us.ibm.com>
 - Graeme Pexton - <jgpexton@us.ibm.com>
 
