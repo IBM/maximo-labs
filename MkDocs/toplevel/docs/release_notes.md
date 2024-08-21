@@ -7,7 +7,7 @@
 - Angelina Nicolella - <angelina.nicolella@ibm.com>
 - Arif Ali - <aali@us.ibm.com>
 - Juan Gu -  <gujuan@cn.ibm.com>
-- John Douglas  - <jhdoug@us.ibm.com>
+- John Douglas - <jhdoug@us.ibm.com>
 - Eric Lowry - <elowry@us.ibm.com>
 - Graeme Pexton - <jgpexton@us.ibm.com>
 
@@ -15,10 +15,11 @@
 
 # Change Information
 
-|Date     |By             | Description                                           |
-|:--------|:--------------|:------------------------------------------------------|
-|2024-09-20|Jan Ekstrøm|Updated the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).|
-|2024-06-21|Jan Ekstrøm|Added the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).|
+|Date     |By             | Description                                                                        |
+|:--------|:--------------|:-----------------------------------------------------------------------------------|
+|2024-09-21|Jan Ekstrøm|Added the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).              |
+|2024-09-20|Jan Ekstrøm|Updated the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).     |
+|2024-06-21|Jan Ekstrøm|Added the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).       |
 |2024-06-06|Jan Ekstrøm|Updated the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to support Apple Silicon (ARM) as well as x86 chip architecture.|
 |2024-05-29|Carlos Ferreira|Added the MAS 9.0 APM lab (Under Development).|
 |2024-04-23|Jan Ekstrøm|Updated the [Edge Data Collector lab](../edc_8.11) to use a new modbus simulator.|
