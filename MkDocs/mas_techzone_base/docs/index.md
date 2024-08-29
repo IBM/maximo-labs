@@ -16,6 +16,7 @@ The exercises will cover:
 
 * Instantiate/Reserve a MAS Techzone Certified Base Image
 * Prepare the MAS instance for usage
+* Upgrade MAS to the latest version
 * Have fun
 
 !!! note
@@ -24,6 +25,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2024-09-21**
+**Updated: 2024-09-29**
 
 ---

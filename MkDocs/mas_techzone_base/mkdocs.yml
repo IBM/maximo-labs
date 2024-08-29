@@ -12,6 +12,7 @@ nav:
   - Exercises:
         - 1. Instantiate a Base Image: instantiate.md
         - 2. Prepare For Use: prepare_for_use.md
+        - 3. Upgrade MAS [Optional]: upgrade_mas.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright

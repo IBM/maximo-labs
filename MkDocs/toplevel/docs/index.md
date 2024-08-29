@@ -17,6 +17,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [MAS TechZone Base Certified Image](mas_techzone_base/)        | [Instantiate a TechZone Certified Base Image](mas_techzone_base/instantiate)       |
 |                                                                | [Prepare For Use](mas_techzone_base/prepare_for_use)                               |
+|                                                                | [Upgrade MAS](mas_techzone_base/upgrade_mas)                                       |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -228,6 +229,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2024-09-21
+### UPDATED: 2024-09-29
 
 ---
