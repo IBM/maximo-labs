@@ -3,6 +3,9 @@ In this Exercise you will learn how to upgrade MAS to the latest version.
 
 It is not possible to use the MAS CLI docker to either update nor upgrade the MAS installation that is provided through TechZone. After a lot of tinkering I managed to find a more complex method that works - at least from MAS 9.0.0 to 9.0.2, as this exercise is build upon</br>
 
+!!! tip
+    You can see the release notes here: [Maximo Application Suite Releases information](https://www.ibm.com/support/pages/node/6570601){target=_blank}</br>
+
 ---
 *Before you begin:*  
 This Exercise requires that you have:
@@ -40,7 +43,12 @@ Also notice that two newer versions are available (end of August), where 9.0.2 i
 ![MAS Update](img/mas_upgrade_07.png)</br></br>
 
 Press `Enter` to select the default value, i.e. 1.</br>
-Step 5) Dependency Update Chacks will be performed. You will need the `Installed Catalog` and the `Updated Catalog` values later.</br>
+Step 5) Dependency Update Checks will be performed. 
+
+!!! tip
+    If the Dependency Update Check "hangs" then just rerun it in another window.</br> 
+
+You will need the `Installed Catalog` and the `Updated Catalog` values later.</br>
 DO NOT PROCEED FROM HERE - enter `n` and `Enter` to escape from the `mas update` execution.</br>
 ![MAS Update](img/mas_upgrade_08.png)</br></br>
 
@@ -81,7 +89,7 @@ And MAS Manage as well:</br>
 ![MAS About](img/mas_upgrade_19.png)</br></br>
 
 
-!!! tip "Tip"
+!!! tip
     You can now install the various Maximo Application Suite applications by following the [MAS Devops Ansible Collection](https://ibm-mas.github.io/ansible-devops/){target=_blank}</br> 
     and they will also be on the newest version.</br>
 

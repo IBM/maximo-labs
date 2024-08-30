@@ -17,7 +17,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
-|2024-09-29|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).             |
+|2024-09-30|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).             |
 |2024-09-21|Jan Ekstrøm    |Added the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).               |
 |2024-09-20|Jan Ekstrøm    |Updated the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).      |
 |2024-06-21|Jan Ekstrøm    |Added the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).        |
