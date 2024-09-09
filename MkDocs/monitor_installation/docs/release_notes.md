@@ -11,7 +11,7 @@
 
 |Date      |By             | Description                                           |
 |:---------|:--------------|:------------------------------------------------------|
-|2024-09-30|Jan Ekstrøm    |Lab is ready for the first release.                    |
+|2024-08-30|Jan Ekstrøm    |Lab is ready for the first release.                    |
 
 
 ---
