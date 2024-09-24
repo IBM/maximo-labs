@@ -77,14 +77,14 @@ In this exercise you enable the `Default Score`.
 
 1. After you Log into IBM Maximo for the first time you will be reminded to enable the `Default Score`. 
 2. Press the `Activate` Button to enable the Default Scores.
-![default_scores_form_](../../../maximo-labs/apm_9.0/img/apm_9.0/default_scores_form.png)
+![default_scores_form](../../../maximo-labs/apm_9.0/img/default_scores_form.png)
 3. Make sure you have create assets and they have the required dependencies set.  An Asset Priority,  Work orders or 
 Service Requests set against the asset.  Asset installation date and asset expected life based on Manufacture.
 4. Optionally you can choose to `activate the scores later`.  Go to `Setting Group` and `Groups` tab to find the 
 `Default_Score` group to enable it.
 5. Check the group to see if the default scores have been activated.  You will see Health, Risk and Criticality 
 calculated for all your assets.
-![default_scores_group_](../../../maximo-labs/apm_9.0/img/apm_9.0/defaultscores_activated.png)
+![default_scores_group](../../../maximo-labs/apm_9.0/img/defaultscores_activated.png)
 
 Asset scores will begin to be calculated using the `Default_Score` group.  You can also verify if the scoring is working by
 viewing assets using the `Asset Table List` page.  If the Health, Risk ad Criticality score don't apper it likely because
