@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/update_dashboards/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>10. Update Dashboards - Monitor Auto AI Hands on Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "10. Update Dashboards";
+        var mkdocs_page_input_path = "update_dashboards.md";
+        var mkdocs_page_url = "/maximo-labs/update_dashboards/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Auto AI Hands on Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Auto AI Hands on Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Auto AI Hands on Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_device_types/">2. Create Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">3. Create Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../send_device_simulated_data/">4. Send Simulated Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_interfaces/">5. Create Interfaces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dashboards/">6. Create Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_model/">7. Identify Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../train_test_save_model_in_monitor/">8. Train Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy_prediction_model_function/">9. Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">10. Update Dashboards</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#add-calculations">Add Calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-alerts">Add alerts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-dashboard-power-card">Update Dashboard Power Card</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-dashboard-power-card-with-alert">Update Dashboard Power Card with Alert</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-dashboard">View Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-alerts">View Alerts</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Auto AI Hands on Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">10. Update Dashboards</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="add-calculations-alerts-and-update-dashboards">Add Calculations, Alerts and Update Dashboards</h1>
+<p>Monitor calculations allow you to process time series data or do other scheduled activities.   Calculations could be to 
+check how much the actual power consumption deviates from the prediction power consumption from the pump.  If this deviation
+is too large it could indicate there is a anomaly that needs to be investigated.   In this exercise you will:</p>
+<ul>
+<li><a href="#AddCalcuations">Add Calculations</a> to add a new metric called <code>predicted_power_max_deviation</code> using a formula <code>power_prediction</code> * 1.2</li>
+<li><a href="#AddAlerts">Add Alerts</a> to raise an alert when the actual <code>POWER</code>  is greater than maximum_predicted_power_deviation.</li>
+</ul>
+<h2 id="add-calculations">Add Calculations</h2>
+<p>To see and monitor the values of calculated metric in Monitor, you must add the metric, calculated metrics and alerts to 
+an asset dashboard.  In this exercise you will add the new calculated metric named <code>power_prediction_co_max_deviation</code> to your 
+asset calculated metrics to calculate the maximum power prediction allowed.</p>
+<p><a name="AddCalcuations"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember to replace <code>co</code> with your initials in the name of your own asset type if you aren't in an instructor led lab.
+Remember to replace <code>co</code> with the initials that you used for your power prediction calculated metric.</p>
+</div>
+<ol>
+<li>
+<p>Click <code>Setup</code> menu.  Search on <code>pump_co</code>.  Click <code>pump_co</code> 
+<img alt="Asset Setup" src="../img/u09.png" /></p>
+</li>
+<li>
+<p>Click on <code>Manage Asset Type</code> to see the metrics that have already been added to your asset type  for your  <code>pump_co</code>.
+<img alt="Asset Setup" src="../img/u10.png" /></p>
+</li>
+<li>
+<p>Click on the <code>Data</code> tab, expand the  <code>Metrics</code> and  <code>Calulated Metric</code>   These are the raw metrics sent by the 
+simulated pump time series data and the calculations used to operate on the data. Like making a prediction for power like 
+you did in the last exercise to <a href="#deploy_model">Deploy Model</a>.
+<img alt="Cacluated Metric" src="../img/u11.png" /></p>
+</li>
+<li>
+<p>Add a calculation for what is the maximum acceptable  power consumption. Click  <code>+</code> button in the Asset view, and then 
+search for and select the <code>NewColFromCalculation</code> function.  Click on <code>select</code> button.
+<img alt="New Column From Calculation" src="../img/u12.png" /></p>
+</li>
+<li>
+<p>From <code>sources</code> <code>Data Items</code> choose the <code>power_prediction</code> metric as the input to our calculation.  For the calculation <code>expression</code> 
+enter:
+    <code>1.2*df['power_prediction']</code>
+and click the <code>Next</code> button
+<img alt="dashboard settings" src="../img/u13.png" /></p>
+</li>
+<li>
+<p>Set <code>Output metric</code> to  <code>predicted_power_co_max_deviation</code>.  Set <code>Output type</code> to  <code>Number</code>.  Finally click the <code>Next</code> button.
+<img alt="dashboard settings" src="../img/u14.png" /></p>
+</li>
+</ol>
+<h2 id="add-alerts">Add alerts</h2>
+<p><a name="AddAlerts"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember to replace <code>co</code> with your initials in the name of your own calculated metrics and alert names. </p>
+</div>
+<p>The "Alerts" function allows you to be notified when anomalies are detected.  In this exercise you will  add an Alerts 
+that check if the actual <code>POWER</code> is greater than the  <code>predicted_power_co_max_deviation</code>. </p>
+<ol>
+<li>
+<p>Click <code>Setup</code> menu.  Search on <code>pump_co</code> if you are in the instructor led class.  Otherwise search for <code>pump_Your_Initials</code> 
+to find the asset type you created and click on it.  Click <code>pump_Your_Initials</code> <br />
+<img alt="dashboard settings" src="../img/u09.png" /></p>
+</li>
+<li>
+<p>Click on <code>Manage Asset Type</code> to see the metrics that have already been added to your asset type  for your <code>pump_Your_Initials</code><br />
+<img alt="dashboard settings" src="../img/u10.png" /></p>
+</li>
+<li>
+<p>Click on the <code>Data</code> tab, expand the  <code>Metrics</code> and  <code>Calulated Metric</code>   These are the raw metrics sent by the 
+simulated pump time series data and the calculations used to operate on the data. Like making a prediction for power like 
+you did in the last exercise to <a href="#deploy_model">Deploy Model</a>.
+<img alt="dashboard settings" src="../img/u11.png" /></p>
+</li>
+<li>
+<p>Click  <code>+</code> button in the Asset view, and then search for and select the <code>AlertExpression</code> function. 
+<img alt="dashboard settings" src="../img/u15.png" /></p>
+</li>
+<li>
+<p>Then, enter a condition indicating when the Alert should be triggered. In this case, we should get an alert whenever 
+<code>POWER</code> is greater <code>power_prediction_co_max_deviation</code></p>
+<p><code>df['POWER']&gt;df['power_prediction_co_max_deviation']</code>
+Click <code>Next</code><img alt="dashboard settings" src="../img/u16.png" /></p>
+</li>
+<li>
+<p>Set Output metric:  <code>power_prediction_co_max_deviation_alert</code></p>
+</li>
+<li>
+<p>Set Output type: <code>Number</code></p>
+</li>
+<li>
+<p>Click <code>Create</code> button.  The calculation of alerts will be checked every 5 minutes by default.  You can set a different
+schedule frequency as well for verifying calculations and alerts.
+<img alt="dashboard settings" src="../img/u17.png" /></p>
+</li>
+</ol>
+<h2 id="update-dashboard-power-card">Update Dashboard Power Card</h2>
+<p><a name="UpdateDashboard"></a></p>
+<p>To see and monitor the values of calculated metric in Monitor, you must add the metric, calculated metrics and alerts to 
+an asset dashboard.  In this exercise you will add the new calculated metric <code>power_prediction_co_max_deviation</code> to your 
+asset dashboard as a line series card. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember to replace <code>co</code> with your initials in the name of your own asset type if you aren't in an instructor led lab.
+Remember to replace <code>co</code> with the initials that you used for your power prediction calculated metrics and alerts.</p>
+</div>
+<ol>
+<li>
+<p>Edit the Asset dashboard  selecting your recently created calculated metric for <code>power_prediction_co</code>.  Click on 
+<code>Monitor</code>,  search on <code>pump_co</code>,  click on <code>111137F8</code>, click on  <code>Asset Metrics Dashboard</code> tab and click on <code>Settings</code> 
+gear icon.
+<img alt="dashboard settings" src="../img/u01.png" /></p>
+</li>
+<li>
+<p>Click <code>Edit Dashboard</code> and then click <code>Continue</code> button in dialog.
+<img alt="dashboard settings" src="../img/u02.png" /></p>
+</li>
+<li>
+<p>Click on the <code>POWER</code> card.  In the  <code>card</code> window , <code>data</code> section click on <code>data item filter</code> and select <code>power_prediction_co</code>.
+<img alt="dashboard settings" src="../img/u03.png" /></p>
+</li>
+<li>
+<p>Click on the <code>Dashboard</code> menu tab.  In the  <code>card</code> window , <code>data</code> section click on <code>data item filter</code> and select <code>power_prediction_co</code>.
+<img alt="dashboard settings" src="../img/u04.png" /></p>
+</li>
+<li>
+<p>Click on the <code>POWER</code> card.  In the  <code>card</code> window , <code>data</code> section click on <code>data item filter</code> and select <code>power_prediction_co</code>.
+<img alt="dashboard settings" src="../img/u05.png" /></p>
+</li>
+<li>
+<p>Click the <code>Save and close</code> button to save your changes to the dashboard.  All pumps will now get this same dashboard 
+change.  You can also create asset specific dashboards for each asset in the <code>Setup Asset Type</code> menu.</p>
+</li>
+</ol>
+<h2 id="update-dashboard-power-card-with-alert">Update Dashboard Power Card with Alert</h2>
+<p>To see a visual red dot on line series cards where alerts happen at specific time stamps you must edit the JSON of the 
+dashboard directly.</p>
+<ol>
+<li>
+<p>Edit the Asset dashboard  selecting your recently created calculated metric for <code>power_prediction_co</code>.  Click on 
+<code>Monitor</code>,  search on <code>pump_co</code>,  click on <code>111137F8</code>, click on  <code>Asset Metrics Dashboard</code> tab and click on <code>Settings</code> 
+gear icon.
+<img alt="dashboard settings" src="../img/u01.png" /></p>
+</li>
+<li>
+<p>Click <code>Edit Dashboard</code> and then click <code>Continue</code> button in dialog.
+<img alt="dashboard settings" src="../img/u02.png" /></p>
+</li>
+<li>
+<p>Click <code>Export Dashboard</code> and save the json file locally.</p>
+</li>
+<li>
+<p>Update and save the Json with the following code using a Python Editor or Monitor's Json editor in the Dashboard Editor.
+<img alt="dashboard settings" src="img/u20.png" /></p>
+</li>
+<li>
+<p>Import the updated Json file and click the <code>Save and close</code> button to save your changes to the dashboard.  All pumps will now 
+get this same dashboard change.  You can also create asset specific dashboards for each asset in the <code>Setup Asset Type</code>
+menu.  You should now see the Asset Metrics Dashboard with alerts similar to the one below in the Asset Dashboard.
+<img alt="dashboard settings" src="img/u21.png" /></p>
+</li>
+</ol>
+<h2 id="view-dashboard">View Dashboard</h2>
+<p><a name="ViewDashboard"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember to replace <code>co</code> with your initials in the name of your own asset type if you aren't in an instructor led lab.
+Remember to replace <code>co</code> with the initials that you used for your power prediction calculated metrics and alerts.</p>
+</div>
+<ol>
+<li>
+<p>View the Asset dashboard.  Click on  <code>Monitor</code> menu on the left,  search on <code>pump_co</code>,  click on <code>111137F8</code>, click on 
+ <code>Asset Metrics Dashboard</code> and scroll down to see the Power card.
+<img alt="dashboard settings" src="../img/u05.png" /></p>
+</li>
+<li>
+<p>Expand the  <code>POWER</code> card.  Click on the double square icon.  When the window opens click on <code>POWER</code> and Click on <code>power_prediction_co</code> 
+to toggle the lines off and on.   Notice the power values in the table below.   You can also export the data to a <code>csv</code> 
+file by clicking on the funnel icon.
+<img alt="dashboard settings" src="../img/u06.png" /></p>
+</li>
+</ol>
+<h2 id="view-alerts">View Alerts</h2>
+<p><img alt="dashboard settings" src="../img/u06.png" /></p>
+<ol>
+<li>
+<p>To see alerts for a specific asset,  click on  <code>Monitor</code>,  search on <code>pump_co</code> asset type,  click on <code>111137F8</code>, 
+click on  <code>Alerts</code> tab. 
+<img alt="dashboard settings" src="../img/u19.png" /></p>
+</li>
+<li>
+<p>To see why there aren't any alerts modify the asset dashboard for <code>11111096</code>.  Add  <code>power_prediction_co_max_deviation</code> 
+to your asset dashboard.  Notice how the maximum value of the actual power never exceeds the <code>power_prediction_co_max_deviation</code>
+An alert should therefore never be triggered.  Experiment setting new column calculated for <code>power_prediction_co_max_deviation</code>
+to only be 1.05 higher to see if you can get some alerts showing.</p>
+</li>
+</ol>
+<p>Congratulations you have completed all the exercises in this lab and hopefully have a better understanding of how to 
+create AI models and make the usable in Maximo Asset Monitor to monitor your assets.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../deploy_prediction_model_function/" class="btn btn-neutral float-left" title="9. Deploy Model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../deploy_prediction_model_function/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
