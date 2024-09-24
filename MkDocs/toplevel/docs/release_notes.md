@@ -10,6 +10,7 @@
 - John Douglas 
 - Eric Lowry - <elowry@us.ibm.com>
 - Graeme Pexton - <jgpexton@us.ibm.com>
+- Lan Cao - <caolan@cn.ibm.com>
 
 ---
 
