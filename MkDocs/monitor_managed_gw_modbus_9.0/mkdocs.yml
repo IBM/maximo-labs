@@ -2,11 +2,11 @@ site_name: Monitor Managed Gateway Lab
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Jan Ekstrøm
 site_description: "Maximo Monitor Monitor Managed Gateway Hands on Lab"
-site_dir: ../../site/monitor_managed_gateway_9.0
+site_dir: ../../site/monitor_managed_gw_modbus_9.0
 
 nav:
   - Get back to Maximo Labs: ..
-  - Monitor Monitor Managed Gateway Lab:
+  - Monitor Managed GW Modbus Lab:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:

@@ -18,6 +18,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2024-10-16|Jan Ekstrøm    |Renamed to [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.0/).                  |
 |2024-08-30|Jan Ekstrøm    |Added the [Maximo Monitor Installation Lab](../monitor_installation/).                  |
 |2024-08-30|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).             |
 |2024-08-21|Jan Ekstrøm    |Added the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).               |
