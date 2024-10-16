@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/train_test_save_model_in_monitor/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>8. Train Model - Monitor Auto AI Hands on Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "8. Train Model";
+        var mkdocs_page_input_path = "train_test_save_model_in_monitor.md";
+        var mkdocs_page_url = "/maximo-labs/train_test_save_model_in_monitor/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Auto AI Hands on Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Auto AI Hands on Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Auto AI Hands on Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_device_types/">2. Create Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">3. Create Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../send_device_simulated_data/">4. Send Simulated Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_interfaces/">5. Create Interfaces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dashboards/">6. Create Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_model/">7. Identify Model</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">8. Train Model</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#train-a-model">Train a Model</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-for-mac">Example for Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-for-windows">Example for Windows</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-for-mac_1">Example for Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-for-windows_1">Example for Windows</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-for-mac_2">Example for Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-for-mac_3">Example for Mac</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#test-a-model">Test a Model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#save-model-to-monitor">Save Model to Monitor.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#retrieve-a-model-and-make-predictions">Retrieve a Model and Make Predictions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy_prediction_model_function/">9. Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../update_dashboards/">10. Update Dashboards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Auto AI Hands on Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">8. Train Model</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="train-test-and-save-prediction-model-in-monitor">Train, Test and Save Prediction Model in Monitor</h1>
+<p>Monitor provides an APi to store and retrieve models that can  be called using using a custom function to make predictions. 
+This exercise include a sample Jupyter Notebook that shows you how to retrieve data from Monitor and a csv file to train 
+a model. How to store a model and retrieve a model from Monitor make a prediction. </p>
+<p>In these exercises using the provided Jupyter Notebook you will:</p>
+<ul>
+<li><a href="#TrainModel">Train a Model</a></li>
+<li><a href="#TestModel">Test a Model</a></li>
+<li><a href="#SaveModel">Save a Model in Monitor</a></li>
+<li><a href="#RetrieveModel">Retrieve a Model from Monitor</a></li>
+</ul>
+<h2 id="train-a-model">Train a Model</h2>
+<p><a name="TrainModel"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If this lab is instructor led, he or she will provide you access to virtual image that has the Jupyter and the notebooks 
+already installed.  Skip steps 3, 4 and 8 if you are using Windows Virtual Machine.</p>
+</div>
+<ol>
+<li>
+<p>Open a terminal window on Mac or a command prompt window on Windows. 
+<img alt="Terminal" src="../img/tm03.png" /> <img alt="Terminal" src="../img/tm01.png" /></p>
+</li>
+<li>
+<p>Activate your virtual environment. </p>
+<h3 id="example-for-mac">Example for Mac</h3>
+<p><code>cd /Users/&lt;"replace with your user id"&gt;/&lt;"replace with your virtual environment name"&gt;/bin                   
+cd /Users/carlosferreira/ve/iot-python3/bin   
+source activate</code></p>
+<h3 id="example-for-windows">Example for Windows</h3>
+<p><code>cd C:\Users\ibmuser\iot-python3
+.\Scripts\activate.bat</code></p>
+</li>
+<li>
+<p>Change directory to your cloned github project directory.</p>
+<h3 id="example-for-mac_1">Example for Mac</h3>
+<p><code>cd /Users/student01/MAS_AutoAI</code></p>
+<h3 id="example-for-windows_1">Example for Windows</h3>
+<p><code>cd C:\Users\ibmuser\iot-python3\maximo_autoai</code></p>
+</li>
+<li>
+<p>Apply export variables in terminal for DYLD_LIBRARY_PATH for DB2 jars on Mac OS X only.</p>
+<h3 id="example-for-mac_2">Example for Mac</h3>
+<p><code>cd "&lt;replace with the git cloned project directory name&gt;"
+cd /Users/carlos.ferreira1ibm.com/ws/autoai        
+export DYLD_LIBRARY_PATH=&lt;"replace with your virtual env directory&gt;"/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/Users/carlosferreira/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH   # Example</code> </p>
+</li>
+<li>
+<p>Set PYTHONPATH to your project directory where you installed your virtual environment</p>
+<h3 id="example-for-mac_3">Example for Mac</h3>
+<p><code>export PYTHONPATH="&lt;replace with your root_project_directory&gt;"/maximo_autoai 
+export PYTHONPATH=/Users/carlosferreira/Documents/AutoAILabs/iot-python3/maximo_autoai</code></p>
+</li>
+<li>
+<p>Start the Jupyter Notebook service.  and launch browser with Jupyter Notebook to edit Linear Regression Models.</p>
+<p><code>jupyter notebook</code></p>
+</li>
+<li>
+<p>Jupyter will open in a browser tab.  Open and study the project notebook named <a href="http://localhost:8888/notebooks/notebooks/maximo_auto_ai-extra-trees-pump.ipynb">maximo_auto_ai-extra-trees-pump.ipynb</a> 
+using the <a href="../setup_local_environment/">instructions</a> for the virtual environment you created. Click on <code>Notebooks</code> folder.
+Click on notebook named <code>maximo_auto_ai-extra-trees-pump.ipyn</code></p>
+</li>
+<li>
+<p>Make a copy of the Project Notebook  Rename the notebook, change the name of your notebook by appending your own 
+initials to the end of the Jupyter Notebook name. In the jupyter notebook, select <code>file</code> menu and <code>Save As</code>. Enter
+<code>notebooks/maximo_auto_ai-extra-trees-pump-co.ipynb</code> and click <code>Save</code>.
+<img alt="Save As Model" src="../img/tm02.png" /></p>
+</li>
+<li>
+<p>This code in the notebook sets the Monitor credentials and entity type for your your instance of Monitor.  Copy your 
+credentials in Monitor from <code>Services</code> menu and Watson IOT Platform Analytics.  Save it in a file named <code>beta-1_credentials.json</code>
+in the directory shown in the code below.<br />
+<img alt="Copy Credentials for Analytics" src="../img/s01a.png" /> <br />
+<code>credentials = {}
+    with open('/Users/carlos.ferreira1ibm.com/ws/autoai/beta-1_credentials.json', encoding='utf-8') as F:
+        credentials = json.loads(F.read())
+    db = Database(credentials = credentials)
+    db_schema = "BLUADMIN" #  set if you are not using the default
+    entity_type = 'pump_co'</code></p>
+</li>
+<li>
+<p>This code in the notebook build a model for each pump.  The <code>Entity_Type_ID</code> uniquely identifies each asset the model 
+should be trained for. Set the <code>Entity_Type_ID</code> the model should be associated with.  There are two ways to search the 
+custom function logs in Cloud Object Storage using Cyberduck that are described in the exercise named  <a href="#cyberduck">Download, Install and Configure CyberDuck for View Logs in Monitor</a><br />
+To find your <code>Entity_Type_ID</code> in the logs in Monitor,  launch Cyberduck, and locate your pump, e.g. pump_co.  Unzip and 
+open one of the *.gz files there (e.g. 111012.gz) and search for 'entity_type_id'. It should be on the first row of the
+log files.</p>
+<p><code>entity_type = 'pump_cp'
+entity_type_id = 19305
+entity_name = '04714B6037F8'
+a_df = r_df.loc[r_df['device_id'] == entity_name, :]
+print ('a_df.shape 1')
+print (a_df.shape)
+print (a_df)</code></p>
+</li>
+<li>
+<p>This code in the notebook splits the data into train and test subsets.</p>
+<p><code>from sklearn.model_selection import train_test_split 
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random_state=42)</code></p>
+</li>
+<li>
+<p>This code in the notebook creates the model using the train data.</p>
+<p><code>extra_trees_model = ExtraTreesRegressor()
+extra_trees_model.fit(X_train, y_train.values.ravel() )</code>  </p>
+</li>
+</ol>
+<h2 id="test-a-model">Test a Model</h2>
+<p><a name="TestModel"></a></p>
+<ol>
+<li>
+<p>This code in the notebook tests the model using the test data to make a prediction.  It should return a power 
+ prediction = 11.471</p>
+<p><code>row = [[ 971.0,  989.633,  331.0,  26.44]]
+yhat = extra_trees_model.predict(row)    
+x_pos_predictions = extra_trees_model.predict(X_test)</code></p>
+</li>
+<li>
+<p>This code in the notebook plots the prediction accuracy by comparing prediction values versus true values.  <img alt="Plot Compare Predictions" src="../img/t01.png" /></p>
+<p><code>plt.scatter(y_test, x_pos_predictions)
+plt.xlabel('True Values')
+plt.ylabel('Predictions')</code>    </p>
+</li>
+<li>
+<p>This code in the notebook calculates the model accuracy. Smaller values indicate better accuracy making predictions. <img alt="RMSE" src="../img/t02.png" /></p>
+<p><code>from sklearn import metrics
+print("Mean Absolute Error")
+print(metrics.mean_absolute_error(y_test, x_pos_predictions))
+print("Mean Square Error")
+print(metrics.mean_squared_error(y_test, x_pos_predictions))
+print("Root Mean Square Error")
+print(np.sqrt(metrics.mean_squared_error(y_test, x_pos_predictions)))</code></p>
+</li>
+</ol>
+<h2 id="save-model-to-monitor">Save Model to Monitor.</h2>
+<p><a name="SaveModel"></a>
+In the notebook, change the name of your model by replacing <code>co</code> with your own initials <code>power_extra_trees_model_co.mod</code> </p>
+<ol>
+<li>
+<p>This code in the notebook saves the model to disk locally, re-loads the mode into memory and tries to make a prediction.</p>
+<p><code>import pickle
+model_file_path = '/Users/carlos.ferreira1ibm.com/ws/autoai/models/power_random_forest.mod'
+pickle.dump(extra_trees_model, open(model_file_path, 'wb'))
+model = pickle.load(open(model_file_path, 'rb'))
+row = [[1160.0, 1190.626, 438.0, 33.16]]    
+yhat = model.predict(row)</code></p>
+</li>
+<li>
+<p>This code in the notebook saves the model in Monitor.  Make sure you replace the <code>co</code> in the model name to your own 
+initials  <code>power_extra_trees_model_co.mod</code></p>
+<p><code>from iotfunctions.db import Database
+import json
+credentials = {}
+credential_file = '/Users/carlos.ferreira1ibm.com/ws/autoai/beta-1_credentials.json'    
+with open(credential_file, encoding='utf-8') as F:
+    credentials = json.loads(F.read())
+db_ctp = Database(credentials=credentials, entity_type_id=entity_type_id )
+from datetime import datetime
+model_name = 'power_extra_trees_model_co.mod'
+try:
+    feature_vector = ['speed', 'flow', 'voltage', 'CURRENT' ]
+    model_dict  = {
+    'model': model,
+    'feature_vector': feature_vector,
+    'timesstamp' : datetime.now().strftime("%Y%m%d%H%M%S")
+    }
+    db_ctp.model_store.store_model(model_name, model_dict) 
+except Exception as e:
+    print('Model store failed with ' + str(e))
+    pass</code></p>
+</li>
+</ol>
+<h2 id="retrieve-a-model-and-make-predictions">Retrieve a Model and Make Predictions</h2>
+<p><a name="RetrieveModel"></a></p>
+<ol>
+<li>
+<p>This code in the notebook retrieves the model from Monitor and tries to make a prediction.  </p>
+<p><code>try:
+    model_dict = db_ctp.model_store.retrieve_model(model_name)
+    print("load model")
+    monitor_model = model_dict["model"]
+    print(monitor_model)
+    feature_vector = model_dict["feature_vector"]
+    print(feature_vector)
+    feature_vector = model_dict["timesstamp"]
+    print(feature_vector)
+except Exception as e:
+    print("Model retrieval failed with " + str(e))
+    pass</code>    </p>
+</li>
+</ol>
+<p>Congratulations you have learned how to use the provided Jupyter notebook to train test and deploy a prediction model 
+to Monitor.  For more resource intensive models you should deploy them to a separate runtime service to make predictions.<br />
+In  the next lab exercise you will register the provided Monitor Custom function that will allow you to send the pump 
+metrics data to your deployed model to make a prediction.  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_model/" class="btn btn-neutral float-left" title="7. Identify Model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../deploy_prediction_model_function/" class="btn btn-neutral float-right" title="9. Deploy Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_model/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../deploy_prediction_model_function/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

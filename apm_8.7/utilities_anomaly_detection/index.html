@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/utilities_anomaly_detection/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Train and Register Anomaly Detection Model for Utilities Assets - Maximo APM V8.7 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Train and Register Anomaly Detection Model for Utilities Assets";
+        var mkdocs_page_input_path = "utilities_anomaly_detection.md";
+        var mkdocs_page_url = "/maximo-labs/utilities_anomaly_detection/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.7 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.7.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Train and Register Anomaly Detection Model for Utilities Assets</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#upload-and-start-the-anomaly-detection-unsupervised-notebook">Upload and Start the Anomaly Detection Unsupervised Notebook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-the-notebook">Run the Notebook</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-the-maximo-predict-sdk">Install the Maximo Predict SDK</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-up-the-model-training-pipeline">Set up the Model Training Pipeline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#train-register-and-enable-the-model">Train, Register and Enable the Model</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#confirm-model-registration">Confirm Model Registration</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.7 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Train and Register Anomaly Detection Model for Utilities Assets</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="create-utilities-anomaly-detection-model">Create Utilities Anomaly Detection Model</h1>
+<p>Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo. This notebook will create the following resources using provided csv files:</p>
+<ul>
+<li>Anomaly Score</li>
+<li>Anomaly Score History</li>
+</ul>
+<p>These instructions use the notebook named <code>3_PMI - Anomaly Detection -UnSupervised-HPU.ipynb</code> file with the Substation Transformer for Health and Predict for Utilities Demo Assets. Note that this uses simulated Pump Data for the sensor readings.</p>
+<p>In this exercise you will use Watson Studio and Health and Predict - Utilities to:</p>
+<ol>
+<li><a href="#AD_notebook">Upload the and Run the Anomaly Detection Notebook</a> using a template to Train and Display an Anomaly Detection Model</li>
+<li><a href="#confirm_upload">Confirm</a> the Data Has been uploaded for your assets</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must complete the previous exercise for <a href="../setup_watson_studio/">Setup Watson Studio</a> before you start this exercise.</p>
+</div>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ul>
+<li>Review Predict documentation for the <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850">list of available models</a>.</li>
+<li>Ensure your MAS Predict environment is running and you have access.  Try your server URL that might look something like: <a href="https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info">https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info</a></li>
+<li>Ensure you have Access to Asset data files for the Health and Predict Utilities Demo Data</li>
+<li>Complete the <a href="../asset_data_loader/">Load Data into Manage</a> lab for the Utilities data.</li>
+<li>Complete the <a href="../utilities_score_notebook/">Load Utilities Health Scores via Notebook</a> lab</li>
+<li>Complete the <a href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a> lab </li>
+<li>Have the following information from the previous lab: <code>Predict_Envs.JSON</code> and <code>Fast_Execution.JSON</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is best to perform this lab in your own Watson Studio Project created using <a href="../setup_watson_studio/">Setup Watson Studio</a> instructions. If you are using a shared project, ensure you append each file uploaded with your initials and update the file paths in the notebooks to include that change.</p>
+</div>
+<h2 id="upload-and-start-the-anomaly-detection-unsupervised-notebook">Upload and Start the Anomaly Detection Unsupervised Notebook</h2>
+<p><a name="AD_notebook"></a></p>
+<ol>
+<li>
+<p>Upload or open the Anomaly Detection template notebook to your Project.  Use the steps from the previous exercise <a href="../setup_watson_studio/">Add Notebook From File to a Watson Studio Project</a>  If you are using a shared project, rename the notebook template by prepending your initials to the template. If this is done, ensure any paths or file names within the notebook are updated as well. If you already have uploaded the notebook, open it with Watson Studio.
+Select the <code>3_PMI - Anomaly Detection -UnSupervised-HPU.ipynb</code> notebook template. </p>
+</li>
+<li>
+<p>Open the notebook.  Click on the <code>pencil</code> icon next to your notebook </p>
+</li>
+<li>
+<p>If the notebook fails to start, restart it.  Click on the <code>i</code> icon , <code>Environment</code> tab,  <code>Running status</code> drop down select box and choose <code>Restart</code>
+<img alt="Restarting Environment" src="../img/HPU_dataloader_3.png" /></p>
+</li>
+</ol>
+<h2 id="run-the-notebook">Run the Notebook</h2>
+<p><a name="run_notebooks"></a></p>
+<h3 id="install-the-maximo-predict-sdk">Install the Maximo Predict SDK</h3>
+<ol>
+<li>
+<p>Run the cell to uninstall the libraries. This is done to ensure the right version is installed later in the process.</p>
+</li>
+<li>
+<p>Run the next cell to define the requirements and some environment variables to run this notebook. This cell also checks that the precusor notebook has been run</p>
+</li>
+<li>
+<p>Run the next cell to define the API keys used to call Maximo Predict from the <code>Predict_Envs.JSON</code> file</p>
+</li>
+<li>
+<p>Run the next two cells to import the os, trim the provided base url to be used when downloading <code>pmlib</code> in the second cell</p>
+</li>
+<li>
+<p>Run the final 4 cells in this section to import the <code>pmlib</code>, <code>srom</code>, and <code>logging</code> libraries</p>
+</li>
+</ol>
+<h3 id="set-up-the-model-training-pipeline">Set up the Model Training Pipeline</h3>
+<ol>
+<li>
+<p>Run the first cell to obtain the Asset Group ID from the JSON file produced in the <a href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a> lab. Note that it prints out the Predict Group ID after being extracted.
+<img alt="Asset Group ID" src="../img/HPU_AD_1.png" /></p>
+</li>
+<li>
+<p>Run the next cell to extract the device type and the desired features to be considered in the anomaly model.
+<img alt="Asset Group ID" src="../img/HPU_AD_2.png" /></p>
+</li>
+<li>
+<p>Run the next cell to define the scoring strategy. There are three different scoring strategies shown to choose from.</p>
+</li>
+<li>
+<p>Run the following cell to import all the anomaly detection models to be run through the pipeline and other functions necessary for this process</p>
+</li>
+<li>
+<p>Run the following two cells to define the model pipeline for the determined features. This cell defines the settings to be used within the model algorithm during the training process.</p>
+</li>
+<li>
+<p>Run the next cells to define the model group containting the pipeline, and the asset group id that the model will be trained on</p>
+</li>
+</ol>
+<h3 id="train-register-and-enable-the-model">Train, Register and Enable the Model</h3>
+<ol>
+<li>
+<p>Run the first cell to train the model. Some models take time to train.</p>
+</li>
+<li>
+<p>Once that process is complete, register the model to your asset group by running the next cell</p>
+</li>
+<li>
+<p>Finally, Run the next cell to enable it and determine how often it will be run in monitor. This is the last cell to be run in this notebook.</p>
+</li>
+</ol>
+<h2 id="confirm-model-registration">Confirm Model Registration</h2>
+<p><a name="confirm_upload"></a></p>
+<ol>
+<li>
+<p>Navigate to Maximo Health and Predict for Utilities within your environment</p>
+</li>
+<li>
+<p>Use the left-hand menu to go into <code>Predict Grouping</code>
+   <img alt="Predict Grouping" src="../img/hpu_fs11.png" /> </p>
+</li>
+<li>
+<p>Select your asset group
+<img alt="Predict Grouping" src="../img/hpu_2fsl_8.png" /></p>
+</li>
+<li>
+<p>Click into your asset group and ensure you have the Anomaly Detection Model listed under <code>Trained instances registered for this group</code> and select an asset to go to the Health Dashboard
+<img alt="Predict Grouping" src="../img/HPU_AD_3.png" /></p>
+</li>
+<li>
+<p>Scroll down and expand the <code>Predict</code> section to ensure the anomaly detection history and the anomaly detection score is visible.</p>
+</li>
+</ol>
+<p><img alt="Predict Grouping" src="../img/HPU_AD_4.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Recall in the <a href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a> lab only some assets have sensor data. If an asset does not have sensor data, it will not have Predict data</p>
+</div>
+<p>Congratulations you have created an Anomaly Detection model and associated it to your assets!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../utilities_devicedata/" class="btn btn-neutral float-left" title="Create Utilities Predict Group and Upload Sensor Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../utilities_EOL/" class="btn btn-neutral float-right" title="Train and Register End of Life Curve for Utilities Assets">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../utilities_devicedata/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../utilities_EOL/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
