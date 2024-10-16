@@ -26,12 +26,12 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Managed Gateway](monitor_managed_gateway_9.0/) | [Setup Simulator Environment](monitor_managed_gateway_9.0/setup_simulator)         |
-|                                                                | [Create a Managed Gateway](monitor_managed_gateway_9.0/create_gateway)             |
-|                                                                | [Add an industrial device](monitor_managed_gateway_9.0/add_device_1)               |
-|                                                                | [Deploy and verify connectivity](monitor_managed_gateway_9.0/deploy)               |
-|                                                                | [Add another industrial device](monitor_managed_gateway_9.0/add_device_2)          |
-|                                                                | [Deploy and view data in Monitor](monitor_managed_gateway_9.0/re-deploy)           |
+| [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.0/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.0/setup_simulator)         |
+|                                                                | [Create a Managed Gateway](monitor_managed_gw_modbus_9.0/create_gateway)             |
+|                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.0/add_device_1)               |
+|                                                                | [Deploy and verify connectivity](monitor_managed_gw_modbus_9.0/deploy)               |
+|                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.0/add_device_2)          |
+|                                                                | [Deploy and view data in Monitor](monitor_managed_gw_modbus_9.0/re-deploy)           |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -234,6 +234,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2024-08-30
+### UPDATED: 2024-10-16
 
 ---

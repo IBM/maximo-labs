@@ -1,4 +1,4 @@
-# Welcome to the </br>Maximo Monitor Managed Gateway Hands-on Lab
+# Welcome to the </br>Maximo Monitor Managed Gateway Modbus Lab
 
 !!! note "New in MAS 9.0"
     From MAS 9.0 the setup of the Edge Data Collector capability have changed dramatically in order to streamline and simplify the configuration process.</br>
@@ -32,6 +32,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2024-08-20**
+**Updated: 2024-10-16**
 
 ---
