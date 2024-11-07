@@ -1,21 +1,19 @@
 site_name: Monitor Managed Gateway Lab
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Jan Ekstrøm
-site_description: "Maximo Monitor Managed Gateway Modbus Lab"
-site_dir: ../../site/monitor_managed_gw_modbus_9.0
+site_description: "Maximo Monitor Managed Gateway OPC UA Lab"
+site_dir: ../../site/monitor_managed_gw_opcua_9.0
 
 nav:
   - Get back to Maximo Labs: ..
-  - Monitor Managed GW Modbus Lab:
+  - Monitor Managed GW OPC UA Lab:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:
         - 1. Setup Simulator Environment: setup_simulator.md
-        - 2. Create a Managed Gateway: create_gateway.md
-        - 3. Add an industrial device: add_device_1.md
+        - 2. Add device to library: add_device.md
+        - 3. Create a Managed Gateway: create_gateway.md
         - 4. Deploy and verify connectivity: deploy.md
-        - 5. Add another industrial device: add_device_2.md
-        - 6. Deploy and view data in Monitor: re-deploy.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright

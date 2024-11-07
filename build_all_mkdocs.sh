@@ -171,7 +171,7 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Github Pages level:
+# Build the Monitor Live Demo Asset level:
 lab=monitor_live_demo_asset
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -179,7 +179,7 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Github Pages level:
+# Build the Monitor Modbus Simulator level:
 lab=monitor_modbus_simulator
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -195,8 +195,16 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Monitor Managed Gatewway 9.0 level:
+# Build the Monitor Managed Gatewway Modbus 9.0 level:
 lab=monitor_managed_gw_modbus_9.0
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Managed Gatewway OPC-UA 9.0 level:
+lab=monitor_managed_gw_opcua_9.0
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
