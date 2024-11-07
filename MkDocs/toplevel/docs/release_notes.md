@@ -18,7 +18,8 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
-|2024-10-16|Jan Ekstrøm    |Renamed to [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.0/).                  |
+|2024-11-07|Jan Ekstrøm    |Added the [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.0/).|
+|2024-10-16|Jan Ekstrøm    |Renamed to [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.0/). |
 |2024-08-30|Jan Ekstrøm    |Added the [Maximo Monitor Installation Lab](../monitor_installation/).                  |
 |2024-08-30|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).             |
 |2024-08-21|Jan Ekstrøm    |Added the [MAS TechZone Base Certified Image lab](../mas_techzone_base/).               |
@@ -26,7 +27,7 @@
 |2024-06-21|Jan Ekstrøm    |Added the [Maximo Monitor Managed Gateway lab](../monitor_managed_gateway_9.0/).        |
 |2024-06-06|Jan Ekstrøm    |Updated the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to support Apple Silicon (ARM) as well as x86 chip architecture.|
 |2024-05-29|Carlos Ferreira|Added the MAS 9.0 APM lab (Under Development).                                          |
-|2024-04-23|Jan Ekstrøm    |Updated the [Edge Data Collector lab](../edc_8.11) to use a new modbus simulator.       |
+|2024-04-23|Jan Ekstrøm    |Updated the [Edge Data Collector lab](../edc_8.11/) to use a new modbus simulator.      |
 |2024-04-20|Jan Ekstrøm    |Added the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/).          |
 |2024-02-27|Jan Ekstrøm    |Added the [Maximo Monitor Live Demo Asset lab](../monitor_live_demo_asset/).            |
 |2024-01-15|Jan Ekstrøm    |Restructured to work on Github Pages.                                                   |

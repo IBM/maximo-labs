@@ -15,6 +15,13 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.0/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.0/setup_simulator) |
+|                                                                | [Add a device to library](monitor_managed_gw_opcua_9.0/add_device)                  |
+|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.0/create_gateway)             |
+|                                                                | [Deploy and verify connectivity](monitor_managed_gw_opcua_9.0/deploy)               |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Installation](monitor_installation/)           | [Installation of Maximo Monitor](monitor_installation/install_monitor)|
 
 
@@ -35,7 +42,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [IBM Maximo Health and Predict Lab for MAS](apm_9.0):          |                                                                                                                                                  |
+| [IBM Maximo Health and Predict Lab for MAS](apm_9.0/):          |                                                                                                                                                  |
 | [Health Setup](apm_9.0/build_demo)                             | [Setup Health Asset Permissions](apm_9.0/build_demo/#setup-health-asset-permissions)                                                             |
 |                                                                | [Setup Default Health Asset Condition Scores](apm_9.0/build_demo/#default_score)                                                                 |
 |                                                                | [Create an Asset](apm_9.0/build_demo/#create_asset)                                                                                              |
@@ -57,7 +64,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                | [Work Queues View](apm_9.0/demo_script/#work-queues-view)                                                                                        |
 |                                                                | [Investigate Asset Details](apm_9.0/demo_script/#assets-detail-view)                                                                             |
 |                                                                | [Action Asset Create Work Order](apm_9.0/demo_script/#take-action)                                                                               |
-|                                                                | [Action Multiple Assets in Matrix](/apm_9.0/demo_script/#identify-investigate-with-a-matrix)                                                     |
+|                                                                | [Action Multiple Assets in Matrix](apm_9.0/demo_script/#identify-investigate-with-a-matrix)                                                     |
 |                                                                | [Compare Asset Investment Optimization Plans](apm_9.0/demo_script/#take-action-with-aio)                                                         |
 
 
@@ -234,6 +241,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2024-10-16
+### UPDATED: 2024-11-07
 
 ---
