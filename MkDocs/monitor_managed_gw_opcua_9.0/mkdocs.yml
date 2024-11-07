@@ -6,7 +6,7 @@ site_dir: ../../site/monitor_managed_gw_opcua_9.0
 
 nav:
   - Get back to Maximo Labs: ..
-  - Monitor Managed GW OPC-UA Lab:
+  - Monitor Managed GW OPC UA Lab:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:
