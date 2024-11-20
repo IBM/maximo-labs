@@ -1,7 +1,11 @@
 # Objectives
-In this Exercise you will learn how to upgrade MAS to the latest version.
+In this Exercise you will learn how to update MAS to either 9.0.1 or 9.0.2.
 
 It is not possible to use the MAS CLI docker to either update nor upgrade the MAS installation that is provided through TechZone. After a lot of tinkering I managed to find a more complex method that works - at least from MAS 9.0.0 to 9.0.2, as this exercise is build upon</br>
+
+!!! attention
+    If you want to update to MAS 9.0.3 or later you should go to [exercise 3.](update_mas.md)</br>
+
 
 !!! tip
     You can see the release notes here: [Maximo Application Suite Releases information](https://www.ibm.com/support/pages/node/6570601){target=_blank}</br>

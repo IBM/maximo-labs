@@ -12,7 +12,8 @@ nav:
   - Exercises:
         - 1. Instantiate a Base Image: instantiate.md
         - 2. Prepare For Use: prepare_for_use.md
-        - 3. Upgrade MAS [Optional]: upgrade_mas.md
+        - 3. Update MAS [9.0.3 +]: update_mas.md
+        - 4. Update MAS [9.0.1 & 9.0.2]: upgrade_mas.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright
