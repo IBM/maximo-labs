@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_watson_studio/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Setup Watson Studio for Predict - Maximo APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup Watson Studio for Predict";
+        var mkdocs_page_input_path = "setup_watson_studio.md";
+        var mkdocs_page_url = "/maximo-labs/setup_watson_studio/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../build_demo/">Setup Health and Predict Demonstration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo_script/">Health and Predict Overview Task Guide</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Setup Watson Studio for Predict</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#get-url-and-user-credentials-to-access-watson-studio">Get URL and User credentials to access Watson Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-project-in-watson-studio">Create a Project in Watson Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#auto-upload-predict-notebooks">Auto Upload Predict Notebooks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-watson-studio-library">Using Watson Studio Library</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-ibm-watson-machine-learning-url">Setup IBM Watson Machine Learning URL</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_scores/">Setup Custom Scores</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_pump_score_notebook/">Create Custom Scores Using a Notebook</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_st_futurescore_demo_notebook/">Create Custom Score Forecast via Notebook</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_st_futurescore_using_wml_model/">Create Custom Score Forecast via WML Model</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Setup Watson Studio for Predict</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="setup-watson-studio-for-predict">Setup Watson Studio for Predict</h1>
+<p>In this exercise you will setup and configure Watson Studio to use the Health and Predict notebook templates. The templates can be used for detecting anomalies and predicting asset failures of assets and for other purposes using Health and Predict - Utilities.</p>
+<p>Starting with v8.9, you can use the new auto upload feature to more efficiently upload Predict notebooks into your Watson Studio project. This is an enhancement from the previous method, which required users to manually retrieve multiple credentials and upload notebooks into Watson Studio one-by-one.</p>
+<p>After the auto upload is complete, you can start using the Predict library PMlib and the Watson Studio notebooks right away.</p>
+<ul>
+<li><a href="#get-credentials">Get URL and User credentials</a> to access Watson Studio.</li>
+<li><a href="#create-project">Create a project</a> in Watson Studio.</li>
+<li><a href="#auto-upload">Auto upload Predict notebooks</a> to automatically retrieve credentials and upload Predict notebooks into Watson Studio.</li>
+<li><a href="#watson-studio-library">Use Watson Studio Python library</a> <code>ibm_watson_studio_lib</code> to do to work with data assets in your project.</li>
+</ul>
+<h2 id="get-url-and-user-credentials-to-access-watson-studio">Get URL and User credentials to access Watson Studio</h2>
+<p><a name="get-credentials"></a></p>
+<p>Ask your Maximo Application Suite administrator to get your user name and password for Watson Studio,
+API keys and URL that you will use to connect to Watson Studio.  You or he can use these steps to get them.</p>
+<ol>
+<li>
+<p>To get the Watson Studio URL, login to Maximo Application Suite.  Click on <code>Adminstration</code>
+<img alt="setup assets" src="../img/apm_8.7/p01.png" /> </p>
+</li>
+<li>
+<p>Click on <code>Configurations</code> and <code>Watson Studio</code>
+<img alt="setup assets" src="../img/apm_8.7/p02.png" /> </p>
+</li>
+<li>
+<p>Click on <code>System</code>  After you create the Watson Studio User be sure to make note of the URL, user name and password.  You will use it to login to Cloud Pak for Data later with it. 
+<img alt="setup assets" src="../img/apm_8.7/p03.png" /></p>
+</li>
+<li>
+<p>Open a browser to the URL and use the credentials from the previous steps to login to Cloud Pak for Data.  After logging in you see your Watson Studio Overview page.
+<img alt="setup assets" src="../img/apm_8.7/p04.png" /> </p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure Datascience User Belongs to Predict Security Group.   In Maximo Manage, add the user to the PREDICT and PREDICTGROUPING group in the user definition as shown in the screen below.</p>
+</div>
+<p><img alt="Security Groups" src="../img/apm_8.7/p15.png" /> </p>
+<h2 id="create-a-project-in-watson-studio">Create a Project in Watson Studio</h2>
+<p><a name="create-project"></a></p>
+<p>Watson Studio projects are where you:</p>
+<ul>
+<li>Keep your model templates</li>
+<li>Data Assets</li>
+<li>Train deploy and many the Models</li>
+<li>Create and manage environment for training and deploying your models.</li>
+</ul>
+<p>Create a project so that you can add and setup Health, Predict and Utilities notebooks using the auto upload feature.</p>
+<ol>
+<li>
+<p>Click on 'All Projects' where you will then create a new project.
+<img alt="setup assets" src="../img/apm_8.7/p05.png" /> </p>
+</li>
+<li>
+<p>Click 'New Project'. 
+<img alt="New Project" src="../img/apm_8.7/p06.png" /> </p>
+</li>
+<li>
+<p>Accept default and click 'Next'. 
+<img alt="Default Value" src="../img/apm_8.7/p07.png" /> </p>
+</li>
+<li>
+<p>Click 'New Empty Project'. 
+<img alt="New Empty Project" src="../img/apm_8.7/p08.png" /></p>
+</li>
+<li>
+<p>Enter a project name and description.
+<img alt="setup assets" src="../img/apm_8.7/p09.png" /> </p>
+</li>
+<li>
+<p>After creating the project, you can now continue to upload your Predict notebooks into Watson Studio.
+<img alt="Empty project" src="../img/apm_8.9/p86.png" /> </p>
+</li>
+</ol>
+<h2 id="auto-upload-predict-notebooks">Auto Upload Predict Notebooks</h2>
+<p><a name="auto-upload"></a></p>
+<p>The new auto upload feature saves considerable amount of time and allows the user to start using Predict right away. It should take less than 15 minutes to complete the entire upload. All the work is automatically done by Predict workspace’s Ansible operator in the background.</p>
+<p>To start the auto upload, you need to get the Project ID from the Watson Studio project you just created and add it to Predict’s workspace configuration.</p>
+<ol>
+<li>
+<p>Go to the <code>Manage</code> tab. Find and copy the Project ID. Alternatively, you can also retrieve it from the URL.
+<img alt="Copy project ID" src="../img/apm_8.9/p70.png" /> </p>
+</li>
+<li>
+<p>Login to MAS to enter the Project ID.</p>
+</li>
+<li>
+<p>Click on the <code>Administration</code> icon on the top right corner.
+<img alt="Enter project ID" src="../img/apm_8.9/p71.png" /> </p>
+</li>
+<li>
+<p>On the sidebar menu, select <code>Workspace</code>
+<img alt="Go to Workspace" src="../img/apm_8.9/p72.png" /></p>
+</li>
+<li>
+<p>Make sure that you are on the <code>Overview</code> tab. Scroll down to find the <code>Predict</code> widget.
+<img alt="Workspace page" src="../img/apm_8.9/p73.png" /></p>
+</li>
+<li>
+<p>Click on <code>Predict</code> to access the Predict workspace details.
+<img alt="Predict widget" src="../img/apm_8.9/p74.png" /></p>
+</li>
+<li>
+<p>Click on he <code>Action</code> menu. Click on <code>Update configurations</code>.
+<img alt="Action menu button" src="../img/apm_8.9/p75.png" />
+<img alt="Update configurations" src="../img/apm_8.9/p76.png" /></p>
+</li>
+<li>
+<p>Click the <code>Edit</code> button next to <code>IBM Watson Studio Settings</code> to update Predict configurations.
+<img alt="Edit configuration" src="../img/apm_8.9/p78.png" /></p>
+</li>
+<li>
+<p>Scroll down to <code>Advanced settings</code> and find <code>IBM Watson Studio Project Settings</code>. The <code>System managed</code>setting is turned on by default. Toggle it off so that you can enter the project ID.
+<img alt="Toggle setting OFF" src="../img/apm_8.9/p79.png" /></p>
+</li>
+<li>
+<p>You should be able to see the project ID field after turning the toggle off. Paste the project ID that you retrieved from your Watson Studio project. For instances outside of of IBM hardware, you may need to specify the IBM Watson Machine Learning URL, for more details see <a href="#setup-ibm-watson-machine-learning-url">Setup IBM Watson Machine Learning URL</a>
+<img alt="Paste project ID" src="../img/apm_8.9/p80.png" /></p>
+</li>
+<li>
+<p>A popup will show up asking for confirmation to activate Predict. Click <code>Activate</code> to apply change and start activation.
+<img alt="Activate Predict" src="../img/apm_8.9/p81.png" /></p>
+</li>
+<li>
+<p>It should take roughly 15 minutes to upload all the data files and notebooks into Watson Studio. You can see the status in a widget in the details section.
+<img alt="Preload status" src="../img/apm_8.9/p82.png" /></p>
+</li>
+<li>
+<p>Once the upload is complete, go back to Cloud Pak for Data and go to your Watson Studio project. Click on the <code>Assets</code> tab, and you should see that all the data files are successfully uploaded, including the Predict Python PMlib zip file and the Db2 certificate file, in the data section.
+<img alt="PMlib and Db2 certification files" src="../img/apm_8.9/p83.png" /></p>
+</li>
+<li>
+<p>The process also auto-constructs an environment file. This is done by automatically retrieving 3 credentials needed to construct the file: <code>APM _ID</code>, <code>APM_API_BASEURL</code>, and <code>EXTERNAL_APM_API_BASEURL</code>. The only piece that was not automatically constructed is the <code>APM_API_KEY</code>. Please refer to one of the previous lab versions if you would like to manually find environment variables used in Predict.
+<img alt="Environment file" src="../img/apm_8.9/p84.png" />
+<img alt="Environment file preview" src="../img/apm_8.9/p85.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are logging into Cloud Pak for Data with a user other than the standard admin user, you must grant the admin user access to your project. Failure to do so will prevent Manage from exporting the data into your project with an error 'Specified project ID does not exist'.</p>
+</div>
+<p><img alt="Add admin user" src="../img/apm_8.9/set-up-watson-studio-exception-01.png" /> </p>
+<h2 id="using-watson-studio-library">Using Watson Studio Library</h2>
+<p><a name="watson-studio-library"></a></p>
+<p>The Watson Studio Python Library named <code>ibm_watson_studio_lib</code> allows you to do to work with data assets in your project.  Some examples you will learn later are reading and writing data from your project.    Another example is getting the Watson Studio Project Information. </p>
+<p>You will use a Watson Studio Python library named <code>ibm_watson_studio_lib</code> that is available in your environment by default to get your project information.  See this <a href="https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=lib-watson-studio-python">API reference</a> for more information. </p>
+<p><strong>Sample Code</strong></p>
+<pre><code>#  Get the Watson Studio Project Information
+from ibm_watson_studio_lib import access_project_or_space
+wslib = access_project_or_space()
+project_name = wslib.here.get_name()
+wslib.show(project_name)
+project_id = wslib.here.get_ID()
+wslib.show(project_id)
+</code></pre>
+<p>Congratulations you have seen how to create a project auto upload Predict notebooks in Watson Studio, including the PMlib documentation you will use in the next exercises. Finally you learned how to use the <code>ibm_watson_studio_lib</code> to work with assets in your project.</p>
+<p>In the next exercises you will learn how to use these notebook templates to detect anomalies and predict asset failures.   You will start by update and running setup notebooks to create asset types in Health and Predict.  </p>
+<h2 id="setup-ibm-watson-machine-learning-url">Setup IBM Watson Machine Learning URL</h2>
+<p>This step should only be executed after all preceeding steps have been completed and the auto upload feature returns an error. The objective is to correctly point MAS applications to Cloud Pak for Data under varying deployment configurations. </p>
+<ol>
+<li>
+<p>Obtain your Cloud Pak for Data URL either by following the steps in <a href="#get-url-and-user-credentials-to-access-watson-studio">this section</a> or by copy the base url of your Cloud Pak for Data instance. Copy or save this URL for the next step.</p>
+</li>
+<li>
+<p>Login to MAS to enter the IBM Watson Machine Learning URL.</p>
+</li>
+<li>
+<p>Click on the <code>Administration</code> icon on the top right corner.
+<img alt="Enter project ID" src="../img/apm_8.9/p71.png" /> </p>
+</li>
+<li>
+<p>On the sidebar menu, select <code>Workspace</code>
+<img alt="Go to Workspace" src="../img/apm_8.9/p72.png" /></p>
+</li>
+<li>
+<p>Make sure that you are on the <code>Overview</code> tab. Scroll down to find the <code>Predict</code> widget.
+<img alt="Workspace page" src="../img/apm_8.9/p73.png" /></p>
+</li>
+<li>
+<p>Click on <code>Predict</code> to access the Predict workspace details.
+<img alt="Predict widget" src="../img/apm_8.9/p74.png" /></p>
+</li>
+<li>
+<p>Click on he <code>Action</code> menu. Click on <code>Update configurations</code>.
+<img alt="Action menu button" src="../img/apm_8.9/p75.png" />
+<img alt="Update configurations" src="../img/apm_8.9/p76.png" /></p>
+</li>
+<li>
+<p>Click the <code>Edit</code> button next to <code>IBM Watson Studio Settings</code> to update Predict configurations.
+<img alt="Edit configuration" src="../img/apm_8.9/p78.png" /></p>
+</li>
+<li>
+<p>Scroll down to <code>Advanced settings</code> and find <code>IBM Watson Machine Learning</code>. The <code>System managed</code> setting is turned on by default. Toggle it off so that you can enter the URL.
+<img alt="Toggle setting OFF URL" src="../img/apm_8.9/set-up-wml-url-01.png" /></p>
+</li>
+<li>
+<p>You should be able to see three fields; WML URL, WML Version and WML Instance ID. Select the first field labeled WML URL and paste the the Cloud Pak for Data URL.
+<img alt="Paste project ID" src="../img/apm_8.9/set-up-wml-url-02.png" /></p>
+</li>
+<li>
+<p>A popup will show up asking for confirmation to activate Predict. Click <code>Activate</code> to apply change and start activation.
+<img alt="Activate Predict" src="../img/apm_8.9/p81.png" /></p>
+</li>
+<li>
+<p>It should take roughly 15 minutes to upload all the data files and notebooks into Watson Studio. You can see the status in a widget in the details section.
+<img alt="Preload status" src="../img/apm_8.9/p82.png" /></p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_script/" class="btn btn-neutral float-left" title="Health and Predict Overview Task Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../asset_scores/" class="btn btn-neutral float-right" title="Setup Custom Scores">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_script/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../asset_scores/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

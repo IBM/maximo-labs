@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/asset_investment/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Asset Investment Optimization - Maximo APM V8.7 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Asset Investment Optimization";
+        var mkdocs_page_input_path = "asset_investment.md";
+        var mkdocs_page_url = "/maximo-labs/asset_investment/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.7 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.7.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Asset Investment Optimization</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#navigate-to-health-and-predict-utilities">Navigate to Health and Predict - Utilities</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#identify-assets-for-a-project">Identify Assets for a Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-project">Create a Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-assets-to-an-existing-project">Add Assets to an Existing Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-replacement-plan-template">Create a Replacement Plan Template</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#evaluate-investment-options">Evaluate Investment Options</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#edit-an-aio-project">Edit an AIO Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#maintain-risk-aio-project">Maintain Risk AIO Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reduce-risk-aio-project">Reduce Risk AIO Project:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stay-in-budget-aio-project">Stay in Budget AIO Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparing-investment-strategies">Comparing Investment Strategies</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.7 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Asset Investment Optimization</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="asset-investment-optimization">Asset Investment Optimization</h1>
+<p>Maximo Health includes Asset Investment Optimization templates that you can use to see which strategies work best to meet your business goals. </p>
+<p>In this exercise you will use Health to:</p>
+<ol>
+<li><a href="#identify_assets">Identify Assets</a> in need of inspection, repair or replacement.</li>
+<li><a href="#asset_investment_project">Create an Asset Investment Project</a></li>
+<li><a href="#add_assets_to_project">Add Assets to a Project</a></li>
+<li><a href="#create_template">Create an Investment Template</a> by asset type</li>
+<li><a href="#evaluate_options">Evaluate Investment Options</a> to see which works best to maintain risk,  reduce maintenance costs etc.</li>
+<li><a href="#maintain_risk">Set maintain risk strategy</a> to create a business as usual baseline</li>
+<li><a href="#reduce_risk">Set reduce risk strategy</a> to adjust the risk of the project based on risk tolerance</li>
+<li><a href="#stay_in_budget">Set stay in budget strategy</a> to adjust the budget for the project</li>
+<li><a href="#compare_strategy">Compare strategies</a></li>
+</ol>
+<p><strong>Prerequisites</strong></p>
+<p>This lab requires the following</p>
+<ul>
+<li>A working Maximo Application Suite (MAS) environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed.</li>
+<li>Sufficient asset data to run the analysis and get insights</li>
+</ul>
+<p>Please note that the MAS Worldwide (WW) demo environment is NOT a suitable environment for this lab.  The WW demo environment is shared, and making ANY changes to that environment will impact other users’ ability to demonstrate MAS.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This lab is intended to demonstrate the Asset Investment Optimizer (AIO) capability in HPU.  The AIO allows a Reliability Engineer (RE) to build a project of assets, assign a length of the project, and run multiple strategies to determine which assets should to be replaced over the life of the project, and when.  The RE can compare strategies, export details, and ultimately execute the one that meets their needs. The strategies are…</p>
+<ul>
+<li>Maintain risk</li>
+<li>Reduce risk (the RE can select the risk value)</li>
+<li>Work within a budget (the RE can select the budget)</li>
+</ul>
+<p>For any use case in Asset Performance Management (APM), the Reliability Engineer (RE) will typically follow three basic steps.</p>
+<ul>
+<li>Identify assets at risk</li>
+<li>Investigate assets at risk</li>
+<li>Take an action</li>
+</ul>
+<p>The AIO capability is an action that can be taken by the RE to ultimately reduce risk.  It can be demonstrated as a stand-alone feature, as presented here, or as a <code>take an action</code> step in a longer narrative.  As a result, the asset references and visualizations will vary based on the data set and story, but the steps are the same.</p>
+<h2 id="navigate-to-health-and-predict-utilities">Navigate to Health and Predict - Utilities</h2>
+<p><code>Action:</code></p>
+<ol>
+<li>
+<p>Navigate to Health and Predict - Utilities (HPU). From the main MAS page, select the <code>Industry solutions</code> tab.
+<img alt="setup assets" src="../img/AIO%201.png" /></p>
+</li>
+<li>
+<p>Then click <code>Health and Predict – Utilities</code> menu.
+<img alt="setup assets" src="../img/AIO%202.png" />   </p>
+</li>
+</ol>
+<h2 id="identify-assets-for-a-project">Identify Assets for a Project</h2>
+<p><a name="identify_assets"></a></p>
+<p>The first step in using the Asset Investment Optimization (AIO) feature is to select assets to start a new project or to be part of an existing project.</p>
+<p>In most list/grid views in HPU, there is a selection box on each asset line that can be checked.  Multiple assets on a page can be checked.  Once selected, those assets can be used to create a new project, or added to an existing project.</p>
+<p><strong>Value:</strong>  The RE can build a project, or add assets to a project from any dashboard, at any time, when they identify an asset at risk.</p>
+<p><code>Action:</code></p>
+<ol>
+<li>
+<p>From the main grid view, click the filter icon, then select <code>Type</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%203.png" />
+<img alt="setup assets" src="../img/AIO%204.png" /></p>
+</li>
+<li>
+<p>From the pop-up, find <code>Substation Transformers</code>, select it, and press <code>OK</code>.  It may be necessary to use the search capability or scroll.</p>
+<p><img alt="setup assets" src="../img/AIO%205.png" /></p>
+</li>
+<li>
+<p>Finally, press <code>Apply</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%206.png" />   </p>
+</li>
+</ol>
+<h2 id="create-a-project">Create a Project</h2>
+<p><a name="asset_investment_project"></a></p>
+<p>The filter will reduce the initial list of all assets under management, to a list of assets identified as substation transformers.</p>
+<p>In this case, there are 13 substation transformers.</p>
+<p><strong>Value:</strong>  The filter capability makes it easy to find and list assets from specific sites, types, failure classes and containers.</p>
+<p><code>Action:</code></p>
+<ol>
+<li>
+<p>Select the above assets that appear on the resulting list and press <code>Create investment project</code>.  In this case, the <em>first 3</em> appear on the list (in bold).</p>
+<ul>
+<li><strong>ST_1393137</strong></li>
+<li><strong>ST_1400501</strong></li>
+<li><strong>ST_1400502</strong></li>
+<li>ST_1400517</li>
+<li>ST_1400518</li>
+</ul>
+<p><img alt="setup assets" src="../img/AIO%207.png" /></p>
+</li>
+<li>
+<p>On the <code>Create A Project</code> page, complete the required fields as follows, then press <code>Create</code>.</p>
+<ul>
+<li><strong>Name:</strong> AIO Lab (in a shared environment, this must be unique for each user)</li>
+<li><strong>Duration in years:</strong>  10 </li>
+<li><strong>Target start quarter:</strong>  3Q </li>
+<li><strong>Target start year:</strong>  2022</li>
+</ul>
+<p><img alt="setup assets" src="../img/AIO%208.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If there is NOT a <code>Replacement plan template</code> already created for Substation Transformers, there will be a prompt to create one.  To complete the template, follow the steps later in this lab.</p>
+</div>
+<h2 id="add-assets-to-an-existing-project">Add Assets to an Existing Project</h2>
+<p><a name="add_assets_to_project"></a></p>
+<p>Once the project is successfully created, a summary screen of the project will be presented.  Take the following steps to add the remaining substation transformers to the project.</p>
+<p><strong>Value:</strong>  The RE can add additional assets to a project at any time.</p>
+<ol>
+<li>
+<p>Follow the prompt on the left navigation panel to return to the <code>Assets</code> view, and to the list of substation transformers.  If this does not direct to the list of substation transformers, follow the previous steps to produce that list.</p>
+<p><img alt="setup assets" src="../img/AIO%209.png" /></p>
+</li>
+<li>
+<p>From the resulting list, click through to page 2 of the substation transformer list.</p>
+<p><img alt="setup assets" src="../img/AIO%2010.png" /></p>
+</li>
+<li>
+<p>Select the remaining substation transformers (in bold):</p>
+<ul>
+<li>ST_1393137</li>
+<li>ST_1400501</li>
+<li>ST_1400502</li>
+<li><strong>ST_1400517</strong></li>
+<li><strong>ST_1400518</strong></li>
+</ul>
+</li>
+<li>
+<p>Click <code>Add to investment project</code>.  In this case, it is the final 2 substation transformers on the following list.</p>
+<p><img alt="setup assets" src="../img/AIO%2011.png" /></p>
+</li>
+<li>
+<p>From the <code>Add to the investment project</code> popup, select the lab to which these assets will be added, in this case <code>AIO Lab</code>, and press <code>Add</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2012.png" /></p>
+</li>
+<li>
+<p>A popup will show that the assets are being added to the project, and the <code>Edit project</code> page will appear.  Click <code>Save</code> at the bottom of the page.</p>
+<p><img alt="setup assets" src="../img/AIO%2013.png" /></p>
+</li>
+<li>
+<p>An additional popup will appear as a reminder that adding additional assets to an existing project will invalidate previous results.  Click <code>Save</code> to confirm and proceed.</p>
+<p><img alt="setup assets" src="../img/AIO%2014.png" />  </p>
+</li>
+</ol>
+<h2 id="create-a-replacement-plan-template">Create a Replacement Plan Template</h2>
+<p><a name="create_template"></a></p>
+<p>A replacement plan is required for each asset is the project.  The assets must either have unique replacement plans, or all of the asset types in the project (in this case, substation transformer) must have replacement plan templates.</p>
+<p><strong>Value:</strong>  If an asset exhibits characteristics different from the other assets in its type, or a plan has already been developed for the asset, the asset can still be included in a project using its unique replacement plan.</p>
+<ol>
+<li>
+<p>Navigate to the <code>Asset investment optimizer</code> using the left navigation bar.</p>
+<p><img alt="setup assets" src="../img/AIO%2015.png" /></p>
+</li>
+<li>
+<p>From the <code>Asset investment optimizer</code> page, select <code>Plan templates</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2016.png" /></p>
+</li>
+<li>
+<p>On the <code>Plan templates</code> page, select an existing template OR click the <code>+</code> symbol to create a new one.  In this case, select <code>substation transformers</code> since there is already a replacement plan template created.  The only additional step required when creating a new template is to identify the asset type.</p>
+<p><img alt="setup assets" src="../img/AIO%2017.png" /></p>
+</li>
+<li>
+<p>On the <code>Edit a replacement plan template</code>, complete the required fields as follows.</p>
+<ul>
+<li><strong>Expected downtime in hours:</strong>  4</li>
+<li><strong>Estimated capital cost:</strong>  $15,000</li>
+<li><strong>Estimated operation cost:</strong>  $20,000</li>
+<li><strong>Estimated failure cost:</strong>  $23,000</li>
+<li><strong>Expected life in years:</strong>  50</li>
+</ul>
+</li>
+<li>
+<p>Then click <code>Save</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2018.png" /></p>
+</li>
+<li>
+<p>If prompted to <code>Confirm edit</code>, press <code>Continue</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2019.png" /></p>
+</li>
+</ol>
+<h2 id="evaluate-investment-options">Evaluate Investment Options</h2>
+<p><a name="evaluate_options"></a></p>
+<h3 id="edit-an-aio-project">Edit an AIO Project</h3>
+<p>A project can be adjusted at any time.  However, making changes will invalidate any investment strategies that have already been executed against the project.  After the changes are made, the strategies must be run again.</p>
+<p><strong>Value:</strong>  Once a project is created, changes like adjusting assets, the length of the project, and when it starts, can be made at any time.  The RE does not need to create a new project. </p>
+<ol>
+<li>
+<p>From the <code>Asset investment optimizer</code> page, select the <code>Project</code> tab.</p>
+<p><img alt="setup assets" src="../img/AIO%2020.png" /></p>
+</li>
+<li>
+<p>Select the project <code>AIO Lab</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2021.png" /></p>
+</li>
+<li>
+<p>From the <code>AIO Lab</code> project page, select the pencil icon to review the details of the project.</p>
+<p><img alt="setup assets" src="../img/AIO%2022.png" /></p>
+</li>
+<li>
+<p>Review the details of the project, and make any required adjustments.</p>
+<p><img alt="setup assets" src="../img/AIO%2023.png" /></p>
+</li>
+<li>
+<p>In this case, no changes are required.  Press <code>Cancel</code>.  If changes are made, an additional popup will appear as a reminder that changes to an existing project will invalidate previous results.  Click <code>Save</code> to confirm and proceed.</p>
+<p><img alt="setup assets" src="../img/AIO%2024.png" />  </p>
+</li>
+</ol>
+<h3 id="maintain-risk-aio-project">Maintain Risk AIO Project</h3>
+<p><a name="maintain_risk"></a></p>
+<p>The first strategy, maintain risk, determines which assets need to be replaced, and when, in order to maintain the average risk of the project over the life of the project.  The average risk is the average of the individual assets in the project.</p>
+<p><strong>Value:</strong>  The maintain risk strategy sets a business as usual baseline, to which other strategies can be compared. </p>
+<p><code>Action:</code></p>
+<ol>
+<li>
+<p>On the main <code>AIO Lab</code> project page, the maintain risk strategy will already be available and selected in the left column.  The average risk score will be calculated.  In this case, it is 42.  Select the <code>Run analysis</code> button to execute the strategy.</p>
+<p><img alt="setup assets" src="../img/AIO%2025.png" /></p>
+</li>
+<li>
+<p>The analysis may take some time to run, during which there will be indicators.</p>
+<p><img alt="setup assets" src="../img/AIO%2026.png" /></p>
+</li>
+<li>
+<p>The results will automatically appear in the <code>report</code> view.  In this case, 4 of the 5 assets must be replaced for a total cost of $140,000, with an average risk score of 17.2, and the highest risk score of 31.7 for the duration.</p>
+<p><img alt="setup assets" src="../img/AIO%2027.png" /></p>
+</li>
+<li>
+<p>Select the <code>table</code> view to see which assets need to be replaced, and when.</p>
+<p><img alt="setup assets" src="../img/AIO%2028.png" />  </p>
+</li>
+</ol>
+<h3 id="reduce-risk-aio-project">Reduce Risk AIO Project:</h3>
+<p><a name="reduce_risk"></a></p>
+<p>The reduce risk strategy allows the RE to select the average risk score for the project.  The strategy will determine which assets need to be replaced, and when, in order to maintain the desired risk of the project over the life of the project.</p>
+<p><strong>Value:</strong>  The reduce risk strategy allows the RE to adjust the risk of the project based on their risk tolerance.  </p>
+<ol>
+<li>
+<p>From the main <code>AIO Lab</code> project page, in this case from the <code>table</code> view, click on the <code>+</code> symbol to add a new strategy.</p>
+<p><img alt="setup assets" src="../img/AIO%2029.png" /></p>
+</li>
+<li>
+<p>From the pop up box, use the pull down menu to select <code>Reduce risk</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2030.png" /></p>
+</li>
+<li>
+<p>From the next pop up box, enter a risk value of <code>10</code>, the click <code>Create</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2031.png" /></p>
+</li>
+<li>
+<p>On the main <code>AIO Lab</code> project page, the reduce risk strategy will be available and selected in the left column, above the last strategy executed, in this case, the maintain risk strategy.  Select the <code>Run analysis</code> button to execute the strategy.</p>
+<p><img alt="setup assets" src="../img/AIO%2032.png" /></p>
+</li>
+<li>
+<p>Once again, the analysis may take some time to run, during which there will be indicators.</p>
+<p><img alt="setup assets" src="../img/AIO%2033.png" /></p>
+</li>
+<li>
+<p>The results will automatically appear in the <code>report</code> view.  In this case, all 5 assets must be replaced for a total cost of $175,000, with an average risk score of 8.0, and the highest risk score of 19.1 for the duration.</p>
+<p><img alt="setup assets" src="../img/AIO%2034.png" /></p>
+</li>
+<li>
+<p>Select the <code>table</code> view to see which assets need to be replaced, and when.</p>
+<p><img alt="setup assets" src="../img/AIO%2035.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple reduce risk strategies can be created using different target risk scores.   </p>
+</div>
+<h3 id="stay-in-budget-aio-project">Stay in Budget AIO Project</h3>
+<p><a name="stay_in_budget"></a></p>
+<p>The stay in budget strategy allows the RE to set a budget for the project.  The strategy will determine which assets need to be replaced, and when, in order to stick to a budget for the project.</p>
+<p><strong>Value:</strong>  The stay in budget strategy allows the RE to adjust the budget for the project based on the available budget.</p>
+<p><code>Action:</code></p>
+<ol>
+<li>
+<p>From the main <code>AIO Lab</code> project page, in this case from the <code>table</code> view, click on the <code>+</code> symbol to add a new strategy.</p>
+<p><img alt="setup assets" src="../img/AIO%2036.png" /></p>
+</li>
+<li>
+<p>From the pop up box, use the pull down menu to select <code>Stay in budget</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2037.png" /></p>
+</li>
+<li>
+<p>From the next pop up box, enter the following values below and the click <code>Create</code>.</p>
+<ul>
+<li><strong>Capex:</strong>  60,000</li>
+<li><strong>Opex:</strong>  80,000</li>
+<li><strong>Total budget:</strong>  140,000</li>
+</ul>
+<p><img alt="setup assets" src="../img/AIO%2038.png" /></p>
+</li>
+<li>
+<p>On the main <code>AIO Lab</code> project page, the stay in budget strategy will be available and selected in the left column, above the last strategy executed, in this case, the reduce risk strategy.  Select the <code>Run analysis</code> button to execute the strategy.</p>
+<p><img alt="setup assets" src="../img/AIO%2039.png" /></p>
+</li>
+<li>
+<p>Once again, the analysis may take some time to run, during which there will be indicators.</p>
+<p><img alt="setup assets" src="../img/AIO%2040.png" /></p>
+</li>
+<li>
+<p>The results will automatically appear in the <code>report</code> view.  In this case, 4 of the 5 assets must be replaced for a total cost of $140,000, with an average risk score of 17.2, and the highest risk score of 31.7 for the duration.</p>
+<p><img alt="setup assets" src="../img/AIO%2041.png" /></p>
+</li>
+<li>
+<p>Select the <code>list</code> view to see which assets need to be replace, and when.</p>
+<p><img alt="setup assets" src="../img/AIO%2042.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple stay in budget strategies can be created using different budgets.</p>
+</div>
+<h3 id="comparing-investment-strategies">Comparing Investment Strategies</h3>
+<p><a name="comparing_strategies"></a></p>
+<p>Within each AIO project, the RE can compare up to three strategies.  Since the RE can create multiple reduce risk and stay in budget strategies, the RE can compare any combination of strategies.  In this case, the comparison will be the maintain risk, reduce risk, and stay in budget strategies.</p>
+<p><strong>Value:</strong>  The comparison capability gives the RE an easy view to identify which strategy meets their needs, and export the details.</p>
+<ol>
+<li>
+<p>From the main <code>AIO Lab</code> project page, in this case from the <code>table</code> view, click on the <code>Compare strategies</code> button.</p>
+<p><img alt="setup assets" src="../img/AIO%2043.png" /></p>
+</li>
+<li>
+<p>From the popup, select all three strategies, press <code>Create</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2044.png" /></p>
+</li>
+<li>
+<p>The resulting comparison provides key information for the RE to decide which strategy to pursue.  To export details from one of the strategies, click export at the bottom of one of the strategies.  In this case, select Maintain risk.</p>
+<p><img alt="setup assets" src="../img/AIO%2045.png" /></p>
+</li>
+<li>
+<p>From the Export Data popup, select analysis report, and click <code>Export</code>.</p>
+<p><img alt="setup assets" src="../img/AIO%2046.png" /></p>
+</li>
+<li>
+<p>Open the results in an application, or save it.  The analysis report will show a summary of the selected strategy.</p>
+<p><img alt="setup assets" src="../img/AIO%2047.png" /></p>
+</li>
+<li>
+<p>Selecting Details for recommended replacements will produce details of the strategy.</p>
+<p><img alt="setup assets" src="../img/AIO%2048.png" />  </p>
+</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>The data presented in this lab is intended to demonstrate the AIO capabilities, and the results may not accurately reflect real-world scenarios.</p>
+<p>Note that strategies are highly sensitive and dependent on multiple factors like End of Life and information in the Replacement plan template.</p>
+<p>It may be necessary to experiment to get satisfactory results.  </p>
+<p><strong>Clean up</strong>
+<a name="clean_up"></a></p>
+<ol>
+<li>
+<p>From the breadcrumbs (or from the left navigation bar), select the Asset Investment Optimizer.</p>
+<p><img alt="setup assets" src="../img/AIO%2049.png" /></p>
+</li>
+<li>
+<p>On the Project tabs, hover the cursor to the far right of the project name, and select <code>Delete</code> when it appears.</p>
+<p><img alt="setup assets" src="../img/AIO%2050.png" /></p>
+</li>
+<li>
+<p>When prompted, confirm the deletion of the project.</p>
+<p><img alt="setup assets" src="../img/AIO%2051.png" /></p>
+</li>
+</ol>
+<p>Congratulations.  You now have identified at risk assets and have added them to an asset investment optimization project to improve their condition.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../health_score/" class="btn btn-neutral float-left" title="Asset Health Scoring"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../appconnect_install/" class="btn btn-neutral float-right" title="Install and Configure App Connect">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../health_score/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../appconnect_install/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
