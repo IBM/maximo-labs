@@ -18,6 +18,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2024-11-20|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/) with an easier MAS update exercise for 9.0.3 and later.             |
 |2024-11-07|Jan Ekstrøm    |Added the [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.0/).|
 |2024-10-16|Jan Ekstrøm    |Renamed to [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.0/). |
 |2024-08-30|Jan Ekstrøm    |Added the [Maximo Monitor Installation Lab](../monitor_installation/).                  |

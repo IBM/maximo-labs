@@ -57,9 +57,8 @@ The new user will be syncronized. Click on the `Users` breadcrump link in the up
 
 !!! tip "Tips"
     * Log out of the Suite Administration page and login with the new MAS Admin credentials to verify it is ready to be used.
-    * You can now install the various Maximo Application Suite applications by following the [MAS Devops Ansible Collection](https://ibm-mas.github.io/ansible-devops/){target=_blank}.</br>
-      OR
-    * Continue with the optional Upgrade MAS exercise [which is recommended].
+
+    * You can now continue to the [Update MAS exercise](update_mas.md) [which is recommended] - OR - you can install the various Maximo Application Suite applications by following the [MAS Devops Ansible Collection](https://ibm-mas.github.io/ansible-devops/){target=_blank} and then update afterwards.</br>
 
 
 ---
