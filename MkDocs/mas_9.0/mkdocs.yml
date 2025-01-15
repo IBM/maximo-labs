@@ -1,0 +1,28 @@
+site_name: MAS Overview 9.0 Labs
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Carlos Ferreira & Contributors
+site_description: "Maximo Application Suite Overview 8.6 Overview Hands on Lab"
+site_dir: ../../site/mas_9.0
+
+nav:
+  - Get back to Maximo Labs: ..
+  - MAS Overview 9.0 Labs:
+    - Welcome to the Maximo Application Suite 9.0 Overview Lab: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Reliability Strategies: demo-rsl.md
+    - 2. Monitor: demo-monitor.md
+    - 3. Visual Inspection: demo-mvi.md
+    - 4. Manage: demo-manage.md
+    - 5. Mobile: demo-mobile-assist.md
+    - 6. Health - Predict: demo-health-predict.md
+    - 7. Closing: closing.md 
+    - Lab Clean up: clean.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition
