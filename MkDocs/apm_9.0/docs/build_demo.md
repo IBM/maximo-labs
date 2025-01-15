@@ -33,7 +33,7 @@ Launch `Health` on the `Applications` tab.  If `Health` tile is not present on a
 
 1. After you login using the credentials provided by your instructor,  navigate to the 
 2. From the main MAS page, select the `Applications` tab
-![navigate_to_health](../../../maximo-labs/apm_8.11/img/hpu_8.11/health1.png)
+![navigate_to_health](../../apm_8.11/img/hpu_8.11/health1.png)
 3. Click the `Launch` link on the `Manage`, `Health` or `Predict` tile.  To setup permissions in the next exercise you will go to Manage.
 4. This displays the assets grid page with a table of assets and their health scores for the user's currently assigned site.
 ![assets_page](../../../maximo-labs/apm_8.11/img/hpu_8.11/assets_grid_page.png)
