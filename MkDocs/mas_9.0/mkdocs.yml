@@ -1,13 +1,13 @@
-site_name: MAS Overview 9.0 Labs
+site_name: MAS 9.0 Overview Lab
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Carlos Ferreira & Contributors
-site_description: "Maximo Application Suite Overview 8.6 Overview Hands on Lab"
+site_description: "Maximo Application Suite 9.0 Overview Hands on Lab"
 site_dir: ../../site/mas_9.0
 
 nav:
   - Get back to Maximo Labs: ..
-  - MAS Overview 9.0 Labs:
-    - Welcome to the Maximo Application Suite 9.0 Overview Lab: index.md
+  - MAS 9.0 Overview Labs:
+    - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:
     - 1. Reliability Strategies: demo-rsl.md
@@ -22,7 +22,13 @@ nav:
     - Release Notes: release_notes.md
     - Copyright: ../copyright
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+extra_css:
+  - extra.css
 markdown_extensions:
   - attr_list
   - admonition
