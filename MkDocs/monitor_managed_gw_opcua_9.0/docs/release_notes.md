@@ -13,9 +13,9 @@
 
 # Change Information
 
-|Date     |By             | Description                                           |
-|:--------|:--------------|:------------------------------------------------------|
-|2024-11-07|Jan Ekstrøm|Lab is ready for the first release. |
+|Date      |By             | Description                                           |
+|:---------|:--------------|:------------------------------------------------------|
+|2024-11-07|Jan Ekstrøm    |Lab is ready for the first release. |
 
 
 ---

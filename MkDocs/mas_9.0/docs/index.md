@@ -1,4 +1,4 @@
-# Welcome to the MAS Overview Lab
+# Welcome to the</br>Maximo Application Suite 9.0 Overview Lab
 
 You will learn a high level overview of the Maximo Application Suite applications version 9 which includes Monitor, Digital Twin Exchange, Visual Inspection, Manage, Mobile, Assist, Parts Identifier, Predict and Health.  
 
@@ -86,6 +86,6 @@ Reliability Engineer
 
 ---
 
-**Updated: 2024-01-13**
+**Updated: 2025-01-16**
 
 ---
