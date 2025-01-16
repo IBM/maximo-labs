@@ -18,18 +18,18 @@ As a reliability engineer for a water treatment plant, I want to implement RCM t
 In this exercise you will understand what asset classes and maintenance strategies are available in Maximo Reliability Strategies.
  
 1.	Log into MAS and select the `Manage with Health` application.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM01.png)<br/>
+![setup assets](img/RCM01.png)<br/>
 
 2. Navigate to `Assets` from left nav bar.<br/>
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM02.png)
+![setup assets](img/RCM02.png)
 
 3. Select `Reliability Strategies` to redirect to the `Reliability Strategies` application.<br/>
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM03.png)
+![setup assets](img/RCM03.png)
 
 The `Reliability Strategy` library accelerates application of RCM0with a list of 58,000+ failure modes and corresponding mitigation activities already defined for individual assets.  I can use these to create preventive maintenance tasks and job plans.<br/>
  
 4. Click on the `Asset` box and a list of assets will be available for selection.<br/>
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM04.png)
+![setup assets](img/RCM04.png)
 
 ## Filter on Pump Asset Strategies
 
@@ -40,7 +40,7 @@ In this exercise you will understand what pump asset class maintenance strategie
 1. Select Asset:  `Pump`
 2. Select Asset type:  `Centrifugal`
 3. Select Asset configuration:  `Pump - Horizontal - Multistage - Axially Split Case - Mechanical Seal - Radial Bearings-Oil Lubed` (the 2nd one on the list).<br/>
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM05.png)
+![setup assets](img/RCM05.png)
 
 ## Select a Strategy
 
@@ -52,7 +52,7 @@ In this case, the `Get strategy` action provides a list of failure modes and cor
 2. Expand `Lube Oil` to see corresponding failure mechanisms.
 3. Expand `Degraded` failure mechanism to see corresponding failure influences.
 4. Select `Normal Wear` failure influence. Select this as the `Pump Asset Strategy`
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM06.png)
+![setup assets](img/RCM06.png)
 
 ## Select a Operational Context
 
@@ -62,7 +62,7 @@ What level of preventive maintenance is required depends on the utilization of t
 2. Navigate to `Mitigation activities` tab. This will list all the `mitigation activities` for my asset.
 3. Scroll to bottom of `mitigation activities` list and select `Oil Analysis`
 4. Navigate to right side of the page where `preventive maintenance` and `job plan` details are available along with `frequency and labor hours for Oil Analysis` mitigation activity.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM07.png)
+![setup assets](img/RCM07.png)
 
 These activities are the reliability strategies that I can apply to mitigate respective failure modes.
 
@@ -73,7 +73,7 @@ I can also fine tune these mitigation activities as per our operating context ba
 2. Close the dialog box and click `Preview activities in all contexts` option.
 3. Close the dialog box and toggle the `Duty Cycle` radio button from High to Low.
 4. In the right side of the page scroll down to `Effectiveness` section.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM08.png)
+![setup assets](img/RCM08.png)
 
 Changes in frequency for `Oil Analysis` activity is suggested based on the change in `duty cycle`.
 
@@ -90,22 +90,22 @@ I can copy the job plan and preventative maintenance details and navigate direct
 
 1. Copy the `Maintenance Plan` by clicking on the `copy icon` to the right of `Job plan details`.
 2. Click `Open Job Plans` link within the pop up.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM09.png)
+![setup assets](img/RCM09.png)
 3. Apply filter for `job plan “57899”` to list job plan created for pump devices.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM10.png)
+![setup assets](img/RCM10.png)
 4. Click on the `long description` icon to see the text pasted from `Reliability Strategies`
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM11.png)
+![setup assets](img/RCM11.png)
 
 
 The job plan details will be copied and pop up will be displayed with link to navigate to `Job Plans` in Manage. I can paste the copied job plan details to create new job plan. I have created Job plan `57899` for centrifugal pumps detailed tasks using `Reliability Strategies`.
 
 5. Paste the `Maintenance Plan` by clicking on the `copy` icon to the right of `Preventative maintenance (PM) details` from `Mitigation activities` tab.
 6. Click `Open Preventative Maintenance` link within the pop up.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM12.png)
+![setup assets](img/RCM12.png)
 7. Apply filter for asset `PMPDEVICE` to list all the PMs created for pump devices.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM13.png)
+![setup assets](img/RCM13.png)
 8. Open `PM “1030”` and click on the `long description` icon to see the text pasted from `Reliability Strategies`.
-![setup assets](../../mas_9.0/img/wwpump_8.11/RCM14.png)
+![setup assets](img/RCM14.png)
 9. Paste the copied `Preventive Maintenance details` to create PM tasks for my assets.
 10. Preventive Maintenance details will be copied and pop up will be displayed with link to navigate to `Preventive Maintenance` menu in Manage
 
