@@ -11,7 +11,7 @@
 
 |Date     |By               | Description                                           |
 |:--------|:----------------|:------------------------------------------------------|
-|2025-01-16|Jan Ekstrøm     | Minor changes to the lab format |
+|2025-01-16|Jan Ekstrøm     | Minor changes to the lab format + updated image links |
 |2025-01-15|Carlos Ferreira | First draft for publication to Public Maximo Labs Site|
 |2025-01-14|John Douglas    | Content updates. |
 |2025-01-14|Kimberly Woodbury    | Content updates. |
