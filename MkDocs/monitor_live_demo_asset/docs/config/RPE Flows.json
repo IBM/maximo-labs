@@ -1,43 +1,43 @@
 [
     {
-        "id": "3ee4e36.fe8841c",
+        "id": "2951b7effc79365b",
         "type": "tab",
         "label": "Control",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "73893bfe.a87b84",
+        "id": "e1e54dabc69f1d73",
         "type": "tab",
         "label": "Collect And Send Data",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "8d9ccddd.ba723",
+        "id": "5c01f085dcb66947",
         "type": "tab",
         "label": "SenseHAT",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "798bf7c0.ef5a68",
+        "id": "1ba9ecdc13615029",
         "type": "tab",
         "label": "Apply Load",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "61648ed7.6b2b5",
+        "id": "ef169a4f553187bd",
         "type": "tab",
         "label": "Dashboard",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "700f2c225889c9bf",
+        "id": "64b7570ffbc5ad6b",
         "type": "group",
-        "z": "3ee4e36.fe8841c",
+        "z": "2951b7effc79365b",
         "name": "Initialization",
         "style": {
             "fill": "#d1d1d1",
@@ -45,22 +45,25 @@
             "color": "#000000"
         },
         "nodes": [
-            "1e601a8e.1b20b5",
-            "34dd0976.d75b66",
-            "489be4cc.5f893c",
-            "30b3a7ec.4c2e58",
-            "12c2ea86.d98775",
-            "14daccb9.8c9ec3"
+            "ebca5eb9b4b6fa63",
+            "d1b602c451d91b3f",
+            "eae492531c4dafd2",
+            "7258574e4fbb7c4c",
+            "952b253616bdc3e5",
+            "914e131f2ae283b4",
+            "6ec34e5a89d341a0",
+            "60b46a815ca64fb1",
+            "d2a70326e2e72bfc"
         ],
         "x": 14,
-        "y": 131.5,
-        "w": 822,
-        "h": 129.5
+        "y": 99,
+        "w": 892,
+        "h": 222
     },
     {
-        "id": "9f9293f175cc6344",
+        "id": "f3354ec8a74e26a6",
         "type": "group",
-        "z": "3ee4e36.fe8841c",
+        "z": "2951b7effc79365b",
         "name": "!!!   ---   HANDLE WITH CARE   ---    !!!",
         "style": {
             "fill": "#d1d1d1",
@@ -68,13 +71,13 @@
             "color": "#000000"
         },
         "nodes": [
-            "eaf5f85a.e4b808",
-            "920f7f6f.858ee",
-            "a3abd7b6.ff2dd8",
-            "ccb2e1fa.5ff0d",
-            "3f72a9c2.75e276",
-            "49f3a23.ff3565c",
-            "aff0c453dfee6238"
+            "d78c72a785c777de",
+            "ad7c8a0206fd53b6",
+            "a290e9fc3a80951c",
+            "a84b625162a8e05e",
+            "7877acdac06f1582",
+            "95986bb76a75b1f9",
+            "6069954fba0a3dd0"
         ],
         "x": 14,
         "y": 351.5,
@@ -82,9 +85,9 @@
         "h": 257
     },
     {
-        "id": "109b099115b3c4d0",
+        "id": "c166c63be31a616c",
         "type": "group",
-        "z": "61648ed7.6b2b5",
+        "z": "ef169a4f553187bd",
         "name": "RPE Control",
         "style": {
             "fill": "#ff7f7f",
@@ -92,14 +95,14 @@
             "color": "#ffffff"
         },
         "nodes": [
-            "a4888d62.e88aa",
-            "f98d4a79.9bfb28",
-            "38e5f7a7.01ac38",
-            "33a05fcb.9f36a",
-            "d274dc16.c88d8",
-            "64d0e864.286e08",
-            "8463c0ca.2f3ab",
-            "5be4c423.91ba4c"
+            "23bc52f1dd5562b1",
+            "3dcc72bca8c0e6b5",
+            "63e6d0190cddc82b",
+            "f9440cc23e7b8e76",
+            "8be3e3b467709c3d",
+            "9c4b61a820ea5130",
+            "e1d014fd540e7aea",
+            "678455e1a238c3e1"
         ],
         "x": 854,
         "y": 219,
@@ -107,30 +110,30 @@
         "h": 242
     },
     {
-        "id": "2b6eb1450d283f25",
+        "id": "0d59f8b1a80503cd",
         "type": "group",
-        "z": "61648ed7.6b2b5",
+        "z": "ef169a4f553187bd",
         "name": "RPE Engine",
         "style": {
             "fill": "#bfdbef",
             "label": true
         },
         "nodes": [
-            "6b0e66f9.ec6958",
-            "528ff4ba.02c95c",
-            "11148252.1904fe",
-            "f378ef61.d3f79",
-            "c4a3bdd.400584",
-            "fb87fa09.6f1a58",
-            "bfcb89f6.7bb3c8",
-            "a67e412b.a5c0f",
-            "c45627bc.0370f8",
-            "71f4c228.47365c",
-            "17194546.60dadb",
-            "c310f74c.3775b8",
-            "4e4f7135.3f02a",
-            "b5183470.dad128",
-            "58f89348.065e6c"
+            "5003ce4774f9c71a",
+            "0551d431530cb913",
+            "dc857b3b9835fbd8",
+            "2efce66f5a826f3e",
+            "17b408d50477a981",
+            "eb19b0754b1ad77f",
+            "942f20dbf2bf5429",
+            "acb2a740222b6c5f",
+            "a0f9de536d2ce7f9",
+            "3d96998cdedbe218",
+            "bf1ce3e32b511bb0",
+            "5755cd310f917157",
+            "43fa76ab2533fa89",
+            "9c67d25466125c20",
+            "01fdf65d504bfec7"
         ],
         "x": 154,
         "y": 79,
@@ -138,24 +141,24 @@
         "h": 522
     },
     {
-        "id": "d6c8a590b268b5ca",
+        "id": "7aa084990def344f",
         "type": "group",
-        "z": "61648ed7.6b2b5",
+        "z": "ef169a4f553187bd",
         "name": "RPE Environment",
         "style": {
             "fill": "#bfdbef",
             "label": true
         },
         "nodes": [
-            "cab4d3a0.021a3",
-            "b3d37c92.84876",
-            "5bbad246.5ec8cc",
-            "2c232fc7.229d1",
-            "eb088ca0.88a27",
-            "993656bc.a1f688",
-            "57b66ea9.e1bf9",
-            "e61fec25.4d398",
-            "b2c02807.212498"
+            "050e7e9ed97e1e09",
+            "d61a46fedc282371",
+            "14b145c80498682c",
+            "3d7c21866d3e4ad3",
+            "158f44ae8bd4e8be",
+            "e728703570843eda",
+            "fbedfbf5537f99f0",
+            "71c8a6c328216080",
+            "6ccb96b5f7fa71d1"
         ],
         "x": 154,
         "y": 619,
@@ -163,18 +166,18 @@
         "h": 282
     },
     {
-        "id": "08b8b87636998369",
+        "id": "4f048d898ba582cf",
         "type": "group",
-        "z": "61648ed7.6b2b5",
+        "z": "ef169a4f553187bd",
         "name": "Add <hostname> (<version>) to the header",
         "style": {
             "fill": "#ffefbf",
             "label": true
         },
         "nodes": [
-            "31adf671.4e490a",
-            "208c4960.254676",
-            "9aaf1603.7370d8"
+            "264051881213693d",
+            "27fbf1d911a76a2d",
+            "4a9c1d224c39f3d8"
         ],
         "x": 854,
         "y": 79,
@@ -182,14 +185,14 @@
         "h": 122
     },
     {
-        "id": "1e0e35513a7c25d8",
+        "id": "b313d0034f84e52b",
         "type": "junction",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "x": 540,
         "y": 900,
         "wires": [
             [
-                "a8ddf4c7.b5c138"
+                "d1e44506c0e728a8"
             ]
         ]
     },
@@ -290,7 +293,7 @@
         }
     },
     {
-        "id": "a686ed88.71b16",
+        "id": "d1dc2ced772ef384",
         "type": "ui_tab",
         "name": "RP Engine",
         "icon": "dashboard",
@@ -299,37 +302,27 @@
         "hidden": false
     },
     {
-        "id": "256c4300.e3f7fc",
+        "id": "79c576528b6aa971",
         "type": "ui_group",
         "name": "Gauges",
-        "tab": "a686ed88.71b16",
+        "tab": "d1dc2ced772ef384",
         "order": 1,
         "disp": false,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "a7453a16.b230e8",
+        "id": "dccd0cde175bd172",
         "type": "ui_group",
         "name": "Charts",
-        "tab": "a686ed88.71b16",
+        "tab": "d1dc2ced772ef384",
         "order": 2,
         "disp": false,
         "width": "20",
         "collapse": false
     },
     {
-        "id": "93a92e04.c9567",
-        "type": "ui_group",
-        "name": "Actions",
-        "tab": "e1d00baa.5657b8",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "e1d00baa.5657b8",
+        "id": "94a6f42267a3723d",
         "type": "ui_tab",
         "name": "RPE Control",
         "icon": "dashboard",
@@ -338,7 +331,7 @@
         "hidden": false
     },
     {
-        "id": "6e8e4495.75857c",
+        "id": "02e305b7494a3c01",
         "type": "ui_tab",
         "name": "RP Environment",
         "icon": "dashboard",
@@ -347,46 +340,56 @@
         "hidden": false
     },
     {
-        "id": "cbb5541c.e417c8",
+        "id": "d7ef781262ba03c2",
         "type": "ui_group",
         "name": "Gauges",
-        "tab": "6e8e4495.75857c",
+        "tab": "02e305b7494a3c01",
         "order": 1,
         "disp": false,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "af41c59d.611af8",
+        "id": "f501320b4b627325",
         "type": "ui_group",
         "name": "Charts",
-        "tab": "6e8e4495.75857c",
+        "tab": "02e305b7494a3c01",
         "order": 2,
         "disp": false,
         "width": "20",
         "collapse": false
     },
     {
-        "id": "16b26fd6.25c22",
+        "id": "b7898575f20f0298",
         "type": "ui_group",
         "name": "Information",
-        "tab": "e1d00baa.5657b8",
+        "tab": "94a6f42267a3723d",
         "order": 1,
         "disp": true,
         "width": "10",
         "collapse": false
     },
     {
-        "id": "2a61624e.2eeeee",
+        "id": "e5202e8463d4cbf2",
+        "type": "ui_group",
+        "name": "Actions",
+        "tab": "94a6f42267a3723d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "11f24378fbc4f3c2",
         "type": "tls-config",
-        "name": "MONITORDEMO2",
+        "name": "WW Geo",
         "cert": "",
         "key": "",
         "ca": "",
         "certname": "",
         "keyname": "",
         "caname": "",
-        "servername": "masdev.messaging.iot.monitordemo2.ibmmam.com",
+        "servername": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
         "verifyservercert": false,
         "alpnprotocol": ""
     },
@@ -394,39 +397,10 @@
         "id": "74eae28f.f6e6f4",
         "type": "mqtt-broker",
         "name": "RPE042-CPU-01",
-        "broker": "masdev.messaging.iot.monitordemo2.ibmmam.com",
+        "broker": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
         "port": "443",
-        "tls": "2a61624e.2eeeee",
-        "clientid": "d:masdev:CPU:RPE042-CPU-01",
-        "autoConnect": true,
-        "usetls": true,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "5a440ff8.4f85e",
-        "type": "mqtt-broker",
-        "name": "RPE042-ENV-17",
-        "broker": "masdev.messaging.iot.monitordemo2.ibmmam.com",
-        "port": "443",
-        "tls": "2a61624e.2eeeee",
-        "clientid": "d:masdev:ENV:RPE042-ENV-17",
+        "tls": "11f24378fbc4f3c2",
+        "clientid": "d:wwgeo:CPU:RPE042-CPU-01",
         "autoConnect": true,
         "usetls": true,
         "protocolVersion": "4",
@@ -452,10 +426,10 @@
         "id": "5f2e2a3b08e6ab88",
         "type": "mqtt-broker",
         "name": "RPE042-OSC-03",
-        "broker": "masdev.messaging.iot.monitordemo2.ibmmam.com",
+        "broker": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
         "port": "443",
-        "tls": "2a61624e.2eeeee",
-        "clientid": "d:masdev:OSC:RPE042-OSC-03",
+        "tls": "11f24378fbc4f3c2",
+        "clientid": "d:wwgeo:OSC:RPE042-OSC-03",
         "autoConnect": true,
         "usetls": true,
         "protocolVersion": "4",
@@ -478,10 +452,39 @@
         "sessionExpiry": ""
     },
     {
-        "id": "eaf5f85a.e4b808",
+        "id": "5a440ff8.4f85e",
+        "type": "mqtt-broker",
+        "name": "RPE042-ENV-17",
+        "broker": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
+        "port": "443",
+        "tls": "11f24378fbc4f3c2",
+        "clientid": "d:wwgeo:ENV:RPE042-ENV-17",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d78c72a785c777de",
         "type": "exec",
-        "z": "3ee4e36.fe8841c",
-        "g": "9f9293f175cc6344",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
         "command": "sudo reboot",
         "addpay": false,
         "append": "",
@@ -497,10 +500,10 @@
         ]
     },
     {
-        "id": "920f7f6f.858ee",
+        "id": "ad7c8a0206fd53b6",
         "type": "exec",
-        "z": "3ee4e36.fe8841c",
-        "g": "9f9293f175cc6344",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
         "command": "sudo shutdown -h now",
         "addpay": false,
         "append": "",
@@ -516,10 +519,10 @@
         ]
     },
     {
-        "id": "a3abd7b6.ff2dd8",
+        "id": "a290e9fc3a80951c",
         "type": "inject",
-        "z": "3ee4e36.fe8841c",
-        "g": "9f9293f175cc6344",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
         "name": "Reboot",
         "repeat": "",
         "crontab": "",
@@ -532,15 +535,15 @@
         "y": 400,
         "wires": [
             [
-                "eaf5f85a.e4b808"
+                "d78c72a785c777de"
             ]
         ]
     },
     {
-        "id": "ccb2e1fa.5ff0d",
+        "id": "a84b625162a8e05e",
         "type": "inject",
-        "z": "3ee4e36.fe8841c",
-        "g": "9f9293f175cc6344",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
         "name": "Shutdown",
         "props": [
             {
@@ -558,14 +561,14 @@
         "y": 520,
         "wires": [
             [
-                "aff0c453dfee6238"
+                "6069954fba0a3dd0"
             ]
         ]
     },
     {
-        "id": "62b7098f.210998",
+        "id": "826c4e92140d7d8e",
         "type": "comment",
-        "z": "3ee4e36.fe8841c",
+        "z": "2951b7effc79365b",
         "name": "Local device management and global initialization",
         "info": "",
         "x": 210,
@@ -573,77 +576,77 @@
         "wires": []
     },
     {
-        "id": "3f72a9c2.75e276",
+        "id": "7877acdac06f1582",
         "type": "link in",
-        "z": "3ee4e36.fe8841c",
-        "g": "9f9293f175cc6344",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
         "name": "Reboot In",
         "links": [
-            "38e5f7a7.01ac38"
+            "63e6d0190cddc82b"
         ],
         "x": 165,
         "y": 440,
         "wires": [
             [
-                "eaf5f85a.e4b808"
+                "d78c72a785c777de"
             ]
         ]
     },
     {
-        "id": "49f3a23.ff3565c",
+        "id": "95986bb76a75b1f9",
         "type": "link in",
-        "z": "3ee4e36.fe8841c",
-        "g": "9f9293f175cc6344",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
         "name": "Shutdown In",
         "links": [
-            "33a05fcb.9f36a",
-            "96e85256.49588"
+            "f9440cc23e7b8e76",
+            "c73e2ce0f92e6469"
         ],
         "x": 165,
         "y": 560,
         "wires": [
             [
-                "920f7f6f.858ee"
+                "ad7c8a0206fd53b6"
             ]
         ]
     },
     {
-        "id": "2c4ccbbd.b34924",
+        "id": "5a885f07ceb16388",
         "type": "comment",
-        "z": "3ee4e36.fe8841c",
-        "name": "Created by Jan Ekstrøm - 2023-12-04 - v1.05 (Open to view Version History)",
-        "info": "By jan.ekstrom@dk.ibm.com\n\nv1.05 2023-12-04:\n- Renamed the standard MQTT out nodes to a more generic RPE042-<device>-<number>\n- Filtered the IP address to only contain the IPv4 address (both IPv4 and IPv6 was way too long)\n\nv1.04 2023-01-12:\n- Deleted old mqtt nodes (EUDemo & CSUK18 MAM's) and cleaned up the configurations.\n\nv1.03 2022-12-29:\n- Cleaned up the Collect And Send Data flow and split up the data to three data sets \n  each having it's own MQTT connection to a device in MAS Monitor.\n- Commented out the pre-set environment data to be used only if the SenseHAT is missing\n- Changed Shutdown from Control flow to behave as shutdown via the joystick\n\n\nv1.02 2022-12-28:\n- Added three mqtt out nodes for CPU, OSC and ENV including the configurations.\n- Added \"measurement\" timestamps (evt_timestamp) for each of the three data sets, \n  so they have different timestamps simulating separate individual devices.\n\nv1.01 2022-12-28:\n- Preparing for the RPE on MAS flows, including removing support for External TEMPerHUM sensor \n  and removal of some superflous flows.\n\nv0.45 2022-12-28:\n- Updated version based on several additional flows have been added over the time to test \n  e.g. connectiong to a MAS Monitor instance (both as device and gateway).\n\nv0.44 2020-08-10:\n- Added support for TEMPerHUM USB Temperature & Humidity Sensor as provider of \n  External Temperature and Humidity (xt, xh).\n\nv0.43 2020-06-10:\n- Added the Get Ext data flow to listen to a local Mosquitto broker and receive \n  from an ESP32 board with an attached DHT22 (AM2302) sensor.\n\nv0.42 2020-05-20:\n- Moved the header info creation from dashboard to Collect An Send Data, \n  as a refresh of the UI Dashboard would make it dissapear. \n  Now it will automatically be induced into the header again when data is collected and send.\n- Added the ID name as the first text to be displayed on the SenseHat, when pushing UP.\n\nv0.41 2020-05-14:\n- Added RPE information in the right side of the header on the dashboard, e.g. RPE001 (v0.41)\n\nV0.40 2020-05-13:\n- Added 4 bars on the SenseHAT LEDs to indicate: CPU Load, CPU Temperature, Oscillator Temperature, Environment Temperature from the SenseHAT\n  There are 5 LEDs on each bar: 2\n  < 0 1 green, \n  < 40 2 green, \n  < 60 3green, \n  < 80 3 green + 1 yellow, \n  < 100 3 green + 1 yellow + 1 red\n\nv0.37 2020-05-11:\n- Tidy up some code in function nodes; removed superfluous code and debug nodes.\n- Moved collecting hardware version to the Control tab and stored in a global variable as it will never change.\n- Added Joystick function to show SW and HW versions on the SenseHAT\n- Added SW and HW versions to the RPE Control tab of the dashboard\n\nv0.35 2020-05-10:\n- Added logic for showing the status of the MQTT connections on the LED (0,7)\n\nv0.30 2020-05-07:\n- Added property for RPE software version.\n- Added property for hardware version.\n- Added properties for future eXternal DHT22 sensor: \n  Temperature and Humidity\n- Set default global variables for SenseHAT and DHT22 sensors, so that the flow can run on Pi's with or without those sensors attached.\n\nv0.20 2020-05-06:\n- Added ENTER on joystick to toggle the LED display on and off.\n- Added LEDs in lowest row to indicate MQTT connection state (not working yet - shows green) and the day of the week (green: Active - red: Inactive)\n\nv0.15 2020-05-05:\n- Added CRON+ to control when the measurements are being collected and transmitted + when the load tests are being performed:\nActive:   Monday-Friday 8am - 6pm CET\n          Every 10 seconds\nInactive: All other periods\n          Every 20 minutes\n- Added SenseHAT properties: Temperature, Humidity and Pressure\n\n\nv0.12 2020-05-04:\n- Added local dashboard\n- Added MQTT to send data\n- Added the Oscilator properties: \n  Frequency, Voltage and Temperature\n\n\nv0.10 2020-05-01:\n- Initial flows.\n- Using various CLI commands to gather sensor data every 10 seconds.\n- Run a 5 minute load test at 100% and the 10 minutes idleing.\n- Using CPU Load, CPU Temperature, Disk Usage and Free Memory",
+        "z": "2951b7effc79365b",
+        "name": "Created by Jan Ekstrøm - 2024-09-27 - v1.06 (Open to view Version History)",
+        "info": "By jan.ekstrom@dk.ibm.com\n\nv1.06 2024-09-27:  \n- Get the ID (RPE-name) from the Pi's hostname rather than waiting for all MQTT connections to be connected\n\nv1.05 2023-12-04:  \n- Renamed the standard MQTT out nodes to a more generic RPE042-<device>-<number>\n- Filtered the IP address to only contain the IPv4 address (both IPv4 and IPv6 was way too long)\n\nv1.04 2023-01-12:\n- Deleted old mqtt nodes (EUDemo & CSUK18 MAM's) and cleaned up the configurations.\n\nv1.03 2022-12-29:\n- Cleaned up the Collect And Send Data flow and split up the data to three data sets \n  each having it's own MQTT connection to a device in MAS Monitor.\n- Commented out the pre-set environment data to be used only if the SenseHAT is missing\n- Changed Shutdown from Control flow to behave as shutdown via the joystick\n\n\nv1.02 2022-12-28:\n- Added three mqtt out nodes for CPU, OSC and ENV including the configurations.\n- Added \"measurement\" timestamps (evt_timestamp) for each of the three data sets, \n  so they have different timestamps simulating separate individual devices.\n\nv1.01 2022-12-28:\n- Preparing for the RPE on MAS flows, including removing support for External TEMPerHUM sensor \n  and removal of some superflous flows.\n\nv0.45 2022-12-28:\n- Updated version based on several additional flows have been added over the time to test \n  e.g. connectiong to a MAS Monitor instance (both as device and gateway).\n\nv0.44 2020-08-10:\n- Added support for TEMPerHUM USB Temperature & Humidity Sensor as provider of \n  External Temperature and Humidity (xt, xh).\n\nv0.43 2020-06-10:\n- Added the Get Ext data flow to listen to a local Mosquitto broker and receive \n  from an ESP32 board with an attached DHT22 (AM2302) sensor.\n\nv0.42 2020-05-20:\n- Moved the header info creation from dashboard to Collect An Send Data, \n  as a refresh of the UI Dashboard would make it dissapear. \n  Now it will automatically be induced into the header again when data is collected and send.\n- Added the ID name as the first text to be displayed on the SenseHat, when pushing UP.\n\nv0.41 2020-05-14:\n- Added RPE information in the right side of the header on the dashboard, e.g. RPE001 (v0.41)\n\nV0.40 2020-05-13:\n- Added 4 bars on the SenseHAT LEDs to indicate: CPU Load, CPU Temperature, Oscillator Temperature, Environment Temperature from the SenseHAT\n  There are 5 LEDs on each bar: 2\n  < 0 1 green, \n  < 40 2 green, \n  < 60 3green, \n  < 80 3 green + 1 yellow, \n  < 100 3 green + 1 yellow + 1 red\n\nv0.37 2020-05-11:\n- Tidy up some code in function nodes; removed superfluous code and debug nodes.\n- Moved collecting hardware version to the Control tab and stored in a global variable as it will never change.\n- Added Joystick function to show SW and HW versions on the SenseHAT\n- Added SW and HW versions to the RPE Control tab of the dashboard\n\nv0.35 2020-05-10:\n- Added logic for showing the status of the MQTT connections on the LED (0,7)\n\nv0.30 2020-05-07:\n- Added property for RPE software version.\n- Added property for hardware version.\n- Added properties for future eXternal DHT22 sensor: \n  Temperature and Humidity\n- Set default global variables for SenseHAT and DHT22 sensors, so that the flow can run on Pi's with or without those sensors attached.\n\nv0.20 2020-05-06:\n- Added ENTER on joystick to toggle the LED display on and off.\n- Added LEDs in lowest row to indicate MQTT connection state (not working yet - shows green) and the day of the week (green: Active - red: Inactive)\n\nv0.15 2020-05-05:\n- Added CRON+ to control when the measurements are being collected and transmitted + when the load tests are being performed:\nActive:   Monday-Friday 8am - 6pm CET\n          Every 10 seconds\nInactive: All other periods\n          Every 20 minutes\n- Added SenseHAT properties: Temperature, Humidity and Pressure\n\n\nv0.12 2020-05-04:\n- Added local dashboard\n- Added MQTT to send data\n- Added the Oscilator properties: \n  Frequency, Voltage and Temperature\n\n\nv0.10 2020-05-01:\n- Initial flows.\n- Using various CLI commands to gather sensor data every 10 seconds.\n- Run a 5 minute load test at 100% and the 10 minutes idleing.\n- Using CPU Load, CPU Temperature, Disk Usage and Free Memory",
         "x": 290,
         "y": 20,
         "wires": []
     },
     {
-        "id": "1e601a8e.1b20b5",
+        "id": "ebca5eb9b4b6fa63",
         "type": "function",
-        "z": "3ee4e36.fe8841c",
-        "g": "700f2c225889c9bf",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
         "name": "Initialize",
-        "func": "// Set the current SW Version\nlet sw = \"v1.05\";\nglobal.set('software',sw);\n\n// REMOVED in v1.01\n// Initialize the sensorvalues of an external Adafruit AM2302 wired DHT22 sensor\n// That way the flows run with or without that sensor attached\n// global.set('external',{\"temperature\":0.0,\"humidity\":0.0});\n\n// Initialize the sensorvalues if a SenseHAT is not mounted\n// That way the flows run without that HAT mounted\n// global.set('environment',{\"temperature\":0.0,\"humidity\":0.0,\"pressure\":0.0});\n\n\n// Initialize the status of the MQTT connections\nglobal.set('mqttStatusGlobal', [ '#000000', '#000000' ]);\n\nmsg = {}; // Clear message\nmsg.topic = \"Software\";\nmsg.payload = sw;\n\n\nreturn msg;",
+        "func": "// Set the current SW Version\nlet sw = \"v1.06\";\nglobal.set('software',sw);\n\n// REMOVED in v1.01\n// Initialize the sensorvalues of an external Adafruit AM2302 wired DHT22 sensor\n// That way the flows run with or without that sensor attached\n// global.set('external',{\"temperature\":0.0,\"humidity\":0.0});\n\n// Initialize the sensorvalues if a SenseHAT is not mounted\n// That way the flows run without that HAT mounted\n// global.set('environment',{\"temperature\":0.0,\"humidity\":0.0,\"pressure\":0.0});\n\n\n// Initialize the status of the MQTT connections\nglobal.set('mqttStatusGlobal', [ '#000000', '#000000' ]);\n\nmsg = {}; // Clear message\nmsg.topic = \"Software\";\nmsg.payload = sw;\n\n\nreturn msg;",
         "outputs": 1,
-        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 180,
+        "y": 200,
         "wires": [
             [
-                "489be4cc.5f893c",
-                "12c2ea86.d98775"
+                "eae492531c4dafd2",
+                "952b253616bdc3e5",
+                "6ec34e5a89d341a0"
             ]
         ]
     },
     {
-        "id": "34dd0976.d75b66",
+        "id": "d1b602c451d91b3f",
         "type": "inject",
-        "z": "3ee4e36.fe8841c",
-        "g": "700f2c225889c9bf",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
         "name": "On Startup",
         "props": [
             {
@@ -664,97 +667,152 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 180,
+        "y": 200,
         "wires": [
             [
-                "1e601a8e.1b20b5"
+                "ebca5eb9b4b6fa63"
             ]
         ]
     },
     {
-        "id": "489be4cc.5f893c",
+        "id": "eae492531c4dafd2",
         "type": "exec",
-        "z": "3ee4e36.fe8841c",
-        "g": "700f2c225889c9bf",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
         "command": "cat /proc/device-tree/model",
         "addpay": false,
         "append": "",
         "useSpawn": "",
         "timer": "",
         "name": "PI Revision",
-        "x": 470,
-        "y": 180,
+        "x": 510,
+        "y": 200,
         "wires": [
             [
-                "30b3a7ec.4c2e58"
+                "7258574e4fbb7c4c"
             ],
             [],
             []
         ]
     },
     {
-        "id": "30b3a7ec.4c2e58",
+        "id": "7258574e4fbb7c4c",
         "type": "function",
-        "z": "3ee4e36.fe8841c",
-        "g": "700f2c225889c9bf",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
         "name": "Formatting",
         "func": "// Format the hardware version information and store it in a global variable\nlet hw = msg.payload.toString().substring(10).replace('\\0', '');\nglobal.set('hardware', hw);\n\nmsg = {}; // Clear message\nmsg.topic = \"Hardware\";\nmsg.payload = hw;\n\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 670,
-        "y": 180,
+        "x": 730,
+        "y": 200,
         "wires": [
             [
-                "14daccb9.8c9ec3"
+                "914e131f2ae283b4"
             ]
         ]
     },
     {
-        "id": "12c2ea86.d98775",
+        "id": "952b253616bdc3e5",
         "type": "link out",
-        "z": "3ee4e36.fe8841c",
-        "g": "700f2c225889c9bf",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
         "name": "Software Version Out",
         "links": [
-            "64d0e864.286e08",
-            "7ea6570.3c061a8"
+            "9c4b61a820ea5130"
         ],
-        "x": 415,
-        "y": 220,
+        "x": 455,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "14daccb9.8c9ec3",
+        "id": "914e131f2ae283b4",
         "type": "link out",
-        "z": "3ee4e36.fe8841c",
-        "g": "700f2c225889c9bf",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
         "name": "Hardware Version Out",
         "links": [
-            "7ea6570.3c061a8",
-            "5be4c423.91ba4c"
+            "678455e1a238c3e1"
         ],
-        "x": 795,
-        "y": 180,
+        "x": 865,
+        "y": 200,
         "wires": []
     },
     {
-        "id": "aff0c453dfee6238",
+        "id": "6069954fba0a3dd0",
         "type": "link out",
-        "z": "3ee4e36.fe8841c",
-        "g": "9f9293f175cc6344",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
         "name": "Initiate SHUTDOWN",
         "mode": "link",
         "links": [
-            "a2abf7d778d721e6"
+            "2e973c545057ae12"
         ],
         "x": 295,
         "y": 520,
         "wires": []
     },
     {
-        "id": "b54b9ec6.6ddb1",
+        "id": "6ec34e5a89d341a0",
         "type": "exec",
-        "z": "73893bfe.a87b84",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "command": "hostname",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "RPE-name",
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "d2a70326e2e72bfc",
+                "60b46a815ca64fb1"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "60b46a815ca64fb1",
+        "type": "function",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "Set RPE Name",
+        "func": "// Set the RPE name / ID\nglobal.set('RPE-Name', msg.payload.substring(0, 6));\n\nreturn msg;",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d2a70326e2e72bfc",
+        "type": "debug",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "RPE Name",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e17d567eb2e1a011",
+        "type": "exec",
+        "z": "e1e54dabc69f1d73",
         "command": "vcgencmd measure_temp",
         "addpay": false,
         "append": "",
@@ -765,16 +823,16 @@
         "y": 180,
         "wires": [
             [
-                "a28b870d.2cd6d8"
+                "9bfa824f2f2862e6"
             ],
             [],
             []
         ]
     },
     {
-        "id": "a28b870d.2cd6d8",
+        "id": "9bfa824f2f2862e6",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Formatting",
         "func": "//Returns a number with CPU temperature in Celcius\nstr = msg.payload;\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str.substring(5,9));\nmsg.topic = \"ct\"; //cpu temperature\nreturn msg;",
         "outputs": 1,
@@ -783,14 +841,14 @@
         "y": 180,
         "wires": [
             [
-                "c11d10c2.4add4"
+                "147225d3911acdef"
             ]
         ]
     },
     {
-        "id": "8f9b3979.de9f88",
+        "id": "1133350051652f0c",
         "type": "exec",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "command": "top -d 0.7 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4 + $6}'",
         "addpay": false,
         "append": "",
@@ -801,16 +859,16 @@
         "y": 240,
         "wires": [
             [
-                "8e3165c.e054298"
+                "62f649e8535a08a5"
             ],
             [],
             []
         ]
     },
     {
-        "id": "3e371427.1142dc",
+        "id": "db59a3117129636a",
         "type": "exec",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "command": "free | grep Mem | awk '{printf \"%.2f\\n\", 100*$3/$2}'",
         "addpay": false,
         "append": "",
@@ -821,16 +879,16 @@
         "y": 300,
         "wires": [
             [
-                "cf715af9.bef248"
+                "dc4409d50735317d"
             ],
             [],
             []
         ]
     },
     {
-        "id": "2e1e9740.37a6d8",
+        "id": "29ee569989e877fe",
         "type": "exec",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "command": "df -h",
         "addpay": false,
         "append": "",
@@ -841,16 +899,16 @@
         "y": 360,
         "wires": [
             [
-                "d2f463b.006b2a"
+                "ad1f12fce9ad55e8"
             ],
             [],
             []
         ]
     },
     {
-        "id": "d2f463b.006b2a",
+        "id": "ad1f12fce9ad55e8",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Formatting",
         "func": "//Returns a number with percentage of disk used\nvar re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str);\nmsg.topic = \"du\"; //disk usage\nreturn msg;",
         "outputs": 1,
@@ -859,14 +917,14 @@
         "y": 360,
         "wires": [
             [
-                "b569ad9.848fe5"
+                "f3e265a4c9d0a2c4"
             ]
         ]
     },
     {
-        "id": "8e3165c.e054298",
+        "id": "62f649e8535a08a5",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Formatting",
         "func": "//Returns a number with CPU load in percent\nstr = msg.payload;\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str);\nmsg.topic = \"cl\"; //cpu load\nreturn msg;",
         "outputs": 1,
@@ -875,14 +933,14 @@
         "y": 240,
         "wires": [
             [
-                "c0ad344.6f87fc8"
+                "62d764d9efdeed49"
             ]
         ]
     },
     {
-        "id": "cf715af9.bef248",
+        "id": "dc4409d50735317d",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Formatting",
         "func": "//Returns a number with percentage of memory used\nstr = msg.payload;\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str);\nmsg.topic = \"mu\"; //memory usage\nreturn msg;",
         "outputs": 1,
@@ -891,74 +949,68 @@
         "y": 300,
         "wires": [
             [
-                "6b1b894c.ad3cf8"
+                "fc19fdcf6e14bf0a"
             ]
         ]
     },
     {
-        "id": "c11d10c2.4add4",
+        "id": "147225d3911acdef",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "CPU Temp Out",
         "links": [
-            "8fc703df.8479d",
-            "6b0e66f9.ec6958",
-            "6fbf7a67.9ea0a4",
-            "7a7d0410.cb589c",
-            "770dfd7f2012f39a"
+            "5003ce4774f9c71a",
+            "418846a39ce35fe8",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 220,
         "wires": []
     },
     {
-        "id": "c0ad344.6f87fc8",
+        "id": "62d764d9efdeed49",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "CPU Load Out",
         "links": [
-            "af5b31d.bddb2d",
-            "528ff4ba.02c95c",
-            "6fbf7a67.9ea0a4",
-            "2d778e6a.46db4a",
-            "770dfd7f2012f39a"
+            "0551d431530cb913",
+            "e2649eb8e46fba68",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 260,
         "wires": []
     },
     {
-        "id": "6b1b894c.ad3cf8",
+        "id": "fc19fdcf6e14bf0a",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Memory Usage Out",
         "links": [
-            "942c5a22.a92498",
-            "49f6ebe2.c8cc54",
-            "770dfd7f2012f39a"
+            "cb63c151fca4239a",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 300,
         "wires": []
     },
     {
-        "id": "b569ad9.848fe5",
+        "id": "f3e265a4c9d0a2c4",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Disk Usage Out",
         "links": [
-            "e7ec70f2.83c09",
-            "666dd8b5.26397",
-            "770dfd7f2012f39a"
+            "f0dcbf6df699f93f",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 340,
         "wires": []
     },
     {
-        "id": "c6e208e3.80d088",
+        "id": "ace8d6eac45bb9db",
         "type": "exec",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "command": "vcgencmd read_ring_osc",
         "addpay": false,
         "append": "",
@@ -969,16 +1021,16 @@
         "y": 460,
         "wires": [
             [
-                "3cf74c5f.cabe94"
+                "940e406121270adf"
             ],
             [],
             []
         ]
     },
     {
-        "id": "3cf74c5f.cabe94",
+        "id": "940e406121270adf",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Formatting",
         "func": "//Returns the curent speed, voltage and temperature of the ring oscillator\n//RPi3B+ response example:\n//read_ring_osc(2)=2.923MHz (@1.2000V) (58.5'C)\nstr = msg.payload;\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\nmsg1.payload = parseFloat(str.substring(17,22));\nmsg1.topic = \"of\"; //Oscillator Frequency\nmsg2.payload = parseFloat(str.substring(28,34));\nmsg2.topic = \"ov\"; //Oscillator Voltage\nmsg3.payload = parseFloat(str.substring(38,42));\nmsg3.topic = \"ot\"; //Oscillator Temperature\nreturn [msg1,msg2,msg3];\n",
         "outputs": 3,
@@ -987,20 +1039,20 @@
         "y": 460,
         "wires": [
             [
-                "cae323ee.ed361"
+                "b408b369295b54ba"
             ],
             [
-                "aa4303ca.ea1b3"
+                "c3eb06c1eedc3618"
             ],
             [
-                "85ea289c.fc3c98"
+                "40b73327b2157870"
             ]
         ]
     },
     {
-        "id": "1487df7.b940121",
+        "id": "9069eced482060a4",
         "type": "delay",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "",
         "pauseType": "delay",
         "timeout": "1500",
@@ -1017,61 +1069,56 @@
         "y": 460,
         "wires": [
             [
-                "c6e208e3.80d088"
+                "ace8d6eac45bb9db"
             ]
         ]
     },
     {
-        "id": "cae323ee.ed361",
+        "id": "b408b369295b54ba",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "OSC Frequency Out",
         "links": [
-            "7b620aaa.1b09f4",
-            "bfcb89f6.7bb3c8",
-            "f333cbd5.e1ace8",
-            "e3966774.5ce0c",
-            "770dfd7f2012f39a"
+            "942f20dbf2bf5429",
+            "3997e54ffcf36ede",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 420,
         "wires": []
     },
     {
-        "id": "85ea289c.fc3c98",
+        "id": "40b73327b2157870",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "OSC Temperature Out",
         "links": [
-            "ae23c2fe.57226",
-            "4e4f7135.3f02a",
-            "f333cbd5.e1ace8",
-            "4eed876e.168b7",
-            "770dfd7f2012f39a"
+            "43fa76ab2533fa89",
+            "c5e2ca46367dc0db",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 500,
         "wires": []
     },
     {
-        "id": "aa4303ca.ea1b3",
+        "id": "c3eb06c1eedc3618",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "OSC Voltage Out",
         "links": [
-            "84e2f8a3.c1d1f8",
-            "71f4c228.47365c",
-            "33946828.407f68",
-            "770dfd7f2012f39a"
+            "3d96998cdedbe218",
+            "373d8ed62104ec25",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 460,
         "wires": []
     },
     {
-        "id": "9a9e68ef.62d408",
+        "id": "7c8cbfaf95ab0ca2",
         "type": "delay",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "",
         "pauseType": "delay",
         "timeout": "300",
@@ -1088,14 +1135,14 @@
         "y": 240,
         "wires": [
             [
-                "8f9b3979.de9f88"
+                "1133350051652f0c"
             ]
         ]
     },
     {
-        "id": "a274873d.1c3238",
+        "id": "6044ff08816cfc71",
         "type": "comment",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "This flow get the measurements from the Pi sensors and send them to MAS Monitor",
         "info": "",
         "x": 310,
@@ -1103,9 +1150,9 @@
         "wires": []
     },
     {
-        "id": "500e7c65.46fe54",
+        "id": "fd59edfd8a50df9f",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "SenseHAT Measurements",
         "func": "//Returns the temperature, humidity and pressure from the SenseHAT\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\n\nvar environment = global.get('environment');\n\nmsg1.payload = environment.temperature;\nmsg1.topic = \"et\"; //SenseHAT Temperature\nmsg2.payload = environment.humidity;\nmsg2.topic = \"eh\"; //SenseHAT Humidity\nmsg3.payload = environment.pressure;\nmsg3.topic = \"ep\"; //SenseHAT Pressure\n\nreturn [msg1,msg2,msg3];\n",
         "outputs": 3,
@@ -1114,69 +1161,62 @@
         "y": 620,
         "wires": [
             [
-                "b87965af.1f7108"
+                "de7672a0830ef659"
             ],
             [
-                "e9c8ac43.25581"
+                "2721829be039d7e3"
             ],
             [
-                "1aa05db0.453482"
+                "e8005441ef2323e9"
             ]
         ]
     },
     {
-        "id": "b87965af.1f7108",
+        "id": "de7672a0830ef659",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Temperature Out",
         "links": [
-            "12c9b964.5e75e7",
-            "cab4d3a0.021a3",
-            "f4a41f0f.8c4c9",
-            "2d7c8027.e20658",
-            "d27f151a.fe398",
-            "770dfd7f2012f39a"
+            "050e7e9ed97e1e09",
+            "b5602ed4cc55bc3f",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 580,
         "wires": []
     },
     {
-        "id": "e9c8ac43.25581",
+        "id": "2721829be039d7e3",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Humidity Out",
         "links": [
-            "9889fb3d.94ac28",
-            "2c232fc7.229d1",
-            "283dee8f.b99eaa",
-            "2d7c8027.e20658",
-            "9fae448.1053eb8",
-            "770dfd7f2012f39a"
+            "3d7c21866d3e4ad3",
+            "36f881c7c2c358ba",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 620,
         "wires": []
     },
     {
-        "id": "1aa05db0.453482",
+        "id": "e8005441ef2323e9",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Pressure Out",
         "links": [
-            "d87d903d.97608",
-            "57b66ea9.e1bf9",
-            "c73dfffe.5b78e8",
-            "770dfd7f2012f39a"
+            "fbedfbf5537f99f0",
+            "774e71d7fe27c3f0",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 660,
         "wires": []
     },
     {
-        "id": "55194bb4.fa0be4",
+        "id": "899ad6b1e6fdd6eb",
         "type": "cronplus",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Measure",
         "outputField": "payload",
         "timeZone": "Europe/Copenhagen",
@@ -1215,22 +1255,22 @@
         "y": 340,
         "wires": [
             [
-                "3e371427.1142dc",
-                "9a9e68ef.62d408",
-                "b54b9ec6.6ddb1",
-                "2e1e9740.37a6d8",
-                "1487df7.b940121",
-                "500e7c65.46fe54",
-                "76f2a54b.24bc7c",
-                "1a9d0c93.b039f3",
-                "e421c422.e524a"
+                "db59a3117129636a",
+                "7c8cbfaf95ab0ca2",
+                "e17d567eb2e1a011",
+                "29ee569989e877fe",
+                "9069eced482060a4",
+                "fd59edfd8a50df9f",
+                "142fbd649eed05df",
+                "b7d5c347107394eb",
+                "49ece0b58da6f846"
             ]
         ]
     },
     {
-        "id": "29f3bf9a.d8f41",
+        "id": "440ac320cf578e06",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -1245,9 +1285,9 @@
         "wires": []
     },
     {
-        "id": "76f2a54b.24bc7c",
+        "id": "142fbd649eed05df",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "",
         "func": "// Create timestamp for now\nvar now     = new Date(msg.cronplus.triggerTimestamp);\nvar year    = now.getFullYear();\nvar month   = now.getMonth()+1; \nvar day     = now.getDate();\nvar hour    = now.getHours();\nvar minute  = now.getMinutes();\nvar second  = now.getSeconds();   \nvar millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1) {\nmonth = '0'+month;\n}\nif(day.toString().length == 1) {\nday = '0'+day;\n}   \nif(hour.toString().length == 1) {\nhour = '0'+hour;\n}\nif(minute.toString().length == 1) {\nminute = '0'+minute;\n}\nif(second.toString().length == 1) {\nsecond = '0'+second;\n}   \nif(millisecond.toString().length == 1) {\nmillisecond = '00' + millisecond;\n}   \nif(millisecond.toString().length == 2) {\nmillisecond = '0' + millisecond;\n}   \n\nmsg.timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n\nglobal.set('state', msg.payload);\n\nflow.set('cron_timestamp', msg.timestamp);\n\nreturn msg;",
         "outputs": 1,
@@ -1259,14 +1299,14 @@
         "y": 680,
         "wires": [
             [
-                "29f3bf9a.d8f41"
+                "440ac320cf578e06"
             ]
         ]
     },
     {
-        "id": "3b52686a.6a2c98",
+        "id": "cb19e347ec5ac912",
         "type": "inject",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "",
         "props": [
             {
@@ -1291,20 +1331,20 @@
         "y": 260,
         "wires": [
             [
-                "b54b9ec6.6ddb1",
-                "9a9e68ef.62d408",
-                "3e371427.1142dc",
-                "2e1e9740.37a6d8",
-                "1487df7.b940121",
-                "500e7c65.46fe54",
-                "1a9d0c93.b039f3"
+                "e17d567eb2e1a011",
+                "7c8cbfaf95ab0ca2",
+                "db59a3117129636a",
+                "29ee569989e877fe",
+                "9069eced482060a4",
+                "fd59edfd8a50df9f",
+                "b7d5c347107394eb"
             ]
         ]
     },
     {
-        "id": "1a9d0c93.b039f3",
+        "id": "b7d5c347107394eb",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Software and hardware versions",
         "func": "//Get and returns the software and hardware versions\nlet msg1 = {};\nlet msg2 = {};\n\n\nmsg1.payload = global.get('software');\nmsg1.topic = \"sw\"; //Software Version\nmsg2.payload = global.get('hardware');\nmsg2.topic = \"hw\"; //Hardware Version\n\n\nreturn [msg1,msg2];\n",
         "outputs": 2,
@@ -1313,63 +1353,61 @@
         "y": 120,
         "wires": [
             [
-                "b1468185.7dab4"
+                "a754cd0dd4ce3ffe"
             ],
             [
-                "724004ee.9cff2c"
+                "e4f776d2b56a322c"
             ]
         ]
     },
     {
-        "id": "b1468185.7dab4",
+        "id": "a754cd0dd4ce3ffe",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "PI Software Out",
         "links": [
-            "3106cc67.f74584",
-            "8c9a9dd0.df0d28",
-            "770dfd7f2012f39a"
+            "d2156cef0405ccaa",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 100,
         "wires": []
     },
     {
-        "id": "724004ee.9cff2c",
+        "id": "e4f776d2b56a322c",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "PI Hardware Out",
         "links": [
-            "20169cd7.35e864",
-            "a115d0f4.16cfd8",
-            "770dfd7f2012f39a"
+            "734b71b4b4b1f2f3",
+            "73c8bdec933f8e06"
         ],
         "x": 915,
         "y": 140,
         "wires": []
     },
     {
-        "id": "d6bb00aa.e5ebf",
+        "id": "0c041405391516b6",
         "type": "status",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "",
         "scope": [
             "7118a91a.e2607",
-            "1391e5dd.3de56a",
-            "c0a12d911f4bd465"
+            "c0a12d911f4bd465",
+            "1391e5dd.3de56a"
         ],
         "x": 180,
         "y": 900,
         "wires": [
             [
-                "f721e5ff.f925b8"
+                "b3c09659b9d966cb"
             ]
         ]
     },
     {
-        "id": "44817868.621b18",
+        "id": "0e51e25e44917658",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -1382,9 +1420,9 @@
         "wires": []
     },
     {
-        "id": "165fdaae.ce3be5",
+        "id": "4a28940734f6329b",
         "type": "comment",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "1. Select the mqtt nodes in status node",
         "info": "",
         "x": 270,
@@ -1392,11 +1430,11 @@
         "wires": []
     },
     {
-        "id": "f721e5ff.f925b8",
+        "id": "b3c09659b9d966cb",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Store Connection Status",
-        "func": "// Define number of MQTT connections which are read by the status node\n// This is important to get a correct indication of connection status on the SenseHAT\nlet numberOfConnections = 3;\n\nlet connections = context.get('mqtt_connections') || [];\n//let connections = context.get('mqtt_connections') || [{\"id\":\"bacdc4cb.b49ad8\",\"state\":\"HURRA\",\"name\":\"RPE001 (CSAP1XYZ)\"}];\n//node.warn(\"Number of objects: \" + connections.length + \" - Connections: \" + JSON.stringify(connections));\n\nlet id = msg.status.source.id;\nlet state = msg.status.text.substring(23);\nlet name = '';\nif (msg.status.source.name){\n    name = msg.status.source.name;\n}\n\nlet connectionObject = {'id': id, 'state': state, 'name': name};\n// node.warn(\"connectionObject = \" + JSON.stringify(connectionObject));\n\nlet index = connections.findIndex(connection => connection.id === id)\n\nif(index === -1) {\n    connections.push(connectionObject);\n    context.set('mqtt_connections', connections);\n    node.warn(\"Added, new object: \"+ JSON.stringify(connections));\n} else {\n    connections[index] = connectionObject;\n    context.set('mqtt_connections', connections);\n    node.warn(\"Replaced, new object: \"+ JSON.stringify(connections));\n}\n\n\n\nlet SUCCESS = [ '#008800', '#005500' ]; // Green\nlet ERROR   = [ '#880000', '#550000' ]; // Red\n//let UNKNOWN = [ '#000088', '#000055' ]; // Blue\nlet UNKNOWN = [ '#888800', '#555500' ]; // Yellow\nlet MISSING = [ '#000000', '#000000' ]; // Black\nlet mqttStatus = MISSING;\n\nif (numberOfConnections === connections.length) {\n    if (connections.every(connection => connection.state === \"connected\")) {\n        node.warn(\"Connections status: SUCCESS - #Connections: \"+connections.length);\n        // Store the RPE information for the dashboard\n        global.set('RPE-Name',connections[connections.length-1].name.substring(0, 6));\n        mqttStatus = SUCCESS;\n    } else {\n        if (connections.some(connection => connection.state === \"connected\")) {\n            node.warn(\"Connections status: UNKNOWN - #Connections: \"+connections.length);\n            mqttStatus = UNKNOWN;\n        } else {\n            node.warn(\"Connections status: ERROR - #Connections: \"+connections.length);\n            mqttStatus = ERROR;\n        }\n    }\n} else {\n    node.warn(\"Connections status: MISSING - #Connections: \"+connections.length);\n    mqttStatus = MISSING;\n    \n}\n\nglobal.set('mqttStatusGlobal', mqttStatus);\n\nmsg.payload = connectionObject;\nreturn msg;",
+        "func": "// Define number of MQTT connections which are read by the status node\n// This is important to get a correct indication of connection status on the SenseHAT\nlet numberOfConnections = 3;\n\nlet connections = context.get('mqtt_connections') || [];\n//let connections = context.get('mqtt_connections') || [{\"id\":\"bacdc4cb.b49ad8\",\"state\":\"HURRA\",\"name\":\"RPE001 (CSAP1XYZ)\"}];\n//node.warn(\"Number of objects: \" + connections.length + \" - Connections: \" + JSON.stringify(connections));\n\nlet id = msg.status.source.id;\nlet state = msg.status.text.substring(23);\nlet name = '';\nif (msg.status.source.name){\n    name = msg.status.source.name;\n}\n\nlet connectionObject = {'id': id, 'state': state, 'name': name};\n// node.warn(\"connectionObject = \" + JSON.stringify(connectionObject));\n\nlet index = connections.findIndex(connection => connection.id === id)\n\nif(index === -1) {\n    connections.push(connectionObject);\n    context.set('mqtt_connections', connections);\n    node.warn(\"Added, new object: \"+ JSON.stringify(connections));\n} else {\n    connections[index] = connectionObject;\n    context.set('mqtt_connections', connections);\n    node.warn(\"Replaced, new object: \"+ JSON.stringify(connections));\n}\n\n\n\nlet SUCCESS = [ '#008800', '#005500' ]; // Green\nlet ERROR   = [ '#880000', '#550000' ]; // Red\n//let UNKNOWN = [ '#000088', '#000055' ]; // Blue\nlet UNKNOWN = [ '#888800', '#555500' ]; // Yellow\nlet MISSING = [ '#000000', '#000000' ]; // Black\nlet mqttStatus = MISSING;\n\nif (numberOfConnections === connections.length) {\n    if (connections.every(connection => connection.state === \"connected\")) {\n        node.warn(\"Connections status: SUCCESS - #Connections: \"+connections.length);\n        // Store the RPE information for the dashboard\n        // global.set('RPE-Name',connections[connections.length-1].name.substring(0, 6));\n        mqttStatus = SUCCESS;\n    } else {\n        if (connections.some(connection => connection.state === \"connected\")) {\n            node.warn(\"Connections status: UNKNOWN - #Connections: \"+connections.length);\n            mqttStatus = UNKNOWN;\n        } else {\n            node.warn(\"Connections status: ERROR - #Connections: \"+connections.length);\n            mqttStatus = ERROR;\n        }\n    }\n} else {\n    node.warn(\"Connections status: MISSING - #Connections: \"+connections.length);\n    mqttStatus = MISSING;\n    \n}\n\nglobal.set('mqttStatusGlobal', mqttStatus);\n\nmsg.payload = connectionObject;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1406,14 +1444,14 @@
         "y": 900,
         "wires": [
             [
-                "44817868.621b18"
+                "0e51e25e44917658"
             ]
         ]
     },
     {
-        "id": "a24daf7e.2177",
+        "id": "17571f60ae1d0cf6",
         "type": "comment",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "2. Adjust numberOfConnections in the function node",
         "info": "",
         "x": 670,
@@ -1421,9 +1459,9 @@
         "wires": []
     },
     {
-        "id": "229f2012.72b8e",
+        "id": "84fb1cfe59f7d399",
         "type": "comment",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "!!!!!!!!!!!!!!!!!!!  When changing | adding | removing mqtt nodes or connections it is very important to:  !!!!!!!!!!!!!!!!!!!",
         "info": "",
         "x": 490,
@@ -1431,9 +1469,9 @@
         "wires": []
     },
     {
-        "id": "91e3da2f.7b976",
+        "id": "9880b808353943b0",
         "type": "inject",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "5 sec after startup",
         "repeat": "",
         "crontab": "",
@@ -1446,14 +1484,14 @@
         "y": 60,
         "wires": [
             [
-                "e421c422.e524a"
+                "49ece0b58da6f846"
             ]
         ]
     },
     {
-        "id": "e421c422.e524a",
+        "id": "49ece0b58da6f846",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Put RPE Info on Dashbord header",
         "func": "let name = global.get('RPE-Name');\nlet ver = global.get('software');\n\nmsg.payload = name + \" (\" + ver + \")\";\nreturn msg;",
         "outputs": 1,
@@ -1462,27 +1500,27 @@
         "y": 60,
         "wires": [
             [
-                "5b723801.664c68"
+                "fcef0f5a51b4cae4"
             ]
         ]
     },
     {
-        "id": "5b723801.664c68",
+        "id": "fcef0f5a51b4cae4",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Header Info Out",
         "mode": "link",
         "links": [
-            "9aaf1603.7370d8"
+            "4a9c1d224c39f3d8"
         ],
         "x": 915,
         "y": 60,
         "wires": []
     },
     {
-        "id": "7ad0fac3.541334",
+        "id": "232069843d37c317",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Mem",
         "active": false,
         "tosidebar": true,
@@ -1495,9 +1533,9 @@
         "wires": []
     },
     {
-        "id": "44654732.ba562",
+        "id": "68e2e9738d046fd3",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Temp",
         "active": false,
         "tosidebar": true,
@@ -1510,9 +1548,9 @@
         "wires": []
     },
     {
-        "id": "6b25afb3.1f8a98",
+        "id": "1e47d07621298283",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Disk",
         "active": false,
         "tosidebar": true,
@@ -1525,9 +1563,9 @@
         "wires": []
     },
     {
-        "id": "bc77d518.add42",
+        "id": "798941261e060c0c",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "CPU",
         "active": false,
         "tosidebar": true,
@@ -1540,79 +1578,77 @@
         "wires": []
     },
     {
-        "id": "7a7d0410.cb589c",
+        "id": "418846a39ce35fe8",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "CPU Temp Join",
         "links": [
-            "c11d10c2.4add4",
-            "bd618830.7d3488"
+            "147225d3911acdef"
         ],
         "x": 1015,
         "y": 220,
         "wires": [
             [
-                "44654732.ba562",
-                "735549c2.f837c8"
+                "68e2e9738d046fd3",
+                "57ccc051d974396c"
             ]
         ]
     },
     {
-        "id": "2d778e6a.46db4a",
+        "id": "e2649eb8e46fba68",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "CPU Load Join",
         "links": [
-            "c0ad344.6f87fc8",
-            "bd618830.7d3488"
+            "62d764d9efdeed49"
         ],
         "x": 1015,
         "y": 260,
         "wires": [
             [
-                "bc77d518.add42",
-                "735549c2.f837c8"
+                "798941261e060c0c",
+                "57ccc051d974396c"
             ]
         ]
     },
     {
-        "id": "49f6ebe2.c8cc54",
+        "id": "cb63c151fca4239a",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Memory Usage Join",
         "links": [
-            "6b1b894c.ad3cf8"
+            "fc19fdcf6e14bf0a"
         ],
         "x": 1015,
         "y": 300,
         "wires": [
             [
-                "7ad0fac3.541334",
-                "735549c2.f837c8"
+                "232069843d37c317",
+                "57ccc051d974396c"
             ]
         ]
     },
     {
-        "id": "666dd8b5.26397",
+        "id": "f0dcbf6df699f93f",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Disk Usage Join",
         "links": [
-            "b569ad9.848fe5"
+            "f3e265a4c9d0a2c4"
         ],
         "x": 1015,
         "y": 340,
         "wires": [
             [
-                "6b25afb3.1f8a98",
-                "735549c2.f837c8"
+                "1e47d07621298283",
+                "57ccc051d974396c"
             ]
         ]
     },
     {
-        "id": "30281cf1.afcdfc",
+        "id": "f54e6bff133342b7",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "RPi Info",
         "active": false,
         "tosidebar": true,
@@ -1625,9 +1661,9 @@
         "wires": []
     },
     {
-        "id": "9856d1fb.44b23",
+        "id": "cba42f1ab2a81f80",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Cleaning up",
         "func": "// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
         "outputs": 1,
@@ -1639,66 +1675,66 @@
         "y": 780,
         "wires": [
             [
-                "30281cf1.afcdfc",
-                "7f954fc5.82dd7"
+                "f54e6bff133342b7",
+                "8519296f2a4314a6"
             ]
         ]
     },
     {
-        "id": "e3966774.5ce0c",
+        "id": "3997e54ffcf36ede",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "OSC Frequency Join",
         "links": [
-            "cae323ee.ed361"
+            "b408b369295b54ba"
         ],
         "x": 1015,
         "y": 420,
         "wires": [
             [
-                "995f1270.01a0e",
-                "1261dbfc.b855e4"
+                "01f15fb61d21a5e4",
+                "40c1cc6b3b227730"
             ]
         ]
     },
     {
-        "id": "4eed876e.168b7",
+        "id": "c5e2ca46367dc0db",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "OSC Temperature Join",
         "links": [
-            "85ea289c.fc3c98"
+            "40b73327b2157870"
         ],
         "x": 1015,
         "y": 500,
         "wires": [
             [
-                "5257ee35.1280a",
-                "1261dbfc.b855e4"
+                "01cea0b9756e01da",
+                "40c1cc6b3b227730"
             ]
         ]
     },
     {
-        "id": "33946828.407f68",
+        "id": "373d8ed62104ec25",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "OSC Voltage Join",
         "links": [
-            "aa4303ca.ea1b3"
+            "c3eb06c1eedc3618"
         ],
         "x": 1015,
         "y": 460,
         "wires": [
             [
-                "563455cb.44d48c",
-                "1261dbfc.b855e4"
+                "9a62f38c47a4691a",
+                "40c1cc6b3b227730"
             ]
         ]
     },
     {
-        "id": "995f1270.01a0e",
+        "id": "01f15fb61d21a5e4",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Osc MHz",
         "active": false,
         "tosidebar": true,
@@ -1711,9 +1747,9 @@
         "wires": []
     },
     {
-        "id": "563455cb.44d48c",
+        "id": "9a62f38c47a4691a",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Osc V",
         "active": false,
         "tosidebar": true,
@@ -1726,9 +1762,9 @@
         "wires": []
     },
     {
-        "id": "5257ee35.1280a",
+        "id": "01cea0b9756e01da",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Osc 'C",
         "active": false,
         "tosidebar": true,
@@ -1741,60 +1777,60 @@
         "wires": []
     },
     {
-        "id": "d27f151a.fe398",
+        "id": "b5602ed4cc55bc3f",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Temperature Join",
         "links": [
-            "b87965af.1f7108"
+            "de7672a0830ef659"
         ],
         "x": 1015,
         "y": 580,
         "wires": [
             [
-                "a3649fc0.deb9",
-                "81b6ed1a.a75558"
+                "ada539da6e718e6d",
+                "7d9523a5c00dea9e"
             ]
         ]
     },
     {
-        "id": "9fae448.1053eb8",
+        "id": "36f881c7c2c358ba",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Humidity Join",
         "links": [
-            "e9c8ac43.25581"
+            "2721829be039d7e3"
         ],
         "x": 1015,
         "y": 620,
         "wires": [
             [
-                "6a6e4755.e84f5",
-                "81b6ed1a.a75558"
+                "8e261a88023dbc74",
+                "7d9523a5c00dea9e"
             ]
         ]
     },
     {
-        "id": "c73dfffe.5b78e8",
+        "id": "774e71d7fe27c3f0",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Pressure Join",
         "links": [
-            "1aa05db0.453482"
+            "e8005441ef2323e9"
         ],
         "x": 1015,
         "y": 660,
         "wires": [
             [
-                "4d3687ab.849ce8",
-                "81b6ed1a.a75558"
+                "6a68986a38562c6c",
+                "7d9523a5c00dea9e"
             ]
         ]
     },
     {
-        "id": "6a6e4755.e84f5",
+        "id": "8e261a88023dbc74",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Humidity",
         "active": false,
         "tosidebar": true,
@@ -1807,9 +1843,9 @@
         "wires": []
     },
     {
-        "id": "a3649fc0.deb9",
+        "id": "ada539da6e718e6d",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Temperature",
         "active": false,
         "tosidebar": true,
@@ -1822,9 +1858,9 @@
         "wires": []
     },
     {
-        "id": "4d3687ab.849ce8",
+        "id": "6a68986a38562c6c",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "HAT Pressure",
         "active": false,
         "tosidebar": true,
@@ -1837,41 +1873,41 @@
         "wires": []
     },
     {
-        "id": "a115d0f4.16cfd8",
+        "id": "734b71b4b4b1f2f3",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "PI Hardware Join",
         "links": [
-            "724004ee.9cff2c"
+            "e4f776d2b56a322c"
         ],
         "x": 1015,
         "y": 140,
         "wires": [
             [
-                "743d04ed.3ff96c"
+                "4daa272a9f6743b1"
             ]
         ]
     },
     {
-        "id": "8c9a9dd0.df0d28",
+        "id": "d2156cef0405ccaa",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "PI Software Join",
         "links": [
-            "b1468185.7dab4"
+            "a754cd0dd4ce3ffe"
         ],
         "x": 1015,
         "y": 100,
         "wires": [
             [
-                "dcffdd02.f8a3f"
+                "997aba2792b757b4"
             ]
         ]
     },
     {
-        "id": "743d04ed.3ff96c",
+        "id": "4daa272a9f6743b1",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Hardware Version",
         "active": false,
         "tosidebar": true,
@@ -1884,9 +1920,9 @@
         "wires": []
     },
     {
-        "id": "dcffdd02.f8a3f",
+        "id": "997aba2792b757b4",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "RPE Software Version",
         "active": false,
         "tosidebar": true,
@@ -1899,22 +1935,22 @@
         "wires": []
     },
     {
-        "id": "7f954fc5.82dd7",
+        "id": "8519296f2a4314a6",
         "type": "link out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Payload Out",
         "mode": "link",
         "links": [
-            "616545ae.4f238c"
+            "23e9846877106c65"
         ],
         "x": 1555,
         "y": 780,
         "wires": []
     },
     {
-        "id": "735549c2.f837c8",
+        "id": "57ccc051d974396c",
         "type": "join",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Join CPU data",
         "mode": "custom",
         "build": "object",
@@ -1935,14 +1971,14 @@
         "y": 180,
         "wires": [
             [
-                "81a731d9.9ecf4"
+                "373800331f406085"
             ]
         ]
     },
     {
-        "id": "1261dbfc.b855e4",
+        "id": "40c1cc6b3b227730",
         "type": "join",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Join OSC data",
         "mode": "custom",
         "build": "object",
@@ -1963,14 +1999,14 @@
         "y": 380,
         "wires": [
             [
-                "72d08e04.356fb8"
+                "cc8c93f669974bde"
             ]
         ]
     },
     {
-        "id": "81b6ed1a.a75558",
+        "id": "7d9523a5c00dea9e",
         "type": "join",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Join HAT (ENV) data",
         "mode": "custom",
         "build": "object",
@@ -1991,32 +2027,14 @@
         "y": 540,
         "wires": [
             [
-                "e57e868e.94b2f"
+                "77ca6e2e3002f252"
             ]
         ]
     },
     {
-        "id": "7118a91a.e2607",
-        "type": "mqtt out",
-        "z": "73893bfe.a87b84",
-        "name": "RPE042-CPU-01",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "74eae28f.f6e6f4",
-        "x": 1630,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "81a731d9.9ecf4",
+        "id": "373800331f406085",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Cleaning up",
         "func": "// Create timestamp for now\nlet now          = new Date();\nlet year         = now.getFullYear();\nlet month        = now.getMonth()+1; \nlet day          = now.getDate();\nlet hour         = now.getHours();\nlet minute       = now.getMinutes();\nlet second       = now.getSeconds();   \nlet millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1)       {month = '0'+month;}\nif(day.toString().length == 1)         {day = '0'+day;}   \nif(hour.toString().length == 1)        {hour = '0'+hour;}\nif(minute.toString().length == 1)      {minute = '0'+minute;}\nif(second.toString().length == 1)      {second = '0'+second;}   \nif(millisecond.toString().length == 1) {millisecond = '00' + millisecond;}   \nif(millisecond.toString().length == 2) {millisecond = '0' + millisecond;}   \n\nlet timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nstr.evt_timestamp = timestamp;\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
         "outputs": 1,
@@ -2028,33 +2046,15 @@
         "y": 180,
         "wires": [
             [
-                "7118a91a.e2607",
-                "74c95a05.017b4c"
+                "d53ab7ca97fc85e4",
+                "7118a91a.e2607"
             ]
         ]
     },
     {
-        "id": "1391e5dd.3de56a",
-        "type": "mqtt out",
-        "z": "73893bfe.a87b84",
-        "name": "RPE042-ENV-17",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "5a440ff8.4f85e",
-        "x": 1620,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "74c95a05.017b4c",
+        "id": "d53ab7ca97fc85e4",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "CPU Data",
         "active": false,
         "tosidebar": true,
@@ -2069,9 +2069,9 @@
         "wires": []
     },
     {
-        "id": "72d08e04.356fb8",
+        "id": "cc8c93f669974bde",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Cleaning up",
         "func": "// Create timestamp for now\nlet now          = new Date();\nlet year         = now.getFullYear();\nlet month        = now.getMonth()+1; \nlet day          = now.getDate();\nlet hour         = now.getHours();\nlet minute       = now.getMinutes();\nlet second       = now.getSeconds();   \nlet millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1)       {month = '0'+month;}\nif(day.toString().length == 1)         {day = '0'+day;}   \nif(hour.toString().length == 1)        {hour = '0'+hour;}\nif(minute.toString().length == 1)      {minute = '0'+minute;}\nif(second.toString().length == 1)      {second = '0'+second;}   \nif(millisecond.toString().length == 1) {millisecond = '00' + millisecond;}   \nif(millisecond.toString().length == 2) {millisecond = '0' + millisecond;}   \n\nlet timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nstr.evt_timestamp = timestamp;\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
         "outputs": 1,
@@ -2083,15 +2083,15 @@
         "y": 380,
         "wires": [
             [
-                "74133030.56ca8",
+                "d0a1dad869b90c43",
                 "c0a12d911f4bd465"
             ]
         ]
     },
     {
-        "id": "e57e868e.94b2f",
+        "id": "77ca6e2e3002f252",
         "type": "function",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Cleaning up",
         "func": "// Create timestamp for now\nlet now          = new Date();\nlet year         = now.getFullYear();\nlet month        = now.getMonth()+1; \nlet day          = now.getDate();\nlet hour         = now.getHours();\nlet minute       = now.getMinutes();\nlet second       = now.getSeconds();   \nlet millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1)       {month = '0'+month;}\nif(day.toString().length == 1)         {day = '0'+day;}   \nif(hour.toString().length == 1)        {hour = '0'+hour;}\nif(minute.toString().length == 1)      {minute = '0'+minute;}\nif(second.toString().length == 1)      {second = '0'+second;}   \nif(millisecond.toString().length == 1) {millisecond = '00' + millisecond;}   \nif(millisecond.toString().length == 2) {millisecond = '0' + millisecond;}   \n\nlet timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nstr.evt_timestamp = timestamp;\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
         "outputs": 1,
@@ -2103,15 +2103,15 @@
         "y": 540,
         "wires": [
             [
-                "35d7aae8.f1d82e",
+                "7d1b1a21c6319752",
                 "1391e5dd.3de56a"
             ]
         ]
     },
     {
-        "id": "74133030.56ca8",
+        "id": "d0a1dad869b90c43",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "OSC Data",
         "active": false,
         "tosidebar": true,
@@ -2126,9 +2126,9 @@
         "wires": []
     },
     {
-        "id": "35d7aae8.f1d82e",
+        "id": "7d1b1a21c6319752",
         "type": "debug",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "ENV Data",
         "active": false,
         "tosidebar": true,
@@ -2143,36 +2143,36 @@
         "wires": []
     },
     {
-        "id": "770dfd7f2012f39a",
+        "id": "73c8bdec933f8e06",
         "type": "link in",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Join All",
         "links": [
-            "1aa05db0.453482",
-            "6b1b894c.ad3cf8",
-            "724004ee.9cff2c",
-            "85ea289c.fc3c98",
-            "aa4303ca.ea1b3",
-            "b1468185.7dab4",
-            "b569ad9.848fe5",
-            "b87965af.1f7108",
-            "c0ad344.6f87fc8",
-            "c11d10c2.4add4",
-            "cae323ee.ed361",
-            "e9c8ac43.25581"
+            "e8005441ef2323e9",
+            "fc19fdcf6e14bf0a",
+            "e4f776d2b56a322c",
+            "40b73327b2157870",
+            "c3eb06c1eedc3618",
+            "a754cd0dd4ce3ffe",
+            "f3e265a4c9d0a2c4",
+            "de7672a0830ef659",
+            "62d764d9efdeed49",
+            "147225d3911acdef",
+            "b408b369295b54ba",
+            "2721829be039d7e3"
         ],
         "x": 1015,
         "y": 780,
         "wires": [
             [
-                "67aa0ca96ab58c86"
+                "f8db7c2126c686f7"
             ]
         ]
     },
     {
-        "id": "67aa0ca96ab58c86",
+        "id": "f8db7c2126c686f7",
         "type": "join",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "Join all",
         "mode": "custom",
         "build": "object",
@@ -2193,14 +2193,65 @@
         "y": 780,
         "wires": [
             [
-                "9856d1fb.44b23"
+                "cba42f1ab2a81f80"
             ]
         ]
     },
     {
+        "id": "12202064c37a8e87",
+        "type": "status",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "scope": [
+            "297d51f22a035838"
+        ],
+        "x": 1500,
+        "y": 940,
+        "wires": [
+            [
+                "59dae0d9604d3bb0"
+            ]
+        ]
+    },
+    {
+        "id": "59dae0d9604d3bb0",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "MQTT Connection state",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "status.text",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "7118a91a.e2607",
+        "type": "mqtt out",
+        "z": "e1e54dabc69f1d73",
+        "name": "RPE042-CPU-01",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "74eae28f.f6e6f4",
+        "x": 1630,
+        "y": 180,
+        "wires": []
+    },
+    {
         "id": "c0a12d911f4bd465",
         "type": "mqtt out",
-        "z": "73893bfe.a87b84",
+        "z": "e1e54dabc69f1d73",
         "name": "RPE042-OSC-03",
         "topic": "",
         "qos": "",
@@ -2216,9 +2267,27 @@
         "wires": []
     },
     {
-        "id": "2f5e0192.d6b20e",
+        "id": "1391e5dd.3de56a",
+        "type": "mqtt out",
+        "z": "e1e54dabc69f1d73",
+        "name": "RPE042-ENV-17",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5a440ff8.4f85e",
+        "x": 1620,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a0d82da3835f4089",
         "type": "rpi-sensehat in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Environment",
         "motion": true,
         "env": true,
@@ -2227,14 +2296,14 @@
         "y": 240,
         "wires": [
             [
-                "dae47a3c.c09518"
+                "9744b9c7ccc0ea63"
             ]
         ]
     },
     {
-        "id": "ebf7a50b.df0378",
+        "id": "e7283c3d0e5c937e",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "active": false,
         "console": "false",
@@ -2244,9 +2313,9 @@
         "wires": []
     },
     {
-        "id": "dae47a3c.c09518",
+        "id": "9744b9c7ccc0ea63",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Save Measurments",
         "func": "// Set the environment global data\nglobal.set( msg.topic, msg.payload );\n\n\nreturn msg;",
         "outputs": 1,
@@ -2258,23 +2327,23 @@
         "y": 240,
         "wires": [
             [
-                "ebf7a50b.df0378"
+                "e7283c3d0e5c937e"
             ]
         ]
     },
     {
-        "id": "f826ab92.72b188",
+        "id": "511824978207f8c4",
         "type": "rpi-sensehat out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "x": 970,
         "y": 900,
         "wires": []
     },
     {
-        "id": "b8b27935.28c108",
+        "id": "21e2dc74b39c146a",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Scroll Message",
         "func": "\nmsg.payload = msg.payload+' ';\n\nclearTimeout( flow.get('sense-hat-busy-to') );\nflow.set('sense-hat-busy', true );\nflow.set('sense-hat-busy-to', setTimeout( function(){\n    // console.log('t/o fired');\n    flow.set('sense-hat-busy', false );\n}, msg.payload.length*650)); // ~.5 sec per letter in the message\nreturn msg;\n",
         "outputs": 1,
@@ -2283,52 +2352,37 @@
         "y": 860,
         "wires": [
             [
-                "7cf1a8d2.c5aa48",
-                "1e0e35513a7c25d8"
+                "14a6faadfecbf1cf",
+                "b313d0034f84e52b"
             ]
         ]
     },
     {
-        "id": "6f3188d.c8e1778",
+        "id": "93b5fb9030bae28e",
         "type": "link in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "SenseHat MSG",
         "links": [
-            "6a6ba2d3.42f7fc",
-            "8892d43c.cd03d8",
-            "9fce8976.e9db58",
-            "2f78a9c.669a156",
-            "551835ed.b39a6c",
-            "e29d8694.4b0d18",
-            "9a26f877.e6d468",
-            "153be7b1.08be48",
-            "206649cd.0a51d6",
-            "80452e57.cc057",
-            "242905b7.d04f5a",
-            "79326522.f6dc3c",
-            "c0710a72.cd3d18",
-            "5ef43d55.94d584",
-            "b084d669.ca4da8",
-            "c048dacc.0cc308",
-            "5fe5a6a0.0b24d8",
-            "d09d8034.81d88",
-            "7f030a60.492894",
-            "667d8fc8.4d342",
-            "70039e4b.ad13",
-            "b253fd59.cbd0d"
+            "5180d86f2c92d53e",
+            "0cd9f7d3c9733876",
+            "3821b73e859ec40f",
+            "841735dc4fb244cd",
+            "143e14c6f7f34efb",
+            "5832e2bd41458234",
+            "e0d29645c6ac796f"
         ],
         "x": 155,
         "y": 860,
         "wires": [
             [
-                "b8b27935.28c108"
+                "21e2dc74b39c146a"
             ]
         ]
     },
     {
-        "id": "9e1aa841.191308",
+        "id": "46fb046e55a1a88b",
         "type": "comment",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Store SenseHat Environment data to Global Variable",
         "info": "",
         "x": 210,
@@ -2336,9 +2390,9 @@
         "wires": []
     },
     {
-        "id": "f8b4f2c0.c167c",
+        "id": "798af07e2e0ee9f6",
         "type": "comment",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Control Status Lights and scrolling messages on LED",
         "info": "",
         "x": 220,
@@ -2346,9 +2400,9 @@
         "wires": []
     },
     {
-        "id": "a8304bb.cbc8eb8",
+        "id": "039cfc082d078ef5",
         "type": "http in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "url": "/monitor",
         "method": "get",
@@ -2358,14 +2412,14 @@
         "y": 1100,
         "wires": [
             [
-                "fb600db2.69527"
+                "7e1abd9326e83737"
             ]
         ]
     },
     {
-        "id": "28d1416d.b0025e",
+        "id": "e66a6d920cf2f3ab",
         "type": "http response",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "statusCode": "",
         "headers": {},
@@ -2374,9 +2428,9 @@
         "wires": []
     },
     {
-        "id": "fb600db2.69527",
+        "id": "7e1abd9326e83737",
         "type": "template",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "HTML Monitor",
         "field": "payload",
         "fieldType": "msg",
@@ -2388,14 +2442,14 @@
         "y": 1100,
         "wires": [
             [
-                "28d1416d.b0025e"
+                "e66a6d920cf2f3ab"
             ]
         ]
     },
     {
-        "id": "c0825a26.a67bd8",
+        "id": "6b18defe5f5f414f",
         "type": "inject",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "On Startup",
         "repeat": "",
         "crontab": "",
@@ -2407,14 +2461,14 @@
         "y": 120,
         "wires": [
             [
-                "3e1d541f.78f47c"
+                "93fd161e6319eb00"
             ]
         ]
     },
     {
-        "id": "5121b8e4.33f8f8",
+        "id": "463f9994113224b1",
         "type": "comment",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "http://<ipAddr>:1880/monitor (web monitor for the SenseHAT data)",
         "info": "",
         "x": 260,
@@ -2422,9 +2476,9 @@
         "wires": []
     },
     {
-        "id": "59b2673e.2f6868",
+        "id": "b13fcaa5358687a2",
         "type": "inject",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "props": [
             {
@@ -2449,14 +2503,14 @@
         "y": 820,
         "wires": [
             [
-                "13def283.ec4b2d"
+                "3c173e48a677aaca"
             ]
         ]
     },
     {
-        "id": "13def283.ec4b2d",
+        "id": "3c173e48a677aaca",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Status Indicators",
         "func": "// ** DO NOTHING IF SENSE-HAT IS BUSY ** //\nif ( flow.get('sense-hat-busy') ) {\n    //node.warn(\"Sense-HAT is busy\");\n    return [null,null]; // don't do anything...\n}\n\n\n// ** CLEAR THE DISPLAY IF DisplayOff IT TRUE ** //\nif ( flow.get('displayOff') ){\n    //node.warn(\"displayOff is true\");\n    msg.payload = '';\n    return [null, msg];\n}\n//node.warn(\"displayOff is false\");\n\n\n// ** SET THE CONNECTION LED ACCORDING TO ITS STATE DEFINED ON THE \"Collect And Send Data\" TAB ** //\nvar mqttStatus = global.get('mqttStatusGlobal');\nmsg.payload = '0,7,' + mqttStatus[0];\n\n\n// ** SET THE APPRPRIATE WEEKDAY LED ACCORDING TO ITS STATE ** //\nvar date = new Date();\nvar daynum = date.getDay();\n\nif (daynum === 0) {\n    daynum = 7; //Sunday is the last day ;-)\n}\n\nvar state = global.get('state');\nvar stateLED = '#550000'; //Defaults to Inactive\n\nif (state == 'Active') {\n    stateLED = '#005500'; //Change to green\n}\n\nvar i;\nfor (i = 1; i < 8; i++) {\n  if (daynum === i) {\n      msg.payload += ',' + i + ',7,' + stateLED;\n  } else {\n      msg.payload += ',' + i + ',7,#000000';\n  }\n}\n\n\n// ** SET THE BAR LEDS ACCORDING TO THE DEFINED MEASUREMENTS ** //\n// Get the values to display\nlet CL = flow.get('CPU_Load'); //CPU Load\nlet CT = flow.get('CPU_Temp'); //CPU Temperature\nlet OT = flow.get('Osc_Temp'); //Oscillator Temperature\nlet ET = flow.get('Sense_Temp'); //SenseHAT Environmental Temperature\n\n\n// Create the bar for the SenseHAT LEDs at a given row based on the given value\nfunction bar(row, value){\n    // Defining the main colors\n    let G = '#005500'; // Green\n    let R = '#550000'; // Red\n    let Y = '#555500'; // Yellow\n    let N = '#000000'; // N = No color => Black\n    let LEDs = '';\n    switch (true) {\n        case (value < 20):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+N+\",\"+row+\",3,\"+N+\",\"+row+\",2,\"+N+\",\"+row+\",1,\"+N;\n            break;\n        case (value < 40):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+N+\",\"+row+\",2,\"+N+\",\"+row+\",1,\"+N;\n            break;\n        case (value < 60):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+G+\",\"+row+\",2,\"+N+\",\"+row+\",1,\"+N;\n            break;\n        case (value < 80):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+G+\",\"+row+\",2,\"+Y+\",\"+row+\",1,\"+N;\n            break;\n        default:\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+G+\",\"+row+\",2,\"+Y+\",\"+row+\",1,\"+R;\n            break;\n    }\n    return LEDs;\n}\n\n// The bars will be at 0,2,4,6\nmsg.payload += \",\"+bar(0,CL)+\",\"+bar(2,CT)+\",\"+bar(4,OT)+\",\"+bar(6,ET);\n\n\n// ** BLINK THE CONNECTION LED ACCORDING TO ITS STATE FOR 1/4 SECOND ** //\nsetTimeout( function() {\n    if ( flow.get('sense-hat-busy') ) {\n        return [null, null]; // don't do anything...\n    }\n    node.send({ payload: '0,7,' + mqttStatus[1]});  //Make the MQTT state blink\n}, 250 );\n\n\nreturn [msg,null];\n",
         "outputs": 2,
@@ -2465,19 +2519,19 @@
         "y": 820,
         "wires": [
             [
-                "61aeeef9.cd19f",
-                "1e0e35513a7c25d8"
+                "2339239b7e619da8",
+                "b313d0034f84e52b"
             ],
             [
-                "d723898d.d07728",
-                "cdf48f1d.8f437"
+                "f05434bc8b099e6c",
+                "48a72286dd0a4013"
             ]
         ]
     },
     {
-        "id": "9f5355aa.e076e8",
+        "id": "a6e7ea80f9702735",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Clear LEDs",
         "func": "\nclearTimeout( flow.get('sense-hat-busy-to') );\nflow.set('sense-hat-busy', true );\nflow.set('sense-hat-busy-to', setTimeout( function(){\n    flow.set('sense-hat-busy', false );\n}, 1*1000 )); // 1 sec\nmsg.payload = \"*,*,#000000\";\n\nreturn msg;\n",
         "outputs": 1,
@@ -2486,33 +2540,32 @@
         "y": 900,
         "wires": [
             [
-                "fef14420.038a38",
-                "1e0e35513a7c25d8"
+                "a78deae23f37657c",
+                "b313d0034f84e52b"
             ]
         ]
     },
     {
-        "id": "63d4a9df.4ebc78",
+        "id": "0aadbca62592c880",
         "type": "link in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "ClearLEDs",
         "links": [
-            "8702cce6.85d2a",
-            "74b0e337.ce1efc",
-            "d723898d.d07728"
+            "053de5b72a59217e",
+            "f05434bc8b099e6c"
         ],
         "x": 155,
         "y": 900,
         "wires": [
             [
-                "9f5355aa.e076e8"
+                "a6e7ea80f9702735"
             ]
         ]
     },
     {
-        "id": "1e58cc1b.2027b4",
+        "id": "daf18ba0e38a0372",
         "type": "rpi-sensehat in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Joystick",
         "motion": false,
         "env": false,
@@ -2521,15 +2574,15 @@
         "y": 380,
         "wires": [
             [
-                "641ce781.df92a8",
-                "abc7d339.0315e"
+                "b146b3b00be2532b",
+                "457a628aeaf2e873"
             ]
         ]
     },
     {
-        "id": "641ce781.df92a8",
+        "id": "b146b3b00be2532b",
         "type": "switch",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Key State",
         "property": "payload.state",
         "propertyType": "msg",
@@ -2556,11 +2609,11 @@
         "y": 460,
         "wires": [
             [
-                "994fb5c6.7df708"
+                "d5108d6de5d66f14"
             ],
             [],
             [
-                "455d4547.e47b1c"
+                "2cd9c06518f98e07"
             ]
         ],
         "outputLabels": [
@@ -2570,9 +2623,9 @@
         ]
     },
     {
-        "id": "994fb5c6.7df708",
+        "id": "d5108d6de5d66f14",
         "type": "switch",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Key Press",
         "property": "payload.key",
         "propertyType": "msg",
@@ -2605,15 +2658,15 @@
         "y": 440,
         "wires": [
             [
-                "5eb77e76.813eb",
-                "8e7972e01eead2a2"
+                "1b7ad23874f5fe96",
+                "349c66ee2fe27f8a"
             ],
             [
-                "7134a1e.5257b6"
+                "ea35bcca5910c598"
             ],
             [],
             [
-                "7c858be8.90ea14"
+                "47c3ce682abff4d1"
             ]
         ],
         "outputLabels": [
@@ -2624,9 +2677,9 @@
         ]
     },
     {
-        "id": "81cbdcf9.b0148",
+        "id": "f3a4bda1507ed07e",
         "type": "exec",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "command": "hostname",
         "addpay": false,
         "append": "-I",
@@ -2638,21 +2691,20 @@
         "y": 300,
         "wires": [
             [
-                "7e989acc.bb6684",
-                "f104dbb7.601538"
+                "e14c319704ae8871",
+                "82ac2043a2c0b806"
             ],
             [],
             []
         ]
     },
     {
-        "id": "7e989acc.bb6684",
+        "id": "e14c319704ae8871",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "IP Address",
         "func": "let ipAddresses = msg.payload.trim().split(\" \");\n\nlet ipAddressV4 = ipAddresses[0];\n\nmsg.payload = 'IP: ' + ipAddressV4;\nmsg.color   = '#0000ff'; // Blue\n\nreturn msg;",
         "outputs": 1,
-        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -2661,27 +2713,27 @@
         "y": 320,
         "wires": [
             [
-                "242905b7.d04f5a",
-                "3422a63a36af4b72"
+                "5180d86f2c92d53e",
+                "659f10f3d232dd1c"
             ]
         ]
     },
     {
-        "id": "242905b7.d04f5a",
+        "id": "5180d86f2c92d53e",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show IP Address",
         "links": [
-            "6f3188d.c8e1778"
+            "93b5fb9030bae28e"
         ],
         "x": 1275,
         "y": 320,
         "wires": []
     },
     {
-        "id": "a5c71bff.478c88",
+        "id": "cb21bef1332ac21c",
         "type": "exec",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "command": "cat",
         "addpay": false,
         "append": "/sys/class/net/e*/address",
@@ -2693,16 +2745,16 @@
         "y": 420,
         "wires": [
             [
-                "4dcd0d98.f8d904"
+                "3de16ef7e315fa71"
             ],
             [],
             []
         ]
     },
     {
-        "id": "4dcd0d98.f8d904",
+        "id": "3de16ef7e315fa71",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "MAC Address",
         "func": "\nmsg.payload = 'MAC: ' + msg.payload.trim().replace(/:/g,' ');\n\nmsg.color = '#00ff00'; // GREEN\n\nreturn msg;",
         "outputs": 1,
@@ -2711,26 +2763,26 @@
         "y": 440,
         "wires": [
             [
-                "79326522.f6dc3c"
+                "0cd9f7d3c9733876"
             ]
         ]
     },
     {
-        "id": "79326522.f6dc3c",
+        "id": "0cd9f7d3c9733876",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show MAC Address",
         "links": [
-            "6f3188d.c8e1778"
+            "93b5fb9030bae28e"
         ],
         "x": 1275,
         "y": 440,
         "wires": []
     },
     {
-        "id": "5d1e1cd4.65bdf4",
+        "id": "83d02925812c6fb1",
         "type": "exec",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "command": "iwgetid",
         "addpay": false,
         "append": "",
@@ -2742,16 +2794,16 @@
         "y": 360,
         "wires": [
             [
-                "a429bd00.67842"
+                "ead9234434f0d32d"
             ],
             [],
             []
         ]
     },
     {
-        "id": "a429bd00.67842",
+        "id": "ead9234434f0d32d",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "WIFI SSID",
         "func": "\nvar wifi = msg.payload.match(/SSID:\"(.*)\"/);\n\nif ( wifi ) {\n    \n    msg.payload = 'WIFI: ' + wifi[1];\n    msg.color   = '#ffff00'; // Yellow\n    \n} else {\n\n    msg.payload = 'NO WIFI';\n    msg.color   = '#ff0000'; // Red\n    \n}\n\n\nreturn msg;",
         "outputs": 1,
@@ -2760,26 +2812,26 @@
         "y": 380,
         "wires": [
             [
-                "c0710a72.cd3d18"
+                "3821b73e859ec40f"
             ]
         ]
     },
     {
-        "id": "c0710a72.cd3d18",
+        "id": "3821b73e859ec40f",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show SSID",
         "links": [
-            "6f3188d.c8e1778"
+            "93b5fb9030bae28e"
         ],
         "x": 1275,
         "y": 380,
         "wires": []
     },
     {
-        "id": "5eb77e76.813eb",
+        "id": "1b7ad23874f5fe96",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "next msg",
         "func": "\nvar STATUS_MESSAGE_COUNT = 3; // total number of status messages\n\nvar statusIndex = context.get('next-status') || 0;\n\nmsg.payload = statusIndex % STATUS_MESSAGE_COUNT;\n\ncontext.set('next-status', statusIndex + 1 );\n\nreturn msg;",
         "outputs": 1,
@@ -2788,15 +2840,15 @@
         "y": 420,
         "wires": [
             [
-                "b87ea44d.b8bfc8",
-                "9e097d2abe9d08af"
+                "76156bd284c44107",
+                "c8986b2efe5ea864"
             ]
         ]
     },
     {
-        "id": "b87ea44d.b8bfc8",
+        "id": "76156bd284c44107",
         "type": "switch",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "status msg",
         "property": "payload",
         "propertyType": "msg",
@@ -2823,21 +2875,21 @@
         "y": 420,
         "wires": [
             [
-                "81cbdcf9.b0148",
-                "bb68e11e.54342"
+                "f3a4bda1507ed07e",
+                "87a0d03591b9218c"
             ],
             [
-                "5d1e1cd4.65bdf4"
+                "83d02925812c6fb1"
             ],
             [
-                "a5c71bff.478c88"
+                "cb21bef1332ac21c"
             ]
         ]
     },
     {
-        "id": "455d4547.e47b1c",
+        "id": "2cd9c06518f98e07",
         "type": "switch",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Held Down",
         "property": "payload.key",
         "propertyType": "msg",
@@ -2855,7 +2907,7 @@
         "y": 620,
         "wires": [
             [
-                "b1d0e69a.352138"
+                "bf4c1848a3227b77"
             ]
         ],
         "outputLabels": [
@@ -2863,9 +2915,9 @@
         ]
     },
     {
-        "id": "b1d0e69a.352138",
+        "id": "bf4c1848a3227b77",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Shutdown?",
         "func": "\n//\n// 'Press and hold' a button logic\n//\n\nclearTimeout( flow.get('status-timeout') );\nflow.set( 'status-timout', setTimeout( function(){\n    flow.set( 'status-timeout', 0 );\n}));\n\nvar count = flow.get('shutdown-count') || 0;\ncount = count + 1\nmsg.count = count;\nflow.set( 'shutdown-count', count );\n\nif ( count < 120 ){\n    return null; // don't pass this message on\n}\n\n// we have a shutdown event!\n\nmsg.payload = \"SHUTDOWN\";\n\nreturn msg;\n",
         "outputs": 1,
@@ -2874,26 +2926,26 @@
         "y": 640,
         "wires": [
             [
-                "91f8c7e5.0a0c18"
+                "c0e3133d6cacbafc"
             ]
         ]
     },
     {
-        "id": "5ef43d55.94d584",
+        "id": "841735dc4fb244cd",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show Shutdown",
         "links": [
-            "6f3188d.c8e1778"
+            "93b5fb9030bae28e"
         ],
         "x": 855,
         "y": 600,
         "wires": []
     },
     {
-        "id": "f817e42e.6e78d8",
+        "id": "8ebce9b0fa2fbaa6",
         "type": "delay",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -2910,27 +2962,27 @@
         "y": 640,
         "wires": [
             [
-                "74b0e337.ce1efc",
-                "96e85256.49588"
+                "053de5b72a59217e",
+                "c73e2ce0f92e6469"
             ]
         ]
     },
     {
-        "id": "74b0e337.ce1efc",
+        "id": "053de5b72a59217e",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show empty",
         "links": [
-            "63d4a9df.4ebc78"
+            "0aadbca62592c880"
         ],
         "x": 1035,
         "y": 600,
         "wires": []
     },
     {
-        "id": "91f8c7e5.0a0c18",
+        "id": "c0e3133d6cacbafc",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Shutdown!",
         "func": "\nmsg.payload = \"SHUTDOWN\";\nmsg.color   = \"#ff0000\";\n\n// prevent another message from getting through while the pi shuts down\nclearTimeout( flow.get('status-timeout') );\n\n// prevent another shutdown event from getting through\nflow.set( 'shutdown-count', -9999 );\n\nreturn msg;\n",
         "outputs": 1,
@@ -2939,36 +2991,32 @@
         "y": 640,
         "wires": [
             [
-                "5ef43d55.94d584",
-                "f817e42e.6e78d8"
+                "841735dc4fb244cd",
+                "8ebce9b0fa2fbaa6"
             ]
         ]
     },
     {
-        "id": "4886db3.a7fff24",
+        "id": "979f03589cbf97a0",
         "type": "link in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Update Status Indicators",
         "links": [
-            "d2b629d9.50c318",
-            "aaa5d932.8ca748",
-            "48d800d9.dd31e",
-            "4fb26f7f.d1de7",
-            "57d128ad.11b338"
+            "01407065272b81cd"
         ],
         "x": 155,
         "y": 780,
         "wires": [
             [
-                "13def283.ec4b2d",
-                "3188a2.e5d0675e"
+                "3c173e48a677aaca",
+                "4e2b1869259fe27b"
             ]
         ]
     },
     {
-        "id": "13e35a00.605916",
+        "id": "afa3e4cc67aff56c",
         "type": "comment",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Handle SenseHAT Joystick Events",
         "info": "",
         "x": 160,
@@ -2976,9 +3024,9 @@
         "wires": []
     },
     {
-        "id": "29046969.ba2ff6",
+        "id": "5a45751d0751f3cc",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "LED Display",
         "active": false,
         "tosidebar": true,
@@ -2991,9 +3039,9 @@
         "wires": []
     },
     {
-        "id": "a8ddf4c7.b5c138",
+        "id": "d1e44506c0e728a8",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "rotate",
         "func": "msg.payload= \"R180\\n\"+msg.payload;\nreturn msg;",
         "outputs": 1,
@@ -3002,15 +3050,15 @@
         "y": 900,
         "wires": [
             [
-                "f826ab92.72b188",
-                "29046969.ba2ff6"
+                "511824978207f8c4",
+                "5a45751d0751f3cc"
             ]
         ]
     },
     {
-        "id": "81656c01.f7fd6",
+        "id": "d09a3b6a6fbc7b16",
         "type": "delay",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -3027,14 +3075,14 @@
         "y": 120,
         "wires": [
             [
-                "81cbdcf9.b0148"
+                "f3a4bda1507ed07e"
             ]
         ]
     },
     {
-        "id": "3e1d541f.78f47c",
+        "id": "93fd161e6319eb00",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Initialize",
         "func": "flow.set('displayOff', false);\nreturn msg;",
         "outputs": 1,
@@ -3043,14 +3091,14 @@
         "y": 120,
         "wires": [
             [
-                "81656c01.f7fd6"
+                "d09a3b6a6fbc7b16"
             ]
         ]
     },
     {
-        "id": "bb68e11e.54342",
+        "id": "87a0d03591b9218c",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Get IP Address",
         "active": false,
         "tosidebar": true,
@@ -3065,9 +3113,9 @@
         "wires": []
     },
     {
-        "id": "f104dbb7.601538",
+        "id": "82ac2043a2c0b806",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "IP Address",
         "active": false,
         "tosidebar": true,
@@ -3082,9 +3130,9 @@
         "wires": []
     },
     {
-        "id": "f00eccd1.0ec9b",
+        "id": "a12ec22338fcf9c4",
         "type": "comment",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "This flow handles the interaction with the SenseHAT",
         "info": "",
         "x": 210,
@@ -3092,9 +3140,9 @@
         "wires": []
     },
     {
-        "id": "42de917c.07f92",
+        "id": "0f08e6e38c113b82",
         "type": "comment",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Initialization",
         "info": "",
         "x": 90,
@@ -3102,9 +3150,9 @@
         "wires": []
     },
     {
-        "id": "c5ed0ec8.8a252",
+        "id": "49b507eedf19cfe5",
         "type": "http in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "url": "/measures",
         "method": "get",
@@ -3114,14 +3162,14 @@
         "y": 1140,
         "wires": [
             [
-                "f6ca38a4.806b38"
+                "f1bef6b249056980"
             ]
         ]
     },
     {
-        "id": "f6ca38a4.806b38",
+        "id": "f1bef6b249056980",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "last measures",
         "func": "\nmsg.payload = {\n    environment: global.get('environment'),\n    motion: global.get('motion'),\n}\n\nreturn msg;",
         "outputs": 1,
@@ -3130,14 +3178,14 @@
         "y": 1140,
         "wires": [
             [
-                "ca4d4bf3.0a7b18"
+                "57dc4c7982de8c71"
             ]
         ]
     },
     {
-        "id": "ca4d4bf3.0a7b18",
+        "id": "57dc4c7982de8c71",
         "type": "http response",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "statusCode": "",
         "headers": {},
@@ -3146,9 +3194,9 @@
         "wires": []
     },
     {
-        "id": "9ec0a50b.f9c978",
+        "id": "0d6191e5c2e7de91",
         "type": "inject",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Clear",
         "repeat": "",
         "crontab": "",
@@ -3161,14 +3209,14 @@
         "y": 940,
         "wires": [
             [
-                "9f5355aa.e076e8"
+                "a6e7ea80f9702735"
             ]
         ]
     },
     {
-        "id": "7c858be8.90ea14",
+        "id": "47c3ce682abff4d1",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Toggle Display",
         "func": "flow.set( 'displayOff', !flow.get('displayOff') );\n\nmsg.payload = flow.get('displayOff');\n\nreturn msg;",
         "outputs": 1,
@@ -3177,26 +3225,26 @@
         "y": 560,
         "wires": [
             [
-                "57d128ad.11b338"
+                "01407065272b81cd"
             ]
         ]
     },
     {
-        "id": "57d128ad.11b338",
+        "id": "01407065272b81cd",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Toggle Display",
         "links": [
-            "4886db3.a7fff24"
+            "979f03589cbf97a0"
         ],
         "x": 675,
         "y": 560,
         "wires": []
     },
     {
-        "id": "3188a2.e5d0675e",
+        "id": "4e2b1869259fe27b",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -3209,9 +3257,9 @@
         "wires": []
     },
     {
-        "id": "abc7d339.0315e",
+        "id": "457a628aeaf2e873",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Joystick",
         "active": false,
         "tosidebar": true,
@@ -3226,21 +3274,21 @@
         "wires": []
     },
     {
-        "id": "d723898d.d07728",
+        "id": "f05434bc8b099e6c",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Display Off",
         "links": [
-            "63d4a9df.4ebc78"
+            "0aadbca62592c880"
         ],
         "x": 695,
         "y": 780,
         "wires": []
     },
     {
-        "id": "61aeeef9.cd19f",
+        "id": "2339239b7e619da8",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "DisplayON",
         "active": false,
         "tosidebar": true,
@@ -3253,9 +3301,9 @@
         "wires": []
     },
     {
-        "id": "cdf48f1d.8f437",
+        "id": "48a72286dd0a4013",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "DisplayOFF",
         "active": false,
         "tosidebar": true,
@@ -3268,9 +3316,9 @@
         "wires": []
     },
     {
-        "id": "7cf1a8d2.c5aa48",
+        "id": "14a6faadfecbf1cf",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Scroll Msg",
         "active": false,
         "tosidebar": true,
@@ -3285,9 +3333,9 @@
         "wires": []
     },
     {
-        "id": "fef14420.038a38",
+        "id": "a78deae23f37657c",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -3299,25 +3347,24 @@
         "wires": []
     },
     {
-        "id": "96e85256.49588",
+        "id": "c73e2ce0f92e6469",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Shutdown Out",
         "links": [
-            "49f3a23.ff3565c"
+            "95986bb76a75b1f9"
         ],
         "x": 1035,
         "y": 640,
         "wires": []
     },
     {
-        "id": "8f588a0f.0949d8",
+        "id": "5e04dae0da5bed65",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "RPE Name",
         "func": "let name = global.get('RPE-Name');\n\nmsg.payload = 'ID: ' + name;\nmsg.color   = '#0000ff'; // Blue\n\nreturn msg;",
         "outputs": 1,
-        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -3326,14 +3373,14 @@
         "y": 480,
         "wires": [
             [
-                "667d8fc8.4d342"
+                "143e14c6f7f34efb"
             ]
         ]
     },
     {
-        "id": "7134a1e.5257b6",
+        "id": "ea35bcca5910c598",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "next msg",
         "func": "\nvar STATUS_MESSAGE_COUNT = 3; // total number of status messages\n\nvar statusIndex = context.get('next-status') || 0;\n\nmsg.payload = statusIndex % STATUS_MESSAGE_COUNT;\n\ncontext.set('next-status', statusIndex + 1 );\n\nreturn msg;",
         "outputs": 1,
@@ -3342,14 +3389,14 @@
         "y": 480,
         "wires": [
             [
-                "5ea8f4d1.16ceec"
+                "d63f8a700883fc4f"
             ]
         ]
     },
     {
-        "id": "5ea8f4d1.16ceec",
+        "id": "d63f8a700883fc4f",
         "type": "switch",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "status msg",
         "property": "payload",
         "propertyType": "msg",
@@ -3377,20 +3424,20 @@
         "y": 480,
         "wires": [
             [
-                "8f588a0f.0949d8"
+                "5e04dae0da5bed65"
             ],
             [
-                "e913af4b.58352"
+                "873ad173208c0382"
             ],
             [
-                "63d2f6f4.7eb078"
+                "9b696198fc8884d9"
             ]
         ]
     },
     {
-        "id": "63d2f6f4.7eb078",
+        "id": "9b696198fc8884d9",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Hardware Version",
         "func": "let hw = global.get('hardware');\n\nmsg.payload = 'HW: ' + hw;\nmsg.color   = '#00ff00'; // Green\n\nreturn msg;",
         "outputs": 1,
@@ -3399,55 +3446,54 @@
         "y": 560,
         "wires": [
             [
-                "70039e4b.ad13"
+                "5832e2bd41458234"
             ]
         ]
     },
     {
-        "id": "667d8fc8.4d342",
+        "id": "143e14c6f7f34efb",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show RPE ID Version",
         "links": [
-            "6f3188d.c8e1778"
+            "93b5fb9030bae28e"
         ],
         "x": 1275,
         "y": 480,
         "wires": []
     },
     {
-        "id": "70039e4b.ad13",
+        "id": "5832e2bd41458234",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show Hardware Version",
         "links": [
-            "6f3188d.c8e1778"
+            "93b5fb9030bae28e"
         ],
         "x": 1275,
         "y": 560,
         "wires": []
     },
     {
-        "id": "616545ae.4f238c",
+        "id": "23e9846877106c65",
         "type": "link in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Payload to LEDs",
         "links": [
-            "bc98cb86.872a18",
-            "7f954fc5.82dd7"
+            "8519296f2a4314a6"
         ],
         "x": 155,
         "y": 980,
         "wires": [
             [
-                "d13fc428.8b4e08"
+                "004d51c1439f438f"
             ]
         ]
     },
     {
-        "id": "d13fc428.8b4e08",
+        "id": "004d51c1439f438f",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Set bar values to display",
         "func": "// Select the values to display\nflow.set('CPU_Load', msg.payload.cl); //CPU Load\nflow.set('CPU_Temp', msg.payload.ct); //CPU Temperature\nflow.set('Osc_Temp', msg.payload.ot); //Oscillator Temperature\nflow.set('Sense_Temp', msg.payload.et); //SenseHAT Temperature\n",
         "outputs": 0,
@@ -3457,9 +3503,9 @@
         "wires": []
     },
     {
-        "id": "e913af4b.58352",
+        "id": "873ad173208c0382",
         "type": "function",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Software Version",
         "func": "let sw = global.get('software');\n\nmsg.payload = 'SW: ' + sw;\nmsg.color   = '#ffff00'; // Yellow\n\nreturn msg;",
         "outputs": 1,
@@ -3468,42 +3514,42 @@
         "y": 520,
         "wires": [
             [
-                "b253fd59.cbd0d"
+                "e0d29645c6ac796f"
             ]
         ]
     },
     {
-        "id": "b253fd59.cbd0d",
+        "id": "e0d29645c6ac796f",
         "type": "link out",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Show Software Version",
         "links": [
-            "6f3188d.c8e1778"
+            "93b5fb9030bae28e"
         ],
         "x": 1275,
         "y": 520,
         "wires": []
     },
     {
-        "id": "a2abf7d778d721e6",
+        "id": "2e973c545057ae12",
         "type": "link in",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Shutdown",
         "links": [
-            "aff0c453dfee6238"
+            "6069954fba0a3dd0"
         ],
         "x": 585,
         "y": 600,
         "wires": [
             [
-                "91f8c7e5.0a0c18"
+                "c0e3133d6cacbafc"
             ]
         ]
     },
     {
-        "id": "8e7972e01eead2a2",
+        "id": "349c66ee2fe27f8a",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Key Pressed",
         "active": false,
         "tosidebar": true,
@@ -3518,9 +3564,9 @@
         "wires": []
     },
     {
-        "id": "9e097d2abe9d08af",
+        "id": "c8986b2efe5ea864",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "Down",
         "active": false,
         "tosidebar": true,
@@ -3535,9 +3581,9 @@
         "wires": []
     },
     {
-        "id": "3422a63a36af4b72",
+        "id": "659f10f3d232dd1c",
         "type": "debug",
-        "z": "8d9ccddd.ba723",
+        "z": "5c01f085dcb66947",
         "name": "IP to be shown",
         "active": false,
         "tosidebar": true,
@@ -3552,9 +3598,9 @@
         "wires": []
     },
     {
-        "id": "96ff70c2.ce962",
+        "id": "09ca559c4697dac2",
         "type": "exec",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "command": "sysbench --test=cpu --cpu-max-prime=100000 --num-threads=3 --max-time=300 run",
         "addpay": false,
         "append": "",
@@ -3566,23 +3612,23 @@
         "y": 180,
         "wires": [
             [
-                "e51d5d10.e6a52",
-                "ad80f541.b7ec18"
+                "aedd23cc9907a1e2",
+                "d08f3a5c31280e7a"
             ],
             [
-                "3553d28e.2e394e",
-                "cb3a22bd.eadbc"
+                "5c8575f68f024acb",
+                "4b7da3661979ad49"
             ],
             [
-                "386197d1.267f28",
-                "572d7863.d80c68"
+                "44710764266c8da3",
+                "3443c7bfd6b6af25"
             ]
         ]
     },
     {
-        "id": "e51d5d10.e6a52",
+        "id": "aedd23cc9907a1e2",
         "type": "debug",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "1 - Complete",
         "active": false,
         "tosidebar": true,
@@ -3595,9 +3641,9 @@
         "wires": []
     },
     {
-        "id": "3553d28e.2e394e",
+        "id": "5c8575f68f024acb",
         "type": "debug",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "2 - Complete",
         "active": false,
         "tosidebar": true,
@@ -3610,9 +3656,9 @@
         "wires": []
     },
     {
-        "id": "386197d1.267f28",
+        "id": "44710764266c8da3",
         "type": "debug",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "3 - Complete",
         "active": false,
         "tosidebar": true,
@@ -3625,9 +3671,9 @@
         "wires": []
     },
     {
-        "id": "ad80f541.b7ec18",
+        "id": "d08f3a5c31280e7a",
         "type": "debug",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "1 - Payload",
         "active": false,
         "tosidebar": true,
@@ -3640,9 +3686,9 @@
         "wires": []
     },
     {
-        "id": "cb3a22bd.eadbc",
+        "id": "4b7da3661979ad49",
         "type": "debug",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "2 - Payload",
         "active": false,
         "tosidebar": true,
@@ -3655,9 +3701,9 @@
         "wires": []
     },
     {
-        "id": "572d7863.d80c68",
+        "id": "3443c7bfd6b6af25",
         "type": "debug",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "3 - Payload",
         "active": false,
         "tosidebar": true,
@@ -3670,9 +3716,9 @@
         "wires": []
     },
     {
-        "id": "62d71dfe.1d3b54",
+        "id": "3cff62199dd62d41",
         "type": "cronplus",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "",
         "outputField": "payload",
         "timeZone": "Europe/Copenhagen",
@@ -3690,15 +3736,15 @@
         "y": 200,
         "wires": [
             [
-                "d59697c1.043ad8",
-                "96ff70c2.ce962"
+                "f9db7df60355d2ad",
+                "09ca559c4697dac2"
             ]
         ]
     },
     {
-        "id": "d59697c1.043ad8",
+        "id": "f9db7df60355d2ad",
         "type": "debug",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "CRON+ Output",
         "active": false,
         "tosidebar": true,
@@ -3711,9 +3757,9 @@
         "wires": []
     },
     {
-        "id": "abfcbdf6.1d14c",
+        "id": "3c0ff42594800780",
         "type": "comment",
-        "z": "798bf7c0.ef5a68",
+        "z": "1ba9ecdc13615029",
         "name": "This script handles the scheduled load test generation",
         "info": "",
         "x": 220,
@@ -3721,48 +3767,48 @@
         "wires": []
     },
     {
-        "id": "6b0e66f9.ec6958",
+        "id": "5003ce4774f9c71a",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "CPU Temp Dashboard",
         "links": [
-            "c11d10c2.4add4"
+            "147225d3911acdef"
         ],
         "x": 195,
         "y": 120,
         "wires": [
             [
-                "11148252.1904fe",
-                "f378ef61.d3f79"
+                "dc857b3b9835fbd8",
+                "2efce66f5a826f3e"
             ]
         ]
     },
     {
-        "id": "528ff4ba.02c95c",
+        "id": "0551d431530cb913",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "CPU Load Dashboard",
         "links": [
-            "c0ad344.6f87fc8"
+            "62d764d9efdeed49"
         ],
         "x": 195,
         "y": 220,
         "wires": [
             [
-                "c4a3bdd.400584",
-                "fb87fa09.6f1a58"
+                "17b408d50477a981",
+                "eb19b0754b1ad77f"
             ]
         ]
     },
     {
-        "id": "11148252.1904fe",
+        "id": "dc857b3b9835fbd8",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "256c4300.e3f7fc",
+        "group": "79c576528b6aa971",
         "order": 1,
         "width": "6",
         "height": "5",
@@ -3784,12 +3830,12 @@
         "wires": []
     },
     {
-        "id": "f378ef61.d3f79",
+        "id": "2efce66f5a826f3e",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "a7453a16.b230e8",
+        "group": "dccd0cde175bd172",
         "order": 1,
         "width": "20",
         "height": "5",
@@ -3827,12 +3873,12 @@
         ]
     },
     {
-        "id": "c4a3bdd.400584",
+        "id": "17b408d50477a981",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "256c4300.e3f7fc",
+        "group": "79c576528b6aa971",
         "order": 1,
         "width": "6",
         "height": "5",
@@ -3854,12 +3900,12 @@
         "wires": []
     },
     {
-        "id": "fb87fa09.6f1a58",
+        "id": "eb19b0754b1ad77f",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "a7453a16.b230e8",
+        "group": "dccd0cde175bd172",
         "order": 1,
         "width": "20",
         "height": "5",
@@ -3897,30 +3943,30 @@
         ]
     },
     {
-        "id": "bfcb89f6.7bb3c8",
+        "id": "942f20dbf2bf5429",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "OSC Frequency Dashboard",
         "links": [
-            "cae323ee.ed361"
+            "b408b369295b54ba"
         ],
         "x": 195,
         "y": 320,
         "wires": [
             [
-                "a67e412b.a5c0f",
-                "c45627bc.0370f8"
+                "acb2a740222b6c5f",
+                "a0f9de536d2ce7f9"
             ]
         ]
     },
     {
-        "id": "a67e412b.a5c0f",
+        "id": "acb2a740222b6c5f",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "256c4300.e3f7fc",
+        "group": "79c576528b6aa971",
         "order": 1,
         "width": "6",
         "height": "4",
@@ -3942,12 +3988,12 @@
         "wires": []
     },
     {
-        "id": "c45627bc.0370f8",
+        "id": "a0f9de536d2ce7f9",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "a7453a16.b230e8",
+        "group": "dccd0cde175bd172",
         "order": 1,
         "width": "20",
         "height": "4",
@@ -3985,30 +4031,30 @@
         ]
     },
     {
-        "id": "71f4c228.47365c",
+        "id": "3d96998cdedbe218",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "Osc Voltagte Dashboard",
         "links": [
-            "aa4303ca.ea1b3"
+            "c3eb06c1eedc3618"
         ],
         "x": 195,
         "y": 420,
         "wires": [
             [
-                "17194546.60dadb",
-                "c310f74c.3775b8"
+                "bf1ce3e32b511bb0",
+                "5755cd310f917157"
             ]
         ]
     },
     {
-        "id": "17194546.60dadb",
+        "id": "bf1ce3e32b511bb0",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "256c4300.e3f7fc",
+        "group": "79c576528b6aa971",
         "order": 1,
         "width": "6",
         "height": "4",
@@ -4030,12 +4076,12 @@
         "wires": []
     },
     {
-        "id": "c310f74c.3775b8",
+        "id": "5755cd310f917157",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "a7453a16.b230e8",
+        "group": "dccd0cde175bd172",
         "order": 1,
         "width": "20",
         "height": "4",
@@ -4073,30 +4119,30 @@
         ]
     },
     {
-        "id": "4e4f7135.3f02a",
+        "id": "43fa76ab2533fa89",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "OSC Temperature Dashboard",
         "links": [
-            "85ea289c.fc3c98"
+            "40b73327b2157870"
         ],
         "x": 195,
         "y": 520,
         "wires": [
             [
-                "b5183470.dad128",
-                "58f89348.065e6c"
+                "9c67d25466125c20",
+                "01fdf65d504bfec7"
             ]
         ]
     },
     {
-        "id": "b5183470.dad128",
+        "id": "9c67d25466125c20",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "256c4300.e3f7fc",
+        "group": "79c576528b6aa971",
         "order": 1,
         "width": "6",
         "height": "4",
@@ -4118,12 +4164,12 @@
         "wires": []
     },
     {
-        "id": "58f89348.065e6c",
+        "id": "01fdf65d504bfec7",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "2b6eb1450d283f25",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
         "name": "",
-        "group": "a7453a16.b230e8",
+        "group": "dccd0cde175bd172",
         "order": 1,
         "width": "20",
         "height": "4",
@@ -4161,9 +4207,9 @@
         ]
     },
     {
-        "id": "7823c1d.0c8234",
+        "id": "3637ce27593a32be",
         "type": "comment",
-        "z": "61648ed7.6b2b5",
+        "z": "ef169a4f553187bd",
         "name": "This flow takes care of the local dashboard",
         "info": "",
         "x": 180,
@@ -4171,12 +4217,12 @@
         "wires": []
     },
     {
-        "id": "a4888d62.e88aa",
+        "id": "23bc52f1dd5562b1",
         "type": "ui_button",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
         "name": "",
-        "group": "93a92e04.c9567",
+        "group": "e5202e8463d4cbf2",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -4193,17 +4239,17 @@
         "y": 260,
         "wires": [
             [
-                "38e5f7a7.01ac38"
+                "63e6d0190cddc82b"
             ]
         ]
     },
     {
-        "id": "f98d4a79.9bfb28",
+        "id": "3dcc72bca8c0e6b5",
         "type": "ui_button",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
         "name": "",
-        "group": "93a92e04.c9567",
+        "group": "e5202e8463d4cbf2",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -4218,35 +4264,35 @@
         "y": 320,
         "wires": [
             [
-                "33a05fcb.9f36a"
+                "f9440cc23e7b8e76"
             ]
         ]
     },
     {
-        "id": "cab4d3a0.021a3",
+        "id": "050e7e9ed97e1e09",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "HAT Temperature Dashboard",
         "links": [
-            "b87965af.1f7108"
+            "de7672a0830ef659"
         ],
         "x": 195,
         "y": 660,
         "wires": [
             [
-                "b3d37c92.84876",
-                "5bbad246.5ec8cc"
+                "d61a46fedc282371",
+                "14b145c80498682c"
             ]
         ]
     },
     {
-        "id": "b3d37c92.84876",
+        "id": "d61a46fedc282371",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "",
-        "group": "cbb5541c.e417c8",
+        "group": "d7ef781262ba03c2",
         "order": 1,
         "width": "6",
         "height": "6",
@@ -4268,12 +4314,12 @@
         "wires": []
     },
     {
-        "id": "5bbad246.5ec8cc",
+        "id": "14b145c80498682c",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "",
-        "group": "af41c59d.611af8",
+        "group": "f501320b4b627325",
         "order": 1,
         "width": "20",
         "height": "6",
@@ -4311,56 +4357,56 @@
         ]
     },
     {
-        "id": "38e5f7a7.01ac38",
+        "id": "63e6d0190cddc82b",
         "type": "link out",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
         "name": "Reboot Out",
         "links": [
-            "3f72a9c2.75e276"
+            "7877acdac06f1582"
         ],
         "x": 1195,
         "y": 260,
         "wires": []
     },
     {
-        "id": "33a05fcb.9f36a",
+        "id": "f9440cc23e7b8e76",
         "type": "link out",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
         "name": "Shutdown Out",
         "links": [
-            "49f3a23.ff3565c"
+            "95986bb76a75b1f9"
         ],
         "x": 1195,
         "y": 320,
         "wires": []
     },
     {
-        "id": "2c232fc7.229d1",
+        "id": "3d7c21866d3e4ad3",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "HAT Temperature Dashboard",
         "links": [
-            "e9c8ac43.25581"
+            "2721829be039d7e3"
         ],
         "x": 195,
         "y": 740,
         "wires": [
             [
-                "eb088ca0.88a27",
-                "993656bc.a1f688"
+                "158f44ae8bd4e8be",
+                "e728703570843eda"
             ]
         ]
     },
     {
-        "id": "eb088ca0.88a27",
+        "id": "158f44ae8bd4e8be",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "",
-        "group": "cbb5541c.e417c8",
+        "group": "d7ef781262ba03c2",
         "order": 1,
         "width": "6",
         "height": "6",
@@ -4382,12 +4428,12 @@
         "wires": []
     },
     {
-        "id": "993656bc.a1f688",
+        "id": "e728703570843eda",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "",
-        "group": "af41c59d.611af8",
+        "group": "f501320b4b627325",
         "order": 1,
         "width": "20",
         "height": "6",
@@ -4425,30 +4471,30 @@
         ]
     },
     {
-        "id": "57b66ea9.e1bf9",
+        "id": "fbedfbf5537f99f0",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "HAT Temperature Dashboard",
         "links": [
-            "1aa05db0.453482"
+            "e8005441ef2323e9"
         ],
         "x": 195,
         "y": 820,
         "wires": [
             [
-                "e61fec25.4d398",
-                "b2c02807.212498"
+                "71c8a6c328216080",
+                "6ccb96b5f7fa71d1"
             ]
         ]
     },
     {
-        "id": "e61fec25.4d398",
+        "id": "71c8a6c328216080",
         "type": "ui_gauge",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "",
-        "group": "cbb5541c.e417c8",
+        "group": "d7ef781262ba03c2",
         "order": 1,
         "width": "6",
         "height": "6",
@@ -4470,12 +4516,12 @@
         "wires": []
     },
     {
-        "id": "b2c02807.212498",
+        "id": "6ccb96b5f7fa71d1",
         "type": "ui_chart",
-        "z": "61648ed7.6b2b5",
-        "g": "d6c8a590b268b5ca",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
         "name": "",
-        "group": "af41c59d.611af8",
+        "group": "f501320b4b627325",
         "order": 1,
         "width": "20",
         "height": "6",
@@ -4513,11 +4559,11 @@
         ]
     },
     {
-        "id": "d274dc16.c88d8",
+        "id": "8be3e3b467709c3d",
         "type": "ui_text",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
-        "group": "16b26fd6.25c22",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "group": "b7898575f20f0298",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -4530,28 +4576,28 @@
         "wires": []
     },
     {
-        "id": "64d0e864.286e08",
+        "id": "9c4b61a820ea5130",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
         "name": "SW Information In",
         "links": [
-            "12c2ea86.d98775"
+            "952b253616bdc3e5"
         ],
         "x": 995,
         "y": 380,
         "wires": [
             [
-                "d274dc16.c88d8"
+                "8be3e3b467709c3d"
             ]
         ]
     },
     {
-        "id": "8463c0ca.2f3ab",
+        "id": "e1d014fd540e7aea",
         "type": "ui_text",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
-        "group": "16b26fd6.25c22",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "group": "b7898575f20f0298",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -4564,28 +4610,28 @@
         "wires": []
     },
     {
-        "id": "5be4c423.91ba4c",
+        "id": "678455e1a238c3e1",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "109b099115b3c4d0",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
         "name": "HW Information In",
         "links": [
-            "14daccb9.8c9ec3"
+            "914e131f2ae283b4"
         ],
         "x": 995,
         "y": 420,
         "wires": [
             [
-                "8463c0ca.2f3ab"
+                "e1d014fd540e7aea"
             ]
         ]
     },
     {
-        "id": "31adf671.4e490a",
+        "id": "264051881213693d",
         "type": "ui_template",
-        "z": "61648ed7.6b2b5",
-        "g": "08b8b87636998369",
-        "group": "256c4300.e3f7fc",
+        "z": "ef169a4f553187bd",
+        "g": "4f048d898ba582cf",
+        "group": "79c576528b6aa971",
         "name": "Toolbar",
         "order": 6,
         "width": "0",
@@ -4602,11 +4648,11 @@
         ]
     },
     {
-        "id": "208c4960.254676",
+        "id": "27fbf1d911a76a2d",
         "type": "ui_template",
-        "z": "61648ed7.6b2b5",
-        "g": "08b8b87636998369",
-        "group": "cbb5541c.e417c8",
+        "z": "ef169a4f553187bd",
+        "g": "4f048d898ba582cf",
+        "group": "d7ef781262ba03c2",
         "name": "Toolbar",
         "order": 6,
         "width": "0",
@@ -4623,20 +4669,20 @@
         ]
     },
     {
-        "id": "9aaf1603.7370d8",
+        "id": "4a9c1d224c39f3d8",
         "type": "link in",
-        "z": "61648ed7.6b2b5",
-        "g": "08b8b87636998369",
+        "z": "ef169a4f553187bd",
+        "g": "4f048d898ba582cf",
         "name": "Header Info",
         "links": [
-            "5b723801.664c68"
+            "fcef0f5a51b4cae4"
         ],
         "x": 895,
         "y": 120,
         "wires": [
             [
-                "31adf671.4e490a",
-                "208c4960.254676"
+                "264051881213693d",
+                "27fbf1d911a76a2d"
             ]
         ]
     }

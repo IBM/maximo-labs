@@ -15,12 +15,12 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Suite Overview](mas_9.0/)                 | [Reliability Strategies](mas_9.0/demo-rsl)                            |
-|                                                   | [Monitor](mas_9.0/demo-monitor)                                       |
-|                                                   | [Visual Inspection](mas_9.0/demo-mvi)                                 |
-|                                                   | [Manage](mas_9.0/demo-manage)                                 |
-|                                                   | [Mobile](mas_9.0/demo-mobile-assist)                                            |
-|                                                   | [Understand Asset Health and Predictive Maintenance](mas_9.0/demo-health-predict)|
+| [Maximo Application Suite 9.0 Overview](mas_9.0/)              | [Reliability Strategies](mas_9.0/demo-rsl)                            |
+|                                                                | [Monitor](mas_9.0/demo-monitor)                                       |
+|                                                                | [Visual Inspection](mas_9.0/demo-mvi)                                 |
+|                                                                | [Manage](mas_9.0/demo-manage)                                 |
+|                                                                | [Mobile](mas_9.0/demo-mobile-assist)                                            |
+|                                                                | [Understand Asset Health and Predictive Maintenance](mas_9.0/demo-health-predict)|
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -250,6 +250,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2024-11-20
+### UPDATED: 2025-01-15
 
 ---
