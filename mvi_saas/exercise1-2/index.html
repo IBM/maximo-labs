@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Cecilia Stark & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/exercise1-2/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1.2 Train and Deploy Model - Visual Inspection SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1.2 Train and Deploy Model";
+        var mkdocs_page_input_path = "exercise1-2.md";
+        var mkdocs_page_url = "/maximo-labs/exercise1-2/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Visual Inspection SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MVI SaaS Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the MVI Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise1-1/">1.1 DataSets</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1.2 Train and Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise1-3/">1.3 Create Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-1/">2.1 Create Inspection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-2/">2.2 Conduct Inspection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-3/">2.3 Dashboard Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nextsteps/">Next Steps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshoot/">Troubleshooting</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Visual Inspection SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1.2 Train and Deploy Model</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2>Exercise 1.2 - Train and Deploy a Deep Learning Model</h2>
+
+<p><b>Train Model:</b> Now that our data set has been created, we are ready to start training our Deep Learning Model. In general, the more images used to train a model, the more accurate the model will be. The Augmented data set will create a better model than the 5 base images. We also have provided you with an even more accurate pretrained model built on 2000+ images.    </p>
+<ol>
+<li>
+<p>Make sure you are on your <code>Cans-Augmented-YourInitials</code> data set. </p>
+<p><br></p>
+</li>
+<li>
+<p>Click <code>Train model</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/trainModel.png" style="height:600px;width:800px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Give your model the name of <code>Dent Detection Model-YourInitials</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/nameModel.png" style="height:300px;width:800px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Select <code>Object Detection</code> as the type of training and switch <code>Advanced settings</code> on in the top right corner.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/advanced.png" style="height:300px;width:800px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Scroll down to the <code>Optimize Model</code> using section, select <code>Tiny YOLO v2</code> as the model type. </p>
+</li>
+<li>
+<p>Select <code>Enable Core ML</code> as the training option, which is what allows the model to be used on an iOS device. </p>
+</li>
+<li>
+<p>In the <code>Model hyperparameters</code>, change <code>Max Iteration</code> to <code>2000</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/yolo.png" style="height:400px;width:1000px" /></p>
+</li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>We are only using 2000 iterations because we don't want to stretch the GPU too thin. Also, it takes a lot more time to train the model with higher iterations. Increasing the iterations can improve model accuracy, similar to adding more images to a dataset.</p>
+</div>
+<ol>
+<li>
+<p>Click the <code>Train Model</code> button at the top of the page.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/trainModelB.png" style="height:400px;width:800px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>The MVI Platform will schedule the model training and begin training when the resources become available.  The timing of training varies on how many iterations you've chosen and how much data you’re using to train the model. As model training begins, you can move on to the next step and let it run in the background.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/training.png" style="height:400px;width:1000px" /></p>
+</li>
+</ol>
+<p><b>Deploy Model:</b> While your model is training, we are going to deploy the model that was given to you as part of the lab artifacts. The model was trained using over 2,000 images. Therefore, it will be significantly more accurate than the model you just created. </p>
+<ol>
+<li>
+<p>First, select the <code>Models</code> tab.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/models.png" style="height:300px;width:800px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Just like we did with the Data Set .zip file, we will do the same with the Model .zip file. You will drag and drop the <code>Dent Detection Model - Lab.zip</code> file that you saved to your computer or click <code>Import .zip file</code> and select the .zip file. Also, you can click the <code>x</code> on the progress bar for your model that is training if it is in the way. </p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/modelzip.png" style="height:600px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Give at least 4-5 minutes for the model to finished uploading. </p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/modelupload.png" style="height:250px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Once the model has finished uploading, click the checkbox and select the <code>Deploy Model</code> button.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/deploymodel.png" style="height:600px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Select <code>Deploy</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/deploy.png" style="height:300px;width:500px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Wait a couple seconds for the model to be deployed. It should look like the picture below when it is ready.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/deployed.png" style="height:300px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Click on the deployed model to see the details of the model.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/details.png" style="height:300px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Scroll down to test the model. Drag the <code>Model Test Pic</code> we provided you for testing and drop it into the <code>Test Model</code> box or select <code>Import</code> and upload the picture. This image was not used to train the model.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/test.png" style="height:400px;width:1100px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>You can see our Deep Learning Model is able to identify which can is good and which can has a dent. On the right side is the color of each label and the confidence scores of how likely it is to be that object. </p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-2/results.png" style="height:400px;width:900px" /></p>
+</li>
+</ol>
+<p><b>Congrats, you have trained and deployed a model that can be used on Maximo Visual Inspection Mobile!</b> </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exercise1-1/" class="btn btn-neutral float-left" title="1.1 DataSets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exercise1-3/" class="btn btn-neutral float-right" title="1.3 Create Project">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exercise1-1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exercise1-3/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

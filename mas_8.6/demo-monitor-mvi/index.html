@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-monitor-mvi/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Monitor - MVI - MAS Overview 8.6 Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Monitor - MVI";
+        var mkdocs_page_input_path = "demo-monitor-mvi.md";
+        var mkdocs_page_url = "/maximo-labs/demo-monitor-mvi/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS Overview 8.6 Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS Overview 8.6 Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Application Suite 8.6 Overview Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Monitor - MVI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#review-high-anomalies">Review High Anomalies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tank-monitoringinspecting">Tank Monitoring/Inspecting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pump-monitoring">Pump Monitoring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#review-asset-history">Review Asset History</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alert-thresholds">Alert Thresholds</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-service-request">Create Service Request</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#anomaly-function">Anomaly Function</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-dtx-mon-mvi/">2. DTX - MVI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-dtx-manage/">3. DTX - Manage(Under Construction)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mobile-assist-safe/">4. Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-safety/">5. Safety(Under Construction)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-health-predict/">6. Health - Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">7. Closing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clean/">Lab Clean up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS Overview 8.6 Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Monitor - MVI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="monitor-visual-inspection-lab">Monitor - Visual Inspection Lab</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please follow the <code>Action</code> statements to navigate the steps and perform the lab.</p>
+</div>
+<h2 id="review-high-anomalies">Review High Anomalies</h2>
+<p>I'm the Remote Operational Support Manager that needs to view my assets across multiple cities worldwide.</p>
+<p>Monitor provides a single place to monitor all my mission critical assets around the globe from a single dashboard.<br>
+<code>Action:</code> Open Maximo Application Suite and select Monitor Application. Open Monitor in the left Monitor Tab.</p>
+<p><img alt="img" src="../img/monitor1.png" style="height:500px;width:350px" />
+<img alt="img" src="../img/monitor_ents.png" style="height:300px;width:500px" /></p>
+<p>Monitor has the data collected by devices organized by asset type.  Operational support has some asset information in Monitor that was collected via Historians from SCADA or from devices that were connected to the IOT Platform. </p>
+<p>This facility has asset groups of sedimentation tanks and pumps.  There is a summary dashboard for the asset type and instance dashboards for each asset.<br>
+<code>Action:</code> Navigate to Entity called SedimentationTanks_LI and select the “SedimentationTanks_LI” tab </p>
+<p><img alt="img" src="../img/sedtanks1a.png" style="height:400px;width:800px" /></p>
+<h2 id="tank-monitoringinspecting">Tank Monitoring/Inspecting</h2>
+<p>I need to view cleanliness of sedimentation tanks in my facility. Over a period of time, tanks could build fungi or collect debris from environment or cases have been known for animals accidentally falling into our tanks.  </p>
+<p>Every tank in our facility is constantly monitored by cameras. The feed from cameras are analyzed every hour by Maximo Visual Inspection’s AI model and uploaded as IoT events. Maximo Monitor maps and plots these details on the dashboards as assets. Rules are triggered to generate alerts.  Monitor provides a single dashboard to review and act on alerts for all tanks around the facility.  The summary dashboard tells me that Tank 2 is showing alerts.  </p>
+<p><img alt="img" src="../img/sedtanks1.png" style="height:400px;width:800px" /></p>
+<p>I navigate to the Tank 2 instance dashboard to review and act on alerts for the tank.<br> 
+<code>Action:</code> Navigate to the Tank2 instance dashboard, select the “Tank Dashboard tab”, then filter on severity of alerts in alert card </p>
+<p><img alt="img" src="../img/sedtanks3.png" style="height:400px;width:800px" /></p>
+<p>I can tell by the alerts that the tank is getting to a critical status.  The table card shows a list of rows pertaining to events for the specified tanks, with attributes identifying clean or dirty tanks.  You can check the score of confidence in the “Link to Image” column to substantiate the findings.<br> 
+<code>Action:</code> Click the link against a tank identified as dirty </p>
+<p><img alt="img" src="../img/sedtanks4.png" style="height:400px;width:800px" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you click through to Maximo Visual Inspection, you MAY be taken to the login screen in a new browser window.  Press continue, then CLOSE the tab, then click through again.</p>
+</div>
+<p>You can visualize a dirty tank and conclude a need for maintenance. <br>
+<img alt="img" src="../img/sedtanks5.png" style="height:400px;width:800px" /></p>
+<p><code>Action:</code> Navigate back to Monitor and create a Service Request to clean the tank. </p>
+<p><img alt="img" src="../img/sedtanks6.png" style="height:400px;width:800px" /></p>
+<p>Now that I have verified the tank being dirty, I create a service order to address the finding.<br>
+<code>Action:</code> Create a service request for Tank2 either from the dashboard tab OR the alert tab </p>
+<h2 id="pump-monitoring">Pump Monitoring</h2>
+<p>Now I want to investigate my pumps.<br> 
+<code>Action:</code> Select Pump under Change asset type to bring up the Pump summary dashboard or the monitor tab type in “Pump”.  Then select the Pump tab.  You can close the sidebar to increase the viewing area for the dashboard. </p>
+<p><img alt="img" src="../img/select_ent.png" style="height:400px;width:300px" /> 
+<img alt="img" src="../img/sum_dash.png" style="height:400px;width:800px" /></p>
+<p>The summary dashboard shows me a global map of sites of pumps and metrics, and gives real-time insights on problems with my assets.  Dashboards are fully customizable and allow the operations manager to scale across multiple sites in a single dashboard to identify most urgent and critical problems.<br></p>
+<p>I see from the map that there were alerts against one of the pumps at that location.<br>
+<code>Action:</code>Hover over the anomaly on the map. </p>
+<p><img alt="img" src="../img/anom_d.png" style="height:400px;width:500px" />
+<br>
+<b>Note:</b> Viewing dashboard from Dashboard tab on left.</p>
+<p>I drill down into the Bedford site to see the summary dashboard for the pumps there.<br><br />
+<code>Action:</code> Filter on the Bedford site</p>
+<p><img alt="img" src="../img/summ_controls.png" style="height:400px;width:300px" /></p>
+<p><code>Action:</code> Expand the alert card to full screen</p>
+<p><img alt="img" src="../img/7_days.png" style="height:200px;width:400px" /></p>
+<p>I will filter on the High severity alerts and see that there were recent alerts on Pump 005.</p>
+<p><code>Action:</code> Filter on High severity alerts</p>
+<p>I drill in to take a closer look at Pump 005.  Notice how the alert navigates to the time date where the anomaly happened in the asset dashboard.<br>
+<code>Action:</code> Click on PMPDEVICE005.  Then select the “Asset Metrics Dashboard” tab.</p>
+<p><img alt="img" src="../img/alerts_pump.png" style="height:300px;width:800px" /></p>
+<p>The site map saves me time by showing me where this pump is located on the Bedford site as well as the anomaly alerts.  The picture of the pump shows me which part of the pump is experiencing a problem.</p>
+<p><img alt="img" src="../img/site_map.png" style="height:400px;width:800px" /></p>
+<h2 id="review-asset-history">Review Asset History</h2>
+<p>I can easily look at the asset history in Maximo from the table card and see that there was service done several days ago on this pump.  Perhaps, it was improperly serviced which is now causing the vibrations.<br>
+<code>Action:</code> Review Asset information in Maximo Manage. Right click on asset id link and open in new tab to see when the asset was serviced.</p>
+<p><img alt="img" src="../img/asset_link.png" style="height:400px;width:800px" /></p>
+<p>It looks like the water pump bearing housing and seals were replaced a couple days ago. The pump ran normal for the rest of the day, but then began to vibrate again in the evening.<br>
+<code>Action:</code> Click on Work tab. Filter on COMP to find the most recent work order.</p>
+<p><img alt="img" src="../img/comp_wo.png" style="height:400px;width:800px" /></p>
+<p>Having this data at hand, allows the operations engineer to gain insights on the history of the asset to make informed decisions on how to proceed with maintenance.  </p>
+<h2 id="alert-thresholds">Alert Thresholds</h2>
+<p>I dig deeper into investigation of the problem by looking at the alerts.  There are many alerts on this pump to look at.  Monitor provides a paradigm shift from traditional threshold-based alerts that becomes overwhelming to AI powered anomaly alerts to remove the false positives.  I filter on the high severity alerts and see there are just a few anomaly alerts.<br>
+<code>Action:</code> Go back to asset dashboard in monitor, Show alerts table</p>
+<p><img alt="img" src="../img/severealerts.png" style="height:200px;width:400px" /></p>
+<p>Vibration and Temperature are working in unison.  The Vector is a combination of Velocity in the X, Y, Z axis.  When all three experience exceptional vibration simultaneously there is something obviously very wrong with the asset.<br>
+<code>Action:</code> Navigate to the “Velocity – 7 day Average” card</p>
+<p><img alt="img" src="../img/velocitycard.png" style="height:300px;width:800px" /></p>
+<h2 id="create-service-request">Create Service Request</h2>
+<p>I go back to the alerts and create a service request in Maximo for the Maintenance Supervisor to look at to see why vibrations have returned since the seals were recently replaced. The Technician will reinspect the pump since he thought he fixed the vibration issue the last time it was worked on. <br>
+<code>Action:</code> Go back to alert table, scroll the to the right side and click “Create Service Request”.</p>
+<p><img alt="img" src="../img/createSR.png" style="height:300px;width:600px" /></p>
+<p><code>Action:</code>  Type in ROSE as the Reported By.   This is used to trigger the escalations that process the Service Request’s to Work Order’s assigned to ELI for the mobile portion of the demo.</p>
+<p><img alt="img" src="../img/srlogistics.png" style="height:450px;width:400px" /></p>
+<h2 id="anomaly-function">Anomaly Function</h2>
+<p>Let's go back to the asset type and we can see there are live metrics flowing into the system like the Velocity vector. <br>
+<code>Action:</code> Navigate to "Setup" in the left navigation and choose Pump</p>
+<p><img alt="img" src="../img/ootbF.png" style="height:300px;width:300px" /></p>
+<p><code>Action:</code> Click on Set up device type and choose the Data tab.</p>
+<p><img alt="img" src="../img/datatab1.png" style="height:300px;width:500px" /></p>
+<p><code>Action:</code> Click on VELOCITYX</p>
+<p><img alt="img" src="../img/datatab2.png" style="height:300px;width:600px" /></p>
+<p>Built in AI models can be applied in Monitor with just a few clicks with no data science or development experience needed.  Models can also be created in Watson Machine Learning and used with Monitor.<br>
+<code>Action:</code> View the different types of OOTB function that can be applied, or custom functions such as the vector. Or Anomaly models. Or pure python code.</p>
+<p><b>TRANSITION:</b> Now, I’m going to turn it over to the Asset Analyst that manages the models for the Maximo Application Suite.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo-dtx-mon-mvi/" class="btn btn-neutral float-right" title="2. DTX - MVI">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo-dtx-mon-mvi/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

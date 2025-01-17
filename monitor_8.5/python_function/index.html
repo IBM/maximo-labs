@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/python_function/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Create Python Functions - Maximo Hands on Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Create Python Functions";
+        var mkdocs_page_input_path = "python_function.md";
+        var mkdocs_page_url = "/maximo-labs/python_function/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo Hands on Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor v8.5 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hopper_asset/">2. Create Packaging Hopper Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../constant/">3. Create Constants</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Create Python Functions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-python-function-to-monitor">Create a Python Function to Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_expressions/">5. Create Python Expressions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_value_card/">6. Add Value Card</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo Hands on Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Create Python Functions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise using Monitor you will learn how to :</p>
+<ul>
+<li>Add a Python Function to check if the ambient temperature is greater than the maximum allowed ambient temperature 
+constant.</li>
+</ul>
+<p>The ambient temperature where the hopper asset is located should not exceed a temperature above 27 degrees.  The 
+food being packaged has a shorter shelf life when it is packaged at temperatures higher than that.  A remote operational 
+support teams monitor monitors the packaging hoppers to ensure they are all operating within the required operating ranges 
+and without anomalies.  </p>
+<hr />
+<p><em>Before you begin:</em><br />
+-  You have completed the <a href="../prereqs/">pre-requisites</a> required for all exercises 
+-  You have completed the prior exercise in this lab.</p>
+<hr />
+<h2 id="create-a-python-function-to-monitor">Create a Python Function to Monitor</h2>
+<ol>
+<li>
+<p>In Monitor, select <code>Setup Assets</code> tab, search for <code>Sample_Packaging_Hopper_Type_yourinitials</code> .
+Click on your <code>Device Type</code> and click on   <code>Setup Asset Type</code> button.<br />
+<img alt="Setup Asset Type" src="../img/fun03.png" /> </p>
+</li>
+<li>
+<p>Click <code>Data</code> tab, <code>+</code> button  to add a new calculated metric from the catalog.  Click <code>+</code> button  and enter <code>Puthon</code> in the search field of the Monitor catalog.</p>
+</li>
+<li>
+<p>Click <code>PythonFucntion</code> option and the<code>Select</code> button to add the function to your <code>Asset Type</code>.<br />
+<img alt="Create a Python Function" src="../img/fun07.png" /> &nbsp;</p>
+</li>
+<li>
+<p>Set the calculation data item inputs.  Select <code>ambient_temp</code> from the  <code>Data Item</code> field<br />
+<img alt="Choose input metric" src="../img/fun08.png" /> &nbsp;</p>
+</li>
+<li>
+<p>Past the code below into the <code>function_code</code>  This will assign a value of one to this metric each time the metric 
+value for <code>ambient_temp</code>  is equal to or above 27. </p>
+<p><code>def f(df, parameters=None):
+    import numpy as np
+    return np.where(df['ambient_temp'] &gt;= 27, 1, 0)</code></p>
+</li>
+<li>
+<p>Click the <code>next</code> button<br />
+<img alt="Add Python function code" src="../img/fun09.png" /> &nbsp;</p>
+</li>
+<li>
+<p>Configure the function calculation schedule.  Click the <code>schedule</code> slider to edit the schedule.   Enter 7 in the 
+field <code>calculating the last</code> and changet <code>time</code> to <code>days</code> instead of <code>minutes</code>.   Also set the <code>output name</code> to 
+<code>ambient_temp_over_max</code> </p>
+</li>
+<li>
+<p>Set the Output <code>Type</code> to <code>string</code> then set it back to <code>number</code> then  click on <code>Create</code>button.<br />
+<img alt="Add Python function code" src="../img/fun11.png" /> &nbsp;</p>
+</li>
+</ol>
+<p>!!! note 
+If you encounter the error below, you likely hit a bug.  Carefully redo the step 8.<br />
+<img alt="error" src="../img/fun13.png" /> </p>
+<ol>
+<li>
+<p>Wait 5 minutes and make sure your function doesn't have any errors and causes the pipeline analysis to stop.  If it
+does you will see an error.  Click on the <code>Analysis Stopped</code> error<br />
+<img alt="Add Python function code" src="../img/fun25.png" /> &nbsp;
+Read the message to trouble shoot.  If you need more information download the log file to trouble shoot the error further.</p>
+</li>
+<li>
+<p>Click on the calculated metric <code>max_temp_yourinitials</code> and the <code>data table</code> tab to see the time series data added to 
+your Device Type.  Sort the data by clicking on <code>ambient_temp_over_max</code>.  Note how there are now 1's and 0's for the times
+ when the ambient temperature was above <code>max_temp_yourinitials</code> for each packaging hopper.<br />
+<img alt="View Cacluated Meric" src="../img/fun27.png" /> &nbsp;</p>
+</li>
+<li>
+<p>Go back and now update the <code>PythonFucntion</code> you created in step 3.  Modify the code to reference the constant you 
+created in the previous exercise.  Expand the <code>Calculated metrics</code>  and click the <code>ambient_temp_over_max</code>.  Click on the 
+<code>open function</code> icon on the top right to modify the code.<br />
+<img alt="Add Python function code" src="../img/fun25.png" /> </p>
+</li>
+<li>
+<p>Add a another <code>pythonfunction</code>  to evaluate the the  <code>ambient_temp_over_max</code> and set a new calculated metric named 
+<code>ambient_temp_over_max_status</code> of type string to  <code>exceeds</code> or<code>normal</code> when the value is 1 or 0 respectively. </p>
+<p>```
+def f(df, parameters=None):
+    import numpy as np
+    return np.where(df['ambient_temp_over_max'] == 1, "Exceeds", "Normal")</p>
+<p>```</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>You now have a new calculated metric that will have a value of 1 each time the ambient temperature exceeds 27 degress 
+Celcius or 0 if it is less than or equal to 27 degrees.</p>
+<p>In the next exercise you wil create a PythonExpression to calculate the <code>temperature_deviation</code> between the 
+<code>ambient_temp</code> and the <code>ambient_temp_over_max</code>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../constant/" class="btn btn-neutral float-left" title="3. Create Constants"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../python_expressions/" class="btn btn-neutral float-right" title="5. Create Python Expressions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../constant/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../python_expressions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

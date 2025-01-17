@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_local_environment/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Setup Local Environment - Maximo Hands on Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Setup Local Environment";
+        var mkdocs_page_input_path = "setup_local_environment.md";
+        var mkdocs_page_url = "/maximo-labs/setup_local_environment/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo Hands on Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor v8.5 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Setup Local Environment</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install-and-create-a-virtual-environment">Install and Create a Virtual Environment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-and-activate-a-virtual-environment">Setup and Activate a Virtual Environment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-windows">For Windows</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_1">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-windows_1">For Windows</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_2">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_3">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_4">For Mac</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-and-launch-jupyter">Install and Launch Jupyter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-install-and-configure-cyberduck-for-view-logs-in-monitor">Download, Install and Configure CyberDuck for View Logs in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-install-and-configure-dbeaver">Download, Install and Configure DBeaver</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#query-logs-using-dbeaver">Query Logs using DBeaver</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-install-and-configure-pycharm">Download, Install and Configure PyCharm</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-and-activate-a-virtual-environment_1">Setup and Activate a Virtual Environment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_5">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-windows_2">For Windows</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_6">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-windows_3">For Windows</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_7">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_8">For Mac</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-mac_9">For Mac</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-and-launch-jupyter_1">Install and Launch Jupyter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-install-and-configure-cyberduck-for-view-logs-in-monitor_1">Download, Install and Configure CyberDuck for View Logs in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-install-and-configure-dbeaver_1">Download, Install and Configure DBeaver</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#query-logs-using-dbeaver_1">Query Logs using DBeaver</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-install-and-configure-pycharm_1">Download, Install and Configure PyCharm</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#debug-functions">Debug Functions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hopper_asset/">2. Create Packaging Hopper Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../constant/">3. Create Constants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_function/">4. Create Python Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_expressions/">5. Create Python Expressions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_value_card/">6. Add Value Card</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo Hands on Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Setup Local Environment</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="setup-local-environment">Setup Local Environment</h1>
+<p>In this exercise you will setup your local development environment.</p>
+<ul>
+<li>
+<p><a href="#install_ve">Install and Create a Virtual Environment</a>  for Python v3.7.6 or later</p>
+</li>
+<li>
+<p><a href="#activate_ve">Setup and Activate a Virtual Environment</a>  Install Python dependencies, clone repository 
+    and verify environment</p>
+</li>
+<li>
+<p><a href="#jupyter">Install and Launch Jupyter</a> to work with Regression Models</p>
+</li>
+<li>
+<p><a href="#cyberduck">Download,  Install and Configure CyberDuck for View Logs in Monitor</a> </p>
+</li>
+<li>
+<p><a href="#pycharm">Download, Install and Configure PyCharm</a>  </p>
+</li>
+<li>
+<p><a href="#debug">Debug Functions</a></p>
+</li>
+</ul>
+<p>!!! note
+    These directions for are a Mac. Using Python v3.7.9 for Maximo Application Suite v8.5.
+    Download Python for Windows at  https://www.python.org/downloads/windows/ </p>
+<h2 id="install-and-create-a-virtual-environment">Install and Create a Virtual Environment</h2>
+<p><a name="install_ve"></a></p>
+<ol>
+<li>
+<p>Search for and <a href="https://www.python.org/downloads/release/python-376/">download</a> the right version of Python </p>
+</li>
+<li>
+<p>Launch Terminal</p>
+</li>
+<li>
+<p>Mac users need to install Brew Follow directions here: https://brew.sh/</p>
+</li>
+<li>
+<p>Install the right Python Version v3.7.9</p>
+</li>
+</ol>
+<p>Mac users
+- In terminal:</p>
+<pre><code>```
+brew install python 
+```
+</code></pre>
+<p>Window users </p>
+<ul>
+<li>
+<p>Please see available public references for <a href="https://medium.com/co-learning-lounge/how-to-download-install-python-on-windows-2021-44a707994013">installing Python on Windows</a></p>
+</li>
+<li>
+<p>Install "pip". (Python Package Installer):
+    <code>sudo easy_install pip  # for Mac try also removing sudo from the command</code></p>
+</li>
+<li>
+<p>Install virtual environment to keep dependencies separate from other projects
+    ### For Mac
+    <code>sudo pip install virtualenv</code>
+    ### For Windows
+    <code>pip install virtualenv</code></p>
+</li>
+<li>
+<p>Create a virtual environment use Python 3.7.9 for Maximo Application Suite v8.3
+    <code>python3 -m venv iot-python3</code>
+    <!-- virtualenv -p python3 env --></p>
+</li>
+</ul>
+<h2 id="setup-and-activate-a-virtual-environment">Setup and Activate a Virtual Environment</h2>
+<p><a name="activate_ve"></a></p>
+<ol>
+<li>
+<p>Open a new terminal window and change directory to your Virtual Environment directory.</p>
+<p><code>cd iot-python3</code></p>
+</li>
+<li>
+<p>Activate your virtual environment.</p>
+<h3 id="for-mac">For Mac</h3>
+<p><code>source bin/activate</code></p>
+<h3 id="for-windows">For Windows</h3>
+<p><code>.\Scripts\activate</code></p>
+</li>
+<li>
+<p>The result in <code>Terminal</code> should be something like:</p>
+<h3 id="for-mac_1">For Mac</h3>
+<p><code>(iot-python3) My-Mac: myuserid$</code></p>
+</li>
+<li>
+<p>Install Git.  </p>
+<h3 id="for-windows_1">For Windows</h3>
+<p>See https://git-scm.com/download/win  </p>
+<h3 id="for-mac_2">For Mac</h3>
+<p>The easiest is to install the Xcode Command Line Tools.</p>
+</li>
+<li>
+<p>Install IOT Functions SDK</p>
+<p>See installing section  <a href="https://github.com/ibm-watson-iot/functions/tree/production">instructions</a> but for MAS v8.5.1 use this:</p>
+<p>```
+pip install git+git://github.com/ibm-watson-iot/functions@master --upgrade</p>
+<p>```</p>
+</li>
+<li>
+<p>Clone the your project github repository.</p>
+<p><code>git clone https://github.com/`your custom functions project`
+cd `your custom functions project`</code></p>
+</li>
+<li>
+<p>Within your project directory in the activated virtual environment, install Monitor Python Custom Functions SDK and 
+dependencies.  </p>
+<p><code>pip install -r requirements.txt</code></p>
+</li>
+<li>
+<p>Apply export variables in terminal for DYLD_LIBRARY_PATH for DB2 jars on Mac OS X only.</p>
+<h3 id="for-mac_3">For Mac</h3>
+<p><code>cd `your custom functions project`
+export DYLD_LIBRARY_PATH=&lt;"replace with your virtual env directory&gt;"/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/Users/carlosferreira/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH</code> </p>
+</li>
+<li>
+<p>Prepend your project directory to the PYTHONPATH.</p>
+<h3 id="for-mac_4">For Mac</h3>
+<p><code>export PYTHONPATH=&lt;replace with your project dir&gt;/your custom functions project:$PYTHONPATH</code></p>
+</li>
+<li>
+<p>If you are using Pycharm as your IDE you may also want to set your interpreter.</p>
+</li>
+<li>
+<p>Save credentials to your project root folder.  If you are using Monitor SaaS, click on  <code>Services</code>, click <code>View Details</code> of Watson IOT Analytics.  Click on <code>Copy and paste</code> icon 
+and copy the credentials into a file named beta-1_credentials.json file.   Save the file in the project git cloned project 
+directory name directory <code>your custom functions project</code>. 
+<img alt="credentials" src="../img/s01.png" /> </p>
+</li>
+</ol>
+<p>If you are using Monitor in MAS, ask the instructor for your credentials_as.json file or create your own using the instructions in "Establishing
+a Connection" section of the Monitor documentation.  <a href="https://www.ibm.com/docs/en/maximo-monitor/8.5.0?topic=calculations-using-custom-functions#env">Establishing a Connection</a> 
+Your credentials file should be structured in JSON as follows:</p>
+<pre><code>'''
+    {
+        "tenantId": "yourtenant",
+        "_db_schema": "your_dbSchema",
+        "db2": {
+            "username": "your_dbuser",
+            "password": "your_dbpassword",
+            "databaseName": "your_databaseName",
+            "security": "SSL",
+            "port": 32551,
+            "httpsUrl": "https://cp4d-cpd-cp4d.yourdomainURL",
+            "host": "yourdomainURL without HTTP prepended"
+        },
+        "iotp": {
+            "asHost": "yourtenant.api.monitor.your_dbSchema.yourlusterdomain:443",
+            "apiKey": "vourAPIKey",
+            "apiToken": "yourAPIToken"
+        }
+    }
+'''
+</code></pre>
+<ol>
+<li>
+<p>Save your credentials_as.json file to in the project root directory <code>watson-classifier</code>.</p>
+</li>
+<li>
+<p>Verify that you can get a local Python Script to run without errors.</p>
+<p><code>python ./scripts/local_test_of_function.py</code></p>
+</li>
+</ol>
+<h2 id="install-and-launch-jupyter">Install and Launch Jupyter</h2>
+<p><a name="jupyter"></a></p>
+<p>Jupyter is an open-source web application that allows you to create and share documents that contain live code, equations, 
+visualizations and algorithms for working with AI Models and functions.</p>
+<ol>
+<li>
+<p>Install Jupyter using <a href="https://jupyter.org/install">instructions</a> Use the <code>Pip Install</code> option.</p>
+</li>
+<li>
+<p>Start Jupyter Notebook process.  Using a similar example steps below.</p>
+<p><code>cd /Users/student01/ve/iot-python3/bin
+source activate
+cd /Users/student01/MAS_AutoAI
+export PYTHONPATH=/Users/student01/MAS_AutoAI
+export DYLD_LIBRARY_PATH=/Users/student01/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH</code></p>
+</li>
+<li>
+<p>Launch Jupyter Notebook to edit Linear Regression Models.</p>
+<p><code>jupyter notebook</code></p>
+</li>
+</ol>
+<p>This opens a Jupyter notebook in the new browser window that opened.  Browse to the <code>notebooks</code> folder. Click on the <code>notebook</code> 
+to view the Notebook.</p>
+<h2 id="download-install-and-configure-cyberduck-for-view-logs-in-monitor">Download, Install and Configure CyberDuck for View Logs in Monitor</h2>
+<p><a name="cyberduck"></a></p>
+<p>Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Cloud Object Storage. Install and configure Cyberduck to view logs.  Connect to the 
+Cloud Object Storage (COS)  to download the custom function logs.  You can access the  credentials for accessing the 
+service in Monitor under Services tab.  Use tool called Cyberduck.   Download free version from: 
+Web: https://cyberduck.io/download/ Configure the setting in CyberDuck to connect to the Object Storage service included 
+with Monitor.</p>
+<ol>
+<li>
+<p>In Monitor, click on <code>Services</code> menu.  Copy the settings for Object Storage as shown in the below into <code>CyberDuck</code>.  <img alt="Configure CyberDuck" src="../img/l01.png" /> </p>
+</li>
+<li>
+<p>Open <code>CyberDuck</code> and create a <code>New Connection</code>.</p>
+</li>
+<li>
+<p>Select  <code>Protocol</code> is <code>S3 Amazon</code></p>
+</li>
+<li>
+<p>URL Server is taken from Monitor  Object Storage Service  <code>Cross Region Endpoints</code>  choose your region like <code>US</code>
+https://s3-api.us-geo.objectstorage.softlayer.net</p>
+</li>
+<li>
+<p>Copy <code>Access Key ID</code>  for your <code>Tenant ID</code>  </p>
+</li>
+<li>
+<p>Copy <code>Secret Access Key</code>  for your <code>Tenant ID</code></p>
+</li>
+<li>
+<p>Click <code>Connect</code> Button. </p>
+</li>
+<li>
+<p>Hit refresh and navigate to your Asset Type and date folder to see and download your log files.</p>
+</li>
+<li>
+<p>You will see <code>Entity_Type_ID</code> in the first few lines of the log files for that <code>Asset Type</code>.</p>
+</li>
+<li>
+<p>Bookmark the page for your <code>Asset Type</code> so that you can navigate here directly next time you want to access logs.</p>
+</li>
+</ol>
+<h2 id="download-install-and-configure-dbeaver">Download, Install and Configure DBeaver</h2>
+<p><a name="dbeaver"></a></p>
+<p>Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Database, install and configure Dbeaver client to view logs in the database table.<br />
+Connect to the Monitor Database Service to query database for custom function logs.  You can get the database credentials 
+for accessing the database service in Monitor under Services tab.  Use a universal database client tool like Dbeaver to 
+access the table.   Download the free community edition from https://dbeaver.io/download/  Configure the setting in 
+Dbeaver to connect to the Database service included with Monitor.</p>
+<ol>
+<li>
+<p>In Monitor, click on <code>Services</code> menu.  Copy the settings for Database and enter them as as shown in <code>DBeaver</code>.  <img alt="Get DB Connection Details" src="../img/sdb00.png" /> </p>
+</li>
+<li>
+<p>Open <code>Dbeaver</code>.  Select a <code>New Database Connection</code> option from the <code>Database</code> menu.
+ <img alt="New DB Connection" src="../img/sdb01.png" /></p>
+</li>
+<li>
+<p>Select  <code>IBM DB2</code> and click on  <code>Next</code> button.
+ <img alt="Get DB Connection Details" src="../img/sdb02.png" /></p>
+</li>
+<li>
+<p>Enter the database settings from Monitor Database Service in <code>DBeaver</code> connection settings dialog.
+ <img alt="Get DB Connection Details" src="../img/sdb03.png" /></p>
+</li>
+<li>
+<p>Click <code>test Connection</code> Button. </p>
+</li>
+<li>
+<p>Click <code>OK</code> Button to save the connection.</p>
+</li>
+</ol>
+<h2 id="query-logs-using-dbeaver">Query Logs using DBeaver</h2>
+<p><a name="dbeaver"></a></p>
+<p>Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Database use the following queries with Dbeaver client to view logs.</p>
+<ol>
+<li>
+<p>Open <code>Dbeaver</code>.  Click a <code>Monitor Database Connection</code> for <code>BLUDB</code> schema.</p>
+</li>
+<li>
+<p>Select  <code>New SQL Script</code> from the <code>SQL Editor</code> menu.  <img alt="New SQL Statement" src="../img/sdb04.png" /></p>
+</li>
+<li>
+<p>Enter the the following query to get status of execution for all functions.</p>
+<p><code>SELECT E.NAME, K.ENTITY_TYPE_ID, K.STATUS, 
+COUNT(*) AS Count FROM MAS82_MAM.KPI_LOGGING K, IOTANALYTICS.ENTITY_TYPE E 
+WHERE K.ENTITY_TYPE_ID = E.ENTITY_TYPE_ID  GROUP BY E.NAME ,K.ENTITY_TYPE_ID,K.STATUS ;</code></p>
+</li>
+<li>
+<p>Enter the the following query to delete old logs.</p>
+<p><code>DELETE FROM MAS82_MAM.KPI_LOGGING 
+WHERE DATE(UPDATED_TS)!=CURRENT_DATE;</code></p>
+</li>
+<li>
+<p>Enter the the following query to purge successful runs.</p>
+<p><code>DELETE FROM MAS82_MAM.KPI_LOGGING 
+WHERE STATUS='SUCCESS' AND ENTITY_TYPE_ID IN (13,14);</code></p>
+</li>
+<li>
+<p>Enter the the following query to get last 10 logs.</p>
+<p><code>SELECT E.NAME, K.ENTITY_TYPE_ID, K.STATUS, K.LOGFILE, K.LOG_MESSAGE, K.ERROR_MESSAGE, K.STARTED_TS FROM MAS82_MAM.KPI_LOGGING K, IOTANALYTICS.ENTITY_TYPE E 
+WHERE K.ENTITY_TYPE_ID = E.ENTITY_TYPE_ID 
+ORDER BY K.STARTED_TS DESC LIMIT 10;</code></p>
+</li>
+</ol>
+<h2 id="download-install-and-configure-pycharm">Download, Install and Configure PyCharm</h2>
+<p><a name="pycharm"></a></p>
+<p>Using an integrated development environment helps improve developer productivity when writing Python scripts and Monitor 
+Custom Functions.  It is recommended that you download and install <a href="https://www.jetbrains.com/pycharm/download/#section=mac">Pycharme Community Edition</a>. 
+It is a free IDE.  To run Python Scripts in  you should configure your Python Environment for each script you would like 
+to run to reference the virtual environment you setup earlier.</p>
+<ol>
+<li>
+<p>Follow the instructions to install Pycharm Community Edition.</p>
+</li>
+<li>
+<p>Start Pycharm.</p>
+</li>
+<li>
+<p>In the <code>Project</code> view, right click on the Python script file you want to run.  Select <code>edit configurations</code>.   See the
+example settings below.
+<img alt="setup assets" src="../img/l19.png" /> </p>
+</li>
+<li>
+<p>Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of 
+your virtual environment.</p>
+<p><code>PYTHONUNBUFFERED=1;DYLD_LIBRARY_PATH=/Users/student01/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH;PYTHONPATH=/Users/student01/MAS_AutoAI</code></p>
+</li>
+<li>
+<p>Set the <code>Python interpreter</code> to your virtual environment. <img alt="Add virtual env to PyCharm" src="https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html" /></p>
+<ul>
+<li>Choose <code>Pycharm</code>, <code>Preferences</code> <img alt="Run" src="../img/fun17.png" /></li>
+<li>Search on  <code>interpreter</code>, select <code>Virtual Environment</code>, select <code>Existing Environment</code>, </li>
+<li>Browse and select your Python Virtual Environment <img alt="Run" src="../img/fun17.png" /></li>
+</ul>
+</li>
+<li>
+<p>Each time you run a Python script in Pyscharm remember to select the name of the virtual environment inter</p>
+</li>
+</ol>
+<h2 id="setup-and-activate-a-virtual-environment_1">Setup and Activate a Virtual Environment</h2>
+<p><a name="activate_ve"></a></p>
+<ol>
+<li>
+<p>Open a new terminal window and change directory to your Virtual Environment directory.</p>
+<p><code>cd iot-python3</code></p>
+</li>
+<li>
+<p>Activate your virtual environment.</p>
+<h3 id="for-mac_5">For Mac</h3>
+<p><code>source bin/activate</code></p>
+<h3 id="for-windows_2">For Windows</h3>
+<p><code>.\Scripts\activate</code></p>
+</li>
+<li>
+<p>The result in <code>Terminal</code> should be something like:</p>
+<h3 id="for-mac_6">For Mac</h3>
+<p><code>(iot-python3) My-Mac: myuserid$</code></p>
+</li>
+<li>
+<p>Install Git.  </p>
+<h3 id="for-windows_3">For Windows</h3>
+<p>See https://git-scm.com/download/win  </p>
+<h3 id="for-mac_7">For Mac</h3>
+<p>The easiest is to install the Xcode Command Line Tools.</p>
+</li>
+<li>
+<p>Install IOT Functions SDK</p>
+<p>See <a href="">instructions</a> but for MAS v8.5.1 try this:</p>
+<p>```
+pip install git+git://github.com/ibm-watson-iot/functions@master --upgrade</p>
+<p>```</p>
+</li>
+<li>
+<p>Clone the your project github repository.</p>
+<p><code>git clone https://github.com/`your custom functions project`
+cd `your custom functions project`</code></p>
+</li>
+<li>
+<p>Within your project directory in the activated virtual environment, install Monitor Python Custom Functions SDK and 
+dependencies.  </p>
+<p><code>pip install -r requirements.txt</code></p>
+</li>
+<li>
+<p>Apply export variables in terminal for DYLD_LIBRARY_PATH for DB2 jars on Mac OS X only.</p>
+<h3 id="for-mac_8">For Mac</h3>
+<p><code>cd `your custom functions project`
+export DYLD_LIBRARY_PATH=&lt;"replace with your virtual env directory&gt;"/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/Users/carlosferreira/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH</code> </p>
+</li>
+<li>
+<p>Prepend your project directory to the PYTHONPATH.</p>
+<h3 id="for-mac_9">For Mac</h3>
+<p><code>export PYTHONPATH=&lt;replace with your project dir&gt;/your custom functions project:$PYTHONPATH</code></p>
+</li>
+<li>
+<p>If you are using Pycharm as your IDE you may also want to set </p>
+</li>
+<li>
+<p>Save credentials to your project root folder.  If you are using Monitor SaaS, click on  <code>Services</code>, click <code>View Details</code> of Watson IOT Analytics.  Click on <code>Copy and paste</code> icon 
+and copy the credentials into a file named beta-1_credentials.json file.   Save the file in the project git cloned project 
+directory name directory <code>your custom functions project</code>. 
+<img alt="credentials" src="../img/s01.png" /> </p>
+</li>
+</ol>
+<p>If you are using Monitor in MAS, ask the instructor for your credentials_as.json file or create your own using the instructions in "Establishing
+a Connection" section of the Monitor documentation.  <a href="https://www.ibm.com/docs/en/maximo-monitor/8.5.0?topic=calculations-using-custom-functions#env">Establishing a Connection</a> 
+Your credentials file should be structured in JSON as follows:</p>
+<pre><code>'''
+    {
+        "tenantId": "yourtenant",
+        "_db_schema": "your_dbSchema",
+        "db2": {
+            "username": "your_dbuser",
+            "password": "your_dbpassword",
+            "databaseName": "your_databaseName",
+            "security": "SSL",
+            "port": 32551,
+            "httpsUrl": "https://cp4d-cpd-cp4d.yourdomainURL",
+            "host": "yourdomainURL without HTTP prepended"
+        },
+        "iotp": {
+            "asHost": "yourtenant.api.monitor.your_dbSchema.yourlusterdomain:443",
+            "apiKey": "vourAPIKey",
+            "apiToken": "yourAPIToken"
+        }
+    }
+'''
+</code></pre>
+<ol>
+<li>
+<p>Save your credentials_as.json file to in the project root directory <code>watson-classifier</code>.</p>
+</li>
+<li>
+<p>Verify that you can get a local Python Script to run without errors.</p>
+<p><code>python ./scripts/local_test_of_function.py</code></p>
+</li>
+</ol>
+<h2 id="install-and-launch-jupyter_1">Install and Launch Jupyter</h2>
+<p><a name="jupyter"></a></p>
+<p>Jupyter is an open-source web application that allows you to create and share documents that contain live code, equations, 
+visualizations and algorithms for working with AI Models and functions.</p>
+<ol>
+<li>
+<p>Install Jupyter using <a href="https://jupyter.org/install">instructions</a> Use the <code>Pip Install</code> option.</p>
+</li>
+<li>
+<p>Start Jupyter Notebook process.  Using a similar example steps below.</p>
+<p><code>cd /Users/student01/ve/iot-python3/bin
+source activate
+cd /Users/student01/MAS_AutoAI
+export PYTHONPATH=/Users/student01/MAS_AutoAI
+export DYLD_LIBRARY_PATH=/Users/student01/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH</code></p>
+</li>
+<li>
+<p>Launch Jupyter Notebook to edit Linear Regression Models.</p>
+<p><code>jupyter notebook</code></p>
+</li>
+</ol>
+<p>This opens a Jupyter notebook in the new browser window that opened.  Browse to the <code>notebooks</code> folder. Click on the <code>notebook</code> 
+to view the Notebook.</p>
+<h2 id="download-install-and-configure-cyberduck-for-view-logs-in-monitor_1">Download, Install and Configure CyberDuck for View Logs in Monitor</h2>
+<p><a name="cyberduck"></a></p>
+<p>Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Cloud Object Storage. Install and configure Cyberduck to view logs.  Connect to the 
+Cloud Object Storage (COS)  to download the custom function logs.  You can access the  credentials for accessing the 
+service in Monitor under Services tab.  Use tool called Cyberduck.   Download free version from: 
+Web: https://cyberduck.io/download/ Configure the setting in CyberDuck to connect to the Object Storage service included 
+with Monitor.</p>
+<ol>
+<li>
+<p>In Monitor, click on <code>Services</code> menu.  Copy the settings for Object Storage as shown in the below into <code>CyberDuck</code>.  <img alt="Configure CyberDuck" src="../img/l01.png" /> </p>
+</li>
+<li>
+<p>Open <code>CyberDuck</code> and create a <code>New Connection</code>.</p>
+</li>
+<li>
+<p>Select  <code>Protocol</code> is <code>S3 Amazon</code></p>
+</li>
+<li>
+<p>URL Server is taken from Monitor  Object Storage Service  <code>Cross Region Endpoints</code>  choose your region like <code>US</code>
+https://s3-api.us-geo.objectstorage.softlayer.net</p>
+</li>
+<li>
+<p>Copy <code>Access Key ID</code>  for your <code>Tenant ID</code>  </p>
+</li>
+<li>
+<p>Copy <code>Secret Access Key</code>  for your <code>Tenant ID</code></p>
+</li>
+<li>
+<p>Click <code>Connect</code> Button. </p>
+</li>
+<li>
+<p>Hit refresh and navigate to your Asset Type and date folder to see and download your log files.</p>
+</li>
+<li>
+<p>You will see <code>Entity_Type_ID</code> in the first few lines of the log files for that <code>Asset Type</code>.</p>
+</li>
+<li>
+<p>Bookmark the page for your <code>Asset Type</code> so that you can navigate here directly next time you want to access logs.</p>
+</li>
+</ol>
+<h2 id="download-install-and-configure-dbeaver_1">Download, Install and Configure DBeaver</h2>
+<p><a name="dbeaver"></a></p>
+<p>Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Database, install and configure Dbeaver client to view logs in the database table.<br />
+Connect to the Monitor Database Service to query database for custom function logs.  You can get the database credentials 
+for accessing the database service in Monitor under Services tab.  Use a universal database client tool like Dbeaver to 
+access the table.   Download the free community edition from https://dbeaver.io/download/  Configure the setting in 
+Dbeaver to connect to the Database service included with Monitor.</p>
+<ol>
+<li>
+<p>In Monitor, click on <code>Services</code> menu.  Copy the settings for Database and enter them as as shown in <code>DBeaver</code>.  <img alt="Get DB Connection Details" src="../img/sdb00.png" /> </p>
+</li>
+<li>
+<p>Open <code>Dbeaver</code>.  Select a <code>New Database Connection</code> option from the <code>Database</code> menu.
+ <img alt="New DB Connection" src="../img/sdb01.png" /></p>
+</li>
+<li>
+<p>Select  <code>IBM DB2</code> and click on  <code>Next</code> button.
+ <img alt="Get DB Connection Details" src="../img/sdb02.png" /></p>
+</li>
+<li>
+<p>Enter the database settings from Monitor Database Service in <code>DBeaver</code> connection settings dialog.
+ <img alt="Get DB Connection Details" src="../img/sdb03.png" /></p>
+</li>
+<li>
+<p>Click <code>test Connection</code> Button. </p>
+</li>
+<li>
+<p>Click <code>OK</code> Button to save the connection.</p>
+</li>
+</ol>
+<h2 id="query-logs-using-dbeaver_1">Query Logs using DBeaver</h2>
+<p><a name="dbeaver"></a></p>
+<p>Depending on the version of Monitor it may use either the Database or Object Storage service store logs.  To access the 
+log files for custom functions in Database use the following queries with Dbeaver client to view logs.</p>
+<ol>
+<li>
+<p>Open <code>Dbeaver</code>.  Click a <code>Monitor Database Connection</code> for <code>BLUDB</code> schema.</p>
+</li>
+<li>
+<p>Select  <code>New SQL Script</code> from the <code>SQL Editor</code> menu.  <img alt="New SQL Statement" src="../img/sdb04.png" /></p>
+</li>
+<li>
+<p>Enter the the following query to get status of execution for all functions.</p>
+<p><code>SELECT E.NAME, K.ENTITY_TYPE_ID, K.STATUS, 
+COUNT(*) AS Count FROM MAS82_MAM.KPI_LOGGING K, IOTANALYTICS.ENTITY_TYPE E 
+WHERE K.ENTITY_TYPE_ID = E.ENTITY_TYPE_ID  GROUP BY E.NAME ,K.ENTITY_TYPE_ID,K.STATUS ;</code></p>
+</li>
+<li>
+<p>Enter the the following query to delete old logs.</p>
+<p><code>DELETE FROM MAS82_MAM.KPI_LOGGING 
+WHERE DATE(UPDATED_TS)!=CURRENT_DATE;</code></p>
+</li>
+<li>
+<p>Enter the the following query to purge successful runs.</p>
+<p><code>DELETE FROM MAS82_MAM.KPI_LOGGING 
+WHERE STATUS='SUCCESS' AND ENTITY_TYPE_ID IN (13,14);</code></p>
+</li>
+<li>
+<p>Enter the the following query to get last 10 logs.</p>
+<p><code>SELECT E.NAME, K.ENTITY_TYPE_ID, K.STATUS, K.LOGFILE, K.LOG_MESSAGE, K.ERROR_MESSAGE, K.STARTED_TS FROM MAS82_MAM.KPI_LOGGING K, IOTANALYTICS.ENTITY_TYPE E 
+WHERE K.ENTITY_TYPE_ID = E.ENTITY_TYPE_ID 
+ORDER BY K.STARTED_TS DESC LIMIT 10;</code></p>
+</li>
+</ol>
+<h2 id="download-install-and-configure-pycharm_1">Download, Install and Configure PyCharm</h2>
+<p><a name="pycharm"></a></p>
+<p>Using an integrated development environment helps improve developer productivity when writing Python scripts and Monitor 
+Custom Functions.  It is recommended that you download and install <a href="https://www.jetbrains.com/pycharm/download/#section=mac">Pycharme Community Edition</a>. 
+It is a free IDE.  To run Python Scripts in  you should configure your Python Environment for each script you would like 
+to run to reference the virtual environment you setup earlier.</p>
+<ol>
+<li>
+<p>Follow the instructions to install Pycharm Community Edition.</p>
+</li>
+<li>
+<p>Start Pycharm.</p>
+</li>
+<li>
+<p>In the <code>Project</code> view, right click on the Python script file you want to run.  Select <code>edit configurations</code>.   See the
+example settings below.
+<img alt="setup assets" src="../img/l19.png" /> </p>
+</li>
+<li>
+<p>Set the Python Environment variable similar to what is  shown below. It should reflect the installation directory of 
+your virtual environment.</p>
+<p><code>PYTHONUNBUFFERED=1;DYLD_LIBRARY_PATH=/Users/student01/ve/iot-python3/lib/python3.7/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH;PYTHONPATH=/Users/student01/MAS_AutoAI</code></p>
+</li>
+<li>
+<p>Set the <code>Python interpreter</code> to your virtual environment. <img alt="Add virtual env to PyCharm" src="https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html" /></p>
+</li>
+<li>
+<p>Each time you run a Python script in Pyscharm remember to select the name of the virtual environment interpreter you 
+created in PyCharm.   <img alt="Run Edit Configurations Virtual Environment" src="../img/fun18.png" /></p>
+</li>
+</ol>
+<h2 id="debug-functions">Debug Functions</h2>
+<p><a name="debug"></a></p>
+<p>Functions can be run locally and also run within the pipeline.   You typically want to make sure your function works 
+locally before you git commit your function and register your function with Monitor.</p>
+<ol>
+<li>
+<p>To run your function locally run Python script <code>../scripts/local_test_of_function.py</code></p>
+</li>
+<li>
+<p>Git commit your function to a Github and they see if your data item for the calculated metric that calls your function 
+runs.  Functions that have a problem will cause an <code>analysis error</code> and cause the pipeline to stop for all other function 
+on on the  Device Type.  You should resolve those issues quickly so that others aren't prevented from monitoring their 
+own calculated metrics on the same Asset Type. If you see error message saying <code>Analysis Stopped</code> this means you have a 
+pipeline processing error and that a custom function likely is causing it. It may also mean an input or 
+output argument required by a calculated metric has been deleted or doesn't have a needed value. 
+<img alt="setup assets" src="../img/l20.png" /> </p>
+</li>
+<li>
+<p>If your calculate metric runs but doesn't give the desired results see the log files for that Device Type. 
+<a href="#cyberduck">Download, Install and Configure CyberDuck for View Logs in Monitor</a>  </p>
+</li>
+</ol>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../hopper_asset/" class="btn btn-neutral float-right" title="2. Create Packaging Hopper Assets">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../hopper_asset/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
