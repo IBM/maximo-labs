@@ -9,7 +9,7 @@ As the Remote Operational Support Manager that needs to monitor 100s of assets a
 
 I'm the Remote Operational Support Manager that needs to view my assets across multiple cities worldwide.  Using `Monitor`, I can collect data from devices and organize them by hierarchy, location, assets and devices in dashboards so that I can be alerted about problems needing attention.  Operational support can view asset information in Monitor that is collected via Historians from SCADA or from devices that are connected to the IOT Platform.
 
-The Water Resource Authority has a water treatment facility in Bedord that has asset groups of sedimentation tanks and pumps.  I will use a summary dashboard to quickly assess the operational condition for all the locations and for each asset type.  I can also view individual asset instance dashboards.
+The Water Resource Authority has a water treatment facility in Bedford that has asset groups of sedimentation tanks and pumps.  I will use a summary dashboard to quickly assess the operational condition for all the locations and for each asset type.  I can also view individual asset instance dashboards.
 
 1. Open `Maximo Application Suite` and select `Monitor Application`. 
 ![setup assets](img/MM01.png)
