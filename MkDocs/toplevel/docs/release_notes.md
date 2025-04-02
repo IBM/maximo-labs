@@ -13,12 +13,13 @@
 - Lan Cao - <caolan@cn.ibm.com>
 
 ---
-2025-01-15
+
 # Change Information
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
-|2025-01-15|Carlos Ferreira|Added first draft of the [MAS 9.0 Overview lab](../mas_9.0/).|
+|2025-04-02|Jan Ekstrøm    |Added 'Copy to clipboard' for commands for several 9.0 Maximo Labs                      |
+|2025-01-15|Carlos Ferreira|Added first draft of the [MAS 9.0 Overview lab](../mas_9.0/).                           |
 |2024-11-20|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/) with an easier MAS update exercise for 9.0.3 and later.             |
 |2024-11-07|Jan Ekstrøm    |Added the [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.0/).|
 |2024-10-16|Jan Ekstrøm    |Renamed to [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.0/). |

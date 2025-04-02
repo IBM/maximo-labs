@@ -28,7 +28,11 @@ In this case it was a MAS 9.0.0:</br>
 ![About](img/mas_update_02.png)</br></br>
 
 Now we need to figure out what MAS 9.0 OpenShift catalog was used and if a newer one is available.</br>
-First open a terminal and run the MAS CLI docker container `docker run -ti --rm --pull always quay.io/ibmmas/cli`:</br>
+First open a terminal and run the docker command to start the MAS CLI docker container:
+````
+docker run -ti --rm --pull always quay.io/ibmmas/cli
+````
+</br>
 ![MAS CLI](img/mas_update_03.png)</br></br>
 
 Login to the OpenShift cluster using your kubeadmin account and click on `Copy login command`:</br>

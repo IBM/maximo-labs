@@ -4,6 +4,12 @@ In this Exercise you will learn how to:
 * Do something
 * Do something more
 
+Example of a command in a block including a 'Copy to clipboard':</br>
+First open a terminal and run the docker command to start the MAS CLI docker container:
+````
+docker run -ti --rm --pull always quay.io/ibmmas/cli
+````
+</br>
 
 !!! note "Example of a `note` or `info` admonition"
     Expected time needed to run the complete lab: 1 hour
