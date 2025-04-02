@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Mike Lamb" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_device/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Setup mobile device in Monitor - MAS Monitor Connect Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Setup mobile device in Monitor";
+        var mkdocs_page_input_path = "setup_device.md";
+        var mkdocs_page_url = "/maximo-labs/setup_device/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS Monitor Connect Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS Monitor Connect Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Setup mobile device in Monitor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-device-type-and-setup-metrics-in-monitor">Create a device type and setup metrics in Monitor</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-device-type">Create a device type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-metrics-in-the-device-type">Create Metrics in the device type</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-device-in-monitor-representing-your-mobile-device">Create a device in Monitor representing your mobile device</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../connect_device/">2. Connect mobile device to Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify_data/">3. Verify event data is being sent and persisted in Monitor</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS Monitor Connect Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Setup mobile device in Monitor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to setup Monitor to receive data from your mobile device.</p>
+<ul>
+<li>Create a device type and setup metrics in Monitor</li>
+<li>Create a device in Monitor representing your mobile device</li>
+</ul>
+<h2 id="create-a-device-type-and-setup-metrics-in-monitor">Create a device type and setup metrics in Monitor</h2>
+<h3 id="create-a-device-type">Create a device type</h3>
+<ol>
+<li>Go to Setup in Monitor</li>
+<li>Go to Devices tab</li>
+<li>Click on + button to create a device type</li>
+<li>Choose Empty/Basic template</li>
+<li>Next</li>
+<li>Take note of the name you give as you will need this in the mobile app config</li>
+<li>Create</li>
+</ol>
+<h3 id="create-metrics-in-the-device-type">Create Metrics in the device type</h3>
+<ol>
+<li>Under Metrics section click Add metric</li>
+<li>Click Add metric
+    <br>a. Enter lat for metric
+    <br>b. Enter latitude for display name
+    <br>c. Enter sensorData for event
+    <br>d. Choose Number for type </li>
+<li>Click Add metric
+    <br>a. Enter lng for metric
+    <br>b. Enter longitude for display name
+    <br>c. Choose sensorData for event
+    <br>d. Choose Number for type</li>
+<li>Click Add metric
+    <br>a. Enter ax for metric
+    <br>b. Enter accx for display name
+    <br>c. Choose sensorData for event
+    <br>d. Choose Number for type</li>
+<li>Click Add metric
+    <br>a. Enter ay for metric
+    <br>b. Enter accy for display name
+    <br>c. Choose sensorData for event
+    <br>d. Choose Number for type</li>
+<li>Click Add metric
+    <br>a. Enter az for metric
+    <br>b. Enter accz for display name
+    <br>c. Choose sensorData for event
+    <br>d. Choose Number for type</li>
+<li>Click Add metric
+    <br>a. Enter oa for metric
+    <br>b. Enter alpha for display name
+    <br>c. Choose sensorData for event
+    <br>d. Choose Number for type</li>
+<li>Click Add metric
+    <br>a. Enter ob for metric
+    <br>b. Enter beta for display name
+    <br>c. Choose sensorData for event
+    <br>d. Choose Number for type</li>
+<li>Click Add metric
+    <br>a. Enter og for metric
+    <br>b. Enter gamma for display name
+    <br>c. Choose sensorData for event
+    <br>d. Choose Number for type</li>
+<li>Click Add</li>
+<li>Click Save</li>
+</ol>
+<p>The metrics should look like this:</p>
+<p><img alt="Metrics" src="../img/metrics.png" /></p>
+<h2 id="create-a-device-in-monitor-representing-your-mobile-device">Create a device in Monitor representing your mobile device</h2>
+<ol>
+<li>Click the blue Setup in the top left which will take you to the device types list</li>
+<li>The device type you created should be selected</li>
+<li>Add device</li>
+<li>Enter a name for your mobile device using your initials   i.e.  MLLiPhone</li>
+<li>Take note of the name you give as you will need this in the app config</li>
+<li>Click Add</li>
+<li>Copy the authentication token as you will need it in the mobile app config</li>
+</ol>
+<p>Note: One device in Monitor needs to be used per mobile device sending data.  If you want to use more mobile devices then create additional devices in Monitor.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../connect_device/" class="btn btn-neutral float-right" title="2. Connect mobile device to Monitor">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../connect_device/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

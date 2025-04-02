@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/connect_device/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1.  Connect Devices - Monitor SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1.  Connect Devices";
+        var mkdocs_page_input_path = "connect_device.md";
+        var mkdocs_page_url = "/maximo-labs/connect_device/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor SaaS Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Labs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../facilitator_instructions/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1.  Connect Devices</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_asset_devices/">2.  Monitor Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_anomalies/">3.  Monitor Anomalies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_request/">4.  Create Service Requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_imagecard/">5.  Add Image Cards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dimensions/">6.  Add Dimensions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addvaluecard/">7.  Add Value Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1.  Connect Devices</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Connect physical devices to Monitor</li>
+<li>Map device Physical Interfaces to Logical Interfaces</li>
+<li>Create realtime Rules and Actions on device events</li>
+<li>Understand how device data is stored</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you:</p>
+<ol>
+<li>Have completed the pre-requisites required for <a href="../facilitator_instructions/#all-exercises">all labs</a></li>
+<li>Have a Nordic Thingy. This is how you <a href="../facilitator_instructions/#purchasing-a-nordic-thingy">purchase</a> Nordic Thingy.  </li>
+</ol>
+<hr />
+<h1 id="connect-a-physical-device">Connect a Physical Device</h1>
+<p>It’s time to connect a real, physical device. For this exercise you will use a Nordic Thingy.  Learn more about the Nordic Thingy and its various sensors <a href="https://www.nordicsemi.com/Software-and-tools/Prototyping-platforms/Nordic-Thingy-52">here</a></p>
+<h2 id="connect-nordic-thingy-to-the-internet">Connect Nordic Thingy to the Internet</h2>
+<p>Let’s connect the a Nordic Thingy to the internet using Google Chrome on your computer. We are using Google Chrome because it has a built in Bluetooth listener.  Using the connectivity page below you can connect your Nordic Thingy device to the internet and the Maximo Asset Monitor Cloud Service. You first need to pair the Thingy via Bluetooth to your computer.    </p>
+<ol>
+<li>Carefully remove the rubber overlay to find the power switch next to the micro-usb port.  A blue light should illuminate when the device is powered up.</li>
+<li>Power on the Nordic Thingy. Push the tiny switch to the left of the micro-web port</li>
+<li>Use Bluetooth in the Google Chrome Browser to connect your device to the internet.  Open a tab with this web address:  <a href="https://nrf52t-v2.mybluemix.net/">https://nrf52t-v2.mybluemix.net/</a>.</li>
+<li>This method will only work on Google Chrome as it has a built in Bluetooth listener. Below is the connectivity page you’ll need to revisit if you get disconnected at any point.<br>
+Click <code>Connect</code> button.
+<img alt="Connect Thingy in Chrome" src="../img/connect13.png" />&nbsp;</li>
+<li>In the list of devices, find the one matching your device, select it and click <code>Pair</code>. You may need to rename the Thingy if you are in close range with others also using their own Thingy.
+<img alt="Pair Bluetooth" src="../img/i9.png" /></li>
+<li>Once paired, a form will pop up. The form's presence indicates that the Thingy is connected to your computer via Bluetooth. In order to connect the Thingy to the IoT Platform, we will need to obtain the information to fill in missing fields in the form. We will obtain this information in the next section.</li>
+</ol>
+<h2 id="connect-nordic-thingy-to-maximo-asset-monitor">Connect Nordic Thingy to Maximo Asset Monitor</h2>
+<p>The Nordic Thingy has connectivity to the internet.  You must first register device types and then devices with the IoT Platform service included with Maximo Asset Manager before they can securely send and persist data there.</p>
+<ol>
+<li>Navigate to and bookmark the Maximo Asset Monitor Dashboard page.<br>
+You will use this throughout the Exercise: <a href="https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo">https://dashboard-beta.connectedproducts.internetofthings.ibmcloud.com/preauth?tenantid=Monitor-Demo</a><br>
+which will bring you to the Home screen</li>
+<li>Log in to Maximo Asset Monitor.  Click <code>Login</code> button.
+<img alt="Login to Maximo Asset Monitor" src="../img/i11.png" />&nbsp;</li>
+<li>After logging in, you’ll land in Home Screen.
+<img alt="Maximo Asset Monitor Home" src="../img/i12.png" />&nbsp;</li>
+<li>Click <code>Services</code> tab in the left side menu
+<img alt="Connect Devices Menu" src="../img/newcon1.png" /> &nbsp;</li>
+<li>Next to the <code>Watson IoT Platform Service</code> title, click <code>View Details</code>. A new window will open. &nbsp;
+<img alt="Connect Devices Launch Button" src="../img/newcon2.png" /> &nbsp;</li>
+<li>Click <code>View More</code>. Copy and paste the link of the <code>Host URL</code> into a new tab in your browser<br>
+or simply press <code>Launch</code> (you might need to login in again with your IBM Id).
+<img alt="Connect Devices Launch Button" src="../img/newcon4.png" /> &nbsp;
+<img alt="Connect Devices Launch Button" src="../img/newcon3.png" /> &nbsp;</li>
+<li>A new page will open. Navigate to the <code>Device Types</code> tab
+<img alt="Devices Types Tab" src="../img/i14b.png" /> &nbsp;</li>
+<li>Click <code>Add Device Type</code> button in the top right corner.
+<img alt="Devices Types Tab" src="../img/i16.png" /> &nbsp;</li>
+<li>Now create a new device type and name it <code>&lt;your last name&gt;_thingy</code>. For example, <code>smith_thingy.</code> In the figures below, you will see that the device type name has a dash in it.<br>
+DO NOT PUT A DASH OR PERIOD IN YOUR DEVICE TYPE NAME.<br>
+<em>There is an issue in Monitor right now where the pipeline will break if there is a dash or period in your device type name.</em>
+<img alt="Devices Types Add Type" src="../img/i17.png" /> &nbsp;<br />
+<img alt="Devices Tab" src="../img/i19.png" /> &nbsp;</li>
+<li>Click <code>Next</code> until you get past <code>Finish</code>. You’ve finished creating a device type.</li>
+<li>Now you will register a new device using the <code>Device Type</code> you just created. Make sure to name the device the same name as your Thingy from the earlier step.  Navigate back to the <code>Browse</code> tab and <code>Add Device</code>
+<img alt="Devices Add Device" src="../img/i15a.png" /> &nbsp;
+<img alt="Devices Add Device Information" src="../img/i18.png" /> &nbsp;
+click Next until you reach Finish:
+<img alt="Devices Add Device" src="../img/i20.png" /> &nbsp;</li>
+<li>Once you finish creating the device, make sure you copy and make note of the device credentials!  Your device must provide device credentials to connect to the IOT Platform Service.
+<img alt="Devices Add Device Finish" src="../img/i21.png" /> &nbsp;</li>
+<li>A Nordic Thingy needs the IoT Platform tenant organization ID to connect to the IoT Platform Service. You can also find the <code>Org ID</code> in the top right of the screen or the browser URL. Make note of the <code>Org ID</code> for use in the next step.
+<img alt="Devices Add Device Finish" src="../img/i21a.png" /> &nbsp;</li>
+<li>Navigate back to the Thingy page within your Chrome Browser showing the sensor values and enter the <code>Organization ID</code>, the <code>Device Type</code>, the <code>Device ID</code>, and the <code>Authorization Token</code> into the corresponding fields in the form.
+<img alt="Devices Add Device Finish" src="../img/newcon5.png" /> &nbsp;</li>
+<li>Click the <code>Save</code> button to write the token to the Thingy. You should see both the device connection and the IoT Platform service connection status indicators are green if successful.
+<img alt="Devices Add Device Finish" src="../img/i22.png" /> &nbsp;</li>
+<li>You should also now see data flowing from the Thingy to your corresponding Device ID in the IoT Platform service back in the <code>Devices</code> tab.
+<img alt="Devices Add Device Finish" src="../img/i25.png" />&nbsp;</li>
+<li>Flip the Thingy upside down to create an error condition. It will beep and the light will turn red. Click on one of the rows to see the event payload in JSON format.<br>
+Notice the <code>err</code> value in the payload changed to 1.
+<img alt="Devices Add Device Finish" src="../img/i26.png" />&nbsp;</li>
+<li>Press the large black button on the top of the Thingy to clear the error.</li>
+</ol>
+<hr />
+<p><strong>Note:</strong>
+This exercise demonstrated how to manually add a device to Maximo Asset Monitor.  You would most likely  programatically add devices using the included Watson IOT Platform Service <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/reference/api.html">REST APIs</a> and <a href="https://ibm-watson-iot.github.io/iot-python/application/api/registry/devices/">Python SDK</a>.</p>
+<hr />
+<h1 id="interfaces-rules-and-notifications">Interfaces, Rules and Notifications</h1>
+<p>You will create an alert notification when the Nordic Thingy has an error condition.  In this next section you will learn how you can:</p>
+<ul>
+<li>Create <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web">physical interfaces</a></li>
+<li>Create <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web">logical interfaces</a></li>
+<li>Define conditional realtime <a href="https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/platform/reference/embeddedrules/index.html">rules and notifications</a>&nbsp;
+&nbsp;</li>
+</ul>
+<h2 id="create-a-physical-interface">Create a Physical Interface</h2>
+<ol>
+<li>Make sure your Nordic Thingy is turned on and actively sending sensor data to the IoTP service. You may need to reconnect the Thingy in the Chrome browser using this <a href="https://nrf52t.mybluemix.net/">web link</a> and steps provided earlier.</li>
+<li>Check if the Thingy is connected.  Click <code>Browse</code> tab in the IoT Platform service and searching the devices list for device status and recent events.
+<img alt="Browse Devices" src="../img/i27.png" /> &nbsp;</li>
+<li>Navigate to the <code>Device Type</code> for your Thingy and click <code>Interfaces</code> tab. Make sure <code>Advanced Flow</code> is selected and click <code>Create Physical Interface</code> button.
+<img alt="Device Type Advanced Flow" src="../img/i28.png" /> &nbsp;</li>
+<li>Leave the default name for the physical interface and then click <code>Next</code>.</li>
+<li>Click <code>+ Create event type</code> button on the next page. If your Nordic Thingy is still actively sending events, then you should see the <code>status</code> event show up.</li>
+<li>If the <code>status</code> event does not automatically appear, check the connectivity back in <code>Browse</code> in the device list. Select <code>status</code> and then click <code>Add.</code></li>
+<li>Click <code>Done</code> to complete the creation of the physical interfaces.
+<img alt="Add Event Types to Physical Interface" src="../img/i29.png" /> &nbsp;</li>
+</ol>
+<h2 id="create-a-logical-interface">Create a Logical Interface</h2>
+<ol>
+<li>Next, click <code>+ Create Logical Interface</code> button to begin creating the logical interface. Leave the default name as is and click <code>Next</code></li>
+<li>Click <code>+ Add Property</code> button, expand the <code>d</code> and select and save the <code>err</code> property.
+<img alt="Add Event Types to Physical Interface" src="../img/i30.png" /> &nbsp;
+<img alt="Add Property to Physical Interface" src="../img/i31.png" /> &nbsp;   </li>
+<li>Let’s do the same for “tmp”, except this time we’ll use the mapping field to convert the temperature from Celsius to Fahrenheit using <a href="https://docs.jsonata.org/expressions">JSONData script functions</a>.  Select <code>+ Add Property</code>  </li>
+<li>Select <code>d.tmp</code> and change the name to <code>temperature</code></li>
+<li>Then in the mapping field, click <code>pencil</code> icon to edit</li>
+<li>Add the following equation: <code>d.tmp * 1.8 + 32</code>. Notice that to input the numbers <code>1.8</code> and <code>32</code> you have to first select the <code>Value</code> operator. Another option is to switch the <code>Advanced Editor</code> button and paste the formula.  It may cause a syntax error if you mistype, so be careful.</li>
+<li>Click <code>green check</code> mark when complete</li>
+<li>Click <code>save</code>
+<img alt="Add a Calculated Property to a Physical Interface" src="../img/i32.png" /> &nbsp;   </li>
+<li>Add the remaining properties with the names as shown below
+<img alt="Add a Calculated Property to a Physical Interface" src="../img/i33.png" /> &nbsp;   </li>
+<li>Click <code>Next</code> to move onto <code>Notifications</code>. Notifications allow you to take action when certain conditions occur.</li>
+<li>Change the <code>State Update Notification</code> criteria to <code>State Changes.</code> This will send data to your Logical interface only when the value changes. If you want to send the event all the time even when the values are the same as previous events select <code>All events</code>.<br>
+Click the <code>X</code>in the upper right corner to close this dialogue box and make sure to hit the <code>Apply</code> button to save changes.
+<img alt="Add a Calculated Property to a Physical Interface" src="../img/i34.png" /> &nbsp; <br />
+<img alt="Add a Calculated Property to a Physical Interface" src="../img/i35.png" /> &nbsp;   </li>
+<li>Click <code>Add notification +</code> button. This will raise a notification event in IoT Platform when the Thingy’s error condition is set to <code>1</code></li>
+<li>Enter the Name, description, criteria and condition as shown below.<code>$state.err = 1</code></li>
+<li>Click <code>Apply</code></li>
+<li>Click <code>Done</code>
+<img alt="Save Physical Interface Definition" src="../img/i36.png" /> &nbsp;  </li>
+<li>The interface creation is almost complete. Back in the interface view, click <code>Activate</code> button and activate the interfaces. If successful, you should see a green rocket ship icon next to each interface.
+<img alt="Add a Calculated Property to a Physical Interface" src="../img/i37.png" /> &nbsp;  </li>
+<li>You can check to see if your interface is working, by browsing to your device, select the <code>State</code> tab and switch the interface to your newly created interface. Temperature should now be shown in Fahrenheit.
+<img alt="Check Physical Interface State Events" src="../img/i38.png" /> &nbsp;  </li>
+</ol>
+<h1 id="store-data">Store Data</h1>
+<p>This next exercise focuses on how and what database tables your device data is stored in.  Make sure you have completed the earlier steps in this Exercise. You should already have a device type with an active physical and logical interface and at least one device of that type sending data.</p>
+<ol>
+<li>You can check if your device is connected and sending data through an interface by browsing devices in the IoT Platform service and checking your devices status, recent events and state.  Look at logs tab for troubleshooting issues.  You should see values update when look at the state interface.  Make sure you Nordic Thingy is powered up and sending data through Chrome Bluetooth connection.
+<img alt="Device Data State" src="../img/i39.png" /> &nbsp;</li>
+<li>Device data flows through a physical interface, transformed into a logical interface and stored in a time series database table within DB2 Warehouse called <code>IOT_&lt;Device Type Name&gt;</code>. To see the table go back to the Maximo Asset Monitor window and click on <code>Services</code> in the left menu.
+<img alt="Services" src="../img/i41a.png" /> &nbsp;</li>
+<li>Click <code>View Details</code>
+<img alt="Services" src="../img/i41b.png" /> &nbsp;</li>
+</ol>
+<hr />
+<p><strong>Note:</strong>
+When you click on <code>View Details</code>, and you see fields that say admin only, then please contact an administrator on the account to give you the respective DB2 link, username, and password. If instead of DB2 Warehouse, your tenant uses PostgreSQL, download DBeaver and enter the information given in the <code>View Details</code> tab. More information on Maximo Asset Monitor and PostgreSQL can be found <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/developing/data_access_postgres_mon.html">here</a>.</p>
+<hr />
+<ol>
+<li>Next to Db2 Warehouse on Cloud, and click <code>Launch</code>
+<img alt="DB2 Credentials" src="../img/i40.png" /> &nbsp;</li>
+<li>The DB2 page opens in another tab.  You may see a second sign in dialog labeled <code>Attention</code> to change your DB2 password. Ignore the second sign in dialog.</li>
+<li>Copy and paste the <code>username</code> and <code>password</code> from the <code>View Details</code> window into the Db2 login page and press <code>Sign in</code>.
+<img alt="Search Entity Types" src="../img/i42.png" /> &nbsp;</li>
+<li>Select <code>Data</code>in the left menu followed by selecting the <code>Tables</code> tab. Your table is located under the BLUADMIN Schema. To quickly find your table enter your surname used in naming the Device Type in the search field followed by pressing <code>Enter</code>. Selecting the BLUADMIN Schema should reveil your table as <code>IOT_&lt;Device Type Name&gt;</code>.
+<img alt="Search Entity Types" src="../img/i43.png" /> &nbsp;</li>
+<li>Click on your <code>IOT_&lt;Device Name&gt;</code> table and then click the <code>View Data</code> button to see the data.<br />
+<img alt="Search Entity Types" src="../img/i44.png" /> &nbsp;</li>
+</ol>
+<p>Congratulations you have successfully connected a device and have it sending and storing data in Maximo Asset Monitor.  In the next Exercise you will view the available dashboards and create new dashboards to monitor your Thingy.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../facilitator_instructions/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../monitor_asset_devices/" class="btn btn-neutral float-right" title="2.  Monitor Assets">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../facilitator_instructions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../monitor_asset_devices/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

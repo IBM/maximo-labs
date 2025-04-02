@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/matrix/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>View and config Asset Matrix - Maximo APM V8.8 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "View and config Asset Matrix";
+        var mkdocs_page_input_path = "matrix.md";
+        var mkdocs_page_url = "/maximo-labs/matrix/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.8 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.8.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">View and config Asset Matrix</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#navigate-to-health-and-predict-utilities">Navigate to Health and Predict - Utilities</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-matrix-for-criticality-and-end-of-life-criticality-and-risk-criticality-and-health">View Matrix for Criticality and End of life, Criticality and Risk, Criticality and Health</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-the-drilled-in-assets-list-for-one-distribution">View the drilled in assets list for one distribution</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#config-matrix-version">Config Matrix version</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.8 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">View and config Asset Matrix</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="asset-matrix">Asset Matrix</h1>
+<p>Maximo HP Utilities includes matrix view for determing the distribution of assets based on scores and then take action to avoid imminent failures.</p>
+<p>In this exercise the Reliability Engineer uses HP Utilities to:</p>
+<ol>
+<li><a href="#view-matrix-for-criticality-and-end-of-life-criticality-and-risk-criticality-and-health">View Matrix for Criticality and End of life, Criticality and Risk, Criticality and Health</a></li>
+<li><a href="#view-the-drilled-in-assets-list-for-one-distribution">View the drilled in assets list and take action</a></li>
+<li><a href="#config-matrix-version">Config Matrix version</a></li>
+</ol>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>This lab requires the following</p>
+<ul>
+<li>A working Maximo Application Suite (MAS) 8.8+ environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed</li>
+<li>Make sure the exercise <a href="../hpu_models/">Understand Health and Predict - Utilities Models</a> is done, so that Sample ST(Substation Transformer) assets have the EOL/Risk/Health scores</li>
+<li>Members of the EUSCORING security group can <a href="#config-matrix-version">configure settings for the matrix</a>, such as which version of the matrix is the default version and the colors and placement of cells.</li>
+</ul>
+<p>Please note that the MAS Worldwide (WW) demo environment is NOT a suitable environment for this lab.  The WW demo environment is shared, and making ANY changes to that environment will impact other users’ ability to demonstrate MAS.</p>
+<h2 id="introduction">Introduction</h2>
+<p>This lab is intended to demonstrate the Matrix view capability in HPU which is another view added in MAS v8.8 to the existing Grid view, Map view, Charts View. It allows Reliability engineer to esaily idenfity the high risk assets from a matrix distribution view and take actions based on the distributions.
+Reliability engineer can also easily config the different matrix versions, like to change the default version, disable version, change the matrix cells' color(category) etc.</p>
+<h2 id="navigate-to-health-and-predict-utilities">Navigate to Health and Predict - Utilities</h2>
+<p><code>Action:</code></p>
+<ol>
+<li>
+<p>Navigate to Health and Predict - Utilities (HPU). From the main MAS page, select the <code>Industry solutions</code> tab.
+<img alt="setup assets" src="../img/apm_8.7/AIO%201.png" /></p>
+</li>
+<li>
+<p>Then click <code>Health and Predict – Utilities</code> menu.
+<img alt="setup assets" src="../img/apm_8.7/AIO%202.png" />   </p>
+</li>
+</ol>
+<h2 id="view-matrix-for-criticality-and-end-of-life-criticality-and-risk-criticality-and-health">View Matrix for Criticality and End of life, Criticality and Risk, Criticality and Health</h2>
+<p><code>Action:</code>
+1. From the asset grid view, click the Matrix icon, you will see the matrix, each cell contains the assets count which fall in the x-axis and y-axis range.
+   For example, the red cell in the top right corner shows the assets that End of Life is high and Criticality is also High which means high risks.
+   Besides cells, there are also several cards which is summarized count for the different categories of assets, normally High is for assets that need to take action in high priority.</p>
+<pre><code>![matrix view](./img/matrix_home.png)
+</code></pre>
+<ol>
+<li>If there are too many assets in one cells or category, you can also use filter to reduce the counts. The followings are the detailed steps:</li>
+<li>click the filter icon, then select <code>Type</code></li>
+<li>From the pop-up, find <code>Substation Transformers</code>, select it, and press <code>OK</code>.  It may be necessary to use the search capability or scroll.</li>
+<li>
+<p>Finally, press <code>Apply</code>, the Matrix count </p>
+</li>
+<li>
+<p>The default matrix version is Criticality and End of life, you can also click the dropdown on the top right corner to change to other matrix versions. </p>
+<p><img alt="matrix view" src="../img/matrix_versions.png" /></p>
+</li>
+</ol>
+<h2 id="view-the-drilled-in-assets-list-for-one-distribution">View the drilled in assets list for one distribution</h2>
+<p><code>Action:</code>
+1. Click any red cell of Matrix or 'High' need for action card with the blue text of number, you can see the detailed assets list.
+  <img alt="matrix view" src="../img/matrix_home_click.png" />
+  <img alt="matrix view" src="../img/matrix_drillin.png" />
+2. In the drill in page, you can filter out the interested assets list by click the filter icon.
+  <img alt="matrix view" src="../img/matrix_drillin_filter.png" />
+3. there are several actions that can be done in the drill in page:
+   - Click one asset name, and go into asset detail page, create Work order or Service request
+     <img alt="matrix view" src="../img/matrix_drillin_asset.png" />
+     <img alt="matrix view" src="../img/matrix_asset_details.png" />
+   - Add all assets to Asset Investment optimizer project
+     - create a new project
+     - add to existing project
+     <img alt="matrix view" src="../img/matrix_create_aio.png" />
+     <img alt="matrix view" src="../img/matrix_aio_st.png" />
+       * please refer the <a href="../asset_investment/">Asset Investment Optimization</a> for more details
+   - select some assets by clicking the checkbox and create AIO project
+      <img alt="matrix view" src="../img/matrix_drillin_select.png" /></p>
+<h2 id="config-matrix-version">Config Matrix version</h2>
+<p>We have by default configuration(including the Matrix cell category color/default version etc) for matrix versions, but those configuration can also be customized per business requirements. By default, High End of life with Criticality A/B are marked as High risk assets with red color, but for a short/mid-term maintainence plan, we can also add a new Matrix cell category color 'Medium High' to pay attentions. For this execise, we will change the cell color.</p>
+<p><code>Action:</code>
+1. Click the Config icon in the top right corner
+  <img alt="matrix view" src="../img/matrix_home_config.png" />
+  <img alt="matrix view" src="../img/matrix_config.png" /></p>
+<ol>
+<li>Click the Edit button under the Categories section</li>
+<li>Click the Add button to add a new category 'Medium High' by input the name, color, icon and click the order icon to adjust the sequence.
+  <img alt="matrix view" src="../img/matrix_config_edit.png" /></li>
+<li>Click the save button to save the changes</li>
+<li>Select the new added Matrix cell color category 'Medium High' and then click the cells that should be marked as the orange
+  <img alt="matrix view" src="../img/matrix_config_color.png" />
+  <img alt="matrix view" src="../img/matrix_config_orange.png" /></li>
+<li>Click the save button, and the new Matrix view is updated
+  <img alt="matrix view" src="../img/matrix_home_new.png" /></li>
+</ol>
+<p>Congratulations.  You now have identified at risk assets from the matrix view and take actions to improve their condition.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../asset_investment/" class="btn btn-neutral float-left" title="Asset Investment Optimization"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../appconnect_install/" class="btn btn-neutral float-right" title="Install and Configure App Connect">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../asset_investment/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../appconnect_install/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

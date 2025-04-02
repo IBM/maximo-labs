@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/utilities_st_futurescore_demo_notebook/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Create Custom Score Forecast via Notebook - Maximo APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Create Custom Score Forecast via Notebook";
+        var mkdocs_page_input_path = "utilities_st_futurescore_demo_notebook.md";
+        var mkdocs_page_url = "/maximo-labs/utilities_st_futurescore_demo_notebook/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../build_demo/">Setup Health and Predict Demonstration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo_script/">Health and Predict Overview Task Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_scores/">Setup Custom Scores</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_pump_score_notebook/">Create Custom Scores Using a Notebook</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Create Custom Score Forecast via Notebook</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#upload-future-notebook-hpu-project">Upload future notebook HPU project.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#upload-files-and-run-the-data-loader-notebook">Upload Files and run the Data Loader Notebook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#confirm-score-group-and-scores">Confirm Score Group and Scores</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_st_futurescore_using_wml_model/">Create Custom Score Forecast via WML Model</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Create Custom Score Forecast via Notebook</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="forecast-custom-scores-using-a-notebook">Forecast Custom Scores using a Notebook</h1>
+<p>Use an instructor provided notebook and demo data to create a Health score group and associate it to a score type like Health, Risk, Criticallty, End of Life.  Calculate the current scoring and future forecasted scores using an historical score values provided in a csv file.  Learn also how to extract future scores from third party for each asset. These instructions will be based off using the:</p>
+<ul>
+<li><code>1.3_Create-ST-SG_FutureScores.ipynb</code> file with the ST demo data which included in<code>hpu_csv_demo</code> or <code>hpu_csv_st</code> data set at  <a href="https://github.ibm.com/Watson-IoT/eam-hpu-lab/csv-files">github.ibm.com/Watson-IoT/eam-hpu-lab</a>``.</li>
+</ul>
+<p>In this exercise you will use Watson Studio, MAS Health and Predict Utilities to:</p>
+<ol>
+<li><a href="#run_notebook">Upload the and Run the HPU Health Score Group notebook</a> to create score group using forecast notebook template from <code>https://github.ibm.com/Watson-IoT/eam-hpu-lab/notebooks</code>. </li>
+<li><a href="#confirm_upload">Confirm</a> Scoring groups have been created and scores have been calculated</li>
+<li><a href="#error_handling">Handle Errors</a> that may come up in the process</li>
+</ol>
+<p>This notebook can only be run once per environment per site with the same set of assets. </p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ul>
+<li>Ensure you have access to asset data files for the MAS Health and Predict Utilities Demo Data</li>
+<li>Ensure you have loaded the hpu_csv_demo data or hpu_csv_st into the Health and Predict Utilities system by completing the <a href="../../apm_8.7/asset_data_loader">Load Data into Manage</a> lab for the Utilities data.</li>
+<li>Upload future notebook cfg file in HPU project as a data asset.  Upload <code>IBM-future-score-from-csv-sample-6.0.0-demo.cfg</code> from <code>https://github.ibm.com/Watson-IoT/eam-hpu-lab/notebooks</code> to HPU project.
+    <img alt="Upload data asset1" height="30%" src="../img/apm_8.9/future_sg5.png" width="30%" />
+    <img alt="Upload data asset2" src="../img/apm_8.9/future_sg6.png" /></li>
+</ul>
+<h2 id="upload-future-notebook-hpu-project">Upload future notebook HPU project.</h2>
+<p><a name="upload_notebook"></a>   </p>
+<ol>
+<li>
+<p>Upload the <code>Create Substation Transformer Future Scores</code> notebook from the github in the <code>https://github.ibm.com/Watson-IoT/eam-hpu-lab/notebooks</code> to your project.    </p>
+</li>
+<li>
+<p>Click 'New asset' button in the project, and filter for notebook type. <br />
+<img alt="New Asset" src="../img/apm_8.9/pump_sg1.png" />     </p>
+</li>
+<li>
+<p>Choose notebook type
+<img alt="Choose notebook type" src="../img/apm_8.9/pump_sg2.png" /></p>
+</li>
+<li>
+<p>Select the <code>IBM-future-score-from-csv-sample-6.0.0-demo.ipynb</code> notebook, and then click <code>Create</code> button. 
+<img alt="Choose notebook" src="../img/apm_8.9/future_sg7.png" />   </p>
+</li>
+<li>
+<p>Save the notebook to a latest version. <br />
+<img alt="Save version" src="../img/apm_8.9/future_sg8.png" /></p>
+</li>
+<li>
+<p>Create a job named <code>Run-IBM-future-score-from-csv-sample-6-0-0-demo</code> for the notebook.
+<img alt="Create job1" src="../img/apm_8.9/future_sg9.png" />   </p>
+</li>
+<li>
+<p>Click Next, Next, Next, then Create.
+<img alt="Create job2" src="../img/apm_8.9/future_sg10.png" />   </p>
+</li>
+<li>
+<p>A <code>Pop up</code> message will show indicate the job is created successfully. <br />
+<img alt="Create job3" src="../img/apm_8.9/future_sg11.png" /> </p>
+</li>
+<li>
+<p>The forecast notebook <code>cfg</code> file and notebook should upload to the configured project for HPU. <br />
+<img alt="Peoject info" src="../img/apm_8.9/future_sg1.png" />   </p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Check the project id after entering a project to ensure that's the same one that's configured in system properties for HPU.
+<img alt="Peoject id" src="../img/apm_8.9/future_sg2.png" />   </p>
+</div>
+<h2 id="upload-files-and-run-the-data-loader-notebook">Upload Files and run the Data Loader Notebook</h2>
+<p><a name="run_notebook"></a></p>
+<ol>
+<li>
+<p>Upload the <code>Create Substation Transformer Future Score Groups</code> notebook provided by the instructor from the <a href="https://github.ibm.com/Watson-IoT/eam-hpu-lab/notebooks">github repository</a> to your project.  <br />
+Click <code>New asset</code> button in the project, and filter for notebook type.  Select the <code>1.3_Create-ST-SG_FutureScores.ipynb</code> notebook, and then click <code>Create</code> button. Refer to the instructions in <a href="#upload_notebook">Upload future notebook HPU project</a></p>
+</li>
+<li>
+<p>Click on the <code>pencil</code> icon next to your notebook to open it in edit mode.</p>
+</li>
+<li>
+<p>If the notebook fails to start, restart it.  Click on the <code>i</code> icon , <code>Environment</code> tab,  <code>Running status</code> dropdown select box and choose <code>Restart</code></p>
+<p><img alt="Restarting Environment" height="30%" src="../img/apm_8.7/HPU_dataloader_3.png" width="30%" /> </p>
+</li>
+<li>
+<p>Run the first code cell to import packages.</p>
+</li>
+<li>
+<p>Fetch MX_BASE_URL and MX_APIKEY as instructued below and store it as HPU_Envs.json file in below format, then upload to ws project(If it's already prepared in previous exercises, skip this step).    </p>
+<p>{
+"Instruction":{
+    "MX_BASE_URL":"Extract health or manage host, and replace <strong><em>*</em></strong> in https://<strong><em>*</em></strong>/maximo/, e.g Get main.manage.ivt13rel88.ivt.suite.maximo.com from https://main.manage.ivt13rel88.ivt.suite.maximo.com/maximo/oslc/graphite/relengineer/index.html",
+    "MX_APIKEY":"Application Administration -&gt; Go To Administration -&gt; Integration -&gt; API Keys -&gt; Copy key from admin user card or add an API key if does not exist.
+},
+"MX_APIKEY":"<strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>*",
+"MX_BASE_URL":"http://health-team31.fyre.ibm.com:9084/maximo/"
+}</p>
+</li>
+<li>
+<p>Update the site id value to your <code>SITE_ID</code> in the second cell.</p>
+</li>
+<li>
+<p>Run the next cell to define the API call for Maximo.</p>
+</li>
+<li>
+<p>Run the next 3 cells to define function to create the following:</p>
+</li>
+<li>
+<p>The query that will be used to build the health scores.</p>
+</li>
+<li>
+<p>Get the scores list and activate the scores.</p>
+</li>
+<li>
+<p>Create the asset group, create scores for the asset group and clean up.</p>
+</li>
+<li>
+<p>Run the next cell to create the query for the <code>Asset Scoring Group</code>. This query will be made up of <code>Asset Type</code> and <code>Site ID</code> and <code>prefix</code>.</p>
+</li>
+<li>
+<p>Clean up and then create the <code>Asset Scoring Group</code> using the query from the previous cell.  Build the scores with future 
+notebook, and activate the scores, trigger the calculation. Wait for 5 minutes for the calculation to finish.</p>
+</li>
+</ol>
+<h2 id="confirm-score-group-and-scores">Confirm  Score Group and Scores</h2>
+<p><a name="confirm_upload"></a>
+To confirm if the Score Group and Scores were created do the following: </p>
+<ol>
+<li>
+<p>Navigate to <code>Maximo Health and Predict for Utilities</code> for the provided environment.</p>
+</li>
+<li>
+<p>Go to the <code>Scoring and DGA Settings</code> application within Maximo Health and Predict - Utilities.</p>
+</li>
+<li>
+<p>Search for your <code>Org</code> or <code>Site</code>. Notice that there is a score group created for <code>Substation Transformer Assets</code>. 
+    <img alt="Score Groups" src="../img/apm_8.9/future_sg12.png" />   </p>
+</li>
+<li>
+<p>Click into the <code>Score Group</code> and notice all the <code>Score Types</code> created via the notebook listed in the <code>Group Details</code> section, and how it's connected to the future notebook. <br />
+<img alt="Group Info" src="../img/apm_8.9/future_sg13.png" />   </p>
+</li>
+<li>
+<p>Click into any asset and see that the scores have calculated. <br />
+<img alt="Scores" src="../img/apm_8.9/future_sg14.png" />   </p>
+</li>
+<li>
+<p>Check future scores in <code>Matrix Page</code>. Go to <code>Assets</code> page, select the same query that is used in score group. Click the 
+<code>Matrix</code> icon to switch to Matrix page. <br />
+<img alt="Choose query" src="../img/apm_8.9/future_sg15.png" />     </p>
+</li>
+<li>
+<p>Click <code>year plus</code> button to check the summary information for future year, like 2023.
+    <img alt="future 1" src="../img/apm_8.9/future_sg16.png" />  <br />
+<img alt="future 2" src="../img/apm_8.9/future_sg17.png" />     </p>
+</li>
+<li>
+<p>Click any cell to drill in to see the related assets in a table view. Click <code>year plus</code> button to see which assets are 
+in this range in next year and  show the next year score values in the table.
+    <img alt="future 3" src="../img/apm_8.9/future_sg18.png" />   </p>
+</li>
+</ol>
+<p>Congratulations you have learned how to use a notebook to create future score forecasts and verified the future scores in Matrix appeared.</p>
+<p>In the next exercise you will learn how to train a WML model to forecast future score for each asset using the registered WML model in a notebook.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../utilities_pump_score_notebook/" class="btn btn-neutral float-left" title="Create Custom Scores Using a Notebook"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../utilities_st_futurescore_using_wml_model/" class="btn btn-neutral float-right" title="Create Custom Score Forecast via WML Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../utilities_pump_score_notebook/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../utilities_st_futurescore_using_wml_model/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

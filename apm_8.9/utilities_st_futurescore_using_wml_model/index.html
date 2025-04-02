@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/utilities_st_futurescore_using_wml_model/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Create Custom Score Forecast via WML Model - Maximo APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Create Custom Score Forecast via WML Model";
+        var mkdocs_page_input_path = "utilities_st_futurescore_using_wml_model.md";
+        var mkdocs_page_url = "/maximo-labs/utilities_st_futurescore_using_wml_model/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../build_demo/">Setup Health and Predict Demonstration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo_script/">Health and Predict Overview Task Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_scores/">Setup Custom Scores</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_pump_score_notebook/">Create Custom Scores Using a Notebook</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_st_futurescore_demo_notebook/">Create Custom Score Forecast via Notebook</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Create Custom Score Forecast via WML Model</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-score-group-using-a-notebook-template">Create a Score Group Using a Notebook Template</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#train-wml-model">Train WML Model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#trigger-calculation">Trigger Calculation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#check-future-score-in-matrix">Check Future Score in Matrix</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Create Custom Score Forecast via WML Model</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="forecast-custom-scores-using-a-machine-learning-model">Forecast Custom Scores Using a Machine Learning Model</h1>
+<p>Health and Predict - Utilities allows you to train a WML model based using an asset's historical score values so that you 
+can forecast future asset scores.   MAS Health and Predict Utilities supports forecasting Asset Risk, End of Life scores 
+and Health scores. User can enable forecast by setting two parameters:</p>
+<pre><code>    ``healthlib`.set_FutureScore_enablement(enablement=True)`
+
+    ``healthlib`.set_FutureScore_numOfyear(numOfyear=10)`
+</code></pre>
+<p>These can parameters can be set in any notebook and saved. The Health Library will calculate the EOL future score as EOL curve.
+Risk is calculated as <code>Criticality * EOL</code>.  Once an adequate number of historical score samples are available, a future 
+EOL score and Risk score can be forecasted.</p>
+<p>To forecast Health score, MAS Health and Predict Utilities can use a Predict model notebook template to train a model based on historical score data, and register the notebook job in WML to get future scores.  MAS Health and Predict Utilities has two notebooks and one cfg file templates.<br />
+- <code>IBM-Asset-HealthScore-Forecast-Sample-6.0.0.ipynb</code> is for training and register a forecast model
+- <code>IBM-future-score-from-predict-sample-6.0.0.ipynb</code> and <code>IBM-future-score-from-predict-sample-6.0.0.cfg</code> are for creating a Substation Transformer Score Group which includes forecast Health score.      </p>
+<p>The Predict model notebook template can also be used to forecast other custom score if it has historical scores to train on.</p>
+<p>In this set of exercises you will use Watson Studio, MAS Health and Predict Utilities to: <br />
+1. <a href="#create_sg">Create Score Group</a> Create a Substation Transformer Score Group using IBM-future-score-from-predict-sample-6.0.0.ipynb notebook which include the logic to do Health Score forecast based on wml model.     <br />
+2. <a href="#train_model">Train WML Model</a> Use IBM-Asset-HealthScore-Forecast-Sample-6.0.0.ipynb template to train a forecast model and register in wml.  <br />
+3. <a href="#forecast">Schedule Calculation</a> Schedule calculation in Score Group detail page.  <br />
+4. <a href="#confirm_results">Check Future Score in Matrix</a> Future scores have been forecasted. <br />
+5. <a href="#error_handling">Handle Errors</a> that may come up in the process.   </p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>Ask your instructor:
+- For the asset data files for the MAS Health and Predict Utilities Demo Data. 
+- If they have loaded the <code>hpu_csv_demo</code> data or <code>hpu_csv_st</code> into the Health and Predict Utilities system by completing the <a href="../../apm_8.7/asset_data_loader">Load Data into Manage</a> lab for the Utilities data. <br />
+- If a data scientist has prepared the <code>cfg</code> and <code>notebook template</code> for forecasting future scores. in the cfg template, Health calculate method is replaced to use <code>calculate_health_score</code>, and in notebook template register <code>calculate_health_score</code> function, this function can handle both current and future scores. <br />
+    &#8194;&#8194;<img alt="Health Function" height="80%" src="../img/apm_8.9/future_wml1.png" width="80%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This forecast notebook template that that deployed along with HPU are the Substation Transformers templates. <br />
+User need refer to the template to customize their own cfg and notebook for other Asset Types or Scores.</p>
+</div>
+<h2 id="create-a-score-group-using-a-notebook-template">Create a Score Group Using a Notebook Template</h2>
+<p><a name="create_sg"></a>
+In this step, you will create a custom  score using the <code>Connecting group to notebook</code> option to connect to the
+<code>IBM-future-score-from-predict-sample-6.0.0</code> notebook.  You will use the query function to identify the Substation 
+Transformer assets in the group then create the group.</p>
+<ol>
+<li>
+<p>From the left cascading menu click <code>Scoring and DGA settings</code>.  Click the <code>Groups</code> tab.
+    <img alt="groups" src="../img/apm_8.9/P8.png" />   </p>
+</li>
+<li>
+<p>Click button <code>Create a scoring and DGA group</code> and fill in the form, select a query that matches the assets you would like to include in this group. Search for the <code>Query name</code> and click <code>Apply</code> button.  If you don't see one that fits your need
+create a query to choose the right assets to add your score to.  <br />
+<img alt="creat groups" src="../img/apm_8.9/future_wml2.png" />   </p>
+</li>
+<li>
+<p>Click <code>Create</code> button to create and review the assets in the scored assets list to ensure the assets you want to have this score in are are listed. <br />
+<img alt="group detail" src="../img/apm_8.9/future_wml3.png" />    </p>
+</li>
+<li>
+<p>Click into the score and active it one by one.  <br />
+<img alt="active scores1" src="../img/apm_8.9/future_wml4.png" />     </p>
+</li>
+<li>
+<p>After activating it, it should have a <code>Y</code> in the column named <code>Active</code>. <br />
+<img alt="active scores2" src="../img/apm_8.9/future_wml5.png" />     </p>
+</li>
+</ol>
+<h2 id="train-wml-model">Train WML Model</h2>
+<p><a name="train_model"></a></p>
+<ol>
+<li>
+<p>Login to Watson Studio, and open your project.</p>
+</li>
+<li>
+<p>Find the training template <code>IBM-Asset-HealthScore-Forecast-Sample-6.0.0.ipynb</code>. Click on the notebook name and then 
+click on the <code>pencil</code> icon next to your notebook to open it in edit mode.</p>
+</li>
+<li>
+<p>If the notebook fails to start, restart it.  Click on the <code>i</code> icon , <code>Environment</code> tab,  <code>Running status</code> dropdown 
+select box and choose <code>Restart</code>.  <br />
+<img alt="Restarting Environment" height="30%" src="../img/apm_8.7/HPU_dataloader_3.png" width="30%" /> </p>
+</li>
+<li>
+<p>Update the first code cell to fill in the env connection information including <code>maximoUrl</code>,<code>maximoApiKey</code>,<code>expgroupname</code>  <br />
+    a. <code>maximoUrl</code> can be extracted from health or manage url, e.g Get main.manage.ivt13rel88.ivt.suite.maximo.com from    https://main.manage.ivt13rel88.ivt.suite.maximo.com/maximo/oslc/graphite/relengineer/index.html".  <br />
+    b. <code>maximoApiKey</code> can be found by go to "Application Administration -&gt; Search and enter the API Keys application, then copy key from admin user card.  <br />
+    c. <code>expgroupname</code> is the group id which you can find in the group detail page.   <br />
+<img alt="get sgid" height="60%" src="../img/apm_8.9/future_wml7.png" width="60%" />    </p>
+<p><img alt="update env" src="../img/apm_8.9/future_wml6.png" />        </p>
+</li>
+<li>
+<p>Update the cfg file name in below two cells if you have customized your own customized future score notebook and cfg based on the <code>IBM-future-score-from-predict-sample-6.0.0.ipynb</code> and <code>IBM-future-score-from-predict-sample-6.0.0.cfg</code> templates.
+    <img alt="update cfg1" src="../img/apm_8.9/future_wml9.png" />
+    <img alt="update cfg2" src="../img/apm_8.9/future_wml8.png" /></p>
+</li>
+<li>
+<p>Create a deployment space to match the one used the below cell.
+    <img alt="deployment space" src="../img/apm_8.9/future_wml18.png" />
+    <img alt="deployment space2" src="../img/apm_8.9/future_wml19.png" /></p>
+<p>If you change the default name space, then also need change the deployment space in <code>IBM-future-score-from-predict-sample-6.0.0.ipynb</code> and save to the latest version.
+<img alt="update space3" src="../img/apm_8.9/future_wml24.png" /></p>
+</li>
+<li>
+<p>Prepare a Predict_Envs.json follow the instruction as it's used in the notebook.
+    <img alt="predict guide" src="../img/apm_8.9/future_wml17.png" />
+    <img alt="predict env" src="../img/apm_8.9/future_wml12.png" /></p>
+</li>
+<li>
+<p>Run the first code cell to set the <code>maximo_context</code>.</p>
+</li>
+<li>
+<p>Run the next 13 cells to import and install the required packages including <code>healthlib</code>
+    <img alt="csv content" src="../img/apm_8.9/future_wml10.png" /> <br />
+ use <code>healthlib</code> to export Health historical scores into a csv file.   </p>
+</li>
+<li>
+<p>In the last cell, you'll see the historical scores printed, and also can see the file is registered in the watson studio's data asset. <br />
+<img alt="csv file" src="../img/apm_8.9/future_wml11.png" />   </p>
+</li>
+<li>
+<p>Run the next 6 cells to set some env variables and install <code>pmilib</code>.  In MAS v8.9  <code>pmilib</code> should be added to your 
+Watson Studio project if you have followed these <a href="../setup_watson_studio/">Setup Watson Studio for Predict instructions</a></p>
+</li>
+<li>
+<p>Skip the next cell which is scenario 1 using multiple csv files for each asset's training. </p>
+</li>
+<li>
+<p>Run the next cell which is scenario 2 to set some basic parameters for training, you can update the <code>pred_win</code> under <code>params</code>, by default, it will predict next 5 years' future score.
+    <img alt="predict env" src="../img/apm_8.9/future_wml13.png" /></p>
+</li>
+<li>
+<p>Run the next cell to train the model, it will take some time cause each asset will need to be trained, you can run the following cell multiple times to check the training status.
+    <img alt="track 1" src="../img/apm_8.9/future_wml14.png" />
+    <img alt="track 2" src="../img/apm_8.9/future_wml15.png" /></p>
+</li>
+<li>
+<p>After training is done, you will see a number that matches the total number of assets.
+    <img alt="track 3" src="../img/apm_8.9/future_wml20.png" /></p>
+</li>
+<li>
+<p>Run the remaining cells to register model in WML.If some error when running 34th cell, please ignore and continue run the rest cells.
+    <img alt="success" src="../img/apm_8.9/future_wml21.png" /></p>
+</li>
+</ol>
+<h2 id="trigger-calculation">Trigger Calculation</h2>
+<p><a name="forecast"></a>
+The following steps will trigger the forecast for the created Score Group.   </p>
+<ol>
+<li>
+<p>Navigate to <code>Maximo Health and Predict for Utilities</code> for the provided environment</p>
+</li>
+<li>
+<p>Go to the <code>Scoring and DGA Settings</code> application within <code>Maximo Health and Predict for Utilities</code></p>
+</li>
+<li>
+<p>Search for the Score Group created before.  <br />
+<img alt="search" src="../img/apm_8.9/future_wml22.png" />   </p>
+</li>
+<li>
+<p>Click into the Score Group detail, click <code>Calculate Scores</code> and allow the scores to calculate. Wait 15 minutes for the calculation to complete.
+    <img alt="Calculate Scores" src="../img/apm_8.9/future_wml23.png" />   </p>
+</li>
+</ol>
+<h2 id="check-future-score-in-matrix">Check Future Score in Matrix</h2>
+<p><a name="confirm_results"></a>
+The following steps will confirm that the future score are forecasted, check future score in <code>Matrix Page</code> similar to earlier in the exercises.</p>
+<ol>
+<li>
+<p>Navigate to <code>Maximo Health and Predict for Utilities</code> for the provided environment.</p>
+</li>
+<li>
+<p>Go to the <code>Scoring and DGA Settings</code> application within  <code>Maximo Health and Predict for Utilities</code>.</p>
+</li>
+<li>
+<p>Search for the <code>Score Group</code> created before.  <br />
+<img alt="search" src="../img/apm_8.9/future_wml22.png" />     </p>
+</li>
+<li>
+<p>Click into any <code>asset</code> and confirm that the scores have been calculated. <br />
+<img alt="Scores" src="../img/apm_8.9/future_wml25.png" />     </p>
+</li>
+<li>
+<p>Check future scores in Matrix. <br />
+    Go to Assets page, select the same query that is used in score group. And click <code>Matrix</code> icon to switch to <code>Matrix</code> page. <br />
+<img alt="Choose query" src="../img/apm_8.9/future_sg15.png" />     </p>
+</li>
+<li>
+<p>Click year plus button to check the summary information for future year, e.g 2023
+    <img alt="future 1" src="../img/apm_8.9/future_sg16.png" />  <br />
+<img alt="future 2" src="../img/apm_8.9/future_sg17.png" />     </p>
+</li>
+<li>
+<p>Click any cell to drill in to see the related assets in a table view. Click year plus button to see which assets are in this range in next year and also show the next year score in the table.
+    <img alt="future 3" src="../img/apm_8.9/future_sg18.png" />   </p>
+</li>
+</ol>
+<p>Congratulations you have seen how to use notebook train a WML model, forecast future custom scores and confirmed the future score values in Matrix page.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../utilities_st_futurescore_demo_notebook/" class="btn btn-neutral float-left" title="Create Custom Score Forecast via Notebook"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../utilities_st_futurescore_demo_notebook/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/get_script/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Get Node-RED script - Monitor Node-RED CSV Importer Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Get Node-RED script";
+        var mkdocs_page_input_path = "get_script.md";
+        var mkdocs_page_url = "/maximo-labs/get_script/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Node-RED CSV Importer Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Node-RED CSV Importer Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">1. Setup environment</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Get Node-RED script</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#get-the-required-node-red-script">Get the required Node-RED script</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-the-script-into-node-red">Import the script into Node-RED</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../adjust_script/">3. Adjust and run Node-RED script</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Node-RED CSV Importer Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Get Node-RED script</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Get the required Node-RED script</li>
+<li>Import the script into Node-RED</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the <a href="../setup/">setup of Node-RED locally</a></li>
+</ol>
+<hr />
+<h2 id="get-the-required-node-red-script">Get the required Node-RED script</h2>
+<ol>
+<li>Open a browser and navigate to <a href="https://github.com/ekstrom-ibm/monitor_csv_importer" target="_blank">monitor_csv_importer github repository</a>.</li>
+<li>Click on the green <code>Code</code> button and select <code>Download ZIP</code>.
+<img alt="Download Github Repo" src="../img/Get_01.png" /></br></br></li>
+<li>Save it in your Downloads directory.</li>
+<li>Extract the ZIP file (double-click on Mac) and you will have a directory with the files you need:
+<img alt="View files" src="../img/Get_02.png" /></br></br></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can Right-Click on the images in this lab and select <code>Open Image in New Tab</code> </br>
+to view the details in the screen shots:</br></br>
+<img alt="View details" src="../img/Get_03.png" /></br></br></p>
+</div>
+<h2 id="import-the-script-into-node-red">Import the script into Node-RED</h2>
+<p>Now it is time to import the downloaded Node-RED script.</p>
+<ol>
+<li>Start the Node-RED instance if not already done (in a CMD/Terminal/iTerm window).
+<img alt="Start Node-RED" src="../img/Import_01.png" /></br></br></li>
+<li>Open the browser and navigate to <a href="http://localhost:1880" target="_blank">localhost:1880</a>.</li>
+<li>Click on the burger menu in upper right hand corner and select <code>Import</code>.
+<img alt="Select Import" src="../img/Import_02.png" /></br></br></li>
+<li>Click on <code>select a file to import</code>.
+<img alt="Select File" src="../img/Import_03.png" /></br></br></li>
+<li>Select the <code>Upload CSV to Db2 Pump.json</code>and click Open.
+<img alt="Open File" src="../img/Import_04.png" /></br></br></li>
+<li>Click <code>Import</code>.
+<img alt="Import File" src="../img/Import_05.png" /></br></br></li>
+<li>Click the <code>Deploy</code> button</br>
+<img alt="Deploy" src="../img/Import_06.png" /></br></br></li>
+<li>and see this:
+<img alt="View Dashboard" src="../img/Import_07.png" /></br>
+Don't worry about the error message at this point.</br>
+This should be solved during the next exercise.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you see red error messages in the Debug pane, you can hover over the node name and then</br>
+the node which caused the error to occur will appear with dashed orange lines:</br></br>
+<img alt="Debug Error" src="../img/Import_10.png" /></br></br>
+This should help you identify where the error has occured and what needs to be done is indicated with the error decription.</br></br></p>
+</div>
+<hr />
+<p>Congratulations you have successfully downloaded and imported the Node-RED script.</br>
+You will now be able to adjust the Node-RED script to your environment.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup/" class="btn btn-neutral float-left" title="1. Setup environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../adjust_script/" class="btn btn-neutral float-right" title="3. Adjust and run Node-RED script">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../adjust_script/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
