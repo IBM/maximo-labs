@@ -46,3 +46,25 @@ h2 {
   margin-top: 2em;
   border-bottom: 2px solid black
 }
+
+/* This section of CSS is to style a copy-to-clipboard button  */
+/* Begin */
+.clipboard {
+  position: relative;
+  display: block;
+  float: right;
+}
+
+.clipboard:hover {
+color: var(--md-accent-fg-color);
+transition: color 125ms;
+}
+
+.btn-clipboard {
+  position: relative;
+  z-index: 10;
+  display: block;
+  padding: .25rem .5rem;
+  cursor: pointer;
+}
+/* End */

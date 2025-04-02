@@ -203,7 +203,6 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-
 # Build the Monitor Managed Gatewway Modbus 9.0 level:
 lab=monitor_managed_gw_modbus_9.0
 echo "==================================================================================="

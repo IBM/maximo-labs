@@ -20,8 +20,15 @@ theme:
   highlightjs: true
   hljs_languages:
     - yaml
+
 extra_css:
-  - extra.css
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
 markdown_extensions:
   - attr_list
   - admonition

@@ -11,7 +11,11 @@ This Exercise requires that you have completed the pre-requisites required for [
 !!! note
     This lab relies on the [MAS Devops Ansible Collection](https://ibm-mas.github.io/ansible-devops/){target=_blank} and the [IBM Maximo Application Suite CLI Utility](https://ibm-mas.github.io/cli/){target=_blank}.</br>
 
-First open a terminal and run the docker command to start the MAS CLI docker container `docker run -ti --rm --pull always quay.io/ibmmas/cli`:</br>
+First open a terminal and run the docker command to start the MAS CLI docker container:
+````
+docker run -ti --rm --pull always quay.io/ibmmas/cli
+````
+</br>
 ![MAS CLI](img/install_monitor_01.png)</br></br>
 
 Login to the OpenShift cluster using your kubeadmin account and click on `Copy login command`:</br>
