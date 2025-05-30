@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/constant/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Create Constants - Maximo Hands on Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Create Constants";
+        var mkdocs_page_input_path = "constant.md";
+        var mkdocs_page_url = "/maximo-labs/constant/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo Hands on Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor v8.5 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hopper_asset/">2. Create Packaging Hopper Assets</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Create Constants</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#register-a-constant-in-monitor">Register a Constant in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assign-a-constant-a-value-in-monitor">Assign a Constant a Value in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#optional-unregister-a-constant-in-monitor-optional">OPTIONAL - Unregister a Constant in Monitor (Optional)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_function/">4. Create Python Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_expressions/">5. Create Python Expressions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_value_card/">6. Add Value Card</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo Hands on Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Create Constants</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise using Monitor you will learn how to add a constant for the maximum allowed ambient temperature. You will:</p>
+<ul>
+<li>Register Constant using a script <code>'register_constanty.py</code> using <a href="https://www.ibm.com/docs/en/mapms/1_cloud?topic=asr-sdks">IOT Functions SDK</a></li>
+<li>Assign a value to the <code>max_temp_yourinitials</code> constant of 27.</li>
+</ul>
+<p>The ambient temperature where th Hopper Asset is located should exceed a temperature is above 27 degrees Celcius.   The 
+food  packaged has a shorter shelf life when it is packaged at temperatures higher than that.  A remote operational 
+support teams monitor will monitor the packaging Hooper to ensure it is operating within the required operating ranges 
+and without anomalies.  </p>
+<p>The constant will be used to specify the maximum temperature allowed in all packaging processes to ensure 
+regulatory compliance.</p>
+<p>Using a constant will also make it easier later to update any functions or alerts that reference the constant.  By simply
+modifying the value of the constant all the functions and alerts will use the new value for all new calculations.</p>
+<hr />
+<p><em>Before you begin:</em> </p>
+<ul>
+<li>You have completed the <a href="../prereqs/">pre-requisites</a> required for all Exercises</li>
+<li>You have completed the prior exercise in this lab.</li>
+</ul>
+<hr />
+<h2 id="register-a-constant-in-monitor">Register a Constant in Monitor</h2>
+<p>In this exercise you will quickly create a constant named <code>max_temp_yourinitials</code> a that you will use in next exercises.  </p>
+<ol>
+<li>
+<p>Define your constant.  You will name yours <code>max_temp_yourinitials</code> so that it doesn't conflict with the constants
+created by others.</p>
+</li>
+<li>
+<p>Git clone the repository that has the code below. If you don't have access email carlos.ferreira1 @ibm.com You will 
+use the code from this repository in other exercises.  From the terminal on your desktop type: </p>
+<p>'''
+git clone github repo provided by your instructor
+cd watson-classifier
+'''</p>
+</li>
+<li>
+<p>Ask the instructor for your credentials_as.json file or create your own using the instructions in "Establishing
+a Connection" section of the Monitor documentation.  <a href="https://www.ibm.com/docs/en/maximo-monitor/8.5.0?topic=calculations-using-custom-functions#env">Establishing a Connection</a> </p>
+</li>
+</ol>
+<p>Your credentials file should be structured in JSON as follows:</p>
+<pre><code>'''
+{
+    "tenantId": "yourtenant",
+    "_db_schema": "your_dbSchema",
+    "db2": {
+        "username": "your_dbuser",
+        "password": "your_dbpassword",
+        "databaseName": "your_databaseName",
+        "security": "SSL",
+        "port": 32551,
+        "httpsUrl": "https://cp4d-cpd-cp4d.yourdomainURL",
+        "host": "yourdomainURL without HTTP prepended"
+    },
+    "iotp": {
+        "asHost": "yourtenant.api.monitor.your_dbSchema.yourlusterdomain:443",
+        "apiKey": "vourAPIKey",
+        "apiToken": "yourAPIToken"
+    }
+}
+'''
+</code></pre>
+<ol>
+<li>
+<p>Save your credentials_as.json file to in the project root directory <code>watson-classifier</code>.</p>
+</li>
+<li>
+<p>Start PyCharm select <code>File</code> and <code>Open</code> navigate to  your project root directory <code>watson-classifier</code> and open the 
+project</p>
+</li>
+<li>
+<p>The script  <code>register_constanty.py</code> provided in the <code>watson--classifier</code> Github project uses IOT Functions SDK to 
+create a constant.  <a href="https://www.ibm.com/docs/en/mapms/1_cloud?topic=asr-sdks">IOT Functions SDK</a>  In the PyCharm project 
+tab, navigate to and expand the scripts folder.  Right click on <code>register_constant.py</code> and select the <code>run</code> menu. 
+<img alt="Run" src="../img/fun19.png" /></p>
+</li>
+</ol>
+<p>Script code:</p>
+<pre><code>'''
+    from iotfunctions.db import Database
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+    logger = logging.getLogger(__name__)
+    import json
+    from iotfunctions.db import Database
+    from iotfunctions.ui import UISingle,UIMulti
+    import os
+
+    logger = logging.getLogger(__name__)    
+    #Connect to the service
+    with open('../credentials_as.json', encoding='utf-8') as F:
+        credentials = json.loads(F.read())
+    db_schema = None
+    db = Database(credentials=credentials)
+    #Connect to the service
+    db = Database(credentials = credentials)
+
+    #Define how the constant is represented on the UI using UISingle
+    max_temp_cf = UISingle(name='max_temp_cf',
+                   description='Ensure temperatures does not exceed max_temp_cf',
+                   datatype=float)
+
+    #Register the constant using the database object
+    db.register_constants([max_temp_cf])
+'''
+</code></pre>
+<ol>
+<li>
+<p>The script will give you errors because you haven't yet setup the virtual environment.  From PyCharm menus select <code>Run</code>
+and <code>edit configurations</code>.  Make sure to pick  <code>run</code> and <code>edit configuration</code> for the <code>register_constant.py</code> </p>
+</li>
+<li>
+<p>Make sure you have setup your <a href="https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html">virtual environment in Pycharm</a>. 
+Once you have you can select the name of the virtual environment in PyCharm.  In the projet window click on <code>register_constant.py</code>
+then from the Pycharm menu select <code>run</code> and <code>edit configuration</code> <br />
+<img alt="Run Edit Configurations Virtual Environment" src="../img/fun21.png" /></p>
+</li>
+</ol>
+<h2 id="assign-a-constant-a-value-in-monitor">Assign a Constant a Value in Monitor</h2>
+<p>In this exercise you will quickly create a constant named <code>max_temp_yourinitials</code> a that you will use in next exercises.  </p>
+<ol>
+<li>
+<p>Set the value of the constant from the UI.   Login to  Monitor. </p>
+</li>
+<li>
+<p>Select  <code>Setup Assets</code> tab, search for <code>Sample_Packaging_Hopper_Type_yourinitials</code> .
+Click on your <code>Asset Type</code> and click on   <code>Setup Asset Type</code> button.<br />
+<img alt="Setup Asset Type" src="../img/fun03.png" /> </p>
+</li>
+<li>
+<p>Click on the <code>data</code> tab,<br />
+<img alt="Search catalog for the Python Function" src="../img/fun05.png" /></p>
+</li>
+<li>
+<p>Click on <code>gear</code> icon  and select <code>Manage constants</code> menu option
+ <img alt="Constant" src="../img/fun22.png" /></p>
+</li>
+<li>
+<p>A list of constants is displayed.  Select the constant named <code>max_temp_yourinitials</code>  Click <code>Configure</code>.
+ <img alt="Constant" src="../img/fun23.png" /></p>
+</li>
+<li>
+<p>Assign a value of <code>27</code> and click <code>Save</code>.
+ <img alt="Constant" src="../img/fun24.png" /></p>
+</li>
+<li>
+<p>Click <code>Save</code>.
+ <img alt="Constant" src="../img/fun24_1.png" /></p>
+</li>
+</ol>
+<h2 id="next-step">Next Step</h2>
+<p>You now have constant for the <code>max_temp_yourinitials</code>  that you can use in your functions and alerts in your Device Type.<br />
+In the next exercise you will create a PythonFunction will use the constant for the max_temp in Celcius that the 
+ambient temperature to check the ambient temperature hasn't been exceeded.</p>
+<h2 id="optional-unregister-a-constant-in-monitor-optional">OPTIONAL -  Unregister a Constant in Monitor (Optional)</h2>
+<p>Optionally you can write a unregister_constant.py script and run it after you have completed all the labs. Unregistering 
+the constant will remove constant from Monitor.  Any calculation that uses this constant will stop working and cause the 
+Monitor pipeline calculations to stop.</p>
+<p>Example code:</p>
+<pre><code>```
+  #Import packages and libraries
+
+  import logging
+  logging.basicConfig(level=logging.DEBUG)
+  logger = logging.getLogger(__name__)
+  import pandas as pd
+  import json
+  #Import these classes from IoT Functions
+  from iotfunctions.db import Database
+  from iotfunctions.ui import UISingle,UIMulti
+
+  #Connect to the service
+  with open('credentials_as.json', encoding='utf-8') as F:
+    credentials = json.loads(F.read())
+  db_schema = None
+  db = Database(credentials=credentials)
+
+  #Connect to the service
+  db = Database(credentials = credentials)
+
+  #Unregister the constant using the database object
+  db.unregister_constants(['max_temp_yourinitials'])
+</code></pre>
+<p>```</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../hopper_asset/" class="btn btn-neutral float-left" title="2. Create Packaging Hopper Assets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../python_function/" class="btn btn-neutral float-right" title="4. Create Python Functions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../hopper_asset/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../python_function/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

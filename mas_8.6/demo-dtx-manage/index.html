@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-dtx-manage/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. DTX - Manage(Under Construction) - MAS Overview 8.6 Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. DTX - Manage(Under Construction)";
+        var mkdocs_page_input_path = "demo-dtx-manage.md";
+        var mkdocs_page_url = "/maximo-labs/demo-dtx-manage/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS Overview 8.6 Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS Overview 8.6 Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Application Suite 8.6 Overview Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-monitor-mvi/">1. Monitor - MVI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-dtx-mon-mvi/">2. DTX - MVI</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. DTX - Manage(Under Construction)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#digital-twin-data">Digital Twin Data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-into-manage">Import into Manage</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mobile-assist-safe/">4. Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-safety/">5. Safety(Under Construction)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-health-predict/">6. Health - Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">7. Closing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clean/">Lab Clean up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS Overview 8.6 Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. DTX - Manage(Under Construction)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="digital-twin-exchange-manage-lab-under-construction">Digital Twin Exchange - Manage Lab (Under construction)</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please follow the <code>Action</code> statements to navigate the steps and perform the lab.</p>
+</div>
+<p>An asset manager, I can leverage the Digital Twin Exchange to purchase various artifacts related to an asset. The contents that are available in the Exchange range from simple asset related artifacts such as BOM, job plan and spare parts to AI model that you can deploy on other applications such as Monitor and MVI. The exchange also has the capability to import the purchased content to the Manage. I am going to browse through the artifacts available on the exchange and find contents related to a Centrifugal pump to import into Manage . You can also see the data models for the data scientist such as the isolation forest model that helps to detect anomalies in Monitor’s data.<br></p>
+<h2 id="digital-twin-data">Digital Twin Data</h2>
+<p><code>Action:</code> Show how to browse the DTX and browse through the contents. Purchase a job plan and spare parts list related to a centrifugal pump- use the dev environment.</p>
+<ol>
+<li>Click this <a href="https://digitaltwinexchange.ibm.com/">link</a> for DTX.</li>
+<li>Browse the Exchange and highlight the Isolation Forest Anomaly Detection Model as an artifact that feeds into Monitor to detect anomalies in the monitored asset</li>
+<li>Type <code>centrifugal</code> in search to look for relevant asset data in the Exchange</li>
+<li>Choose <code>Centrifugal Pump 12 month Job Plan</code> and <code>Centrifugal Pump Assembly Spare Parts Item</code>, add to basket </li>
+<li>Checkout and purchase(verbally)</li>
+</ol>
+<p><img alt="img" src="../img/dtx1.png" style="height:400px;width:800px" /> 
+<img alt="img" src="../img/dtx2.png" style="height:400px;width:800px" /> 
+<img alt="img" src="../img/dtx3.png" style="height:400px;width:800px" /> </p>
+<p>The availability of digital contents and integration between the DTX and Manage helps me save time and effort locating and registering the relevant information as well as ensuring the accuracy of the data If you are a provider of the contents, the DTX allows you to monetize on the digital contents such as data models, asset related information and IP some of which you have seen in our demo for Monitor and MVI.<br></p>
+<h2 id="import-into-manage">Import into Manage</h2>
+<p><code>Action:</code> Show how to import purchased job plan and the spare parts list into Manage</p>
+<ol>
+<li>Log in to Manage. </li>
+<li>Go to Assets</li>
+<li>Click <code>Import Digital Data</code> under Common Actions</li>
+<li>Select Data Source <code>Digital Twin</code></li>
+<li>Type in <code>Digital Twin Email</code> and <code>Key</code></li>
+<li>Click <code>Request Data</code></li>
+<li>Verify purchased DTX contents</li>
+<li>Choose <code>Centrifugal Pump 12 month Job Plan</code> and <code>Centrifugal Pump Assembly Spare Parts Item</code></li>
+<li>Click <code>Import Data</code> and confirm <code>Success</code> on the status</li>
+<li>Go to Job Plans and search Job Plan with <code>DT</code>, confirm the imported job plan</li>
+<li>Go to item master and search the item with <code>DT</code>, confirm 4 items are imported</li>
+</ol>
+<p><img alt="img" src="../img/manage1.png" style="height:400px;width:800px" /> 
+<img alt="img" src="../img/manage2.png" style="height:400px;width:800px" /> 
+<img alt="img" src="../img/manage3.png" style="height:400px;width:800px" /> </p>
+<p><b>TRANSITION:</b> I’m going to turn it over to the technician who is assigned to work on the pump.</p>
+<div class="admonition alert">
+<p class="admonition-title">Alert</p>
+<p>After each demo, please clean up the imported items from the Maximo instance. </p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo-dtx-mon-mvi/" class="btn btn-neutral float-left" title="2. DTX - MVI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo-mobile-assist-safe/" class="btn btn-neutral float-right" title="4. Mobile">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo-dtx-mon-mvi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo-mobile-assist-safe/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

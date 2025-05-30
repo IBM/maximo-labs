@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/asset_scores/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Setup Custom Scores - Maximo APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup Custom Scores";
+        var mkdocs_page_input_path = "asset_scores.md";
+        var mkdocs_page_url = "/maximo-labs/asset_scores/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../build_demo/">Setup Health and Predict Demonstration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo_script/">Health and Predict Overview Task Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Setup Custom Scores</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#setup-scores">Setup Scores</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#navigate-to-health-and-predict-utilities">Navigate to Health and Predict - Utilities</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-score-type">Setup Score Type</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-health-score-group">Create Health Score Group</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-contributor">Setup Contributor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#activate-score">Activate Score</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-custom-score-to-asset-grid-table">Add Custom Score to Asset Grid Table</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-view">Create View</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-assets-matrix">Setup Assets Matrix</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-assets-to-an-exiting-asset-investment-project">Add Assets to an Exiting Asset Investment Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_pump_score_notebook/">Create Custom Scores Using a Notebook</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_st_futurescore_demo_notebook/">Create Custom Score Forecast via Notebook</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_st_futurescore_using_wml_model/">Create Custom Score Forecast via WML Model</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Setup Custom Scores</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="asset-custom-scores">Asset Custom Scores</h1>
+<p>Health Predict and Utilities already provide the ability to score asset condition using the out-of-the-box scores for:</p>
+<ul>
+<li>Health</li>
+<li>Risk</li>
+<li>Criticallty</li>
+<li>End of Life </li>
+</ul>
+<p>The new asset custom scores in  Maximo Health and Maximo Health and Predict - Utilities (HPU) of Maximo Application Suite (MAS) allow the user to create their own scores using</p>
+<ul>
+<li><strong>Formula based</strong> which is in Health today. Doesn't require any coding and uses an Excel style approach for calculating a custom score</li>
+<li><strong>Notebook based</strong> deployed as Watson Studio job which provides greater customization using Python and enables the score to also be calculated into the future.</li>
+<li><strong>Notebook based</strong> deployed IBM Machine Learning Service.  provides greater customization using Python and enables the score to also be calculated into the future. </li>
+</ul>
+<p>The lab will cover how to create custom scores, how they can be visualized to help the user make better repair/replace decisions, and how they can be used to select assets for investment projects.</p>
+<p>Maximo Health includes Asset Investment Optimization templates that you can use to see which strategies work best to meet your business goals. </p>
+<p>In this exercise you will use Health to:</p>
+<ol>
+<li><a href="#setup_scores">Setup Score</a> to calculate asset condition.</li>
+<li><a href="#create_group">Create Health Asset Scoring Group</a> to have a group of assets that you can view and work with.</li>
+<li><a href="#matrix_page">Matrix Page</a> to identify and quantify the number of assets that need attention.</li>
+<li><a href="#asset_investment_project">Asset Investment Project</a> to decide which strategy is best to action the assets </li>
+</ol>
+<p><strong>Prerequisites</strong></p>
+<p>This lab requires the following:</p>
+<ul>
+<li>A working Maximo Application Suite (MAS) environment with Maximo Manage, or another Enterprise Asset Management (EAM) system, Maximo Health, Maximo Health and Predict – Utilities (HPU), and Maximo Optimizer installed.</li>
+<li>Sufficient asset data to run the analysis and get insights</li>
+</ul>
+<h2 id="setup-scores">Setup Scores</h2>
+<p><a name="setup_scores"></a></p>
+<p>As a reliability engineer, You use Maximo Health, Predict, and Health and Predict – Utilities to identify assets with a custom score that needs attention.  You investigate those assets and take actions to improve the condition of those assets.</p>
+<p>Custom scores allow me to apply my knowledge as an SME (subject matter expert) to create ways of measuring the condition of my assets.</p>
+<h3 id="navigate-to-health-and-predict-utilities">Navigate to Health and Predict - Utilities</h3>
+<p>You will start from the main MAS screen, and select the <code>Health</code> application from the <code>Suite navigator</code> page or from <code>Industry solutions</code> tab.    You will create a custom score for a subset of these assets.</p>
+<ol>
+<li>
+<p>You will start from the main MAS screen, and select the Health Predict - Utilities application.  Select the <code>Industry solutions</code> tab.
+<img alt="navigate_to_health" src="../img/apm_8.9/P1.png" />   </p>
+</li>
+<li>
+<p>Review the assets in the Assets Grid page to see over 10 thousand assets under management.
+<img alt="assets_grid" src="../img/apm_8.9/P2.png" />  </p>
+</li>
+</ol>
+<h3 id="setup-score-type">Setup Score Type</h3>
+<p>To create a custom score, You will select the  <code>Scoring and DGA Setting</code> tab on the left navigation bar in Maximo Health.  This is where You can create and view asset groups, score types, and contributors.  You will click on the <code>Create new score type</code> button to create a custom score type, complete the fields in the pop-up box, and save it.</p>
+<ol>
+<li>
+<p>Click <code>Scoring and DGA Setting</code> from the left nav 
+<img alt="score_dga_settings" src="../img/apm_8.9/P3.png" />   </p>
+</li>
+<li>
+<p>Click <code>Score Types</code> tab. 
+<img alt="create_new_score_type" src="../img/apm_8.9/P4.png" />    </p>
+</li>
+<li>
+<p>Click <code>Create new score type +</code> button.
+<img alt="new_score_type form" src="../img/apm_8.9/P5.png" />  </p>
+</li>
+<li>
+<p>Enter the values below in the form:</p>
+</li>
+<li>
+<p>Set name to: <code>Centrifugal Pump Efficiency</code></p>
+</li>
+<li>Set Description to : <code>Centrifugal Pump Efficiency</code></li>
+<li>Set Maximum to : <code>95</code></li>
+<li>Set Minimum to : '40' </li>
+<li>Where you check the radio box <code>Needs attention</code> to when the value get closer to <code>40 - Minimum</code></li>
+<li>Adjust the ranges so that they align with the maximum and minimum ranges. See image below to check the settings. </li>
+<li>
+<p>Click <code>Save</code>
+<img alt="save_score_settings" src="../img/apm_8.9/P6.png" />  </p>
+</li>
+<li>
+<p>Review your Score settings that you just created.
+<img alt="review_score_settings" src="../img/apm_8.9/P7.png" />    </p>
+</li>
+</ol>
+<p>Value:  Creating custom ranges allows me to enforce my company specific measurement method for the asset condition score or using engineering formulas.</p>
+<h2 id="create-health-score-group">Create Health Score Group</h2>
+<p><a name="create_group"></a>
+Create a Health Asset scoring view so that you can work with your custom asset scores in the <code>Assets Grid</code>, <code>Assets Details</code>,
+<code>Map</code> and <code>Matrix</code> pages.  You can build out a custom score to apply to a specific group of assets.  Groups allow you to 
+scope the score to a query of assets and a method for calculating the scores.
+ return to the <code>Groups</code> tab, and click the <code>Create a scoring and DGA group</code>.</p>
+<p>You will complete the fields.  For this example, we’ll create our score using the <code>Building Scores</code> capability rather than the <code>Connecting group to notebook</code> option.  You will use the query function to identify the assets in my group then create the group.</p>
+<ol>
+<li>
+<p>From the left cascading menu click <code>Scoring and DGA settings</code>.  Click the <code>Groups</code> tab.
+<img alt="groups" src="../img/apm_8.9/P8.png" />   </p>
+</li>
+<li>
+<p>If you don't have a group for pumps you can click <code>Create a scoring and DGA group</code> and fill in the form. Click button <code>Create a scoring DGA group</code> to specify the assets, query to use and method of calculation.  <code>Building scores</code> uses the easy to use forumula based approach.  The notebook approach requires access to Watson Studio which comes with Predict.
+<img alt="creat groups" src="../img/apm_8.9/P8A.png" />    </p>
+</li>
+<li>
+<p>Select a query that matches the assets you would like to include in this group. Search for the <code>Query name</code> and click <code>Apply</code> button.  If you don't see one that fits your need
+the next steps explains how to create a query to choose the right assets to add your score to.
+<img alt="form groups" src="../img/apm_8.9/P8B.png" /> </p>
+</li>
+<li>
+<p>You can create a query if you don't see one that matches the assets where you want to use your new score. Edit your 
+group by clicking on the <code>pencil</code> icon.
+<img alt="form groups" src="../img/apm_8.9/Q1.png" /></p>
+</li>
+<li>
+<p>Click <code>+</code> to add a new query instead of selecting one.
+<img alt="form groups" src="../img/apm_8.9/Q2.png" />  </p>
+</li>
+<li>
+<p>Enter the values required in the query form for <code>name</code>, <code>description</code>, and <code>filters</code> to use to query Health for the 
+right assets. Click <code>Create and apply</code> button to save the query.
+<img alt="form groups" src="../img/apm_8.9/Q3.png" />  </p>
+</li>
+<li>
+<p>Review the assets in the scored assets list to ensure the assets you want to have this score in are are listed.
+<img alt="assets in group" src="../img/apm_8.9/Q4.png" />  </p>
+</li>
+<li>
+<p>If this is a new group, you must create and apply your changes to save it. Create and save the score group by pressing the <code>Create</code> button. 
+<img alt="save groups" src="../img/apm_8.9/P8C.png" /> </p>
+</li>
+<li>
+<p>You can not add scores to your Health Score group. Click the <code>Add Score</code> button.
+<img alt="select_group" src="../img/apm_8.9/P8D.png" />    </p>
+</li>
+<li>
+<p>if you already have added your custom score type. Choose the score by clicking on the <code>Score name</code> tile and the <code>Done</code> button.
+<img alt="add score " src="../img/apm_8.9/P8E.png" />  </p>
+</li>
+<li>
+<p>For example select <code>Centrifugal Pump Efficieny</code> score and the <code>Done</code> button to add this score to the pump group. If 
+the Contributors haven't yet been setup continue on to the next exercise to create them and add them.<br />
+<img alt="save_group" src="../img/apm_8.9/P8F.png" />   </p>
+</li>
+</ol>
+<p>Value:  Grouping common assets together allows us to apply our custom custom condition score to multiple assets rather than one at a time thus easing administration.</p>
+<h3 id="setup-contributor">Setup Contributor</h3>
+<p>Contributors describe what child metrics, meter readings, inspections, KPIs and other values should be considered as part
+of the overall normalized score.  With groups created, you will click <code>Add score</code> and contributors to the score.   Efficiency 
+may be made of one or more calculated or metered data.   In this example you will learn the different ways of creating a contributor.
+Including  duplicating an existing contributor and creating a new contributor.</p>
+<ol>
+<li>
+<p>If you haven't opened your score group.  Open it now.  Once on your score group, your first options is to click the <code>+</code>
+icon to add an existing contributor to your group.  This could be made up of previous contributors to a score that you created. 
+<img alt="open score_group" src="../img/apm_8.9/P8G.png" />    </p>
+</li>
+<li>
+<p>Click the <code>Contributor</code> tile and click <code>Add</code> button.
+<img alt="open score_group" src="../img/apm_8.9/P8H.png" /></p>
+</li>
+<li>
+<p>Your second option is to create a new contributor for your <code>CENTRIFUGALPUMPEFFICIENCY</code> and enter the values in the form.  Do the latter.  After clicking <code>+</code> icon click <code>Create Contributor</code> button.
+<img alt="create new contributor" src="../img/apm_8.9/P8I.png" />  </p>
+</li>
+<li>
+<p>The third option is to <code>Duplicate</code>an existing contributor button to copy and reuse an existing contributor <code>PUMPEFFICIENCY</code> to fill in the <code>Contributor</code> form with.
+<img alt="duplicate" src="../img/apm_8.9/P8J.png" />
+<img alt="duplicate contributor" src="../img/apm_8.9/P8K.png" /></p>
+</li>
+<li>
+<p>Review the values that were filled in. Make changes you need. Adjust what that maximum and minimum allowed values are.<br />
+Click the <code>Create</code> button to save your changes to your duplicated contributor.  Click the adjust the <code>worst</code> and <code>best</code> 
+score to reflect your score ranges for low, medium and high. Click on <code>CENTRIFUGALPUMPEFFICIENCY</code> score to expand and see 
+all the contributors that contribute to it.
+<img alt="contributor" src="../img/apm_8.9/P14.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The contributor formula is related to the pump meter data, for example, asset could be using different meter name will results a different formula, e.g <code>((METERVAL("P-HEAD") * 0.3 * 9.8 * METERVAL("P-FLOW") * 0.0037 * 60) * 100) / (((METERVAL("P-VOLTAGE") * METERVAL("P-CURRENT") * 1.732050807569 * 0.75 * 0.8 * 0.9)/1000)*3600)</code>, <code>P-HEAD</code>,<code>P-FLOW</code> .etc is defined in hpu_csv_demo data set at <code>https://github.ibm.com/Watson-IoT/eam-hpu-lab/csv-files</code></p>
+</div>
+<ol>
+<li>
+<p>Click the <code>pencil</code> icon.  Set each contributor the percent to 50% since this score will only have two contributor which will then contribute 100% together.  Click 'Save'
+<img alt="score name" src="../img/apm_8.9/P15.png" />  </p>
+</li>
+<li>
+<p>Confirm the changes that <code>100%</code> of the contributors value will be allocated to the <code>CENTRIFUGALPUMPEFFICIENCY</code> score.</p>
+</li>
+</ol>
+<h3 id="activate-score">Activate Score</h3>
+<p>Activating a score lets other users know that the score is available to be used to measure asset conditions.   The custom score will appear available for other users to use.  Before You can activate the score, You have to assign the factor that You selected a percentage that this measure contributes to overall normalized score value.  Since there’s only 1 factor, You will assign it 100%.</p>
+<ol>
+<li>
+<p>If  you haven't opened your score group.  Open it now.</p>
+</li>
+<li>
+<p>Click <code>Active</code> slider to enable the score to start calculating when invoked. 
+<img alt="done" src="../img/apm_8.9/P16.png" />    </p>
+</li>
+<li>
+<p>Click the breadcrumbs for <code>Chilled water pump</code> to return to the score group.
+<img alt="done" src="../img/apm_8.9/P17.png" /></p>
+</li>
+<li>
+<p>Once on your score group, check to make sure the column for the <code>Centrifugal Pump Efficiency Score</code> is <code>Y</code> in the <code>Active</code> column in the <code>Scores</code> table.
+Click the <code>Calculate Scores</code> link at the top right to immediately have the system calculate the scores for the current group of assets.
+<img alt="plus" src="../img/apm_8.9/P18.png" /></p>
+</li>
+</ol>
+<h3 id="add-custom-score-to-asset-grid-table">Add Custom Score to Asset Grid Table</h3>
+<ol>
+<li>
+<p>Navigate to the Asset Grids page.  Select a pump query from the drop down.</p>
+</li>
+<li>
+<p>In the assets table, click on <code>Manage Columns</code> icon and then <code>Manage Columns</code> link.
+<img alt="query" src="../img/apm_8.9/P22.png" />   </p>
+</li>
+<li>
+<p>Search on <code>Centrifugal Pumps</code> in the search bar and then check the row that has  <code>Centrifugal Pumps</code> score in the description column.
+<img alt="query" src="../img/apm_8.9/P23.png" />   </p>
+</li>
+<li>
+<p>From the <code>Assets Grid</code> page select your saved query for the  <code>Centrifugal Pumps</code>. Click on the on <code>Centrifugal Pump Efficiency</code> score column header to sort the asset rows by the worst performing scoring pump.
+<img alt="query" src="../img/apm_8.9/P24.png" />   </p>
+</li>
+<li>
+<p>Click on the <code>Pump-1001</code> to ensure the <code>Centrifugal score</code> shows up as a value card on the <code>Asset Details</code> page
+<img alt="query" src="../img/apm_8.9/P21.png" />   </p>
+</li>
+</ol>
+<h3 id="create-view">Create View</h3>
+<p>Create a Health Asset scoring view so that you can work with your custom asset scores in the <code>Assets Grid</code> pages and see the score as column .  </p>
+<ol>
+<li>
+<p>Go to the Asset Grid page. Enter <code>PUMP-100</code> without last digit as shown below.
+<img alt="query" src="../img/apm_8.9/P18Q.png" />  </p>
+</li>
+<li>
+<p>Click the dropdown with the <code>view:</code> names.  Scroll up to save your view. Name it <code>Centrifugal Pumps</code>.
+<img alt="query" src="../img/apm_8.9/P19.png" />   </p>
+</li>
+<li>
+<p>Save the <code>view</code> as a <code>private view</code> so that no one but you can see it. <br />
+<img alt="query" src="../img/apm_8.9/P20.png" />   </p>
+</li>
+</ol>
+<p>Value:  By creating a view and adding your custom score to your asset grid you can more quickly find the assets that aren't performing well. This makes it easier to analyze and take action to repair or replace poor performing assets. </p>
+<h2 id="setup-assets-matrix">Setup Assets Matrix</h2>
+<p><a name="matrix_page"></a></p>
+<p>In this step you will identify assets that need attention by using the <code>Matrix</code> page.  To identify assets that are having poor 
+'Centrifugal Pump Efficiency Score' and in poor health, You will use the new <code>CENTRIFUGALPUMPEFFICIENCY</code> score along with the Matrix page.</p>
+<p>From the left nav, You will click <code>assets</code>, and then the <code>Matrix</code> icon  on the upper right of the screen.</p>
+<p>You will create a matrix using my new score <code>Criticality</code>, and <code>Centrifugal Efficiency</code>.  But first, You will first select the query for Centrifugal Pumps.</p>
+<p>The results will then only show Centrifugal Pumps on the Assets Grid, Risk, Charts and Map pages.  To customize the matrix, You will click the <code>Gear</code> icon in the upper right of the screen on the <code>Matrix</code>.  You will adjust the fields so that <code>Criticality</code> appears on the Y axis, and <code>Centrifugal Pump Efficiency</code> on the X axis.</p>
+<p>You will also fill in the colors of the Matrix so that the assets with poor health and poor <code>Centrifugal Pump Efficiency</code> score show up in the lower right corner.</p>
+<p>Finally, you'll save the Matrix configuration so others will be able to use it.</p>
+<ol>
+<li>
+<p>Click <code>Assets</code> icon in the left nav 
+<img alt="assets" src="../img/apm_8.9/P24.png" /></p>
+</li>
+<li>
+<p>Click the <code>Matrix</code> icon on the upper right of the screen 
+<img alt="matrix_icon" src="../img/apm_8.9/P25.png" /></p>
+</li>
+<li>
+<p>Note that the default Matrix doesn't show any asset counts in Matrix becuase none of the assets in the query have values for both <code>Health and Centrifugal Pump Efficiency</code>. 
+<img alt="filter" src="../img/apm_8.9/P26.png" /></p>
+</li>
+<li>
+<p>Click the <code>Version</code> drop down select box and choose <code>Health and Criticality</code>
+<img alt="pencil" src="../img/apm_8.9/P27.png" /></p>
+</li>
+<li>
+<p>Notice how the Matrix now populates with asset counts in each row and column for <code>Criticality</code>  <code>A</code> to <code>E</code> ranges and <code>Health</code> <code>Good</code>, <code>Fair</code> and <code>Poor</code> ranges.
+Click the <code>Gear</code> icon to configure a new <code>Matrix</code> version. 
+<img alt="pencil" src="../img/apm_8.9/P28.png" /></p>
+</li>
+<li>
+<p>After choosing <code>Criticaly</code> for <code>Centrifugal Pump Efficiency</code> score for the X axis notice how the table cells turn gray.<br />
+You must manually set the color ranges to reflect what cells you want the reliability engineer to focus on.  Click on each range color in the legen and then click on each Matrix cell you want to have that color.
+<img alt="substation" src="../img/apm_8.9/P30.png" /></p>
+</li>
+<li>
+<p>Give the Matrix Version a new name and description and check that the direction of each axis for good versus bad is correct.   Click <code>Save As</code> to save it as a new Matrix version.
+<img alt="substation" src="../img/apm_8.9/P31.png" /></p>
+</li>
+</ol>
+<p>Value:  By adding your custom score to your asset Matrix page you can more quickly find the assets that aren't performing well. This makes it easier to take action to replace them using Asset Investment Optimization. 
+<img alt="substation" src="../img/apm_8.9/P32.png" /></p>
+<h2 id="add-assets-to-an-exiting-asset-investment-project">Add Assets to an Exiting Asset Investment Project</h2>
+<p><a name="asset_investment_project"></a></p>
+<p>In this exercise you will drill into the poor condition scored assets. Evaluate and choose the ones you would like to add to
+and existing Asset Investment Project.  By clicking on each matrix cell you can drill into asset counts to see which assets 
+are included in the count of assets in that range.  You action the assets by choosing the assets in the drilled in table 
+list and adding to a new or existing asset  investment project. </p>
+<p>Actions:</p>
+<ol>
+<li>
+<p>Click the <code>Red</code> cell links in the Matrix.
+<img alt="apply" src="../img/apm_8.9/P38.png" /></p>
+</li>
+<li>
+<p>Review the list of assets. 
+<img alt="apply" src="../img/apm_8.9/P39.png" /></p>
+</li>
+<li>
+<p>Select all the assets by clicking the top <code>check box</code> or choose individual assets by clicking 
+the check boxes next to that assets you want.  You can click the icon on the top right to <code>Add to an existing investment project</code> 
+or <code>create new investment project</code>  Choose the latter.
+<img alt="apply" src="../img/apm_8.9/P40.png" /></p>
+</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>Congratulations.  You now have identified inefficient or poor scoring assets using a custom score.   You added poor condition assets
+to an asset investment optimization project to improve their condition.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup_watson_studio/" class="btn btn-neutral float-left" title="Setup Watson Studio for Predict"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../utilities_pump_score_notebook/" class="btn btn-neutral float-right" title="Create Custom Scores Using a Notebook">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup_watson_studio/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../utilities_pump_score_notebook/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

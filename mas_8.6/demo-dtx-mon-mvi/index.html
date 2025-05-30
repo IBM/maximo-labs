@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-dtx-mon-mvi/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. DTX - MVI - MAS Overview 8.6 Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. DTX - MVI";
+        var mkdocs_page_input_path = "demo-dtx-mon-mvi.md";
+        var mkdocs_page_url = "/maximo-labs/demo-dtx-mon-mvi/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS Overview 8.6 Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS Overview 8.6 Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Application Suite 8.6 Overview Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-monitor-mvi/">1. Monitor - MVI</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. DTX - MVI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-dataset">Create Dataset</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#train-models">Train Models</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-dtx-manage/">3. DTX - Manage(Under Construction)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mobile-assist-safe/">4. Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-safety/">5. Safety(Under Construction)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-health-predict/">6. Health - Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">7. Closing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clean/">Lab Clean up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS Overview 8.6 Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. DTX - MVI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="digital-twin-exchange-visual-inspection-lab">Digital Twin Exchange - Visual Inspection Lab</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please follow the <code>Action</code> statements to navigate the steps and perform the lab. If you scroll in on the images, they are easier to see.</p>
+</div>
+<p>The sedimentation tanks needs to be constantly monitored for growth of fungi or other unwanted debris. The operator uses Maximo Visual Inspection to inspect the tanks. The cameras will be posted around the tanks for 24 hours a day, saving the operator time from checking the tanks every hour.</p>
+<p>I am a Asset Analyst at the facility and have been tasked to develop models that can identify dirty tanks. The developed models need to be highly accurate as they will be integrated into our Asset management solution using IBM Maximo.<br>
+ <code>Action:</code> Access Maximo Visual Inspection from the console. Launch Maximo Visual Inspection from the suite’s navigator
+ <img alt="img" src="../img/vi_login.png" style="height:400px;width:800px" /> </p>
+<h2 id="create-dataset">Create Dataset</h2>
+<p>The Asset Analyst must create a dataset to aggregate images of the tank and label the data that represents dirty and clean tanks.<br></p>
+<p><img alt="img" src="../img/cdataset_mvi.png" style="height:400px;width:800px" /> </p>
+<p><code>Action:</code> Create a dataset from these sample images on this <a href="https://ibm.box.com/s/y5eh9l2t38fkddk856y96zfz0jc3ke0q">box link</a>.
+<img alt="img" src="../img/dataset_mvi.png" style="height:400px;width:800px" /> </p>
+<p><code>Action:</code> Drag and drop images of dirty and clean tanks into the dataset.<br>
+<img alt="img" src="../img/dragndrop1.png" style="height:250px;width:800px" />
+<img alt="img" src="../img/dragndrop2.png" style="height:250px;width:800px" /></p>
+<p>A loaded dataset will look like the following:<br>
+<img alt="img" src="../img/loaded_ds.png" style="height:250px;width:800px" /></p>
+<p><code>Action:</code> Select all Images and click <code>Label Objects</code><br>
+<img alt="img" src="../img/label1mvi.png" style="height:250px;width:800px" /></p>
+<p><code>Action:</code> Create labels. Click <code>Add label</code> and create two labels (<code>clean</code> and <code>dirty</code>).
+<img alt="img" src="../img/labelmvi2.png" style="height:250px;width:800px" /></p>
+<p>Annotate images with portions that denotes a clean tank.<br> 
+<code>Action:</code> Select <code>clean</code>, select <code>Box</code> and draw a box around portion of the image that denotes a clean tank
+<img alt="img" src="../img/cleantank.png" style="height:250px;width:800px" /></p>
+<p>Repeat labeling all the images with “clean” tanks.</p>
+<p>Now label all the images with dirty tanks.<br> 
+<code>Action:</code> Select <code>dirty</code>, select <code>Box</code> and draw a box around portion of the image that denotes a dirty tank
+<img alt="img" src="../img/dirtytank.png" style="height:250px;width:800px" /></p>
+<p>You have now labeled 13 images (8 clean and 5 dirty). To train deep learning models of high accuracies, a dataset should have a variety and volume of images. MVI offers an ability to augment initial images by applying several filters.<br><br />
+<code>Action:</code> Select all the images and click “Augment Data”
+<img alt="img" src="../img/aug_data.png" style="height:250px;width:800px" /></p>
+<p><code>Action:</code> Select filters to Sharpen, Crop, Rotate, Vertical &amp; Horizontal flips to generate 221 additional images. Label the new dataset <code>Augmented Sedimentation Tanks</code>. </p>
+<p><img alt="img" src="../img/aug_data2.png" style="height:250px;width:800px" />
+<img alt="img" src="../img/aug_data3.png" style="height:250px;width:800px" /></p>
+<p>This feature lowers the cost of data acquisition and labelling for Asset Analysts. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The annotations are also inherited on the augmented images</p>
+</div>
+<p>Navigate to the new dataset and identify the 234 images, 144 labeled images with clean tanks and 90 images with dirty tanks.<br>
+<img alt="img" src="../img/new_ds.png" style="height:250px;width:800px" /></p>
+<h2 id="train-models">Train Models</h2>
+<p><code>Action:</code> Click the button labeled <code>Train Model</code>. Select <code>Object detection</code>, make sure <code>Faster R-CNN</code> is selected. MVI offers several types of models required to address a use case.<br> 
+<img alt="img" src="../img/train_model.png" style="height:250px;width:800px" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol>
+<li>If you click the button to “Train model”, it would take 30 minutes to complete the training. For the demo, show the pretrained model ALREADY in the demo system, or available on the Digital Twin exchange <a href="https://digitaltwinexchange.ibm.com/product/analyze-sedimentation-tanks-for-cleanliness/">here</a></li>
+</ol>
+</div>
+<p>As an Asset Analyst, I can view the characteristics of the trained model.<br> 
+<code>Action:</code> Click the trained model to view model metrics like Accuracy, mAP, Precision, Recall, IoU, Loss graphs and Confusion martix.<br>
+<img alt="img" src="../img/matrix.png" style="height:250px;width:800px" /></p>
+<p><code>Action:</code> Click button to <code>Deploy model</code></p>
+<p>Validate the deployed model.<br> 
+<code>Action:</code> Click the model from the deployment page.
+<img alt="img" src="../img/deploy.png" style="height:250px;width:800px" /></p>
+<p>Access the validation images on the box folder at this <a href="https://ibm.box.com/s/ozscdc8xp6fuh7z2ndxhjunx8fk0aznh">box link</a>.<br>
+<code>Action:</code> Drag and drop images to validate. 
+<img alt="img" src="../img/testpic1.png" style="height:350px;width:800px" /></p>
+<p><br></p>
+<p><img alt="img" src="../img/testpic2.png" style="height:350px;width:800px" /></p>
+<p>With validated model, you can build a dashboard in Maximo Monitor that will display the results of the tank inspections, from live camera feeds, as demonstrated in the Monitor section above.</p>
+<p><b>TRANSITION:</b> Now, I’m going to turn it over to the Asset Manager who uses artifacts in Digital Twin Exchange to set up data model and asset in MAS applications</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo-monitor-mvi/" class="btn btn-neutral float-left" title="1. Monitor - MVI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo-dtx-manage/" class="btn btn-neutral float-right" title="3. DTX - Manage(Under Construction)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo-monitor-mvi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo-dtx-manage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

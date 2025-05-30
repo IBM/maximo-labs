@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/monitor_anomalies/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3.  Monitor Anomalies - Monitor SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3.  Monitor Anomalies";
+        var mkdocs_page_input_path = "monitor_anomalies.md";
+        var mkdocs_page_url = "/maximo-labs/monitor_anomalies/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor SaaS Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Labs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../facilitator_instructions/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../connect_device/">1.  Connect Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_asset_devices/">2.  Monitor Assets</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3.  Monitor Anomalies</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-simulated-robots-to-monitor">Create Simulated Robots to Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#explore-device-type-dashboard">Explore Device Type Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#edit-asset-dashboard">Edit Asset Dashboard</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_request/">4.  Create Service Requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_imagecard/">5.  Add Image Cards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dimensions/">6.  Add Dimensions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addvaluecard/">7.  Add Value Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3.  Monitor Anomalies</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Create an asset instance dashboard to see how an individual asset is performing</li>
+<li>Create a summary dashboard that aggregates asset performance metrics across multiple assets of the same type</li>
+<li>Detect anomalies by applying anomaly detection functions</li>
+<li>Create alerts to prioritize anomalies</li>
+<li>Monitor alerts across multiple assets in a summary dashboard you create</li>
+<li>Troubleshoot to find the root cause of a problem</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have completed the <a href="../facilitator_instructions/">pre-requisites</a> required for all Exercises</p>
+<p>Watch the 10 min video explaining why anomalies matter to business. 
+<a href="https://youtu.be/bSlh9TY3ECY" title="Video Title"><img alt="Video" src="../img/yt-part1.png" /></a></p>
+<hr />
+<h2 id="create-simulated-robots-to-monitor">Create Simulated Robots to Monitor</h2>
+<p>In this exercise you quickly create some simulated robot operational data that you will use in your exercises in this Exercise.  You will use data from simulated industry robots as the assets you are responsible to monitor.</p>
+<ol>
+<li>Click <code>Home</code> to see the top level tasks you can do with Monitor. <img alt="Home" src="../img/i89.png" /> &nbsp;</li>
+<li>Click <code>Set up</code></li>
+<li>Click on <code>Devices</code>  You will create a simulated set of robot assets (entities) that represent an assembly line of manufacturing robots.</li>
+<li>Click <code>+</code> button. <img alt="Create an Entity Type" src="../img/i90.png" /> &nbsp;</li>
+<li>Select on <code>Sample Robot Type</code> and click on <code>Next</code>button.  <img alt="Create a Robot Entity Type and simulated robot metrics" src="../img/i91.png" /> &nbsp;</li>
+<li>Edit the Asset Type name prepending your own initials <code>Your_Initials_Robots_Type</code>.<img alt="Create a Robot Asset Type and simulated robot metrics" src="../img/i92.png" /> &nbsp;</li>
+<li>Click <code>Create</code> button.  Monitor will create a set of robots you can monitor with simulated random data.</li>
+</ol>
+<h2 id="explore-device-type-dashboard">Explore Device Type Dashboard</h2>
+<p>An <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/instance_dashboard_tutorial.html">device dashboard</a> displays the operational metrics for a single device, i.e. one specific industry robot. The data metrics of the robot are presented on the dashboard using cards.</p>
+<ol>
+<li>Click on <code>Monitor</code> from the left nav</li>
+<li>Click on <code>Devices</code> and search for <code>Your_Initials</code></li>
+<li>Click on your device type <img alt="View Device Type" src="../img/i93.png" /> &nbsp;</li>
+<li>On the <code>Data</code> tab, expand <code>Metric</code> to see the metrics that Monitor has created for your   Robots with simulated time series data.
+ The outline shows the acc, load, speed and torque metrics in the data items outline. <img alt="View Robot metrics" src="../img/i93b.png" /> &nbsp;</li>
+<li>Expand  <code>Dimension</code> to see the classifications Monitor has created to filter and summarize all the Robots key performance metrics like by <code>Manufacturer</code>.  <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_add_dimensions_api.html">Dimensions</a> are meta data for describing a device that can also be used to filter devices in tables or in functions.</li>
+<li>Expand  <code>Metric (calculated)</code> to see the functions used to create the simulated data like <code>work_performed</code>. <img alt="View Robot calculated metric functions" src="../img/i95.png" />  </li>
+<li>Click on <code>Monitor</code> on the left side.</li>
+<li>Click on <code>Devices</code> and search for <code>Your_Initials</code> to find the device type you created and click on it.</li>
+<li>Robot device dashboards have been automatically created for you by Monitor.  Click on device (Robot) <code>73000</code> </li>
+<li>Click on <code>Asset Metrics Dashboard</code></li>
+<li>Click one of the Robot asset dashboards that have been automatically created for you by Monitor. <img alt="View asset metrics dashboard" src="../img/i96.png" /> &nbsp;</li>
+<li>In this exercise the Asset Dashboard for the Robots was automatically created for you.  Take a moment to see what cards were created for you in the <code>Asset Metrics Dashboard</code>.
+Note the different types of <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html">cards</a> in your dashboard.  Monitor provides multiple types of cards to choose from when configuring a dashboard.</li>
+</ol>
+<p><em>Value Cards</em>
+A value card shows a single or multiple entity metric value. A value may be attributed with a title, a label and a unit. The value may be given a precision and rules on threshold levels.  A value card may be sized as a wide or tall card with big or small sized numbers.</p>
+<p><em>Line Chart Cards</em>
+A line chart card shows time-series data from a single or multiple entities as a chart with time and value axes. The chart may be given a title and labels on the axes. The line chart may be shown in full screen mode and is added a data table with the metrics values plotted in the chart.
+A line chart may also be overlaid with an Alert metric indicating any anomalies on the metric.</p>
+<p><em>Table Cards</em>
+A table card shows tabular data by columns. A table card is configured by referencing some data source for each column. The table may group data source values and present a count rather than each individual value.  An Alerts Table is a preconfigured table presenting alert information.  You will add one later for tabulating alerts.</p>
+<p><em>Image cards</em>
+An image card shows as a custom image with configured hotspots. Each hotspot is indicated at a position on the image with an icon and configured as a value card with entity metrics. The value card is shown when clicking on the hot spot.  You will add one later for displaying an image of the robot.</p>
+<h2 id="edit-asset-dashboard">Edit Asset Dashboard</h2>
+<p>In this exercise you will modify the layout of the individual robot asset dashboard.  An asset dashboard is a configuration of cards, layout and the datasource metrics for a specific asset. You can export dashboard configuration to JSON. You can also reuse and import dashboard configuration files from others.</p>
+<ol>
+<li>Click the <code>gear icon</code> to modify the layout of your robot asset dashboard.  <img alt="Edit Robot dashboard" src="../img/i97.png" /> &nbsp;</li>
+<li>Monitor provides a responsive user interface as the display size of the device or browser window changes you can reposition the cards.  Change the card layout of your dashboard by dragging cards around with you mouse. <img alt="View Robot asset dashboard" src="../img/i98.png" /> &nbsp;</li>
+<li>Once you are satisfied with the card layout, change the width of the browser window to a smaller size.  Note the <code>Dashboard Size</code> of the layout has changed.  Once again change the layout of your dashboard by dragging cards around with your mouse.  The dashboard configuration saves all the adjustments you make to the layout for each resize of your browser window.</li>
+<li>Click on <code>Export</code> icon. The dashboard configuration file in a json format is saved to your local downloads directory on your computer.  </li>
+<li>Click on <code>Save and close</code> to save the new dashboard layout.</li>
+</ol>
+<h1 id="create-a-summary-dashboard">Create a Summary Dashboard</h1>
+<p>In the previous exercise you modified an asset dashboard for each Robot.   In this exercise you will create a <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/tutorials/summary_dashboard_tutorial.html">Summary Dashboard</a>.  There is one summary dashboard presenting aggregated and filtered performance KPI across all robots of the type.  A summary dashboard allows you to see the metrics for a filtered group of assets.  "Show me all robots from a manufacturer and with a specific firmware.""</p>
+<p>These filters are called dimensions in Monitor.  Later in this Exercise you will learn how to assign dimensions to the entities. Our simulated robots already have the appropriate dimensions assigned to each robot.  Robot 73000 may have a manufacturer GHI Industries and Robot 73002 may have a manufacturer Rentech. A summary dashboard allows you filter assets and then compute the data metrics aggregations for the applied filter.  For example, the Max, Min and Mean torque of all robots for the filtered scope of a selected manufacturer.</p>
+<p>A summary dashboard uses time grains when computing the aggregations.  Monitor can display four types of summary dashboards. You can choose by hour, day, week, month time grains.  A summary dashboard supports the same cards as an asset dashboard.  The next steps show you how to create a daily summary dashboard for all your robots.</p>
+<ol>
+<li>From the side menu, click <code>Monitor</code></li>
+<li>From the <code>Asset types</code> tab, search for your Entity Type by typing the name in the search field. Select your entity type and click on it.</li>
+<li>Click <code>+</code> On the <code>Dashboards</code> tab.</li>
+<li>On the <code>Definition</code> page, assign the name <code>robot_daily_summary</code> to the dashboard
+<img alt="Define summary dashboard" src="../img/i99.png" /> &nbsp;</li>
+<li>Select the <code>Daily</code> time grain</li>
+<li>Select <code>load_rating</code> and <code>manufacturer</code></li>
+<li>Click <code>Next</code> and choose the max, min and mean for aggregation methods for all the number metrics. <img alt="Assign aggregation method" src="../img/i100.png" /> &nbsp;</li>
+<li>Click <code>Configure dashboard</code></li>
+<li>Export the dashboard to JSON that you will use later.
+<img alt="Export the summary dashboard configuration json" src="../img/i101.png" /> &nbsp;</li>
+<li>Click <code>Create</code></li>
+<li>Click on <code>robot_daily_summary</code> tab and see that the dashboard is being created.</li>
+<li>[Optional] repeat the steps above to create summary dashboards to create hourly, weekly and monthly aggregation performance metrics summaries of the all robots.</li>
+</ol>
+<h1 id="add-metric-line-card">Add Metric Line Card</h1>
+<p>You need anomalies to be able to detect anomalies.  Monitor provides simulated anomalies that you can apply to learn about anomaly detection.  In this exercise you will:</p>
+<ul>
+<li>Add a simulated anomaly metric named <code>travel_time_anomaly</code>.</li>
+<li>Add a line card to display the <code>travel_time_anomaly</code> metric on an asset dashboard.</li>
+</ul>
+<p>The <code>travel_time</code> deviation that was generated earlier for your robot simulated data did not have anomalies in it.   The <code>AnomalyGeneratorExtremeValue</code> function adds anomalies to the metric you choose.   It abruptly increases or decreases the normal metric values for the metric you choose.  In the steps below you will use this function to add a new calculated metric with anomalies named <code>travel_time_anomaly</code>  You will add a line chart to display the anomalous data on your asset dashboard.  Later you will use Maximo Asset Monitor anomaly detection functions to detect these anomalies.  A SCADA system would likely not be able to detect these type of abrupt anomaly increase or decrease in metric values. SCADA systems typically only provide max or min business rule thresholds.</p>
+<h2 id="add-simulated-anomaly-data-for-travel-time">Add Simulated Anomaly Data for Travel Time</h2>
+<p>In this part of the exercise you will create simulated extreme anomalous values for travel time.<br />
+1.  Click on <code>Setup</code> on the left hand side.
+2.  Search for <code>Your_Initials</code> and click on the asset type you created.
+3.  Click on <code>73000</code> from the table.
+4.  Click on <code>Define dimensions in asset type</code>
+5.  Click on <code>Data</code> tab.  Click on <code>+</code>
+Search the function catalog for  <code>AnomalyGeneratorExtremeValue</code> to create extreme simulated anomaly data.
+<img alt="Search Function Catalog for Anomaly Generator Extreme Value" src="../img/i104.png" /> &nbsp;
+6. Click <code>Select</code>
+7. Choose  <code>travel_time</code> for the metric <code>input_item</code>.  Extreme anomaly values will be added to this time series metric.
+8.  Set <code>factor</code> to a value of <code>100</code>.  This is how frequently an anomaly will occur.  An anomaly will be generated after every <code>100</code> data points.
+9.  Set <code>size</code> to a value of <code>4</code>.  This is how extreme value will be.  An anomaly will be <code>4</code> times the source <code>travel_time</code> metric.
+    <img alt="Add anomaly metric" src="../img/i105.png" /> &nbsp;
+10.  Click <code>Next</code> 
+11.  Click <code>Auto schedule</code> on button to configure the functions schedule.
+12.  Set the <code>output_metric</code> to <code>travel_time_anomaly</code>.
+13.  Set the <code>Calculating the last</code> to <code>2</code> days to have Monitor generate 2 data of historical simulated anomalous data for <code>travel_time_anomaly</code>.
+14.  Click <code>Create</code>.  After 15 minutes the function should be complete and the anomaly data will be available.</p>
+<h3 id="add-simulated-anomaly-travel-time-line-card-to-instance-dashboard-using-the-ui-widget">Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using the UI widget</h3>
+<p>In this part of the exercise you will visualize the simulated <code>travel_time_anomaly</code> in a line card.</p>
+<ol>
+<li>From the side menu, click <code>Monitor</code></li>
+<li>Search for <code>Your_Initials</code> and click on the asset type you created.</li>
+<li>Click on <code>robot_daily_summary</code> tab</li>
+<li>Click on <code>gear icon</code> top right.  Choose Edit dashboards</li>
+<li>Choose <code>Time series line</code> from the right hand selection</li>
+<li>Title: Travel Time with Anomaly</li>
+<li>Time range: Last 24 Hours</li>
+<li>Data item: travel_time_anomaly</li>
+<li>Click <code>Settings</code> tab</li>
+<li>Unit: sec</li>
+<li>Click <code>Add card</code></li>
+<li>Save and Close</li>
+</ol>
+<p><img alt="Line card" src="../img/i200.png" />
+<img alt="Line card settings" src="../img/i201.png" /></p>
+<h3 id="add-simulated-anomaly-travel-time-line-card-to-instance-dashboard-using-json">Add Simulated Anomaly Travel Time Line Card to Instance Dashboard using JSON</h3>
+<p>In this part of the exercise you will visualize the simulated <code>travel_time_anomaly</code> in a line card.</p>
+<ol>
+<li>Click on <code>Industrial Robot summary</code> tab</li>
+<li>Click on <code>Gear</code> icon top right.  Choose <code>Edit dashboards</code></li>
+<li>Click on <code>Export</code> icon top right. Asset dashboard json file should be saved in your browser downloads directory with a name of <code>Industrial Robot summary-dashboard.json</code></li>
+<li>Open the exported instance dashboard JSON file using an Integrated Developer Environment like <a href="https://atom.io/">Atom</a> or copy the file contents into an online <a href="https://jsoneditoronline.org/#left=local.ginesu">Web JSON editor</a></li>
+<li>Read and learn about the <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/dashboard_json_ref.html">JSON structure of Monitor dashboard template</a>
+&nbsp;</li>
+<li>Study the JSON file cards in the editor.  Insert the <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/dashboard/line_graph_json_ref.html">travel_time line chart card json</a> below into the <code>"cards":[]</code>.
+  <code>{
+        "content": {
+            "series": [
+                {
+                    "dataSourceId": "travel_time_anomaly",
+                    "label": "Travel Time"
+                }
+            ],
+            "unit": "sec"
+        },
+        "dataSource": {
+            "attributes": [
+                {
+                    "attribute": "travel_time_anomaly",
+                    "id": "travel_time_anomaly"
+                }
+            ],
+            "range": {
+                "count": -24,
+                "interval": "hour"
+            },
+            "timeGrain": "day"
+        },
+        "id": "travel_time_anomaly_line_card",
+        "size": "LARGE",
+        "title": "Travel Time with Anomaly",
+        "type": "TIMESERIES"
+    },</code></li>
+<li>Notice how the JSON nodes for <code>"content": {"series":</code> and <code>"content": {"dataSourceId":</code> don't have an aggregation <code>"aggregator": "min",</code> like other line metrics in summary dashboard JSON.  As a result the <code>travel_time_anomaly</code> metric line chart data will display raw grain metric data. <img alt=" travel_time_anomaly will show sudden extreme anomalies" src="../img/i113.png" /> &nbsp;  </li>
+<li>Notice how the <code>"range": {"count": -24,"interval": "hour"}</code> JSON node lets Monitor know to only display the last 24 hours of data.    </li>
+<li>Make sure to change all values with card sizes of <code>XLARGE</code> to <code>LARGE</code> and <code>XSMALLWIDE</code>to <code>SMALLWIDE</code>, since these formats have been deprecated.</li>
+<li>In the IDE, save your changes to the instance dashboard JSON file.</li>
+<li>You can see the finished <a href="../json/Industrial_Robot_Instance_Travel_Time.json">Industrial_Robot_Instance_Travel_Time.json</a> &nbsp;</li>
+<li>Return to the Monitor dashboard editor and click on the <code>Import</code> icon.</li>
+<li>Choose the <code>file</code> you updated with the line card click <code>open</code> to import your updated JSON file.</li>
+<li>Your asset dashboard should now look similar to the one below and have a <code>travel_time_anomaly</code> Card with some extreme anomalies like the one in the red rectangle. <img alt="Robot Asset Dashboard" src="../img/i114.png" />.</li>
+</ol>
+<h1 id="add-anomaly-detection">Add Anomaly Detection</h1>
+<p>Maximo Asset Monitor includes models to <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html">detect anomalies</a> in the function catalog.  The anomaly detection functions can detect many types of anomaly patterns.  These include:</p>
+<ul>
+<li><em>Varying signal becomes flat line</em> which can be caused by a defective or tampered with sensor.</li>
+<li><em>Varying signal becomes a near vertical line</em> which can be caused by a defective sensor or extreme changes to the system.</li>
+<li><em>Sudden peak maximum or minimum</em> which can be caused by operating equipment outside normal operating procedures.</li>
+<li><em>Flat line becomes a varying signal</em>  which can be a system that has been running smoothly and then becomes out of tolerance or unstable.</li>
+<li><em>No sensor data is available</em> which can be caused by a defective sensor or network connectivity issues.</li>
+<li><em>A predicted value doesn't come within the threshold</em> based on correlated dependent target variables values.</li>
+</ul>
+<p>In this exercise you will:</p>
+<ul>
+<li><strong>Choose an asset</strong> to analyze.</li>
+<li><strong>Choose a metric</strong> to analyze.</li>
+<li><strong>Add anomaly functions</strong> to your Robot Asset Type to score how likely an anomaly is occurring.</li>
+<li><strong>Add a line chart</strong> to visually compare if high anomaly model scores correlate with the robot <code>travel_time_anomaly</code> metric on each robot asset dashboard.</li>
+<li><strong>Add anomaly alert functions</strong> with score thresholds that corresponds to a level that indicates an anomaly for a robot metric.</li>
+<li><strong>Update a function</strong>  with a new metric name or configuration values if needed.</li>
+<li><strong>Add alerts to a line chart</strong> to visually see where anomalies are occurring on the <code>travel_time_anomaly</code> metric.</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em>  </p>
+<p>Watch the 14 min video explaining what anomaly detection functions are available in Maximo Asset Monitor and what anomaly patterns are detected. 
+<a href="https://youtu.be/ej9Ye-C3Gjw" title="Anomaly Detection Part 2"><img alt="Video" src="../img/yt-part2.png" /></a></p>
+<p>Watch the 19 min video explaining how to configure anomaly detection functions, alerts and dashboards. 
+<a href="https://youtu.be/T4bA1BvvY3A" title="Anomaly Detection Part 3"><img alt="Video" src="../img/yt-part3.png" /></a></p>
+<hr />
+<p>Imagine you are managing a fleet of delivery vehicles.  One out of the five vehicles is a car instead of a scooter. If you wanted to detect anomalies for excessive miles per gallon performance you should analyze the miles per gallon metric for the car separately from the scooters.  Add an <code>EntityFilter</code> function to isolate a function analysis to an individual asset.</p>
+<ol>
+<li>While editing your entity type,  search the function catalog for <code>EntityFilter</code> function. </li>
+<li>On the <code>Data</code> tab, click the '+' button and search in the function catalog for <code>EntityFilter</code>.   <img alt="Add Data" src="../img/AddFunction.png" />&nbsp;</li>
+<li>Click <code>Next</code></li>
+<li>Enter the list of entity ids separated by a comma or <code>73000</code> for just one entity. <img alt="Choose Entity" src="../img/a1.png" />&nbsp;  </li>
+<li>On the function <code>Output</code> tab, enter the name of they filtered entity <code>entity_73000</code> for the output metric name.  <img alt="Name it entity_73000" src="../img/a2.png" />&nbsp;</li>
+<li>Click <code>Create</code></li>
+</ol>
+<p><strong>Choose a Metric to Analyze</strong></p>
+<p>Add the <code>Filter</code> function you can isolate your analysis to an individual entity and metric.  Select the metrics to analyze from the filtered entities by adding Filter.  </p>
+<ol>
+<li>While editing your entity type,  search the function catalog for <code>Filter</code> function. </li>
+<li>On the <code>Data</code> tab, click the '+' button and search in the function catalog for <code>Filter</code>.   <img alt="Add Data" src="../img/i128.png" />&nbsp;</li>
+<li>Click <code>Next</code></li>
+<li>Choose <code>entity_73000</code> input item from the previous function as source shown below.  </li>
+<li>On the function <code>Configuration</code> tab, choose <code>${entity_73000} == True</code> as the expression.  <img alt="Choose Filter" src="../img/a3.png" />&nbsp;</li>
+<li>On the function <code>Configuration</code> tab, choose <code>travel_time_anomaly</code> as the metric to analyzed for <code>filtered_sources</code>.</li>
+<li>Click <code>Next</code></li>
+<li>On the function <code>Output</code> tab, enter the name of they filtered entity <code>travel_time_anomaly_entity_73000</code> for the output metric name.  </li>
+</ol>
+<p><strong>Add Anomaly Functions</strong></p>
+<p>You will add an anomaly function that will provide a score of how likely the single input metric is having anomalies during the specified window.  The directions that follow will use the metric <code>travel_time_anomaly</code> which will analyze all robots for that metric.   If you only want to analyze one robot entity <code>73000</code>, then select entity filtered metric created in the previous step <code>travel_time_anomaly_entity_73000</code> instead.</p>
+<ol>
+<li>Search the function catalog for anomaly detection functions to detect anomalies for the metric <code>travel_time_anomaly</code>.  </li>
+<li>On the <code>Data</code> tab, click the '+' button and search in the function catalog for <code>Anomaly</code>.   <img alt="Add Data" src="../img/AddFunction.png" />&nbsp;</li>
+<li>Select <code>K-MeansAnomalyScore</code>.  Notice the different kinds of <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_detect_predict.html">Anomaly Model functions</a> included with Monitor. Click <code>Select</code> button. <img alt="Choose K-MeansAnomalyScore Anomaly Model" src="../img/i114b.png" />&nbsp;</li>
+<li>Select the metric to score for anomalies <code>travel_time_anomaly</code></li>
+<li>Anomaly detection functions require a <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/analytics/as_window_size.html">window size</a> which is the number of samples points to evaluate each time the model is scheduled to execute.   Enter a <code>windowsize</code> of <code>12</code>.   </li>
+<li>Name the calculated metric <code>travel_time_kmeans_score</code>  <img alt="Add Data" src="../img/i114c.png" />&nbsp;</li>
+<li>Click <code>Next</code> to configure schedule, look back period and name the alert.</li>
+<li>Click <code>Auto schedule</code> on button to configure anomaly function scoring schedule. <img alt="Toggle anomaly scoring schedule and look back period view" src="../img/KmeansAnomalyScore.png" /> &nbsp;</li>
+<li>Set the anomaly function to execute every <code>15</code> minutes.  The function will look for new data for <code>travel_time_anomaly</code> that have been added in the last 15 minutes and calculate alerts for those new data items in the <code>windowsize</code>. <img alt="Configure anomaly scoring schedule and look back period" src="../img/KmeansAnomalySchedule.png" /> &nbsp;</li>
+<li>Set the look back period to <code>2</code> days.  This will calculate historical scores looking back 2 days using the new configuration values with the historical metric values for <code>travel_time_anomaly</code>.</li>
+<li>Set the output metric name for the alert <code>travel_time_kmeans_score</code></li>
+<li>Click <code>Create</code> to create the calculated metric.  It will take 15 minutes for the calculated metric to update.  While waiting lets create anomaly functions for the other anomaly detection functions. See the guidance in the table below for scheduling anomaly functions.</li>
+<li>Repeat the above steps in this exercise adding, configuring and naming the anomaly scoring models in a similar way for the other models.  Use the tool tip suggestions for setting the input arguments default values:  </li>
+<li>Search for <code>FFTbasedGeneralizedAnomalyScore2</code> in the function catalog.  Configure and name it <code>travel_time_fft_score</code></li>
+<li>Search for <code>GeneralizedAnomalyScore</code> in the function catalog. Configure and name it <code>travel_time_ga_score</code></li>
+<li>Search for <code>SaliencybasedGeneralizedAnomalyScore</code> in the function catalog.  Configure and name it <code>travel_time_saliency_score</code></li>
+<li>Search for <code>SpectralAnomalyScore</code> in the function catalog.  Configure and name it <code>travel_time_spectral_score</code></li>
+</ol>
+<p><strong>Table - Suggested Scoring Schedule</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Grain Frequency</th>
+<th style="text-align: center;">Sample Window</th>
+<th>Data Required</th>
+<th style="text-align: center;">Schedule Scoring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Day</td>
+<td style="text-align: center;">12</td>
+<td>24 Days</td>
+<td style="text-align: center;"><br>Noncritical – Once per 12 days </br> <br>Critical - Once per day</br></td>
+</tr>
+<tr>
+<td>1 Hour</td>
+<td style="text-align: center;">12</td>
+<td>24 Hours</td>
+<td style="text-align: center;"><br>Noncritical – Once per 12 days </br> <br>Critical - Once per 1 hour</br></td>
+</tr>
+<tr>
+<td>5 Minutes</td>
+<td style="text-align: center;">12</td>
+<td>2 Hours</td>
+<td style="text-align: center;"><br>Noncritical – Once per 60 mins </br> <br>Critical - Once per 5 mins</br></td>
+</tr>
+<tr>
+<td>1 Minute</td>
+<td style="text-align: center;">12</td>
+<td>1 Hour</td>
+<td style="text-align: center;"><br>Noncritical – Once per 12 mins </br> <br>Critical - Once per 5 mins</br></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="add-a-multi-series-line-chart-using-the-ui-widget">Add a Multi Series Line Chart using the UI widget</h2>
+<ol>
+<li>From the side menu, click <code>Monitor</code></li>
+<li>Search for <code>Your_Initials</code> and click on the asset type you created.</li>
+<li>Click on <code>robot_daily_summary</code> tab</li>
+<li>Click on <code>gear icon</code> top right.  Choose Edit dashboards</li>
+<li>Click on <code>Time series line</code></li>
+<li>Title: Anomaly Scores for Travel Time</li>
+<li>Time range: <code>Last 24 hours</code></li>
+<li>Choose the following calculated metrics: travel_time_spectral_score,<br />
+    travel_time_saliency_score, travel_time_kmeans_score, travel_time_ga_score,
+    travel_time_fft_score, travel_time_anomaly</li>
+<li>Click on Settings</li>
+<li>X-axis-label: Time
+    Y-axis-label: Score</li>
+<li>Click <code>Add card</code></li>
+<li>Save and Close</li>
+</ol>
+<p><img alt="Line card" src="../img/i202.png" />
+<img alt="Line card settings" src="../img/i203.png" />
+<img alt="Line chart" src="../img/i204.png" /></p>
+<h2 id="add-a-multi-series-line-chart-using-json">Add a Multi Series Line Chart using JSON</h2>
+<p>Add a line chart** to visually compare if high anomaly model scores correlate with the robot <code>travel_time_anomaly</code> metric on each robot instance dashboard.  In this exercise you will add a multi series line chart card to your instance dashboard that plots the anomaly model scores for <code>time_travel_anomaly</code> metric.  You can then visually correlate which models are effective at detecting anomalies by seeing which model scores are high when the anomalies happen.</p>
+<ol>
+<li>From the asset dashboard click on the <code>gear icon</code><img alt="Manage asset Robot dashboard" src="../img/i98.png" /> &nbsp;</li>
+<li>Select <code>Edit dashboard</code></li>
+<li>
+<p>Add the following <a href="../json/AnomalyScoreLineGraph.json">line chart card Json</a> for <code>travel_time_anomaly</code> metric anomaly function scores to your asset dashboard.</p>
+<p><code>{
+"id": "card-anomaly-scores-line-timeseries",
+"dataSource": {
+    "attributes": [
+    {
+        "attribute": "travel_time_anomaly",
+        "id": "travel_time_anomaly"
+    },
+        {
+            "attribute": "travel_time_spectral_score",
+            "id": "travel_time_spectral_score"
+        },
+        {
+            "attribute": "travel_time_saliency_score",
+            "id": "travel_time_saliency_score"
+        },
+        {
+            "attribute": "travel_time_ga_score",
+            "id": "travel_time_ga_score"
+        },
+        {
+            "attribute": "travel_time_fft_score",
+            "id": "travel_time_fft_score"
+        },
+        {
+            "attribute": "travel_time_kmeans_score",
+            "id": "travel_time_kmeans_score"
+        }
+    ],
+    "range": {
+        "count": -24,
+        "interval": "hour"
+    }
+  },
+  "content": {
+      "series": [
+      {
+          "dataSourceId": "travel_time_anomaly",
+          "label": "Travel Time Deviation "
+      },{
+              "dataSourceId": "travel_time_spectral_score",
+              "label": "Spectral"
+          },
+          {
+              "dataSourceId": "travel_time_saliency_score",
+              "label": "Saliency"
+          },
+          {
+              "dataSourceId": "travel_time_ga_score",
+              "label": "Generalized"
+          },
+          {
+              "dataSourceId": "travel_time_fft_score",
+              "label": "FFT"
+          },
+          {
+              "dataSourceId": "travel_time_kmeans_score",
+              "label": "Kmeans"
+          }
+      ],
+      "xLabel": "Time",
+      "yLabel": "Score"
+  },
+  "size": "MEDIUM",
+  "title": "Anomaly Scores for Travel Time",
+  "type": "TIMESERIES"
+},</code>  <br />
+4.  View the the anomaly model scores for <code>time_travel_anomaly</code> metric line chart card on each robot asset dashboard.  Analyze the anomaly high scores for each model to see which ones happen when the anomaly does for <code>time_travel_anomaly</code> happens. It should look something like the card below  <img alt="Travel Time and Anomaly Scores" src="../img/i115.png" />&nbsp;
+5.  In the line chart click <code>Spectral</code> label so that you can see only the line chart of each score versus <code>time_travel_anomaly</code> metric value.  <img alt="Travel Time Spectral Anomaly Scores" src="../img/i116.png" />&nbsp;
+6.  Click on <code>Spectral</code> label again to hide that line.  Select the <code>Saliency</code> label to see anomaly score line.  Notice how the models score higher when there is an anomaly.  <img alt="Travel Time Saliency Anomaly Scores" src="../img/i117.png" /><br />
+7. Study each instance dashboard to see where the anomaly scores are high and <code>time_travel_anomaly</code> metric appears to have an anomaly.  Make note of the score levels that correlate with your Robots anomalies that were generated in the <code>travel_time_anomaly</code> metric. You will use this in the next exercise when you create alerts to notify you that anomalies have occurred.  The table below has some suggested starting values:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Anomaly Score</th>
+<th style="text-align: center;">Upper Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>travel_time_spectral_score</code></td>
+<td style="text-align: center;">99</td>
+</tr>
+<tr>
+<td><code>travel_time_saliency_score</code></td>
+<td style="text-align: center;">105</td>
+</tr>
+<tr>
+<td><code>travel_time_ga_score</code></td>
+<td style="text-align: center;">0.4</td>
+</tr>
+<tr>
+<td><code>travel_time_fft_score</code></td>
+<td style="text-align: center;">104</td>
+</tr>
+<tr>
+<td><code>travel_time_kmeans_score</code></td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Add Anomaly Alerts</strong></p>
+<p>In this exercise you will create alerts for each anomaly function score identified in the previous exercise.  You will set the alert thresholds to values of the visually correlated anomaly scores using the <code>upper_threshold</code> values from the table in <code>Add Anomaly Functions</code>    As you learned earlier, alerts are a function in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a several alert functions included in the catalog like <code>Alert High</code>, <code>Alert Low</code> and <code>Alert Expression Filter</code>.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently.  Add a <code>Alert High Value</code> alert for each anomaly model.  Alerts can  calculate historical values for a given function configuration.</p>
+<ol>
+<li>Click <code>+</code> button access the Function Catalog.  <img alt="Search function catalog for alerts" src="../img/i128.png" /> &nbsp;  </li>
+<li>Search on <code>Alert</code></li>
+<li>Select the <code>Alert High Value</code> function and then click <code>Select</code> button.  <img alt="Add Alert High Value" src="../img/i125.png" /> &nbsp;  </li>
+<li>Configure the alert to trigger when the value <code>travel_time_spectral_score</code> reaches <code>99</code>.  An operator would be required to investigate each anomaly alert when they occur.  It is important to avoid setting the alert <code>upper_threshold</code> value too high which could cause anomalies to go undetected.  Vice versa avoid setting the alert <code>upper_threshold</code> value too low which could cause false alerts.  False alerts are those alerts that triggered when there isn't an anomaly.  <img alt="Configure spectral alert expression" src="../img/i123.png" /> &nbsp;</li>
+<li>Set <code>input_item</code> to  <code>travel_time_spectral_score</code>.</li>
+<li>Set <code>upper_threshold</code> value to <code>99</code>.</li>
+<li>Set <code>Severity</code>value to <code>High</code>.  You can add optionally add separate alerts for <code>Medium</code> and <code>Low</code> thresholds.</li>
+<li>Set <code>Status</code> value to <code>New</code>.  Alerts don't have any order. They can start or finish an in any order.  Users can then transition them to <code>New</code> <code>Validated</code>, <code>Acknowleged</code> and finally <code>Resolved</code>.  Monitor does not provide a way to force specific state transition paths for alerts.</li>
+<li>Click <code>Next</code> to configure schedule, look back period and name the alert.</li>
+<li>Click <code>Auto schedule</code> button to configure schedule. <img alt="Toggle alert schedule and look back period view" src="../img/i126.png" /> &nbsp;</li>
+<li>Set the alert to execute every <code>15</code> minutes.  The alert will look for new data for <code>travel_time_spectral_score</code> that have been added in the last 15 minutes and calculate alerts for those new data items.<img alt="Configure alert schedule and look back period" src="../img/i124.png" /> &nbsp;</li>
+<li>Leave the look back period set to <code>1</code> days.  This will calculate alerts looking back 2 days using the historical values for <code>travel_time_spectral_score</code>.</li>
+<li>Set the output metric name for the alert <code>travel_time_spectral_alert</code></li>
+<li>Click <code>Create</code> to create the alert configuration.  It will take 15 minutes for the alert to update.  While waiting lets create the alerts for the other anomaly model scores.</li>
+<li>Repeat the above steps in this exercise adding, configuring and naming alerts for each anomaly scoring model using the expression and alert names below.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Search Catalog for Model</th>
+<th style="text-align: center;">Upper Threshold</th>
+<th style="text-align: right;">Output Metric Alert Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SpectralAnomalyScore2</td>
+<td style="text-align: center;">99</td>
+<td style="text-align: right;"><code>travel_time_spectral_alert</code></td>
+</tr>
+<tr>
+<td>SaliencybasedGeneralizedAnomalyScore</td>
+<td style="text-align: center;">105</td>
+<td style="text-align: right;"><code>travel_time_saliency_alert</code></td>
+</tr>
+<tr>
+<td>GeneralizedAnomalyScore</td>
+<td style="text-align: center;">0.4</td>
+<td style="text-align: right;"><code>travel_time_ga_alert</code></td>
+</tr>
+<tr>
+<td>FFTbasedGeneralizedAnomalyScore2</td>
+<td style="text-align: center;">104</td>
+<td style="text-align: right;"><code>travel_time_fft_alert</code></td>
+</tr>
+<tr>
+<td>KMeansAnomalyScore</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: right;"><code>travel_time_kmeans_alert</code></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Update Functions</strong></p>
+<p>You can update functions with new a new metric name or configuration value.  In this exercise you will review and correct any function names that are improperly spelt.</p>
+<ol>
+<li>Go to your entity type and click on the <code>Data</code> tab.</li>
+<li>Expand the <code>Alert (calculated)</code> section of the <code>Data Items</code> to see the alerts.  They should look something like the figure below. <img alt="View alert data items " src="../img/i130.png" /> &nbsp;</li>
+<li>Check the naming of each alert.  If they are misnamed,  click on the alert name in <code>Data Items</code> column.</li>
+<li>On the frame that opens, click the <code>Configure</code>.   On the dialog that opens and <code>Next</code> buttons.   Change the <code>Output metric</code> name to the correct spelling.</li>
+</ol>
+<p><strong>Add Alerts to Line Chart</strong></p>
+<p>In this exercises you will add the <code>travel_time_anomaly</code> alerts to the line card for the <code>travel_time_anomaly</code> on the robots instance dashboard. Start by exporting the robots instance dashboard JSON and adding the alerts <code>additionalData</code> JSON below to the <code>travel_time_anomaly</code> metric line chart so that you can see red dots in the areas where there likely is an anomaly.</p>
+<ol>
+<li>Edit the robot instance dashboard template JSON.</li>
+<li>Export and modify the JSON adding the highlighted JSON below in an IDE to the <code>travel_time_anomaly</code> card that you added earlier.  </li>
+</ol>
+<pre><code>        ,
+        &quot;additionalData&quot;: {
+            &quot;type&quot;: &quot;alert&quot;,
+            &quot;dataFilter&quot;: {
+                &quot;name&quot;: [
+                    &quot;travel_time_spectral_alert&quot;,
+                    &quot;travel_time_saliency_alert&quot;,
+                    &quot;travel_time_ga_alert&quot;,
+                    &quot;travel_time_fft_alert&quot;,
+                    &quot;travel_time_kmeans_alert&quot;
+                ]
+            }
+        },
+</code></pre>
+<ol>
+<li>The highlighted gray JSON below shows where you should insert the json above.  <img alt="Add Alerts to Line Card" src="../img/i122.png" />  Save the JSON file in the IDE.</li>
+<li>Import the saved JSON file into the Monitor Instance Dashboard.  </li>
+<li>Save the dashboard.</li>
+<li>View multiple robot instance dashboards.  Analyze the <code>travel_time_anomaly</code> line chart looking for anomalies and alert red dots. When you find one, hoover over it with your mouse cursor.   It should look something like the dashboard below  <img alt="Robot Instance Dashboard Json" src="../img/i127.png" />&nbsp;</li>
+</ol>
+<h1 id="add-alerts-table-card">Add Alerts Table Card</h1>
+<h2 id="add-alert-table-card-using-the-ui-widget">Add Alert Table Card using the UI widget</h2>
+<ol>
+<li>From the side menu, click <code>Monitor</code></li>
+<li>Search for <code>Your_Initials</code> and click on the asset type you created.</li>
+<li>Click on <code>robot_daily_summary</code> tab</li>
+<li>Click on <code>gear icon</code> top right.  Choose Edit dashboards</li>
+<li>Click on <code>Alert table</code></li>
+<li>Title: Robot alerts from the last 24 hours</li>
+<li>Time range: <code>Last 24 hours</code></li>
+<li>Click <code>Add card</code></li>
+<li>Save and Close</li>
+<li>You should now have the table in your summary dashboard showing the following Anomaly detection functions scoring.</li>
+</ol>
+<h2 id="add-alert-table-card-using-json">Add Alert Table Card using JSON</h2>
+<p>In the previous exercise you visually represented the anomaly alerts as red points on the line chart.  It's helpful to also see alerts organized in a table so that you can easily prioritize and act on them.</p>
+<ol>
+<li>Add a table card that displays the <code>travel_time_anomaly_alerts</code> by robots for the last 24 hours. Add the following card to your instance dashboard template json.</li>
+</ol>
+<pre><code>{
+&quot;id&quot;: &quot;travel_time_anomaly_alerts&quot;,
+&quot;size&quot;: &quot;XLARGE&quot;,
+&quot;title&quot;: &quot;Robot alerts from the last 24 hours&quot;,
+&quot;type&quot;: &quot;ALERT&quot;,
+&quot;dataSource&quot;: {
+&quot;range&quot;: {
+  &quot;count&quot;: -24,
+  &quot;interval&quot;: &quot;hour&quot;
+},
+&quot;timeGrain&quot;: &quot;input&quot;,
+&quot;type&quot;: &quot;alert&quot;
+}
+},
+</code></pre>
+<ol>
+<li>
+<p>You should now have the table in your summary dashboard showing the following Anomaly detection functions scoring.  <img alt="Alerts Table Card With Anomaly Alerts on Asset Dashboard" src="../img/i109.png" /> &nbsp;</p>
+</li>
+<li>
+<p>From the calendar control in the top right of the dashboard pick an earlier date to see the historical alerts for the robots on a specific date.  <img alt="Alerts Table Card Without Anomaly Alerts on Asset Dashboard" src="../img/i110.png" /> &nbsp;</p>
+</li>
+</ol>
+<p>Congratulations you have successfully create an asset dashboard and a summary dashboard that aggregates asset performance metrics across multiple assets.  You also learned how to detect anomalies by applying anomaly detection functions and alerts at scale across all your enterprise assets.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../monitor_asset_devices/" class="btn btn-neutral float-left" title="2.  Monitor Assets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../service_request/" class="btn btn-neutral float-right" title="4.  Create Service Requests">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../monitor_asset_devices/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../service_request/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

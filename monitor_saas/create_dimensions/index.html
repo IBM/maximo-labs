@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_dimensions/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>6.  Add Dimensions - Monitor SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6.  Add Dimensions";
+        var mkdocs_page_input_path = "create_dimensions.md";
+        var mkdocs_page_url = "/maximo-labs/create_dimensions/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor SaaS Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Labs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../facilitator_instructions/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../connect_device/">1.  Connect Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_asset_devices/">2.  Monitor Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_anomalies/">3.  Monitor Anomalies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_request/">4.  Create Service Requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_imagecard/">5.  Add Image Cards</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6.  Add Dimensions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-dimensions-in-the-ui">Create Dimensions in the UI</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-dimensions-using-the-api">Create Dimensions using the API</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#obtaining-an-api-key">Obtaining an API Key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pushing-the-dimensions-using-postman">Pushing the Dimensions using Postman</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addvaluecard/">7.  Add Value Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">6.  Add Dimensions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-dimensions-to-aggregate-data-in-summary-dashboard">Using Dimensions to Aggregate data in Summary Dashboard</h1>
+<p>In Maximo Asset Monitor, dimensions are metadata used for filtering or aggregating entities and their metrics. Using a REST API call, you are able to push JSON into the Monitor data lake to assign dimensions to different sensor device IDs.  </p>
+<p>Let’s look at an application of dimensions in Monitor. Dimensions in Maximo Asset Monitor allow for rapid actionable insights. The picture below shows a dashboard monitoring the IBM IoT Center in Munich which has been outfitted with sensors to measure comfort and occupancy. Our developers added the following dimensions: Region, Building, Floor, Zone, and Workstation. On this Building Summary dashboard, you can see on the alerts table that all 120 alerts for October 10 came from the Munich HQ building on the 27th floor in Zone 3. The dimensions enable you to tie your sensors with, in this case, location metadata that allows you to be able to drill down into Zone 3 inside of the dashboard or physically go to Zone 3 and check out the problem.<br />
+<img alt="Dimensions in Monitor" src="../img/cd1.png" /> </p>
+<h2 id="create-dimensions-in-the-ui">Create Dimensions in the UI</h2>
+<ol>
+<li>Click on <code>Setup</code> on the left hand side.</li>
+<li>Search for <code>Your_Initials</code> and click on the asset type you created.</li>
+<li>Click on <code>Edit</code> icon</li>
+<li>Click <code>Add dimension</code></li>
+<li>Fill in Dimension name with <code>COUNTRY</code>, type Literal, and default value <code>US</code></li>
+<li>Fill in Dimension name with <code>SITE</code>, type Literal, and default value <code>Cambridge</code></li>
+<li>Fill in Dimension name with <code>ASSET</code>, type Literal, and default value <code>Motor</code></li>
+<li>Click <code>Save</code>
+You will create a simulated set of robot assets that represent an assembly line of manufacturing robots.</li>
+</ol>
+<h2 id="create-dimensions-using-the-api">Create Dimensions using the API</h2>
+<p>To set up your own dimensions, you will need to open up Postman. If you do not already have Postman downloaded, here is a link to download the software https://www.getpostman.com/. </p>
+<h3 id="obtaining-an-api-key">Obtaining an API Key</h3>
+<p>In order to successfully push your JSON schema into the Monitor platform, you will need an API key and token to authenticate your POST request. We will obtain this API key and token by creating one in the Watson IoT Platform Service application linked to your Maximo Asset Monitor instance.</p>
+<ol>
+<li>In the hamburger menu on the left side of the screen of your tenant of Maximo Asset Monitor, click <code>Connect</code>.</li>
+<li>To the right of where it says <code>Watson IoT Platform Service</code> click <code>View Details</code>.</li>
+<li>Now click the <code>Launch</code> button.</li>
+<li>Sign into the organization that corresponds with your Monitor Tenant in the Watson IoT Platform Service window. You can locate the organization on the top right corner of your screen. Click in the red boxed area on your browser to change the organization if need be. <img alt="Changing IoTP Org" src="../img/cd2.png" /> </li>
+<li>On the left side pop out menu, click on <code>Apps</code>.</li>
+<li>Next, click <code>+ Generate API Key</code> button.</li>
+<li>Click next until you hit the <code>Generate API Key</code> button. Nothing of importance for this exercise appears before this step.</li>
+<li>Make sure you copy and paste your API Key and Token in a safe place. You will not be able to retrieve the token again. You will need both the API Key and Token to push the dimensions to Monitor.</li>
+</ol>
+<h3 id="pushing-the-dimensions-using-postman">Pushing the Dimensions using Postman</h3>
+<p>In this section, you will come up with metadata you would like to assign to your entities for the purpose of drill down and quick root cause analysis. The dimensions enable you to look at devices of a certain category or drill down to a single device.</p>
+<ol>
+<li>Figure out the metadata you will deploy. In the example inside of the attached Postman Collection, the dimensions <code>Country</code>:US, <code>Site</code>:Cambridge, and <code>Asset</code>:Motor were used. You will be pushing key-value pairs associated with your devices into Monitor to create your dimensions.</li>
+<li>Open up the Postman application. In the top left corner you will see a button that says <code>+New</code>. Click on the <code>Request</code> button. Name your Request and create a Collection to place the Request.  Click the dropdown menu inside the red box in Postman to classify this API Call as a <code>POST</code> Request. <img alt="POST Request" src="../img/cd3.png" /></li>
+<li>Copy and paste this link into where it says “Enter request URL”: https://api-beta.connectedproducts.internetofthings.ibmcloud.com/api/master/v1/TenantID/entity/type/EntityType/dimensional <strong>In the Request URL in Postman, you will need to enter your Device Type/Entity Type instead of “EntityType", and you willn need to enter the name of the Tenant you are using in place of "TenantID”.</strong></li>
+<li>Click on <code>Headers</code>. (<code>Params</code> will be the default select.) Enter the key-value pairs you see below. However, instead of the API Key and Token shown below, <strong>enter the API Key and Token you generated in the first section of this Exercise.</strong> <img alt="Postman Headers" src="../img/cd4.png" /></li>
+<li>Now click on <code>Body</code> and select <code>raw</code>. You will need to enter a JSON payload here to tie your Device ID with your chosen dimensions. In this case, <code>id</code> will always be your Nordic Thingy Device ID. <code>id</code> refers to the Device ID that you will be associating your key value pair with. <code>name</code> will be the dimension name/category that you use to drill down through, and <code>value</code> will be the value you are assigning to your Device ID in terms of your dimension. <img alt="Postman Body" src="../img/cd5.png" /></li>
+<li>Here is an example of a JSON array you may use. Feel free to use more than three dimensions if you so choose. Please copy, paste, and modify the JSON below for the sake of easy formatting: 
+<code>[
+    {
+        "id": "PThingy",
+        "name" : "COUNTRY",
+        "value" : "US"
+    },
+    {
+        "id": "PThingy",
+        "name" : "SITE",
+        "value" : "Cambridge"
+    },
+    {
+        "id": "PThingy",
+        "name" : "ASSET",
+        "value" : "Motor"
+    }
+  ]</code></li>
+<li>After you have finished the above steps. Click <code>Send</code>. You should receive a <code>200 OK</code> success code from Postman. If not, make sure you entered everything correctly. <img alt="200 OK" src="../img/cd6.png" /></li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../add_imagecard/" class="btn btn-neutral float-left" title="5.  Add Image Cards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../addvaluecard/" class="btn btn-neutral float-right" title="7.  Add Value Cards">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../add_imagecard/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../addvaluecard/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

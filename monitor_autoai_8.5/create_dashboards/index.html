@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_dashboards/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>6. Create Dashboards - Monitor Auto AI Hands on Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6. Create Dashboards";
+        var mkdocs_page_input_path = "create_dashboards.md";
+        var mkdocs_page_url = "/maximo-labs/create_dashboards/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Auto AI Hands on Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Auto AI Hands on Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Auto AI Hands on Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_device_types/">2. Create Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">3. Create Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../send_device_simulated_data/">4. Send Simulated Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_interfaces/">5. Create Interfaces</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6. Create Dashboards</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-asset-dashboard-in-monitor">Create Asset Dashboard in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-asset-dashboard-in-monitor">View Asset Dashboard in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-summary-asset-type-dashboard-in-monitor">Create Summary Asset Type Dashboard in Monitor</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_model/">7. Identify Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../train_test_save_model_in_monitor/">8. Train Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy_prediction_model_function/">9. Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../update_dashboards/">10. Update Dashboards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Auto AI Hands on Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">6. Create Dashboards</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="create-and-view-dashboards">Create and View Dashboards</h1>
+<p>In these exercises you create the dashboards in Monitor.
+-  <a href="#CreateAssetDashboard">Create an Asset dashboard</a> provides individual asset performance for the pump selected. 
+-  <a href="#ViewAssetDashboard">View an Asset dashboard</a>
+-  <a href="#CreateAssetTypeDashboard">Create an Asset Type dashboard</a> that summarizes performance across multiple assets of type <code>pump_co</code></p>
+<h2 id="create-asset-dashboard-in-monitor">Create Asset Dashboard in Monitor</h2>
+<p><a name="CreateAssetDashboard"></a></p>
+<ol>
+<li>
+<p>In Monitor, click <code>Setup</code> tile <img alt="setup assets" src="../img/db01.png" /></p>
+</li>
+<li>
+<p>Enter <code>pump_co</code> in the search field and then click <code>pump_co</code>  <img alt="search for asset type" src="../img/db02.png" /></p>
+</li>
+<li>
+<p>Click on the link for <code>111137F8</code>  <img alt="edit dashboard" src="../img/db03.png" /></p>
+</li>
+<li>
+<p>Click <code>Dashboards</code> tab <img alt="dashboards" src="../img/db04.png" /></p>
+</li>
+<li>
+<p>Click  <code>:</code>  icon and select <code>edit</code> to edit the dashboard <img alt="Connect devices tile" src="../img/db05.png" /></p>
+</li>
+<li>
+<p>Click <code>import</code> icon <img alt="import dashboard json" src="../img/db06.png" /></p>
+</li>
+<li>
+<p>Browse to the <code>dashboards</code> folder and select the  <a href="">asset-instance-dashbard.json</a> file <img alt="Connect devices tile" src="../img/db06a.png" /></p>
+</li>
+<li>
+<p>Click <code>Save and close</code> button  <img alt="save asset dashboard" src="../img/db07.png" /></p>
+</li>
+</ol>
+<h2 id="view-asset-dashboard-in-monitor">View Asset Dashboard in Monitor</h2>
+<p><a name="ViewAssetDashboard"></a></p>
+<ol>
+<li>
+<p>Click <code>Monitor</code> menu <img alt="Monitor menu" src="../img/db08.png" /></p>
+</li>
+<li>
+<p>Search for  <code>pump_co</code> in the search field <img alt="search for asset type" src="../img/db09.png" /></p>
+</li>
+<li>
+<p>Click <code>111137F8</code> asset <img alt="search for assets" src="../img/db10.png" /></p>
+</li>
+<li>
+<p>Click <code>Asset Metrics Dashboard</code> tab <img alt="metrics dashboards" src="../img/db11.png" /></p>
+</li>
+<li>
+<p>View  dashboard <img alt="view dashboard" src="../img/db12.png" /></p>
+</li>
+</ol>
+<p>Congratulations you imported and viewed an Asset Dashboard. </p>
+<h2 id="create-summary-asset-type-dashboard-in-monitor">Create Summary Asset Type Dashboard in Monitor</h2>
+<p><a name="CreateAssetTypeDashboard"></a></p>
+<ol>
+<li>
+<p>In Monitor, click <code>Setup</code> menu <img alt="Setup" src="../img/db01.png" /> </p>
+</li>
+<li>
+<p>Enter <code>pump_co</code> in the search field and then click <code>pump_co</code> in results.  <img alt="Asset Types" src="../img/db02.png" /></p>
+</li>
+<li>
+<p>Then click <code>Manage Asset Types</code> link  <img alt="Dashboards" src="../img/db13.png" /> </p>
+</li>
+<li>
+<p>Click <code>Dashboards</code> tab <img alt="Dashboard Tab" src="../img/db14.png" /> </p>
+</li>
+<li>
+<p>Make note of the <code>Daily</code> Time grain selected.  This means that the dashboard will aggregate calculations for the 24 
+hours.  So the maximum, minimum, mean and last values will be calculated for the last 24 hours.  Dimensions selected 
+are used to further filter the displacyed calculated metrics just for those assets.  Select the <code>serialNumber</code> dimension.
+This will allow you to choose just one asset of that type in the dashboard.  Click <code>Add Dashboard</code> button <img alt="Add Dashboard" src="../img/db16.png" /> </p>
+</li>
+<li>
+<p>Make note of the <code>Daily</code> Time grain selected.  This means that the dashboard will aggregate calculations for the 24 
+hours.  So the maximum, minimum, mean and last values will be calculated for the last 24 hours.  Dimensions selected 
+are used to further filter the displacyed calculated metrics just for those assets.  Select the <code>serialNumber</code> dimension.
+This will allow you to choose just one asset of that type in the dashboard.  Click <code>Next</code> button <img alt="Connect devices tile" src="../img/db17.png" /> </p>
+</li>
+<li>
+<p>Select <code>pump_mode</code> and <code>last</code> from the <code>Methods</code> drop down field to calculate the last value in the last 24 hour day.<br />
+Then click on <code>Configure Dashboard</code> button <img alt="Last" src="../img/db18.png" /> </p>
+</li>
+<li>
+<p>Browse to the <code>dashboards</code> folder and select the  <a href="">asset-instance-dashbard.json</a> file <img alt="Edit Dashboards" src="../img/db06a.png" /></p>
+</li>
+<li>
+<p>Click <code>Create</code> button <img alt="Create Dashboard" src="../img/db21.png" /></p>
+</li>
+<li>
+<p>Monitor is processing the metric calculations for the selected aggregation period.  Note the <code>Preparing Dashboards</code> 
+message <img alt="Preparing Dashboard" src="../img/db22.png" /><br />
+Return back to this screen to see the dashboard once the calculations have completed processing. </p>
+</li>
+</ol>
+<p>Congratulations you imported and created an Asset Type Dashboard that calculated aggregated values for a selected time period
+Monitor provide hourly, daily, monthly and yearly aggregation periods you can use on the dashboard. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_interfaces/" class="btn btn-neutral float-left" title="5. Create Interfaces"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_model/" class="btn btn-neutral float-right" title="7. Identify Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_interfaces/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_model/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
