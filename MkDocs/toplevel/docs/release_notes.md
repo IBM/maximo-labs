@@ -18,6 +18,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2025-05-30|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/) to show current TechZone screens and processes.  |
 |2025-04-02|Jan Ekstrøm    |Added 'Copy to clipboard' for commands for several 9.0 Maximo Labs                      |
 |2025-01-15|Carlos Ferreira|Added first draft of the [MAS 9.0 Overview lab](../mas_9.0/).                           |
 |2024-11-20|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/) with an easier MAS update exercise for 9.0.3 and later.             |
