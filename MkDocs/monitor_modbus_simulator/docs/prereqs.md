@@ -2,8 +2,8 @@
 Here are the required pre-requisites for the Maximo Monitor Modbus Simulator lab.
 
 !!! attention
-    This lab can be used with Maximo Application Suite 8.11 or later.</br>
-    MAS application entitlement must be `Limited` or higher.
+    This lab can be used with any version of Maximo Application Suite as it runs independently.</br>
+    
 
 # All Exercises
 
