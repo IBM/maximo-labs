@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/hopper_asset/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Create Packaging Hopper Assets - Maximo Hands on Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Create Packaging Hopper Assets";
+        var mkdocs_page_input_path = "hopper_asset.md";
+        var mkdocs_page_url = "/maximo-labs/hopper_asset/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo Hands on Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor v8.5 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Create Packaging Hopper Assets</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-packaging-hopper-in-monitor">Create a Packaging Hopper in Monitor</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#next-step">Next Step</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../constant/">3. Create Constants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_function/">4. Create Python Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_expressions/">5. Create Python Expressions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_value_card/">6. Add Value Card</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo Hands on Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Create Packaging Hopper Assets</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise using Monitor you will learn how to :</p>
+<ul>
+<li>Add built-in Monitor Packaing Hopper Asset </li>
+</ul>
+<p>The Monitor built-in Packaging Hopper Asset will provide the timeseries data that you will use in the exercise to determine 
+how frequently the ambient temperature is above 27 degrees Celcius.   The food that is being packaged has a shorter shelf life when it is packaged
+at higher temperatures.  Remote operational support teams monitor the Packaging Hopper to ensure it is operating within 
+the required operating ambient temperature ranges and without anomalies.  </p>
+<hr />
+<p><em>Before you begin:</em>  </p>
+<p>This exercise requires that you have completed the <a href="../prereqs/">pre-requisites</a> required for all Exercises
+Ensure you instructor has provided you the notebooks needed for this lab. </p>
+<hr />
+<h2 id="create-a-packaging-hopper-in-monitor">Create a Packaging Hopper in Monitor</h2>
+<p>In this exercise you quickly create some simulated packaging hopper operational time series data that you will use in 
+your exercises.   You will analyze the data from simulated industry hopper within Monitor functions and alerts. 
+You will also create a constant for the maximum temperature <code>maximum_temp</code> in degrees celcius that is allowed.</p>
+<ol>
+<li>Click <code>Setup</code> side menu to add a new asset type using a <code>Sample Packagin Hopper Type</code> asset template in Monitor. <img alt="Create an Asset Type" src="../img/fun01.png" /> &nbsp;</li>
+<li>Click <code>Sample Packaging Hopper type</code> You will create a simulated set of packaging assets (entities).</li>
+<li>Click <code>Next</code> button.</li>
+<li>Append your initials to the <code>Asset Type Name</code> and click on <code>Next</code>button.  <img alt="Create a Hopper Asset Type and simulated robot metrics" src="../img/fun02.png" /> &nbsp;</li>
+<li>Note how Monitor has added 5 Hoppers with IDs of 71000 to 710004.  Click on your <code>Asset Type</code> and click on 
+<code>Setup Asset Type</code> button.  <img alt="Setup Asset Type" src="../img/fun03.png" />  &nbsp;</li>
+<li>Note how Monitor has added an instance asset dashboard for each Hoppers with IDs of 71000 to 710004.  Click on your 
+<code>Monitor</code> Tab  <img alt="Monitor Asset List" src="../img/fun04.png" />  &nbsp;</li>
+<li>Click on one of the Hopper assets like <code>73000</code> to see it's data.   <img alt="Asset Dashboard" src="../img/fun06.png" />  &nbsp;</li>
+</ol>
+<h3 id="next-step">Next Step</h3>
+<p>You now have asset time series data for 5 asset that you can analyze and Monitor.  In the next exercise you will add a 
+constant for the max_temp_celcius.  The PythonFunction will use the constant for the max_temp in Celcius that the 
+ambient temperature can be.  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup_local_environment/" class="btn btn-neutral float-left" title="1. Setup Local Environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../constant/" class="btn btn-neutral float-right" title="3. Create Constants">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup_local_environment/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../constant/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

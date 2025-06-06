@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/hpu_models/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Understand Health and Predict - Utilities Models - Maximo APM V8.7 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Understand Health and Predict - Utilities Models";
+        var mkdocs_page_input_path = "hpu_models.md";
+        var mkdocs_page_url = "/maximo-labs/hpu_models/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.7 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.7.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Understand Health and Predict - Utilities Models</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#out-of-the-box-models">Out Of The Box Models</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-score-group">Create a Score Group</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-and-schedule-notebooks">Update and Schedule Notebooks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#substation-transformer-model-configuration">Substation Transformer Model Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#substation-transformer-model-notebook">Substation Transformer Model Notebook</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#st-watson-studio-job">ST Watson Studio Job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#customize-notebook-model-for-noc">Customize Notebook Model for NOC</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-scheduler-for-cron-task-instance-created-during-score-group-set-up">Update scheduler for cron task instance created during score group set up</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshoot">Troubleshoot</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#enable-debug-mode">Enable Debug Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run-notebook-directly-for-debugging-purpose">Run Notebook Directly for Debugging Purpose</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.7 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Understand Health and Predict - Utilities Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="understand-utilities-models">Understand Utilities Models</h1>
+<p>In this exercise, you will learn:</p>
+<ul>
+<li>To use the <a href="#hpu_notebooks">Substation Transformer Models</a> included with Health and Predict - Utilities (HPU).   </li>
+<li><a href="#score_groups">Create a Score Group</a> for Substation Transformer Assets.</li>
+<li><a href="#modify_schedule">Update and Schedule Notebooks</a> for Utilities.</li>
+<li><a href="#troubleshoot">Troubleshoot Notebooks</a> for Utilities.</li>
+</ul>
+<p><strong>Pre-requisites</strong></p>
+<p>Ensure you have access to :</p>
+<ul>
+<li>
+<p>MAS v8.7 Health and Predict Utilities </p>
+</li>
+<li>
+<p>HPU dataloader URL </p>
+</li>
+<li>
+<p>Waston studio access </p>
+</li>
+<li>
+<p>Sample ST(Substation Transformer) data for HPU, and make sure required data are loaded through dataloader via App Connect. Check out the sample data folder structure as below. </p>
+</li>
+</ul>
+<p><img alt="drawing" height="70%" src="../img/hpu_model_st_sample_data_overview.png" width="70%" /><br>   </p>
+<h2 id="out-of-the-box-models">Out Of The Box Models</h2>
+<p><a name="hpu_notebooks"></a></p>
+<p>Health and Predict - Utilities includes the supported Asset Classes listed in table below:</p>
+<table>
+<thead>
+<tr>
+<th>Asset class</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DISTRIBUTION TRANSFORMER</td>
+<td>IBM Transformers Tap Changers 4.0.0</td>
+</tr>
+<tr>
+<td>SUBSTATION TRANSFORMER</td>
+<td>IBM Transformers Tap Changers 4.0.0,IBM Transformers Tap Changers DGA 4.0.0</td>
+</tr>
+<tr>
+<td>INSTRUMENT TRANSFORMER</td>
+<td>IBM Instrument Transformers Oil Filled CTs 4.0.0</td>
+</tr>
+<tr>
+<td>SWITCHGEAR</td>
+<td>IBM Gas Insulated Switchgear 4.0.0</td>
+</tr>
+<tr>
+<td>UNDERGROUND TRANSMISSION MANHOLE</td>
+<td>IBM Underground Transmission Manholes 4.0.0</td>
+</tr>
+<tr>
+<td>METAL SUPPORT STRUCTURE</td>
+<td>IBM Metal Support Structures 4.0.0</td>
+</tr>
+<tr>
+<td>OVERHEAD TRANSMISSION WIRE</td>
+<td>IBM Conductors 4.0.0</td>
+</tr>
+<tr>
+<td>POLE -  Wood Power Pole</td>
+<td>IBM Wood Pole Structures 4.0.0</td>
+</tr>
+<tr>
+<td>CIRCUITBREAKER - Oil Circuit Breaker</td>
+<td>IBM Circuit Breakers Oil 4.0.0</td>
+</tr>
+<tr>
+<td>CIRCUITBREAKER - Air Blast Circuit Breaker</td>
+<td>IBM Circuit Breakers Air Blast 4.0.0</td>
+</tr>
+<tr>
+<td>CIRCUITBREAKER - Air Magnetic Circuit Breaker</td>
+<td>IBM Circuit Breakers Air Magnetic 4.0.0</td>
+</tr>
+<tr>
+<td>CIRCUITBREAKER - Vacuum Circuit Breaker</td>
+<td>IBM Circuit Breakers Vacuum 4.0.0</td>
+</tr>
+<tr>
+<td>CIRCUITBREAKER - SF6 Circuit Breaker</td>
+<td>IBM Circuit Breakers SF6 4.0.0</td>
+</tr>
+<tr>
+<td>UNDERGROUNDTRANSMISSIONCABLE - High Pressure Fluid Filled Pipe Type (HPFF) Cables</td>
+<td>IBM HPFF Cables 4.0.0</td>
+</tr>
+<tr>
+<td>UNDERGROUNDTRANSMISSIONCABLE - Mass Impregnated (MI) Cables</td>
+<td>IBM MI Cables 4.0.0</td>
+</tr>
+<tr>
+<td>UNDERGROUNDTRANSMISSIONCABLE - Self Contained Fluid Filled (SCFF) Cables</td>
+<td>IBM SCFF Cables 4.0.0</td>
+</tr>
+<tr>
+<td>UNDERGROUNDTRANSMISSIONCABLE - Self Contained Gas Filled (SCGF) Submarine Cables</td>
+<td>IBM SCGF Cables 4.0.0</td>
+</tr>
+<tr>
+<td>UNDERGROUNDTRANSMISSIONCABLE - Extruded Cross Linked Polyethylene (XLPE) Cables</td>
+<td>IBM XLPE Cables 4.0.0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some asset classes have subtype, like Circuit Breaker or Underground Transmission Cable</p>
+</div>
+<p><strong>HPU Model Calculation Methodology</strong>
+<img alt="drawing" src="../img/hpu_model_bctc.png" /></p>
+<h2 id="create-a-score-group">Create a Score Group</h2>
+<p><a name="score_groups"></a></p>
+<p>Create a Score Group for Substation Transformer Assets</p>
+<p>1. Login and go to Health and Predict Utilities application.
+<img alt="drawing" src="../img/hpu_model_sc_setup_0.png" /></p>
+<p>2. Click <code>Scoring and DGA settings</code> in the menu,in Scoring and DGA settings page, click <code>Create a scoring and DGA group</code> button.
+<img alt="drawing" src="../img/hpu_model_sc_setup_1.png" />    </p>
+<p>3. In the create score group page,fill in name,description, select <code>Asset</code> object,choose <code>Connectigng group to notebook</code>.</p>
+<p>4. Then click <code>Select</code> to choose <code>IBM Transformers Tap Changers DGA 4.0.0</code> notebook in the notebook list dialog,click <code>Use notebook</code>.
+<img alt="drawing" src="../img/hpu_model_sc_setup_2.png" />   </p>
+<p>5. Scroll down <code>query</code> part, click <code>Select</code> to open query dialog, user can select an existing query, or click <code>+</code> button to create a new query for ST assets.
+<img alt="drawing" src="../img/hpu_model_sc_setup_3.png" /> <br />
+E.g Select site and classification for the new query.
+<img alt="drawing" src="../img/hpu_model_sc_setup_4.png" />   </p>
+<p>6. After select the notebook and query, click <code>Create</code> to create the score group.
+<img alt="drawing" src="../img/hpu_model_sc_setup_5.png" />   </p>
+<p>7. After score group is created, system will redirect to the score group detail page, in this page, user can see all the scores and the asset list.
+<img alt="drawing" src="../img/hpu_model_sc_setup_6.png" />   </p>
+<p>8. Click the score in the table, and active it on the right, scores need to be activated one by one based on the dependency.
+<img alt="drawing" src="../img/hpu_model_sc_setup_7.png" />   </p>
+<p><img alt="drawing" src="../img/hpu_model_sc_setup_8.png" />    </p>
+<p>9. After activating all the scores, click the <code>Recalculate scores</code> to start the analysis.</p>
+<h2 id="update-and-schedule-notebooks">Update and Schedule Notebooks</h2>
+<p><a name="modify_schedule"></a></p>
+<p>In this exercise you will check the notebook configuration file, notebook and the job, also update the notebook and save to latest version.  You will also schedule <code>Jobs</code> to run the notebooks and do asset scoring by changing the cron task schedule.  </p>
+<p>In Health and Predict - Utilities, the scoring calculation happen in Watson Studio jobs. Each asset type has a configure file, notebook, and job deployed on Watson Studio project. When user clicks <code>Recalculate scores</code> on UI, it triggers the job to run, do the calculation, and save results to the Database.  </p>
+<h3 id="substation-transformer-model-configuration">Substation Transformer Model Configuration</h3>
+<p>For ST (Substation Transformer), configuration file is named <code>IBM-Transformers-Tap-Changers-DGA-4.0.0.cfg</code>.
+<img alt="drawing" src="../img/hpu_model_ws_cfg.png" />  </p>
+<p>In the configuration file, under <code>Common</code> section <code>defaultsetup.components</code> has all the scores group, contributors listed, and functions and parameters for each item. In <code>defaultsetup.dependencies</code> section describes the dependencies. E.g Health depends on <code>Transformer health index</code> and <code>Tap changer health index</code>, <code>Transformer health index</code> group calculated based on several contributors.  Function details can be found in <code>[ext_function_name]</code> in the file named. E.g For <code>Health</code> ext_function_name is configured as <code>[Health Weighted]</code>, the implementation is <code>common_calculate_weighted</code> which is pre-defined in healthlib.</p>
+<p><strong>Example Configuration</strong></p>
+<pre><code>[Common]
+name = IBM Transformers Tap Changers DGA 4.0.0
+desc = Transformers tap changers dga model
+notebook = IBM-Transformers-Tap-Changers-DGA-4.0.0
+job = Run-IBM-Transformers-Tap-Changers-DGA-4-0-0
+usewith = asset,locations
+defaultsetup.components =
+    type, name, ext_function_name, description, parameters
+    &quot;CONTRIBUTOR&quot;,&quot;Bushing condition&quot;, &quot;Bushing Condition&quot;, &quot;Bushing condition contributor&quot;,&quot;Condition meter=B-CONDIT&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Oil leaks&quot;,&quot;Oil Leaks&quot;,&quot;Oil leaks contributor&quot;,&quot;Condition meter=OIL-LEAKS&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Main Tank/Cabinets and control condition&quot;,&quot;Main Tank/Cabinets and Control Condition&quot;,&quot;Main Tank/Cabinets and control condition contributor&quot;,&quot;Condition meter=MAIN-TCC&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Conservator/Oil preservation system condition&quot;,&quot;Conservator/Oil Preservation System Condition&quot;,&quot;Conservator/Oil preservation system condition contributor&quot;,&quot;Condition meter=CO-PRES&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Radiators/Cooling system condition&quot;,&quot;Radiators/Cooling System Condition&quot;,&quot;Radiators/Cooling system condition contributor&quot;,&quot;Condition meter=RC-SYS&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Foundation/Support Steel/Grounding condition&quot;,&quot;Foundation/Support Steel/Grounding Condition&quot;,&quot;Foundation/Support Steel/Grounding condition contributor&quot;,&quot;Condition meter=FS-SG&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Overall power transformer condition&quot;,&quot;Overall Power Transformer Condition&quot;,&quot;Overall Power Transformer Condition contributor&quot;,&quot;Condition meter=OVER-PT&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Winding doble test&quot;,&quot;Winding Doble Test&quot;,&quot;Winding Doble Test contributor&quot;,&quot;Condition meter=WINDDT&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Oil quality test&quot;,&quot;Oil Quality Test&quot;,&quot;Oil Quality Test contributor&quot;,&quot;Condition meter=OIL-QT&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Thermograph (IR)&quot;,&quot;Thermograph (IR)&quot;,&quot;Thermograph (IR) contributor&quot;,&quot;Condition meter=ST-THERM&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Bushing DGA analysis&quot;,&quot;Bushing DGA Analysis&quot;,&quot;Bushing DGA Analysis contributor&quot;,&quot;Condition meter=B-DGAOA&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Furan oil analysis&quot;,&quot;Furan Oil Analysis&quot;,&quot;Furan Oil Analysis contributor&quot;,&quot;Condition meter=FUR-OA&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;DGA oil analysis&quot;,&quot;DGA Oil Analysis&quot;,&quot;DGA Oil Analysis contributor&quot;,&quot;H2 meter=DGAR-H2,CH4 meter=DGAR-CH4,C2H6 meter=DGAR-C2H6,C2H4 meter=DGAR-C2H4,C2H2 meter=DGAR-C2H2,CO meter=DGAR-CO,CO2 meter=DGAR-CO2&quot;
+    &quot;GROUP&quot;, &quot;Transformer health index&quot;,&quot;Group&quot;,&quot;Transformer Health Index Formulation&quot;,
+    &quot;CONTRIBUTOR&quot;,&quot;Tap changer tank condition&quot;,&quot;Tap Changer Tank Condition&quot;,&quot;Tap Changer Tank Condition contributor&quot;,&quot;Condition meter=TANK-CON&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Tap changer tank leaks&quot;,&quot;Tap Changer Tank Leaks&quot;,&quot;Tap Changer Tank Leaks contributor&quot;,&quot;Condition meter=TANK-L&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Tap changer gaskets, seals and pressure relief condition&quot;,&quot;Tap Changer Gaskets, Seals and Pressure Relief Condition&quot;,&quot;Tap Changer Gaskets, Seals and Pressure Relief Condition contributor&quot;,&quot;Condition meter=GS-PR&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Tap changer LTC control and mechanism cabinet&quot;,&quot;Tap Changer LTC Control and Mechanism Cabinet&quot;,&quot;Tap Changer LTC Control and Mechanism Cabinet contributor&quot;,&quot;Condition meter=LTC-CMC&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Tap changer control and mechanism cabinet component condition&quot;,&quot;Tap Changer Control and Mechanism Cabinet Component Condition&quot;,&quot;Tap Changer Control and Mechanism Cabinet Component Condition contributor&quot;,&quot;Condition meter=CTRMEC-CO&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Overall tap changer condition&quot;,&quot;Overall Tap Changer Condition&quot;,&quot;Overall Tap Changer Condition contributor&quot;,&quot;Condition meter=OVER-TCC&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Tap changer oil analysis (DGA Metal Content)&quot;,&quot;Tap Changer Oil Analysis (DGA Metal Content)&quot;,&quot;Tap Changer Oil Analysis (DGA Metal Content) contributor&quot;,&quot;Condition meter=TC-OQT&quot;
+    &quot;CONTRIBUTOR&quot;,&quot;Tap changer oil quality test&quot;,&quot;Tap Changer Oil Quality Test&quot;,&quot;Tap Changer Oil Quality Test contributor&quot;,&quot;Condition meter=TC-QT&quot;
+    &quot;GROUP&quot;, &quot;Tap changer health index&quot;,&quot;Group&quot;,&quot;Tap Changer Health Index Formulation&quot;,
+    &quot;CONTRIBUTOR&quot;, &quot;Age&quot;, &quot;Age&quot;, &quot;Age function contributor&quot;,&quot;&quot;
+    &quot;CONTRIBUTOR&quot;, &quot;Number of customer&quot;, &quot;Number of Customer&quot;, &quot;Number of Customer contributor&quot;,&quot;NOC attribute=NUMBEROFCUSTOMERS,Feeder attribute=FEEDER&quot;
+    &quot;SCORE&quot;, &quot;Health&quot;, &quot;Health Weighted&quot;, &quot;Weighted health calculation&quot;,
+    &quot;SCORE&quot;, &quot;Effective age&quot;, &quot;Effective Age&quot;, &quot;Effective Age of the asset&quot;,&quot;Mean life=30&quot;
+    &quot;SCORE&quot;, &quot;End of life&quot;, &quot;End Of Life&quot;, &quot;End of Life of the asset&quot;,
+    &quot;SCORE&quot;, &quot;Criticality&quot;, &quot;Criticality&quot;, &quot;Criticality of the asset&quot;,
+    &quot;SCORE&quot;, &quot;Risk&quot;, &quot;Risk&quot;, &quot;Risk of the asset&quot;,
+    &quot;SCORE&quot;, &quot;Duval triangle score&quot;, &quot;Duval Triangle Score&quot;,&quot;Duval triangle for dissolved gas analysis&quot;,
+    &quot;SCORE&quot;, &quot;History of combustible gas concentration&quot;, &quot;DGA Trend Score&quot;,&quot;History of combustible gas concentration&quot;,
+
+defaultsetup.dependencies =
+    parent, child, role, weight 
+    &quot;Transformer health index&quot;,&quot;Bushing condition&quot;,,&quot;3&quot;
+    &quot;Transformer health index&quot;,&quot;Oil leaks&quot;,,&quot;3&quot;
+    &quot;Transformer health index&quot;,&quot;Main Tank/Cabinets and control condition&quot;,,&quot;3&quot;
+    &quot;Transformer health index&quot;,&quot;Conservator/Oil preservation system condition&quot;,,&quot;3&quot;
+    &quot;Transformer health index&quot;,&quot;Radiators/Cooling system condition&quot;,,&quot;3&quot;
+    &quot;Transformer health index&quot;,&quot;Foundation/Support Steel/Grounding condition&quot;,,&quot;3&quot;
+    &quot;Transformer health index&quot;,&quot;Overall power transformer condition&quot;,,&quot;8&quot;
+    &quot;Transformer health index&quot;,&quot;Winding doble test&quot;,,&quot;14&quot;
+    &quot;Transformer health index&quot;,&quot;Oil quality test&quot;,,&quot;10&quot;
+    &quot;Transformer health index&quot;,&quot;Thermograph (IR)&quot;,,&quot;8&quot;
+    &quot;Transformer health index&quot;,&quot;Bushing DGA analysis&quot;,,&quot;14&quot;
+    &quot;Transformer health index&quot;,&quot;Furan oil analysis&quot;,,&quot;14&quot;
+    &quot;Transformer health index&quot;,&quot;DGA oil analysis&quot;,,&quot;14&quot;
+    &quot;Health&quot;,&quot;Transformer health index&quot;,,&quot;80&quot;
+    &quot;Tap changer health index&quot;,&quot;Tap changer tank condition&quot;,,&quot;6&quot;
+    &quot;Tap changer health index&quot;,&quot;Tap changer tank leaks&quot;,,&quot;6&quot;
+    &quot;Tap changer health index&quot;,&quot;Tap changer gaskets, seals and pressure relief condition&quot;,,&quot;6&quot;
+    &quot;Tap changer health index&quot;,&quot;Tap changer LTC control and mechanism cabinet&quot;,,&quot;6&quot;
+    &quot;Tap changer health index&quot;,&quot;Tap changer control and mechanism cabinet component condition&quot;,,&quot;6&quot;
+    &quot;Tap changer health index&quot;,&quot;Overall tap changer condition&quot;,,&quot;21&quot;
+    &quot;Tap changer health index&quot;,&quot;Tap changer oil analysis (DGA Metal Content)&quot;,, &quot;28&quot;
+    &quot;Tap changer health index&quot;,&quot;Tap changer oil quality test&quot;,,&quot;21&quot;
+    &quot;Health&quot;,&quot;Tap changer health index&quot;,,&quot;20&quot;
+    &quot;Criticality&quot;, &quot;Number of customer&quot;,,&quot;100&quot;
+    &quot;Effective age&quot;, &quot;Health&quot;, &quot;HEALTH&quot;, &quot;&quot;
+    &quot;Effective age&quot;, &quot;Age&quot;, &quot;AGE&quot;, &quot;&quot;
+    &quot;End of life&quot;, &quot;Effective age&quot;, &quot;EFFECTIVEAGE&quot;,&quot;&quot;
+    &quot;Risk&quot;, &quot;Criticality&quot;, &quot;CRITICALITY&quot;, &quot;&quot;
+    &quot;Risk&quot;, &quot;End of life&quot;, &quot;EOL&quot;, &quot;&quot;
+
+.......
+
+[Group]
+type = GROUP
+desc = Group of contributors
+impl = common_calculate_weighted
+calctype = WEIGHT
+
+[Health Weighted]
+type = SCORE
+scoretype = HEALTH
+desc = Weighted scores from each contributor
+impl = common_calculate_weighted
+calctype = WEIGHT
+
+
+[End Of Life]
+type = SCORE
+scoretype = EOL
+desc = End of life of the asset
+impl = common_calculate_end_of_life
+calctype = NONE
+roles = EFFECTIVEAGE
+parameter.curve.name = Curve
+parameter.curve.type = string
+parameter.curve.desc = Curve of assets
+parameter.curve.default = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100
+
+
+[Effective Age]
+type = SCORE
+scoretype = EFFECTIVEAGE
+desc = Effective age score
+impl = common_calculate_effective_age
+calctype = NONE
+roles = HEALTH,AGE
+# parameter.&lt;id&gt;.&lt;item&gt;
+parameter.mean_life.name = Mean life
+parameter.mean_life.type = number
+parameter.mean_life.format = decimal
+parameter.mean_life.desc = mean life of the asset
+parameter.mean_life.default = 30
+
+[Criticality]
+type = SCORE
+scoretype = CRITICALITY
+desc = Criticality score
+impl = common_calculate_weighted
+calctype = WEIGHT
+
+[Risk]
+type = SCORE
+scoretype = RISK
+desc = Risk score
+impl = common_calculate_risk
+roles = EOL,CRITICALITY
+calctype = NONE
+
+</code></pre>
+<p>Below is the dependency of out of the box Substation Transformer scores.<br />
+<img alt="drawing" height="70%" src="../img/hpu_model_ws_cfg_sample.png" width="70%" />  </p>
+<h3 id="substation-transformer-model-notebook">Substation Transformer Model Notebook</h3>
+<p>For ST(Substation Transformer), notebook is IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb as configured in cfg file.
+<img alt="drawing" src="../img/hpu_model_ws_notebook.png" />   </p>
+<p>Any permenant modification on notebook, will need save to a latest version to take affect, because each job binds with a version of the notebook, by default it's the <code>Latest</code> version.</p>
+<h3 id="st-watson-studio-job">ST Watson Studio Job</h3>
+<p>Job is <code>Run-IBM-Transformers-Tap-Changers-DGA-4-0-0.Details</code>and can be checked using the steps below.</p>
+<p>1. Login to Watson Studio, enter the project, and click the <code>Job</code> tab, click the job defined in configruation file, and then click <code>Edit Configuration</code>, click <code>Next</code> and <code>Next</code>, we can see by default it binds to <code>latest</code> version and runtime is <code>Default Python 3.8</code>, close the edit page by clicking <code>X</code> on the right corner.
+<img alt="drawing" src="../img/hpu_model_ws_job.png" />   </p>
+<p><img alt="drawing" src="../img/hpu_model_ws_job_02.png" />   </p>
+<p><img alt="drawing" src="../img/hpu_model_ws_job_01.png" />   </p>
+<p>2. Log can be checked by clicking on one of the history runs, either check directly on the page or download to local.
+<img alt="drawing" src="../img/hpu_model_ws_job_03.png" />   </p>
+<p><img alt="drawing" src="../img/hpu_model_ws_job_04.png" />   </p>
+<h3 id="customize-notebook-model-for-noc">Customize Notebook Model for NOC</h3>
+<p>Users can change how the scores are calculated as needed in the Notebooks.  </p>
+<p>For example, for customize the <code>Criticality</code> which is calculated 100% weight of NOC (Number Of Customers) by default.
+Login Watson Studio, enter the project, click the <code>Assets</code> tab, enter the notebook <code>IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb</code>,find the cell which defined function <code>calculate_number_of_customer</code>, comment out the old code, and write new customize NOC functiion based on customer's own methodology. Then save a latest version.</p>
+<pre><code>//Code example.
+@maximo_function
+def calculate_number_of_customer(context,targetType=None):
+    //Input customized logic here......
+    logger = healthlib.get_logger()
+    noc_attr = context.get_parameter(name='NOC attribute')
+    logger.debug('Noc attribute=%s', noc_attr)
+
+    noc = context.get_spec(noc_attr)
+    logger.debug('noc=%s', noc)
+
+    result = min(100,max(0, 100 * noc/10000))
+    return result
+</code></pre>
+<h3 id="update-scheduler-for-cron-task-instance-created-during-score-group-set-up">Update scheduler for cron task instance created during <a href="#score_groups">score group set up</a></h3>
+<p>User can change the schedule by changing the crontask instance's schedule.</p>
+<p>1. Login and go to Health and Predict Utilities application, click <code>Scoring and DGA settings</code> in the menu, and search for the score group just created, click to enter the group details page to get the group id which later will be used to find the corresponding crontask instance.
+<img alt="drawing" height="50%" src="../img/hpu_model_crontask_1.png" width="50%" /></p>
+<p>2. Click Administration administration to go to Administration page. Then click <code>Cron Task Setup</code> to enter the crontask application.<br>
+<img alt="drawing" height="30%" src="../img/hpu_model_crontask_2.png" width="30%" /></p>
+<p><img alt="drawing" src="../img/hpu_model_crontask_3.png" /></p>
+<p>3. Search for <code>AHSCORINGGROUP</code> cron task. And click to enter the crontask detail page.
+<img alt="drawing" src="../img/hpu_model_crontask_4.png" />   </p>
+<p>User can trigger the analysis by clcik <code>Reload Request</code> under <code>More actions</code>, choose the crontask instance that matches score group id.
+<img alt="drawing" src="../img/hpu_model_crontask_5.png" />   </p>
+<p>User can also click calendar icon to update the schedule for the cron task instance which has the same id as group id.
+<img alt="drawing" src="../img/hpu_model_crontask_6.png" />   </p>
+<p><img alt="drawing" height="50%" src="../img/hpu_model_crontask_7.png" width="50%" /></p>
+<h2 id="troubleshoot">Troubleshoot</h2>
+<p><a name="troubleshoot"></a></p>
+<h3 id="enable-debug-mode">Enable Debug Mode</h3>
+<p>For a small group of assets, user can enable debug mode for debugging the model.</p>
+<ol>
+<li>Login Watson Studio, enter the project, click the <code>Assets</code> tab, enter the notebook <code>IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb</code>, click the pencil icon to edit,find the cell <code>healthlib.set_log_level(level='INFO')</code>, change to <code>healthlib.set_log_level(level='DEBUG')</code>.Then save to a latest version.</li>
+<li>Login Health and Predict Utilities application, go to <code>Scoring and DGA settings</code>, enter the related group, click the <code>Recalculate scores</code> to trigger a new analysis.</li>
+<li>After the calculation finishes, go back to Watson Studio, click the <code>Job</code> tab, then click the correspoding job for the score group. </li>
+<li>A new page will open where user can edit the job and or check the job history. Click latest finished job history to check the debug logs. </li>
+</ol>
+<h3 id="run-notebook-directly-for-debugging-purpose">Run Notebook Directly for Debugging Purpose</h3>
+<p>If user want to directly run the notebook to calculate the score for debug purpose instead of the job, user can add some enviroment variables in notebook temporarily.</p>
+<p>1. Login Watson Studio, enter the project, click the <code>Assets</code> tab, enter the notebook <code>IBM-Transformers-Tap-Changers-DGA-4.0.0.ipynb</code>, click the pencil icon to edit. Click plus button to add a new cell on top, and put below <a href="#code_sample">code</a> sample with actual value.</p>
+<p>Here are some code examples for debugging<a name="code_sample"></a>.</p>
+<p>Code example for debugging on a certain score group.</p>
+<pre><code>import os
+os.environ['maximo_context'] = '{&quot;maximoUrl&quot;:&quot;https://&lt;health or manage host&gt;/maximo/&quot;,&quot;maximoApiKey&quot;:&quot;**************&quot;,&quot;expgroupname&quot;:&quot;1003&quot;}'
+</code></pre>
+<p>Code example for debugging on an individule asset.</p>
+<pre><code>import os
+os.environ['maximo_context'] = '{&quot;maximoUrl&quot;:&quot;https://&lt;health or manage host&gt;/maximo/&quot;,&quot;maximoApiKey&quot;:&quot;**************&quot;,&quot;expgroupname&quot;:&quot;1003&quot;,&quot;siteid&quot;:&quot;***&quot;,&quot;assetnum&quot;:&quot;***&quot;}'
+</code></pre>
+<p><img alt="drawing" src="../img/hpu_model_ws_notebook_debug.png" />  </p>
+<p><code>maximoApiKey</code> can be found in Application administration page. Login Health and Predict – Utilities and click the Application administration page, click to the Start Center and in the Go To section, click Administration.On the API Keys tab, search and find maxadmin's apikey.
+<img alt="drawing" src="../img/hpu_model_ws_notebook_apikey_01.png" />  </p>
+<p><img alt="drawing" src="../img/hpu_model_ws_notebook_apikey_02.png" /></p>
+<p><code>expgroupname</code> can be found in score group detail page.
+<img alt="drawing" height="50%" src="../img/hpu_model_ws_notebook_expgroupname.png" width="50%" />  </p>
+<p>For <code>&lt;health or manage host&gt;</code> in <code>maximoUrl</code> can be extracted from health url.
+<img alt="drawing" height="50%" src="../img/hpu_model_ws_notebook_host.png" width="50%" />  </p>
+<p>2. Click <code>Run</code> to run cell by cell or restart the kernel run the whole notebook.
+<img alt="drawing" src="../img/hpu_model_ws_notebook_run.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When debugging in notebook directly, do not save as latest version, since it's hardcoded.  The corresponding job should instead get those inputs from Health during the runtime.</p>
+</div>
+<p>Congratulation you learned about the Substation Transformer Models included with Health and Predict - Utilities (HPU) and create a Score Groups.  You also can now modify, schedule and debug the model notebooks.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup_watson_studio/" class="btn btn-neutral float-left" title="Setup Watson Studio for Predict"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../data_preparation/" class="btn btn-neutral float-right" title="Data Preparation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup_watson_studio/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../data_preparation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

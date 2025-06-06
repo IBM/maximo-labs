@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_interfaces/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>5. Create Interfaces - Monitor Auto AI Hands on Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "5. Create Interfaces";
+        var mkdocs_page_input_path = "create_interfaces.md";
+        var mkdocs_page_url = "/maximo-labs/create_interfaces/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Auto AI Hands on Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Auto AI Hands on Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Auto AI Hands on Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_device_types/">2. Create Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">3. Create Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../send_device_simulated_data/">4. Send Simulated Data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">5. Create Interfaces</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-the-physical-interface">Create the Physical Interface</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-the-logical-interface">Create the Logical Interface</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dashboards/">6. Create Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_model/">7. Identify Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../train_test_save_model_in_monitor/">8. Train Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy_prediction_model_function/">9. Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../update_dashboards/">10. Update Dashboards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Auto AI Hands on Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">5. Create Interfaces</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="create-physical-logical-interfaces">Create Physical &amp; Logical Interfaces</h1>
+<p>IoT device data must be mapped from physical devices that are reading the metrics on assets to a logical interfaces that 
+represent that whole asset or system you will monitor. Physical Interfaces are what are used to save the 
+device data into the Monitor.   Logical Interfaces are what Monitor uses to create asset types and assets 
+with their corresponding metric values. In this exercise you will use Monitor to create:</p>
+<ul>
+<li><a href="#physical">Create the Physical Interface</a></li>
+<li><a href="#logical">Create the Logical Interface</a></li>
+</ul>
+<h2 id="create-the-physical-interface">Create the Physical Interface</h2>
+<p><a name="physcial"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Alternate option for step 5 is to click <code>Use Last Event Cache</code> enter the name of the device ID <code>111137F8</code>. Which ever you 
+have in your data.  <code>pump_co</code> event will appear if you already have the simulator running. This corresponds to the Python 
+device  simulator script you will run in the next exercise. See image for <a href="../img/i3.png">Event cache</a> </p>
+</div>
+<ol>
+<li>
+<p>Still in the Watson IoT Platform, go to the <code>Device Types</code> tab menu, search then select <code>pump_co</code>, 
+<img alt="Interface" src="../img/p2.png" /> </p>
+</li>
+<li>
+<p>Click on the <code>Interface</code> tab menu and click <code>Create Physical Interface</code>button. Enter the name <code>pump_co_pi</code>, Click <code>Next</code>.
+<img alt="Name Interface" src="../img/p1a.png" /></p>
+</li>
+<li>
+<p>Click <code>Create event type</code> button
+<img alt="Create Events" src="../img/p4.png" /></p>
+</li>
+<li>
+<p>If your pump simulator is sending data you can wait for the dialog to fill in with your event data.  Otherwise you can
+set the payload by click on <code>Create event type</code> button.  <img alt="Import" src="../img/p2a.png" /> Add <code>Device Event Type</code> 
+to the  <code>Physical Interface</code> by uploading a json file that contains a payload similar to the one below.  Replace <code>co</code> 
+with your initials for your eventID.</p>
+<p><code>{
+  "EventName": "event",
+  "EventDescription": "Device event",
+  "EventID": "pump_co",
+  "Payload": {
+      "evt_timestamp": "2020-01-19T03:59:53.03Z",
+      "speed": 1124,
+      "head": 54.424,
+      "pump_mode": "a",
+      "flow": 115.934,
+      "voltage": 274,
+      "POWER": 2.664,
+      "CURRENT": 8.69
+  }
+}</code> </p>
+</li>
+<li>
+<p>In the dialog click on <code>Import</code> link  and drag the event_template.json file into the dialog.
+<img alt="Import" src="../img/p2b.png" />  </p>
+</li>
+<li>
+<p>Click the <code>Add</code> button </p>
+</li>
+<li>
+<p>Click the <code>Add Property</code> button.  You must change the <code>type</code> from string to <code>timestamp</code> for the <code>evet_timestamp</code>.  Click <code>Select</code> button.<br />
+<img alt="Event cache" src="../img/i3.png" /></p>
+</li>
+<li>
+<p>click the <code>3 dots</code> on the <code>evet_timestamp</code> row.</p>
+</li>
+<li>
+<p>Click edit <code>pencil icon</code> </p>
+</li>
+<li>
+<p>Click  select box for <code>Event</code> named.
+<img alt="Event cache" src="../img/p6.png" /></p>
+</li>
+<li>
+<p>Click the check box next to <code>evt_timestamp</code> and change the <code>Event</code>,  <code>Data Type</code> to <code>String(Date Time)</code> 
+<img alt="Event metrics" src="../img/p7.png" /></p>
+</li>
+<li>
+<p>Click <code>Done</code>.
+<img alt="Event cache" src="../img/p8.png" /></p>
+</li>
+<li>
+<p>Click <code>Done</code>. Again.
+<img alt="Event cache" src="../img/p9.png" /></p>
+</li>
+</ol>
+<p>You now are able to save the device data that is sent from any device to this Device Type physical interface named
+ <code>pump_co_pi</code>.  Stay on the current page and continue to the next exercise below.  </p>
+<h2 id="create-the-logical-interface">Create the Logical Interface</h2>
+<p><a name="logical"></a></p>
+<p>Logical interfaces allow you to map the metrics from the physical device types into a single Entity Type for Monitor.</p>
+<ol>
+<li>
+<p>Click <code>Create Logical Interface</code> button.
+<img alt="Create Interface" src="../img/p9.png" /></p>
+</li>
+<li>
+<p>Change the default name <code>pump_co_li</code>, click <code>Next</code>.
+<img alt="Name Interface" src="../img/I1.png" /></p>
+</li>
+<li>
+<p>Tick the <code>Allow Additional Properties</code> to <code>ON</code> and then  Click <code>Add Property</code> button. 
+<img alt="Event cache" src="../img/I2.png" /></p>
+</li>
+<li>
+<p>Click the <code>Select</code> button for the <code>evt_timestamp</code>.
+<img alt="Change Timestamp" src="../img/i3.png" /></p>
+</li>
+<li>
+<p>In the dialog <code>Type</code> field, select <code>String (date-time)</code> and click <code>Save</code> button.
+<img alt="Timestamp" src="../img/I4.png" /></p>
+</li>
+<li>
+<p>Click <code>Add Property</code> again for all the remaining metrics leaving the values as is shown below.
+<img alt="evt_timestamp" src="../img/I5.png" />
+<img alt="speed" src="../img/I6.png" />
+<img alt="head" src="../img/I7.png" />
+<img alt="pump_mode" src="../img/I8.png" />
+<img alt="flow" src="../img/I11.png" />
+<img alt="voltage" src="img/I11a.png" />)
+<img alt="POWER" src="img/i11b.png" />)
+<img alt="CURRENT" src="../img/I12.png" /></p>
+</li>
+<li>
+<p>Click <code>Next</code>, click link <code>No event notifications</code> 
+<img alt="Event cache" src="../img/I13.png" /></p>
+</li>
+<li>
+<p>change to <code>All events</code> and click the <code>x</code> to close the dialog box.
+<img alt="Event cache" src="../img/I14.png" /></p>
+</li>
+<li>
+<p>Click <code>Apply</code>, then <code>Done</code>.
+<img alt="Event cache" src="../img/I15.png" /></p>
+</li>
+<li>
+<p>Click <code>Activate</code> twice.
+<img alt="Event cache" src="../img/I16.png" />
+<img alt="Event cache" src="../img/I17.png" /></p>
+</li>
+<li>
+<p>Click <code>Done</code>.
+<img alt="Event cache" src="../img/I18.png" /></p>
+</li>
+</ol>
+<p>You now are able to create dashboards and calculated metrics using the device data that is sent by any device into 
+Monitor.  You must wait upto 10 minutes to start seeing your devices show up in Monitor.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../send_device_simulated_data/" class="btn btn-neutral float-left" title="4. Send Simulated Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_dashboards/" class="btn btn-neutral float-right" title="6. Create Dashboards">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../send_device_simulated_data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_dashboards/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
