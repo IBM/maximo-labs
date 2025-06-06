@@ -30,7 +30,7 @@ Click on the docker command to copy it to the clipboard:
 
 Get back to the prompt and then paste the docker command line from the clipboard.</br>
 Click enter to execute it, and you should see something similar to the following:
-![Start new container](img/deploy_verify_13.png)</br></br>
+![Start new container](img/deploy_verify_13x.png)</br></br>
 
 !!! tip
 	You can see that you successfully have connections to both the simulated Lenze i550 VFD's on ports: 10502 and 20502.</br>
