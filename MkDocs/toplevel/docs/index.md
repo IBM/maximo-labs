@@ -15,6 +15,15 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.1/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.1/setup_simulator)         |
+| <b><font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font></b>                                                               | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
+|                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.1/add_device_1)               |
+|                                                                | [Deploy and verify data inflow](monitor_managed_gw_modbus_9.1/deploy)               |
+|                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.1/add_device_2)          |
+|                                                                | [Deploy and view data in Monitor](monitor_managed_gw_modbus_9.1/re-deploy)           |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/) | [Use the Docker image](monitor_modbus_simulator/docker)          |
 |                                                              | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
 
@@ -256,6 +265,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2025-06-05
+### UPDATED: 2025-06-06
 
 ---

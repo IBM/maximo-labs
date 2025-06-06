@@ -3,7 +3,7 @@
 Here are the pre-requisites for the Maximo Monitor Edge Data Collector exercises.  
 
 !!! attention
-    This lab requires Maximo Monitor 9.0.</br>
+    This lab requires Maximo Monitor 9.1 or later.</br>
     MAS application entitlement must be `Limited` or higher.
 
 # All Exercises
