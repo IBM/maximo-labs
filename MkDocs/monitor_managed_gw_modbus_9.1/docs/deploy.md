@@ -2,7 +2,7 @@
 In this Exercise you will learn how to:
 
 * Deploy the Managed Gateway
-* Verify connectivity and data inflow
+* Verify data inflow
 
 ---
 *Before you begin:*  
@@ -21,10 +21,13 @@ Click on the docker command to copy it to the clipboard:
 ![Deployment Guide](img/deploy_verify_01.png)</br></br>
 
 Open a terminal window (Mac/Linux) or Command window (Windows) where you want to run the Managed Gateway and then paste the docker command line from the clipboard. Click enter to execute it, and you should see something similar to the following:
-![Start EDC edge](img/deploy_verify_02.png)</br>
+![Start EDC edge](img/deploy_verify_02.png)
 
-!!! tip
-	The first time you deploy you might get a response like: `Unable to find image 'icr.io/cpopen/ibm-mas/edgedatacollector:2.5.7' locally`</br>
+!!! tip "Tips"
+	You can see that the Managed Gateway have succesfully established a connection to the Modbus Simulator using the modbus protocol.</br>
+    Secondly you can also see the MQTT connection is established between Managed Gateway and Maximo Monitor</br>
+    
+    The first time you deploy you might get a response like: `Unable to find image 'icr.io/cpopen/ibm-mas/edgedatacollector:2.5.7' locally` </br>
 	Please be patient while the Edge Data Collactor docker container is bering downloaded and started.</br>
 
 

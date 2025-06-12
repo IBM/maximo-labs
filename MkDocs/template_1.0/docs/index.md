@@ -1,4 +1,7 @@
 # Welcome to the IBM Maximo Template Lab<br>(Version: 1.0)
+
+# <font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font>
+
 You will learn about Template's capabilities to:
 
 * One thing
