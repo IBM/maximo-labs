@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/fast_start_loader/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Load Pump Data Into Monitor - Maximo APM V8.8 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Load Pump Data Into Monitor";
+        var mkdocs_page_input_path = "fast_start_loader.md";
+        var mkdocs_page_url = "/maximo-labs/fast_start_loader/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.8 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.8.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Load Pump Data Into Monitor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#upload-and-start-the-fast-start-data-loader-notebook">Upload and Start the Fast Start Data Loader Notebook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-the-notebook">Run the Notebook</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-introduction">Part 1 - Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-install-the-maximo-predict-sdk">Part 2 - Install the Maximo Predict SDK</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-load-the-data-into-dataframes">Part 3 - Load the Data Into Dataframes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-4-add-timeshift-to-make-data-more-recent">Part 4 - Add Timeshift to Make Data More Recent</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-5-clean-up-dataframes">Part 5 - Clean up DataFrames</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-6-delete-existing-data">Part 6 - Delete Existing Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-7-insert-data">Part 7 - Insert Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-8-add-additional-data-optional">Part 8 - Add additional Data (Optional)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#confirm-data-upload-and-prediction-groups">Confirm Data Upload and Prediction Groups</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#error-handling">Error Handling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#update-dateframe-header">Update DateFrame Header</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matrix/">View and config Asset Matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.8 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Load Pump Data Into Monitor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="load-historical-pump-data-into-monitor">Load Historical Pump Data Into Monitor</h1>
+<p>Maximo Predict includes notebook templates that you can use to quickly upload your device data and associate them to newly created assets within Maximo. Out of the box, users are provided with a set of notebooks including multiple different Fast Start Data Loaders. These notebooks vary in what type of data they will be uploading into the Maximo System. In this lab, we will be uploading sensor data for new devices, failure data, and new assets.</p>
+<p>In this exercise you will use Watson Studio, Monitor and Predict to:</p>
+<ol>
+<li><a href="#faststart_notebook">Upload historical Data</a> using the FastStart Loader notebook template. </li>
+<li><a href="#run_notebooks">Run Notebooks</a> to load your device type and device metrics into Monitor and creates Predict groups.</li>
+<li><a href="#confirm_upload">Confirm Monitor Data Upload and Prediction Groups</a></li>
+<li><a href="#error_handling">Error Handling</a> for data column name format</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must complete the previous exercise for <a href="../data_preparation/">Data Preparation and Loading Using Notebooks</a> exercise before you start this exercise.</p>
+</div>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ul>
+<li>Review Predict documentation for the <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850">list of available models</a>.</li>
+<li>Ensure your MAS Predict environment is running and you have access.  Try your server URL that might look something like: <a href="https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info">https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info</a></li>
+</ul>
+<h2 id="upload-and-start-the-fast-start-data-loader-notebook">Upload and Start the Fast Start Data Loader Notebook</h2>
+<ol>
+<li>
+<p>Upload or open the Fast Start Data Loader template notebook to your Project. These instructions will be based off using the 'FastStart2021-New.ipynb' file.  Use the steps from the previous exercise <a href="../setup_watson_studio/">Add Notebook From File to a Watson Studio Project</a>  Rename the notebook template by prepending your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.
+Select the <code>FastStart2021-New.ipynb</code> notebook template that you have renamed with your initials. </p>
+</li>
+<li>
+<p>Open the notebook.  Click on the <code>pencil</code> icon next to your notebook </p>
+</li>
+<li>
+<p>If the notebook fails to start, restart it.  Click on the <code>i</code> icon , <code>Environment</code> tab,  <code>Running status</code> drop down select box and choose <code>Restart</code></p>
+</li>
+</ol>
+<h2 id="run-the-notebook">Run the Notebook</h2>
+<p><a name="run_notebooks"></a></p>
+<h3 id="part-1-introduction">Part 1 - Introduction</h3>
+<ol>
+<li>Run the first cell two cells. These cells are setting up the files required to complete the notebook.</li>
+<li>Read the introduction for details on the notebook and how it fits into the Maximo Predict process. Ensure that your csv files are uploaded in the requested format. Note that the asset metrics csv file needs to have Asset Id, Install Date and Decommission Date, NOT the site ID. </li>
+</ol>
+<h3 id="part-2-install-the-maximo-predict-sdk">Part 2 - Install the Maximo Predict SDK</h3>
+<ol>
+<li>Ensure you have a 'Predict_Envs.json' file uploaded. If one is not provided, follow the instructions in <a href="../setup_watson_studio/">set up Watson Studio</a>under the 'Get URL' section to gather the <code>APM_ID</code>, <code>APM_API_BASE_URL</code>, and <code>APM_API_KEY</code> to create a JSON file containing the credentials and upload to Watson Studio with your initials prepended to the file name.</li>
+<li>Run the cell to open the JSON file. If you have created a JSON file with your initials prepended, update <code>f = open('/project_data/data_asset/Predict_Envs.json,)</code> to include your initials on the file name. See example image.
+<img alt="Environment JSON" src="../img/apm_8.7/hpu_fs1.png" /> </li>
+<li>Run the following two cells to set up variables required for the environment. Note that both should produce an output without errors similar to <code>main.predict.ivt11rel87.ivt.suite.maximo.com</code></li>
+<li>Run the cell to install the pmlib using the pip install command</li>
+<li>Ensure the output runs without errors. (Warnings are Okay) then run the cell to import pmlib into the project</li>
+<li>Run the cell to import the additional required libraries</li>
+<li>Update the following values in the cell with your initials:</li>
+<li>Change <code>newAssetPrefix = 'New_'</code> to <code>newAssetPrefix = '{initials}_'</code></li>
+<li>Change <code>default_device_type = 'Pump_AFM'</code> to <code>default_device_type = '{initials}_Pump_AFM'</code></li>
+<li>Change <code>device_ids_oem = ['PMPDEVICE002', 'PMPDEVICE004', 'PMPDEVICE006', 'PMPDEVICE008', 'PMPDEVICE010']</code> to <code>device_ids_oem = ['{initials}_PMPDEVICE00']</code></li>
+<li>Run the cell and make a note of the resulting output. This will be needed in future notebooks to call your assets.
+<img alt="Cell Updates" src="../img/apm_8.7/hpu_fs3.png" /> </li>
+<li>Run the following cell to store the variables just created</li>
+<li>Run the cell to set the preferred column names for Maximo's system</li>
+</ol>
+<h3 id="part-3-load-the-data-into-dataframes">Part 3 - Load the Data Into Dataframes</h3>
+<ol>
+<li>Update <code>asset_installation_decommission_dates_df = pd.read_csv('/project_data/data_asset/asset_installation_decommission_date_afm.csv')</code> to match the filename for your asset information (containing asset id, installation date and decommission date).</li>
+<li>If your Installation Date column header or your Decommission date column header do not match the values called in this cell (<code>installation_date</code> and <code>decommission_date</code>), update to match your column headers.</li>
+<li>Run the cell to load the asset attributes and ensure the output matches your data. Note that the column headers in the output should match the variables defined in the previous cell.</li>
+<li>Repeat these steps for each csv file being imported for the remainder of part 3.</li>
+<li>Note: Not all of these cells are redefining the column headers. If you get errors down the line, you may need to update the column header in the data frame created here. See <a href="#update_df_headers">Update DateFrame Headers</a>.</li>
+</ol>
+<h3 id="part-4-add-timeshift-to-make-data-more-recent">Part 4 - Add Timeshift to Make Data More Recent</h3>
+<ol>
+<li>Run the first cell to view the current date range of the data.</li>
+<li>Run the second cell to calculate and view the shift in time that will be applied</li>
+<li>Run the third cell to perform the time shift</li>
+<li>Run the fourth cell to view the new range of dates for the sensor dataframe
+<img alt="Timeshift Outputs" src="../img/apm_8.7/hpu_fs4.png" /> </li>
+<li>Repeat these steps for the remainder of part 4 to perform the timeshift on the failure data</li>
+</ol>
+<h3 id="part-5-clean-up-dataframes">Part 5 - Clean up DataFrames</h3>
+<ol>
+<li>Run these two cells to clean up dataframes and reformat to Maximo's standards
+<img alt="Clean up Outputs" src="../img/apm_8.7/hpu_fs5.png" /> </li>
+</ol>
+<h3 id="part-6-delete-existing-data">Part 6 - Delete Existing Data</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is REQUIRED if you are refreshing asset data or uploading new data for an existing asset. If you get errors in this section, you may need to update the column header in the data frame created here. See <a href="#update_df_headers">Update DateFrame Headers</a>.</p>
+</div>
+<ol>
+<li>Run the first four cells to delete data from Maximo to be replaced. Wait five minutes after the final cell to allow for the data to be fully deleted</li>
+<li>Run the next two cells to delete the asset group</li>
+</ol>
+<h3 id="part-7-insert-data">Part 7 - Insert Data</h3>
+<p>The following steps will update the MAS database to include the data from the CSV files.
+1. Run the cell to view the DataFrame to be imported and run the following cell to use the pmlib library to create the assets in the list.
+2. Run the cell to view the assets attributes that will be imported into MAS. Run the following cell to update those values.
+3. Run the cell to view the failure history that will be imported into MAS. Run the following cell to import the failure data.
+4. Run the cell to write the function definitions required to create your asset group. Run the following cell to create teh asset group.
+5. Run the cell to print the asset group name and the asset group id. Take a note of the results as they may be needed in future notebooks.
+<img alt="Asset Group Details" src="../img/apm_8.7/hpu_fs8.png" /> </p>
+<ol>
+<li>Run the following cell to store the notebook results</li>
+<li>
+<p>Set up the IOT Devices.   Update DataFrame columns from <code>[timestamp_col_name, asset_id_col_name, 'VELOCITYX', 'VELOCITYY', 'VELOCITYZ', 'MOTORTEMP', 'WINDINGTEMP', 'CURRENT', 'PRESSURE', 'LOAD', device_id_col_name, device_type_col_name]</code> to match the sensor readings for your asset. For example, the line may now read:
+   <code>sensor_data_afm_df.columns = [asset_id_col_name,timestamp_col_name, 'Current_10', 'Speed_4', 'Frequency_2','Current_12','Current_5', 'Vibration_00', 'Current_11','Vibration_13','Power_6','Vibration_1','Power_9','Speed_26',device_id_col_name, device_type_col_name]</code>
+<img alt="Sensor Columns" src="../img/apm_8.7/hpu_fs9.png" /></p>
+</li>
+<li>
+<p>Run the cell </p>
+</li>
+<li>Click into the next cell </li>
+<li>
+<p>In the menu, go to <code>Insert &gt; Cell Above</code> 
+<img alt="Insert Cell Above" src="../img/apm_8.7/hpu_fs6.png" /></p>
+</li>
+<li>
+<p>In that cell, insert the following code and run:
+<code>features_for_training=list(set(list(sensor_data_afm_df.columns))- set(['asset_id','evt_timestamp','deviceid','devicetype']))
+features_for_training</code></p>
+</li>
+<li>
+<p>Update the value of <code>columns</code> to <code>columns=features_for_training</code>
+<img alt="Sensor Columns" src="../img/apm_8.7/hpu_fs10.png" /></p>
+</li>
+<li>
+<p>Run the cell and ensure there are no errors</p>
+</li>
+<li>Run the following cell to import the asset device mappings</li>
+<li>Continue to part 8 or scroll down to run the final cell to save the results.</li>
+</ol>
+<h3 id="part-8-add-additional-data-optional">Part 8 - Add additional Data (Optional)</h3>
+<p>This portion of the notebook is optional. If there is additional data to be uploaded you can use this section and customize the data being sent to MAS and creating scoring data for your assets. These cells would have to be updated for your data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure you run the final cell with:
+<code>store_json = json.dumps(store)
+project.save_data("fast_execution.json", store_json, overwrite=True)</code></p>
+</div>
+<h2 id="confirm-data-upload-and-prediction-groups">Confirm Data Upload and Prediction Groups</h2>
+<p><a name="confirm_upload"></a></p>
+<p>Confirm that the historical data was uploaded to Monitor.  Confirm that the Prediction group was created and linked to the model notebook template you created.</p>
+<ol>
+<li>Navigate to Predict within your environment</li>
+<li>
+<p>Use the left-hand menu to go into <code>Predict Grouping</code>
+   <img alt="Predict Grouping" src="../img/apm_8.7/hpu_fs11.png" /> </p>
+</li>
+<li>
+<p>Ensure your asset group is available in the list and confirm your asset is available within the group.
+<img alt="Asset Group" src="../img/apm_8.7/hpu_fs12.png" /></p>
+</li>
+<li>
+<p>Navigate to IOT within your environment.  Under <code>devices</code>, search to ensure your <code>device</code> is there
+<img alt="IOT Device" src="../img/apm_8.7/hpu_fs13.png" /></p>
+</li>
+<li>
+<p>Navigate to <code>Device Types</code> and find your device type. Check that your <code>physical</code> and <code>logical interfaces</code> are active.</p>
+</li>
+<li>
+<p>Navigate to Monitor and ensure your devices have data</p>
+</li>
+</ol>
+<h2 id="error-handling">Error Handling</h2>
+<p><a name="error_handling"></a></p>
+<h3 id="update-dateframe-header">Update DateFrame Header</h3>
+<p>If you receive an object attribute error for pandas, with a column header initialized in <a href="#part-2---install-the-maximo-predict-sdk">Part 2</a> step 10 listed similar to:
+<img alt="Error" src="../img/apm_8.7/hpu_fsl_error.png" /> 
+Then follow these steps to replace your dataframe header to resolve this error.
+1. Click into the cell that resulted in an error.</p>
+<ol>
+<li>
+<p>In the menu, go to <code>Insert &gt; Cell Above</code> 
+<img alt="Insert Cell Above" src="../img/apm_8.7/hpu_fs6.png" /> </p>
+</li>
+<li>
+<p>Rename the columns by adding the following code in the cell:
+<code>{DataFrame_to_Change}.rename(columns={'{current_column_header}': site_id_col_name}, inplace=True)</code>
+<code>{DataFrame_to_Change}.head()</code></p>
+</li>
+<li>
+<p>Run the cell. The output should show the new header in the table.  For example: in order to change the <code>failure_data_afm_df</code> column header from <code>'site'</code> to the preferred header:
+ <img alt="Renamed Header" src="../img/apm_8.7/hpu_fs7.png" /> </p>
+</li>
+</ol>
+<p>Congratulations you have loaded historical data and created Predict Groups linking your devices metrics inputs to list of assets and notebook template that will be used to score predictions using Predict with Monitor device data!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../data_dictionary/" class="btn btn-neutral float-left" title="Pump Data Dictionary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../health_score/" class="btn btn-neutral float-right" title="Asset Health Scoring">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../data_dictionary/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../health_score/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_devices/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Create Devices - Monitor Auto AI Hands on Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Create Devices";
+        var mkdocs_page_input_path = "create_devices.md";
+        var mkdocs_page_url = "/maximo-labs/create_devices/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Auto AI Hands on Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Auto AI Hands on Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Auto AI Hands on Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_device_types/">2. Create Device Types</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Create Devices</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-devices_1">Create Devices</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../send_device_simulated_data/">4. Send Simulated Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_interfaces/">5. Create Interfaces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dashboards/">6. Create Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_model/">7. Identify Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../train_test_save_model_in_monitor/">8. Train Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy_prediction_model_function/">9. Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../update_dashboards/">10. Update Dashboards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Auto AI Hands on Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Create Devices</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="create-devices">Create Devices</h1>
+<p>In this exercise you will crete the devices that will store the simulated pump data being sent to Monitor.  <a href="#createdevices">Create two pump Devices</a> 
+named <code>11111096</code> and <code>111137F8</code> for the  Device Type named <code>pump_co</code>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember to replace <code>co</code> in the device type name with your own initials.</p>
+</div>
+<h2 id="create-devices_1">Create Devices</h2>
+<p><a name="createdevices"></a></p>
+<ol>
+<li>
+<p>Stay in the Monitor Watson IoT Platform service, go to the <code>Devices</code> menu 
+<img alt="Add Device" src="../img/c06.png" /></p>
+</li>
+<li>
+<p>Click <code>Add Device</code> <img alt="Add Device" src="../img/c07.png" /> .</p>
+</li>
+<li>
+<p>On the <code>Add Device</code> page, select your just-created <code>pump_co</code> as <code>Device Type</code> and enter <code>11111096</code>in <code>Device ID</code>.   After 
+adding that device you will repeat the following steps for a second device with ID <code>111137F8</code>  Replace <code>co</code> with your 
+initials for the device type you created.  Click <code>Next</code>. <img alt="Next" src="../img/c08.png" /></p>
+</li>
+<li>
+<p>On the <code>Device Information</code> page, leave the <code>Serial Number</code> value blank and enter the Device ID <code>11111096</code>
+and other information you want, click Next. <img alt="Next" src="../img/c09.png" /></p>
+</li>
+<li>
+<p>Depending on the version of IOTP the <code>Groups</code> tab may be present, accept the defaults, click <code>Next</code>. <img alt="Next" src="../img/c10.png" /></p>
+</li>
+<li>
+<p>On the <code>Security</code> page, accept the defaults, click <code>Next</code>. <img alt="Next" src="../img/c10.png" /></p>
+</li>
+<li>
+<p>On the <code>Summary</code> page, accept the defaults, click <code>Finish</code>. <img alt="Next" src="../img/c11.png" /></p>
+</li>
+<li>
+<p>Save the device summary token information.  You will need it later when you connect your simulator to send data.</p>
+<p>```
+Organization ID  your org id
+Device Type pump_co
+Device ID 111137F8
+Authentication Method use-token-auth
+Authentication Token  your token</p>
+<p>Organization ID your org id
+Device Type pump_co
+Device ID 11111096
+Authentication Method use-token-auth
+Authentication Token your token
+<code>``
+9.  Click</code>Back<code>and repeat above steps 1. to 6. for 1 more Pump with</code>Device ID<code>=</code>111137F8`. </p>
+</li>
+<li>
+<p>On <code>Devices</code>, Click <code>Browse</code> tab menu.  Click the funnel icon.  Enter <code>pump_co</code> in the Search field for <code>Device Type</code>,
+and you will now see your 2 pump <code>Devices</code> for <code>pump_co</code>  <img alt="Summary" src="../img/c14.png" />.</p>
+</li>
+<li>
+<p>You have now created the required <code>pump_co</code> Device Type and the 2 pump devices <code>11111096</code> <img alt="Back" src="../img/c12.png" /> 
+and <code>111137F8</code> <img alt="Browse" src="../img/c13.png" />  we will use 
+in this lab.</p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_device_types/" class="btn btn-neutral float-left" title="2. Create Device Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../send_device_simulated_data/" class="btn btn-neutral float-right" title="4. Send Simulated Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_device_types/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../send_device_simulated_data/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
