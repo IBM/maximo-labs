@@ -1,6 +1,6 @@
 # Pre-Requisite Instructions
 
-Here are the pre-requisites for the Maximo Monitor Edge Data Collector exercises.  
+Here are the pre-requisites for this Maximo hands-on lab.  
 
 !!! attention
     This lab requires Maximo Monitor 9.1 or later.</br>
@@ -13,9 +13,8 @@ All Exercises require that you have:
 1.  A computer with a Chrome or Firefox browser and internet connectivity.
 
 2.  User access to a Maximo Application Suite environment that can create a managed gateways in Monitor. This require:</br>
-o Your user must have access to Monitor and the IoT Tool</br>
+o Your user must have access to Maximo Monitor</br>
 o Your user must have administrator access to Maximo Application Suite.</br>
-Your Exercise facilitator should have provided you with the information on your access.
 
 3.  An IBM ID.  If you don't have an IBM ID you can get one [here](https://www.ibm.com/account/reg/signup?){target=_blank}:<br>
 o Click `Login to MY IBM` button<br>

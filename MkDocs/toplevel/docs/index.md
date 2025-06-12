@@ -1,7 +1,7 @@
 # Welcome to the IBM Maximo Labs
 
 In these hands-on labs you will learn how to get started with the different products that are available in the IBM Maximo 
-portfolio.  The labs are in different states of readiness for use shown below. Feel free to [open issues](https://github.com/IBM/monitor-hands-on-lab/issues/new) and provide us feedback.
+portfolio.  The labs are in different states of readiness for use shown below. Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_blank} and provide us feedback.
 
 !!! tip
     Using the Search capability in the upper left corner to help you find topics quicker in the labs.
@@ -16,11 +16,11 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.1/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.1/setup_simulator)         |
-| <b><font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font></b>                                                               | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
+|                                                                | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
 |                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.1/add_device_1)               |
 |                                                                | [Deploy and verify data inflow](monitor_managed_gw_modbus_9.1/deploy)               |
 |                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.1/add_device_2)          |
-|                                                                | [Deploy and view data in Monitor](monitor_managed_gw_modbus_9.1/re-deploy)           |
+|                                                                | [Deploy and view data in a dashboard](monitor_managed_gw_modbus_9.1/re-deploy)           |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -265,6 +265,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2025-06-06
+### UPDATED: 2025-06-12
 
 ---

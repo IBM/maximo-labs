@@ -14,7 +14,7 @@ This Exercise requires that you have:
 The simulator in this exercice is using the dynamic multi-platform Modbus simulator which you can install by following this lab:</br>
 [IBM Maximo Monitor Modbus Simulator Lab](../../monitor_modbus_simulator){target=_blank}
 
-You need the IP address of the machine where you run the simulator no matter which version you are using. You will need that later.
+You need the IP address of the machine where you run the simulator no matter which version you are using. You will need that later when configuring the Managed Gateway.
 
 #### Get IP Adddress on macOS
 
@@ -23,11 +23,13 @@ Use the following command:
 ifconfig en0
 ````
 
-![Get IP Address](img/setup_01.png)</br>
+![Get IP Address](img/setup_01.png)
 
 !!! tip
     Use `ifconfig` without any paramter if you don't see the above screen</br>
     and then search for a similar IP Address among the other interfaces.
+
+</br>
 
 #### Get IP Adddress on LINUX
 
@@ -36,7 +38,7 @@ Use the following command:
 hostname -I
 ````
 
-![Get IP Address](img/setup_03.png)</br>
+![Get IP Address](img/setup_03.png)</br></br>
 
 #### Get IP Adddress on Windows
 

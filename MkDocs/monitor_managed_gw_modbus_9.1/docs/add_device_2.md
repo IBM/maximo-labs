@@ -28,11 +28,12 @@ Select your Managed Gateway in the second dropdown:</br>
 ![Gateway selected](img/add_device_24.png)</br></br>
 
 You should now see your gateway type and name. Click on `Continue`:</br>
-![Select Modbus TCP](img/add_device_25.png)</br>
+![Select Modbus TCP](img/add_device_25.png)
 
 !!! note
-    Adding a new device and adding it to a Managed Gateway is handled as a natural part of the flow. That means only managed gateways types are shown in the first dropdown and only instances of the selected managed gateway type in the second dropdown box.
+    Adding a new device and adding it to a Managed Gateway is handled as a natural part of the flow. That means only managed gateway types are shown in the first dropdown and only instances of the selected managed gateway type in the second dropdown box.
 
+</br>
 Find and select the Lenze i550 device and click `Next`.</br>
 Select the `Modbus TCP` protocol.</br>
 Use the IP address of the simulator using port 20502, like `192.168.1.64:20502`.</br>
@@ -41,13 +42,14 @@ Click on `Next`;</br>
 
 Define the Device ID as `XX_Lenze_i550_02` where you replace XX with your initials.</br>
 Click `Next`:</br>
-![Configure Device ID](img/add_device_27.png)</br></br>
+![Configure Device ID](img/add_device_27.png)
 
 !!! tip 
     The Device type has already been selected, as the flow knows that the new device is added based on the Device type.</br>
 
+</br>
 Define the Data frequency to 60000 (60 seconds).</br>
-Select the 9 Standard metrics, that was also selected for the first device.</br>
+Select all the Standard Metrics and one additional Synthesised Metric, which was also selected for the first device.</br>
 Click `Save`:</br>
 ![Configure Device type](img/add_device_28.png)</br></br>
 

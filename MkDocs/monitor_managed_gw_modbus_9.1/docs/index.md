@@ -1,8 +1,6 @@
-# Welcome to the </br>Maximo Monitor Managed Gateway Modbus Lab
+# Welcome to the Maximo Monitor 9.1 </br>Managed Gateway Modbus Lab
 
-# <font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font>
-
-In this lab you will learn about how to setup a Managed Gateway within Maximo Monitor 9.1 and adding a couple of OT devices from the Device Library.
+In this lab you will learn how to setup a Managed Gateway within Maximo Monitor 9.1 and adding a couple of OT devices from the Device Library.
 
 You will learn the steps needed to successfully setup a Managed Gateway using some virtual simulated Variable Frequency Drives (VFD) that will deliver the device data over Modbus/TCP via the Managed Gateway into Maximo Monitor using the pre-configured connector for Lenze i550 VFD from the Device Connector Library.</br></br>
 
@@ -23,6 +21,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2025-06-06**
+**Updated: 2025-06-12**
 
 ---
