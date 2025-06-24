@@ -12,6 +12,13 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 [IMPORTANT HIDDEN COMMENT: Do not alter the header line of the below tables as they use the space accessible, but copy it to new tables when they are created]::
 
 ### Maximo Application Suite 9.1 
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
+| <b><font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font></b> | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
+|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |
+|                                                                | [Deploy and verify connectivity](monitor_managed_gw_opcua_9.1/deploy)               |
+
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -24,8 +31,8 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/) | [Use the Docker image](monitor_modbus_simulator/docker)          |
-|                                                              | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
+| [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/)   | [Use the Docker image](monitor_modbus_simulator/docker)          |
+|                                                                | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
 
 
 ### Maximo Application Suite 9.0 
@@ -265,6 +272,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2025-06-12
+### UPDATED: 2025-06-24
 
 ---

@@ -18,8 +18,9 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2025-06-24|Jan Ekstrøm    |Added the DRAFT version of [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.1/) for MAS 9.1. |
 |2025-06-12|Jan Ekstrøm    |Added the first version of [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.1/) for MAS 9.1. |
-|2025-06-05|Jan Ekstrøm    |Created a new MAS 9.1 Section and moved the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to that section.                          |
+|2025-06-05|Jan Ekstrøm    |Created a new MAS 9.1 Section and moved the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to that section.|
 |2025-05-30|Jan Ekstrøm    |Updated the [MAS TechZone Base Certified Image lab](../mas_techzone_base/) to show current TechZone screens and processes.  |
 |2025-04-02|Jan Ekstrøm    |Added 'Copy to clipboard' for commands for several 9.0 Maximo Labs                      |
 |2025-01-15|Carlos Ferreira|Added first draft of the [MAS 9.0 Overview lab](../mas_9.0/).                           |
