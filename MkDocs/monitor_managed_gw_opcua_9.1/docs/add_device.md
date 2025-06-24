@@ -12,10 +12,10 @@ This Exercise requires that you have:
 
 Since PLC's are very customizable you will need to add a new device to the Device library instead of using a pre-configured device in the Device library, like a Variable frequency Drive communicating over Modbus.</br>
 
-Navigate to the Device library setup page:</br>
+Navigate to the Device library page:</br>
 ![Navigate to Device library](img/add_device_01.png)</br></br>
 
-For OPC UA devices it is possible to either upload a device configuration or to use the built-in data tag autodetection functionality which is a lot easier.</br>
+For OPC UA devices it is possible to either upload a device configuration or to use the built-in data tag auto-detection functionality which is a lot easier.</br>
 Select `Add device to library` and the menu item `Scan for devices`:</br>
 ![Scan for devices](img/add_device_02.png)</br></br>
 

@@ -1,6 +1,6 @@
 # Pre-Requisite Instructions
 
-Here are the pre-requisites for the Maximo Monitor Edge Data Collector exercises.  
+Here are the pre-requisites for this Maximo hands-on lab.   
 
 !!! attention
     This lab requires Maximo Monitor 9.1 or later.</br>

@@ -1,7 +1,7 @@
 # Welcome to the Maximo Monitor 9.1</br>Managed Gateway OPC UA Lab
 
-<b><font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font></b>
-
+!!! info
+    This Maximo Monitor lab demonstrates the use of a custom device from the Device library.
 
 In this lab you will learn the steps needed to successfully use an OPC UA simulator to act as a Siemens S7 PLC and get the data from the Siemens S7 into Maximo Monitor using a Managed Gateway. .</br></br>
 
