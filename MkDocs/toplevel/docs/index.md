@@ -17,7 +17,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
 | <b><font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font></b> | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
 |                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |
-|                                                                | [Deploy and verify connectivity](monitor_managed_gw_opcua_9.1/deploy)               |
+|                                                                | [Deploy and verify data inflow](monitor_managed_gw_opcua_9.1/deploy)               |
 
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
