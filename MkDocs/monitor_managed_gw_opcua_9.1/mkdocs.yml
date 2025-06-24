@@ -13,7 +13,7 @@ nav:
         - 1. Setup Simulator Environment: setup_simulator.md
         - 2. Add device to Device library: add_device.md
         - 3. Create a Managed Gateway: create_gateway.md
-        - 4. Deploy and verify connectivity: deploy.md
+        - 4. Deploy and verify data inflow: deploy.md
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright
