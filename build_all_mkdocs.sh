@@ -203,14 +203,6 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Monitor Managed Gatewway OPC-UA 9.0 level:
-lab=monitor_managed_gw_opcua_9.0
-echo "==================================================================================="
-echo "BUILD_INFO - The $lab lab is being build"
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
-
 # Build the MAS TechZone Base Certified Image level:
 lab=mas_techzone_base
 echo "==================================================================================="
@@ -237,6 +229,14 @@ echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Ma
 
 # Build the Monitor Managed Gatewway Modbus 9.0 level:
 lab=monitor_managed_gw_modbus_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Managed Gatewway OPC-UA 9.0 level:
+lab=monitor_managed_gw_opcua_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
