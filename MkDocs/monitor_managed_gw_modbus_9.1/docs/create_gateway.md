@@ -32,7 +32,7 @@ Make sure the gateway Configuration is Managed and click `Save`:
 ![Create Gateway](img/create_gateway_04.png)</br></br>
 
 You will now see your new Managed Gateway, including a `Managed` tag in both the list of Gateways as well as in the gateway definition:
-![Create Gateway](img/create_gateway_05.png)
+![Create Gateway](img/create_gateway_05.png)</br>
 
 !!! note
     Credentials are automatically "baked into" the docker image for the Managed Gateway.</br>
