@@ -1,5 +1,5 @@
 # Objectives
-In this Exercise you will learn how to create the Managed Gateway in Monitor.
+In this Exercise you will learn how to create the Managed Gateway in Monitor and add the new device you've added to the Device library.
 
 ---
 *Before you begin:*  
@@ -16,12 +16,12 @@ Login to MAS and navigate to Monitor:
 ![MAS Monitor](img/create_gateway_01.png)</br></br>
 
 Expand Setup in the left menu and select Gateways:
-![Create Gateway](img/create_gateway_02.png)</br></br>
+![Create Gateway](img/create_gateway_02.png)</br>
 
-!!! note "New in MAS 9.0"
-    Gateways can now be created and managed in the Monitor UI.</br>
+!!! note "New in MAS 9.1"
+    Monitor no longer have a main home page. All interaction with Monitor is initiated from the Monitor section in the left menu</br>
 
-
+</br>
 Select `Add gateway`:
 ![Create Gateway](img/create_gateway_03.png)</br></br>
 
@@ -38,12 +38,11 @@ Make sure the gateway Configuration is Managed and click `Save`:
     It is an integrated flow in Monitor, which removes/replaces the tedious and error prone manual process of defining an Edge Data Collector Integration in prior versions.</br>
 
 You will now see your new Managed Gateway, including a `Managed` tag in both the list of Gateways as well as in the gateway definition:
-![Create Gateway](img/create_gateway_05.png)</br></br>
+![Create Gateway](img/create_gateway_05.png)</br>
 
-!!! note "New in MAS 9.0"
+!!! note
     Credentials are automatically "baked into" the docker image for the Managed Gateway.</br>
-    This means you no longer have to write down the credentials for this type of gateway and then enter that information manually into the configuration of the Maximo Monitor End-point. This is much more streamlined and eliminate the risk of error when manually entering the credentials.</br>
-    It also means that the credentials will not be presented to you, as you no longer need them.</br>
+    This means that the credentials will not be presented to you, as with the other gateway configuration types.</br>
 
 </br>
 
@@ -62,7 +61,7 @@ Search for Siemens in the Manufacturer list:</br>
 Then search for S7 devices in the long list of Siemens devices - select you newly added device under `S7 OPC-UA Server`, and click `Next`:</br>
 ![Add device](img/create_gateway_09.png)</br></br>
 
-Add the OPC UA server IP Address and Port, and click `Next`:</br>
+Add the OPC UA Server IP Address and Port, and click `Next`:</br>
 ![Add device](img/create_gateway_10.png)</br></br>
 
 Define the Device type and Device ID (using your initials instead of XX), and click `Next`:</br>

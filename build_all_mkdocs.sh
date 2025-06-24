@@ -25,7 +25,7 @@ echo "BUILD_INFO - The top level of IBM Maximo Labs is build."
 : '
 How to comment out a blog to lower build time during development. 
 Look at the character used above and belove these two lines of text.
-'
+
 
 # Build the Monitor SaaS level:
 lab=monitor_saas
@@ -194,7 +194,7 @@ echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
-
+'
 # Build the Monitor Managed Gatewway Modbus 9.0 level:
 lab=monitor_managed_gw_modbus_9.0
 echo "==================================================================================="

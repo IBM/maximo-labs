@@ -23,8 +23,16 @@ Select the OPC-UA protocol:</br>
 ![Scan for devices](img/add_device_03.png)</br></br>
 
 Enter the device details and scroll down:</br>
-![Scan for devices](img/add_device_04.png)</br></br>
+![Scan for devices](img/add_device_04.png)</br>
+!!! tip
+    XX in the Device name should be your initials in case other people are following this lab in the same Maximo Application Suite environment.
 
+!!! attention
+    If you see a `BadTcpEndpointUrlInvalid` error when you execute the docker command in a few steps, </br>
+    then you might need to end the `Server IP address or domain` with a forward slash, like `127.0.0.1:50000/`
+
+
+</br>
 Copy the Device scan command and don't click `Done` just yet:</br>
 ![Scan for devices](img/add_device_05.png)</br>
 
