@@ -12,10 +12,10 @@ This Exercise requires that you have:
 
 #### Add a Managed Gateway
 
-Login to MAS and navigate to Monitor:
+Login to MAS and navigate to Monitor (if not alrady done):
 ![MAS Monitor](img/create_gateway_01.png)</br></br>
 
-Expand Setup in the left menu and select Gateways:
+Expand Monitor | Setup section in the left menu and select Gateways:
 ![Create Gateway](img/create_gateway_02.png)</br>
 
 !!! note "New in MAS 9.1"
@@ -66,7 +66,7 @@ Define the Device type and Device ID (using your initials instead of XX), and cl
 Set the Data frequency to 30000 ms (30 seconds) and select the following 7 data tags to be used as metrics in Monitor. Once done click `Save`:</br>
 ![Add device](img/create_gateway_12.png)</br></br>
 
-You will now see your new added device being a part of your new Managed gateway:</br>
+You will now see your new added device being a part of your new Managed Gateway:</br>
 ![Add device](img/create_gateway_13.png)</br></br>
 
 

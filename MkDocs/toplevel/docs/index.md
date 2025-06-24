@@ -15,7 +15,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
-| <b><font color="red">THIS LAB IS UNDER CONSTRUCTION !!</font></b> | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
+| <i>Custom device from Device library</i>                       | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
 |                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |
 |                                                                | [Deploy and verify data inflow](monitor_managed_gw_opcua_9.1/deploy)               |
 
@@ -23,7 +23,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.1/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.1/setup_simulator)         |
-|                                                                | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
+| <i>Standard device from Device library</i>                     | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
 |                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.1/add_device_1)               |
 |                                                                | [Deploy and verify data inflow](monitor_managed_gw_modbus_9.1/deploy)               |
 |                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.1/add_device_2)          |
