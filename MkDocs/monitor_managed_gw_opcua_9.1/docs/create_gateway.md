@@ -33,10 +33,6 @@ Define the gateway ID `XX_MGT_GW_01` and the gateway Type `XX_MGT_GW`.</br>
 Make sure the gateway Configuration is Managed and click `Save`:
 ![Create Gateway](img/create_gateway_04.png)</br></br>
 
-!!! note "New in MAS 9.0"
-    The Managed Gateway is a new type of gateway introduced in MAS Monitor 9.0.</br>
-    It is an integrated flow in Monitor, which removes/replaces the tedious and error prone manual process of defining an Edge Data Collector Integration in prior versions.</br>
-
 You will now see your new Managed Gateway, including a `Managed` tag in both the list of Gateways as well as in the gateway definition:
 ![Create Gateway](img/create_gateway_05.png)</br>
 
