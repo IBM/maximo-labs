@@ -9,5 +9,5 @@ Access the published doc here: [https://ibm.github.io/maximo-labs/](https://ibm.
 Find the description on how to contribute here: [https://ibm.github.io/maximo-labs/contribute/](https://ibm.github.io/maximo-labs/contribute/)
 
 
-`All chnages to the main branch must go through a Pull Request. 
+`All changes to the main branch must go through a Pull Request. </br>
 Only repository administrators can approve Pull Requests and enable merge to the main branch.`
