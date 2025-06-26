@@ -7,3 +7,6 @@ Access the published doc here: [https://ibm.github.io/maximo-labs/](https://ibm.
 
 
 Find the description on how to contribute here: [https://ibm.github.io/maximo-labs/contribute/](https://ibm.github.io/maximo-labs/contribute/)
+
+
+`A test comment`
