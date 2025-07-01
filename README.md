@@ -11,4 +11,4 @@ Find the description on how to contribute here: [https://ibm.github.io/maximo-la
 
 ## NOTICE
 All changes to the main branch must go through a Pull Request. </br>
-Only repository administrators can approve Pull Requests and enable merge to the main branch.
+Only repository administrators can approve Pull Requests and enable merging to the main branch.
