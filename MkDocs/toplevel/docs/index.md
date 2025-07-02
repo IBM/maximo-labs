@@ -14,10 +14,10 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ### Maximo Application Suite 9.1 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Alerts Setup](monitor_managed_alerts_9.1/) | [Setup Alerts on the Device type](monitor_managed_gw_opcua_9.1/setup_simulator) |
-|                                                              | [View alerts on Device, Asset and higher hierarchy nodes](monitor_managed_gw_opcua_9.1/add_device)                  |
-|                                                                | [Create a Service Request based on an alert](monitor_managed_gw_opcua_9.1/create_gateway)             |
-|                                                                | [Follow the link to view the SR in Manage](monitor_managed_gw_opcua_9.1/deploy)               |
+| [Maximo Monitor Alerts Setup](monitor_managed_alerts_9.1/) | [Setup alerts at device type](monitor_managed_alerts_9.1/setup_alert) |
+|                                                              | [View alerts at device/device type](monitor_managed_alerts_9.1/view_alert)                  |
+|                                                                | [Setup alerts at different Hierarchy level](monitor_managed_alerts_9.1/hierarchyAlerts)             |
+|                                                                | [Create service request based on an alert](monitor_managed_alerts_9.1/servicerequest)               |
 
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|

@@ -19,9 +19,9 @@ Navigate to the Device type Dashboard view from the left sidebar.
 ![setup alert](img/ha17.png)</br>
 Search for the device type and click on it to open the details.
 ![setup alert](img/ha18.png)</br>
-You will see the Alerts Dashboard, where the Alert Table displays all alerts related to the device type and its associated devices. You can click on the Source link to navigate directly to the device that triggered the alert.
+You will see the Alerts Dashboard as below.
 ![setup alert](img/ha19.png)</br>
-
+Alert Table displays all alerts related to the device type and its associated devices. You can click on the Source link to navigate directly to the device that triggered the alert.
 
 ### Custom Dashboard
 
