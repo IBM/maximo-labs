@@ -34,6 +34,14 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/)   | [Use the Docker image](monitor_modbus_simulator/docker)          |
 |                                                                | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
 
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Monitor Managed Cisco Webex Integration Lab](monitor_managed_cisco_webex_integration_9.1/) | [Overview and purpose of using Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/overview) |
+|                                                                | [Integrate Cisco Webex device in MAS Monitor](monitor_managed_cisco_webex_integration_9.1/create_integration)                  |
+|                                                                | [Subscribe to a Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/add_device)             |
+|                                                                | [Assign Cisco Webex device to a location](monitor_managed_cisco_webex_integration_9.1/assign_location)               |
+|                                                                | [Unsubscribe Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/unsubscribe_device)               |
+|                                                                | [Delete Cisco Webex configuration](monitor_managed_cisco_webex_integration_9.1/delete_integartion)               |
 
 ### Maximo Application Suite 9.0 
 
