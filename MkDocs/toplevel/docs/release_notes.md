@@ -18,7 +18,6 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
-|2025-06-26|Vivek Domadiya |Added the initial version of [Maximo Monitor Meter/Metric Mapping lab](../monitor_meter_metric_mapping_9.1/) for MAS 9.1. |
 |2025-06-24|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.1/) for MAS 9.1. |
 |2025-06-12|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.1/) for MAS 9.1. |
 |2025-06-05|Jan Ekstrøm    |Created a new MAS 9.1 Section and moved the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to that section.|

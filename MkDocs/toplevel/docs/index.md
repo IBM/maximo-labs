@@ -34,14 +34,6 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/)   | [Use the Docker image](monitor_modbus_simulator/docker)          |
 |                                                                | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
 
-| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Meter/Metric Mapping](monitor_meter_metric_mapping_9.1/)   | [Setup meter/metric mappings](monitor_meter_metric_mapping_9.1/setup)          |
-|                                                                | [View meter data in the Manage UI](monitor_meter_metric_mapping_9.1/view_meter_data/)     |
-|                                                                | [Toggle sync enable/disable](monitor_meter_metric_mapping_9.1/toggle_sync)     |
-|                                                                | [Edit Meter/Metrics Mappings](monitor_meter_metric_mapping_9.1/edit)     |
-|                                                                | [Delete Meter/Metrics Mappings](monitor_meter_metric_mapping_9.1/delete)     |
-
 
 ### Maximo Application Suite 9.0 
 
