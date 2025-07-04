@@ -1,0 +1,39 @@
+site_name: Monitor Managed Cisco Webex Integration Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Rishi Kant
+site_description: "Monitor Managed Cisco Webex Integration Lab"
+site_dir: ../../site/monitor_managed_cisco_webex_integration_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Managed Cisco Webex Integration Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Overview and purpose of using Cisco Webex device: overview.md
+        - 2. Integrate Cisco Webex device in MAS Monitor: create_integration.md
+        - 3. Subscribe to a Cisco Webex device: add_device.md
+        - 4. Assign Cisco Webex device to a location: assign_location.md
+        - 5. Unsubscribe Cisco Webex device: unsubscribe_device.md
+        - 6. Delete Cisco Webex configuration: delete_integartion.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition

@@ -11,6 +11,7 @@
 - Eric Lowry - <elowry@us.ibm.com>
 - Graeme Pexton - <jgpexton@us.ibm.com>
 - Lan Cao - <caolan@cn.ibm.com>
+- Rishi Kant - <Rishi.Kant@ibm.com>
 
 ---
 
@@ -18,6 +19,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2025-07-01|Rishi Kant    |Added the initial version of [Monitor Managed Cisco Webex Integration Lab](../monitor_managed_cisco_webex_integration_9.1/) for MAS 9.1. |
 |2025-06-24|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.1/) for MAS 9.1. |
 |2025-06-12|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.1/) for MAS 9.1. |
 |2025-06-05|Jan Ekstrøm    |Created a new MAS 9.1 Section and moved the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to that section.|
