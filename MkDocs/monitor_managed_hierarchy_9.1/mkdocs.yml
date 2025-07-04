@@ -14,8 +14,8 @@ nav:
     - 1. Create Organization: create_organization.md
     - 2. Activate Organization: activate_organization.md
     - 3. Create Site: create_site.md
-    - 4. Create System: create_system.md
-    - 5. Create Location: create_location.md
+    - 4. Create Location: create_location.md
+    - 5. Create System: create_system.md
     - 6. Create Asset and Assign Location: create_asset.md
     - 7. Create Device-Type & Device in Monitor: create_devicetype.md
     - 8. Hierarchy View: hierarchy_view.md
