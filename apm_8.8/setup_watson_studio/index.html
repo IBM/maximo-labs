@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_watson_studio/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Setup Watson Studio for Predict - Maximo APM V8.8 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup Watson Studio for Predict";
+        var mkdocs_page_input_path = "setup_watson_studio.md";
+        var mkdocs_page_url = "/maximo-labs/setup_watson_studio/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.8 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.8.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Setup Watson Studio for Predict</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#get-url-and-user-credentials-to-access-watson-studio">Get URL and User credentials to access Watson Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-project-in-watson-studio">Create a Project in Watson Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-database-connection-in-watson-studio">Setup Database Connection in Watson Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-url-to-download-the-health-and-predict-and-utilities-notebooks">Get URL to Download the Health and Predict and Utilities Notebooks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#get-mxepmiid-value-used-for-apm_id">Get mxe.PMIId value used for APM_ID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-predictapi-endpoint-used-for-apm_api_baseurl">Get PREDICTAPI endpoint used for APM_API_BASEURL</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-root-location-for-the-external_apm_api_baseurl">Get root location for the EXTERNAL_APM_API_BASEURL</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-apm_api_key">Get APM_API_KEY</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-the-model-template-notebooks">Download the model template notebooks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#set-up-an-environment-to-train-and-test-your-models-in-watson-studio">Set up an Environment to train and test your models in Watson Studio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-notebook-from-file-to-a-watson-studio-project">Add Notebook From File to a Watson Studio Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#to-stop-and-restart-a-notebook-template-in-a-watson-studio-project">To Stop and Restart a Notebook Template in a Watson Studio Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-predict-pmlib-python-library-documentation">Download Predict pmlib Python Library Documentation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-environment-variables-for-predict-in-notebook-templates">Setup Environment Variables for Predict in Notebook Templates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pip-install-pmlib-predict-in-notebook-templates">PIP Install PMLib Predict in Notebook Templates</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-watson-studio-library">Using Watson Studio Library</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../matrix/">View and config Asset Matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.8 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Setup Watson Studio for Predict</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="setup-watson-studio">Setup Watson Studio</h1>
+<p>In this exercise you will setup and configure Watson Studio to use the Health and Predict notebook templates.  The templates can be used for detecting anomalies and predicting asset failures of assets and for other purposes using Health and Predict - Utilities.</p>
+<ul>
+<li><a href="#get-credentials">Get URL and User credentials</a> to access Watson Studio.</li>
+<li><a href="#create-project">Create a project</a> and add the setup notebook to your project in Watson Studio.</li>
+<li><a href="#db-connection">Setup Database Connection</a> to allow Watson Studio to access DB.</li>
+<li><a href="#download_URL">Get URL to Download the Healh and Predict Notebooks</a>.</li>
+<li><a href="#create-environemnt-studio">Create am environment </a>to edit and run your notebooks.</li>
+<li><a href="#add-notebook-to-studio">Add Notebook From File</a> to Watson Studio Project.</li>
+<li><a href="#download-pmlib-doc">Download the Predict pmlib Python Library Documentation</a> used for working with Predict algorithms and automating device and data tasks in Monitor.</li>
+</ul>
+<h2 id="get-url-and-user-credentials-to-access-watson-studio">Get URL and User credentials to access Watson Studio</h2>
+<p><a name="get-credentials"></a></p>
+<p>Ask your Maximo Application Suite administrator to get your user name and password for Watson Studio,
+API keys and URL that you will use to connect to Watson Studio.  You or he can use these steps to get them.</p>
+<ol>
+<li>
+<p>To get the Watson Studio URL, login to Maximo Application Suite.  Click on <code>Adminstration</code>
+<img alt="setup assets" src="../img/apm_8.7/p01.png" /> </p>
+</li>
+<li>
+<p>Click on <code>Configurations</code> and <code>Watson Studio</code>
+<img alt="setup assets" src="../img/apm_8.7/p02.png" /> </p>
+</li>
+<li>
+<p>Click on <code>System</code>  After you create the Watson Studio User be sure to make note of the URL, user name and password.  You will use it to login to Cloud Pak for Data later with it. 
+<img alt="setup assets" src="../img/apm_8.7/p03.png" /></p>
+</li>
+<li>
+<p>Open a browser to the URL and use the credentials from the previous steps to login to Cloud Pak for Data.  After logging in you see your Watson Studio Overview page.
+<img alt="setup assets" src="../img/apm_8.7/p04.png" /> </p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure Datascience User Belongs to Predict Security Group.   In Maximo Manage, add the user to the PREDICT and PREDICTGROUPING group in the user definition as shown in the screen below.</p>
+</div>
+<p><img alt="Security Groups" src="../img/apm_8.7/p15.png" /> </p>
+<h2 id="create-a-project-in-watson-studio">Create a Project in Watson Studio</h2>
+<p><a name="create-project"></a></p>
+<p>Watson Studio projects are where you:
+- Keep your model templates
+- Data Assets
+- Train deploy and many the Models
+- Create and manage environment for training and deploying your models.</p>
+<p>Create a project so that you can add and setup Health, Predict and Utilities notebooks using Watson Studio.</p>
+<ol>
+<li>
+<p>Click on 'All Projects' where you will then create a new project.
+<img alt="setup assets" src="../img/apm_8.7/p05.png" /> </p>
+</li>
+<li>
+<p>Click 'New Project'. 
+<img alt="New Project" src="../img/apm_8.7/p06.png" /> </p>
+</li>
+<li>
+<p>Accept default and click 'Next'. 
+<img alt="Default Value" src="../img/apm_8.7/p07.png" /> </p>
+</li>
+<li>
+<p>Click 'New Empty Project'. 
+<img alt="New Empty Project" src="../img/apm_8.7/p08.png" /></p>
+</li>
+<li>
+<p>Enter a project name and description.
+<img alt="setup assets" src="../img/apm_8.7/p09.png" /> </p>
+</li>
+<li>
+<p>Click <code>Add to Project</code>.
+<img alt="setup assets" src="../img/apm_8.7/p10.png" /> </p>
+</li>
+</ol>
+<p>This is how you will add the Predict notebook templates to your project that you download later in this exercise.</p>
+<h2 id="setup-database-connection-in-watson-studio">Setup Database Connection in Watson Studio</h2>
+<p><a name="db-connection"></a></p>
+<p>Setup database security to allow Watson Studio to access the Maximo Application Suite databases.   </p>
+<ol>
+<li>
+<p>Follow the instructions in the documentation to download the database security certificate file  <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=started-getting-application-administrators#concept_ir4_mc2_jmb__db2cert">Database PEM file</a> If your database was deployed within CP4D use the directions below.</p>
+</li>
+<li>
+<p>Open a separate browser window and login to Cloud Pak For Data Console to get the database pem file.  Click on the <code>Hamburger</code> menu, <code>Instances</code> Select the database name used by Maximo Monitor.  The database name should include <code>IOT</code> in the name. 
+<img alt="Database instance" src="../img/apm_8.7/p20.png" /> </p>
+</li>
+<li>
+<p>Click on <code>Console</code> to download  the database pem file.  If you receive an error saying the console hasn't been provisioned ask your IT Administrator to install it.
+<img alt="Console" src="../img/apm_8.7/p21.png" /> </p>
+</li>
+<li>
+<p>Click on the <code>Download SSL Certificate</code>
+<img alt="Download" src="../img/apm_8.7/p23.png" /> </p>
+</li>
+<li>
+<p>Return to the browser window that has Watson Studio Project you created earlier.  Add the database pem file as a data asset.  Drag and drop the database pem file into the data assets. 
+<img alt="drag pem file" src="../img/apm_8.7/p22.png" /> </p>
+</li>
+</ol>
+<p>!!!
+   If your database was deployed outside of CP4D you will have to use the directions below.</p>
+<ol>
+<li>
+<p>Login to Openshift Cluster. </p>
+</li>
+<li>
+<p>Select <code>Project db2u</code>, select <code>workloads</code>,  select <code>Secrets</code>, search for <code>db2u-certificate</code>. Select it.  In <code>Details</code> tab <code>Data</code> section choose <code>ca.crt</code> copy certificate.  Save it in a text based file named database.pem on your location machine.  You will upload this file to CP4D Watson Studio project later as a data asset. </p>
+</li>
+</ol>
+<h2 id="get-url-to-download-the-health-and-predict-and-utilities-notebooks">Get URL to Download the Health and Predict and Utilities Notebooks</h2>
+<p><a name="download_URL"></a></p>
+<p>These notebooks templates are what you use to calculate asset health and risk scores, asset end of life probability, anomaly detection, predict EOL failure dates and more.  </p>
+<p>The Health and Predict notebooks require programmatic access and credentials to access Maximo Application Suite.  You will need these values to create the URL that allows you to download the Health, Predict and Utilities notebooks zip file.  The URL looks  like:</p>
+<pre><code>https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Environment Variable</th>
+<th>Find It In</th>
+<th>Used For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APM_ID</td>
+<td>The value for the mxe.PMIId system property.</td>
+<td>Used to train and score all notebooks</td>
+</tr>
+<tr>
+<td>APM_API_BASEURL</td>
+<td>The root of the URL value for the PREDICTAPI endpoint.</td>
+<td>Used to train and score all notebooks</td>
+</tr>
+<tr>
+<td>EXTERNAL_APM_API_BASEURL</td>
+<td>The route location for the Predict project retrieved from the Red Hat® OpenShift® Container Platform.</td>
+<td>Used to download the notebooks</td>
+</tr>
+<tr>
+<td>APM_API_KEY</td>
+<td>The API key from MAS Integration Application to programatically access Predict APIs.</td>
+<td>Used to download and use the notebooks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-mxepmiid-value-used-for-apm_id">Get mxe.PMIId value used for APM_ID</h3>
+<ol>
+<li>
+<p>To get the value of mxe.PMIId, open a browser and access the Health and Predict application.  See below example of where you can find these values in Health and Predict system properties.  Click on <code>Application Administration</code> 
+<img alt="system properties" src="../img/apm_8.7/p26.png" /> </p>
+</li>
+<li>
+<p>Click on <code>System Configurations</code>, <code>Platform Configurations</code> and <code>System Properties</code>.   Click on <code>Funnel</code> icon to filter properties that begin with <code>property name</code> PMI.
+<img alt="PMI Search" src="../img/apm_8.7/p25.png" /> </p>
+</li>
+</ol>
+<p>It should look like:
+<code>APM_ID</code> = <code>mxe.PMIId</code> = f3fake48</p>
+<h3 id="get-predictapi-endpoint-used-for-apm_api_baseurl">Get PREDICTAPI endpoint used for APM_API_BASEURL</h3>
+<ol>
+<li>
+<p>To get  <code>APM_API_BASEURL</code> from the value from <code>PREDICTAPI endpoint</code>. You can find <code>endpoints</code> in Health and Predict Adminstration application by searching on <code>End Points</code>.  Click on <code>Application Administration</code> 
+<img alt="Adminstration" src="../img/apm_8.7/p26.png" /> </p>
+</li>
+<li>
+<p>Click in search field and search application for <code>End Points</code> 
+<img alt="End Points" src="../img/apm_8.7/P35.png" /> </p>
+</li>
+<li>
+<p>Note the URL for the <code>PREDICTAPI</code> endpoint.
+<img alt="End Points" src="../img/apm_8.7/P34.png" /> -</p>
+</li>
+</ol>
+<p>It should look like:
+<code>APM_API_BASEURL</code> = <code>PREDICTAPI</code> endpoint = https://main.predict.ivt11rel87.ivt.suite.maximo.com</p>
+<h3 id="get-root-location-for-the-external_apm_api_baseurl">Get root location for the EXTERNAL_APM_API_BASEURL</h3>
+<ol>
+<li>
+<p>Open a browser and access the Openshift Console MAS is deployed on.  For IBM Cloud deployments goto <code>https://cloud.ibm.com</code>, 
+select your <code>account</code> from the drop down menu and click <code>Clusters</code>
+<img alt="IBM Cloud Account" src="../img/apm_8.7/P29.png" /></p>
+</li>
+<li>
+<p>Under <code>Resources</code> click on your cluster resource.
+<img alt="Choose Cluster Resource" src="../img/apm_8.7/P30.png" /> </p>
+</li>
+<li>
+<p>Click on <code>Openshift Web Console</code>
+<img alt="Openshift Console" src="../img/apm_8.7/p31.png" /></p>
+</li>
+<li>
+<p>Click on <code>Project</code>. Search on <code>Predict</code> and Click on <code>Project</code>
+<img alt="Choose Cluster" src="../img/apm_8.7/P35.png" /></p>
+</li>
+<li>
+<p>Search <code>Predict</code></p>
+</li>
+<li>
+<p>Navigate to <code>Routes</code></p>
+</li>
+<li>
+<p>Search for <code>masdev-masdemo-predict-api</code> The <code>URL</code> should be under the location tab and look similar as the one below.</p>
+<p>https://masdev.predict.devtest.hpdevcloud-6xxxxxxxxxxxxxx91ab-0000.us-south.containers.appdomain.cloud/ibm/pmi/service</p>
+</li>
+<li>
+<p>Trim the URL end to get the  <code>APM_API_BASEURL</code>  by removing <code>/ibm/pmi/service</code>.</p>
+</li>
+</ol>
+<p>It should look like:
+<code>EXTERNAL_APM_API_BASEURL</code> = https://masdev.predict.devtest.hpdevcloud-6xxxxxxxxxxxxxe91ab-0000.us-south.containers.appdomain.cloud</p>
+<h3 id="get-apm_api_key">Get APM_API_KEY</h3>
+<p>API keys are used by the notebooks to make program calls to the Health and Predict APIs.   API keys are created for specific users or programs using the <code>Administration tools</code>.
+1. In Health and Predict and Utilities menus on the left, click on <code>Application Administration</code> to open the <code>Start Center</code>
+<img alt="Administration" src="../img/apm_8.7/p47.png" /> </p>
+<ol>
+<li>
+<p>Click <code>Administration</code> and sub menu <code>Administration</code>
+<img alt="Administration" src="../img/apm_8.7/p51.png" /> </p>
+</li>
+<li>
+<p>Click on <code>Integration</code> menu to access the <code>Start Center</code> where you can create keys.
+<img alt="Administration" src="../img/apm_8.7/p48.png" /> </p>
+</li>
+<li>
+<p>Click on <code>API Keys</code> menu and the <code>Add API Key</code> button to create an API keys or select an API key from those available.
+<img alt="Administration" src="../img/apm_8.7/p53.png" /></p>
+</li>
+<li>
+<p>Click <code>Copy key</code> to get <code>APM_API_KEY</code> string you need to create the URL to download the zip file of Predict Notebooks.
+<img alt="Choose Cluster" src="../img/apm_8.7/P34.png" /> </p>
+</li>
+</ol>
+<h2 id="download-the-model-template-notebooks">Download the model template notebooks</h2>
+<p>Using the key value pairs in the previous steps you wil create the URL to download the Predict notebooks from a browser.</p>
+<p>Replace key variable you collected in the previous steps with the values to create the download URL:</p>
+<p>For example: </p>
+<pre><code>https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/file/download
+</code></pre>
+<p><code>EXTERNAL_APM_API_BASEURL</code> = https://masws.predict.ivt09rel86.fake.suite.maximo.com
+<code>APM_ID</code> = f3fake48
+<code>APM_API_KEY</code> = n7gssk_fake_l_fake_486_fake_967_fake_jm8</p>
+<p>The final URL becomes:</p>
+<pre><code>https://masws.predict.ivt09rel86.fake.suite.maximo.com/ibm/pmi/service/rest/ds/f3fake48/n7gssk_fake_l_fake_486_fake_967_fake_jm8/file/download
+</code></pre>
+<ol>
+<li>
+<p>Make note of the values and create the URL you can use in the browser to download the zip file. 
+Here is an example download URL for Predict model notebook templates zip file using the values from the previous steps. </p>
+</li>
+<li>
+<p>Open a browser and use the URL to download and save the Predict Model templates zip file locally.  </p>
+</li>
+<li>
+<p>Unzip the models file and then upload the notebooks one at a time into your Watson Studio Project Assets. In your finder or file explorer, double click on the zip file to extract the notebooks. Make note of where you unzipped the file, as you will need it for the next steps.
+<img alt="setup assets" src="../img/apm_8.7/p02.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>Be sure to prepend your name initials to any model you upload to shared project areas when doing labs so you can remember which project notebook template was yours.</p>
+<h2 id="set-up-an-environment-to-train-and-test-your-models-in-watson-studio">Set up an <code>Environment</code> to train and test your models in Watson Studio</h2>
+<p><a name="create-environemnt-studio"></a></p>
+<p>The default environment is only 1 vCPU.  You must have an environment with at least 4 vCPUs in order to train the Predict Models.</p>
+<ol>
+<li>
+<p>In your Watson Studio project, create a 4 vCPU environment by clicking on <code>environment</code> and clicking the <code>New enviornment definition</code> link. 
+<img alt="setup assets" src="../img/apm_8.7/p39.png" /> </p>
+</li>
+<li>
+<p>Enter a name for the environment.  Hit the plus button to increase the vCPUs to 4.   Choose Python v3.8 for the <code>Software version</code>.   Press the 'Create' button to create then environment.
+<img alt="setup assets" src="../img/apm_8.7/p39.png" /> </p>
+</li>
+</ol>
+<h2 id="add-notebook-from-file-to-a-watson-studio-project">Add Notebook From File to a Watson Studio Project</h2>
+<p><a name="add-notebook-to-studio"></a>
+You can use the steps below to add any notebook from File to your Watson Studio Project.   Notebooks are used to create scores, predictions and for other algorithms in Health and Predict - Utilities.  In this exercise you will add a Predict Notebooks you will use to your Project.   Select the <code>WS - Predicted Failure Date-Survive Analysis.ipynb</code> notebook template that you will use in the next exercise to predict failure dates of the pump.</p>
+<ol>
+<li>
+<p>Add a Predict notebook by file option to your Watson Studio Project.  Return to your Cloud Pak for Data project.  Search for your <code>project</code> by name.  Click on the <code>project name</code> link to open your project.<br />
+<img alt="add_to project" src="../img/apm_8.7/p46.png" /> </p>
+</li>
+<li>
+<p>Add one of Predict notebook you unzipped earlier.  Click <code>Add to Project</code> and select <code>notebook</code> option.
+<img alt="setup assets" src="../img/apm_8.7/p11.png" /> </p>
+</li>
+<li>
+<p>Click the <code>From File</code> tab.  Drag and drop the notebook you would like to add to the area to add notebooks.  To save time in the next exercise choose the notebook for <code>WS - Predicted Failure Date-Survive Analysis</code> replace <code>WS</code> with your initials when naming the notebook.
+<img alt="setup assets" src="../img/apm_8.7/p12.png" /> </p>
+</li>
+<li>
+<p>Prepend your name initials to the name of the model file template you uploaded.   Select the runtime environment you created in the previous step that has 4 vCPUs.  Drag and drop your notebook template file into the area indicated below.  Click on the <code>Create</code> button to create the notebook. 
+<img alt="add_to notebook" src="../img/apm_8.7/P41.png" /> </p>
+</li>
+<li>
+<p>Confirm that you see 4 vCPUs for the notebook as it starts. 
+<img alt="confirm notebook" src="../img/apm_8.7/p45.png" /> </p>
+</li>
+<li>
+<p>If the notebook has the wrong number of vCPUs you can change the environment by clicking on the 'information' icon and selecting the right <code>Environment</code> from the dropdown select box.
+<img alt="setup assets" src="../img/apm_8.7/p42.png" /> </p>
+</li>
+<li>
+<p>If you had to change the <code>environment</code>,  click the <code>Confirm</code> button to restart the notebook editor in Waston Studio
+<img alt="add_to project" src="../img/apm_8.7/p43.png" /> </p>
+</li>
+</ol>
+<h2 id="to-stop-and-restart-a-notebook-template-in-a-watson-studio-project">To Stop and Restart a Notebook Template in a Watson Studio Project</h2>
+<p><a name="setup-studio"></a></p>
+<p>If your notebook environment fails to start you can restart the environment by following the steps below.</p>
+<ol>
+<li>
+<p>Add one of the <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850">Predict notebook templates</a> to your Watson Studio Project. Click the <code>information</code> icon, <code>environment</code> tab and <code>restart</code> from the <code>Runtime Status</code> select box.
+<img alt="add_to project" src="../img/apm_8.7/p54.png" /> </p>
+</li>
+<li>
+<p>Confirm your selection to restart the notebook by pressing the <code>Change</code> button. 
+<img alt="add_to project" src="../img/apm_8.7/p55.png" /> </p>
+</li>
+</ol>
+<h2 id="download-predict-pmlib-python-library-documentation">Download Predict pmlib Python Library Documentation</h2>
+<p><a name="download-pmlib-doc"></a></p>
+<p>Predict <code>pmlib</code> Python Library is used for working with Predict algorithms and automating device and data tasks in Monitor.or open the Predicted Failure Data template notebook to your Project.  Use the steps from the previous exercise <a href="./">Add Notebook From File to a Watson Studio Project</a> Prepend your initials to the template.  If you already have uploaded the notebook, open it with Watson Studio.</p>
+<ol>
+<li>You can download the documentation using a URL similar to the one you create in the previous Exercise for downloading the <code>doc-8.5.1.zip</code> that contains the html files for the <code>pmilib</code> documentation.</li>
+</ol>
+<p>For example: </p>
+<pre><code>https://`EXTERNAL_APM_API_BASEURL`/ibm/pmi/service/rest/ds/`APM_ID`/`APM_API_KEY`/doc/download
+</code></pre>
+<ol>
+<li>
+<p>Unzip the <code>doc-8.5.1.zip</code> file you downloaded</p>
+</li>
+<li>
+<p>Click on the file <code>index.html</code> file you unzipped.  The browser should open with the documentation below.
+<img alt="add_to project" src="../img/apm_8.7/p59.png" />   </p>
+</li>
+</ol>
+<h2 id="setup-environment-variables-for-predict-in-notebook-templates">Setup Environment Variables for Predict in Notebook Templates</h2>
+<p>One of the earlier steps explained how to manually find the environment variables used in Predict to do things like download the zip file with the Predict Notebooks.  When using a Predict Notebook in Watson Studio you can also programatically discover these environment variables since they are set for you in the Cloud Pack for Data Environment that was installed with Maximo Application Suite.  Use the code below  if it isn't already included in the notebook templates to get the required Predict environment variables.</p>
+<p><strong>Sample Code</strong></p>
+<pre><code>import json
+import os
+
+# Try to open environment variables json file if it already exists.
+try:
+  f = open('/project_data/data_asset/hc_Predict_Envs.json',)
+except:
+  f = {}
+  print("No execution json found, initialising with current notebook information")
+
+data = json.load(f)
+f.close()
+
+os.environ['APM_ID'] = data['APM_ID']
+os.environ['APM_API_BASEURL'] = data['APM_API_BASEURL']
+os.environ['APM_API_KEY'] = data['APM_API_KEY']
+
+# README: Change to true if Health/Predict are deployed on different cluster from this CP4D environment
+use_external = False
+if use_external:
+    import os
+    os.environ['USER_PROVIDED_HEALTH_URL'] = data['USER_PROVIDED_HEALTH_URL']
+    os.environ['USER_PROVIDED_DB_CONNECTION_STRING'] = data['USER_PROVIDED_DB_CONNECTION_STRING']
+    os.environ['USER_PROVIDED_URL'] = data['USER_PROVIDED_URL']
+import os
+
+os.environ['SSL_VERIFY_APM'] = 'False'
+os.environ['SSL_VERIFY_AS'] = 'False'
+
+os.environ['TRUST_PREDICT'] = os.getenv('APM_API_BASEURL')[8:]
+print(os.getenv('TRUST_PREDICT'))
+main.predict.ivt11rel87.ivt.suite.maximo.com
+import os
+os.environ['TRUST_PREDICT'] = os.getenv('APM_API_BASEURL')[8:]
+print(os.getenv('TRUST_PREDICT'))
+</code></pre>
+<h2 id="pip-install-pmlib-predict-in-notebook-templates">PIP Install PMLib Predict in Notebook Templates</h2>
+<p>Install the Predict Python Software Develop Kit (SDK) called PMLib using pip install.</p>
+<p><strong>Sample Code</strong></p>
+<pre><code># Initialize the Maximo-Predict environment variables
+import pmlib
+from pmlib import api
+api.init_environ()
+</code></pre>
+<h2 id="using-watson-studio-library">Using Watson Studio Library</h2>
+<p>The Watson Studio Python Library named <code>ibm_watson_studio_lib</code> allows you to do to work with data assets in your project.  Some examples you will learn later are reading and writing data from your project.    Another example is getting the Watson Studio Project Information. </p>
+<p>You will use a Watson Studio Python library named <code>ibm_watson_studio_lib</code> that is available in your environment by default to get your project information.  See this <a href="https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=lib-watson-studio-python">API reference</a> for more information. </p>
+<p><strong>Sample Code</strong></p>
+<pre><code>#  Get the Watson Studio Project Information
+from ibm_watson_studio_lib import access_project_or_space
+wslib = access_project_or_space()
+project_name = wslib.here.get_name()
+wslib.show(project_name)
+project_id = wslib.here.get_ID()
+wslib.show(project_id)
+</code></pre>
+<p>Congratulations you have seen how to upload, start and restart Predict notebook in Watson Studio.    You have also learned how to download and access the pmilib documentation that you will use in the next exercises.  Finally you learned how to use the <code>ibm_watson_studio_lib</code> to work with assets in your project.</p>
+<p>In the next exercises you will learn how to use these notebook templates to detect anomalies and predict asset failures.   You will start by update and running setup notebooks to create asset types in Health and Predict.  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../hpu_models/" class="btn btn-neutral float-right" title="Understand Health and Predict - Utilities Models">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../hpu_models/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

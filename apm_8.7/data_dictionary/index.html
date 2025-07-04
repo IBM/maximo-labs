@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/data_dictionary/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Pump Data Dictionary - Maximo APM V8.7 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Pump Data Dictionary";
+        var mkdocs_page_input_path = "data_dictionary.md";
+        var mkdocs_page_url = "/maximo-labs/data_dictionary/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.7 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.7.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_data_loader/">Load Utilities Data Into Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Pump Data Dictionary</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#understand-asset-data">Understand Asset Data</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.7 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Pump Data Dictionary</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pump-data-dictionary">Pump Data Dictionary</h1>
+<p>In this exercise you will:</p>
+<ul>
+<li><a href="#data_dictionary">Understand the Asset Data </a> that will be used in these labs for each exercise.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This lab is still being developed, incomplete and may have errors.  We provide it to get your <a href="https://github.com/IBM/maximo-labs/issues/new">feedback</a> and allow you to reference the materials as the labs are built.</p>
+</div>
+<h2 id="understand-asset-data">Understand Asset Data</h2>
+<p><a name="data_dictionary"></a></p>
+<p>This lab uses publicly available data for a centrifugal pump on <a href="https://www.kaggle.com/datasets/nphantawee/pump-sensor-data/discussion/131429?resource=download">Kaggle.com</a></p>
+<p>The data is for a single pump that exhibited 7 failures.   The table below describes the columns with sensor time series data that are included in the CSV files. See the Kaggle web site for more explanation of the data.</p>
+<table>
+<thead>
+<tr>
+<th>Metric Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SENSOR_00</td>
+<td>Motor Casing Vibration</td>
+</tr>
+<tr>
+<td>SENSOR_01</td>
+<td>Motor Frequency A</td>
+</tr>
+<tr>
+<td>SENSOR_02</td>
+<td>Motor Frequency B</td>
+</tr>
+<tr>
+<td>SENSOR_03</td>
+<td>Motor Frequency C</td>
+</tr>
+<tr>
+<td>SENSOR_04</td>
+<td>Motor Speed</td>
+</tr>
+<tr>
+<td>SENSOR_05</td>
+<td>Motor Current</td>
+</tr>
+<tr>
+<td>SENSOR_06</td>
+<td>Motor Active Power</td>
+</tr>
+<tr>
+<td>SENSOR_07</td>
+<td>Motor Apparent Power</td>
+</tr>
+<tr>
+<td>SENSOR_08</td>
+<td>Motor Reactive Power</td>
+</tr>
+<tr>
+<td>SENSOR_09</td>
+<td>Motor Shaft Power</td>
+</tr>
+<tr>
+<td>SENSOR_10</td>
+<td>Motor Phase Current A</td>
+</tr>
+<tr>
+<td>SENSOR_11</td>
+<td>Motor Phase Current B</td>
+</tr>
+<tr>
+<td>SENSOR_12</td>
+<td>Motor Phase Current C</td>
+</tr>
+<tr>
+<td>SENSOR_13</td>
+<td>Motor Coupling Vibration</td>
+</tr>
+<tr>
+<td>SENSOR_14</td>
+<td>Motor Phase Voltage AB</td>
+</tr>
+<tr>
+<td>SENSOR_16</td>
+<td>Motor Phase Voltage BC</td>
+</tr>
+<tr>
+<td>SENSOR_17</td>
+<td>Motor Phase Voltage CA</td>
+</tr>
+<tr>
+<td>SENSOR_18</td>
+<td>Pump Casing Vibration</td>
+</tr>
+<tr>
+<td>SENSOR_19</td>
+<td>Pump Stage 1 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_20</td>
+<td>Pump Stage 1 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_21</td>
+<td>Pump Stage 1 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_22</td>
+<td>Pump Stage 1 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_23</td>
+<td>Pump Stage 1 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_24</td>
+<td>Pump Stage 1 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_25</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_26</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_27</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_28</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_29</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_30</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_31</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_32</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_33</td>
+<td>Pump Stage 2 Impeller Speed</td>
+</tr>
+<tr>
+<td>SENSOR_34</td>
+<td>Pump Inlet Flow</td>
+</tr>
+<tr>
+<td>SENSOR_35</td>
+<td>Pump Discharge Flow</td>
+</tr>
+<tr>
+<td>SENSOR_36</td>
+<td>Pump UNKNOWN</td>
+</tr>
+<tr>
+<td>SENSOR_37</td>
+<td>Pump Lube Oil Overhead Reservoir Level</td>
+</tr>
+<tr>
+<td>SENSOR_38</td>
+<td>Pump Lube Oil Return Temp</td>
+</tr>
+<tr>
+<td>SENSOR_39</td>
+<td>Pump Lube Oil Supply Temp</td>
+</tr>
+<tr>
+<td>SENSOR_40</td>
+<td>Pump Thrust Bearing Active Temp</td>
+</tr>
+<tr>
+<td>SENSOR_41</td>
+<td>Motor Non Drive End Radial Bearing Temp 1</td>
+</tr>
+<tr>
+<td>SENSOR_42</td>
+<td>Motor Non Drive End Radial Bearing Temp 2</td>
+</tr>
+<tr>
+<td>SENSOR_43</td>
+<td>Pump Thrust Bearing Inactive Temp</td>
+</tr>
+<tr>
+<td>SENSOR_44</td>
+<td>Pump Drive End Radial Bearing Temp 1</td>
+</tr>
+<tr>
+<td>SENSOR_45</td>
+<td>Pump non Drive End Radial Bearing Temp 1</td>
+</tr>
+<tr>
+<td>SENSOR_46</td>
+<td>Pump Non Drive End Radial Bearing Temp 2</td>
+</tr>
+<tr>
+<td>SENSOR_47</td>
+<td>Pump Drive End Radial Bearing Temp 2</td>
+</tr>
+<tr>
+<td>SENSOR_48</td>
+<td>Pump Inlet Pressure</td>
+</tr>
+<tr>
+<td>SENSOR_49</td>
+<td>Pump Temp Unknown</td>
+</tr>
+<tr>
+<td>SENSOR_50</td>
+<td>Pump Discharge Pressure 1</td>
+</tr>
+<tr>
+<td>SENSOR_51</td>
+<td>Pump Discharge Pressure 2</td>
+</tr>
+<tr>
+<td>machine_status</td>
+<td>NORMAL, BROKEN or RECOVERING</td>
+</tr>
+</tbody>
+</table>
+<p>Congratulations.  You now have sample pump data you can work with to analyze for anomalies and failures.</p>
+<p>In a later lab exercise you will prepare the data for being used by Health and Predict for algorithm and model performance assessment using Watson Studio.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../utilities_Failure_Probability/" class="btn btn-neutral float-left" title="Train and Register Failure Probability for Utilities Assets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../fast_start_loader/" class="btn btn-neutral float-right" title="Load Pump Data Into Monitor">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../utilities_Failure_Probability/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../fast_start_loader/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
