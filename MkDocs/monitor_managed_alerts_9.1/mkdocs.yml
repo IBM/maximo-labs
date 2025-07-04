@@ -1,0 +1,37 @@
+site_name: Monitor Alerts
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Jan Ekstrøm
+site_description: "Maximo Monitor Alerts setup"
+site_dir: ../../site/monitor_managed_alerts_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Alerts:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Setup alerts at device type: setup_alert.md
+        - 2. View alerts at device/device type: view_alert.md
+        - 3. Setup alerts at different Hierarchy level: hierarchyAlerts.md
+        - 4. Create service request based on an alert: servicerequest.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
