@@ -1,0 +1,40 @@
+site_name: Monitor Aveva PI Scada Historian Integration Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Jignesh Prajapati
+site_description: "Maximo Monitor Aveva PI Scada Historian Integration Lab"
+site_dir: ../../site/monitor_avevapi_scada_historian_integration_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Aveva PI Scada Historian Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Configure Aveva PI Scada Historian Integration: add-integration.md
+    - 2. Verify and Deploy docker: verify-deploy-docker.md
+    - 3. Device Type and devices data in Monitor: devicetype-device-data-monitor.md
+    - 4. Update Aveva PI Scada Historian Integration: edit-integration.md
+    - 5. Delete Aveva PI Scada Historian Integration: delete-integration.md
+    - 6. Reset API Key: reset-api-key.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+  
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition

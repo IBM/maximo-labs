@@ -1,0 +1,39 @@
+site_name: Monitor Meter/Metric Mapping Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Vivek Domadiya
+site_description: "Monitor Meter/Metric Mapping Lab"
+site_dir: ../../site/monitor_meter_metric_mapping_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Meter/Metric Mapping Lab:
+    - Welcome to this lab: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - Setup meter/metric mappings: setup.md
+    - View meter data in the Manage UI: view_meter_data.md
+    - Toggle sync enable/disable: toggle_sync.md
+    - Edit Meter/Metrics Mappings: edit.md
+    - Delete Meter/Metrics Mappings: delete.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+  
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
