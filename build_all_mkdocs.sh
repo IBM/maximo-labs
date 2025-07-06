@@ -252,6 +252,46 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
+# Build the Monitor Maximo Real Estate and Facilities level:
+lab=monitor_MREF_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Maximo alerts:
+lab=monitor_managed_alerts_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Meter/Metric Mapping 9.1 level:
+lab=monitor_meter_metric_mapping_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Avevapi Scada Historian Integration 9.1 level:
+lab=monitor_avevapi_scada_historian_integration_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Custom Function:
+lab=monitor_custom_function_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
 
 ########################################################################################
 #### DON't CHANGE THE BELOW MANDATORY SECTION WHICH IS PART OF THE TOPLEVEL CONTENT ####
