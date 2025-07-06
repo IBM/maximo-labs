@@ -1,0 +1,37 @@
+site_name: Monitor Custom Function
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Radhika Surani
+site_description: "Maximo Monitor 9.1 Custom Fucntion"
+site_dir: ../../site/monitor_custom_function_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Custom Function:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Setup Starter Package: setup_starter_package.md
+        - 2. Write Custom Function: write_custom_function.md
+        - 3. Register Custom Function: register_custom_function.md
+        - 4. Apply Custom Function: apply_custom_function.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
