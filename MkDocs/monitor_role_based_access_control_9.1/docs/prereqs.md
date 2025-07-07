@@ -43,5 +43,3 @@ Before starting, please verify that:
 - You are able to create or modify Security Groups and Users
 
 ---
-
-**Updated: 2025-06-11**
