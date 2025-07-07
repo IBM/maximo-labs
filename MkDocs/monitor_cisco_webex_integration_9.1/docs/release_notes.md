@@ -12,6 +12,6 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2025-07-01|Rishi Kant|Monitor managed Cisco Webex Integration 9.1.                       |
+|2025-07-01|Rishi Kant|Monitor Cisco Webex Integration 9.1.                       |
 
 ---

@@ -16,7 +16,7 @@ Please again go to Cisco Webex integration page and there From the device subscr
 ![Cisco Webex device](img/unsubscribe_device_1.png)</br></br>
 
 
-When we unsubscribe a Webex device we remove that device from Monitor. That means that we will not be reading any realtime people presence count for that device. While unsubscribing we have an option to delete device data or keep the device data and remove just the device from Monitor:</br>
+When we unsubscribe a Webex device, we remove that device from Monitor. That means that we will not be reading any realtime people presence count for that device. While unsubscribing we have an option to delete device data or keep the device data and remove just the device from Monitor:</br>
 ![Add new device](img/unsubscribe_device_2.png)</br></br>
 
 

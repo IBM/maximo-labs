@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1 </br>Monitor Managed Cisco Webex Integration Lab
+# Welcome to the Maximo Monitor 9.1 </br>Monitor Cisco Webex Integration Lab
 
 !!! info
     This Maximo Monitor lab demonstrates the use of Cisco Webex Integration in Monitor.
@@ -12,7 +12,7 @@ In this lab you will learn how to setup a Cisco Webex Integration within Maximo 
 
 The exercises will cover:
 
-* Overview and purpose of using Cisco Webex device
+* Overview and Purpose of using Cisco Webex device
 * Integrate Cisco Webex device in MAS Monitor
 * Subscribe to a Cisco Webex device
 * Assign Cisco Webex device to a location
