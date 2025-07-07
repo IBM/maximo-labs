@@ -19,6 +19,7 @@
 - Radhika Surani - <Radhika.Surani@ibm.com>
 - Mayur Sojitra - <mayur.sojitra@ibm.com>
 - Margi Shah - <margi.shah1@ibm.com>
+- Jvaneel Dwivedi - <Jvaneel.Dwivedi@ibm.com>
  
 
 ---
@@ -35,6 +36,7 @@
 |2025-06-26|Jignesh Prajapati    |Added the initial version of [Maximo Monitor Aveva PI Scada Historian Integration Lab](../monitor_avevapi_scada_historian_integration_9.1/) for MAS 9.1. |
 |2025-07-06|Radhika Surani    |Added the initial version of [Maximo Monitor Custom Function Lab](../monitor_custom_function_9.1/) for MAS 9.1. |
 |2025-07-07|Mayur Sojitra|Added the [Maximo Monitor Device and Device Type Setup lab](../monitor_device_devicetype_setup_9.1/). |
+|2025-07-07|Jvaneel Dwivedi|Added the [Maximo Monitor Role Based Access Control Lab](../monitor_role_based_access_control_9.1/). |
 |2025-06-24|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.1/) for MAS 9.1. |
 |2025-06-12|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.1/) for MAS 9.1. |
 |2025-06-05|Jan Ekstrøm    |Created a new MAS 9.1 Section and moved the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to that section.|

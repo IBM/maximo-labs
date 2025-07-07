@@ -14,25 +14,14 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ### Maximo Application Suite 9.1 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
-| <i>Custom device from Device library</i>                       | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
-|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |
-|                                                                | [Deploy and verify data inflow](monitor_managed_gw_opcua_9.1/deploy)               |
-
-
-| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.1/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.1/setup_simulator)         |
-| <i>Standard device from Device library</i>                     | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
-|                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.1/add_device_1)               |
-|                                                                | [Deploy and verify data inflow](monitor_managed_gw_modbus_9.1/deploy)               |
-|                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.1/add_device_2)          |
-|                                                                | [Deploy and view data in a dashboard](monitor_managed_gw_modbus_9.1/re-deploy)           |
-
-| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/)   | [Use the Docker image](monitor_modbus_simulator/docker)          |
-|                                                                | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
+| [Maximo Monitor Device and Device Type Setup](monitor_device_devicetype_setup_9.1/)   | [Device Type Creation](monitor_device_devicetype_setup_9.1/overview_configuration)          |
+|                                                                | [Metrics in Device Type](monitor_device_devicetype_setup_9.1/add_metrics)     |
+|                                                                | [Dimension in Device Type](monitor_device_devicetype_setup_9.1/add_dimensions)     |
+|                                                                | [Add and Edit devices](monitor_device_devicetype_setup_9.1/add_edit_device)     |
+|                                                                | [Device Relationship with Asset/Location](monitor_device_devicetype_setup_9.1/device_relation)     |
+|                                                                | [Calculated metrics](monitor_device_devicetype_setup_9.1/add_calc_metrics)     |
+|                                                                | [Dashboard](monitor_device_devicetype_setup_9.1/devicetype_dashboard)     |
+|                                                                | [Archive/Restore/Delete Device Type](monitor_device_devicetype_setup_9.1/archive_devicetype)     |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -43,18 +32,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                        | [Create Asset and Assign Location](monitor_managed_hierarchy_9.1/create_asset)
 |                                                                        | [Create Device-Type & Device in Monitor](monitor_managed_hierarchy_9.1/create_devicetype)
 |                                                                        | [Assign Devices using csv](monitor_managed_hierarchy_9.1/assign_devices)
-|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)
-
-| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Device and Device Type Setup](monitor_device_devicetype_setup_9.1/)   | [Device Type Creation](monitor_device_devicetype_setup_9.1/overview_configuration)          |
-|                                                                | [Metrics in Device Type](monitor_device_devicetype_setup_9.1/add_metrics)     |
-|                                                                | [Dimension in Device Type](monitor_device_devicetype_setup_9.1/add_dimensions)     |
-|                                                                | [Add and Edit devices](monitor_device_devicetype_setup_9.1/add_edit_device)     |
-|                                                                | [Device Relationship with Asset/Location](monitor_device_devicetype_setup_9.1/device_relation)     |
-|                                                                | [Calculated metrics](monitor_device_devicetype_setup_9.1/add_calc_metrics)     |
-|                                                                | [Dashboard](monitor_device_devicetype_setup_9.1/devicetype_dashboard)     |
-|                                                                | [Archive/Restore/Delete Device Type](monitor_device_devicetype_setup_9.1/archive_devicetype)     |
+|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)   |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -70,13 +48,6 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                              | [View alerts at device/device type](monitor_managed_alerts_9.1/view_alert)                  |
 |                                                                | [Setup alerts at different Hierarchy level](monitor_managed_alerts_9.1/hierarchyAlerts)             |
 |                                                                | [Create service request based on an alert](monitor_managed_alerts_9.1/servicerequest)               |
-
-| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Custom Function](monitor_custom_function_9.1/) | [Setup Starter Package](monitor_custom_function_9.1/setup_starter_package) |
-|                                                                | [Write Custom Function](monitor_custom_function_9.1/write_custom_function)                  |
-|                                                                | [Register Custom Function](monitor_custom_function_9.1/register_custom_function)             |
-|                                                                | [Apply Custom Function](monitor_custom_function_9.1/apply_custom_function)               |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -106,6 +77,19 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                                                                                                         | [Unsubscribe Cisco Space Location](monitor_cisco_spaces_integration_9.1/unsubscribe)                            |
 |                                                                                                                                                         | [Edit / Delete Cisco Spaces Configuration](monitor_cisco_spaces_integration_9.1/edit_delete_config)              |
 
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Role Based Access Control](monitor_role_based_access_control_9.1/)                        | [Create Security Groups](monitor_role_based_access_control_9.1/create_security_groups)     |
+| <i>Role-Based Access Control Overview & Use Cases</i>          | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)       |
+|                                                                | [Login and Access Behavior](monitor_role_based_access_control_9.1/user_access_behavior)    |
+|                                                                | [RBAC Demo Scenarios](monitor_role_based_access_control_9.1/demo_scenarios)                |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Custom Function](monitor_custom_function_9.1/) | [Setup Starter Package](monitor_custom_function_9.1/setup_starter_package) |
+|                                                                | [Write Custom Function](monitor_custom_function_9.1/write_custom_function)                  |
+|                                                                | [Register Custom Function](monitor_custom_function_9.1/register_custom_function)             |
+|                                                                | [Apply Custom Function](monitor_custom_function_9.1/apply_custom_function)               |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -115,6 +99,29 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                | [Update Integration](monitor_avevapi_scada_historian_integration_9.1/edit-integration)     |
 |                                                                | [Delete Integration](monitor_avevapi_scada_historian_integration_9.1/delete-integration)     |
 |                                                                | [Reset API Key](monitor_avevapi_scada_historian_integration_9.1/reset-api-key)     |
+
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
+| <i>Custom device from Device library</i>                       | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
+|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |
+|                                                                | [Deploy and verify data inflow](monitor_managed_gw_opcua_9.1/deploy)               |
+
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.1/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.1/setup_simulator)         |
+| <i>Standard device from Device library</i>                     | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
+|                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.1/add_device_1)               |
+|                                                                | [Deploy and verify data inflow](monitor_managed_gw_modbus_9.1/deploy)               |
+|                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.1/add_device_2)          |
+|                                                                | [Deploy and view data in a dashboard](monitor_managed_gw_modbus_9.1/re-deploy)           |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/)   | [Use the Docker image](monitor_modbus_simulator/docker)          |
+|                                                                | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
 
 
 ### Maximo Application Suite 9.0 
