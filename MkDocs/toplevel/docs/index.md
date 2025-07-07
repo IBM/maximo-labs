@@ -76,12 +76,12 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Monitor Managed Cisco Webex Integration Lab](monitor_managed_cisco_webex_integration_9.1/) | [Overview and purpose of using Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/overview) |
-|                                                                | [Integrate Cisco Webex device in MAS Monitor](monitor_managed_cisco_webex_integration_9.1/create_integration)                  |
-|                                                                | [Subscribe to a Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/add_device)             |
-|                                                                | [Assign Cisco Webex device to a location](monitor_managed_cisco_webex_integration_9.1/assign_location)               |
-|                                                                | [Unsubscribe Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/unsubscribe_device)               |
-|                                                                | [Delete Cisco Webex configuration](monitor_managed_cisco_webex_integration_9.1/delete_integartion)               |
+| [Monitor Cisco Webex Integration Lab](monitor_cisco_webex_integration_9.1/) | [Overview and Purpose of using Cisco Webex device](monitor_cisco_webex_integration_9.1/overview) |
+|                                                                | [Integrate Cisco Webex device in MAS Monitor](monitor_cisco_webex_integration_9.1/create_integration)                  |
+|                                                                | [Subscribe to a Cisco Webex device](monitor_cisco_webex_integration_9.1/add_device)             |
+|                                                                | [Assign Cisco Webex device to a location](monitor_cisco_webex_integration_9.1/assign_location)               |
+|                                                                | [Unsubscribe Cisco Webex device](monitor_cisco_webex_integration_9.1/unsubscribe_device)               |
+|                                                                | [Delete Cisco Webex configuration](monitor_cisco_webex_integration_9.1/delete_integartion)               |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|

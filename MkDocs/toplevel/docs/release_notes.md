@@ -26,7 +26,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
-|2025-07-01|Rishi Kant    |Added the initial version of [Monitor Managed Cisco Webex Integration Lab](../monitor_managed_cisco_webex_integration_9.1/) for MAS 9.1. |
+|2025-07-01|Rishi Kant    |Added the initial version of [Monitor Cisco Webex Integration Lab](../monitor_cisco_webex_integration_9.1/) for MAS 9.1. |
 |2025-07-01|Kajal Lalwani    |Added the initial version of [ Monitor Maximo Real Estate and Facilities Lab](../monitor_MREF_9.1/) for MAS 9.1. |
 |2025-07-04|Utsav Patel    |Added the initial version of [Maximo Monitor Alerts lab](../monitor_managed_alerts_9.1/) for MAS 9.1. |
 |2025-06-26|Vivek Domadiya |Added the initial version of [Maximo Monitor Meter/Metric Mapping lab](../monitor_meter_metric_mapping_9.1/) for MAS 9.1. |
