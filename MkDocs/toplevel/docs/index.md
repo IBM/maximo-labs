@@ -81,6 +81,17 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                | [Register Custom Function](monitor_custom_function_9.1/register_custom_function)             |
 |                                                                | [Apply Custom Function](monitor_custom_function_9.1/apply_custom_function)               |
 
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Device and Device Type Setup](monitor_device_devicetype_setup_9.1/)   | [Device Type Creation](monitor_device_devicetype_setup_9.1/overview_configuration)          |
+|                                                                | [Metrics in Device Type](monitor_device_devicetype_setup_9.1/add_metrics)     |
+|                                                                | [Dimension in Device Type](monitor_device_devicetype_setup_9.1/add_dimensions)     |
+|                                                                | [Add and Edit devices](monitor_device_devicetype_setup_9.1/add_edit_device)     |
+|                                                                | [Device Relationship with Asset/Location](monitor_device_devicetype_setup_9.1/device_relation)     |
+|                                                                | [Calculated metrics](monitor_device_devicetype_setup_9.1/add_calc_metrics)     |
+|                                                                | [Dashboard](monitor_device_devicetype_setup_9.1/devicetype_dashboard)     |
+|                                                                | [Archive/Restore/Delete Device Type](monitor_device_devicetype_setup_9.1/archive_devicetype)     |
+
 ### Maximo Application Suite 9.0 
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
