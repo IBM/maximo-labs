@@ -36,6 +36,17 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Hierarchy lab](monitor_managed_hierarchy_9.1/) | [Create Organization](monitor_managed_hierarchy_9.1/create_organization)
+|                                                                        | [Activate Organization](monitor_managed_hierarchy_9.1/activate_organization)
+|                                                                        | [Create Site](monitor_managed_hierarchy_9.1/create_site)
+|                                                                        | [Create Location, System](monitor_managed_hierarchy_9.1/create_location)
+|                                                                        | [Create Asset and Assign Location](monitor_managed_hierarchy_9.1/create_asset)
+|                                                                        | [Create Device-Type & Device in Monitor](monitor_managed_hierarchy_9.1/create_devicetype)
+|                                                                        | [Assign Devices using csv](monitor_managed_hierarchy_9.1/assign_devices)
+|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Device and Device Type Setup](monitor_device_devicetype_setup_9.1/)   | [Device Type Creation](monitor_device_devicetype_setup_9.1/overview_configuration)          |
 |                                                                | [Metrics in Device Type](monitor_device_devicetype_setup_9.1/add_metrics)     |
 |                                                                | [Dimension in Device Type](monitor_device_devicetype_setup_9.1/add_dimensions)     |
