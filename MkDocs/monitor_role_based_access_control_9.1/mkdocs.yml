@@ -1,0 +1,37 @@
+site_name: Monitor Role Based Access Control Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Jvaneel Dwivedi
+site_description: "Maximo Monitor 9.1 Role Based Access Control Lab"
+site_dir: ../../site/monitor_role_based_access_control_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor RBAC Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Create Security Groups: create_security_groups.md
+        - 2. Create Users and Assign Groups: create_users.md
+        - 3. User Login and Access Behavior: user_access_behavior.md
+
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
