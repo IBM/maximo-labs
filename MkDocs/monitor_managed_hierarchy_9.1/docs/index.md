@@ -4,15 +4,13 @@ You will learn about Maximo's capabilities to:
 * Create an Organization
 * Activate Organization
 * Create Site 
-* Create System
-* Create Location
+* Create Location, System
 * Create Asset and Assign Location 
 * Create Device-Type & Device in Monitor
-* Hierarchy View
-* Assign Devices using Location/Asset
 * Assign Devices using csv
+* Hierarchy View
 
-Monitor is now integrated with Manage, enabling seamless synchronization between the two systems for better operational efficiency.
+Monitor is now integrated with Manage, enabling seamless synchronization between the two platforms for better operational efficiency.
 
 Hierarchies are imported directly from Manage, eliminating the need for manual CSV uploads and simplifying the setup process.
 

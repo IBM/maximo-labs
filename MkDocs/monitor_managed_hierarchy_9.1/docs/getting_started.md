@@ -12,15 +12,15 @@ welcome your contributions to existing or new exercises.
 
 |  Your Learning Goals                                    | Recommended Exercises| Time Needed   |
 |:-------------------------------------------------------:|: -------------------:|:------------------:|
-| Create Organization                                     | 1                    |     10 minutes     |
-| Active Organization                                     | 2                    |     10 minutes     |
-| Create Site                                             | 3                    |     10 minutes     |
-| Create System                                           | 4                    |     10 minutes     |
-| Create Location                                         | 5                    |     10 minutes     |
-| Create Asset and Assign Location                        | 6                    |     10 minutes     |
-| Create Device-Type & Device in Monitor                  | 7                    |     10 minutes     |
-| Hierarchy View                                          | 8                    |     10 minutes     |
-| Assign Devices                                          | 9                    |     10 minutes     |
+| Create Organization                                     | 1                    |     5 minutes      |
+| Activate Organization                                   | 2                    |     10 minutes     |
+| Create Site                                             | 3                    |     5 minutes      |
+| Create Location, System                                 | 4                    |     7 minutes      |
+| Create Asset and Assign Location                        | 5                    |     10 minutes     |
+| Create Device-Type & Device in Monitor                  | 6                    |     10 minutes     |
+| Assign Devices using CSV                                | 7                    |     15 minutes     |
+| Hierarchy View                                          | 8                    |     2 minutes      |
 
+---
 
 

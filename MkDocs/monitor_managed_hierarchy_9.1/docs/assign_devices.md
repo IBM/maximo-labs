@@ -1,13 +1,13 @@
 # Objectives
 In this Exercise you will learn how to:
 
-* Assign devices to the asset hierarchy
+* Assign devices to the hierarchy
 
-Assign compressor devices to assets by using a CSV template file and import the assignment.
+Assign IT devices to assets by using a CSV template file and import it. Devices are always grouped by their device type.
 
 ## 
-The CSV file to assign devices for our functional company Acme that manages transportation networks looks like this:
-![Client-ABC hierarchy](img/Client-ABC-devices.png)&nbsp;&nbsp;
+The CSV file to assign devices for our functional company that manages transportation networks looks like this:
+![IBM hierarchy](img/dev_images/2_dev.png)&nbsp;&nbsp;
 
 ### Edit the assign devices CSV to match your hierarchy
 1. Download the [Client-ABC devices CSV](https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv-files/monitor_hierarchy/Client-ABC-devices.csv) to your local system.
@@ -18,18 +18,16 @@ The CSV file to assign devices for our functional company Acme that manages tran
 ### Assign devices
 
 1. Open the Monitor Setup page
-3. Click on Import button then choose "Assign devices"
-4. Using the CSV file from step previous section, drag the CSV into the blue box or click to select CSV file from filesystem
-5. The system will validate your CSV file
-6. Click Add
-7. You can see the devices in your hierarchy
+2. Click on Import button then choose "Assign devices"
+![Assign Devices](img/dev_images/1_dev.png)&nbsp;&nbsp;
+3. Using the CSV file from step previous section, drag the CSV into the blue box or click to select CSV file from filesystem
+4. The system will validate your CSV file
+5. Click Add
+![Import and Validate CSV](img/dev_images/3_dev.png)&nbsp;&nbsp;
 
-![Client-ABC-<your initials> organization](img/hierarchy_devices.png)
+6. You can see the devices in your hierarchy
 
 ---
-
-
-
 
 
 

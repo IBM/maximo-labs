@@ -3,7 +3,7 @@ In this Exercise you will learn how to:
 
 * Create Site
 
-In the Maximo application, Each organization can have multiple sites.
+In the Maximo application, Each Site configured under the Organization inherits information and settings from the Organization level. Each organization can have multiple sites.
 
 1. In the left side Menu, navigate to Organizations and select the organization that you want to add Site.
 ![New site](img/site_images/1_site.png)&nbsp;&nbsp;
@@ -19,3 +19,5 @@ In the Maximo application, Each organization can have multiple sites.
 
 5. Log out of the application and login again for the changes to reflect.
 ![Logout](img/site_images/5_site.png)&nbsp;&nbsp;
+
+---
