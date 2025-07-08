@@ -243,15 +243,78 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Monitor Managed Cisco Webex Integration 9.1 level:
+# Build the Monitor Cisco Webex Integration 9.1 level:
 
-lab=monitor_managed_cisco_webex_integration_9.1
+lab=monitor_cisco_webex_integration_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
+# Build the Monitor Maximo Real Estate and Facilities level:
+lab=monitor_MREF_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Maximo alerts:
+lab=monitor_managed_alerts_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Meter/Metric Mapping 9.1 level:
+lab=monitor_meter_metric_mapping_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Avevapi Scada Historian Integration 9.1 level:
+lab=monitor_avevapi_scada_historian_integration_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Custom Function:
+lab=monitor_custom_function_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Device and device type setup 9.1 level:
+lab=monitor_device_devicetype_setup_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Role Based Access Control 9.1 level:
+lab=monitor_role_based_access_control_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Managed Gatewway Modbus 9.0 level:
+lab=monitor_managed_hierarchy_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 ########################################################################################
 #### DON't CHANGE THE BELOW MANDATORY SECTION WHICH IS PART OF THE TOPLEVEL CONTENT ####
