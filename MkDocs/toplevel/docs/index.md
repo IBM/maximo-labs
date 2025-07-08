@@ -14,6 +14,95 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ### Maximo Application Suite 9.1 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Device and Device Type Setup](monitor_device_devicetype_setup_9.1/)   | [Device Type Creation](monitor_device_devicetype_setup_9.1/overview_configuration)          |
+|                                                                | [Metrics in Device Type](monitor_device_devicetype_setup_9.1/add_metrics)     |
+|                                                                | [Dimension in Device Type](monitor_device_devicetype_setup_9.1/add_dimensions)     |
+|                                                                | [Add and Edit devices](monitor_device_devicetype_setup_9.1/add_edit_device)     |
+|                                                                | [Device Relationship with Asset/Location](monitor_device_devicetype_setup_9.1/device_relation)     |
+|                                                                | [Calculated metrics](monitor_device_devicetype_setup_9.1/add_calc_metrics)     |
+|                                                                | [Dashboard](monitor_device_devicetype_setup_9.1/devicetype_dashboard)     |
+|                                                                | [Archive/Restore/Delete Device Type](monitor_device_devicetype_setup_9.1/archive_devicetype)     |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Hierarchy lab](monitor_managed_hierarchy_9.1/) | [Create Organization](monitor_managed_hierarchy_9.1/create_organization)
+|                                                                        | [Activate Organization](monitor_managed_hierarchy_9.1/activate_organization)
+|                                                                        | [Create Site](monitor_managed_hierarchy_9.1/create_site)
+|                                                                        | [Create Location, System](monitor_managed_hierarchy_9.1/create_location)
+|                                                                        | [Create Asset and Assign Location](monitor_managed_hierarchy_9.1/create_asset)
+|                                                                        | [Create Device-Type & Device in Monitor](monitor_managed_hierarchy_9.1/create_devicetype)
+|                                                                        | [Assign Devices using csv](monitor_managed_hierarchy_9.1/assign_devices)
+|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)   |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Meter/Metric Mapping](monitor_meter_metric_mapping_9.1/)   | [Setup meter/metric mappings](monitor_meter_metric_mapping_9.1/setup)          |
+|                                                                | [View meter data in the Manage UI](monitor_meter_metric_mapping_9.1/view_meter_data/)     |
+|                                                                | [Toggle sync enable/disable](monitor_meter_metric_mapping_9.1/toggle_sync)     |
+|                                                                | [Edit Meter/Metrics Mappings](monitor_meter_metric_mapping_9.1/edit)     |
+|                                                                | [Delete Meter/Metrics Mappings](monitor_meter_metric_mapping_9.1/delete)     |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Alerts Setup](monitor_managed_alerts_9.1/) | [Setup alerts at device type](monitor_managed_alerts_9.1/setup_alert) |
+|                                                              | [View alerts at device/device type](monitor_managed_alerts_9.1/view_alert)                  |
+|                                                                | [Setup alerts at different Hierarchy level](monitor_managed_alerts_9.1/hierarchyAlerts)             |
+|                                                                | [Create service request based on an alert](monitor_managed_alerts_9.1/servicerequest)               |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor MREF](monitor_MREF_9.1/) | [Configure Maximo Real Estate and facilities](monitor_MREF_9.1/configure_MREF)  |
+|                                                  | [Maximo Real Estate and facilities Buildings](monitor_MREF_9.1/mref_buildings)                  |
+|                                                                | [Maximo Real Estate and facilities Location Details](monitor_MREF_9.1/mref_location_details)              |
+|                                                                | [Clean Up](monitor_MREF_9.1/cleanup)               |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Monitor Cisco Webex Integration Lab](monitor_cisco_webex_integration_9.1/) | [Overview and Purpose of using Cisco Webex device](monitor_cisco_webex_integration_9.1/overview) |
+|                                                                | [Integrate Cisco Webex device in MAS Monitor](monitor_cisco_webex_integration_9.1/create_integration)                  |
+|                                                                | [Subscribe to a Cisco Webex device](monitor_cisco_webex_integration_9.1/add_device)             |
+|                                                                | [Assign Cisco Webex device to a location](monitor_cisco_webex_integration_9.1/assign_location)               |
+|                                                                | [Unsubscribe Cisco Webex device](monitor_cisco_webex_integration_9.1/unsubscribe_device)               |
+|                                                                | [Delete Cisco Webex configuration](monitor_cisco_webex_integration_9.1/delete_integartion)               |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Monitor Cisco Spaces Integration Lab](monitor_cisco_spaces_integration_9.1/) | [Cisco Spaces Overview](monitor_cisco_spaces_integration_9.1/cisco_spaces_overview)                              |
+|                                                                                                                                                         | [Generate Activation Token](monitor_cisco_spaces_integration_9.1/generate_activation_token)                      |
+|                                                                                                                                                         | [Configure Cisco Spaces Integration](monitor_cisco_spaces_integration_9.1/cisco_spaces_integration)              |
+|                                                                                                                                                         | [Locations List Overview](monitor_cisco_spaces_integration_9.1/locations_list)                                   |
+|                                                                                                                                                         | [Subscribe Cisco Space Location](monitor_cisco_spaces_integration_9.1/subscribe)                                 |
+|                                                                                                                                                         | [Cisco Spaces Location Metrics](monitor_cisco_spaces_integration_9.1/location_metrics)                           |
+|                                                                                                                                                         | [Generate Heatmap on MREF Location](monitor_cisco_spaces_integration_9.1/heatmap)                                |
+|                                                                                                                                                         | [Unsubscribe Cisco Space Location](monitor_cisco_spaces_integration_9.1/unsubscribe)                            |
+|                                                                                                                                                         | [Edit / Delete Cisco Spaces Configuration](monitor_cisco_spaces_integration_9.1/edit_delete_config)              |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Role Based Access Control](monitor_role_based_access_control_9.1/)                        | [Create Security Groups](monitor_role_based_access_control_9.1/create_security_groups)     |
+| <i>Role-Based Access Control Overview & Use Cases</i>          | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)       |
+|                                                                | [Login and Access Behavior](monitor_role_based_access_control_9.1/user_access_behavior)    |
+|                                                                | [RBAC Demo Scenarios](monitor_role_based_access_control_9.1/demo_scenarios)                |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Custom Function](monitor_custom_function_9.1/) | [Setup Starter Package](monitor_custom_function_9.1/setup_starter_package) |
+|                                                                | [Write Custom Function](monitor_custom_function_9.1/write_custom_function)                  |
+|                                                                | [Register Custom Function](monitor_custom_function_9.1/register_custom_function)             |
+|                                                                | [Apply Custom Function](monitor_custom_function_9.1/apply_custom_function)               |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Aveva PI Scada Historian Integration](monitor_avevapi_scada_historian_integration_9.1/)   | [Add Integrations](monitor_avevapi_scada_historian_integration_9.1/add-integration)     |
+|                                                                | [Verify and Deploy docker](monitor_avevapi_scada_historian_integration_9.1/verify-deploy-docker)     |
+|                                                                | [Device Type, devices and device data in Monitor](monitor_avevapi_scada_historian_integration_9.1/devicetype-device-data-monitor)     |
+|                                                                | [Update Integration](monitor_avevapi_scada_historian_integration_9.1/edit-integration)     |
+|                                                                | [Delete Integration](monitor_avevapi_scada_historian_integration_9.1/delete-integration)     |
+|                                                                | [Reset API Key](monitor_avevapi_scada_historian_integration_9.1/reset-api-key)     |
+
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
 | <i>Custom device from Device library</i>                       | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
 |                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |
@@ -34,14 +123,6 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | [Maximo Monitor Modbus Simulator](monitor_modbus_simulator/)   | [Use the Docker image](monitor_modbus_simulator/docker)          |
 |                                                                | [Use the Node-RED script](monitor_modbus_simulator/node-red)     |
 
-| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Monitor Managed Cisco Webex Integration Lab](monitor_managed_cisco_webex_integration_9.1/) | [Overview and purpose of using Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/overview) |
-|                                                                | [Integrate Cisco Webex device in MAS Monitor](monitor_managed_cisco_webex_integration_9.1/create_integration)                  |
-|                                                                | [Subscribe to a Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/add_device)             |
-|                                                                | [Assign Cisco Webex device to a location](monitor_managed_cisco_webex_integration_9.1/assign_location)               |
-|                                                                | [Unsubscribe Cisco Webex device](monitor_managed_cisco_webex_integration_9.1/unsubscribe_device)               |
-|                                                                | [Delete Cisco Webex configuration](monitor_managed_cisco_webex_integration_9.1/delete_integartion)               |
 
 ### Maximo Application Suite 9.0 
 

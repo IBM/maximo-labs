@@ -1,0 +1,38 @@
+site_name: Monitor Maximo Real Estate and Facilities
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Kajal Lalwani
+site_description: "Monitor Maximo Real Estate and Facilities Lab"
+site_dir: ../../site/monitor_MREF_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor MREF:
+    - Welcome: index.md
+    - Pre-Requisites: prerequisite.md
+  - Exercises:
+        - 1. Configure Maximo Real Estate and facilities: configure_MREF.md
+        - 2. Maximo Real Estate and facilities Buildings: mref_buildings.md
+        - 3. Maximo Real Estate and facilities Location Details: mref_location_details.md
+        - 4. Workplace Analytics dashboards: workplace_dashboard.md
+        - 5. Clean Up: cleanup.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition

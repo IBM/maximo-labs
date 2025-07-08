@@ -12,6 +12,15 @@
 - Graeme Pexton - <jgpexton@us.ibm.com>
 - Lan Cao - <caolan@cn.ibm.com>
 - Rishi Kant - <Rishi.Kant@ibm.com>
+- Kajal Lalwani - <kajal.lalwani@ibm.com>
+- Utsav Patel - <utsav.patel3@ibm.com>
+- Vivek Domadiya - <Vivek.Domadiya@ibm.com>
+- Jignesh Prajapati - <jignesh.prajapati@ibm.com>
+- Radhika Surani - <Radhika.Surani@ibm.com>
+- Mayur Sojitra - <mayur.sojitra@ibm.com>
+- Margi Shah - <margi.shah1@ibm.com>
+- Jvaneel Dwivedi - <Jvaneel.Dwivedi@ibm.com>
+ 
 
 ---
 
@@ -19,7 +28,15 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
-|2025-07-01|Rishi Kant    |Added the initial version of [Monitor Managed Cisco Webex Integration Lab](../monitor_managed_cisco_webex_integration_9.1/) for MAS 9.1. |
+|2025-07-23|Margi Shah     |Added the initial version of [Maximo Monitor Managed Hierarchy lab](../monitor_managed_hierarchy_9.1/) for MAS 9.1. |
+|2025-07-01|Rishi Kant    |Added the initial version of [Monitor Cisco Webex Integration Lab](../monitor_cisco_webex_integration_9.1/) for MAS 9.1. |
+|2025-07-01|Kajal Lalwani    |Added the initial version of [ Monitor Maximo Real Estate and Facilities Lab](../monitor_MREF_9.1/) for MAS 9.1. |
+|2025-07-04|Utsav Patel    |Added the initial version of [Maximo Monitor Alerts lab](../monitor_managed_alerts_9.1/) for MAS 9.1. |
+|2025-06-26|Vivek Domadiya |Added the initial version of [Maximo Monitor Meter/Metric Mapping lab](../monitor_meter_metric_mapping_9.1/) for MAS 9.1. |
+|2025-06-26|Jignesh Prajapati    |Added the initial version of [Maximo Monitor Aveva PI Scada Historian Integration Lab](../monitor_avevapi_scada_historian_integration_9.1/) for MAS 9.1. |
+|2025-07-06|Radhika Surani    |Added the initial version of [Maximo Monitor Custom Function Lab](../monitor_custom_function_9.1/) for MAS 9.1. |
+|2025-07-07|Mayur Sojitra|Added the [Maximo Monitor Device and Device Type Setup lab](../monitor_device_devicetype_setup_9.1/). |
+|2025-07-07|Jvaneel Dwivedi|Added the [Maximo Monitor Role Based Access Control Lab](../monitor_role_based_access_control_9.1/). |
 |2025-06-24|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway OPC UA lab](../monitor_managed_gw_opcua_9.1/) for MAS 9.1. |
 |2025-06-12|Jan Ekstrøm    |Added the initial version of [Maximo Monitor Managed Gateway Modbus lab](../monitor_managed_gw_modbus_9.1/) for MAS 9.1. |
 |2025-06-05|Jan Ekstrøm    |Created a new MAS 9.1 Section and moved the [Maximo Monitor Modbus Simulator lab](../monitor_modbus_simulator/) to that section.|
