@@ -67,7 +67,7 @@ RBAC controls how a user experiences the Monitor application. Based on their ass
 
 **User Info:**
 - Username: `admin_user`  
-- Groups: `MONITOR_ADMIN`
+- Groups: `MONITOR_ADMIN`, `MAXADMIN`
 
 **Expected Behavior:**
 - Full access to **Dashboard and Setup**
@@ -96,7 +96,7 @@ RBAC controls how a user experiences the Monitor application. Based on their ass
 |----------------|------------------|-----------------|--------------|------------------------------------|
 | Readonly User  | ✅ View only      | ❌ No            | ❌ No         | MONITOR_READ_ONLY, MAXADMIN        |
 | Normal User    | ✅ Full access    | ✅ Yes           | ❌ No         | MONITOR_USERS, MAXADMIN            |
-| Admin User     | ✅ Full access    | ✅ Yes           | ✅ Full       | MONITOR_ADMIN                      |
+| Admin User     | ✅ Full access    | ✅ Yes           | ✅ Full       | MONITOR_ADMIN, MAXADMIN            |
 
 ---
 

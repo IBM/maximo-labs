@@ -88,7 +88,7 @@ Users in Monitor must be assigned to one or more Security Groups to determine th
 |----------------|------------------------------------|------------------------------------------------|
 | `readonly_user` | MONITOR_READ_ONLY, MAXADMIN       | View-only Dashboard, no setup access           |
 | `normal_user`   | MONITOR_USERS, MAXADMIN           | Full Dashboard CRUD, no setup access           |
-| `admin_user`    | MONITOR_ADMIN                     | Full access to Dashboard and Setup             |
+| `admin_user`    | MONITOR_ADMIN, MAXADMIN                     | Full access to Dashboard and Setup             |
 
 ---
 
