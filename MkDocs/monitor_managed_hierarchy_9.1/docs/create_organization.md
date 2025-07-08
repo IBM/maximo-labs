@@ -27,6 +27,8 @@ An organization is a top-level entity that represents a business or operational 
 ![Save organization](img/org_images/4_org.png)&nbsp;&nbsp;
 
 !!! note
-    An Orgnanization must be [activated](../activate_organization) after creation.
+    An Orgnanization must be [activate](../activate_organization) after creation.
 
 ---
+
+Congratulations you have successfully created organization.</br>

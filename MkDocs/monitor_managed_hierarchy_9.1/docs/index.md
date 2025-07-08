@@ -1,4 +1,8 @@
 # Welcome to the IBM Maximo Monitor Hierarchy Lab
+
+!!! info
+    This Lab demonstrates how to setup hierarchy from manage and sync in Monitor.
+
 You will learn about Maximo's capabilities to:
 
 * Create an Organization

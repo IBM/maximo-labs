@@ -27,6 +27,7 @@ A device type might represent the physical type of device or represent the type 
 2. Click on Add Devices and fill the Devices details and save it.
 ![Add Devices](img/dt_images/7_dt.png)&nbsp;&nbsp;
 
-To know more about Device and Device Type creation, please go to [Create DeviceType](/monitor_device_devicetype_setup_9.1).
+!!! note
+    To know more about Device and Device Type creation, please go to [Create DeviceType](/monitor_device_devicetype_setup_9.1).
 
 ---

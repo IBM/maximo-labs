@@ -21,6 +21,9 @@ welcome your contributions to existing or new exercises.
 | Assign Devices using CSV                                | 7                    |     15 minutes     |
 | Hierarchy View                                          | 8                    |     2 minutes      |
 
+!!! Note
+    Expected time needed to run the complete Lab: 1 Hour
+
 ---
 
 

@@ -14,6 +14,18 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 ### Maximo Application Suite 9.1 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Hierarchy lab](monitor_managed_hierarchy_9.1/) | [Create Organization](monitor_managed_hierarchy_9.1/create_organization)
+|                                                                        | [Activate Organization](monitor_managed_hierarchy_9.1/activate_organization)
+|                                                                        | [Create Site](monitor_managed_hierarchy_9.1/create_site)
+|                                                                        | [Create Location, System](monitor_managed_hierarchy_9.1/create_location)
+|                                                                        | [Create Asset and Assign Location](monitor_managed_hierarchy_9.1/create_asset)
+|                                                                        | [Create Device-Type & Device in Monitor](monitor_managed_hierarchy_9.1/create_devicetype)
+|                                                                        | [Assign Devices using csv](monitor_managed_hierarchy_9.1/assign_devices)
+|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)
+
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
 | <i>Custom device from Device library</i>                       | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
 |                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |

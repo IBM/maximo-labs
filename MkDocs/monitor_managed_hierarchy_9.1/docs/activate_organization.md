@@ -38,3 +38,5 @@ To Activate organization, we need financial details of our organization.
 ![Active and Save organization](img/activate_imgs/15_org_active.png)&nbsp;&nbsp;
 
 ---
+
+Congratulations you have successfully activated organization.</br>
