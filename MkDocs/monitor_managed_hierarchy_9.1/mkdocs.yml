@@ -1,0 +1,30 @@
+site_name: Monitor Manage Hierarchy Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Margi Shah
+site_description: "Monitor Manage Hierarchy Lab"
+site_dir: ../../site/monitor_managed_hierarchy_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Hierarchy Lab:
+    - Welcome to the Monitor Hierarchy Lab: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Create Organization: create_organization.md
+    - 2. Activate Organization: activate_organization.md
+    - 3. Create Site: create_site.md
+    - 4. Create Location, System: create_location.md
+    - 5. Create Asset and Assign Location: create_asset.md
+    - 6. Create Device-Type & Device in Monitor: create_devicetype.md
+    - 7. Assign Devices: assign_devices.md
+    - 8. Hierarchy View: hierarchy_view.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+
+theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - admonition

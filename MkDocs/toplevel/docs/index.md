@@ -12,6 +12,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 [IMPORTANT HIDDEN COMMENT: Do not alter the header line of the below tables as they use the space accessible, but copy it to new tables when they are created]::
 
 ### Maximo Application Suite 9.1 
+  
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Device and Device Type Setup](monitor_device_devicetype_setup_9.1/)   | [Device Type Creation](monitor_device_devicetype_setup_9.1/overview_configuration)          |
@@ -22,9 +23,9 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                | [Calculated metrics](monitor_device_devicetype_setup_9.1/add_calc_metrics)     |
 |                                                                | [Dashboard](monitor_device_devicetype_setup_9.1/devicetype_dashboard)     |
 |                                                                | [Archive/Restore/Delete Device Type](monitor_device_devicetype_setup_9.1/archive_devicetype)     |
-
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
+
 | [Maximo Monitor Managed Hierarchy lab](monitor_managed_hierarchy_9.1/) | [Create Organization](monitor_managed_hierarchy_9.1/create_organization)
 |                                                                        | [Activate Organization](monitor_managed_hierarchy_9.1/activate_organization)
 |                                                                        | [Create Site](monitor_managed_hierarchy_9.1/create_site)
@@ -32,6 +33,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                        | [Create Asset and Assign Location](monitor_managed_hierarchy_9.1/create_asset)
 |                                                                        | [Create Device-Type & Device in Monitor](monitor_managed_hierarchy_9.1/create_devicetype)
 |                                                                        | [Assign Devices using csv](monitor_managed_hierarchy_9.1/assign_devices)
+|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)
 |                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)   |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
@@ -92,31 +94,29 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                | [Apply Custom Function](monitor_custom_function_9.1/apply_custom_function)               |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | [Maximo Monitor Aveva PI Scada Historian Integration](monitor_avevapi_scada_historian_integration_9.1/)   | [Add Integrations](monitor_avevapi_scada_historian_integration_9.1/add-integration)     |
-|                                                                | [Verify and Deploy docker](monitor_avevapi_scada_historian_integration_9.1/verify-deploy-docker)     |
-|                                                                | [Device Type, devices and device data in Monitor](monitor_avevapi_scada_historian_integration_9.1/devicetype-device-data-monitor)     |
-|                                                                | [Update Integration](monitor_avevapi_scada_historian_integration_9.1/edit-integration)     |
-|                                                                | [Delete Integration](monitor_avevapi_scada_historian_integration_9.1/delete-integration)     |
-|                                                                | [Reset API Key](monitor_avevapi_scada_historian_integration_9.1/reset-api-key)     |
-
+|                                                                | [Verify and Deploy docker](monitor_avevapi_scada_historian_integration_9.1/verify-deploy-docker)                                   |
+|                                                                | [Device Type, devices and device data in Monitor](monitor_avevapi_scada_historian_integration_9.1/devicetype-device-data-monitor)  |
+|                                                                | [Update Integration](monitor_avevapi_scada_historian_integration_9.1/edit-integration)                                             |
+|                                                                | [Delete Integration](monitor_avevapi_scada_historian_integration_9.1/delete-integration)                                           |
+|                                                                | [Reset API Key](monitor_avevapi_scada_historian_integration_9.1/reset-api-key)                                                     |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+|----------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.1/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.1/setup_simulator) |
-| <i>Custom device from Device library</i>                       | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                  |
-|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)             |
-|                                                                | [Deploy and verify data inflow](monitor_managed_gw_opcua_9.1/deploy)               |
-
+| <i>Custom device from Device library</i>                       | [Add a device to library](monitor_managed_gw_opcua_9.1/add_device)                    |
+|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.1/create_gateway)               |
+|                                                                | [Deploy and verify data inflow](monitor_managed_gw_opcua_9.1/deploy)                  |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.1/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.1/setup_simulator)         |
-| <i>Standard device from Device library</i>                     | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)             |
-|                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.1/add_device_1)               |
-|                                                                | [Deploy and verify data inflow](monitor_managed_gw_modbus_9.1/deploy)               |
-|                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.1/add_device_2)          |
-|                                                                | [Deploy and view data in a dashboard](monitor_managed_gw_modbus_9.1/re-deploy)           |
+|----------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway - Modbus](monitor_managed_gw_modbus_9.1/) | [Setup Simulator Environment](monitor_managed_gw_modbus_9.1/setup_simulator) |
+| <i>Standard device from Device library</i>                     | [Create a Managed Gateway](monitor_managed_gw_modbus_9.1/create_gateway)                |
+|                                                                | [Add an industrial device](monitor_managed_gw_modbus_9.1/add_device_1)                  |
+|                                                                | [Deploy and verify data inflow](monitor_managed_gw_modbus_9.1/deploy)                   |
+|                                                                | [Add another industrial device](monitor_managed_gw_modbus_9.1/add_device_2)             |
+|                                                                | [Deploy and view data in a dashboard](monitor_managed_gw_modbus_9.1/re-deploy)          |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -128,19 +128,19 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Application Suite 9.0 Overview](mas_9.0/)              | [Reliability Strategies](mas_9.0/demo-rsl)                            |
-|                                                                | [Monitor](mas_9.0/demo-monitor)                                       |
-|                                                                | [Visual Inspection](mas_9.0/demo-mvi)                                 |
-|                                                                | [Manage](mas_9.0/demo-manage)                                 |
-|                                                                | [Mobile](mas_9.0/demo-mobile-assist)                                            |
-|                                                                | [Understand Asset Health and Predictive Maintenance](mas_9.0/demo-health-predict)|
+| [Maximo Application Suite 9.0 Overview](mas_9.0/)              | [Reliability Strategies](mas_9.0/demo-rsl)                                         |
+|                                                                | [Monitor](mas_9.0/demo-monitor)                                                    |
+|                                                                | [Visual Inspection](mas_9.0/demo-mvi)                                              |
+|                                                                | [Manage](mas_9.0/demo-manage)                                                      |
+|                                                                | [Mobile](mas_9.0/demo-mobile-assist)                                               |
+|                                                                | [Understand Asset Health and Predictive Maintenance](mas_9.0/demo-health-predict). |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+|----------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway - OPC UA](monitor_managed_gw_opcua_9.0/) | [Setup Simulator Environment](monitor_managed_gw_opcua_9.0/setup_simulator) |
-|                                                                | [Add a device to library](monitor_managed_gw_opcua_9.0/add_device)                  |
-|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.0/create_gateway)             |
-|                                                                | [Deploy and verify connectivity](monitor_managed_gw_opcua_9.0/deploy)               |
+|                                                                | [Add a device to library](monitor_managed_gw_opcua_9.0/add_device)                    |
+|                                                                | [Create a Managed Gateway](monitor_managed_gw_opcua_9.0/create_gateway)               |
+|                                                                | [Deploy and verify connectivity](monitor_managed_gw_opcua_9.0/deploy)                 |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -151,7 +151,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [MAS TechZone Base Certified Image](mas_techzone_base/)        | [Instantiate a TechZone Certified Base Image](mas_techzone_base/instantiate)       |
 |                                                                | [Prepare For Use](mas_techzone_base/prepare_for_use)                               |
-|                                                                | [Update MAS](mas_techzone_base/update_mas)                                       |
+|                                                                | [Update MAS](mas_techzone_base/update_mas)                                         |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -233,6 +233,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                            | [Connect Mobile Device in Monitor](mas_monitor_connect/connect_device)                       |              
 |                                            | [Verify Data Sent to Monitor](mas_monitor_connect/verify_data)                               |
  
+  
 ### Maximo Application Suite 8.8
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |-----------------------------------------------|-------------------------------------------------------------------------------------|
@@ -256,6 +257,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                               | [Connect Mobile Device in Monitor](mas_monitor_connect/connect_device)              |              
 |                                               | [Verify Data Sent to Monitor](mas_monitor_connect/verify_data)                      |
 
+  
 ### Maximo Application Suite 8.7
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------|-------------------------------------------------------------------------------------|
@@ -277,6 +279,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | [Monitor Asset Hierarchy](mas_monitor_hierarchy/)  | [Create Hierarchy](mas_monitor_hierarchy/create_hierarchy)                          |              
 |                                                    | [Assign Devices](mas_monitor_hierarchy/assign_devices)                              |
 
+  
 ### Maximo Application Suite 8.6
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |---------------------------------------------------------------------|---------------------------------------------------------------------------------------|
