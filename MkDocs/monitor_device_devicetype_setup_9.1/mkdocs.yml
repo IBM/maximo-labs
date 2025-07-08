@@ -1,0 +1,41 @@
+site_name: Device and device type setup
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Mayur Sojitra
+site_description: "Maximo Monitor Device and device type setup Lab"
+site_dir: ../../site/monitor_device_devicetype_setup_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Device and device type setup Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Device Type Creation: overview_configuration.md
+        - 2. Metrics in Device Type: add_metrics.md
+        - 3. Dimension in Device Type: add_dimensions.md
+        - 4. Add and Edit devices: add_edit_device.md
+        - 5. Device Relationship with Asset/Location: device_relation.md
+        - 6. Calculated metrics: add_calc_metrics.md
+        - 7. Dashboard: devicetype_dashboard.md
+        - 8. Archive/Restore/Delete Device Type: archive_devicetype.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
