@@ -7,7 +7,7 @@ In this Exercise you will learn how to:
 #### Before you begin  
 This Exercise requires that you have:
 
-* Review the [Monitor Device Type and Devices](/monitor_device_devicetype_setup_9.1/) lab to gain a foundational understanding of device types and devices.
+* Review the [Monitor Device Type and Devices](https://ibm.github.io/maximo-labs/monitor_device_devicetype_setup_9.1/) lab to gain a foundational understanding of device types and devices.
 * Set up a sample device type and a corresponding device.
 
 In this lab, a device type has been configured with two metrics: temperature and pressure.
