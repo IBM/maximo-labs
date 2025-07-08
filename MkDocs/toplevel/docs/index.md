@@ -81,7 +81,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Role Based Access Control](monitor_role_based_access_control_9.1/)                        | [Create Security Groups](monitor_role_based_access_control_9.1/create_security_groups)     |
-| <i>Role-Based Access Control Overview & Use Cases</i>          | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)       |
+|          | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)       |
 |                                                                | [Login and Access Behavior](monitor_role_based_access_control_9.1/user_access_behavior)    |
 |                                                                | [RBAC Demo Scenarios](monitor_role_based_access_control_9.1/demo_scenarios)                |
 
