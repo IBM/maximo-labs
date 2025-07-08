@@ -23,10 +23,10 @@ Expand Setup under the Monitor setup section in the left menu and select `Integr
 Select `Add Integration`:</br>
 ![Create Integration](img/create_integration_3.png)</br></br>
 
-Select `Cisco Webex`:</br>
+Select `Cisco Webex` and click `Next`:</br>
 ![Select Cisco Webex](img/create_integration_4.png)</br></br>
 
-Define the Integration name `Integration name`, JWT Token `Activation key`, Device client ID `Device client ID` and Device client secret `Device client secret` and click `Next`:</br>
+Define the Integration name `Integration name`, JWT Token `Activation key`, Device client ID `Device client ID` and Device client secret `Device client secret`:</br>
 ![Select Cisco Webex](img/create_integration_5.png)</br></br>
 
 !!! tip

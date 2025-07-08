@@ -23,7 +23,7 @@ After click `Edit`, it will show `edit integration` page where we can update the
 After mentioned updated configuration click `Finish`. It will update these details in System.</br>
 
 !!! note
-    We will not be able to edit the Integration Name as with that name we have already created a Webex Device Type in Monitor.
+    We cannot edit the Integration Name, as it is already in use for a Webex Device Type in Monitor.
 
 ---
 
@@ -49,7 +49,7 @@ On click `Delete` button, it will show pop-up for confirmation with `Delete` and
 ![delete integration](img/delete_integartion_4.png)</br></br>
 
 !!! note
-    After confirm the delete it will also delete the Cisco Webex device type that has been created in Monitor.
+    Upon confirming the deletion, the corresponding Cisco Webex device type in Monitor will also be removed.
 
 
 ---
