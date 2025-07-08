@@ -29,6 +29,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2025-07-07|Bihag Gandhi   |Added the initial version of [Maximo Monitor Cisco Spaces Integration lab](../monitor_cisco_spaces_integration_9.1/) for MAS 9.1. |
 |2025-07-23|Margi Shah     |Added the initial version of [Maximo Monitor Managed Hierarchy lab](../monitor_managed_hierarchy_9.1/) for MAS 9.1. |
 |2025-07-01|Rishi Kant    |Added the initial version of [Monitor Cisco Webex Integration Lab](../monitor_cisco_webex_integration_9.1/) for MAS 9.1. |
 |2025-07-01|Kajal Lalwani    |Added the initial version of [ Monitor Maximo Real Estate and Facilities Lab](../monitor_MREF_9.1/) for MAS 9.1. |
