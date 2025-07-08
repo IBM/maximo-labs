@@ -1,0 +1,42 @@
+site_name: Monitor Cisco Spaces Integration Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Bihag Gandhi
+site_description: "Maximo Monitor 9.1 Cisco Spaces Integration Lab"
+site_dir: ../../site/monitor_cisco_spaces_integration_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Cisco Spaces Integration Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Cisco spaces overview: cisco_spaces_overview.md
+        - 2. Generate activation token: generate_activation_token.md
+        - 3. Configure cisco spaces integration: cisco_spaces_integration.md
+        - 4. Locations list overview: locations_list.md
+        - 5. Subscribe cisco space location: subscribe.md
+        - 6. Cisco spaces location metrics: location_metrics.md
+        - 7. Generate heatmap on MREF location : heatmap.md
+        - 8. Unsubscribe cisco space location : unsubscribe.md
+        - 9. Edit / Delete cisco spaces configuration: edit_delete_config.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
