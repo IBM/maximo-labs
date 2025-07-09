@@ -3,7 +3,17 @@ In this Exercise you will learn how to:
 
 * Assign devices to the hierarchy
 
-Assign IT devices to assets by using a CSV template file and import it. Devices are always grouped by their device type.
+---
+*Before you begin:*  
+This Exercise requires that you have:
+
+1. completed the pre-requisites required for [all labs](prereqs.md)
+2. completed the previous exercises
+
+---
+
+!!! info
+    Assign IT devices to assets by using a CSV template file and import it. Devices are always grouped by their device type.
 
 ## 
 The CSV file to assign devices for our functional company that manages transportation networks looks like this:
@@ -30,7 +40,7 @@ The CSV file to assign devices for our functional company that manages transport
 ---
 
 !!! note
-    You can also assign devices another way, please refer [assign Device](/monitor_device_devicetype_setup_9.1/device_relation).
+    You can also assign devices another way, please refer [assign Device](../../monitor_device_devicetype_setup_9.1/device_relation).
 
 
 

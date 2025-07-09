@@ -3,7 +3,17 @@ In this Exercise you will learn how to:
 
 * Activate Organization
 
-To Activate organization, we need financial details of our organization.
+---
+*Before you begin:*  
+This Exercise requires that you have:
+
+1. completed the pre-requisites required for [all labs](prereqs.md)
+2. completed the previous exercises
+
+---
+
+!!! info
+    To Activate organization, we must have financial details of our organization.
 
 1. To Activate organization, we need to Create clearing account in the chart of accounts. So naviagte to Chart of Accounts from Financial Section.
 ![Naviagate Charts of Accounts](img/activate_imgs/1_org_active.png)&nbsp;&nbsp;

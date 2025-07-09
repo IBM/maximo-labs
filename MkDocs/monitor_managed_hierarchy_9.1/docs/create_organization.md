@@ -3,7 +3,17 @@ In this Exercise you will learn how to:
 
 * Create Organization
 
-An organization is a top-level entity that represents a business or operational unit responsible for managing a set of assets, locations, and financial records.
+---
+*Before you begin:*  
+This Exercise requires that you have:
+
+1. completed the pre-requisites required for [all labs](prereqs.md)
+2. completed the previous exercises
+
+---
+
+!!! info
+    An organization is a top-level entity that represents a business or operational unit responsible for managing a set of assets, locations, and financial records.
 
 1. Navigate to Organizations under Administration section. Click New Organization.
 ![Naviagate organization](img/org_images/1_org.png)&nbsp;&nbsp;
