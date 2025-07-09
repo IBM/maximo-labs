@@ -3,7 +3,17 @@ In this Exercise you will learn how to:
 
 * Create DeviceType and Device
 
-A device type might represent the physical type of device or represent the type of asset or entity that the device is used for.
+---
+*Before you begin:*  
+This Exercise requires that you have:
+
+1. completed the pre-requisites required for [all labs](prereqs.md)
+2. completed the previous exercises
+
+---
+
+!!! info
+    A device type might represent the physical type of device or represent the type of asset or entity that the device is used for.
 
 1. Navigate to Setup under Monitor Section and click on Device types.
 ![DeviceType](img/dt_images/1_dt.png)&nbsp;&nbsp;
@@ -28,6 +38,6 @@ A device type might represent the physical type of device or represent the type 
 ![Add Devices](img/dt_images/7_dt.png)&nbsp;&nbsp;
 
 !!! note
-    To know more about Device and Device Type creation, please go to [Create DeviceType](/monitor_device_devicetype_setup_9.1).
+    To know more about Device and Device Type creation, please go to [Create DeviceType](/../monitor_device_devicetype_setup_9.1).
 
 ---

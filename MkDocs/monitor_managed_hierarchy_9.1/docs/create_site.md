@@ -3,7 +3,17 @@ In this Exercise you will learn how to:
 
 * Create Site
 
-In the Maximo application, Each Site configured under the Organization inherits information and settings from the Organization level. Each organization can have multiple sites.
+---
+*Before you begin:*  
+This Exercise requires that you have:
+
+1. completed the pre-requisites required for [all labs](prereqs.md)
+2. completed the previous exercises
+
+---
+
+!!! info
+    In the Maximo application, Each Site configured under the Organization inherits information and settings from the Organization level. Each organization can have multiple sites.
 
 1. In the left side Menu, navigate to Organizations and select the organization that you want to add Site.
 ![New site](img/site_images/1_site.png)&nbsp;&nbsp;

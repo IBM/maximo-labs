@@ -3,7 +3,17 @@ In this Exercise you will learn how to:
 
 * Create Location, System
 
-Assign the location to system to ensure it is properly integrated and accessible across our maximo application suite.
+---
+*Before you begin:*  
+This Exercise requires that you have:
+
+1. completed the pre-requisites required for [all labs](prereqs.md)
+2. completed the previous exercises
+
+---
+
+!!! info
+    Assign the location to system to ensure it is properly integrated and accessible across our maximo application suite.
 
 1. Navigate to Locations under Assets section.
 ![New Location](img/loc_images/2_loc.png)&nbsp;&nbsp;
