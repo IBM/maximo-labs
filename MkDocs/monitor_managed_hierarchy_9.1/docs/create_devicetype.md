@@ -38,6 +38,6 @@ This Exercise requires that you have:
 ![Add Devices](img/dt_images/7_dt.png)&nbsp;&nbsp;
 
 !!! note
-    To know more about Device and Device Type creation, please go to [Create DeviceType](/../monitor_device_devicetype_setup_9.1).
+    To know more about Device and Device Type creation, please go to [Create DeviceType](../../monitor_device_devicetype_setup_9.1).
 
 ---

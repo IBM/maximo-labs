@@ -40,7 +40,7 @@ The CSV file to assign devices for our functional company that manages transport
 ---
 
 !!! note
-    You can also assign devices another way, please refer [assign Device](/../monitor_device_devicetype_setup_9.1/device_relation).
+    You can also assign devices another way, please refer [assign Device](../../monitor_device_devicetype_setup_9.1/device_relation).
 
 
 
