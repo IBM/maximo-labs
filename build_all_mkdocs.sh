@@ -244,15 +244,23 @@ mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 
-# Build the Monitor Managed Cisco Webex Integration 9.1 level:
-lab=monitor_managed_cisco_webex_integration_9.1
+# Build the Maximo Monitor Cisco Webex Integration 9.1 level:
+lab=monitor_cisco_webex_integration_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Monitor Maximo Real Estate and Facilities level:
+# Build the Maximo Monitor Cisco Spaces Integration 9.1 level:
+lab=monitor_cisco_spaces_integration_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Maximo Monitor Real Estate and Facilities level:
 lab=monitor_MREF_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"

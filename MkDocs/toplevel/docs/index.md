@@ -23,9 +23,9 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                | [Calculated metrics](monitor_device_devicetype_setup_9.1/add_calc_metrics)     |
 |                                                                | [Dashboard](monitor_device_devicetype_setup_9.1/devicetype_dashboard)     |
 |                                                                | [Archive/Restore/Delete Device Type](monitor_device_devicetype_setup_9.1/archive_devicetype)     |
+
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-
 | [Maximo Monitor Managed Hierarchy lab](monitor_managed_hierarchy_9.1/) | [Create Organization](monitor_managed_hierarchy_9.1/create_organization)
 |                                                                        | [Activate Organization](monitor_managed_hierarchy_9.1/activate_organization)
 |                                                                        | [Create Site](monitor_managed_hierarchy_9.1/create_site)
@@ -33,8 +33,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                        | [Create Asset and Assign Location](monitor_managed_hierarchy_9.1/create_asset)
 |                                                                        | [Create Device-Type & Device in Monitor](monitor_managed_hierarchy_9.1/create_devicetype)
 |                                                                        | [Assign Devices using csv](monitor_managed_hierarchy_9.1/assign_devices)
-|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)
-|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)   |
+|                                                                        | [Hierarchy View](monitor_managed_hierarchy_9.1/hierarchy_view)  |                                                                   
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -53,14 +52,14 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor MREF](monitor_MREF_9.1/) | [Configure Maximo Real Estate and facilities](monitor_MREF_9.1/configure_MREF)  |
+| [Maximo Monitor Real Estate and Facilities](monitor_MREF_9.1/) | [Configure Maximo Real Estate and facilities](monitor_MREF_9.1/configure_MREF)  |
 |                                                  | [Maximo Real Estate and facilities Buildings](monitor_MREF_9.1/mref_buildings)                  |
 |                                                                | [Maximo Real Estate and facilities Location Details](monitor_MREF_9.1/mref_location_details)              |
 |                                                                | [Clean Up](monitor_MREF_9.1/cleanup)               |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Monitor Cisco Webex Integration Lab](monitor_cisco_webex_integration_9.1/) | [Overview and Purpose of using Cisco Webex device](monitor_cisco_webex_integration_9.1/overview) |
+| [Maximo Monitor Cisco Webex Integration Lab](monitor_cisco_webex_integration_9.1/) | [Overview and Purpose of using Cisco Webex device](monitor_cisco_webex_integration_9.1/overview) |
 |                                                                | [Integrate Cisco Webex device in MAS Monitor](monitor_cisco_webex_integration_9.1/create_integration)                  |
 |                                                                | [Subscribe to a Cisco Webex device](monitor_cisco_webex_integration_9.1/add_device)             |
 |                                                                | [Assign Cisco Webex device to a location](monitor_cisco_webex_integration_9.1/assign_location)               |
@@ -69,7 +68,7 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Monitor Cisco Spaces Integration Lab](monitor_cisco_spaces_integration_9.1/) | [Cisco Spaces Overview](monitor_cisco_spaces_integration_9.1/cisco_spaces_overview)                              |
+| [Maximo Monitor Cisco Spaces Integration Lab](monitor_cisco_spaces_integration_9.1/) | [Cisco Spaces Overview](monitor_cisco_spaces_integration_9.1/cisco_spaces_overview)                              |
 |                                                                                                                                                         | [Generate Activation Token](monitor_cisco_spaces_integration_9.1/generate_activation_token)                      |
 |                                                                                                                                                         | [Configure Cisco Spaces Integration](monitor_cisco_spaces_integration_9.1/cisco_spaces_integration)              |
 |                                                                                                                                                         | [Locations List Overview](monitor_cisco_spaces_integration_9.1/locations_list)                                   |
@@ -82,9 +81,8 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Role Based Access Control](monitor_role_based_access_control_9.1/)                        | [Create Security Groups](monitor_role_based_access_control_9.1/create_security_groups)     |
-| <i>Role-Based Access Control Overview & Use Cases</i>          | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)       |
+|          | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)       |
 |                                                                | [Login and Access Behavior](monitor_role_based_access_control_9.1/user_access_behavior)    |
-|                                                                | [RBAC Demo Scenarios](monitor_role_based_access_control_9.1/demo_scenarios)                |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
