@@ -1,12 +1,12 @@
-site_name: Monitor Cisco Webex Integration Lab
+site_name: Maximo Monitor Cisco Webex Integration Lab
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Rishi Kant
-site_description: "Monitor Cisco Webex Integration Lab"
+site_description: "Maximo Monitor Cisco Webex Integration Lab"
 site_dir: ../../site/monitor_cisco_webex_integration_9.1
 
 nav:
   - Get back to Maximo Labs: ..
-  - Monitor Cisco Webex Integration Lab:
+  - Maximo Monitor Cisco Webex Integration Lab:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:
