@@ -27,7 +27,7 @@ Once inside the location page, view the **Metrics** section to see Cisco Spaces 
      ![Metrics](img/metrics_section.png)
 ---
 
-## 📊 Metrics Fetched from Cisco Spaces
+## Metrics Fetched from Cisco Spaces
 
 Below is the list of key metrics received from Cisco Spaces.
 
@@ -94,7 +94,7 @@ Y-coordinate of user position within the mapped space.
 
 ---
 
-## 📐 Dimensions Fetched from Cisco Spaces
+## Dimensions Fetched from Cisco Spaces
 
 In addition to event metrics, Cisco Spaces also provides **dimension details** configured during the subscription phase. These include:
 
