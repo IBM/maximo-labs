@@ -21,10 +21,20 @@ o Click `Create an IBM ID` link
 
 4.  Test your access to the Maximo Application Suite environment.
 
-# Exercise 
+# Exercise
 
 > - You must have access to the [dnaspaces.io login page](https://dnaspaces.io/login) to continue with this exercise.
+
+![DNA Space Login Page](img/dnaspace_login.png){width=50% height=30%}
 >
-> - We need access to dnaspaces.io to get an activation token (JWT token). This token will generate the activation key that will fetch Cisco Spaces locations.
+> - Access to Cisco Spaces is required in order to generate an **Activation Token (JWT token)**. This token will be used to generate the **Activation Key** that allows MAS Monitor to fetch Cisco Spaces location data.
 >
-> ![DNA Space Login Page](img/dnaspace_login.png)
+> - You must have **MREF locations synced**, as Cisco Spaces locations can only be subscribed to **MREF floor locations** in MAS Monitor.
+
+> ⚠️ If you haven't completed the [Maximo Monitor Real Estate and Facilities (MREF)](/monitor_MREF_9.1/) lab, it is **strongly recommended** to complete that lab **before starting** the Maximo Monitor Cisco Spaces Integration Lab.
+
+> ⚠️ If you haven't completed the [Maximo Monitor Cisco Webex Integration Lab](/monitor_cisco_webex_integration_9.1/), it is **strongly recommended** to complete that as well.  
+> Only after assigning a **Cisco Webex device** to an MREF Floor and Space you will be able to retrieve the **Floor Plan** from MREF.  
+> This Floor Plan is essential for generating **Heat Maps**, which are used to **visualize user movement patterns** on the floor.
+
+

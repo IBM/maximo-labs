@@ -17,12 +17,12 @@ This guide explains how to configure Cisco Spaces integration in IBM MAS Monitor
 3. **Add a New Integration**  
    On the Integrations screen, click the **Add Integration** button to start configuring a new integration.
 
-    ![Add Integration](img/add_Integration.png){ width=70% height=30% }
+    ![Add Integration](img/add_Integration.png)
 
 4. **Select Cisco Spaces as the Integration Type**  
    In the integration configuration dialog, choose **Cisco Spaces** as the integration type.
 
-    ![Cisco Space integration](img/cisco_space_int.png){ width=70% height=30% }
+    ![Cisco Space integration](img/cisco_space_int.png)
 
 5. **Provide Integration Details**  
     - Enter a meaningful **Integration Name**. <br>
@@ -35,15 +35,16 @@ This guide explains how to configure Cisco Spaces integration in IBM MAS Monitor
         - Verify the token has not been used previously for activation. Once a token is activated, an activation key is stored in the database, making that token unusable for any other integration. One token can only be used for a single configuration.
         - Only a correct and valid token will be saved successfully; otherwise, the integration setup will fail with an error.
 
-    ![Cisco Space add config](img/add_config.png){ width=70% height=30% }
+    ![Cisco Space add config](img/add_config.png)
 
 6. **Verify Integration**  
    Once the integration is added successfully, its details will appear on the **Integrations list** page. This confirms that the configuration has been saved.
 
-    ![Cisco Spaces configuration](img/cisco_spaces_config.png){ width=70% height=30% }
+    ![Cisco Spaces configuration](img/cisco_spaces_config.png)
 
 7. **View locations **  
    Within a few minutes, the list of locations associated with the Activation Token will be fetched automatically from Cisco Spaces and displayed in MAS Monitor.
 
+    ![Locations not fetched](img/locations_not_fetched.png)
 
 ---
