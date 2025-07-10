@@ -24,6 +24,15 @@ portfolio.  The labs are in different states of readiness for use shown below. F
 |                                                                | [Dashboard](monitor_device_devicetype_setup_9.1/devicetype_dashboard)     |
 |                                                                | [Archive/Restore/Delete Device Type](monitor_device_devicetype_setup_9.1/archive_devicetype)     |
 
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Adding custom Modbus device](monitor_modbus_custom_device_9.1/) | [Setup Simulator Environment](monitor_modbus_custom_device_9.1/setup_simulator) |
+| <i>Custom device from Device library</i>                       | [Add a device to library](monitor_modbus_custom_device_9.1/add_device_using_CSV)                  |
+|                                                                | [Create a Managed Gateway](monitor_modbus_custom_device_9.1/create_gateway_with_device)             |
+|                                                                | [Deploy and verify data inflow](monitor_modbus_custom_device_9.1/deploy)               |
+
+
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Hierarchy lab](monitor_managed_hierarchy_9.1/) | [Create Organization](monitor_managed_hierarchy_9.1/create_organization)

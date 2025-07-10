@@ -1,0 +1,37 @@
+site_name: Monitor Managed Gateway Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Saravanan Krishnamoorthy
+site_description: "Maximo Monitor Modbus Custom device upload"
+site_dir: ../../site/monitor_modbus_custom_device_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Managed GW OPC UA Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Setup Simulator Environment: setup_simulator.md
+        - 2. Add device to Device library: add_device_using_CSV.md
+        - 3. Create a Managed Gateway: create_gateway_with_device.md
+        - 4. Deploy and verify data inflow: deploy.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - admonition
