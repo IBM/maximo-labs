@@ -28,6 +28,9 @@ o Click `Create an IBM ID` link
 
 ## Exercise 1 - Add a meter to an Asset or Location in Maximo Manage
 
+!!! Note
+    To create Assets and Locations, refer to the step-by-step instructions in the [Maximo Monitor Hierarchy Lab](../../monitor_managed_hierarchy_9.1).
+
 ### Add a meter to an Asset
 
 1. Log in to MAS and navigate to Asset page ( **Manage → Assets → Assets** ) in Manage UI:<br/>
@@ -67,7 +70,7 @@ o Click `Create an IBM ID` link
 ## Exercise 2 - Create and Assign a Device with Metric
 
 !!! Note
-    Refer to the step-by-step instructions in the [Device and Device type Setup Lab](/monitor_device_devicetype_setup_9.1/) for this exercise.
+    Refer to the step-by-step instructions in the [Device and Device type Setup Lab](../../monitor_device_devicetype_setup_9.1/) for this exercise.
 
 1. Create a device with metric in the Monitor UI.
 2. Turn on the data simulator for the device.
