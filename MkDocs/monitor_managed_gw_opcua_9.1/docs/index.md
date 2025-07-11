@@ -3,7 +3,7 @@
 !!! info
     This Maximo Monitor lab demonstrates the use of a custom device from the Device library.
 
-In this lab you will learn the steps needed to successfully use an OPC UA simulator to act as a Siemens S7 PLC and get the data from the Siemens S7 into Maximo Monitor using a Managed Gateway. .</br></br>
+In this lab you will learn the steps needed to successfully use an OPC UA simulator to act as a Siemens S7 PLC and get the data from the Siemens S7 into Maximo Monitor using a Managed Gateway.</br></br>
 
 ![Architecture](img/index_02.png)</br></br>
 
