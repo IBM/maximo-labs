@@ -33,7 +33,7 @@ Open a terminal window (Mac/Linux) or Command window (Windows) where you want to
 
 ## Verify the selected Lenze VFD data flowing into Monitor
 
-Click to open the `XX_Lenze_i550_01` device:
+Click to open the `XX_Lenze_i550` device:
 ![Open the Lenze device](img/deploy_verify_03.png)</br></br>
 
 Navigate to `Recent event` and wait for a minute (you know those 60000ms defined when adding the device) until the first message is coming through.</br>
@@ -46,13 +46,13 @@ These are the data points that you selected when adding the device to the Manage
 
 ``` json
 {
-    "timestamp": "2025-07-02T12:54:29.555160Z",
-    "actual-torque-K2JPB_percent": 0,
-    "dc-bus-voltage-M5I36_volt": 0,
-    "frequency-1LE5P_hertz": 0,
-    "heatsink-temperature-2K4ZY_degreeCelsius": 0,
-    "motor-current-O5WV9_ampere": 0,
-    "motor-voltage-EOZE8_volt": 0
+    "timestamp": "2025-07-11T06:44:12.542628Z",
+    "actual-torque-NP75X_percent": 62.900000000000006,
+    "dc-bus-voltage-7EVKN_volt": 415,
+    "frequency-99T9D_hertz": 37.25,
+    "heatsink-temperature-Z17QE_degreeCelsius": 24.8,
+    "motor-current-R0KJF_ampere": 87,
+    "motor-voltage-DNNOO_volt": 699
 }
 ```
 </br>

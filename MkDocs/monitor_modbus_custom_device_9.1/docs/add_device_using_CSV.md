@@ -56,7 +56,7 @@ Click `Add device to library` and select `Import device settings` option:</br>
 | <i>Unit</i>     | This column indicates the unit in which the data is reported for a specific datapoint. This is an optional parameter as not all datapoints require a unit. |
 | <i>Multiplier</i>     |Used to get the exact values from the raw values </br> In the example for Acutal torque it is x.x % as defined, so the multiplier is `0.1`. Not applicable for float, string, bool data types. |
 | <i>Function Code[FC]</i>     |Function codes are usually decided based on the starting number of register number (old Modicon notation). In the example, 4xxxx and 3xxxx registers mean Holding registers[FC3] and Input registers[FC4] respectively. |
-| <i>Register_Offset</i>     |In the example, register offset is required the address 0 is used in the frame.</br> when register 40001 is read. The register offset is the amount that needs to be added to the Register address to obtain the real Modbus Decimal address.</br> Since the register is in the FC format (i.e. 42013), we have added -42001 offset. If the register address was 4097, offset would need to be just -1 |
+| <i>Register_Offset</i>     |In the example, register offset is required the address 0 is used in the frame.</br> when register 40001 is read. The register offset is the amount that needs to be added to the Register address to obtain the real Modbus Decimal address.</br> Since the register is in the FC format (i.e. 42013), we have added -40001 offset. If the register address was 4097, offset would need to be just -1 |
 
 
 - For filling the `metrics` sheet, please refer `Sample Metrics Format`sheet.

@@ -24,6 +24,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2025-06-24**
+**Updated: 2025-07-11**
 
 ---

@@ -12,6 +12,6 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2025-06-12|Saravanan Krishnamoorthy|Lab is ready for the first release           |
+|2025-07-11|Saravanan Krishnamoorthy|Lab is ready for the first release           |
 
 ---

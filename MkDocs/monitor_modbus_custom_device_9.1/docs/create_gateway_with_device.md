@@ -25,7 +25,7 @@ Expand Setup under the Monitor section in the left menu and select Gateways:
 Select `Add gateway`:
 ![Create Gateway](img/create_gateway_03.png)</br></br>
 
-Define the gateway ID `XX_MGT_GW_01` and the gateway Type `XX_MGT_GW`.
+Define the gateway ID `XX_MGD_GW_01` and the gateway Type `XX_MGD_GW_01`.
 
 !!! tip
     XX in the gateway ID and Type should be your initials in case other people are following this lab in the same Maximo Application Suite environment.
@@ -80,7 +80,7 @@ Click on `Next`;
     Do not change the `Server or unit ID` as the simulator does not support it.</br>
 
 </br>
-Define the Device ID as `XX_Lenze_i550_01` where you replace XX with your initials.</br>
+Define the Device ID as `XX_Lenze_i550` where you replace XX with your initials.</br>
 You can see the Product Type of the industrial device you have chosen, i.e. Variable Frequency Drives for the Lenze i550.</br>
 Click on the `Device type` and you should see this:
 ![Configure Device ID](img/add_device_07.png)</br></br>
