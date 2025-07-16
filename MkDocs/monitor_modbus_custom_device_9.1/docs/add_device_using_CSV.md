@@ -4,8 +4,9 @@ In this Exercise you will learn how to add a custom Modbus device to the Device 
 ---
 *Before you begin:*  
 This Exercise requires that you have:
-    1. completed the pre-requisites required for [all labs](prereqs.md)
-    2. completed the previous exercises
+
+1. completed the pre-requisites required for [all labs](prereqs.md)
+2. completed the previous exercises
 
 ---
 
@@ -63,7 +64,7 @@ Click `Add device to library` and select `Import device settings` option:</br>
 ![Import device settings](img/device_library_11.png)</br>
 
 !!! note
-    Once completed the required datapoint details in Metrics sheet, kindly save as CSV format for uploading.  </br>
+    Once the required datapoint details is filled to the Metrics sheet, kindly save the Excel file `Metrics` as CSV format for uploading. </br>
 
 ![Import device settings](img/device_library_11_1.png)</br>
 
