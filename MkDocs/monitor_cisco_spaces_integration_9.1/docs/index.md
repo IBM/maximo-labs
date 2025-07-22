@@ -1,7 +1,7 @@
 # Welcome to the Maximo Monitor 9.1 </br>Monitor Cisco Spaces Integration Lab
 
 !!! info
-    This hands-on lab demonstrates how to integrate Cisco Spaces with Maximo Monitor 9.1.
+    This hands-on lab demonstrates how to integrate Cisco Spaces with Maximo Monitor 9.0 and onwards.
 
 In this lab, you will explore Cisco Spaces and learn how to set up its integration with Maximo Monitor. You will perform step-by-step exercises to configure Cisco Spaces, assign it to an MREF location, and analyze the various metrics it generates.
 
