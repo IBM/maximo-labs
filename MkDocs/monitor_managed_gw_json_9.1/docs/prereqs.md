@@ -30,4 +30,4 @@ One multi platform option is Rancher Desktop. It is fairly easy to install Ranch
 as you just have to follow this guide: [Running Docker locally](https://docs.rancherdesktop.io/getting-started/installation/){target=_blank}</br>
 
 !!! tip
-    Podman and Docker Desktop should also work, but I have not tested it.
+    Podman and Docker Desktop should also work the same way.

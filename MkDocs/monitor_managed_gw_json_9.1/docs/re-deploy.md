@@ -30,10 +30,6 @@ Get back to the terminal and then paste the docker command line from the clipboa
 Click enter to execute it, and you should see something similar to the following:
 ![Start new container](img/re-deploy_03.png)</br>
 
-!!! tip
-	You can see that you successfully have connections to both the simulatorsLenze i550 VFD's on ports: 10502 and 20502.</br>
-
-
 ## View data in Device data table
 
 Click to open the `Json-over-http_Simulator-3` device:
