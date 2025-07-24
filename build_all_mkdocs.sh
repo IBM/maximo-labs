@@ -261,7 +261,7 @@ mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 # Build the Maximo Monitor Real Estate and Facilities level:
-lab=monitor_MREF_9.1
+lab=monitor_MREF_integration_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
@@ -269,7 +269,7 @@ mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 # Build the Monitor Maximo alerts:
-lab=monitor_managed_alerts_9.1
+lab=monitor_alerts_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
@@ -317,7 +317,7 @@ mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 # Build the Monitor Managed Gatewway Modbus 9.0 level:
-lab=monitor_managed_hierarchy_9.1
+lab=monitor_hierarchy_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab

@@ -1,4 +1,4 @@
-# Welcome to Role-Based Access Control (RBAC) in Maximo Monitor 9.1
+# Welcome to the Maximo Monitor 9.1</br>Role-Based Access Control (RBAC) Lab
 
 !!! info
     This section introduces **RBAC (Role-Based Access Control)**, a powerful security feature added in Maximo Monitor version 9.1.
@@ -26,5 +26,9 @@ In this guide, we will cover:
 
 !!! note
     Estimated time to complete all RBAC setup and testing steps: **15–20 minutes**
+
+---
+
+**Updated: 2025-07-07**
 
 ---

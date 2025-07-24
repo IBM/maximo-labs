@@ -1,4 +1,4 @@
-# Welcome to the IBM Maximo Monitor Hierarchy Lab
+# Welcome to the IBM Maximo Monitor 9.1</br>Hierarchy Lab
 
 !!! info
     This Lab demonstrates how to setup hierarchy from manage and sync in Monitor.
@@ -30,6 +30,6 @@ Devices can only be assigned or unassigned to assets and locations, ensuring a f
 
 ---
 
-**Updated: 2025-07-23**
+**Updated: 2025-07-03**
 
 ---

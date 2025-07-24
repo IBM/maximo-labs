@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1 </br>Device and device type setup Lab
+# Welcome to the Maximo Monitor 9.1 </br>Device and Device Type Setup Lab
 
 !!! info
     This Maximo Monitor lab demonstrates how to setup device and device type.
@@ -25,6 +25,6 @@ The exercises will cover :
 
 ---
 
-**Updated: 2025-06-26**
+**Updated: 2025-07-07**
 
 ---

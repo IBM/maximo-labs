@@ -1,4 +1,5 @@
-# Welcome to the </br>IBM Maximo Monitor Aveva PI Scada Historian Integration Lab
+# Welcome to the Maximo Monitor 9.1 </br>Aveva PI Scada Historian Integration Lab
+
 
 !!! info
     This lab demonstrates the integration of Aveva PI Scada Historian to IBM Maximo Monitor.
@@ -37,6 +38,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2025-07-07**
+**Updated: 2025-07-06**
 
 ---

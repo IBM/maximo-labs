@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1 </br>Monitor Cisco Spaces Integration Lab
+# Welcome to the Maximo Monitor 9.1</br>Cisco Spaces Integration Lab
 
 !!! info
     This hands-on lab demonstrates how to integrate Cisco Spaces with Maximo Monitor 9.0 and onwards.

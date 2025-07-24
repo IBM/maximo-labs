@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1</br>Monitor Meter/Metric Mapping Lab
+# Welcome to the Maximo Monitor 9.1</br>Meter-Metric Mapping Lab
 
 In this lab, you will learn how to configure and use the Meter-Metric Mapping feature in Maximo Monitor 9.1. This feature enables you to link meters to metrics in the Monitor UI, allowing you to view device data directly in the Manage UI and make data-driven decisions more efficiently.
 

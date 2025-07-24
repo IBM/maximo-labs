@@ -2,7 +2,7 @@ site_name: Monitor Alerts
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Jan Ekstrøm
 site_description: "Maximo Monitor Alerts setup"
-site_dir: ../../site/monitor_managed_alerts_9.1
+site_dir: ../../site/monitor_alerts_9.1
 
 nav:
   - Get back to Maximo Labs: ..

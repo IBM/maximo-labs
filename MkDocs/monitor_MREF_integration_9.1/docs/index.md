@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1</br>Maximo Real Estate and Facility Lab
+# Welcome to the Maximo Monitor 9.1</br>Maximo Real Estate and Facility Integration Lab
 
 !!! info
     This Maximo Monitor lab demonstrates the Integrate of Maximo Real Estate and Facilities.
@@ -39,6 +39,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2025-07-3**
+**Updated: 2025-07-07**
 
 ---

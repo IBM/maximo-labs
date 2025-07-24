@@ -31,7 +31,7 @@ o Click `Create an IBM ID` link
 >
 > - You must have **MREF locations synced**, as Cisco Spaces locations can only be subscribed to **MREF floor locations** in MAS Monitor.
 
-> ⚠️ If you haven't completed the [Maximo Monitor Real Estate and Facilities (MREF)](/monitor_MREF_9.1/) lab, it is **strongly recommended** to complete that lab **before starting** the Maximo Monitor Cisco Spaces Integration Lab.
+> ⚠️ If you haven't completed the [Maximo Monitor Real Estate and Facilities Integration (MREF)](/monitor_MREF_integration_9.1/) lab, it is **strongly recommended** to complete that lab **before starting** the Maximo Monitor Cisco Spaces Integration Lab.
 
 > ⚠️ If you haven't completed the [Maximo Monitor Cisco Webex Integration Lab](/monitor_cisco_webex_integration_9.1/), it is **strongly recommended** to complete that as well.  
 > Only after assigning a **Cisco Webex device** to an MREF Floor and Space you will be able to retrieve the **Floor Plan** from MREF.  
