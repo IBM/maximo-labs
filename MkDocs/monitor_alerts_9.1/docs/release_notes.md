@@ -3,7 +3,7 @@
 
 #### Author & Developer:
 
-- Kajal Lalwani - <kajal.lalwani@ibm.com>
+- Utsav Patel - <utsav.patel3@ibm.com>
 
 ---
 
@@ -11,7 +11,7 @@
 
 |Date      |By             | Description                                           |
 |:---------|:--------------|:------------------------------------------------------|
-|2025-07-07|Kajal Lalwani |Monitor Maximo Real Estate and Facilities Lab for version 9.1. |
+|2025-07-04|Utsav Patel    |Lab is ready for the first release.                    |
 
 
 ---

@@ -1,9 +1,7 @@
 
-# Contributors to this Maximo Lab
+# Contributors to IBM Maximo Monitor Labs
 
-#### Author & Developer:
-
-- Utsav Patel - <utsav.patel3@ibm.com>
+- Margi Shah - <margi.shah1@ibm.com>
 
 ---
 
@@ -11,7 +9,6 @@
 
 |Date      |By             | Description                                           |
 |:---------|:--------------|:------------------------------------------------------|
-|2025-07-04|Utsav Patel    |Maximo Monitor Alerts setup                    |
-
+|2025-07-03|Margi Shah     |Lab is ready for the first release.                    |
 
 ---

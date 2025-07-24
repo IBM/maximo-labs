@@ -10,8 +10,8 @@
 
 # Change Information
 
-|Date     |By             | Description                                           |
-|:--------|:--------------|:------------------------------------------------------|
-|2025-07-01|Rishi Kant|Maximo Monitor Cisco Webex Integration 9.1.                       |
+|Date      |By            | Description                                           |
+|:---------|:-------------|:------------------------------------------------------|
+|2025-07-01|Rishi Kant    |Lab is ready for the first release.                    |
 
 ---

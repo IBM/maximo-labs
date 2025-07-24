@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1 </br>Custom Function
+# Welcome to the Maximo Monitor 9.1 </br>Custom Function lab
 
 !!! info
     This Maximo Monitor lab demonstrates how to package, register and apply custom function.
@@ -24,6 +24,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2025-06-12**
+**Updated: 2025-07-06**
 
 ---

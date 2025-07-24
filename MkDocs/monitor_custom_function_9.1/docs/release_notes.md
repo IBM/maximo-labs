@@ -12,7 +12,7 @@
 
 |Date     |By             | Description                                           |
 |:--------|:--------------|:------------------------------------------------------|
-|2025-07-06|Radhika Surani|Maximo Monitor Custom Function Lab for version 9.1. |
+|2025-07-06|Radhika Surani|Lab is ready for the first release. |
 
 
 ---

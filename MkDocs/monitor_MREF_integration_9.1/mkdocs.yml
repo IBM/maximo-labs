@@ -2,7 +2,7 @@ site_name: Monitor Maximo Real Estate and Facilities
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Kajal Lalwani
 site_description: "Monitor Maximo Real Estate and Facilities Lab"
-site_dir: ../../site/monitor_MREF_9.1
+site_dir: ../../site/monitor_MREF_integration_9.1
 
 nav:
   - Get back to Maximo Labs: ..

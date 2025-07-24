@@ -2,7 +2,7 @@ site_name: Monitor Manage Hierarchy Lab
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Margi Shah
 site_description: "Monitor Manage Hierarchy Lab"
-site_dir: ../../site/monitor_managed_hierarchy_9.1
+site_dir: ../../site/monitor_hierarchy_9.1
 
 nav:
   - Get back to Maximo Labs: ..
@@ -24,7 +24,20 @@ nav:
     - Copyright: ../copyright
 
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
+
 markdown_extensions:
   - attr_list
   - admonition

@@ -29,7 +29,7 @@ o Click `Create an IBM ID` link
 ## Exercise 1 - Add a meter to an Asset or Location in Maximo Manage
 
 !!! Note
-    To create Assets and Locations, refer to the step-by-step instructions in the [Maximo Monitor Hierarchy Lab](../../monitor_managed_hierarchy_9.1).
+    To create Assets and Locations, refer to the step-by-step instructions in the [Maximo Monitor Hierarchy Lab](../../monitor_hierarchy_9.1).
 
 ### Add a meter to an Asset
 

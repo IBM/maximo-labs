@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1 </br>Monitor Cisco Webex Integration Lab
+# Welcome to the Maximo Monitor 9.1 </br>Cisco Webex Integration Lab
 
 !!! info
     This Maximo Monitor lab demonstrates the use of Cisco Webex Integration in Monitor.

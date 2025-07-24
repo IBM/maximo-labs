@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.1</br>Monitor Alerts Setup
+# Welcome to the Maximo Monitor 9.1</br>Alerts Setup Lab
 
 !!! info
     This Maximo Monitor lab demonstrates the setup and track Alerts in the monitor.
@@ -17,6 +17,6 @@ The exercises will cover:
 
 ---
 
-**Updated: 2025-06-24**
+**Updated: 2025-07-04**
 
 ---

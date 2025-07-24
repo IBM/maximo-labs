@@ -6,7 +6,7 @@ site_dir: ../../site/monitor_cisco_webex_integration_9.1
 
 nav:
   - Get back to Maximo Labs: ..
-  - Maximo Monitor Cisco Webex Integration Lab:
+  - Monitor Cisco Webex Integration Lab:
     - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:
