@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Cecilia Stark & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/exercise1-1/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1.1 DataSets - Visual Inspection SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1.1 DataSets";
+        var mkdocs_page_input_path = "exercise1-1.md";
+        var mkdocs_page_url = "/maximo-labs/exercise1-1/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Visual Inspection SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MVI SaaS Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the MVI Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1.1 DataSets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise1-2/">1.2 Train and Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise1-3/">1.3 Create Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-1/">2.1 Create Inspection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-2/">2.2 Conduct Inspection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-3/">2.3 Dashboard Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nextsteps/">Next Steps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshoot/">Troubleshooting</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Visual Inspection SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1.1 DataSets</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1>Exercise One - Maximo Visual Inspection Platform</h1>
+
+<p>In this lab, we have provided you with a set of images for training, a test image, and a model to use during the exercise.</p>
+<p>In this exercise you will be able to:</p>
+<ul>
+<li>Upload images to a data set </li>
+<li>Label those images for Object Detection</li>
+<li>Increase the number of images using data augmentation</li>
+<li>Train and deploy a Deep Learning Model </li>
+<li>Make a project for Inspections</li>
+</ul>
+<p>Before you begin, make sure you followed the steps in the Prerequisites page.</p>
+<h2>Exercise 1.1 - Creating a Data Set and Image Preparation</h2>
+
+<ol>
+<li>
+<p>Log into Maximo Visual Inspections using your credentials.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/login.png" style="height:400px;width:700px;" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Click <code>Get Started</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/getstarted.png" style="height:300px;width:700px;" /></p>
+<p><br></p>
+</li>
+<li>
+<p>You should now be in the <code>Data Sets</code>tab.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/dataset.png" style="height:120px;width:700px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Select <code>Create new data set</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/create.png" style="height:400px;width:250px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Name your net data set <code>Cans data set-YourInitials</code>. Then, <code>Create</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/create3.png" style="height:250px;width:500px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Select the bottom half of the data set you just created.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/create4.png" style="height:400px;width:400px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>You will now drag and drop the 5 images of cans we provided you onto the <code>Drop files here</code> box or click <code>Import files</code> and select the images.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/create6.png" style="height:450px;width:650px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Select <code>Add files</code>.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/create7.png" style="height:200px;width:700px" /></p>
+<p><br></p>
+<p>Once the images are done uploading, we will begin the labeling process for Object Detection.</p>
+<p><br></p>
+</li>
+<li>
+<p>Click the <code>Select</code> check box next to the <code>Label actions</code> button. Then, click on the <code>Label objects</code> button.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/startD.png" /></p>
+<p><br></p>
+<p>We will now add labels of cans that are dented and cans that are not dented.</p>
+<p><br></p>
+</li>
+<li>
+<p>On the right-hand side of the page click <code>Add Label</code>. </p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/labell.png" style="height:300px;width:700px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Type “good” and then hit the <code>Enter</code> key (or click the <code>Add</code> button). Then, type “bad_dented” and then hit the <code>Enter</code> key (or click the <code>Add</code> button). Click the <code>Ok</code> button when the labels are created.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/good.png" />
+<img alt="img" src="../img/img-exerciseOne/exercise1-1/addLabels.png" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Look at the image and determine whether the can is “good” or “bad_dented”. Then, click the specific object name for the image and click the <code>Box</code> label.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/boxL.png" style="height:500px;width:1200px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Click and drag your mouse over the can for each label. Labeling each can "good" or "bad_dented."</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/drag.png" style="height:400px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Try to get the boxes around the cans as close as possible. If you need to adjust your label, just <u>uncheck</u> the <code>Box</code> label first (box turns BLUE when ACTIVE, BLACK when not active) and use the 4 white corners to <u>adjust</u> the label. You may need to click on one of the can boxes to select it, if the 4 white corner boxes are not showing. You can also select the <u>trash</u> can symbol next to the label on the top right to delete it.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/mistakes.png" style="height:400px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Use the <code>Blue Arrow</code> to scroll up and down through all of the images or hover your mouse over and scroll. Label all of the “good” and “bad_dented” cans in all of the images.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/blueA.png" style="height:400px;width:500px" /></p>
+</li>
+<li>
+<p>Once finished, go back to the data set by clicking the back arrow.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/backA.png" style="height:400px;width:900px" /></p>
+</li>
+</ol>
+<h3><b><center>Data Augmentation</center></b></h3>
+
+<p>When building out a Deep Learning model the more images you add to your data set, the more accurate your model will be. Maximo Visual Inspection has a data augmentation feature which allows you to expand your original data set by applying one or more operations against the images. You can Blur, Sharpen, Noise, Color, Crop, Vertical Flip, Horizontal Flip, and Rotate your images. This will create a new data set with the added affects you choose. For the purpose of this lab, we will only be using the <b>Horizontal flip</b> and <b>Vertical flip</b>. </p>
+<ol>
+<li>
+<p>Now that your imaged have been labeled, let's begin to augment the data. You should be on our <code>Cans data Set-YourInitials</code> in the Data set tab. </p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/dataset1.png" style="height:480px;width:500px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Now, click on the <code>Augment Data</code> button.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/augmentB.png" style="height:450px;width:700px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Click the <code>Vertical flip</code> checkbox, the <code>Horizontal flip</code> checkbox, and then the <code>Continue</code> button. (you may have to use the scroll bar to the right and scroll 
+down a little to display the vertical and horizontal flip options)  </p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/aContinue.png" style="height:400px;width:800px" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Under <code>New Creations</code>, you can see how many new images will be created.</p>
+</div>
+<ol>
+<li>
+<p>When prompted, enter <code>Cans-Augmented-YourInitials</code> for the name of the new data set and then click the <code>Create data set</code> button. Wait until the augmentation process completes. (the running status appears in the top right corner)</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/createDataSet.png" style="height:400px;width:800px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Click on the back button to return to the main data sets page. </p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/back.png" style="height:200px;width:900px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Your new augmented data set <b>Cans-Augmented-YourInitials</b> should be there, with three times the number of images than in your original data set. </p>
+<p><br></p>
+</li>
+<li>
+<p>Open this new data set that you just created by clicking in the lower half of the tile. You can see how MVI created these new images with each new image having a <img alt="img" src="../img/img-exerciseOne/exercise1-1/symbol.png" style="height:30px;width:30px" /> symbol on it, saving you time from taking more photos.</p>
+<p><img alt="img" src="../img/img-exerciseOne/exercise1-1/new.png" style="height:500px;width:600px" /></p>
+</li>
+</ol>
+<p><b>Congrats, you have made a data set that is ready to be trained!</b></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exercise1-2/" class="btn btn-neutral float-right" title="1.2 Train and Deploy Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exercise1-2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

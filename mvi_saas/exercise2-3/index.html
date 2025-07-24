@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Cecilia Stark & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/exercise2-3/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2.3 Dashboard Configuration - Visual Inspection SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2.3 Dashboard Configuration";
+        var mkdocs_page_input_path = "exercise2-3.md";
+        var mkdocs_page_url = "/maximo-labs/exercise2-3/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Visual Inspection SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MVI SaaS Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the MVI Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise1-1/">1.1 DataSets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise1-2/">1.2 Train and Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise1-3/">1.3 Create Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-1/">2.1 Create Inspection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercise2-2/">2.2 Conduct Inspection</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2.3 Dashboard Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nextsteps/">Next Steps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshoot/">Troubleshooting</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Visual Inspection SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2.3 Dashboard Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2>Exercise 2.3 - Fail/Pass Rate Dashboard Configuration</h2>
+
+<p>Now that we have created an inspection and inspected a couple cans, we can get real-time data on how our production line is doing. </p>
+<ol>
+<li>
+<p>Go back to the MVI app and click <code>Dashboard</code> at the bottom.</p>
+<p><img alt="img" src="../img/img-exerciseTwo/img-exercise2-3/dashboardB.png" style="height:400px;width:250px;margin-left:40px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Click on the three dots by <code>No Project Selected</code>.</p>
+<p><img alt="img" src="../img/img-exerciseTwo/img-exercise2-3/project2.png" style="height:400px;width:250px;margin-left:40px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Then Select <code>Project</code>.</p>
+<p><img alt="img" src="../img/img-exerciseTwo/img-exercise2-3/selectProject.png" style="height:400px;width:250px;margin-left:40px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Click on the Project you created in Exercise 1.3, then select <code>Dataset</code>.</p>
+<p><img alt="img" src="../img/img-exerciseTwo/img-exercise2-3/myProject.png" style="height:400px;width:250px;margin-left:40px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>Then select the <code>Data Set</code> you created with the inspection.</p>
+<p><img alt="img" src="../img/img-exerciseTwo/img-exercise2-3/dataSet1.png" style="height:400px;width:250px;margin-left:40px" /></p>
+<p><br></p>
+</li>
+<li>
+<p>You should now see the Dashboard that has been generated based on your inspection. </p>
+<p><img alt="img" src="../img/img-exerciseTwo/img-exercise2-3/dashboard.png" style="height:400px;width:250px;margin-left:40px" /></p>
+</li>
+</ol>
+<h4>Congratulations, you have completed Exercise 2!</h4>
+
+<p>You have created and conducted an inspection on aluminum cans for a manufacturing line. You are also able to draw insights with a real-time Pass/Fail Rate Dashboard on how your manufacturing line is doing. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exercise2-2/" class="btn btn-neutral float-left" title="2.2 Conduct Inspection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nextsteps/" class="btn btn-neutral float-right" title="Next Steps">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exercise2-2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../nextsteps/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

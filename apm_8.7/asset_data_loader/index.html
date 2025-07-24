@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/asset_data_loader/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Load Utilities Data Into Manage - Maximo APM V8.7 Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Load Utilities Data Into Manage";
+        var mkdocs_page_input_path = "asset_data_loader.md";
+        var mkdocs_page_url = "/maximo-labs/asset_data_loader/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM V8.7 Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo APM V8.7.0 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_watson_studio/">Setup Watson Studio for Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hpu_models/">Understand Health and Predict - Utilities Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_preparation/">Data Preparation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Load Utilities Data Into Manage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gather-notebooks-and-csv-files">Gather notebooks and CSV Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#upload-files-and-run-the-data-loader-notebook">Upload files and run the Data Loader Notebook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-the-notebook">Run the Notebook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#confirm-proper-data-upload">Confirm Proper Data Upload</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#error-handling">Error Handling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#unable-to-unzip-the-file">Unable to unzip the file</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_score_notebook/">Create Health Scores Using Utilities Notebooks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_devicedata/">Create Utilities Predict Group and Upload Sensor Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_anomaly_detection/">Train and Register Anomaly Detection Model for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_EOL/">Train and Register End of Life Curve for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_date/">Train and Register Predicted Failure Date for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utilities_Failure_Probability/">Train and Register Failure Probability for Utilities Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_dictionary/">Pump Data Dictionary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fast_start_loader/">Load Pump Data Into Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_score/">Asset Health Scoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../asset_investment/">Asset Investment Optimization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../appconnect_install/">Install and Configure App Connect</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM V8.7 Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Load Utilities Data Into Manage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="load-utilities-data-into-manage">Load Utilities Data Into Manage</h1>
+<p>Maximo Predict comes with notebook templates to assist in streamlining data uploads to Maximo Manage. This notebook will create the following resources using provided csv files:</p>
+<ul>
+<li>Organizations </li>
+<li>Sites</li>
+<li>Locations</li>
+<li>Assets</li>
+<li>Meters</li>
+<li>Meter groups</li>
+</ul>
+<p>These instructions use the notebook named '0_HPU-DataLoader.ipynb' file with the Substation Transformer for Health and Predict for Utilities Demo Assets.</p>
+<p>In this exercise you will use Watson Studio, Manage and Predict - Utilities to:</p>
+<ol>
+<li><a href="./#gather_files">Gather notebooks and CSV files</a> for all data to be uploaded</li>
+<li><a href="#FastStart_notebook">Upload the and Run the HPU Data Loader Notebooks</a> using a template to upload new Asset and Location Data to Maximo Manage. </li>
+<li><a href="#confirm_upload">Confirm</a> the Data Has been uploaded for your assets</li>
+<li><a href="#error_handling">Handle Errors</a> that may come up in the process</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must complete the previous exercise for <a href="../setup_watson_studio/">Setup Watson Studio</a> before you start this exercise.</p>
+</div>
+<p>This notebook can only be run once per environment per site with the same data set. Prior to uploading data, ensure this data set is not available in Maximo or create a new site or choose a different asset set before running the notebook cells specific to the data to be uploaded. For example, if Substation Transformers are already uploaded for the desired site nad location, only run the cell to upload a new asset csv for that location. </p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ul>
+<li>Review Predict documentation for the <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/8.5.0?topic=overviews-maximo-predict-850">list of available models</a>.</li>
+<li>Ensure your MAS Predict environment is running and you have access.  Try your server URL that might look something like: <a href="https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info">https://main.predict.ivt11rel87.ivt.suite.myhost.com/ibm/pmi/service/rest/system/info</a></li>
+<li>Ensure you have Access to Asset data files for the Health and Predict Utilities Demo Data</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is best to perform this lab in your own Watson Studio Project created using <a href="../setup_watson_studio/">Setup Watson Studio</a> instructions. If you are using a shared project, ensure you append each file uploaded with your initials and update the file paths in the notebooks to include that change.</p>
+</div>
+<h2 id="gather-notebooks-and-csv-files">Gather notebooks and CSV Files</h2>
+<p><a name="gather_files"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reach out to Carlos Ferreira at carlos.ferreria1@ibm.com for if you cannot access the github below.</p>
+</div>
+<ol>
+<li>Navigate to <code>https://github.ibm.com/Watson-IoT/eam-hpu-lab</code> and click <code>Code</code> then <code>Download Zip</code> to download the files required to complete this lab</li>
+</ol>
+<p><img alt="Download from Github" src="../img/hpu_dataloader_1.png" /> </p>
+<ol>
+<li>Unzip the file</li>
+<li>
+<p>Open the folder labeled <code>csv file</code> and zip/compress the folder containing the data to be uploaded to monitor. In this lab, we will be using the file labeled <code>hpu_csv_v87_st</code> which contains only the substation transformer data.</p>
+</li>
+<li>
+<p>Return to the root folder, and open the file labeled <code>scripts</code> and zip/compress the files inside. Rename the resulting zip file to <code>hpu_dataloader</code> then zip/compress it.
+<img alt="Zip Scripts" src="../img/HPU_dataloader_0.png" /></p>
+</li>
+<li>Gather the Base url by logging into your Maximo environment, opening the Manage Application and copying the url. Save that and the API key from the previous step to be inserted into this notebook. Follow the instructions in <a href="../setup_watson_studio/">set up Watson Studio</a>under the 'Get URL' section to gather the <code>APM_API_KEY</code>.
+<img alt="Base URL" src="../img/HPU_dataloader_2.png" /></li>
+</ol>
+<h2 id="upload-files-and-run-the-data-loader-notebook">Upload files and run the Data Loader Notebook</h2>
+<ol>
+<li>
+<p>Add both the ZIP files to the data assets in your Watson Studio Project.</p>
+</li>
+<li>
+<p>Upload the HPU Data Loader notebook to your Project. Use the steps from the previous exercise <a href="../setup_watson_studio/">Add Notebook From File to a Watson Studio Project</a>.</p>
+</li>
+<li>
+<p>Select the <code>0_HPU-DataLoader.ipynb</code> notebook template. </p>
+</li>
+<li>
+<p>Click on the <code>pencil</code> icon next to your notebook to open it in edit mode.</p>
+</li>
+<li>
+<p>If the notebook fails to start, restart it.  Click on the <code>i</code> icon , <code>Environment</code> tab,  <code>Running status</code> dropdown select box and choose <code>Restart</code></p>
+</li>
+</ol>
+<p><img alt="Restarting Environment" src="../img/HPU_dataloader_3.png" /></p>
+<h2 id="run-the-notebook">Run the Notebook</h2>
+<p><a name="FastStart_notebook"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using a shared project, this cell is where you would update the file paths to include your initials</p>
+</div>
+<ol>
+<li>
+<p>Run the first cell two cells. These cells are importing and unziping the files to be used and installing necessary packages.</p>
+</li>
+<li>
+<p>Confirm the output has all the necessary files. If it does not and only lists the folder name see <a href="#unable_to_unzip">Unable to Unzip the Files</a>
+<img alt="Script File Structure" src="../img/HPU_dataloader_9.png" /> </p>
+</li>
+<li>
+<p>Replace the values of <code>MX_BASE_URL</code> and <code>MX_APIKEY</code> with the URL and API key gathered at the start of this lab</p>
+</li>
+<li>
+<p>Update the Site ID and the Org ID with the site and org for the data to be associated to. The cell should now look like this:
+<img alt="Updated Cell" src="../img/HPU_dataloader_4.png" /> </p>
+</li>
+<li>
+<p>Run the cell to load in the Environment Information and set up the Org and Site to be used
+For steps 6-14 you will be uploading data from the CSV files. Some cells may take a few minutes to run. You will know it is complete when the text next to the cell goes from <code>In[*]</code> to <code>In[#]</code> where the <code>#</code> symbol is the order in which cells are run</p>
+</li>
+<li>
+<p>If you are creating a new Org and Site for the assets, run the cell under <code>Create Org and Site</code>. If you are uploading data to an existing Site, skip this cell. Before loading into an existing site, ensure the assets indicated do not exist under that site.</p>
+</li>
+<li>
+<p>Run the next cell to upload classification data</p>
+</li>
+<li>
+<p>Run the next cell to upload in domain data</p>
+</li>
+<li>
+<p>Run the next cell to upload in meter and meter group data</p>
+</li>
+<li>
+<p>Run the next cell to upload in location data for containers</p>
+</li>
+<li>
+<p>Run the next cell to upload location data</p>
+</li>
+<li>
+<p>Run the next cell to upload meter readings for locations</p>
+</li>
+<li>
+<p>Skip the commented out cell</p>
+</li>
+<li>
+<p>Run the next cell to upload asset data</p>
+</li>
+<li>
+<p>Run the next cell to upload meter readings for assets</p>
+</li>
+<li>
+<p>Skip the commented out cell</p>
+</li>
+<li>
+<p>Run the next cell to upload LocSystem Data</p>
+</li>
+<li>
+<p>Run the next cell upload LocHierarchy data (Hierarchy and container data)</p>
+</li>
+<li>
+<p>Run the final cell to update the map configuration to reflect the container data</p>
+</li>
+</ol>
+<h2 id="confirm-proper-data-upload">Confirm Proper Data Upload</h2>
+<p><a name="confirm_upload"></a>
+The following steps will confirm that the data was uploaded properly</p>
+<ol>
+<li>
+<p>Navigate to Maximo Manage for the environment provided to the notebook</p>
+</li>
+<li>
+<p>Go to the <code>Assets</code> application</p>
+</li>
+<li>
+<p>Filter by the created Site (or the site assets have been added to)</p>
+</li>
+<li>
+<p>Ensure all the assets uploaded are listed and they have the associated location listed
+<img alt="Asset List" src="../img/HPU_dataloader_10.png" /> </p>
+</li>
+<li>
+<p>Click on one of the Assets and navigate to the <code>Meters</code> tab</p>
+</li>
+<li>
+<p>Expand one of the meters and ensure there is data. Not all demo assets have meter readings.</p>
+</li>
+</ol>
+<p><img alt="Meter Readings" src="../img/HPU_dataloader_11.png" /> </p>
+<ol>
+<li>
+<p>Navigate to <code>Maximo Health</code></p>
+</li>
+<li>
+<p>Click on the <code>Map</code> view and turn <code>Containers</code> on</p>
+</li>
+</ol>
+<p><img alt="Turn on Containers" src="../img/HPU_dataloader_12.png" /> 
+9. Filter by your site/assets and ensure you can see containers</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Containers should be Grey until health scores are configured in Uploading HPU Health Scores via Notebooks.</p>
+</div>
+<p><img alt="Containers" src="../img/HPU_dataloader_13.png" /> </p>
+<h2 id="error-handling">Error Handling</h2>
+<p><a name="error_handling"></a></p>
+<h3 id="unable-to-unzip-the-file">Unable to unzip the file</h3>
+<p><a name="unable_to_unzip"></a>
+If when running the cell to unzip the files containing the scripts and the data, rather than getting the full file list in the output this is received:
+   <img alt="Unzipped File Output" src="../img/HPU_dataloader_5.png" /> 
+Or when running any of the cells to create or load data, you receive this error:
+<img alt="File Note Found Error" src="../img/HPU_dataloader_6.png" /> 
+Then follow these steps to ensure your file is zipped/compressed properly:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using a Windows Machine, the following steps may need to be altered.</p>
+</div>
+<ol>
+<li>Open the file that needs to be re-zipped and select all the files within that folder</li>
+<li><code>Right Click</code> &gt; <code>Compress</code>
+<img alt="Compress/Zip Files" src="../img/HPU_dataloader_7.png" /> </li>
+<li>Rename the resulting file to the correct file name indicated in <a href="#gather-notebooks-and-csv-files">Gather Notebooks and CSV files</a>
+<img alt="Renamed File" src="../img/HPU_dataloader_8.png" /> </li>
+<li>Re-upload the file to your Watson Studio project and run the first cell again</li>
+</ol>
+<p>Congratulations you have seen how to upload Health and Predict for utilities data via a notebook. You have also gained experience using Jupyter Notebooks in Watson Studio!</p>
+<p>In the next exercises you will learn how to use the <code>1_Create-HPU-ScoreGroups.ipynb</code> Notebook template to create health scores for Health and Predict for Utilities assets and associate the asset notebook to that created group.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../data_preparation/" class="btn btn-neutral float-left" title="Data Preparation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../utilities_score_notebook/" class="btn btn-neutral float-right" title="Create Health Scores Using Utilities Notebooks">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../data_preparation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../utilities_score_notebook/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

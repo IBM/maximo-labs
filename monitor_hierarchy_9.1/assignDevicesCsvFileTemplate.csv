@@ -1,0 +1,10 @@
+Site,Location,Asset,Device,Device type,Help (Remove this column before you import the file)
+SITE-1,,ASSET-1,Compressor_1,Compressor,Assigns a compressor device to an asset
+SITE-1,,ASSET-1,Compressor_2,Compressor,
+SITE-1,,ASSET-2,Compressor_3,Compressor,
+SITE-1,,ASSET-3,Compressor_4,Compressor,
+SITE-1,,ASSET-4,Compressor_5,Compressor,
+SITE-1,LOCATION-1,,Speed-sensor-south,Sensor,Assigns a sensor device to a location
+SITE-1,LOCATION-1,,Vibration-sensor-south,Sensor,
+SITE-1,LOCATION-2,,Speed-sensor-west,Sensor,
+SITE-1,LOCATION-2,,Vibration-sensor-west,Sensor,

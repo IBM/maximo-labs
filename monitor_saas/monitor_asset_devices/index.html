@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/monitor_asset_devices/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2.  Monitor Assets - Monitor SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2.  Monitor Assets";
+        var mkdocs_page_input_path = "monitor_asset_devices.md";
+        var mkdocs_page_url = "/maximo-labs/monitor_asset_devices/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor SaaS Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Labs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../facilitator_instructions/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../connect_device/">1.  Connect Devices</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2.  Monitor Assets</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_anomalies/">3.  Monitor Anomalies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_request/">4.  Create Service Requests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_imagecard/">5.  Add Image Cards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dimensions/">6.  Add Dimensions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addvaluecard/">7.  Add Value Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2.  Monitor Assets</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn about:</p>
+<ul>
+<li>Which data dashboards are automatically created for you</li>
+<li>How to perform data analysis using the functions catalog</li>
+<li>How to be alerted about non-conforming asset conditions</li>
+<li>Troubleshooting functions</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have completed Exercise 1 Connected Devices</p>
+<hr />
+<h1 id="view-data">View Data</h1>
+<p>Now that you know the data is successfully flowing into the IoT Platform Service, this exercise will let you see which dashboards are automatically created for you. Go to Maximo Asset Monitor page.</p>
+<ol>
+<li>Click <code>Monitor</code>. Here you can see all of the entity types created from the <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html#gs_web">logical interfaces</a>. An entity is created for each mapped device ID along with it's corresponding properties.</li>
+<li>Search for your Entity Type <code>&lt;your last name&gt;_thingy</code>
+<img alt="Search Entity Types" src="../img/i73.png" /> &nbsp;  </li>
+<li>Click on<code>&lt;your last name&gt;_thingy</code> row in the table for your entity type
+<img alt="Search by Entity Type Name" src="../img/i74.png" /> &nbsp;  </li>
+<li>Since you only have one device for Thingy Entity Type <code>&lt;your last name&gt;_thingy</code>, only one entity is listed on the <code>Dashboards</code> tab in the <code>Instance Dashboard</code> table on <code>Entities Type</code> page for your Entity Type.  As you add more devices to the <code>&lt;your last name&gt;_thingy</code> Device Type in the IoT Platform they will appear on the entities page. Any entity can be an asset, an IO Point, a system of assets or what ever you choose.<br>
+(Note: You will not see the Hourly summary dash board just yet)
+<img alt="Entities Page" src="../img/i75.png" /> &nbsp;   </li>
+<li>Click on the <code>Data</code> Tab and expand <code>Metrics</code> to see all the aggregated metrics across all your devices like the max and min values for time series float data.</li>
+<li>Scroll down a bit to view the metric charts for <code>co2</code>, <code>pressure</code> and <code>temperature</code>.  Click on <code>co2</code>to see its max an min over time aggregated across all entities in <code>&lt;your last name&gt;_thingy</code> Entity Type.<br>
+(Note: you might only see the Metric part now, the other parts will turn up later as you work through the exercises)
+<img alt="Entities Page" src="../img/i76.png" /> &nbsp;</li>
+<li>Click the <code>Dashboards</code> tab to return to see the list of <code>Entities</code> in the <code>Instance Dashboards</code> table.  </li>
+<li>Select your Thingy entity listed in the <code>Instance Dashboards</code> table.  Now you only see the data for this specific asset.  The <code>Dimensions</code> tab shows the meta data used to classify your asset.<br>
+(Note: you might only see the Name dimension, but you will learn to add dimensions later)
+<img alt="Dimensions Page" src="../img/i77.png" /> &nbsp;</li>
+<li>Click <code>Metrics</code> tab to see metrics for the last 24 hours for this entity (asset) only. It may take some time to accrue enough data to visualize, take a break and return after ten or so minutes.
+<img alt="Metrics Page" src="../img/i78.png" /> &nbsp;  </li>
+</ol>
+<h1 id="analyze-data">Analyze Data</h1>
+<p>In the previous exercise you saw how you can see the raw device data in Monitor Dashboards, in this exercises you will learn how to perform data analysis and transform data so that remote operations managers can take action using intelligent insights.  </p>
+<ol>
+<li>Click <code>Monitor</code>. Here you can see all of the entity types created from the <a href="https://www.ibm.com/support/knowledgecenter/SSQR84_monitor/iot/platform/GA_information_management/im_ui_flow.html">logical interfaces</a>.  An entity is created for each mapped device ID along with it's corresponding properties.</li>
+<li>Search for and click on your Entity Type <code>&lt;your last name&gt;_thingy</code>
+<img alt="Search Entity Types" src="../img/i74.png" /> &nbsp;   </li>
+<li>Click <code>Data</code> tab  on the homepage for your Entity Type.</li>
+<li>You can start tracking the mean of the entities across your Entity Type by creating a calculated metric from the Function Catalogue.</li>
+<li>Click <code>+</code> button to access the Function Catalog. 
+<img alt="Search Catalog" src="../img/i79.png" /> &nbsp;</li>
+<li>Search for the <code>Mean</code> function in the catalog. Click on it and click <code>Select</code>.
+<img alt="Add Calculated Data for Mean" src="../img/i80.png" /> &nbsp;</li>
+<li>In the next dialog, select the metric that you want to calculate the daily mean for. In this case, <code>temperature</code> and click <code>Next</code>.
+<img alt="Add Daily Mean Temperture Calculated Data" src="../img/i81.png" /> &nbsp;</li>
+<li>Since temperature is changing and recorded over time you need to specify what time period the mean is being calculated for.   This is called the granularity and you can leave it set to <code>Daily</code> to calculate the daily mean.
+<img alt="Search Entity Types" src="../img/i82.png" /> &nbsp;</li>
+<li>Replace the calculated <code>Output metric</code> name with your own like <code>Daily_Temperature_Mean</code></li>
+<li>Leave everything else as default and click <code>Create</code> to save the metric.  This calculated metric is calculating a daily mean. If you wanted to calculate an <code>Hourly_Temperature_Mean</code>, you can set the <code>Granularity</code> to <code>Hourly</code> on the output dialog.</li>
+<li>You should now see your new calculated metric in the Metric (calculated) list on the left-hand side. If not, then wait 5 minutes and refresh the page. 
+<img alt="Calculated Metrics" src="../img/i83a.png" /> &nbsp;  </li>
+<li>Click the <code>Configure</code> button to update calculated metrics.
+<img alt="Calculated Metrics" src="../img/i83b.png" /> &nbsp;  </li>
+<li>Click <code>Next</code> and click on the <code>Auto schedule</code> switch to change the schedule of how often the mean is calculated. You can change the frequency of how often daily mean is calculated changing it from every 5 minutes to every hour.  You can also change how many days back the mean temperature function should calculate for using historical temperature data.  <br />
+<img alt="Calculated Metrics" src="../img/i84.png" /> &nbsp;  </li>
+<li>
+<p>Click <code>Update</code> to save your function configuration changes.</p>
+</li>
+<li>
+<p>Create a new calculated metric that calculates the number of errors every hour. Start by clicking the <code>+</code> button. Find the <code>Sum</code> function in function catalog and click <code>Select</code>. 
+<img alt="Create a Sum data item" src="../img/i84a.png" /> &nbsp;  </p>
+</li>
+<li>In the following dialog, select the metric <code>err</code> in the source field, leave everything else default and select <code>Next</code>.<br> 
+In the output dialog, you can create a new granularity by clicking the <code>Manage</code> button.
+<img alt="Create new granularity" src="../img/i84b.png" /> &nbsp;  </li>
+<li>In the Create custom grain dialog, name the custom grain <code>Hourly</code> and select <code>Hourly</code> from the <code>Time basis</code> drop down. Leave everything else default and click “Create.” 
+<img alt="Create custom grain" src="../img/i84c.png" /> &nbsp;</li>
+<li>Name your new calculated metric <code>Hourly_Sum_Errors</code> and click <code>Create</code>. 
+<img alt="Finalize new Sum data item" src="../img/i84d.png" /> &nbsp;</li>
+<li>Flip your Nordic Thingy over once in a while to generate errors and after five minutes you should start to see data in the chart.
+<img alt="View new Sum data item" src="../img/i84e.png" /> &nbsp;</li>
+</ol>
+<p>Congratulations. You have learned how to view the metrics of your entities as well as create new calculated metrics from that data. Just like metrics, the calculated metrics are also stored in the data lake. Open and view the DB2 database tables like we did in Exercise 1 (Monitor Page &gt; Usage &gt; Db2 Warehouse on Cloud &gt; Launch &gt; Data &gt; Tables &gt; BLUEADMIN). <br>
+Once the list of schemas are populated, you'll find that the Analytics Service has created new tables, one for each time grain - search for the name 'DM_<Entity Type>' and you'll see them all:
+<img alt="View new Sum data item" src="../img/i84f.png" /> &nbsp;
+Click on one of the new tables to view the data.</p>
+<hr />
+<p><strong>Note:</strong>
+Calculated functions by default are scheduled to run every 5 minutes. Check back later to see if the metric is being calculated.</p>
+<hr />
+<h1 id="alerts">Alerts</h1>
+<p>In this exercise you will learn how to create alerts. Alerts are functions in the Maximo Asset Monitor catalog that can be configured to notify you that certain asset conditions require attention.  There are a many types of alert functions included in the catalog like <code>High</code>, <code>Low</code> and<br><code>Alert Expression Filter</code>.  Like other functions in the catalog, these alerts can be scheduled to run every five minutes or less frequently. This is unlike Actions in the IoT Platform Service where notifications are invoked immediately when event data is ingested. Actions have an application programming interface to integrate with other systems.  You can also create and register your custom functions in the Maximo Asset Monitor catalog. Both of these are advanced topics that are beyond the scope of this Exercise. You can learn more about how to create custom functions in Maximo Asset Monitor by following this <a href="https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/tutorials/as_adding_complex_function_tutorial.html">tutorial</a>.</p>
+<ol>
+<li>Use what you learned in the previous exercise to create a calculated metric named <code>Hourly_Sum_Errors</code> to sum up all the alert errors created by turning your Nordic Thingy up side down using the <code>Sum</code> function in the Catalog. Now you will create an alert to be notified when the hourly sum of errors exceeds 5 using the instructions below.</li>
+<li>Configure an alert using the value of <code>Hourly_Sum_Errors</code> (calculated metric) created in the previous step. <img alt="Calculated Metric Using Sum" src="../img/i85.png" /> &nbsp;  </li>
+<li>Click <code>+</code> button access the Function Catalog.  <img alt="Add New Data Item" src="../img/i85a.png" /> &nbsp;  </li>
+<li>Search on <code>alert</code></li>
+<li>Select the <code>AlertExpression</code> function and then click <code>Select</code> button.  <img alt="Select AlertExpression" src="../img/i86.png" /> &nbsp;  </li>
+<li>Configure the alert to trigger an alert when the value of <code>Hourly_Sum_Errors</code> exceeds 5 errors. It will require investigation of the errors. Monitor uses Python for its expression language using the expression <code>df['metric-name']</code></li>
+<li>Set Alert Expression <code>expression</code> value to <code>df['Hourly_Sum_Errors']&gt;5</code></li>
+<li>Set Alert Expression <code>Severity</code> value to <code>High</code></li>
+<li>Set Alert Expression <code>Status</code> value to <code>New</code>. Alerts start in state of <code>New</code> until they are <code>Acknowledged</code>, <code>Validated</code> and finally <code>Resolved</code> or <code>Dismissed</code>. Click the Next button.<img alt="Configure Alert Expression Configuration" src="../img/i87.png" /> &nbsp;  </li>
+<li>Name the alert <code>Hourly_Sum_Errors_Alert</code> and click the Create button. <img alt="Configure Alert Expression Output" src="../img/i88.png" /> &nbsp;</li>
+<li>The Monitor pipeline runs every 5 minutes. If you have flipped over your Thingy more than five times, you should see the alert show up on the chart in about five minutes. <img alt="View Alert Expression Result" src="../img/i88a.png" /> &nbsp;</li>
+<li>You can also watch all alerts for this entity type by selecting the Alerts tab. <img alt="View All Alerts" src="../img/i88b.png" /> &nbsp;</li>
+</ol>
+<p>Congratulations.  You have learned how to create new Alerts from a calculated metric that sums the total number of errors that occur on an asset device.  You can also receive alerts on a device event stream topic and take action. That is beyond the scope of these materials. Find out more information on how to configure these actions in the <a href="https://www.ibm.com/support/knowledgecenter/en/SSQR84_monitor/iot/analytics/as_custom_actions.html">documentation</a>.</p>
+<h1 id="troubleshoot-functions">Troubleshoot Functions</h1>
+<ol>
+<li>Should you see <code>Analysis Stopped</code> warning this means your pipeline for your entity type has stopped calculating your metrics. You should click on <code>Analysis Stopped red dot</code> to view the error details.  <img alt="" src="../img/i99.png" /> &nbsp;</li>
+<li>These warnings often occur because a calculated metric function input argument depends on a metric name that has been deleted or whose name has changed.   </li>
+<li>Click on <code>Search glass</code> icon in the data field to find the metric name that is causing the problem.  Make sure it exists or choose the new metric name in the calculated metric that uses it.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../connect_device/" class="btn btn-neutral float-left" title="1.  Connect Devices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../monitor_anomalies/" class="btn btn-neutral float-right" title="3.  Monitor Anomalies">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../connect_device/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../monitor_anomalies/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

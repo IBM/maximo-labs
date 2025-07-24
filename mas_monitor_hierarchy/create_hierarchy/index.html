@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Mike Lamb" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_hierarchy/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Create hierarchy - Monitor Hierarchy Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Create hierarchy";
+        var mkdocs_page_input_path = "create_hierarchy.md";
+        var mkdocs_page_url = "/maximo-labs/create_hierarchy/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Hierarchy Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Hierarchy Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Hierarchy Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Create hierarchy</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#scenario">Scenario</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#edit-the-hierarchy-to-make-it-unique">Edit the Hierarchy to make it unique</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#import-the-hierarchy">Import the Hierarchy</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../assign_devices/">2. Assign devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dashboards/">3. Create dashboards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Hierarchy Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Create hierarchy</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Create an Asset Hierarchy</li>
+</ul>
+<p>Organize your devices into logical or physical groups by using locations to mirror how devices are organized in the real world. Create parent and child relationships between devices and locations to build system hierarchies.</p>
+<h2 id="scenario">Scenario</h2>
+<p>This exercise is based on a fictional company, Acme, that manages transportation networks for a number of clients. Client-ABC delivers a rail transportation network for the oil and gas industry.</p>
+<p>Client-ABC divides its network into Southern Express, Western Express, Northern Express, Eastern Express. Each region has multiple zones. Each zone has one more trains. Each train has an engine and compressor devices are assigned to each engine. A sensor on each compressor measures the load and pressure of the compressor.</p>
+<p><img alt="Client-ABC organization" src="../img/Client-ABC_org.png" />&nbsp;&nbsp;</p>
+<p>When Monitor is installed first in MAS, there is an option to import a CSV file to create the hierarchy.
+Note:  If Monitor is installed after Manage then the asset hierarchy will need to be created in Manage.
+The CSV file for our functional company Acme that manages transportation networks looks like this:
+<img alt="Client-ABC hierarchy" src="../img/Client-ABC-hierarchy.png" />&nbsp;&nbsp;</p>
+<h3 id="edit-the-hierarchy-to-make-it-unique">Edit the Hierarchy to make it unique</h3>
+<ol>
+<li>Download the <a href="https://github.ibm.com/Watson-IoT/eam-hpu-lab/blob/main/csv-files/monitor_hierarchy/Client-ABC-hierarchy.csv">Client-ABC hierarchy CSV</a> to your local system.</li>
+<li>Open the file in your favorite text editor</li>
+<li>Find/Replace -MLL with -&lt;your initials&gt;</li>
+<li>Save the file</li>
+</ol>
+<h3 id="import-the-hierarchy">Import the Hierarchy</h3>
+<ol>
+<li>Open the Monitor Setup page</li>
+<li>Click on Import button then choose "Import hierarchy"</li>
+<li>Using the CSV file from step previous section, drag the CSV into the blue box or click to select CSV file from filesystem</li>
+<li>The system will validate your CSV file</li>
+<li>Click Import</li>
+<li>You can see your organization on the hierarchies tab</li>
+</ol>
+<p><img alt="Client-ABC-&lt;your initials&gt; organization" src="../img/hierarchy_org.png" /></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../assign_devices/" class="btn btn-neutral float-right" title="2. Assign devices">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../assign_devices/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

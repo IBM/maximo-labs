@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/get_started/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Get Started - Monitor Auto AI Hands on Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Get Started";
+        var mkdocs_page_input_path = "get_started.md";
+        var mkdocs_page_url = "/maximo-labs/get_started/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Auto AI Hands on Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Auto AI Hands on Lab</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Auto AI Hands on Lab</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Get Started</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pump-data-and-devices">Pump Data and Devices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#architecture">Architecture</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_device_types/">2. Create Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">3. Create Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../send_device_simulated_data/">4. Send Simulated Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_interfaces/">5. Create Interfaces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dashboards/">6. Create Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_model/">7. Identify Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../train_test_save_model_in_monitor/">8. Train Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy_prediction_model_function/">9. Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../update_dashboards/">10. Update Dashboards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Auto AI Hands on Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Maximo Auto AI Hands on Lab</li>
+      <li class="breadcrumb-item active">Get Started</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="summary">Summary</h1>
+<p>In this Maximo Auto AI Lab you wil learn how to use Auto AI to identify a prediction machine learning model
+that you can train and then deploy to Maximo Asset Monitor. You will learn how to:</p>
+<ol>
+<li>Use the provided Jupyter notebook that will contain Python code to train, test and deploy machine learning model to
+    Maximo Asset Monitor</li>
+<li>Use the provided Maximo Asset Monitor custom function to make predictions as new time series data is received in
+    Maximo Asset Monitor</li>
+<li>Create Asset Types and devices using simulated pump data. </li>
+<li>Create an Asset Type and Asset dashboards to see the pump data and model predictions in Monitor</li>
+</ol>
+<h2 id="description">Description</h2>
+<p>Maximo Asset Monitor provides a powerful analytics platform to ingest time series data from a variety of historians and 
+devices.  Monitor includes a variety of model functions that can be use to predict performance of assets or detect 
+performance anomalies.  Sometimes however you may want to create custom machine learning models to make predictions
+or classifications using asset data. With Auto AI the process of selecting the right model and identifying the right
+feature inputs to make metric prediction is greatly simplified.</p>
+<p>The intended audience for this tutorial are developers and data scientists who would like to analyze their data in 
+Maximo Asset Monitor using customized machine learning models that are deployed in the Maximo Asset Monitor Service 
+schedule pipeline.</p>
+<h2 id="pump-data-and-devices">Pump Data and Devices</h2>
+<p>To apply AI and Monitor assets you will create 2 pump devices <code>11111096</code> and <code>111137F8</code>.  To simulate sending data to the 
+pumps, you can use the provided Python script <code>pump_simulator.py</code> to send device data to  Monitor IOT Platform.  This lab 
+uses real pump device data in the csv file named <code>maximo-auto_ai_pump_all_data.csv</code>.  The two pump device data metric readings 
+that will sent are: </p>
+<table>
+<thead>
+<tr>
+<th>Metric Name</th>
+<th>Metric Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>evt_timestamp</td>
+<td>Reading timestamp metric data was read by sensor</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>Pump impeller speed</td>
+</tr>
+<tr>
+<td>head</td>
+<td>Pump head</td>
+</tr>
+<tr>
+<td>device_id</td>
+<td>The device identifier for the 2 pump devices 11111096 and 111137F8</td>
+</tr>
+<tr>
+<td>pump_mode</td>
+<td>Pump mode a for automatic or h for manually operated by hand</td>
+</tr>
+<tr>
+<td>flow</td>
+<td>Pump flow</td>
+</tr>
+<tr>
+<td>voltage</td>
+<td>Pump voltage</td>
+</tr>
+<tr>
+<td>POWER</td>
+<td>Pump power consumption</td>
+</tr>
+<tr>
+<td>CURRENT</td>
+<td>Pump current</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your lab is instructor led steps 1, 2, 3, 4, 5, 6 and 9 have already been done for you in the environment provide to you 
+by your instructor.  You should  only do steps 7, 8 and 10. </p>
+</div>
+<h2 id="exercises">Exercises</h2>
+<p>Find the detailed instructions in the each exercise below:</p>
+<ol>
+<li>
+<p><a href="../setup_local_environment/">Setup Local Environment</a></p>
+</li>
+<li>
+<p><a href="../create_device_types/">Create Device Types</a></p>
+</li>
+<li>
+<p><a href="../create_devices/">Create Devices</a></p>
+</li>
+<li>
+<p><a href="../send_device_simulated_data/">Send Simulated Pump Data</a></p>
+</li>
+<li>
+<p><a href="../create_interfaces/">Create Physical and Logical Interfaces</a></p>
+</li>
+<li>
+<p><a href="../create_dashboards/">Create Dashboards</a> in Maximo Asset Monitor using simulated pump data</p>
+</li>
+<li>
+<p><a href="../create_model/">Identify Prediction Models</a> to predict Power consumption using Watson Studio Auto AI</p>
+</li>
+<li>
+<p><a href="../train_test_save_model_in_monitor/">Train Test and Deploy Models in Monitor</a> to Monitor using Juypter Notebook</p>
+</li>
+<li>
+<p><a href="../deploy_prediction_model_function/">Deploy and Configure a PredictionModel Custom Function in Monitor</a></p>
+</li>
+<li>
+<p><a href="../update_dashboards/">Update Dashboards</a> with power prediction calculated metric in Maximo Asset Monitor </p>
+</li>
+</ol>
+<h2 id="architecture">Architecture</h2>
+<p>Here is the Architecture flow for this tutorial
+<img alt="" src="../img/architecture.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Welcome to the Maximo Auto AI Hands on Lab"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../setup_local_environment/" class="btn btn-neutral float-right" title="1. Setup Local Environment">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../setup_local_environment/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/service_request/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4.  Create Service Requests - Monitor SaaS Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4.  Create Service Requests";
+        var mkdocs_page_input_path = "service_request.md";
+        var mkdocs_page_url = "/maximo-labs/service_request/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor SaaS Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor SaaS Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Monitor Labs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../facilitator_instructions/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../connect_device/">1.  Connect Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_asset_devices/">2.  Monitor Assets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_anomalies/">3.  Monitor Anomalies</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4.  Create Service Requests</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_imagecard/">5.  Add Image Cards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dimensions/">6.  Add Dimensions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addvaluecard/">7.  Add Value Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor SaaS Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4.  Create Service Requests</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>You should now have a good understanding of how alerts happen in Maximo Asset Monitor.  Now you will learn how to create acknowledge alert and create service requests to further investigate and resolve alerts in Maximo.  In this Exercise you will:</p>
+<ol>
+<li>Create a Maximo Service Connection so that Monitor knows which Maximo service to open service requests in.</li>
+<li>Acknowledge an Alert and create Service Request in Maximo so that the alert can be investigated and resolved.</li>
+<li>Resolve Service Request in Maximo.</li>
+<li>Resolve Alerts in Monitor.</li>
+</ol>
+<p>You can create service request in IBM Maximo Enterprise Asset Management Service from an alert in Maximo Asset Monitor. In Maximo, a service request indicates that an asset or location in your enterprise needs some sort of attention. Once a service request has been created, there is a ticket associated with that request. If the service request has been validated and the asset requires a particular task, you can assign the service request a work order to specify the Exerciseor, materials, services, and tools to complete the particular task. In this Exercise exercise, you will learn how to connect a Maximo service to your Maximo Asset Monitor instance, create a service request, and assign that service request a work order.</p>
+<h1 id="create-maximo-service-connection">Create Maximo Service Connection</h1>
+<ol>
+<li>After logging into Maximo Asset Monitor, open up the hamburger menu and click on <code>Services.</code><img alt="Hamburger Menu" src="../img/max1.png" /> &nbsp;</li>
+<li>Once you reach the services page, click on the <code>Add Service</code> button.</li>
+<li>The page pictured below will pop up. In the <code>Service Name</code> field, name your Maximo service something easily identifiable. In the drop-down menu titled <code>Service Type</code>, choose Maximo. You will also need the host URL, the username, and the password you use to login to your Maximo service.  If you do not have this information, contact your system administrator. In the <code>Site dimension</code> and <code>Asset dimension</code> fields, use the prepopulated values <code>SITEID</code> and <code>ASSETID</code>, respectively. <img alt="Blank Add Service" src="../img/max2.png" /> &nbsp;<img alt="Filled Add Service" src="../img/max3.png" /> &nbsp;</li>
+<li>Next, click <code>Save Changes</code>. Your Maximo service should pop up underneath the title <code>Other Services</code> on the <code>Services</code> page.</li>
+</ol>
+<h1 id="create-service-request-from-an-alert">Create Service Request from an Alert</h1>
+<p>In this section, you will need to have some alerts that have already been triggered for your Entity Type. If you have not yet learned how to create an alert in Monitor, please see the <code>Alerts</code> section in Exercise 2: Monitor Assets. You will also need to have an asset/assets with the same name as your entity/entities already set up in your Maximo service. If you do not know how to create an asset in Maximo, please see Appendix 1: Creating an Asset in Maximo.</p>
+<ol>
+<li>Select <code>Monitor</code> from the hamburger menu and go to your Entity Type.<img alt="Hamburger Menu2" src="../img/max4.png" /> &nbsp;</li>
+<li>You are able to access a list of your alerts from your Entity Type homepage two different ways:</li>
+<li>You can see all of your alerts in a list on the <code>Alerts</code> tab of your Entity Type homepage. If you want to see all of your alert types together, choose this route to see your alerts.<img alt="Alert Page" src="../img/max5.png" /> &nbsp;</li>
+<li>You can also go to the <code>Data</code> tab of your homepage, click on the carrot next to <code>Alerts</code> to see a list of your individual alerts. Click on one of your listed alerts. If you would rather see your alerts separated by alert type, choose this route to see your alerts.<img alt="Data Alert Page" src="../img/max6.png" /> &nbsp;</li>
+<li>Choose an alert for which you would like to create a service request and assign yourself the owner. To assign yourself the owner, you will click the carrot next to <code>Select owner</code> and select yourself. Next, click the <code>Create service request</code> button on the row corresponding to the alert you have selected.</li>
+<li>The window shown below will pop up. Select the Maximo service you named in step three of the previous section from the dropdown menu titled <code>Maximo service</code>. Make sure the <code>Asset number</code> matches the asset name you created in Maximo. (It does not necessarily have to be a number like the name suggests.) In the <code>Site</code> field, enter the SITE corresponding with your asset in Maximo. <img alt="Maximo Site" src="../img/max15.png" /> &nbsp;
+If you would like to change the description or details, you are welcome to. Instead, use the prepopulated options. Finally, click <code>Create</code>. <img alt="Create SR" src="../img/max7.png" /> &nbsp;</li>
+<li>You will now see that a number has replaced the <code>Create service request</code> button. If you click on that number you will be directed to the service request you just created. You may be prompted to log in to your Maximo service. Use the username and password you were given by your system administrator. <img alt="Alert with SR" src="../img/max8.png" /> &nbsp;<img alt="Maximo SR" src="../img/max9.png" /> &nbsp;</li>
+</ol>
+<h1 id="escalate-service-request-to-a-work-order">Escalate Service Request to a Work Order"</h1>
+<ol>
+<li>Escalate Service Request to Work Order.  Inside of the page for the Service Request you just created, you will see on the left side there is a list menu. Find <code>Create</code>. Hover over <code>Create</code> and click on <code>Work Order</code>.<img alt="Create Menu Maximo" src="../img/max10.png" /> &nbsp;</li>
+<li>Select the repair facility of your choice when prompted and click <code>OK</code>.<img alt="Repair Facility" src="../img/max11.png" /> &nbsp;</li>
+<li>You have created a Work Order! On the top of the Service Request window, click <code>Related Records</code>. The Work Order you just created will be on this page. <img alt="Work Order" src="../img/max12.png" /> &nbsp;</li>
+</ol>
+<h1 id="resolve-alert">Resolve Alert</h1>
+<ol>
+<li>Go back to your Alert page in your Entity type and find the alert for which you made the service request and work order.</li>
+<li>Click on the drop down menu selected in the picture below. The menu should currently read <code>New</code>. <img alt="New Alert" src="../img/max13.png" /> &nbsp;</li>
+<li>Change <code>New</code> to <code>Resolved</code>. <img alt="Resolve Alert" src="../img/max14.png" /> &nbsp;</li>
+</ol>
+<p>Congratulations! You have successfully connected a Maximo service to Maximo Asset Monitor, created a Service Request in Maximo, assigned that service request to a Work Order, and finally resolved the alert in Monitor.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../monitor_anomalies/" class="btn btn-neutral float-left" title="3.  Monitor Anomalies"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../add_imagecard/" class="btn btn-neutral float-right" title="5.  Add Image Cards">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../monitor_anomalies/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../add_imagecard/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

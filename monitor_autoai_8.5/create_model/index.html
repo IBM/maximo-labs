@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_model/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>7. Identify Model - Monitor Auto AI Hands on Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "7. Identify Model";
+        var mkdocs_page_input_path = "create_model.md";
+        var mkdocs_page_url = "/maximo-labs/create_model/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Auto AI Hands on Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Auto AI Hands on Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Maximo Auto AI Hands on Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_local_environment/">1. Setup Local Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_device_types/">2. Create Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">3. Create Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../send_device_simulated_data/">4. Send Simulated Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_interfaces/">5. Create Interfaces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_dashboards/">6. Create Dashboards</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">7. Identify Model</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-watson-studio-service">Create a Watson Studio Service</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-project">Create a Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-data-assets">Add Data Assets</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#associate-a-watson-machine-learning-service">Associate a Watson Machine Learning Service</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#perform-an-auto-ai-experiment">Perform an Auto AI Experiment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#choose-a-prediction-model">Choose a Prediction Model</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../train_test_save_model_in_monitor/">8. Train Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy_prediction_model_function/">9. Deploy Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../update_dashboards/">10. Update Dashboards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Auto AI Hands on Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">7. Identify Model</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="create-prediction-models">Create Prediction Models</h1>
+<p>Prediction models are useful for understanding when an asset is performing differently than expected.  By measuring the 
+deviation  between the actual asset metric value versus the predicted metric value you can be alerted to a anomaly with 
+your asset.  Monitor includes out of the box <a href="https://www.ibm.com/docs/en/mapms/1_cloud?topic=data-detecting-anomalies">anomaly models</a>.  </p>
+<p>Monitor includes alerts that are triggered when a conditional expression for a metric deviation exceeds a threshold value 
+specified for the asset.  In some cases you might want to make a customized model that can provide asset specific metric 
+predictions and alerts.  Creating models can be a manual and difficult process. It starts with finding candidate algorithms 
+that best fit the specific case. Do we know all the appropriate algorithms? Then, we must prepare the data by converting 
+any non-numeric fields to numerical values. Do we need to do additional feature engineering? How do we tune all the 
+hyper-parameters for each of the chosen algorithms?</p>
+<p>AutoAI takes care of all those steps for us and gives us a set of ranked models to choose from. With all the details 
+provided, choosing the best model becomes easy and we can go on with implementing our business solution.  More than one
+algorithms can fit the business problem.  Model creation might require more feature engineering.  Model creation requires 
+hyper-parameters tuning AutoAI removes the complexity of model creation.  It allows you to run an experiment to determine 
+what is the best model for your classification or linear regression problem.</p>
+<p>In this exercise you will:</p>
+<ul>
+<li>
+<p>Confirm you have already created and IBM ID <a href="http://ibm.biz/maximo-dev-ibmcloud">here</a></p>
+</li>
+<li>
+<p>Create a Watson Studio <a href="#createstudio">Service</a> in IBM Cloud.</p>
+</li>
+<li>
+<p>Create a Watson Studio <a href="#createproject">Project</a> in IBM Cloud Watson Studio Service.</p>
+</li>
+<li>
+<p><a href="#addassets">Add Data Assets</a> for the pumps. </p>
+</li>
+<li>
+<p><a href="#wml">Associate a Watson Machine Learning Service</a> to your Watson Studio Service Project.</p>
+</li>
+<li>
+<p><a href="#performexperiment">Perform an Auto AI Experiment</a>  to Identify a prediction model using Watson Studio using the provided pump training data. </p>
+</li>
+<li>
+<p>Assess each models performance and <a href="#choosemodel">Choose a Prediction Model</a></p>
+</li>
+</ul>
+<h3 id="create-a-watson-studio-service">Create a Watson Studio Service</h3>
+<p><a name="createstudio"></a></p>
+<p>Create a Watson Studio Service for your data scientist needs.  Open a browser and login to Watson Studio.   Watson Studio Cloud runs as IBM Cloud Pak® for Data as a Service which is included with Maximo 
+Application Suite.  the title as "IBM Watson Studio" or "IBM Cloud Pak for Data". The user interface is the same no 
+matter what name it comes  under. </p>
+<ol>
+<li>
+<p>After logging into <a href="http://ibm.biz/maximo-dev-ibmcloud">IBM Cloud</a>, click <code>create resource</code>button <img alt="sd" src="../img/w01.png" /> </p>
+</li>
+<li>
+<p>Search on <code>Watson Studio</code> and then click on <code>Watson Studio</code> tile <img alt="sd" src="../img/w02.png" /> </p>
+</li>
+<li>
+<p>Make note of the geographic region in the drop down box.  Select the <code>Standard v1</code> plan  <img alt="Create Studio Service" src="../img/w03.png" /> 
+otherwise choose the <code>lite</code> plan.   Click the <code>Create</code> button <img alt="Create Studio Service" src="../img/w04.png" /> </p>
+</li>
+<li>
+<p>Open <code>Watson Studio</code> by clicking on the <code>Get Started</code> button to launch <code>Watson Studio</code>.  <img alt="sd" src="../img/w05.png" /> </p>
+</li>
+<li>
+<p>Congratulations you are now in Watson Studio and can start working on your datascience projects. <img alt="sd" src="../img/w06.png" /> </p>
+</li>
+</ol>
+<h3 id="create-a-project">Create a Project</h3>
+<p><a name="createproject"></a></p>
+<ol>
+<li>
+<p>Create a Watson Studio Project to hold your data and models and run Auto AI Experiments. A project us where you can place 
+your “assets” like training data and run Auto AI experiments. In the left menu, click <code>Create a project</code> link <img alt="crate oroject" src="../img/w07.png" /> </p>
+</li>
+<li>
+<p>Click <code>empty project</code>. tile option. <img alt="empty oroject" src="../img/d08.png" /> </p>
+</li>
+<li>
+<p>Enter the project name: <code>student01</code> or a name you can remember later.  Optionally, enter the <code>description</code>
+"Monitor AutoAI Hands On Lab Pump Models".<img alt="project details" src="../img/d09.png" /> </p>
+</li>
+<li>
+<p>Click <code>Create</code> button.</p>
+</li>
+</ol>
+<p>Congratulations you have created a Watson Studio Project to organize your Model Data and artifacts.</p>
+<h3 id="add-data-assets">Add Data Assets</h3>
+<p><a name="addassets"></a></p>
+<p>In this exercise you will use  pump data to run an AutoAI Experiment. The pump data provided by the instructor in the file named
+PumpData.csv is a  comma separated version file that has two pump device data metric readings: </p>
+<table>
+<thead>
+<tr>
+<th>Metric Name</th>
+<th>Metric Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>evt_timestamp</td>
+<td>Reading timestamp metric data was read by sensor</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>Pump impeller speed</td>
+</tr>
+<tr>
+<td>head</td>
+<td>Pump head</td>
+</tr>
+<tr>
+<td>device_id</td>
+<td>The device identifier for the 2 pump devices 11111096 and 111137F8</td>
+</tr>
+<tr>
+<td>pump_mode</td>
+<td>Pump mode a for automatic or h for manually operated by hand</td>
+</tr>
+<tr>
+<td>flow</td>
+<td>Pump flow</td>
+</tr>
+<tr>
+<td>voltage</td>
+<td>Pump voltage</td>
+</tr>
+<tr>
+<td>POWER</td>
+<td>Pump power consumption</td>
+</tr>
+<tr>
+<td>CURRENT</td>
+<td>Pump current</td>
+</tr>
+</tbody>
+</table>
+<p>The value we want to predict is <code>POWER</code>.  An anomaly could occur then a pump is blocked or bearings have failed which would
+make the <code>POWER</code> be greater even while still having the low values for the other metrics like <code>flow</code>.  In the next exercises you
+will see how AutoAI will help us understand which of these metrics have the greatest impact on predicting <code>POWER</code>.</p>
+<ol>
+<li>
+<p>In Watson Studio, in your project created in the last exercise, click <code>Add to Project</code> button. <img alt="Add to project" src="../img/d10.png" /> </p>
+</li>
+<li>
+<p>Click the <code>Data</code> option.<img alt="data" src="../img/d11.png" /> </p>
+</li>
+<li>
+<p>The <code>data window</code> on the right side of your project is ready to load data. Drop the file provided by the instructor in the github repo named maximo-auto_ai_pump_data_111137F8.csv 
+in to the load window or use the browse option to locate the file on your machine. <img alt="drag and drop data" src="../img/d12.png" /> </p>
+</li>
+<li>
+<p>Upload a second asset data file named  <a href="">maximo-auto_ai_pump_data_11111096.csv</a> for the second pump <code>11111096</code>.
+<img alt="drag and drop data" src="../img/d13.png" />  </p>
+</li>
+<li>
+<p>Click the <code>Assets</code> Tab  <img alt="drag and drop data" src="../img/d14.png" />  </p>
+</li>
+<li>
+<p>You should now see your  <code>Data</code> assets <img alt="drag and drop data" src="../img/d15.png" />  for the two pumps.</p>
+</li>
+</ol>
+<p>Congratulations you have imported pump data for the two pumps into a Watson Studio Project.  You are ready to start 
+creating models by running an Auto AI Experiment.</p>
+<h3 id="associate-a-watson-machine-learning-service">Associate a Watson Machine Learning Service</h3>
+<p><a name="wml"></a></p>
+<p>Before we can use AutoAI, we need to have a Watson Machine Learning service in our project. Add a Watson Machine Learning 
+service to the project.  There are multiple plans available. For this lab, we use the lite plan that provides the
+capabilities we need for free.  You will likely only be able to run one AutoAI experiment with the Lite plan so carefully 
+follow the instructions.  </p>
+<ol>
+<li>
+<p>Select the Settings tab. <img alt="settings" src="../img/d16.png" /></p>
+</li>
+<li>
+<p>Scroll down to the Associated services section.  If there is no machine learning service, click <code>Add services</code>,
+ <img alt="add service" src="../img/d17.png" /></p>
+</li>
+<li>
+<p>Select  <code>Watson</code> from the drop down  <img alt="Watson" src="../img/d18.png" /></p>
+</li>
+<li>
+<p>Associate service click <code>New service</code> button.   <img alt="Watson" src="../img/d19.png" /></p>
+</li>
+<li>
+<p>Search on <code>Machine learning</code> and click on <code>Machine Learning</code> tile option  <img alt="Watson" src="../img/d19b.png" /></p>
+</li>
+<li>
+<p>Scroll down and select the <code>Standard plan v2</code> or if not available select <code>Lite plan</code> then click <code>Create</code> Button
+   <img alt="create service" src="../img/d20.png" /></p>
+</li>
+<li>
+<p>Select your new machine learning service by clicking in the <code>check box</code>  and then clicking <code>x</code> to close the dialog 
+window. <img alt="close dialog" src="../img/d21.png" /></p>
+</li>
+<li>
+<p>Close the dialog window.  <img alt="close dialog window" src="img/d22.png" /> 
+<img alt="close dialog window" src="../img/d23.png" /></p>
+</li>
+<li>
+<p>You have associated a machine learning service with Watson Studio. <img alt="service created" src="../img/d24.png" /></p>
+</li>
+</ol>
+<p>Congratulations you can now run Auto AI experiments using  Watson Studio Project.  You are ready to start creating models.</p>
+<h3 id="perform-an-auto-ai-experiment">Perform an Auto AI Experiment</h3>
+<p><a name="performexperiment"></a></p>
+<p>AutoAI can help you choose the right classification or regression algorithm use.  You choose the type of algorithm to 
+analyze,  provide Auto AI your data and what you want to predict.  It then runs a pipeline to identify what are the 
+relevant dependent features(metrics) to make a prediction.   It summarizes the performance and accuracy of each algorithm 
+it considered in a ranked ordered list.  The steps below show you how to perform an Auto AI Experiment to identify  a 
+regression model to predict power consumption.  A regression model provides scoring or prediction for continuous values.<br />
+You can learn more about how pumps work in this <a href="https://www.youtube.com/watch?v=WUal9LXc0iM">Video</a></p>
+<ol>
+<li>Make sure you are in the right IBM Cloud account in the top right of the screen, otherwise AutoAI might not show up 
+as an option.  Click <code>Add to Project</code> and click <code>AutoAI experiment</code>. <img alt="create an Auto AI experiement" src="../img/d26.png" /></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to replace <code>co</code> in the device type name with your own initials.</p>
+</div>
+<ol>
+<li>
+<p>Enter project name <code>111137F8-power-co</code>. click <code>Create</code> button.  Replace <code>co</code> with your own initials since in the next 
+exercise you will be  training and deploying your model to a shared service and want to make the name is unique.  Make
+sure  your Watson Machine Learning service is selected.  <img alt="Auto AI project details" src="../img/d27.png" /></p>
+</li>
+<li>
+<p>Click <code>Add a datasource</code> and <code>select from project</code> button. <img alt="select data source project" src="../img/d28.png" /></p>
+</li>
+<li>
+<p>Select the input data. Click <code>Select</code> from project.  Click <code>maximo-auto_ai_pump_data_111137F8.csv</code>. Click <code>Select asset</code>.
+<img alt="Auto AI project details" src="../img/d29.png" /></p>
+</li>
+<li>
+<p>AutoAI detects that it is a decimal value that contains continuous time series values and selects a Regression model. 
+Select <code>no</code> to create a time series forecast.<br />
+<img alt="Auto AI project details" src="../img/d30.png" /></p>
+</li>
+<li>
+<p>Select the column to predict <code>POWER</code>.  Click the <code>Run experiment</code>button.
+<img alt="Auto AI project details" src="../img/d31.png" />  </p>
+</li>
+<li>
+<p>The execution goes through multiple steps and generates multiple  pipeline runs of with <code>Extra Trees Regessor</code>, <code>LGBM</code> 
+and other models.  This process can take 3 - 10 minutes.
+<img alt="Auto AI project details" src="../img/d32.png" /></p>
+</li>
+</ol>
+<p>Congratulations you now know how to run AutoAI Experiments.  In the next exercise you will assess the experiment results
+and choose a model to use for predicting power for each pump.</p>
+<h3 id="choose-a-prediction-model">Choose a Prediction Model</h3>
+<p><a name="choosemodel"></a></p>
+<p>Watson Studio can identify what are the correlated metrics that have the greatest impact in predicting a metric.  It also 
+provides overall accuracy of the model performance. Finally it gives you a ranked ordered list of the models that are 
+best fits for making a prediction.  </p>
+<ol>
+<li>
+<p>Review the pipeline leader board for which algorithms performed best. Click on the <code>Extra Trees Regressor</code> algorithm.
+there maybe more than one.  Select the one that doesn't have feature engineering.
+<img alt="leader board" src="../img/d33.png" /></p>
+</li>
+<li>
+<p>The Auto AI experiment <code>Model Evatluation Measures</code> provides mean absolute error, root mean squared error and other
+measures.  These were used to determine what was the most effective algorithm.  <img alt="Auto AI Model evaluation" src="../img/d34.png" /></p>
+</li>
+</ol>
+<p>4   Click <code>Model Information</code> shows what the target prediction metric was <code>POWER</code>.  It also shows how many features
+ were considered to be important to predicting pump power consumption.  <img alt="Model Information" src="../img/d35.png" /></p>
+<p>5   Click <code>Feature Importance</code> to see which features are most important to predicting pump power consumption. Note them 
+down these will become the input arguments to our prediction model. Also note how only 4 of the 8 total features were 
+found to impact the power prediction. Click `Save As button <img alt="Reature importance" src="../img/d36.png" /></p>
+<ol>
+<li>
+<p>Notice how Auto AI give you two options for saving your algorithm.  You can save as a Model that gets deployed and you 
+can begin scoring in your Watson Machine Learning service.   There is a separate code pattern that shows how you can call
+Watson Machine learning using a custom function. See this <a href="https://developer.ibm.com/components/maximo/patterns/detecting-anomalies-in-iot-data-with-maximo-monitor/">code pattern</a>.
+You can also save the algorithm as Notebook.  <img alt="Save as Notebook" src="../img/d36.png" />  Hit the <code>Cancel</code> button.
+You will use the provided Juypter Notebook to test, train and deploy your own  <code>Extra Trees Regressor</code> algorithm to
+Monitor in the next lab.  </p>
+</li>
+<li>
+<p>When you're done, click <code>Back</code> and click <code>New Auto AI experiment</code>.   Repeat the previous steps with the other pump 
+data <code>maximo-auto_ai_pump_data_11111096.csv</code> you previously added to your Watson Studio project.
+<img alt="Auto AI Model evaluation" src="../img/d37.png" /></p>
+</li>
+</ol>
+<p>Congratulations you know have identified the the best model for each pump .  You also have identified that speed, head, voltage, flow, 
+and current are the input arguement needed for your model to be able to predict power.  The next lab exercise provides 
+you a Jupter Notebook named <code>maximo_auto_ai-extra-trees-pump.ipynb</code>
+that will allow you to train, test and deploy the an Extra Trees Regressor algorigthm prediction model into to Monitor.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_dashboards/" class="btn btn-neutral float-left" title="6. Create Dashboards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../train_test_save_model_in_monitor/" class="btn btn-neutral float-right" title="8. Train Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_dashboards/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../train_test_save_model_in_monitor/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
