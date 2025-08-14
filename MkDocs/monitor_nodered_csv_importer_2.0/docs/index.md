@@ -6,8 +6,7 @@ The steps will cover:
 
 * Setting up your local Node-RED environment
 * Inject device data directly to Monitor using a CSV file and Node-RED
-* Inject device data from multiple devices through a gateway to Monitor<br>
-  using a CSV file and Node-RED
+* Inject device data from multiple devices through a gateway to Monitor using a CSV file and Node-RED
 * Have fun
 
 !!! note

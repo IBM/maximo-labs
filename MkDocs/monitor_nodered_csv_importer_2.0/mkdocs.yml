@@ -17,7 +17,21 @@ nav:
     - Release Notes: release_notes.md
     - Copyright: ../copyright
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
 markdown_extensions:
   - attr_list
   - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js

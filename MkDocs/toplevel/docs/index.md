@@ -364,14 +364,18 @@ For bugs please include steps to reproduce your issue.  For enhancements please 
 
 ***Contribute Content***
 
-If you want to write new labs or improve the existing labs, then find the instructions to do so here:<br>
+If you want to write new labs or improve the existing labs, then find the instructions to do so here:
 
-| Lab                                           | Exercise                                                                     |
-|-----------------------------------------------|------------------------------------------------------------------------------|
-| [Contribute to Labs](contribute/)             | [Add content](contribute/add_content)                                        |
-|                                               | [Create new lab](contribute/create_new)                                      |
-| [New Lab Template](template_1.0/)             | [Do something](template_1.0/something)                                       |
-|                                               | [Do something else](template_1.0/something_else)                             |
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|--------------------------------------------|----------------------------------------------------------------------------------------------|
+| [Contribute to Labs](contribute/)          | [Add content](contribute/add_content)                                                        |
+|                                            | [Create new lab](contribute/create_new)                                                      |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|--------------------------------------------|----------------------------------------------------------------------------------------------|
+| [New Lab Template](template_1.0/)          | [Do something](template_1.0/something)                                                       |
+|                                            | [Do something else](template_1.0/something_else)                                             |
+
 
 ---
 
@@ -381,6 +385,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2025-07-24
+### UPDATED: 2025-08-14
 
 ---
