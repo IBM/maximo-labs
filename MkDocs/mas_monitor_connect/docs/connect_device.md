@@ -26,7 +26,7 @@ Send data to Monitor using the MAS Monitor Device Ingestor mobile web app
 
 ## Troubleshooting
 
-<b>AMQJS0007E Socket error: undefined</></b>
+<b>AMQJS0007E Socket error: undefined</b>
 <br>Check that the Messaging hostname was entered correctly
 
 <b>AMQJS0006E Bad Connack return code:5 Connection Refused: not authorized.</b>

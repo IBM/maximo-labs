@@ -11,11 +11,22 @@ nav:
     - Release Notes: release_notes.md
     - Copyright: copyright.md
 
-theme: readthedocs
-extra_css:
-  - extra.css
 
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
 
 markdown_extensions:
   - attr_list
   - admonition
+
+extra_css:
+  - extra.css
+
+extra_javascript:
+  - js/popper.min.js
+  - js/tippy-bundle.umd.js
+  - js/clipboard.js
+  - js/extra.js
