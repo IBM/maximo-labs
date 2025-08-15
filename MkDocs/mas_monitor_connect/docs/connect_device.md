@@ -3,11 +3,16 @@ Send data to Monitor using the MAS Monitor Device Ingestor mobile web app
 
 ## Use the MAS Monitor Device Ingestor mobile web app
 
-![MAS Monitor Device Ingestor](img/mobile.png)
 
 1. Open the following link on your mobile device
 <br>Note: For IOS devices Safari must be used for the accelerometer to work
-<br>[https://device-ingestor-mas-monitor-tool.monitordemo2-822c5cdfc486f5db3c3145c89ca6409d-0000.us-south.containers.appdomain.cloud/](https://device-ingestor-mas-monitor-tool.monitordemo2-822c5cdfc486f5db3c3145c89ca6409d-0000.us-south.containers.appdomain.cloud/)
+<br>[https://device-ingestor-mas-monitor-tool.monitordemo2-822c5cdfc486f5db3c3145c89ca6409d-0000.us-south.containers.appdomain.cloud/](https://device-ingestor-mas-monitor-tool.monitordemo2-822c5cdfc486f5db3c3145c89ca6409d-0000.us-south.containers.appdomain.cloud/){target=_blank}
+
+!!! danger "Notice"
+    The link above no longer exist.
+
+![MAS Monitor Device Ingestor](img/mobile.png)
+
 
 2. Fill in the information required
     <br>a. Device Type you created on the previous page
@@ -24,6 +29,7 @@ Send data to Monitor using the MAS Monitor Device Ingestor mobile web app
 <br>
 ![Publishing messages](img/publish-messages.png)
 
+
 ## Troubleshooting
 
 <b>AMQJS0007E Socket error: undefined</b>
@@ -31,4 +37,3 @@ Send data to Monitor using the MAS Monitor Device Ingestor mobile web app
 
 <b>AMQJS0006E Bad Connack return code:5 Connection Refused: not authorized.</b>
 <br>Check the Device type, Device, and Password were entered correctly
-

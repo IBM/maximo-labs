@@ -8,8 +8,13 @@ Learn how easy it is to configure Monitor to send data from your mobile device u
 * Send data from your mobile device to Monitor
 * Verify event data is being sent and persisted in Monitor
 
+!!! danger "Notice"
+    The MAS Monitor Device Ingestor no longer exist, so this lab cannot be executed.</br>
+    The lab has not been deleted due to consistancy.
+
+
 ---
 
-**Updated: 2023-01-20**
+**Updated: 2025-08-15**
 
 ---
