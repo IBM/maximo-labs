@@ -39,29 +39,29 @@ Your facilitator should have provided you with the information on your access.
      <br>
 3. Upload URL and credentials into the app. After you upload the URL, the login for MAS will pop up. 
 
-    ![img](../img/assist_url.png){: style="height:200px;width:250px;margin-left:40px"}
-    ![img](../img/assist_login.png){: style="height:200px;width:250px;margin-left:40px"}
+    ![img](img/assist_url.png){: style="height:200px;width:250px;margin-left:40px"}
+    ![img](img/assist_login.png){: style="height:200px;width:250px;margin-left:40px"}
 
      <br>
 4. Select `Next` for the next two screens.
 
-    ![img](../img/next_1.png){: style="height:400px;width:250px;margin-left:40px"}
-    ![img](../img/next_2.png){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](img/next_1.png){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](img/next_2.png){: style="height:400px;width:250px;margin-left:40px"}
 
      <br>
 5. Open the navigator.
 
-    ![img](../img/open_nav.png){: style="height:400px;width:250px;margin-left:40px"}
+    ![img](img/open_nav.png){: style="height:400px;width:250px;margin-left:40px"}
 
      <br>
 6. Select Pump Demo project at the top left.
 
-    ![img](../img/assist_pumpproject.png){: style="height:200px;width:250px;margin-left:40px"}
+    ![img](img/assist_pumpproject.png){: style="height:200px;width:250px;margin-left:40px"}
 
      <br>
 7. Wait for data to finishing loading. The tiles will build and the labels will go from grey to white as the data loads.  Wait until all the tiles appear white before proceeding. 
 
-    ![img](../img/mobileUItiles.png){: style="height:350px;width:250px;margin-left:40px"}
+    ![img](img/mobileUItiles.png){: style="height:350px;width:250px;margin-left:40px"}
 
      <br>
 8. Repeat above steps on second device using Assist Expert credentials. This is the second user you can do the collaboration session with.<br>
@@ -73,6 +73,6 @@ Your facilitator should have provided you with the information on your access.
 
 Also note that ELI can access the mobile experience through the desktop by logging into Manage and choosing the Role Based Applications under the Work Order Tracking module.
 
-![img](../img/managemobile.png){: style="height:400px;width:150px;margin-left:40px"}
+![img](img/managemobile.png){: style="height:400px;width:150px;margin-left:40px"}
 
 

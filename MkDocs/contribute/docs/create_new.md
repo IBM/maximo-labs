@@ -102,7 +102,8 @@ Select and open the `build_all_mkdocs.sh` file
 Scroll down to find `# Build the template level:`
 ![Edit build_all_mkdocs.sh](img/edit_build_2.png)
 
-Copy the section and paste it above the `#### DON't CHANGE THE BELOW MANDATORY...` line. Change the comment and the `lab=` variable to match the folder of the new lab.
+Copy the section and paste it right over the previous newest lab and right under the `Maximo Application Suite X.X Labs` header.</br> 
+Change the comment and the `lab=` variable to match the folder of the new lab.
 ![Edit build_all_mkdocs.sh](img/edit_build_3.png)
 
 Save the file.

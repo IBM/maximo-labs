@@ -168,11 +168,11 @@ You will notice that even when my phone is pointed in a different direction, the
 
 <b>Technician View:</b>
 
-![img](../../mas_9.0/imgassist24.png){: style="height:400px;width:250px;margin-left:40px"}<br> 
+![img](img/imgassist24.png){: style="height:400px;width:250px;margin-left:40px"}<br> 
 The action of providing leverage to remove the o-ring worked and I’m able to now complete the rest of the tasks involved with replacing the part. I’ll end the collaboration session which will create a session summary with all of the chat transcripts and the guidance that was provided. This now can be added to the AI knowledge base for future reference. 
 
 8. Select the end the session icon in the top left corner, then select `Yes`. <br> 
-![img](../../mas_9.0/imgassist26.png){: style="height:400px;width:250px;margin-left:40px"}
+![img](img/mas_9.0/imgassist26.png){: style="height:400px;width:250px;margin-left:40px"}
 
 
 ## Identify Parts with AI
