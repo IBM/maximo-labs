@@ -175,7 +175,7 @@ Now that I have completed all the tasks for this work order, I also go ahead and
 ![setup assets](img/Mobile0016.png){: style="height:400px;width:250px;}  <br/> 
      
 6. Add `+` to the `Materials` section the seal that were used, qty 1.  I need to record the part that was used during the work and add that I used material `SEAL` to the WO actuals.<br/>
-![setup assets](img/Mobile0017.png){: style="height:400px;width:250px;}  <br/>	 
+![setup assets](img/Mobile0017.jpg){: style="height:400px;width:250px;}  <br/>	 
 
 7. Click the `+` next to `Eli` to report the hours and type of work performed.  The time that was spent doing the work is also a component of overall cost and effort against this repair.  It is Important to have a clear record of the amount of time spent, and for some organizations this is used as part of payroll activities.  It’s also used to more accurately define the job tasks and may lead to adjustments when comparing plans to actuals.<br/>
 ![setup assets](img/Mobile0018.png){: style="height:400px;width:250px;}  <br/> 	 

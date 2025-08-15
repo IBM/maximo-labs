@@ -51,12 +51,12 @@ Application Suite (MAS).  On the “Industry Solution” tab, there is a tile fo
     Follow the action items below.
     
 1. From the main MAS page, select the `Applications` tab
-![navigate_to_health](../../../maximo-labs/apm_8.11/img/hpu_8.11/health1.png)	
+![navigate_to_health](img/hpu_8.11/health1.png)	
 
 2. Click the `Launch` link `Health` tile.
 
 3. The `Asset Table View` is displayed with the default query of all assets.
-![navigate_to_health](../../../maximo-labs/apm_8.11/img/hpu_8.11/assets_grid_page.png)	
+![navigate_to_health](img/hpu_8.11/assets_grid_page.png)	
 
 
 
@@ -83,13 +83,13 @@ add and move columns, filter, search and sort.
 1. Select the `hamburger` icon above to the magnifying glass to show the left navigation menus. This shows how you can 
 navigate to other perspectives like `locations` to understand location health. There are other menu options to setup 
 health scores, asset investment analysis or and prediction capabilities.
-![navigate_to_health](../../../maximo-labs/apm_8.11/img/hpu_8.11/assets_grid_page_hamburger.png)
+![navigate_to_health](img/hpu_8.11/assets_grid_page_hamburger.png)
 
 2.  Click `hamburger` menu icon again to close the menu slider. 
 
     
 There’s an option to create private views, and public views which are available to everyone.
-![saved_views](../../../maximo-labs/apm_8.11/img/hpu_8.11/savedviews.png) 
+![saved_views](img/hpu_8.11/savedviews.png) 
 
 !!! note "Value"
     Saved views allow the you to return to a particular view so that they don’t have to start over every time.  This view filters on my Substation Transformers.
@@ -98,7 +98,7 @@ There’s an option to create private views, and public views which are availabl
     Use the selection box to show your saved view.
 
 1. Click the selection box to show the saved views then click on the `Substation Transformers` view.
-![select_views](../../../maximo-labs/apm_8.11/img/hpu_8.11/substationtransformerview.png) 
+![select_views](img/hpu_8.11/substationtransformerview.png) 
 
 
 In the Table view, there are columns with calculated data.  There are Health scores, which are created for groups of assets 
@@ -113,9 +113,9 @@ how frequently the score should be calculated.
 
 1. You can display the data in the Table view that is most important to you. Use the selection box to choose which asset 
 data columns to display in your table.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 30.png)
+![setup_assets](img/HPU_8.9/HPU 30.png)
 2. The `Days to Failure` column comes from a predictive model defined and scheduled in the `Predict setting` tab. 
-![assets_grid](../../../maximo-labs/apm_8.11/img/hpu_8.11/assets_grid.png)
+![assets_grid](img/hpu_8.11/assets_grid.png)
 
 
 The IBM Maximo Models for Electrical Distribution includes the following model templates:
@@ -175,17 +175,17 @@ switches.
     Follow the action items below.
 
 1. You filter the group of assets you want to focus on.   Reset the `View` to show `All shared` assets.  Reference the early instructions if you forgot how to do this.
-![show_all_assets](../../../maximo-labs/apm_8.9/img/apm_8.9/show_all_assets.png)
+![show_all_assets](img/apm_8.9/show_all_assets.png)
 2. Click the `filter` icon that looks like a funnel. 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 33.png)
+![setup_assets](img/HPU_8.9/HPU 33.png)
 3. Select the `pencil` symbol for containers
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 34.png)
+![setup_assets](img/HPU_8.9/HPU 34.png)
 4. Select  `NIXON9098`
 5. Click `OK`
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 35.png)
+![setup_assets](img/HPU_8.9/HPU 35.png)
 6. Click `Apply`
 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 36.png)
+![setup_assets](img/HPU_8.9/HPU 36.png)
 
 
 You can see there are 261 assets in this container. When we sort by the health score from low to high, we find there are 
@@ -202,7 +202,7 @@ and with the worst health.
 
 
 1. On the `Assets Table` view, click `Health` column title to sort assets by the `Health` score.  
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 37.png)
+![setup_assets](img/HPU_8.9/HPU 37.png)
 
 2.  Asset `Criticality` can be measured by understanding the importance an asset has to the grid performing it's job of providing 
 electricity to customers.   Asset `End of Life` is important to know so that assets can be planned to be replaced before they reach 
@@ -222,35 +222,35 @@ You need to understand the relative position of the assets with the worst health
 The different `pin` colors and icons represents the health of the assets, according to the legend at the bottom left of 
 the screen.  This is a quick way to understand which assets are in poor health.
 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 38.png)
+![setup_assets](img/HPU_8.9/HPU 38.png)
 
 3. Adjust the map using the controls and mouse.  You can expand a two finger pinch press on the touch pad to zoom in.   
 To move the map push one finger and move with the other finger on the touch pad
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 39.png)
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 40.png)
+![setup_assets](img/HPU_8.9/HPU 39.png)
+![setup_assets](img/HPU_8.9/HPU 40.png)
 
 4. By turning on the `Container` selection, a polygon will appear around the assets in the container.  The color of the container will reflect the overall health of the container.
 
 5. Click the `Container` icon, and toggle on `Containers`
 
 6. Zoom out to see the container color.  You can decrease a two finger pinch press on the touch pad to zoom out.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 41.png)
+![setup_assets](img/HPU_8.9/HPU 41.png)
 
 7. Click the `Scores` icon and selecting another score will switch the view to a different score.  The asset colors, and  container color, will change accordingly.
 
 8. Select another score like `End of Life`
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 42.png)
+![setup_assets](img/HPU_8.9/HPU 42.png)
 
 9. You can return to the Health score view, and hovering over different assets, and the container, reveals the health scores.  Click the `Health` button to return to the original view.
 
 10. Zoom in or out  until until you  see the container outline color change from black to another color.  You can two finger  pinch press and squeeze your fingers together on the touch pad to zoom in and expand to zoom out.  Or you can use the zoom `plus` and `minus` icons on the bottom right.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 41.png)
+![setup_assets](img/HPU_8.9/HPU 41.png)
 
 11. Hover over the `Container` outline to show the `Health` score of the `Container`.
-![setu_ assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 43.png)
+![setu_ assets](img/HPU_8.9/HPU 43.png)
 
 12. Click the container `NIXON9098` which is the dashed line surrounding the assets on the map to show the average scores  of all the asset in that container on a single card.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 74.png)
+![setup_assets](img/HPU_8.9/HPU 74.png)
 
 
 You can zoom in to see each of asset pin locations. By clicking on the pins you can view the key asset KPIs for 
@@ -262,9 +262,9 @@ can service or inspect the asset.
     Follow the action items below.
 
 1. Zoom in. Click the `pin` for `ST_1400518` to see the card. This is the  substation transformer that likely needs attention.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 75.png)
+![setup_assets](img/HPU_8.9/HPU 75.png)
 2. Click on the `Actions` drop down selection box button to see the available options.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 76.png)
+![setup_assets](img/HPU_8.9/HPU 76.png)
 
    
 Note that you can click on the `asset name` to open the `asset detail` page which is explained later.  However, there are 
@@ -278,9 +278,9 @@ are responsible for.
 The `Charts view` page offers another way to identify assets that are not performing well relative to each other.  There are 
 four out of the box charts available that count the number of assets in a particular category or range of condition.  
 
-1.  Navigate to the `Charts view` page. Click on the Charts Icon. ![chart_view_icon](/maximo-labs/apm_9.0/img/chart_view_icon.png)
-2.  Choose a "View" for example select `Pumps with status` from the view drop down selection box. ![pumps_with_status](/maximo-labs/apm_9.0/img/pumps_with_status.png)
-3.  Review the four charts that summarizes the currently selected views asset performance counts by range ![view_charts](/maximo-labs/apm_9.0/img/view_charts.png)
+1.  Navigate to the `Charts view` page. Click on the Charts Icon. ![chart_view_icon](img/chart_view_icon.png)
+2.  Choose a "View" for example select `Pumps with status` from the view drop down selection box. ![pumps_with_status](img/pumps_with_status.png)
+3.  Review the four charts that summarizes the currently selected views asset performance counts by range ![view_charts](img/view_charts.png)
 
 
 The `Charts view` shows 3 charts:
@@ -302,31 +302,31 @@ You will drill-down through each of these charts to see the assets details of ea
 ####  Failure rate chart
 
 1. On the Failure rate per manufacture click on the manufacturer `PUMPSRUS` to see the failures by that manufacturer. Clicking on the manufacturer Boggs shows a 100% failure rate.  So all assets from Boggs have failed.
-![drill_in_failure_rate](/maximo-labs/apm_9.0/img/drillin_view_charts_failure_rate.png)
+![drill_in_failure_rate](img/drillin_view_charts_failure_rate.png)
 2. On the Failure rate per manufacture click on the manufacturer `PUMPCO` to see the failures by that manufacturer. 
-3. Return to the charts page by using the breadcrumb at the top of the page. Click on the `Assets` breadcrumb to return to the charts page. ![assets_charts_breadcrumbs](/img/apm_9.0/assets_charts_breadcrumbs.png)
+3. Return to the charts page by using the breadcrumb at the top of the page. Click on the `Assets` breadcrumb to return to the charts page. ![assets_charts_breadcrumbs](img/apm_9.0/assets_charts_breadcrumbs.png)
 
 
 ####  Mean time between failure chart
  
 1. Notice the Mean time between failure chart is not configured. Each time you navigate to the charts page you must select 
 the thresholds to use on the current chart.  Click the filter `funnel icon` to see thresholds option to create or select
-an existing `threshold` value.  ![configure_chart_funnel](/maximo-labs/apm_9.0/img/configure_chart_funnel.png) apm_9.0/img/mtbf_results.png
-2. Click the `threshold pencil` icon.  ![choose_threshold](/maximo-labs/apm_9.0/img/choose_threshold.png)
+an existing `threshold` value.  ![configure_chart_funnel](img/configure_chart_funnel.png) apm_9.0/img/mtbf_results.png
+2. Click the `threshold pencil` icon.  ![choose_threshold](img/choose_threshold.png)
 3. Click the `threshold` radio box for 10k hours to indicate the asset must be running for more than 10k hours before it
 has an unscheduled maintenance. 
-3. Click the `OK` button. and `Apply` button.[configure_chart_funnel](/maximo-labs/apm_9.0/img/configure_chart_funnel.png)
+3. Click the `OK` button. and `Apply` button.[configure_chart_funnel](img/configure_chart_funnel.png)
 4. Notice the Mean time between failure chart displays a bar chart with the count of assets:
       - Meeting the threshold. Count and list of assets that went longer than 10k hours before having an unscheduled work order. 
       - Not meeting threshold. Count and list of assets that were not able to achieve 10k hours before having an unscheduled work order.
       - Missing data.  Count and list of assets that were missing data that prevented MTBF from being calculated.
       - Assets that don't have Asset Class Definition defined.
 5. Hover on the `red` bar to see the count of assets not meeting the Mean time between threshold.
-6. Click on the `red` bar to see the list of assets that did not not meet the Mean time between threshold. [mtbf_results](/maximo-labs/apm_9.0/img/mtbf_results.png)
+6. Click on the `red` bar to see the list of assets that did not not meet the Mean time between threshold. [mtbf_results](img/mtbf_results.png)
 7. Click on the `asset name` to see the asset details to see how many mean time betwee failure hours the asset went before 
-having an unschedule maintenance. [mtbf_assets_notmeeting_mtbf](/maximo-labs/apm_9.0/img/mtbf_assets_notmeeting_mtbf.png)
+having an unschedule maintenance. [mtbf_assets_notmeeting_mtbf](img/mtbf_assets_notmeeting_mtbf.png)
 8. Click on the `bread crumb` to return to the drilled in asset list. Or hit the next button to see the next asset that 
-didn't achieve mean time between failure hours threshold before having an unschedule maintenance. [mtbf_asset_details](/maximo-labs/apm_9.0/img/mtbf_asset_details.png)
+didn't achieve mean time between failure hours threshold before having an unschedule maintenance. [mtbf_asset_details](img/mtbf_asset_details.png)
 
 ###  Matrix View
 <a name="matrix_view"></a>
@@ -347,28 +347,28 @@ by changing  the `type` filter, and select the `Charts view` to understand asset
 
 1. Return to the `Table view` using the instructions below.
 2. Reset the view to show `ALL (shared assets)` by clicking `X` on the `Container` filter
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 77.png)
+![setup_assets](img/HPU_8.9/HPU 77.png)
 3. Click the `funnel` symbol
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 78.png)
+![setup_assets](img/HPU_8.9/HPU 78.png)
 4. Select the `pencil` symbol for `Query`
-![setup_assets](../../../maximo-labs/apm_8.11/img/hpu_8.11/edit_query_filter.png)
+![setup_assets](img/hpu_8.11/edit_query_filter.png)
 5. Select `ST_EUDEMO_A` from the list
 6. Click `OK`
-![st_eudemo_a](../../../maximo-labs/apm_8.11/img/hpu_8.11/st_eudemo_a.png)
+![st_eudemo_a](img/hpu_8.11/st_eudemo_a.png)
 7. Click `Apply`
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 81.png)
+![setup_assets](img/HPU_8.9/HPU 81.png)
 8. You will now see the results for all substation transformers. 
 9. Select the 4th icon that looks like a Matrix in the upper right of the screen. 
-![view_matrix](../../../maximo-labs/apm_8.11/img/hpu_8.11/view_matrix.png)
+![view_matrix](img/hpu_8.11/view_matrix.png)
 10. You can see the number of assets categorized on a Matrix view. 
 11. Set the Matrix Version to `Criticality` and `End of life` to see the X and Y axis change and score ranges change to the different score range categories. Note how many assets are for `High Need For Action` which means they need to be actioned. 
-![set_matrix_version](../../../maximo-labs/apm_8.11/img/hpu_8.11/set_matrix_version.png)
+![set_matrix_version](img/hpu_8.11/set_matrix_version.png)
 12. Click `Assets` breadcrumb to navigate back to the `Matrix` view.
-![view_matrix](../../../maximo-labs/apm_8.11/img/hpu_8.11/asset_drill_in_view.png)
+![view_matrix](img/hpu_8.11/asset_drill_in_view.png)
 13. Set the Matrix Version to `Criticality` and `End of life`.  
-![set_matrix_version](../../../maximo-labs/apm_8.11/img/hpu_8.11/set_matrix_version.png)
+![set_matrix_version](img/hpu_8.11/set_matrix_version.png)
 14. You can drill into the red cell with `Criticality` A and `End of life` High to see what assets are at close to the end of their life. Click the number of assets `#`. 
-![final_matrix](../../../maximo-labs/apm_8.11/img/hpu_8.11/final_matrix.png)
+![final_matrix](img/hpu_8.11/final_matrix.png)
 15. You can also see the number of asset in the matrix in the future years if you have configured your forecast score notebooks.
 
 ###  Work Queues View
@@ -396,9 +396,9 @@ reliability engineer to systematically address each asset on the list, in turn, 
 
 1. Hover over the left nav bar to expand it
 2. Select the `Work queues` section on the left nav bar
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 85.png)
+![setup_assets](img/HPU_8.9/HPU 85.png)
 3. Select `Failing Before PM` work queue
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 86.png)
+![setup_assets](img/HPU_8.9/HPU 86.png)
 
    
 
@@ -421,7 +421,7 @@ better understand the holistic asset condition of `ST_1400518` so that you can b
     Follow the action items below.
 
 1. Select `ST_1400518` which opens the `asset details` view.  Details on this page will vary since this is a live demonstration environment system.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 87.png)
+![setup_assets](img/HPU_8.9/HPU 87.png)
 
 
 ###  Assets Detail View
@@ -433,7 +433,7 @@ calculation using the actual age and the health score.  An asset in poor health 
 its actual age.
 
 On the second line, there are custom scores, like the `Substation Efficiency` score.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 88.png)
+![setup_assets](img/HPU_8.9/HPU 88.png)
 
 The next `Preventive Maintenance` date and the `MRR` come directly from Maximo Manage.
 
@@ -462,10 +462,10 @@ this assets health has been low for some time.  This is another indication that 
 
 
 1. Scroll down the page to learn more about the health of the asset, go to the `Score details` widget. 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 89.png)
+![setup_assets](img/HPU_8.9/HPU 89.png)
 2. Understand what is contributing to the poor health of the asset to see how you might address the problems.  
 3. Expand the view to see the contributors by clicking the `chevrons` to view the contributors to poor asset health. 
-![setup_assets](../../../maximo-labs/apm_8.11/img/hpu_8.11/chevron.png)
+![setup_assets](img/hpu_8.11/chevron.png)
 4. See and sort on complete list of contributors to help understand what might be the root cause of the problem.  Click `Weight` to understand what is contributing the most to the  `Score`
 5. From the `Scoring` drop down box you can also see other `Custom score` contributors that you have created using the custom score template.
 
@@ -482,7 +482,7 @@ sensor data readings.
     Follow the action items below.
 
 1. Scroll down the `Asset Details` page until you reach the `Dissolved gas analysis` tile.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 90.png)
+![setup_assets](img/HPU_8.9/HPU 90.png)
 2. Click on each of the `dots` to get detailed information about the amount of those types of gases.
 3. Click the `switcher` icon on the top right corner of the tile, to view the results in the table view.
 4. The other widget is the history of combustible gas concentrations. It shows the combustible gas trend and rating over 
@@ -515,7 +515,7 @@ Asset Monitor or streamed into Health using the App Connect included with Maximo
 
 1. Scroll down `Asset Details` page until you reach the `Predictions` tile. 
 2. Double click the " the `Predictions` tile tile to expand the tile and see the prediction cards.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 91.png)
+![setup_assets](img/HPU_8.9/HPU 91.png)
 
    
 Note that also included with MAS is Watson Studio and Watson Machine Learning, both of which a Data Scientist can use for 
@@ -555,7 +555,7 @@ The `Effective age` of the transformer is 27 years.  The curve produces an end o
 
 
 The `Asset timeline` card shows several pieces of key information about the asset in the same graph. For example, the timeline shows a predicted failure (on the top line of the graph), that will occur before the next preventive maintenance (on the second line of the graph). 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 92.png)
+![setup_assets](img/HPU_8.9/HPU 92.png)
 
 !!! note "Value"
     Information on the `Asset timeline` chart, like past work orders and inspection, provide valuable insight into the asset's history, and may help you better formulate what kind of action to take.
@@ -574,8 +574,8 @@ There are several other sections on this page including:
 !!! note "Value"
     While each piece of information, or card, gives nsight into the state of our asset, all of the information together, gives a richer view, and helps make a data-driven decision on how to address this asset.
 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 93.png)
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 94.png)
+![setup_assets](img/HPU_8.9/HPU 93.png)
+![setup_assets](img/HPU_8.9/HPU 94.png)
 
 
 
@@ -592,7 +592,7 @@ There’s enough evidence from the investigation to take some action against thi
 
 1. Scroll to the top of the page.
 2. Click the `Actions` button.
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 95.png)
+![setup_assets](img/HPU_8.9/HPU 95.png)
 
 You could:
 
@@ -611,7 +611,7 @@ However, this asset needs urgent maintenance.  Create an emergency maintenance w
 1. Select the `Create work order` option
 2. Show the form
 3. Click `Cancel` to return to the asset detail page
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 96.png)
+![setup_assets](img/HPU_8.9/HPU 96.png)
 
 
 Health and Predict gives many options to identify assets at risk with a table, map, chart and asset details views.
@@ -640,10 +640,10 @@ Start building an investment project from the matrix view.
 
 1. Hover over the left nav bar to expand it
 2. Select the `Assets` section on the left nav bar
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 29.png)
+![setup_assets](img/HPU_8.9/HPU 29.png)
 3. Make sure the asset view is for `substation transformers` by either using the filter symbol or a saved view.  If necessary, clear the filters to start from the full set of assets under management
 4. Click the “Matrix” icon to move to the matrix view
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 44.png)
+![setup_assets](img/HPU_8.9/HPU 44.png)
 
 The default matrix view, in this case, is set to “Substation Efficiency and Health”.  This is a custom matrix.  The out-of-the-box matrices are…
 - Criticality and End of life
@@ -666,11 +666,11 @@ The color pattern can also be adjusted by clicking on the setting cog.  By doing
     Follow the action items below.
 
 1. Click on the pull-down menu to show the other matrix options
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 101.png)
+![setup_assets](img/HPU_8.9/HPU 101.png)
 2. Click on the setting cog to briefly go into the setting page to show that the page is customizable
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 102.png)
+![setup_assets](img/HPU_8.9/HPU 102.png)
 3. Click `Close` to return to the matrix view
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 103.png)
+![setup_assets](img/HPU_8.9/HPU 103.png)
 
 This view shows that there are 35 assets in red or high category.  Click through the summary boxes, or the boxes in the matrix, to see the details of the assets in a table view.
 
@@ -683,14 +683,14 @@ This table view provides a perfect example of how assets can be added to a new o
     Follow the action items below.
     
 1. Click on the "High" box with 35 assets in it
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 97.png)
+![setup_assets](img/HPU_8.9/HPU 97.png)
 2. From the table view, demonstrate how all of the assets can be selected by clicking on the selection box at the top
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 98.png)
+![setup_assets](img/HPU_8.9/HPU 98.png)
 3. Show the options to add the assets to a new or existing investment project
 4. Click `Cancel`
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 99.png)
+![setup_assets](img/HPU_8.9/HPU 99.png)
 5. Click the `Assets` breadcrumb to return to the matrix
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 100.png)
+![setup_assets](img/HPU_8.9/HPU 100.png)
 
 
 ### Take Action with AIO
@@ -704,16 +704,16 @@ The AIO process starts with building a project of assets, assigning a length and
 
 In this case, a project has already been built with the 35 assets in the “red” cell, and the 26 assets in the “yellow” cell next to it.
 
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 104.png)
+![setup_assets](img/HPU_8.9/HPU 104.png)
 
 !!! attention "Actions"
     Follow the action items below.
 
 1. Hover over the left nav bar to expand it
 2. Select the `Asset investment optimizer` section on the left nav bar
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 55.png)
+![setup_assets](img/HPU_8.9/HPU 55.png)
 3. From the `Projects` tab, click on `ST Investment Project`
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 105.png)
+![setup_assets](img/HPU_8.9/HPU 105.png)
 
 There are 3 strategies built out in the “ST Investment Project”.
 
@@ -732,10 +732,10 @@ Each of the scenarios uses a plan template build for Substation Transformers spe
     Follow the action items below.
 
 1. Click the `Maintain risk` scenario
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 106.png)
+![setup_assets](img/HPU_8.9/HPU 106.png)
 2. Review the scenario by using the 2 “details” buttons to toggle between the cost of the scenario, and the specific replacement plan
 3. Repeat the process for “Stay within budget” and “Reduce risk” scenarios to review each scenario
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 107.png)
+![setup_assets](img/HPU_8.9/HPU 107.png)
 
 Up to three strategies can be compared side-by-side and the details can be exported.
 
@@ -743,12 +743,12 @@ Up to three strategies can be compared side-by-side and the details can be expor
     Follow the action items below.
 
 1. Click the `Compare strategies` button
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 108.png)
+![setup_assets](img/HPU_8.9/HPU 108.png)
 2. From the pop-up, click all three scenarios
 3. Click `Compare`
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 109.png)
+![setup_assets](img/HPU_8.9/HPU 109.png)
 4. Review the output noting the results of each strategy
-![setup_assets](../../../maximo-labs/apm_8.9/img/HPU_8.9/HPU 110.png)
+![setup_assets](img/HPU_8.9/HPU 110.png)
 
 ## Summary
 <a name="summary"></a>
