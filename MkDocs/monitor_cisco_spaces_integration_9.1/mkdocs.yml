@@ -25,6 +25,8 @@ nav:
 
 theme:
   name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
   highlightjs: true
   hljs_languages:
     - yaml
@@ -41,5 +43,3 @@ extra_javascript:
   - ../js/tippy-bundle.umd.js
   - ../js/clipboard.js
   - ../js/extra.js
-
-google_analytics: ['G-EGH6ZGZ8CT', 'maximo-labs']
