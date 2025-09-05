@@ -4,7 +4,6 @@ site_author: Carlos Ferreira, Jan Ekstrøm & Contributors
 site_description: "IBM Maximo Hands-on Lab"
 site_dir: ../../site
 
-
 nav:
   - Welcome to the Maximo Labs: index.md
   - About:
@@ -30,3 +29,5 @@ extra_javascript:
   - js/tippy-bundle.umd.js
   - js/clipboard.js
   - js/extra.js
+
+google_analytics: ['G-EGH6ZGZ8CT', 'maximo-labs']
