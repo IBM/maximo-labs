@@ -280,6 +280,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2025-08-15
+### UPDATED: 2025-09-05
 
 ---
