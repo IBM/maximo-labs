@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Rishi Kant" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/delete_integartion/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>6. Delete Cisco Webex configuration - Maximo Monitor Cisco Webex Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6. Delete Cisco Webex configuration";
+        var mkdocs_page_input_path = "delete_integartion.md";
+        var mkdocs_page_url = "/maximo-labs/delete_integartion/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo Monitor Cisco Webex Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Cisco Webex Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">1. Overview and Purpose of using Cisco Webex device</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_integration/">2. Integrate Cisco Webex device in MAS Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_device/">3. Subscribe to a Cisco Webex device</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../assign_location/">4. Assign Cisco Webex device to a location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe_device/">5. Unsubscribe Cisco Webex device</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6. Delete Cisco Webex configuration</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo Monitor Cisco Webex Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">6. Delete Cisco Webex configuration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to edit and delete Cisco Webex integration:</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">All Exercises</a> and for Exercise 4</li>
+<li>completed the previous exercises</li>
+</ol>
+<hr />
+<h1 id="edit-cisco-webex-configuration">Edit Cisco Webex Configuration</h1>
+<p>Please again go to integration page in Monitor. We get an option in the ellipses icon to <code>Edit</code> the Cisco Webex integratiion.</br>
+<img alt="edit integration" src="../img/delete_integartion_1.png" /></br></br></p>
+<p>After click <code>Edit</code>, it will show <code>edit integration</code> page where we can update the <code>Activation Key</code> (JWT Token) , <code>Device client ID</code> (Client Id) and <code>Device client secret</code> (Client secret).</br>
+<img alt="edit integration" src="../img/delete_integartion_2.png" /></br></br></p>
+<p>After mentioned updated configuration click <code>Finish</code>. It will update these details in System.</br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We cannot edit the Integration Name, as it is already in use for a Webex Device Type in Monitor.</p>
+</div>
+<hr />
+<h1 id="delete-cisco-webex-integration">Delete Cisco Webex Integration</h1>
+<p>Navigate to the <code>Cisco Webex</code> in the Monitor Integration section:</br>
+<img alt="Navigate to Monitor Integration" src="../img/create_integration_6.png" /></br></br></p>
+<p>To delete Cisco Webex Configuration we need to make sure below points.</br></p>
+<ul>
+<li>All the devices are unassigned from locations.</li>
+<li>All the devices are unsubscribe(i.e remove all devices from Monitor).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There can be devices that have been subscribed but they might have been removed from Webex control hub, in that case the status of that devices will be <code>SUBSCRIBED_NOT_AVAILABLE</code>.
+When a device has <code>SUBSCRIBED_NOT_AVAILABLE</code> status that means there will not be any data flowing for that device from Webex.</p>
+</div>
+<p>Now go to <code>Cisco Webex integration</code> in Integration section in Monitor and click ellipses icon to <code>Delete</code> the Cisco Webex integratiion.</br>
+<img alt="delete integration" src="../img/delete_integartion_3.png" /></br></br></p>
+<p>On click <code>Delete</code> button, it will show pop-up for confirmation with <code>Delete</code> and <code>Cancel</code> option. On click <code>Delete</code> it will remove Cisco Webex configuration from Monitor.</br>
+<img alt="delete integration" src="../img/delete_integartion_4.png" /></br></br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Upon confirming the deletion, the corresponding Cisco Webex device type in Monitor will also be removed.</p>
+</div>
+<hr />
+<p>Congratulations you have successfully edit and delete Cisco Webex integration in Monitor. This concludes this lab.</br></br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../unsubscribe_device/" class="btn btn-neutral float-left" title="5. Unsubscribe Cisco Webex device"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../unsubscribe_device/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

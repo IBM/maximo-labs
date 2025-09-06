@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/servicerequest/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Create service request based on an alert - Monitor Alerts</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Create service request based on an alert";
+        var mkdocs_page_input_path = "servicerequest.md";
+        var mkdocs_page_url = "/maximo-labs/servicerequest/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Alerts
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Alerts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_alert/">1. Setup alerts at device type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../view_alert/">2. View alerts at device/device type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hierarchyAlerts/">3. Setup alerts at different Hierarchy level</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Create service request based on an alert</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Alerts</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Create service request based on an alert</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to create service request for an Alert.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>Completed the prerequisites listed in the <a href="../prereqs/">All Labs Prerequisites</a>.</li>
+<li>Finished the previous exercises in this lab series.</li>
+</ol>
+<hr />
+<p>As seen in the previous exercise, the Alerts Dashboard includes an Alert Table that provides detailed information about each alert. </p>
+<p><img alt="hierarchy alert" src="../img/alertTable.png" /></br>
+The table displays the following columns:</p>
+<ul>
+<li>Timestamp – The time when the alert was generated.</li>
+<li>Name – The name of the alert.</li>
+<li>Source – Indicates the source (device or asset or other hierarchy level i.e site, system, location) that triggered the alert. Clicking on the source will redirect you to the corresponding source detail page.</li>
+<li>Owner – Allows you to assign an owner to the alert.</li>
+<li>Severity – Indicates the severity level of the alert.</li>
+<li>Status – Defaults to New, but can be updated to Validated, Acknowledged, or Resolved.</li>
+<li>Service Request – Clicking "Create Service Request" opens a popup to initiate a request in Manage.
+<img alt="hierarchy alert" src="../img/alertTable2.png" /></br></li>
+</ul>
+<p>In the Create Service Request popup:</p>
+<ul>
+<li>Select Manage Integration.</li>
+<li>Fill in the Reported By field.</li>
+<li>The Asset and Site fields are auto-populated based on the hierarchy, if a link is found for the selected alert.
+<img alt="hierarchy alert" src="../img/alerttable3.png" /></br></li>
+<li>You can also provide additional Location details.</li>
+<li>Default text is provided for the Summary and Details fields, which you can modify as needed.</li>
+<li>Click Create to submit the service request.
+<img alt="hierarchy alert" src="../img/alerttable4.png" /></br></li>
+</ul>
+<p>Once created, the service request number will appear in the Service Request column of the Alert Table. 
+<img alt="hierarchy alert" src="../img/alerttable5.png" /></br>
+You can click on the request number to navigate directly to the corresponding service request in Manage.
+<img alt="hierarchy alert" src="../img/alerttable6.png" /></br></p>
+<hr />
+<p>Congratulations you have successfully completed exercise, and thereby completed this Maximo Lab.🤗</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../hierarchyAlerts/" class="btn btn-neutral float-left" title="3. Setup alerts at different Hierarchy level"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../hierarchyAlerts/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

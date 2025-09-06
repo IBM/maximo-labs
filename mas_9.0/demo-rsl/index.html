@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-rsl/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Reliability Strategies - MAS 9.0 Overview Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Reliability Strategies";
+        var mkdocs_page_input_path = "demo-rsl.md";
+        var mkdocs_page_url = "/maximo-labs/demo-rsl/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS 9.0 Overview Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS 9.0 Overview Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Reliability Strategies</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#available-asset-strategies">Available Asset Strategies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#filter-on-pump-asset-strategies">Filter on Pump Asset Strategies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-a-strategy">Select a Strategy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-a-operational-context">Select a Operational Context</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#customize-the-operational-context">Customize the Operational Context</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#apply-the-maintenance-plan">Apply the Maintenance Plan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-monitor/">2. Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mvi/">3. Visual Inspection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-manage/">4. Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mobile-assist/">5. Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-health-predict/">6. Health - Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">7. Closing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clean/">Lab Clean up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS 9.0 Overview Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Reliability Strategies</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="reliability-centered-maintenance">Reliability Centered Maintenance</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This lab is under development.  Not all steps are complete or accurate.</p>
+</div>
+<p>Asset Maintenance is an essential aspect of business operations, and it influences a significant part of operational expenses. Maintenance tasks may be preventive, predictive, or involve inspections to identify or monitor flaws.  A preventive maintenance approach is often less selective and based on a fixed schedule as per industry best practices or the OEM.  With the application of effective reliability strategies, these maintenance and inspection tasks can be more focused and centered around improving efficiency, reliability and safety of assets.</p>
+<p>RCM is an analysis-based approach which focuses on identifying asset functions, failure causes, failure modes and effects analysis (FMEA) for individual assets.  RCM helps you prioritize, optimize and assign maintenance activities to increase asset life and decrease functional failure in the most cost-efficient way possible.</p>
+<p>Implementing RCM requires teams to perform RCM analysis for identifying critical asset functions, desired performance standards, possible failure scenarios, causes of those failure scenarios, and consequences of each failure scenarios for individual assets which requires significant time, cost and resources. </p>
+<p>A dedicated RCM / FMEA application which includes a reliability strategy library is available with Maximo Application Suite which makes it easy to select and apply reliability strategies for critical assets and speeds time to value.</p>
+<h2 id="available-asset-strategies">Available Asset Strategies</h2>
+<p>As a reliability engineer for a water treatment plant, I want to implement RCM to improve asset availability and efficiency, and maintain my business-critical assets such as centrifugal pumps.  I’ve noticed that the lube oil tends to degrade over time.  I want to put a strategy in place to regularly monitor the lube oil to prevent wear on the pump.</p>
+<p>In this exercise you will understand what asset classes and maintenance strategies are available in Maximo Reliability Strategies.</p>
+<ol>
+<li>
+<p>Log into MAS and select the <code>Manage with Health</code> application.
+<img alt="setup assets" src="../img/RCM01.png" /><br/></p>
+</li>
+<li>
+<p>Navigate to <code>Assets</code> from left nav bar.<br/>
+<img alt="setup assets" src="../img/RCM02.png" /></p>
+</li>
+<li>
+<p>Select <code>Reliability Strategies</code> to redirect to the <code>Reliability Strategies</code> application.<br/>
+<img alt="setup assets" src="../img/RCM03.png" /></p>
+</li>
+</ol>
+<p>The <code>Reliability Strategy</code> library accelerates application of RCM0with a list of 58,000+ failure modes and corresponding mitigation activities already defined for individual assets.  I can use these to create preventive maintenance tasks and job plans.<br/></p>
+<ol>
+<li>Click on the <code>Asset</code> box and a list of assets will be available for selection.<br/>
+<img alt="setup assets" src="../img/RCM04.png" /></li>
+</ol>
+<h2 id="filter-on-pump-asset-strategies">Filter on Pump Asset Strategies</h2>
+<p>With the <code>MAS Reliability Strategies</code> application, I have a prebuilt library of assets from which I can filter and select assets for RCM0analysis based on Asset type and Asset configuration to identify and select business critical assets.</p>
+<p>In this exercise you will understand what pump asset class maintenance strategies are available for preventive maintenance.</p>
+<ol>
+<li>Select Asset:  <code>Pump</code></li>
+<li>Select Asset type:  <code>Centrifugal</code></li>
+<li>Select Asset configuration:  <code>Pump - Horizontal - Multistage - Axially Split Case - Mechanical Seal - Radial Bearings-Oil Lubed</code> (the 2nd one on the list).<br/>
+<img alt="setup assets" src="../img/RCM05.png" /></li>
+</ol>
+<h2 id="select-a-strategy">Select a Strategy</h2>
+<p>This action returns <code>failure modes</code> and corresponding mitigation activities to get <code>FMEA / PM</code> and <code>Job plans</code> for selected asset from the library, which eliminates weeks of work to analyze RCM strategies with technicians, operators and supervisors and speeds up time to value.</p>
+<p>In this case, the <code>Get strategy</code> action provides a list of failure modes and corresponding mitigation activities for centrifugal pumps which I can analyze further to optimize our preventive maintenance tasks.</p>
+<ol>
+<li>Navigate to the <code>Failure modes</code> tab to see the list of all possible failure modes for centrifugal pumps.</li>
+<li>Expand <code>Lube Oil</code> to see corresponding failure mechanisms.</li>
+<li>Expand <code>Degraded</code> failure mechanism to see corresponding failure influences.</li>
+<li>Select <code>Normal Wear</code> failure influence. Select this as the <code>Pump Asset Strategy</code>
+<img alt="setup assets" src="../img/RCM06.png" /></li>
+</ol>
+<h2 id="select-a-operational-context">Select a Operational Context</h2>
+<p>What level of preventive maintenance is required depends on the utilization of the asset and it's location.  This operational context is an important factor to consider in deciding on a preveventive maintenance plan.  This helps me also identify the critical affects I should monitor for my asset. Stressors that can cause or worsen the failure, universal or conditional degradation time, failure effects, repair time as well as discovery opportunities to detect the functional failure.</p>
+<ol>
+<li>Select the pump operational context by scrolling to bottom right side of the page to see all the mitigation activities with its effectiveness listed for the <code>Normal Wear</code> for <code>failure influence</code>.</li>
+<li>Navigate to <code>Mitigation activities</code> tab. This will list all the <code>mitigation activities</code> for my asset.</li>
+<li>Scroll to bottom of <code>mitigation activities</code> list and select <code>Oil Analysis</code></li>
+<li>Navigate to right side of the page where <code>preventive maintenance</code> and <code>job plan</code> details are available along with <code>frequency and labor hours for Oil Analysis</code> mitigation activity.
+<img alt="setup assets" src="../img/RCM07.png" /></li>
+</ol>
+<p>These activities are the reliability strategies that I can apply to mitigate respective failure modes.</p>
+<h2 id="customize-the-operational-context">Customize the Operational Context</h2>
+<p>I can also fine tune these mitigation activities as per our operating context based on criticality, duty cycle and service condition of selected asset.</p>
+<ol>
+<li>Click on the circle <code>i</code> icon to the right of <code>Operating context</code> icon and click on <code>View details for this asset</code> link within the popup.</li>
+<li>Close the dialog box and click <code>Preview activities in all contexts</code> option.</li>
+<li>Close the dialog box and toggle the <code>Duty Cycle</code> radio button from High to Low.</li>
+<li>In the right side of the page scroll down to <code>Effectiveness</code> section.
+<img alt="setup assets" src="../img/RCM08.png" /></li>
+</ol>
+<p>Changes in frequency for <code>Oil Analysis</code> activity is suggested based on the change in <code>duty cycle</code>.</p>
+<p><code>Criticality</code>, <code>Duty cycle</code> and <code>Service condition</code> are select-able and together these make up the <code>Operating context</code> to determine the best reliability strategy for maintenance of my asset.</p>
+<p>This lists all the failure modes that <code>Oil Analysis</code> mitigation activity can address which provides comprehensive details as to how multiple failure modes and mitigation activities can be tied together.</p>
+<h2 id="apply-the-maintenance-plan">Apply the Maintenance Plan</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This following exercise may have already been completed. Skip these steps and simply review the completed job plan and PM. </p>
+</div>
+<p>I can copy the job plan and preventative maintenance details and navigate directly from the <code>Mitigation activities</code> tab to create respective <code>job plans</code> and <code>PM tasks</code> for my assets.</p>
+<ol>
+<li>Copy the <code>Maintenance Plan</code> by clicking on the <code>copy icon</code> to the right of <code>Job plan details</code>.</li>
+<li>Click <code>Open Job Plans</code> link within the pop up.
+<img alt="setup assets" src="../img/RCM09.png" /></li>
+<li>Apply filter for <code>job plan “57899”</code> to list job plan created for pump devices.
+<img alt="setup assets" src="../img/RCM10.png" /></li>
+<li>Click on the <code>long description</code> icon to see the text pasted from <code>Reliability Strategies</code>
+<img alt="setup assets" src="../img/RCM11.png" /></li>
+</ol>
+<p>The job plan details will be copied and pop up will be displayed with link to navigate to <code>Job Plans</code> in Manage. I can paste the copied job plan details to create new job plan. I have created Job plan <code>57899</code> for centrifugal pumps detailed tasks using <code>Reliability Strategies</code>.</p>
+<ol>
+<li>Paste the <code>Maintenance Plan</code> by clicking on the <code>copy</code> icon to the right of <code>Preventative maintenance (PM) details</code> from <code>Mitigation activities</code> tab.</li>
+<li>Click <code>Open Preventative Maintenance</code> link within the pop up.
+<img alt="setup assets" src="../img/RCM12.png" /></li>
+<li>Apply filter for asset <code>PMPDEVICE</code> to list all the PMs created for pump devices.
+<img alt="setup assets" src="../img/RCM13.png" /></li>
+<li>Open <code>PM “1030”</code> and click on the <code>long description</code> icon to see the text pasted from <code>Reliability Strategies</code>.
+<img alt="setup assets" src="../img/RCM14.png" /></li>
+<li>Paste the copied <code>Preventive Maintenance details</code> to create PM tasks for my assets.</li>
+<li>Preventive Maintenance details will be copied and pop up will be displayed with link to navigate to <code>Preventive Maintenance</code> menu in Manage</li>
+</ol>
+<p>With RCM analysis I have created multiple preventive maintenance task with the right frequency and precise labor hours required to mitigate each failure mode for centrifugal pump devices. Implementing RCM based PM and job plans optimizes overall asset reliability &amp; efficiency as well as makes it much faster and simpler for our field technicians to perform PM tasks.</p>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>As the Reliability Engineer, maintaining the grid or other critical infrastructure assets, I was able to use <code>IBM Maximo Application Suite Reliability Strategies</code> to identify assets failure modes, identify effects to measure to monitor my asset performance and identify the best preventive maintenance plans for specific asset classes and operating contexts that reflect my business needs. This will help me later setup and calculate asset health and risk to make it easier to identify and then investigate and action those assets to prevent a failure and unplanned downtown saving thousands of dollars, and maintaining the integrity of the grid.</p>
+<p>Now that I have implemented a job plan and a Preventive Maintenance work order template using Reliability Strategies, I’m going to turn it over to the operational support engineer who can monitor all of our business critical assets as part of RCM.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo-monitor/" class="btn btn-neutral float-right" title="2. Monitor">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo-monitor/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/default_score_setup/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>How to Setup Default Scoring in Maximo Health - Maximo v9.0 APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How to Setup Default Scoring in Maximo Health";
+        var mkdocs_page_input_path = "default_score_setup.md";
+        var mkdocs_page_url = "/maximo-labs/default_score_setup/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo v9.0 APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Health and Predict Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../build_demo/">Setup Health and Predict Demonstration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo_script/">Health and Predict Overview Task Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo v9.0 APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">How to Setup Default Scoring in Maximo Health</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-to-setup-default-scoring-in-maximo-health">How to Setup Default Scoring in Maximo Health</h1>
+<p>Starting in v9.0, Maximo Health provides out-of-the-box scores to calculate <em>health</em>, <em>critically</em>, and <em>risk</em> for all your assets. These scores are asset- and industry-agnostic and use common asset and work order data to generates basic indicators of asset performance. You can customize these configurations to your own requirements and make them more advanced.</p>
+<p>With one click, you can activate Maximo Health's default scoring capabilities.</p>
+<ul>
+<li>✅ uses EAM data you already have</li>
+<li>✅ no configurations required</li>
+<li>✅ applies basic scores to all assets</li>
+<li>✅ deactive default scores with ease</li>
+<li>✅ customize with own advanced configurations</li>
+</ul>
+<h2 id="why-should-i-turn-on-default-health-scores">Why should I turn on default Health scores?</h2>
+<p>Whether you're just starting out with preventive, condition-based, or predictive maintenance, setting up Health scoring is key. Maximo Health takes all your source data and combines them into scores that represent different aspects of your assets' performance.</p>
+<p>Turning on default Health scores is great if:</p>
+<ul>
+<li>you want to assess the performance of your assets and don't know where to start</li>
+<li>you don't have a reliability engineer or subject matter expert (SME) to come up with customized, advanced scoring</li>
+<li>need time to slowly gather more data and come up with an advanced scoring methodology</li>
+<li>you are new to using Maximo Health and can benefit from learning how to use the scoring capabilities</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Even if you have your own scoring methologies, you can still turn on default scores as it will help familiarize yourself with the Health scoring process. It is easy to customize using the default scores, deactivate them at any time, or create your own scores that will overide the default settings. </p>
+</div>
+<h2 id="default-health-scoring-faqs">Default Health Scoring FAQs</h2>
+<blockquote>
+<p>❓ Can I setup default Health scores if I'm not using Maximo Manage (old Maximo or another EAM system)?</p>
+<blockquote>
+<p>💬 Yes, you can. However, it will be harder to view and fix source data. You  will need to integrate your EAM system with IBM App Connect. See <a href="https://www.ibm.com/docs/en/mas-cd/mhmpmh-and-p-u/continuous-delivery?topic=loading-data">tutorial here</a> </p>
+</blockquote>
+</blockquote>
+<h2 id="mas-v90-default-health-scoring-setup-lab">MAS v9.0 Default Health Scoring Setup Lab</h2>
+<p>We will take you through a step-by-step process of setting up default Health scores in your MAS environment.</p>
+<h3 id="lab-contents">Lab Contents</h3>
+<ol>
+<li><a href="#setup-requirements">Setup Requirements</a></li>
+<li><a href="#understanding-default-scores">Understanding Default Scores</a></li>
+<li><a href="#check-for-data-quality">Check for Data Quality</a></li>
+<li><a href="#customize-default-score-configurations">Customize Default Score Configurations</a></li>
+<li><a href="#deactivate-default-scores">Deactivate Default Scores</a></li>
+<li><a href="#activate-default-scores">Activate Default Scores</a></li>
+</ol>
+<h3 id="setup-requirements">Setup Requirements</h3>
+<p><strong>System Requirements</strong></p>
+<ul>
+<li>MAS Health with Manage v9.0 is installed, or</li>
+<li>MAS Health v9.0 standalone is installed with your own EAM</li>
+</ul>
+<p><strong>Data equirements</strong></p>
+<ul>
+<li>Work order data</li>
+<li>Asset installation date and manufacturer's expected life</li>
+<li>Asset priority</li>
+</ul>
+<p><strong>Outcome</strong></p>
+<p>Generate Health, Criticality, and Risk scores for all assets</p>
+<h3 id="understanding-default-scores">Understanding Default Scores</h3>
+<p><strong>Asset health</strong> measures the current condition of your assets. Factors that influence an asset’s health include its age, usage, maintenance history, condition, environment, and safety.</p>
+<p>The default health score configuration is calculated based on an asset's age, high priority open corrective work orders, and high priority open service requests. Each contributor has equal weights.
+    <img alt="Default health score configuration" src="../img/health_score_makeup.jpg" /></p>
+<ol>
+<li>Remaining Useful Life (RUL) - Weight: 33.33%<ul>
+<li>An asset nearing the very end of its expected lifespan with many high priority requests for corrective work will yield a very low health score.</li>
+<li>Conversely, a new asset with few high priority requests for corrective work will yield a very high health score.</li>
+</ul>
+</li>
+<li>Weighted Count of Open Service Requests - Weight: 33.33%<ul>
+<li>This is a weighted calculation of all your open service requests based on priority in the past 5 years. More frequent and higher priority service requests will <strong>negatively</strong> affect the <code>health</code> score. Closing more high priority service requests will improve it.</li>
+<li>Default configuration assumes that service requests have a priority of 1 to 5, where 1 is the <em>lowest</em> priority and 5 is the <em>highest</em> priority</li>
+<li>Default configuration assumes that 0 is the lowest number of service requests, and 10 is the most number of service requests.
+<img alt="Health range" src="../img/health_range.jpg" /></li>
+</ul>
+</li>
+<li>Weighted Count of Open Corrective Work orders - Weight: 33.33%<ul>
+<li>This is a similar calculation to <code>OPENSR</code> as it takes a weighted calculation of all open corrective work orders based on priority in th past 5 years. More frequent and higher priority open corrective work orders will <strong>negatively</strong> affect the <code>health</code> score. Closing more high priority corrective work orders will improve it.</li>
+<li>Default configuration assumes that work orders have a priority of 1 to 5, where 1 is the <em>lowest</em> priority and 5 is the <em>highest</em> priority</li>
+<li>Default configuration assumes that 0 is the lowest number of open work orders, and 10 is the most number of open work orders.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Criticality</strong> indicates the business importance of your assets. In other words, how severe would the customer, financial, and safety impact be if the asset were to fail?</p>
+<p>The default criticality score is the <code>priority</code> assigned to the asset.
+<img alt="Default criticality score configuration" src="../img/criticality_score_makeup.jpg" /></p>
+<p><strong>Risk</strong> measures the probability of high-risk failure. It is usually the likelihood of failure times consequence (Health x Criticality).</p>
+<p>The default risk score is the product of asset’s risk health and criticality scores.</p>
+<p>An asset with high business impact (and therefore criticality score) will be at higher risk than an asset with low business impact with the same health conditions.
+<img alt="Default risk score configuration" src="../img/risk_score_makeup.jpg" /></p>
+<h3 id="activate-default-scores">Activate Default Scores</h3>
+<ol>
+<li>
+<p>Login to Maximo Application Suite (must be v9.0 or above)</p>
+</li>
+<li>
+<p>Click <code>Activate now</code> to turn on automatic defatul scores. This will apply our out-of-the-box configurations to ALL assets in your system and score them on a daily basis. (Note: This will not override any existing scores you have activated. You can also undo this action later.)
+<img alt="Activate default scores popup" src="../img/activate_default_scores.jpg" /></p>
+</li>
+<li>
+<p>It might takes several minutes to calculate using default score, depending on the number of assets in your system. When calculation is done, click <code>View Default_scores</code> to navigate to the default scoring group.
+<img alt="View Default_scores popup" src="../img/see_default_group.jpg" /></p>
+</li>
+<li>
+<p>The <code>Default_scores</code> is a read-only scoring group that contains all assets in your system. It contains the default score configurations for <code>health</code>, <code>criticality</code>, and <code>risk</code>.
+<img alt="View Default_scores popup" src="../img/default_score_group.jpg" /></p>
+</li>
+<li>
+<p>Click on <code>Health</code> to view the default health score configuration for this group. 
+<img alt="Click health score" src="../img/default_score_group_health.jpg" /></p>
+</li>
+<li>
+<p>In the <code>Health</code> score page, you can see the health score type ranges and score description. Expand the contributor groups to view the contributors.
+<img alt="Default health score" src="../img/default_health_score.jpg" /></p>
+</li>
+<li>
+<p>Click on the contributor name <code>OPENSR</code> to view the read-only contributor details and inspect the formula.
+<img alt="OPENSR contributor" src="../img/opensr_contributor.jpg" /></p>
+</li>
+<li>
+<p>Click on <code>Health</code> in the breadcrumbs to return to the previous page. You can click on contributor name <code>OPENCMWO</code> to inspect the details and formula. </p>
+</li>
+<li>
+<p>Go back to <code>Health</code> score in the breadcrumbs to return to the previous page. Click on <code>RUL</code> contributor name to inspect the details and formula. This is a simple calculation of an asset's remaining useful life based on its age and manufacturer's expected life.
+<img alt="RUL contributor" src="../img/RUL_contributor.jpg" /></p>
+</li>
+<li>
+<p>Go back to <code>Default_scores</code> in the breadcrumbs to return to the group page. Click on <code>Criticality</code> to view the default criticality score configuration for this group. 
+<img alt="Click criticality score" src="../img/default_score_group_criticality.jpg" /></p>
+</li>
+<li>
+<p>In the <code>Criticality</code> score page, you can see the criticality score type ranges and score description. Expand the contributor group to view the contributor.
+<img alt="Default criticality score" src="../img/default_criticality_score.jpg" /></p>
+</li>
+<li>
+<p>Go back to <code>Default_scores</code> in the breadcrumbs to return to the group page. Click on <code>Risk</code> to view the default risk score configuration for this group. 
+<img alt="Click risk score" src="../img/default_score_group_risk.jpg" /></p>
+</li>
+<li>
+<p>In the <code>Risk</code> score page, you can see the criticality score type ranges and score description. Expand the contributor group to view the contributor.
+<img alt="Default risk score" src="../img/default_risk_score.jpg" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default calcuation runs on a cron task every 24 hours. You can tell the scores are activated if the toggle is <code>on</code> and when the next automatic calculation is.</p>
+</div>
+<p>Congratulations! You've learned how to activate health, criticality, and risk scores for all assets in your system using default configurations. You can now navigate to the default score group and understand how each default score is calculated.</p>
+<h3 id="check-for-data-quality">Check for Data Quality</h3>
+<p>This section will help you identify and correct incomplete default scores.</p>
+<p>A complete <code>health</code> score based on default calculations requires the following asset data:</p>
+<ul>
+<li>installation date</li>
+<li>manufacturer's expected life</li>
+</ul>
+<p>A complete <code>criticality</code> score based on default calculations requires the following asset data:</p>
+<ul>
+<li>asset priority</li>
+</ul>
+<p>A complete <code>risk</code> score based on default calculations requires both <code>health</code> and <code>criticality</code> scores to be complete.</p>
+<p>The following steps will guide you to identify incomplete scores and add missing data. This is an important piece to ensuring quality data.</p>
+<ol>
+<li>
+<p>In the<code>Default_scores</code> group, scroll down to the list of all assets. You may notice a different icon denoting "incomplete" scores, which means at least one required data is missing.
+<img alt="Default group assets incomplete" src="../img/default_score_assets.jpg" />
+Assets with missing data will still yeild results, but the scores are "incomplete," so they might not be the most accurate.</p>
+</li>
+<li>
+<p>To add missing data for an incomplete score, click on the value of the incomplete score.
+<img alt="Partial data" src="../img/partial_data.jpg" /></p>
+</li>
+<li>
+<p>For incomplete <code>health</code> scores, enter the <code>Installation date</code> and <code>Manufacturer's expected life</code>. Click <code>Update</code>. The asset data will be saved in the asset record in Maximo Manage.
+<img alt="Update" src="../img/update_data.jpg" /></p>
+</li>
+<li>
+<p>For incomplete <code>criticality</code> scores, enter the asset <code>priority</code>. Click <code>Update</code>. The asset data will be saved in the asset record in Maximo Manage.
+<img alt="Update criticality" src="../img/update_criticality_data.jpg" /></p>
+</li>
+<li>
+<p>To view the updated score after entering missing data, you can wait for the cron task to run during the next automatic calculation or click <code>calculate</code> to get immediate results.
+<img alt="Group calculate" src="../img/group_calculate.jpg" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code>health</code> score has missing required asset data, it will calculate results based on available maintenance data. If <code>criticality</code> score has missing priority, it will assume an asset priority of medium, or 3, to get the score (this is not in kept in the asset record).</p>
+</div>
+<h3 id="customize-default-score-configurations">Customize Default Score Configurations</h3>
+<p>Default scores may not meet your individual requirements, so they are designed to be customizable.</p>
+<p>In this section, you'll learn how to modify, add, and delete default score configurations to a group of assets.</p>
+<ol>
+<li>
+<p>Start with the <code>Default_scores.</code>. Click <code>Duplicate group</code>. This will create a new group using the duplicated defalut score configurations.
+<img alt="Duplicate group" src="../img/duplicate_group.jpg" /></p>
+</li>
+<li>
+<p>Give your new group a name and description (in this case it will be a group for <code>Pumps</code>). Select a <code>query</code> for my assets. If you don't see a query on your ist, cick the <code>+</code> button to create a new query. 
+<img alt="Select query" src="../img/select_query.jpg" /></p>
+</li>
+<li>
+<p>After selecting a query, click <code>Duplicate</code>. Your new scoring group is created.
+<img alt="Duplicate scores" src="../img/duplicate_scores.jpg" /></p>
+</li>
+<li>
+<p>Click on <code>Health</code> score to view the default configuration you've copied. You can now make any modifications, including adding, deleting or modifying a contributor. You can also adjust the contributor weights. 
+<img alt="Pumps group" src="../img/pumps_group.jpg" /></p>
+</li>
+<li>
+<p>To delete a contributor, click the <code>delete</code> icon next the contributor. In this case, delete the <code>OPENSR</code> contributor.
+<img alt="Delete contributor" src="../img/delete_contributor.jpg" /></p>
+</li>
+<li>
+<p>The contributor weights no longer add up to 100%. To update, click the <code>edit</code> button
+<img alt="Edit contributor weights" src="../img/edit_weights.jpg" /></p>
+</li>
+<li>
+<p>Re-assign the weights so that <code>OPENCMWO</code> is <code>60%</code> and <code>RUL</code> is <code>40%</code>. Click <code>save</code>.
+<img alt="Edit contributor weights" src="../img/edit_weights_popup.jpg" /></p>
+</li>
+<li>
+<p>To add a contributor, click the <code>add</code> icon next in the <code>Contributors</code> table. This should open up a window, where you can select from existing contributors.
+<img alt="Add contributor" src="../img/add_contributor.jpg" />
+<img alt="Add contributor popup" src="../img/add_contributor_popup.jpg" /></p>
+</li>
+<li>
+<p>To modify a contributor, click contributor you want to edit. In this case, click <code>OPENCMWO</code> contributor.
+<img alt="Modify contributor" src="../img/opencmwo.jpg" /></p>
+</li>
+<li>
+<p>The contributor is appended with <code>_COPY</code> because it is a duplication of the default read-only contributor. Unlike the default contributor, the contributor copy is editable, including its formula and normalization values. Click on the <code>edit</code> button next to <code>value normalization</code>.
+<img alt="Modify contributor" src="../img/opencmwo_edit.jpg" /></p>
+</li>
+<li>
+<p>Click <code>Continue</code> to acknowledge any edits to the contributor will affect all scores that use it.
+<img alt="Confirm edit contributor" src="../img/confirm_edit_contributor.jpg" /></p>
+</li>
+<li>
+<p>Specify the normalization values to determine the best and worst possible values for this contributor. Since default <code>OPENCMWO</code> makes some assumptions about your work orders, some adjustments may be needed:</p>
+<ul>
+<li>Work orders have a priority of 1 to 3, where 1 is the <em>lowest</em> priority and 3 is the <em>highest</em> priority</li>
+<li>0 is the lowest number of open work orders, and 25 is the most number of open work orders.
+Doing the math, the best case scenario is 0x3=3, and the worst case scenario is 3x25=75. Change <code>Worst possible value</code> to <code>75</code>. Click <code>save</code>.
+<img alt="Edit OPENCMWO" src="../img/edit_opencmwo.jpg" /></li>
+</ul>
+</li>
+<li>
+<p>Go back to <code>Health</code> score in the breadcrumbs to return to the previous page.</p>
+</li>
+<li>
+<p>Click the <code>Activate</code> toggle button. This will override the score configurations in the default group.</p>
+</li>
+<li>
+<p>Go back to <code>Pumps</code> score in the breadcrumbs. Another modification you want to make is to the criticality score. Click on <code>Criticality</code>.
+<img alt="Pumps group criticality" src="../img/pumps_group_criticality.jpg" /></p>
+</li>
+<li>
+<p>Click the <code>priority</code> contributor to edit it.
+<img alt="Pumps group priority" src="../img/edit_priority.jpg" /></p>
+</li>
+<li>
+<p>Click the <code>edit</code> button next to <code>value normalization</code>. The default assumes your assets are prioritized on a range of 1 to 5, where 1 is <em>lowest</em> priority and 5 is <em>highest</em> priority.
+<img alt="Edit priority normalization" src="../img/edit_priority_norm.jpg" /></p>
+</li>
+<li>
+<p>Make changes to the normalization based on this scenario:</p>
+<ul>
+<li>Assets have a priority of a 1 to 5, where 1 is the <em>highest</em> priority and 5 is the <em>lowest</em> priority.
+You would modify the normalization so that the <code>Best possible value</code> is <code>1</code> and <code>Worst possible value</code> is <code>5</code>. Click <code>save</code>.
+<img alt="Edit priority popup" src="../img/edit_priority_popup.jpg" /></li>
+</ul>
+</li>
+<li>
+<p>Go back to <code>Criticality</code> score in the breadcrumbs. Make sure to click the <code>Activate</code> toggle button to activate this score configuration.</p>
+</li>
+<li>
+<p>Go back to <code>Pumps</code> score in the breadcrumbs. To remove a score configuration (in this case, we want to remove <code>Risk</code>), click the <code>delete</code> delete button next to it. Click <code>delete</code> to confirm.
+<img alt="Delete risk score" src="../img/delete_risk_score.jpg" />
+<img alt="Confirm delete risk score" src="../img/confirm_delete_risk.jpg" /></p>
+</li>
+<li>
+<p>You can wait until the next scheduled calculation to generate updated scores. To get udpated scores immediately, click <code>Re-calculate</code>.
+<img alt="Calculate scores" src="../img/calculate_scores.jpg" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you <code>duplicate</code> the default group, you're essentially creating a new scoirng group with custom score configurations. </p>
+</div>
+<h3 id="deactivate-default-scores">Deactivate Default Scores</h3>
+<p>You have the option to deactivate default scores.</p>
+<ol>
+<li>
+<p>Navigate to <code>score settings</code>.</p>
+</li>
+<li>
+<p>Click the 3-dot button next to <code>Default_group</code>. Click <code>deactivate</code>.
+<img alt="Deactivate default scores" src="../img/deactivate_default_scores.jpg" /></p>
+</li>
+</ol>
+<p>Default score calculations are deactivated (historically calcuated scores are not deleted). You may notice missing scores for your assets if you haven't set up your own custom scores yet. </p>
+<h3 id="activate-default-scores_1">Activate Default Scores</h3>
+<p>If you want to re-activate default scores, or if you had missed the opportunity to activate when you first installed or upgraded to v9.0 Health, there's an easy way to do it.</p>
+<ol>
+<li>
+<p>Navigate to <code>score settings</code>.</p>
+</li>
+<li>
+<p>Find the <code>Default_group</code>. Click the 3-dot button next to it and hit <code>Activate</code>.
+<img alt="Activate default scores" src="../img/activate_default_scores.jpg" /></p>
+</li>
+</ol>
+<p>Default score configurations are now activated!</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/add_content/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Add content - Contribute to IBM Maximo Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Add content";
+        var mkdocs_page_input_path = "add_content.md";
+        var mkdocs_page_url = "/maximo-labs/add_content/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Contribute to IBM Maximo Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contribute</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to contribute</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tasks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Add content</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-prepare-your-git-branch">1. Prepare your Git branch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-make-changes">2. Make changes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-commit-and-push-your-changes">3. Commit and push your changes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-create-pull-request">4. Create Pull request</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-clean-up-branches-locally-and-remotely-github">5. Clean up branches locally and remotely (Github)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_new/">Create new lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">Deploy to IBM Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Contribute to IBM Maximo Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tasks</li>
+      <li class="breadcrumb-item active">Add content</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="add-content-to-existing-lab">Add Content to existing lab</h1>
+<p>Before starting to add or change existing content, create a branch for the changes.</p>
+<p>You can get a brief introduction to the use of branches here:<br>
+<a href="https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches" target="_blank">https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches</a></p>
+<h2 id="1-prepare-your-git-branch">1. Prepare your Git branch</h2>
+<p>Basically you need to do the following to create a new branch locally and on the Github repo:</p>
+<pre><code>git pull
+git checkout -b [name_of_your_new_branch]
+git push origin [name_of_your_new_branch]
+</code></pre>
+<h2 id="2-make-changes">2. Make changes</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are making a new lab, then jump over to "Make first changes for new lab"<br>
+on <a href="../create_new/#make-first-changes-for-new-lab">Create new lab</a>.</p>
+</div>
+<p>Locate the labs folder under the <code>MkDocs</code> folder, e.g. <code>/MkDocs/edc_8.11</code><br>
+Make the changes in the markdown files, image files, and <code>mkdocs.yml</code> file.<br>  </p>
+<div class="admonition attention">
+<p class="admonition-title">Remember to do this:</p>
+<p>Update the <code>release_notes.md</code> file with Contributors and Change Information.<br>
+Update the <code>index.md</code> file with a new Updated date (at the end of the file).</p>
+</div>
+<p>In the terminal navigate to the root of this git repo and execute the build script:</p>
+<pre><code>./build_all_mkdocs.sh
+</code></pre>
+<p>Open the browser and navigate to <a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a> in order to verify that your changes look as expected. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Press control-c to stop the web server and get back to the prompt.</p>
+</div>
+<h2 id="3-commit-and-push-your-changes">3. Commit and push your changes</h2>
+<p>When you are satisfied with your contribution take a look at the changes you have created in git:</p>
+<pre><code>git status
+</code></pre>
+<p>Add those files to git:</p>
+<pre><code>git add .
+</code></pre>
+<p>Commit the changes:</p>
+<pre><code>git commit -sm "Write a descriptive message of your changes"
+</code></pre>
+<div class="admonition attention">
+<p class="admonition-title">Remember to do this:</p>
+<p>It is important to use the <code>-sm</code> switch on the commit command, as the <code>s</code> signs the commit which is needed to merge your changes into the main branch later on.</p>
+</div>
+<p>Push the changes to the Github branch:</p>
+<pre><code>git push origin [name_of_your_new_branch]
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Repeate step 2 and 3 until you have fulfilled the purpose of your branch.</p>
+</div>
+<h2 id="4-create-pull-request">4. Create Pull request</h2>
+<p>Go to the Github repository <a href="https://github.com/IBM/maximo-labs" target="_blank">https://github.com/IBM/maximo-labs</a></p>
+<p>Select your branch in the dropdown box:
+<img alt="Select branch" src="../img/add_select_branch.png" /></p>
+<p>Create a Pull request:
+<img alt="Select Pull request" src="../img/add_select_pull_request.png" /></p>
+<p>Give it a title and description. Hit the <code>Create pull request</code> button.</p>
+<div class="admonition attention">
+<p class="admonition-title">Remember to do this:</p>
+<p>Ask Carlos Ferreia (carlos.ferreira1@ibm.com) or one of the repository administrators to review and accept your Pull Request.</p>
+</div>
+<h2 id="5-clean-up-branches-locally-and-remotely-github">5. Clean up branches locally and remotely (Github)</h2>
+<p>Once the Pull Request has been accepted and your commits are added to the main branch, it is time to clean up the branch locally and remotely (on Github).</p>
+<pre><code>git switch main
+git branch -d [name_of_your_new_branch]
+git push origin :[name_of_your_new_branch]
+git pull
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>:</code> before the [name_of_your_new_branch] in the last command will delete it on Github.</br>
+You might get an error if the branch was deleted on Github after the Pull Request was merged to the main branch.</p>
+</div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Thank you !</p>
+<p>You have now contributed to Maximo Labs - Thank you very much :-)</p>
+</div>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_new/" class="btn btn-neutral float-right" title="Create new lab">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_new/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

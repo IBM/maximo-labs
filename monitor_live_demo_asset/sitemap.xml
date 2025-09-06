@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/convert_pi/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/create_devices/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/prepare_pi/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/prereqs/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/release_notes/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/user_guide/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/verify_rpe/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+</urlset>

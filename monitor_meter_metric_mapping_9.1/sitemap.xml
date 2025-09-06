@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/delete/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/edit/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/prereqs/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/release_notes/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/setup/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/toggle_sync/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/view_meter_data/</loc>
+         <lastmod>2025-09-06</lastmod>
+    </url>
+</urlset>

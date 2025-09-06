@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/add_device_2/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>5. Add another industrial device - Monitor Managed Gateway Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "5. Add another industrial device";
+        var mkdocs_page_input_path = "add_device_2.md";
+        var mkdocs_page_url = "/maximo-labs/add_device_2/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Managed Gateway Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Managed GW Modbus Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_simulator/">1. Setup Simulator Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_gateway/">2. Create a Managed Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_device_1/">3. Add an industrial device</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify data inflow</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">5. Add another industrial device</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../re-deploy/">6. Deploy and view data in a dashboard</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Managed Gateway Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">5. Add another industrial device</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to add a second industrial device to the Managed Gateway.</br>
+This time you will add it based on your Device Type rather than from the Managed Gateway.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<p>Please find the IP address of the machine the <a href="../setup_simulator/">Modbus simulator</a> is running on.
+I was running the simulator on my local network on a machine with the IP address: 192.168.1.64.</p>
+<hr />
+<p>Expand Setup in the Monitor section in the left menu and select <code>Device types</code>:</br>
+<img alt="Goto Device Types" src="../img/add_device_21.png" /></br></br></p>
+<p>Filter on your initials, select your VFD device type and the click on <code>Add device +</code>:</br>
+<img alt="Add new device" src="../img/add_device_22.png" /></br></br></p>
+<p>The <code>Use device library</code> will automatically be selected, as this Device type is based on a device from the library.</br>
+Filter to find and select your Gateway Type in the first dropdown:</br>
+<img alt="Select Gateway" src="../img/add_device_23.png" /></br></br></p>
+<p>Select your Managed Gateway in the second dropdown:</br>
+<img alt="Gateway selected" src="../img/add_device_24.png" /></br></br></p>
+<p>You should now see your gateway type and name. Click on <code>Continue</code>:</br>
+<img alt="Select Modbus TCP" src="../img/add_device_25.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Adding a new device and adding it to a Managed Gateway is handled as a natural part of the flow. That means only managed gateway types are shown in the first dropdown and only instances of the selected managed gateway type in the second dropdown box.</p>
+</div>
+<p></br>
+Find and select the Lenze i550 device and click <code>Next</code>.</br>
+Select the <code>Modbus TCP</code> protocol.</br>
+Use the IP address of the simulator using port 20502, like <code>192.168.1.64:20502</code>.</br>
+Click on <code>Next</code>;</br>
+<img alt="Define IP Address" src="../img/add_device_26.png" /></br></br></p>
+<p>Define the Device ID as <code>XX_Lenze_i550_02</code> where you replace XX with your initials.</br>
+Click <code>Next</code>:</br>
+<img alt="Configure Device ID" src="../img/add_device_27.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Device type has already been selected, as the flow knows that the new device is added based on the Device type.</br></p>
+</div>
+<p></br>
+Define the Data frequency to 60000 (60 seconds).</br>
+Select all the Standard Metrics and one additional Synthesised Metric, which was also selected for the first device.</br>
+Click <code>Save</code>:</br>
+<img alt="Configure Device type" src="../img/add_device_28.png" /></br></br></p>
+<p>You can now see both your VFD devices:</br>
+<img alt="View devices" src="../img/add_device_29.png" /></br></br></p>
+<p>Expand Setup in the Monitor section in the left menu and select <code>Gateways</code>:</br>
+<img alt="Navigate to Gateways" src="../img/add_device_30.png" /></br></br></p>
+<p>Filter to find and select your Gateway </br>
+- select it and you should also see both VFD devices handled by your Managed Gateway:</br>
+<img alt="View your Managed Gateway" src="../img/add_device_31.png" /></br></br></p>
+<hr />
+<p>Congratulations you have successfully added another industrial device to your Managed Gateway.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../deploy/" class="btn btn-neutral float-left" title="4. Deploy and verify data inflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../re-deploy/" class="btn btn-neutral float-right" title="6. Deploy and view data in a dashboard">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../deploy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../re-deploy/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

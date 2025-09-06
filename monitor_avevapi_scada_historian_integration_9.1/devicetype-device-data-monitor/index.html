@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jignesh Prajapati" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/devicetype-device-data-monitor/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Device Type and devices data in Monitor - Monitor Aveva PI Scada Historian Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Device Type and devices data in Monitor";
+        var mkdocs_page_input_path = "devicetype-device-data-monitor.md";
+        var mkdocs_page_url = "/maximo-labs/devicetype-device-data-monitor/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Aveva PI Scada Historian Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Aveva PI Scada Historian Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../add-integration/">1. Configure Aveva PI Scada Historian Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify-deploy-docker/">2. Verify and Deploy docker</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Device Type and devices data in Monitor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#device-types-and-devices-creation">Device Types and Devices Creation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#device-data-recent-events">Device Data - Recent Events</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#device-data-trend-chart">Device Data - Trend Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#device-data-data-table">Device Data - Data Table</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit-integration/">4. Update Aveva PI Scada Historian Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete-integration/">5. Delete Aveva PI Scada Historian Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reset-api-key/">6. Reset API Key</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Aveva PI Scada Historian Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Device Type and devices data in Monitor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="device-type-devices-and-devices-data">Device Type, devices and devices data</h1>
+<p>In this Exercise you will learn how device type, devices and device data are populated in IBM MAS Monitor UI</p>
+<p>Upon execution of docker command, it starts pulling device data based on <code>tag name filter</code> expression and device raw data from Aveva PI Scada historian and can be seen in the recent events of IBM MAS Monitor. </p>
+<h2 id="device-types-and-devices-creation">Device Types and Devices Creation</h2>
+<p><a name="summary"></a></p>
+<ol>
+<li>Open <code>Maximo Application Suite</code> and select <code>Monitor Application</code>. 
+<img alt="setup AvevaPI" src="../img/mas_home.png" style="height:500px;width:900px" /></li>
+<li>Open <code>Monitor</code> tab
+<img alt="setup AvevaPI" src="../img/monitor_home.png" style="height:500px;width:900px" /></li>
+<li>Navigate to the <code>Device types</code> menu tab 
+<img alt="setup AvevaPI" src="../img/devicetypes-menu.png" style="height:350px;width:140px" /></li>
+<li>Search device type name. This will shows the device list as below.
+<img alt="setup AvevaPI" src="../img/monitor-devicetype-created-1.png" style="height:500px;width:900px" />
+<img alt="setup AvevaPI" src="../img/monitor-devicetype-created-2.png" style="height:500px;width:900px" /></li>
+</ol>
+<h2 id="device-data-recent-events">Device Data - Recent Events</h2>
+<p>Click on any device Id from device list and navigate to <code>Recent event</code> tab to view incoming device data
+<img alt="setup AvevaPI" src="../img/monitor-device-recentevents.png" style="height:400px;width:900px" /></p>
+<h2 id="device-data-trend-chart">Device Data - Trend Chart</h2>
+<p>Navigate to <code>Data</code> tab, Select Metric Name <code>value</code> then click on <code>Trend</code> tab
+<img alt="setup AvevaPI" src="../img/monitor-device-data-trend.png" style="height:400px;width:900px" /></p>
+<h2 id="device-data-data-table">Device Data - Data Table</h2>
+<p>Navigate to <code>Data</code> tab, Select Metric Name <code>value</code> then click on <code>Data table</code> tab
+<img alt="setup AvevaPI" src="../img/monitor-device-data-datatable.png" style="height:400px;width:900px" /></p>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>You can view the recent events generated for each device, trend chart and data table from Aveva PI Scada historian.</p>
+<p>Lets next see how to update existing Aveva PI Scada Historian integration configuration.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../verify-deploy-docker/" class="btn btn-neutral float-left" title="2. Verify and Deploy docker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../edit-integration/" class="btn btn-neutral float-right" title="4. Update Aveva PI Scada Historian Integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../verify-deploy-docker/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../edit-integration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

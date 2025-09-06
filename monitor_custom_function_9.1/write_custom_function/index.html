@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Radhika Surani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/write_custom_function/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Write Custom Function - Monitor Custom Function</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Write Custom Function";
+        var mkdocs_page_input_path = "write_custom_function.md";
+        var mkdocs_page_url = "/maximo-labs/write_custom_function/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Custom Function
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Custom Function</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_starter_package/">1. Setup Starter Package</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Write Custom Function</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#define-your-calculation">Define your calculation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#package-your-function-and-store-it-in-github">Package your function and store it in GitHub</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-your-custom-function">Create your custom function</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#save-your-credentials-to-a-file">Save your credentials to a file</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#push-your-local-changes-to-your-github-repository">Push your local changes to your GitHub repository</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../register_custom_function/">3. Register Custom Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../apply_custom_function/">4. Apply Custom Function</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Custom Function</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Write Custom Function</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will write MultiplyByFactor custom function.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>you can define your calculation as required!</p>
+</div>
+<h3 id="define-your-calculation">Define your calculation</h3>
+<p><b> Business scenario: </b></p>
+<p>A robotics company is testing new robotic arms and has discovered that testing tools introduce delays affecting speed and travel time measurements. The operations manager needs to adjust these values by a factor of 2 but wants flexibility to change this factor later.</p>
+<p><b> Solution approach: </b></p>
+<p>Create a reusable MultiplyByFactor function that can: </br>
+- Accept multiple input items</br>
+- Apply a configurable multiplication factor </br>
+- Generate corresponding output items</br>
+- Be reused across different calculations</br>
+- Formula: output_value = input_value * factor</br></p>
+<h3 id="package-your-function-and-store-it-in-github">Package your function and store it in GitHub</h3>
+<ol>
+    <li>Create a new private repository on GitHub for the starter package you cloned.</li>
+    <li>Add an empty file (such as README.md) to create the master branch</li>
+    <li>Open the project in PyCharm locally for editing.</li>
+    <li>Verify that the project has the following directory structure and files:</br>
+    <pre><code class="language-bash">
+        functions
+        |
+        |__ setup.py
+        |
+        |__ scripts
+            |
+            |_ local_test_of_function.py
+        |
+        |__ custom
+            |
+            |_ functions.py
+            |_  __init__.py
+     </code></pre>
+    </li>
+</ol>
+
+<h3 id="create-your-custom-function">Create your custom function</h3>
+<ol>
+    <li>Rename the custom directory to custom{your_initials} (for example, customRS)</li>
+    <li>Create a new file multiplybyfactor{your_initials}.py in your custom{your_initials} directory</li>
+    <li>Add the following code, Update the variables in <> to match your environment. For example, if your code is in GitHub, you might set PACKAGE_URL to </br>
+    'git+https://<XXXXXX>@github.com/github.com/jones/starter@starter_package'.
+In this function, you implement two methods. You add your calculation to the execute method. You set the inputs and outputs arguments for the function in the build_ui method.</li></br>
+    <li>
+    <pre><code class="language-bash">
+import inspect
+import logging
+import datetime as dt
+import math
+from sqlalchemy.sql.sqltypes import TIMESTAMP,VARCHAR
+import numpy as np
+import pandas as pd
+
+from iotfunctions.base import BaseTransformer
+from iotfunctions import ui
+
+logger = logging.getLogger(__name__)
+
+# Specify the URL to your package here.
+# This URL must be accessible via pip install.
+# Example assumes the repository is private.
+# Replace XXXXXX with your personal access token.
+# After @ you must specify a branch.
+
+PACKAGE_URL = 'git+https://XXXXXX@github.com/<user_id><path_to_repository>@starter_package'
+
+class MultiplyByFactor<YourInitials>(BaseTransformer):
+
+    def __init__(self, input_items, factor, output_items):
+
+        self.input_items = input_items
+        self.output_items = output_items
+        self.factor = float(factor)
+        super().__init__()
+    def execute(self, df):
+        df = df.copy()
+        for i,input_item in enumerate(self.input_items):
+            df[self.output_items[i]] = df[input_item] * self.factor
+        return df
+
+    @classmethod
+    def build_ui(cls):
+        #define arguments that behave as function inputs
+        inputs = []
+        inputs.append(ui.UIMultiItem(
+                name = 'input_items',
+                datatype=float,
+                description = "Data items adjust",
+                output_item = 'output_items',
+                is_output_datatype_derived = True)
+                      )        
+        inputs.append(ui.UISingle(
+                name = 'factor',
+                datatype=float)
+                      )
+        outputs = []
+        return (inputs,outputs)   
+</code></pre>
+</li>
+</ol>
+
+<h3 id="save-your-credentials-to-a-file">Save your credentials to a file</h3>
+<p>Set credentials to connect to Maximo Monitor.</p>
+<ol>
+    <li>Navigate to your starter package directory and locate the credentials_as.json template file</li>
+    <li>Replace the variables with your data and then save the file to your local machine.</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The credentials file is used to run or test the function locally. Do not push this file to your external repository.</p>
+</div>
+<h3 id="push-your-local-changes-to-your-github-repository">Push your local changes to your GitHub repository</h3>
+<p>The files that you modified are still pointing to the GitHub repository that you cloned the code from. Change the remote repository to your GitHub repository.</p>
+<p>Verify that your credentials file is not included with your function code before the commit the changes to your external directory.</p>
+<p>Push your function code to your external repository in GitHub.</p>
+<ol>
+    <li>Open a terminal window in the project folder</li>
+    <li>Enter: git remote -v. The remote repository is still pointing to https://github.com/ibm-watson-iot/functions</li>
+    <li>Change the remote origin URL by using the following commands:</li></br>
+    <li>
+        <pre><code class="language-bash"> git remote set-url origin URL_To_YOUR_GITHUB_REPOSITORY
+        </code> </pre>
+        Confirm that the Fetch and Push URLs are pointing to your repository.
+    </li>
+    <li>Add the upstream remote by using the following command. Enter:</li>
+    <li>
+        <pre><code class="language-bash"> git remote add upstream https://github.com/ibm-watson-iot/functions.git  </code></pre>
+    </li>
+    <li>Add your files to GIT and commit them. </br>
+     a. In PyCharm, select the custom<your_initials> directory.</br>
+     b. Select Git > Add.</br>
+     c. Select Git > Commit.</br>
+     d. In the Commit Changes window, click Commit.</br>
+     e. Select Git > Repository > Push.</br>
+     f. Click Push.</br>
+    </li>
+    <li>Verify that your module was pushed to a starter_package branch in your repository.</li> 
+</ol>
+
+<hr />
+<p>Congratulations you have successfully written custom function.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup_starter_package/" class="btn btn-neutral float-left" title="1. Setup Starter Package"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../register_custom_function/" class="btn btn-neutral float-right" title="3. Register Custom Function">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup_starter_package/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../register_custom_function/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
