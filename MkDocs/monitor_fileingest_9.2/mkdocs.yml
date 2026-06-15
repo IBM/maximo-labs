@@ -1,0 +1,45 @@
+site_name: Monitor File Ingest Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Margi Shah
+site_description: "Monitor File Ingest Lab"
+site_dir: ../../site/monitor_fileingest_9.2
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor FileIngest Lab:
+    - Welcome to the Monitor Fileingest Lab: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Download Built-in Template : download_template.md
+    - 2. How to Upload CSV Files via Monitor UI : upload_csv_files.md
+    - 3. Uploaded File - Progress Tracking & File Ingestion History : uploaded_file_status.md
+    - 4. Download Processed and Error Files : download_error_files.md
+    - 5. Storage Usage & Storage Mode : storage_guide.md
+    - 6. File Retention Days : file_retention.md
+    - 7. Delete File : delete_file.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
