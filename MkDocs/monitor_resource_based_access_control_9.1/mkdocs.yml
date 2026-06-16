@@ -22,18 +22,21 @@ nav:
 
 theme:
   name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
   highlightjs: true
   hljs_languages:
     - yaml
 
-extra_css:
-  - css/extra.css
-extra_javascript:
-  - js/popper.min.js
-  - js/tippy-bundle.umd.js
-  - js/clipboard.js
-  - js/extra.js
-
 markdown_extensions:
   - attr_list
   - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
