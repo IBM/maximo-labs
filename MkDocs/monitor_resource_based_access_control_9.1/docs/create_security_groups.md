@@ -52,8 +52,6 @@ Security Groups in Monitor define which pages and functionalities users can acce
 
 4. Search for View and All the View Pages Shall Appear. Select all the permissions to enable the Security Group to view and Access Only Dashboard Pages.
 
-![Assign Permissions](img/security_groups_04.png)</br>
-
 - The Assigned permissions can be viewed in Details / Edit Security group section </br>
    
    ![Assign Permissions](img/security_groups_05.png)</br>

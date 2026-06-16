@@ -227,6 +227,8 @@ This restriction grants access to both "ITHQ" and "NEW" systems. In the Dashboar
 
 
 ![System Multiple Access](img/system_multiple_access_setup.png)
+
+
 ![System Multiple Access](img/system_multiple_access_db.png)
 
 
@@ -245,6 +247,8 @@ This pattern-based restriction allows access to all systems whose names start wi
 
 
 ![System Pattern Access](img/system_single_access_setup.png)
+
+
 ![System Pattern Access](img/system_single_access_db.png)
 
 
@@ -264,6 +268,8 @@ This restriction uses the system's internal UUID (locsystemid) for precise ident
 
 
 ![System UUID Access](img/system_uuid_access_setup.png)
+
+
 ![System UUID Access](img/system_uuid_access_db.png)
 
 
