@@ -1,0 +1,39 @@
+site_name: Monitor Smart Alerts
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Radhika Surani
+site_description: "Maximo Monitor Smart Alerts"
+site_dir: ../../site/monitor_smart_alerts_9.2
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Custom Function:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Nodata Alert: nodata_alerts.md
+        - 2. AlertsByOccurrencesCount: alerts_by_occurrences_count.md
+        - 3. Create Alert In Manage: create_alert_in_manage.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
