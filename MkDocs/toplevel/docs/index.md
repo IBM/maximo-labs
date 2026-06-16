@@ -12,8 +12,22 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 <empty line>
 [IMPORTANT HIDDEN COMMENT: Do not alter the header line of the below tables as they use the space accessible, but copy it to new tables when they are created]::
 
-### Maximo Application Suite 9.1 
-  
+### Maximo Application Suite 9.2
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Resource Based Access Control 9.2](monitor_resource_based_access_control_9.2/)  | [Gateway Restrictions](monitor_resource_based_access_control_9.2/gateway_restrictions)     |
+
+
+### Maximo Application Suite 9.1
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Resource Based Access Control 9.1](monitor_resource_based_access_control_9.1/)                        | [Create Security Groups](monitor_resource_based_access_control_9.1/create_security_groups)     |
+|          | [Create Users and Assign Groups](monitor_resource_based_access_control_9.1/create_users)       |
+|                                                                | [Add Data Restrictions in Security Group](monitor_resource_based_access_control_9.1/data_restriction_update)    |
+|                                                                | [Resource Restriction Scenarios](monitor_resource_based_access_control_9.1/resource_restriction_scenarios)    |
+|                                                                | [Verify User Data Restrictions](monitor_resource_based_access_control_9.1/verify_data_restrictions)    |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -53,9 +67,37 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Role Based Access Control](monitor_role_based_access_control_9.1/)  | [Create Security Groups](monitor_role_based_access_control_9.1/create_security_groups) |
-|                                                                | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)                        |
-|                                                                | [Login and Access Behavior](monitor_role_based_access_control_9.1/user_access_behavior)                     |
+| [Maximo Monitor Cisco Webex Integration Lab](monitor_cisco_webex_integration_9.1/) | [Overview and Purpose of using Cisco Webex device](monitor_cisco_webex_integration_9.1/overview) |
+|                                                                | [Integrate Cisco Webex device in MAS Monitor](monitor_cisco_webex_integration_9.1/create_integration)                  |
+|                                                                | [Subscribe to a Cisco Webex device](monitor_cisco_webex_integration_9.1/add_device)             |
+|                                                                | [Assign Cisco Webex device to a location](monitor_cisco_webex_integration_9.1/assign_location)               |
+|                                                                | [Unsubscribe Cisco Webex device](monitor_cisco_webex_integration_9.1/unsubscribe_device)               |
+|                                                                | [Delete Cisco Webex configuration](monitor_cisco_webex_integration_9.1/delete_integartion)               |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Cisco Spaces Integration Lab](monitor_cisco_spaces_integration_9.1/) | [Cisco Spaces Overview](monitor_cisco_spaces_integration_9.1/cisco_spaces_overview)                              |
+|                                                                                                                                                         | [Generate Activation Token](monitor_cisco_spaces_integration_9.1/generate_activation_token)                      |
+|                                                                                                                                                         | [Configure Cisco Spaces Integration](monitor_cisco_spaces_integration_9.1/cisco_spaces_integration)              |
+|                                                                                                                                                         | [Locations List Overview](monitor_cisco_spaces_integration_9.1/locations_list)                                   |
+|                                                                                                                                                         | [Subscribe Cisco Space Location](monitor_cisco_spaces_integration_9.1/subscribe)                                 |
+|                                                                                                                                                         | [Cisco Spaces Location Metrics](monitor_cisco_spaces_integration_9.1/location_metrics)                           |
+|                                                                                                                                                         | [Generate Heatmap on MREF Location](monitor_cisco_spaces_integration_9.1/heatmap)                                |
+|                                                                                                                                                         | [Unsubscribe Cisco Space Location](monitor_cisco_spaces_integration_9.1/unsubscribe)                            |
+|                                                                                                                                                         | [Edit / Delete Cisco Spaces Configuration](monitor_cisco_spaces_integration_9.1/edit_delete_config)              |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Role Based Access Control](monitor_role_based_access_control_9.1/)                        | [Create Security Groups](monitor_role_based_access_control_9.1/create_security_groups)     |
+|          | [Create Users and Assign Groups](monitor_role_based_access_control_9.1/create_users)       |
+|                                                                | [Login and Access Behavior](monitor_role_based_access_control_9.1/user_access_behavior)    |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Custom Function](monitor_custom_function_9.1/) | [Setup Starter Package](monitor_custom_function_9.1/setup_starter_package) |
+|                                                                | [Write Custom Function](monitor_custom_function_9.1/write_custom_function)                  |
+|                                                                | [Register Custom Function](monitor_custom_function_9.1/register_custom_function)             |
+|                                                                | [Apply Custom Function](monitor_custom_function_9.1/apply_custom_function)               |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -141,7 +183,7 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 |                                                                | [Use the Node-RED script](monitor_modbus_simulator/node-red)                       |
 
 
-### Maximo Application Suite 9.0 
+### Maximo Application Suite 9.0
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
