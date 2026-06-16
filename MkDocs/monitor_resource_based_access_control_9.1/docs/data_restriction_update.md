@@ -71,25 +71,29 @@ Follow these steps to add data restrictions to the Security Group you created in
 
 A "Create data restriction" modal will open. Follow these steps:
 
-1. **Search for Application**: In the Application field, search for the Monitor application you want to add restrictions to
-   - Example: `MONITOR_SETUP_LOCATIONS`
+**Search for Application**: In the Application field, search for the Monitor application you want to add restrictions to
 
-![Search Application](img/data_restriction_05.png)</br>
+Example: `MONITOR_SETUP_LOCATIONS`
 
-2. **Select Application**: Click on the application from the dropdown list
-   - Example: Select `MONITOR_SETUP_LOCATIONS` from the list
+![Search Application](img/data_restriction_05.png)
 
-![Select Application](img/data_restriction_06.png)</br>
+**Select Application**: Click on the application from the dropdown list
 
-3. **Add Condition**: In the "Condition expression" field, enter your filter condition
-   - Example: `location="BR%"`
-   - This will restrict the user to only see locations starting with "BR"
+Example: Select `MONITOR_SETUP_LOCATIONS` from the list
 
-![Add Condition](img/data_restriction_07.png)</br>
+![Select Application](img/data_restriction_06.png)
 
-4. Click **Create** to save the restriction
+**Add Condition**: In the "Condition expression" field, enter your filter condition
 
-![Create Restriction](img/data_restriction_08.png)</br>
+Example: `location="BR%"`
+
+This will restrict the user to only see locations starting with "BR"
+
+![Add Condition](img/data_restriction_07.png)
+
+Click **Create** to save the restriction
+
+![Create Restriction](img/data_restriction_08.png)
 
 ---
 
@@ -214,11 +218,6 @@ category IN ["COUNT","AVG"]
 active=true AND siteid="BEDFORD"
 assetnum="M2%"
 ```
-
-!!! tip
-    For more information on filtering hierarchy resources, see the [Maximo REST API Documentation](https://ibm-maximo-dev.github.io/maximo-restapi-documentation/query/filtering/).
-
----
 
 ## Parameter Reference for Hierarchy Resources
 
