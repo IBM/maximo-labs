@@ -12,6 +12,15 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 <empty line>
 [IMPORTANT HIDDEN COMMENT: Do not alter the header line of the below tables as they use the space accessible, but copy it to new tables when they are created]::
 
+### Maximo Application Suite 9.2
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
+|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| [Maximo Monitor Smart Alerts](monitor_smart_alerts_9.2/)     | [Nodata Alert](monitor_smart_alerts_9.2/nodata_alerts)                                                                                  |
+|                                                              | [AlertsByOccurrencesCount](monitor_smart_alerts_9.2/alerts_by_occurrences_count)                                                        |
+|                                                              | [Create Alert In Manage](monitor_smart_alerts_9.2/create_alert_in_manage)                                                               |
+
+
 ### Maximo Application Suite 9.1 
   
 
