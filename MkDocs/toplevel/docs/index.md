@@ -51,6 +51,14 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 |                                                                | [Add Data Restrictions in Security Group](monitor_resource_based_access_control_9.1/data_restriction_update)    |
 |                                                                | [Resource Restriction Scenarios](monitor_resource_based_access_control_9.1/resource_restriction_scenarios)    |
 |                                                                | [Verify User Data Restrictions](monitor_resource_based_access_control_9.1/verify_data_restrictions)    |
+### Maximo Application Suite 9.2
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor IoTP Re-Architecture Overview](iot_overview/iot_rearchitecture_overview) | [IoTP Overview](iot_overview/iot_rearchitecture_overview) |
+
+### Maximo Application Suite 9.1
+  
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -317,6 +325,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2026-06-16
+### UPDATED: 2025-09-05
 
 ---
