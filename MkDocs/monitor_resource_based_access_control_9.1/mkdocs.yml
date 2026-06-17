@@ -1,0 +1,42 @@
+site_name: Monitor Resource Based Access Control Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Kajal Lalwani
+site_description: "Maximo Monitor 9.1 Resource Based Access Control Lab"
+site_dir: ../../site/monitor_resource_based_access_control_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor RBAC Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Create Security Groups: create_security_groups.md
+        - 2. Create Users and Assign Groups: create_users.md
+        - 3. Add Data Restrictions in Security Group: data_restriction_update.md
+        - 4. Resource Restriction Scenarios: resource_restriction_scenarios.md
+        - 5. Verify User Data Restrictions: verify_data_restrictions.md
+
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
