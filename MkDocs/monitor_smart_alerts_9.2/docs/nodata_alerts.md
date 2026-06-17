@@ -35,7 +35,7 @@ A **NoData Alert** triggers when data not arrive from a device for a continuous 
 
 ### UI Configuration
 
-![Configure Device ID](img/_nodata_ui_config.png)</br></br>
+![Configure Device ID](img/nodata_ui_config.png)</br></br>
 
 ---
 
