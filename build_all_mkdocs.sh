@@ -29,6 +29,16 @@ Look at the character used above and belove these two lines of text.
 #### PLEASE KEEP SAME ORDER AS IN THE INDEX.MD, I.E.      ####
 #### ADDING NEW LABS RIGHT UNDER THIS COMMENT             ####
 
+##############################################################
+#### Maximo Application Suite 9.2 Labs                    ####
+
+# Build the Monitor Modbus Custom Device upload:
+lab=monitor_fileingest_9.2
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 ##############################################################
 #### Maximo Application Suite 9.1 Labs                    ####

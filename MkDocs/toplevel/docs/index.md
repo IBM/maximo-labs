@@ -12,6 +12,15 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 <empty line>
 [IMPORTANT HIDDEN COMMENT: Do not alter the header line of the below tables as they use the space accessible, but copy it to new tables when they are created]::
 
+### Maximo Application Suite 9.2
+  
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor DataIngest](monitor_fileingest_9.2/) | [DataIngest Overview](monitor_fileingest_9.2/getting_started) |
+|                                                                | [Download Template](monitor_fileingest_9.2/download_template)           |
+|                                                                | [Upload CSV File](monitor_fileingest_9.2/upload_csv_files)   |
+|                                                                | [Delete File](monitor_fileingest_9.2/delete_file)   |
+
 ### Maximo Application Suite 9.1 
   
 

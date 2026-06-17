@@ -13,33 +13,36 @@ This Exercise requires that you have:
 ---
 
 !!! info
-    To Upload CSV Files, we have two options.
+    To upload CSV files, you can use one of the following options.
 
-Options-1: Data Ingestion from Main Menu
+### Option-1. Data Ingestion from Setup
 
-1. Navigation to Setup -> Data Ingestion
-![Naviagate Data Ingestion](img/data_ingestion/1_data_ingestion.png)&nbsp;&nbsp;
+1. Navigate to Setup → Data Ingestion to access the upload interface.
+![Naviagate Data Ingestion](img/data_ingestion/a_1_data_ingestion.png)&nbsp;&nbsp;
 
-2. Click the upload button
-![Click Upload](img/data_ingestion/2_data_ingestion.png)&nbsp;&nbsp;
+2. Click on the Upload button to start the file upload process.
+![Click Upload](img/data_ingestion/a_2_data_ingestion.png)&nbsp;&nbsp;
 
-3. Select the Device Type
-![Select Device Type](img/data_ingestion/3_data_ingestion.png)&nbsp;&nbsp;
+3. Select the required Device Type and click Next to proceed.
+![Select Device Type](img/data_ingestion/a_3_data_ingestion.png)&nbsp;&nbsp;
 
-4. Upload the CSV files
-![Click on Upload CSV](img/data_ingestion/4_data_ingestion.png)&nbsp;&nbsp;
+4. Upload the CSV files to complete the ingestion process.
+![Click on Upload CSV](img/data_ingestion/data_ingestion_final.png)&nbsp;&nbsp;
 
-Options-2: Data Ingestion from Device type Level
+### Option-2. Data Ingestion from Device type
 
-1. Navigate to Setup -> Device types -> click on Edits -> Data Ingestion
-![Naviagate Data Ingestion](img/data_ingestion/5_data_ingestion.png)&nbsp;&nbsp;
+1. Navigate to Setup → Device types to locate the device configuration.
+![Naviagate Device Types](img/data_ingestion/b_1_data_ingestion.png)&nbsp;&nbsp;
 
-2. Click the upload button
-![Click Upload](img/data_ingestion/6_data_ingestion.png)&nbsp;&nbsp;
+2. Select the Device Type and click on Edit to modify settings.
+![Naviagate Data Ingestion](img/data_ingestion/b_2_data_ingestion.png)&nbsp;&nbsp;
 
-3. Upload the CSV files
-![Select Device Type](img/data_ingestion/7_data_ingestion.png)&nbsp;&nbsp;
+3. Go to the Data Ingestion tab and click on the Upload button.
+![Click Upload](img/data_ingestion/b_3_data_ingestion.png)&nbsp;&nbsp;
+
+4. Upload the CSV files to complete the ingestion process.
+![Click on Upload CSV](img/data_ingestion/data_ingestion_final.png)&nbsp;&nbsp;
 
 ---
 
-Congratulations you have successfully uploaded CSV files.</br>
+Next step we will see how we can download template and prepare CSV for upload.</br>
