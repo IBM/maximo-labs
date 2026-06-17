@@ -31,6 +31,17 @@ Look at the character used above and belove these two lines of text.
 
 
 ##############################################################
+#### Maximo Application Suite 9.2 Labs                    ####
+
+# Build the IoT Overview:
+lab=iot_overview
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+##############################################################
 #### Maximo Application Suite 9.1 Labs                    ####
 
 # Build the Monitor Modbus Custom Device upload:

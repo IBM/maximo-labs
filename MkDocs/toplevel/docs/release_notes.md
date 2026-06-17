@@ -22,6 +22,7 @@
 - Kajal Lalwani - <kajal.lalwani@ibm.com>
 - Bihag Gandhi - <bihag.gandhi@ibm.com>
 - Saravanan Krishnamoorthy - <saravanan.krish@ibm.com>
+- Sonali Suthar - <sonali.suthar@ibm.com>
  
 
 ---
@@ -30,6 +31,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2026-06-16|Sonali Suthar    |Added [Maximo Monitor IoTP Re-Architecture Overview](../iot_overview/iot_rearchitecture_overview) : IoTP Overview for 9.2 |
 |2025-09-05|Jan Ekstrøm    |Moved these Maximo Labs to the archive: Maximo SaaS, MAS 8.5, MAS 8.7, MAS 8.8, MAS 8.9.  |
 |2025-07-16|Saravanan Krishnamoorthy |Added the initial version of [Maximo Monitor Json-over-http custom device upload lab](../monitor_managed_gw_json_9.1/) for MAS 9.1. |
 |2025-07-11|Saravanan Krishnamoorthy |Added the initial version of [Maximo Monitor Modbus custom device upload lab](../monitor_modbus_custom_device_9.1/) for MAS 9.1. |

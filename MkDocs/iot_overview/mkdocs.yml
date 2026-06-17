@@ -1,0 +1,36 @@
+site_name: IoT Re-Architecture Overview
+site_url: https://ibm.github.io/maximo-labs/
+site_author: IBM Maximo Labs
+site_description: "IoT Re-Architecture Overview for Maximo Monitor 9.2"
+site_dir: ../../site/iot_overview
+
+nav:
+  - Get back to Maximo Labs: ..
+  - IoT Overview:
+    - IoT Re-Architecture Overview: iot_rearchitecture_overview.md
+  - About:
+    - Copyright: ../copyright
+
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
+
+# Made with Bob
