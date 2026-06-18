@@ -1,0 +1,41 @@
+site_name: Monitor Parent-Level Aggregation Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Tirth Patel
+site_description: "Maximo Monitor 9.1 Parent-Level Aggregation Lab"
+site_dir: ../../site/monitor_parent_level_aggregation_9.1
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Parent-Level Aggregation Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Setup Asset: setup_asset.md
+        - 2. Create Dashboard with Time Series Card: create_asset_dashboard.md
+        - 3. Explore Different Card Types: explore_card_types.md
+        - 4. Aggregation Across Hierarchy Levels: aggregation_across_hierarchy.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+  
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT 
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
