@@ -154,6 +154,14 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
+# Build the Monitor Parent Level Aggregation 9.1 level:
+lab=monitor_parent_level_aggregation_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
 ##############################################################
 #### Maximo Application Suite 9.2 Labs                    ####
 
