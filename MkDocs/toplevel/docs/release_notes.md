@@ -22,6 +22,7 @@
 - Kajal Lalwani - <kajal.lalwani@ibm.com>
 - Bihag Gandhi - <bihag.gandhi@ibm.com>
 - Saravanan Krishnamoorthy - <saravanan.krish@ibm.com>
+- Tirth Patel - <tirth.patel1@ibm.com>
  
 
 ---
@@ -30,6 +31,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2026-06-18|Tirth Patel    | Added the initial version of [Maximo Monitor Parent Level Aggregation Lab](../monitor_parent_level_aggregation_9.1/) for MAS 9.1.|
 | 2026-06-16 |Radhika Surani | Added the initial version of [Maximo Monitor Smart Alerts Lab](../monitor_smart_alerts_9.2/) for MAS 9.2.|
 |2026-06-16|Kajal Lalwani|Added the [Maximo Monitor Resource Based Access Control Lab](../monitor_resource_based_access_control_9.2/) for MAS 9.2. |
 |2026-06-16|Kajal Lalwani|Added the [Maximo Monitor Resource Based Access Control Lab](../monitor_resource_based_access_control_9.1/) for MAS 9.1. |

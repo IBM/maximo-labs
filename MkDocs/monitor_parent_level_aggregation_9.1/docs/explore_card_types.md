@@ -23,16 +23,16 @@ Parent-level aggregation supports multiple card types, each providing different 
 
 Simple bar cards display a single metric grouped by time intervals, allowing you to see how values change over different time periods.
 
-1. Click `Add card` and select `Simple bar` card type.
+1. Click `Add card` and select `Simple bar` card type.</br></br>
 ![Add Simple Bar Card](img/simple_bar_01.png)</br></br>
 
-2. Click `Add Hierarchy Data Item` button and select the child devices.
+2. Click `Add Hierarchy Data Item` button and select the child devices.</br></br>
 ![Add Hierarchy Data Item](img/simple_bar_02.png)</br></br>
 
-3. Select the data item (metric) to display. **Note:** Simple bar cards allow you to select only ONE metric at a time.
+3. Select the data item (metric) to display. **Note:** Simple bar cards allow you to select only ONE metric at a time.</br></br>
 ![Select Data Items](img/simple_bar_03.png)</br></br>
 
-4. The Simple bar card displays the selected metric grouped by time intervals (hourly, daily, weekly, etc.), showing how the value changes over time.
+4. The Simple bar card displays the selected metric grouped by time intervals (hourly, daily, weekly, etc.), showing how the value changes over time.</br></br>
 ![View Simple Bar Card](img/simple_bar_04.png)</br></br>
 
 !!! tip "Use Case Example"
@@ -49,16 +49,16 @@ Simple bar cards display a single metric grouped by time intervals, allowing you
 
 Stacked bar cards are similar to Simple bar cards but allow you to select multiple data items. The card displays these metrics stacked on top of each other, grouped by time intervals, showing the cumulative contribution of each metric over time.
 
-1. Click `Add card` and select `Stacked bar` card type.
+1. Click `Add card` and select `Stacked bar` card type.</br></br>
 ![Add Stacked Bar Card](img/stacked_bar_01.png)</br></br>
 
-2. Click `Add Hierarchy Data Item` button and select the child devices.
+2. Click `Add Hierarchy Data Item` button and select the child devices.</br></br>
 ![Add Hierarchy Data Item](img/stacked_bar_02.png)</br></br>
 
-3. Select multiple data items (metrics) to display. **Note:** Unlike Simple bar cards, Stacked bar cards allow you to select MULTIPLE metrics, which will be stacked together for same time interval.
+3. Select multiple data items (metrics) to display. **Note:** Unlike Simple bar cards, Stacked bar cards allow you to select MULTIPLE metrics, which will be stacked together for same time interval.</br></br>
 ![Select Devices and Metrics](img/stacked_bar_03.png)</br></br>
 
-4. The Stacked bar card displays the selected metrics stacked on top of each other, grouped by time intervals, showing how each metric contributes to the total over time.
+4. The Stacked bar card displays the selected metrics stacked on top of each other, grouped by time intervals, showing how each metric contributes to the total over time.</br></br>
 ![View Stacked Bar Card](img/stacked_bar_04.png)</br></br>
 
 !!! tip "Use Case Example"
@@ -75,16 +75,16 @@ Stacked bar cards are similar to Simple bar cards but allow you to select multip
 
 Value/KPI cards display aggregated metrics as single values, perfect for showing key performance indicators on your dashboard.
 
-1. Click `Add card` and select `Value` card type.
+1. Click `Add card` and select `Value` card type.</br></br>
 ![Add Value Card](img/value_01.png)</br></br>
 
-2. Follow similar steps and Add hierarchy data items from child devices.
+2. Follow similar steps and Add hierarchy data items from child devices.</br></br>
 ![Add Hierarchy Data Item](img/value_02.png)</br></br>
 
-3. Select edit on selected data items to configure aggregation method to calculate the KPI value. Bydefault last value is selected and can configure other fields similar to dataitem at hierarchy level.
+3. Select edit on selected data items to configure aggregation method to calculate the KPI value. Bydefault last value is selected and can configure other fields similar to dataitem at hierarchy level.</br></br>
 ![Select Devices and Metrics](img/value_03.png)</br></br>
 
-4. The Value card displays the aggregated metric as a single prominent value.
+4. The Value card displays the aggregated metric as a single prominent value.</br></br>
 ![View Value Card](img/value_04.png)</br></br>
 
 !!! tip
@@ -96,13 +96,13 @@ Value/KPI cards display aggregated metrics as single values, perfect for showing
 
 Data table cards provide a detailed tabular view of child device data, allowing you to see multiple metrics and devices in a structured format.
 
-1. Click `Add card` and select `Data table` card type.
+1. Click `Add card` and select `Data table` card type.</br></br>
 ![Add Data Table Card](img/table_01.png)</br></br>
 
-2. Add hierarchy data items from child devices.
+2. Add hierarchy data items from child devices.</br></br>
 ![Add Hierarchy Data Item](img/table_02.png)</br></br>
 
-3. The Data table card displays all selected metrics in a structured table format, making it easy to compare multiple values across devices.
+3. The Data table card displays all selected metrics in a structured table format, making it easy to compare multiple values across devices.</br></br>
 ![View Data Table Card](img/table_03.png)</br></br>
 
 !!! tip
@@ -114,15 +114,15 @@ Data table cards provide a detailed tabular view of child device data, allowing 
 
 Image cards can display images with hierarchy context, useful for showing device photos, diagrams, or visual status indicators.
 
-1. Click `Add card` and select `Image` card type.
+1. Click `Add card` and select `Image` card type.</br></br>
 ![Add Image Card](img/image_01.png)</br></br>
 
-2. Configure the image data source and add hierarchy data items as done earlier. We can also add aggreagtion similar to value card
+2. Configure the image data source and add hierarchy data items as done earlier. We can also add aggreagtion similar to value card.</br></br>
 ![Configure Image Card](img/image_02.png)</br></br>
 ![Configure Image Card](img/image_03.png)</br></br>
 ![Configure Image Card](img/image_04.png)</br></br>
 
-3. The Image card displays the configured image with hierarchy data item.
+3. The Image card displays the configured image with hierarchy data item.</br></br>
 ![View Image Card](img/image_05.png)</br></br>
 
 !!! tip

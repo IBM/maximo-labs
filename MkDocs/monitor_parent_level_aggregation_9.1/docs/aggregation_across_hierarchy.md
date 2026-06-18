@@ -43,16 +43,16 @@ Organization-level dashboards provide a comprehensive view of data from your ent
 
 ## Create Organization dashboard
 
-1. Goto dashboard tab and select `Add dashboard` to configure new dashboard and click on `Add Hierarchy Data Item`. Here we can data items from all hierarchy levels. 
+1. Goto dashboard tab and select `Add dashboard` to configure new dashboard and click on `Add Hierarchy Data Item`. Here we can data items from all hierarchy levels.</br></br>
 ![Navigate to Org Dashboard](img/org_01.png)</br></br>
 
-2. We can use filter option to select data items from specific hierarchy level.
+2. We can use filter option to select data items from specific hierarchy level.</br></br>
 ![Select Resource](img/org_02.png)</br></br>
 
-3. We can use filter option to select data items from specific hierarchy level.
+3. We can use filter option to select data items from specific hierarchy level.</br></br>
 ![Select Dataitem](img/org_03.png)</br></br>
 
-4. View selected child resource metrics in card. Likewise we can create similar dashboards using other cards as discussed in previous sectionss.
+4. View selected child resource metrics in card. Likewise we can create similar dashboards using other cards as discussed in previous sectionss.</br></br>
 ![View Dashboard](img/org_04.png)</br></br>
 
 !!! success

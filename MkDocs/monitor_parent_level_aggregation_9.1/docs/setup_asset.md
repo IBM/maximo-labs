@@ -30,11 +30,11 @@ This exercise requires that you have:
 
 2. In the **Device Relationship** section, you will see options to assign the device to an Asset or Location.
 
-3. On the device's **Overview** page, click the `Assign asset` button.</br>
-   ![Assign Device to Asset](img/assign_device_01.png)
+3. On the device's **Overview** page, click the `Assign asset` button.</br></br>
+   ![Assign Device to Asset](img/assign_device_01.png)</br>
 
-4. Select the asset from the table.</br>
-   ![Assign Device to Asset](img/assign_device_02.png)
+4. Select the asset from the table.</br></br>
+   ![Assign Device to Asset](img/assign_device_02.png)</br>
 
 5. Click `Save` to confirm the assignment.
 
