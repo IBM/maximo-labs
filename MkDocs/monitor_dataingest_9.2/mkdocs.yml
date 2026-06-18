@@ -1,14 +1,13 @@
-site_name: Monitor File Ingest Lab
+site_name: Monitor Data Ingest
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Margi Shah
-site_description: "Monitor File Ingest Lab"
-site_dir: ../../site/monitor_fileingest_9.2
+site_description: "Monitor Data Ingest"
+site_dir: ../../site/monitor_dataingest_9.2
 
 nav:
   - Get back to Maximo Labs: ..
-  - Monitor DataIngest Lab:
-    - Welcome to the Monitor DataIngest Lab: index.md
-    - Get Started: getting_started.md
+  - Monitor Data-Ingest:
+    - Welcome: index.md
     - Pre-Requisites: prereqs.md
   - Exercises:
     - 1. Navigate Data Ingestion : upload_csv_files.md
@@ -21,7 +20,6 @@ nav:
   - About:
     - Release Notes: release_notes.md
     - Copyright: ../copyright
-
 
 theme:
   name: readthedocs

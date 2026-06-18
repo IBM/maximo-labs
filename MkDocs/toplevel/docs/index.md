@@ -26,10 +26,10 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 
 
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor DataIngest](monitor_fileingest_9.2/) | [DataIngest Overview](monitor_fileingest_9.2/getting_started) |
-|                                                                | [Download Template](monitor_fileingest_9.2/download_template)           |
-|                                                                | [Upload CSV File](monitor_fileingest_9.2/upload_csv_files)   |
-|                                                                | [Delete File](monitor_fileingest_9.2/delete_file)   |
+| [Maximo Monitor DataIngest](monitor_dataingest_9.2/) | [DataIngest Overview](monitor_dataingest_9.2/getting_started) |
+|                                                                | [Download Template](monitor_dataingest_9.2/download_template)           |
+|                                                                | [Upload CSV File](monitor_dataingest_9.2/upload_csv_files)   |
+|                                                                | [Delete File](monitor_dataingest_9.2/delete_file)   |
 
 ### Maximo Application Suite 9.1 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
