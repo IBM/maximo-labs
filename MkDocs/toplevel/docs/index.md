@@ -39,7 +39,6 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 |                                                                | [Download Built-in Template & Upload File](monitor_dataingest_9.2/download_template)            |
 |                                                                | [Uploaded File - Progress Tracking & Status](monitor_dataingest_9.2/file_status)                |
 |                                                                | [Download Processed and Error Files](monitor_dataingest_9.2/download_file)                      |
-|                                                                | [Uploaded File - Progress Tracking & Status](monitor_dataingest_9.2/file_status)                |
 |                                                                | [Storage Usage & Storage Mode](monitor_dataingest_9.2/storage_guide)                            |
 |                                                                | [File Retention Days](monitor_dataingest_9.2/file_retention)                                    |
 |                                                                | [Delete File](monitor_dataingest_9.2/delete_file)                                               |
