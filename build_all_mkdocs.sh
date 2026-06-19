@@ -40,7 +40,7 @@ mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 # Build the Data Ingestion:
-lab=monitor_fileingest_9.2
+lab=monitor_dataingest_9.2
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
