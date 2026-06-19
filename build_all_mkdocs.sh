@@ -48,6 +48,14 @@ mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
 ##############################################################
+#### Maximo Application Suite 9.2 Labs
+lab=monitor_managed_gw_fallback-system_9.2
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
 #### Maximo Application Suite 9.1 Labs                    ####
 
 # Build the Monitor Modbus Custom Device upload:
@@ -156,6 +164,14 @@ echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Ma
 
 # Build the Monitor Resource Based Access Control 9.1 level:
 lab=monitor_resource_based_access_control_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Parent Level Aggregation 9.1 level:
+lab=monitor_parent_level_aggregation_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
@@ -311,5 +327,5 @@ echo "==========================================================================
 if [[ -z "${MKDOCS_DEPLOY}" ]]; then
     cd $root_dir/site
     echo "BUILD_INFO - Starting the web server on http://127.0.0.1:8080."
-    python -m http.server --cgi 8080
+    python3 -m http.server --cgi 8080
 fi

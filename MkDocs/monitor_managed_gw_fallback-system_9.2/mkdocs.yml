@@ -1,0 +1,42 @@
+site_name: Monitor Managed Gateway Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Maximo Labs Team
+site_description: "Maximo Monitor 9.2 - Managed Gateway Fallback System Lab"
+site_dir: ../../site/monitor_managed_gw_fallback-system_9.2
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Managed GW Fallback:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+        - 1. Understanding the Edge Data Collector fallback hierarchy: fallback hierarchy.md
+        - 2. MQTT Connection failure: MQTT connection failure.md
+        - 3. COS connection failure: COS connection failure.md
+        - 4  PV Fallback and Primary Publisher Recovery: PV Fallback and Primary Publisher Recovery.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
+
+# Made with Bob

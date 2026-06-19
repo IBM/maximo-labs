@@ -16,6 +16,14 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway Fallback](monitor_managed_gw_fallback-system_9.2/)     | [Understanding the Managed Gateway fallback hierarchy](monitor_managed_gw_fallback-system_9.2/fallback%20hierarchy)                                                                                  |
+|                                                              | [Simulating MQTT connection failures](monitor_managed_gw_fallback-system_9.2/MQTT%20connection%20failure)                                                        |
+|                                                              | [COS connection failure](monitor_managed_gw_fallback-system_9.2/COS%20connection%20failure)                                                               |
+|                                                              | [PV Fallback and Primary Publisher Recovery](monitor_managed_gw_fallback-system_9.2/PV%20Fallback%20and%20Primary%20Publisher%20Recovery)                                                               |
+
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
+|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | [Maximo Monitor Smart Alerts](monitor_smart_alerts_9.2/)     | [Nodata Alert](monitor_smart_alerts_9.2/nodata_alerts)                                                                                  |
 |                                                              | [AlertsByOccurrencesCount](monitor_smart_alerts_9.2/alerts_by_occurrences_count)                                                        |
 |                                                              | [Create Alert In Manage](monitor_smart_alerts_9.2/create_alert_in_manage)                                                               |
@@ -37,6 +45,14 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 |                                                                | [Delete File](monitor_dataingest_9.2/delete_file)                                               |
 
 ### Maximo Application Suite 9.1 
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Parent Level Aggregation](monitor_parent_level_aggregation_9.1/) | [Setup Asset](monitor_parent_level_aggregation_9.1/setup_asset) |
+|                                                                                  | [Create Dashboard with Time Series Card](monitor_parent_level_aggregation_9.1/create_asset_dashboard) |
+|                                                                                  | [Explore Different Card Types](monitor_parent_level_aggregation_9.1/explore_card_types) |
+|                                                                                  | [Aggregation Across Hierarchy Levels](monitor_parent_level_aggregation_9.1/aggregation_across_hierarchy) |
+
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Resource Based Access Control 9.1](monitor_resource_based_access_control_9.1/)                        | [Create Security Groups](monitor_resource_based_access_control_9.1/create_security_groups)     |
