@@ -39,6 +39,14 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
+# Build the Data Ingestion:
+lab=monitor_dataingest_9.2
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
 ##############################################################
 #### Maximo Application Suite 9.2 Labs
 lab=monitor_managed_gw_fallback-system_9.2

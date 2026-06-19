@@ -33,6 +33,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+| 2026-06-19 |Margi Shah | Added the initial version of [Maximo Monitor DataIngest](../monitor_dataingest_9.2/) for MAS 9.2.|
 | 2026-06-18 |Abinav TV | Added the initial version of [Maximo Monitor Managed Gateway Fallback](../monitor_managed_gw_fallback-system_9.2/) for MAS 9.2.|
 |2026-06-18|Tirth Patel    | Added the initial version of [Maximo Monitor Parent Level Aggregation Lab](../monitor_parent_level_aggregation_9.1/) for MAS 9.1.|
 | 2026-06-16 |Radhika Surani | Added the initial version of [Maximo Monitor Smart Alerts Lab](../monitor_smart_alerts_9.2/) for MAS 9.2.|
