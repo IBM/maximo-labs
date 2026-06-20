@@ -39,19 +39,23 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-##############################################################
-#### Maximo Application Suite 9.2 Labs                    ####
-
-# Build the Monitor IoT Re-Architecture:
-lab=monitor-iot-re-architecture_9.2
+# Build the Data Ingestion:
+lab=monitor_dataingest_9.2
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-
 ##############################################################
+#### Maximo Application Suite 9.2 Labs
+lab=monitor_managed_gw_fallback-system_9.2
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
 #### Maximo Application Suite 9.1 Labs                    ####
 
 # Build the Monitor Modbus Custom Device upload:
@@ -323,5 +327,5 @@ echo "==========================================================================
 if [[ -z "${MKDOCS_DEPLOY}" ]]; then
     cd $root_dir/site
     echo "BUILD_INFO - Starting the web server on http://127.0.0.1:8080."
-    python -m http.server --cgi 8080
+    python3 -m http.server --cgi 8080
 fi

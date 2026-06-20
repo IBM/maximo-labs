@@ -1,0 +1,43 @@
+site_name: Monitor Data Ingest
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Margi Shah
+site_description: "Monitor Data Ingest"
+site_dir: ../../site/monitor_dataingest_9.2
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Data-Ingest:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Navigate Data Ingestion : upload_csv_files.md
+    - 2. Download Built-in Template & Upload File : download_template.md
+    - 3. Uploaded File - Progress Tracking & Status: file_status.md
+    - 4. Download Processed and Error Files : download_file.md
+    - 5. Storage Usage & Storage Mode : storage_guide.md
+    - 6. File Retention Days : file_retention.md
+    - 7. Delete File : delete_file.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js

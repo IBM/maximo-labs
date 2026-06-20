@@ -16,7 +16,7 @@ This Exercise requires that you have:
     To Activate organization, we must have financial details of our organization.
 
 1. To Activate organization, we need to Create clearing account in the chart of accounts. So naviagte to Chart of Accounts from Financial Section.
-![Naviagate Charts of Accounts](img/activate_imgs/1_org_active.png)&nbsp;&nbsp;
+![Navigate Charts of Accounts](img/activate_imgs/1_org_active.png)&nbsp;&nbsp;
 
 2. Please select the organization for which you want to add a GL account.
 ![Select organization](img/activate_imgs/2_org_active.png)&nbsp;&nbsp;
@@ -41,7 +41,7 @@ This Exercise requires that you have:
 ![Select GL Account Segment](img/activate_imgs/12_org_active.png)&nbsp;&nbsp;
 
 8. Navigate back to Organizations and Select Clearing Account details.
-![Naviagate to Organization](img/activate_imgs/13_org_active.png)&nbsp;&nbsp;
+![Navigate to Organization](img/activate_imgs/13_org_active.png)&nbsp;&nbsp;
 ![Clearing Account details](img/activate_imgs/14_org_active.png)&nbsp;&nbsp;
 
 9. Select the Active check box.

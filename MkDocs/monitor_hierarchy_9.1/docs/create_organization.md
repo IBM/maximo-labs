@@ -16,7 +16,7 @@ This Exercise requires that you have:
     An organization is a top-level entity that represents a business or operational unit responsible for managing a set of assets, locations, and financial records.
 
 1. Navigate to Organizations under Administration section. Click New Organization.
-![Naviagate organization](img/org_images/1_org.png)&nbsp;&nbsp;
+![Navigate organization](img/org_images/1_org.png)&nbsp;&nbsp;
 ![New organization](img/org_images/2_org.png)&nbsp;&nbsp;
 
 2. Set Organization name, description for the organization.

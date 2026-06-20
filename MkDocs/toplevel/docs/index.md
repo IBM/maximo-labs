@@ -25,6 +25,14 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| [Maximo Monitor Managed Gateway Fallback](monitor_managed_gw_fallback-system_9.2/)     | [Understanding the Managed Gateway fallback hierarchy](monitor_managed_gw_fallback-system_9.2/fallback%20hierarchy)                                                                                  |
+|                                                              | [Simulating MQTT connection failures](monitor_managed_gw_fallback-system_9.2/MQTT%20connection%20failure)                                                        |
+|                                                              | [COS connection failure](monitor_managed_gw_fallback-system_9.2/COS%20connection%20failure)                                                               |
+|                                                              | [PV Fallback and Primary Publisher Recovery](monitor_managed_gw_fallback-system_9.2/PV%20Fallback%20and%20Primary%20Publisher%20Recovery)                                                               |
+
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
+|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | [Maximo Monitor Smart Alerts](monitor_smart_alerts_9.2/)     | [Nodata Alert](monitor_smart_alerts_9.2/nodata_alerts)                                                                                  |
 |                                                              | [AlertsByOccurrencesCount](monitor_smart_alerts_9.2/alerts_by_occurrences_count)                                                        |
 |                                                              | [Create Alert In Manage](monitor_smart_alerts_9.2/create_alert_in_manage)                                                               |
@@ -33,6 +41,16 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Resource Based Access Control 9.2](monitor_resource_based_access_control_9.2/)  | [Gateway Restrictions](monitor_resource_based_access_control_9.2/gateway_restrictions)     |
 
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor DataIngest](monitor_dataingest_9.2/) | [Navigate Data Ingestion](monitor_dataingest_9.2/upload_csv_files)                                        |
+|                                                                | [Download Built-in Template & Upload File](monitor_dataingest_9.2/download_template)            |
+|                                                                | [Uploaded File - Progress Tracking & Status](monitor_dataingest_9.2/file_status)                |
+|                                                                | [Download Processed and Error Files](monitor_dataingest_9.2/download_file)                      |
+|                                                                | [Storage Usage & Storage Mode](monitor_dataingest_9.2/storage_guide)                            |
+|                                                                | [File Retention Days](monitor_dataingest_9.2/file_retention)                                    |
+|                                                                | [Delete File](monitor_dataingest_9.2/delete_file)                                               |
 
 ### Maximo Application Suite 9.1 
 
@@ -316,6 +334,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2026-06-16
+### UPDATED: 2026-06-19
 
 ---
