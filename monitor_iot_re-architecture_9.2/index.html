@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Pradipkumar Jinjala" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Welcome to this lab - Monitor IoTP Re-Architecture</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Welcome to this lab";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/maximo-labs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Monitor IoTP Re-Architecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../.">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor IoTP Re-Architecture Lab</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Welcome to this lab</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lab-sections">Lab Sections</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-maximo-monitor-iotp-api-key">1. Maximo Monitor IoTP API Key</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-are-iotp-api-keys">What are IoTP API Keys?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#what-youll-learn">What You'll Learn</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-maximo-monitor-iotp-security">2. Maximo Monitor IoTP Security</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-is-iotp-security">What is IoTP Security?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#what-youll-learn_1">What You'll Learn</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Key Management</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="api_key_overview/">API Key Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="create_api_key/">1. Generate API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="edit_api_key/">2. Edit / Update API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="delete_api_key/">3. Delete API Key</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IoT Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="iot_security_overview/">IoT Security Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tls_with_token/">4. TLS With Token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tls_with_cert_or_token/">5. TLS With Client Certificate or Token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tls_with_cert_and_token/">6. TLS With Client Certificate and Token</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Monitor IoTP Re-Architecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Monitor IoTP Re-Architecture Lab</li>
+      <li class="breadcrumb-item active">Welcome to this lab</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome-to-the-maximo-monitor-92-iotp-api-key-and-security-lab">Welcome to the Maximo Monitor 9.2 </br></br>IoTP API Key and Security Lab</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This Maximo Monitor lab demonstrates how to manage API keys for secure device authentication and configure TLS connections for IoT devices.</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>This lab covers essential security features in Maximo Monitor 9.2 for IoT Platform (IoTP) connectivity. Also you'll learn how to manage API keys for device authentication.</p>
+<p>Security is a critical aspect of IoT deployments. This lab provides hands-on experience with two fundamental security mechanisms: API key management for authentication and TLS configuration for encrypted communication. </p>
+<h2 id="lab-sections">Lab Sections</h2>
+<h3 id="1-maximo-monitor-iotp-api-key">1. Maximo Monitor IoTP API Key</h3>
+<p>API Keys in Maximo Monitor provide token-based authentication for IoT devices to securely send data to the platform.</p>
+<h4 id="what-are-iotp-api-keys">What are IoTP API Keys?</h4>
+<p>API Keys are authentication tokens that enable secure device-to-platform communication. They serve as credentials that devices use to prove their identity when sending data to Maximo Monitor.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li><strong>Secure Device Authentication</strong>: Token-based authentication for IoT devices</li>
+<li><strong>Access Management</strong>: Create, update, and revoke API keys as needed</li>
+</ul>
+<h4 id="what-youll-learn">What You'll Learn</h4>
+<p>In the API Key exercises, you will:</p>
+<ul>
+<li><strong>Generate API Key</strong>: Create new API keys for device authentication and understand the key generation process</li>
+<li><strong>Edit/Update API Key</strong>: Modify existing API key configurations and manage key properties</li>
+<li><strong>Delete API Key</strong>: Remove API keys when no longer needed and understand security implications</li>
+</ul>
+<h3 id="2-maximo-monitor-iotp-security">2. Maximo Monitor IoTP Security</h3>
+<p>Configure secure TLS (Transport Layer Security) connections with multiple authentication options to protect data in transit between IoT devices and Maximo Monitor.</p>
+<h4 id="what-is-iotp-security">What is IoTP Security?</h4>
+<p>IoTP Security provides multiple layers of protection for device-to-platform communication using TLS encryption and various authentication methods. This ensures that data transmitted from IoT devices is encrypted and that only authorized devices can connect to the platform.</p>
+<h4 id="what-youll-learn_1">What You'll Learn</h4>
+<p>In the IoTP Security exercises, you will:</p>
+<ul>
+<li>
+<p><strong>TLS With Token</strong>: Configure token-based TLS authentication</p>
+</li>
+<li>
+<p><strong>TLS With Client Certificate or Token</strong>: Set up either certificate or token authentication</p>
+</li>
+<li>
+<p><strong>TLS With Client Certificate and Token</strong>: Implement dual authentication for maximum security</p>
+</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting this lab, ensure you have:</p>
+<ul>
+<li>Access to Maximo Monitor 9.2</li>
+<li>Basic understanding of IoT device connectivity</li>
+<li>A device type configured in Monitor (for testing)</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>Proceed to the <a href="prereqs/">Prerequisites</a> section to ensure your environment is ready, then begin with the <a href="create_api_key/">API Key exercises</a> or <a href="tls_with_token/">TLS Security configuration</a> based on your needs.</p>
+<hr />
+<p><strong>Updated: 2026-06-23</strong></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="getting_started/" class="btn btn-neutral float-right" title="Get Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="getting_started/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="../js/popper.min.js"></script>
+      <script src="../js/tippy-bundle.umd.js"></script>
+      <script src="../js/clipboard.js"></script>
+      <script src="../js/extra.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

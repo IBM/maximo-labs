@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/update_mas/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Update MAS [9.0.3 +] - MAS Techzone Certified Base Image Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Update MAS [9.0.3 +]";
+        var mkdocs_page_input_path = "update_mas.md";
+        var mkdocs_page_url = "/maximo-labs/update_mas/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS Techzone Certified Base Image Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS Techzone Certified Image Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../instantiate/">1. Instantiate a Base Image</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prepare_for_use/">2. Prepare For Use</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Update MAS [9.0.3 +]</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upgrade_mas/">4. Update MAS [9.0.1 & 9.0.2]</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS Techzone Certified Base Image Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Update MAS [9.0.3 +]</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to update MAS to the latest version.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you want to update to either 9.0.1 or 9.0.2 you should go to <a href="../upgrade_mas/">exercise 4.</a></br></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can see the release notes here: <a href="https://www.ibm.com/support/pages/node/6570601" target="_blank">Maximo Application Suite Releases information</a></br></p>
+</div>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all exercises</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<hr />
+<p>Login to MAS with the new MAS Admin account using the link to the MAS Home page:</br>
+<img alt="MAS Login" src="../img/mas_update_00.png" /></br></br></p>
+<p>Click on <code>About</code> in the upper right hand corner:</br>
+<img alt="Select About" src="../img/mas_update_01.png" /></br></br></p>
+<p>In this case it was a MAS 9.0.0:</br>
+<img alt="About" src="../img/mas_update_02.png" /></br></br></p>
+<p>Now we need to figure out what MAS 9.0 OpenShift catalog was used and if a newer one is available.</br>
+First open a terminal and run the docker command to start the MAS CLI docker container:</p>
+<pre><code>docker run -ti --rm --pull always quay.io/ibmmas/cli
+</code></pre>
+<p></br>
+<img alt="MAS CLI" src="../img/mas_update_03.png" /></br></br></p>
+<p>Login to the OpenShift cluster using your kubeadmin account and click on <code>Copy login command</code>:</br>
+<img alt="OCP Login Command" src="../img/mas_update_04.png" /></br></br></p>
+<p>Click on <code>Display Token</code> and copy the <code>oc login</code> command in its entirety:</br>
+<img alt="OCP Login Command" src="../img/mas_update_05.png" /></br></br></p>
+<p>Run the command in the MAS CLI docker:</br>
+<img alt="MAS CLI" src="../img/mas_update_06.png" /></br></br></p>
+<p>Now the MAS CLI docker is authenticated against your OCP cluster. Execute <code>mas update</code> and enter <code>y</code> to proceed with this cluster.</br>
+Notice the Maximo Operator Catalog that has been used - in this case <code>v9-240625-amd64</code> which is MAS 9.0.0.</br>
+Also notice that newer versions are available:</br>
+<img alt="MAS Update" src="../img/mas_update_07.png" /></br></br></p>
+<p>Press <code>Enter</code> to select the default value, i.e. 1.</br>
+Step 5) Dependency Update Checks will be performed. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the Dependency Update Check "hangs" then just rerun it in another window.</br> </p>
+</div>
+<p>Select <code>y</code> to confirm update of MongoDb and select <code>y</code> to proceed with these settings:</br>
+<img alt="MAS Update" src="../img/mas_update_08.png" /></br></br></p>
+<p>After a little while the Pipeline Run has been submittedc to do the MAS Update:</br>
+<img alt="OCP Pipelines" src="../img/mas_update_09.png" /></br></br></p>
+<p>Follow the link and you will be able to see the progress of the MAS Update:</br>
+<img alt="MAS DevOps Deploy YAML" src="../img/mas_update_10.png" /></br></br></p>
+<p>Click on Logs for further details of the progress:</br>
+<img alt="MAS DevOps Deploy YAML" src="../img/mas_update_11.png" /></br></br></p>
+<p>Click on the PipelineRuns to follow the overall progress. After a while (in this case approx 22 minutes) the MAS Update has succeeded:</br>
+<img alt="MAS DevOps Deploy YAML" src="../img/mas_update_12.png" /></br></br></p>
+<p>Login to MAS and check the <code>About</code> information and you should see that MAS Core has been updated to the version selected:</br>
+<img alt="MAS DevOps PipelineRuns" src="../img/mas_update_13.png" /></br></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can now install the various Maximo Application Suite applications by following the <a href="https://ibm-mas.github.io/ansible-devops/" target="_blank">MAS Devops Ansible Collection</a></br> 
+and they will also be on the newest version.</br></p>
+</div>
+<hr />
+<p>Congratulations you have successfully instantiated and updated a MAS Techzone Certified Base Image and prepared it for use.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prepare_for_use/" class="btn btn-neutral float-left" title="2. Prepare For Use"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../upgrade_mas/" class="btn btn-neutral float-right" title="4. Update MAS [9.0.1 & 9.0.2]">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prepare_for_use/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../upgrade_mas/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

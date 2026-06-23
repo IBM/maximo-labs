@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/node-red/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Use the Node-RED script - Monitor Modbus Simulator Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Use the Node-RED script";
+        var mkdocs_page_input_path = "node-red.md";
+        var mkdocs_page_url = "/maximo-labs/node-red/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Modbus Simulator Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Modbus Simulator Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../docker/">1. Use the Docker image</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Use the Node-RED script</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install-node-red-locally">Install Node-RED locally</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-required-additional-nodes">Add required additional nodes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-the-modbus-simulator-script">Install the modbus simulator script</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#customisation-tips-and-tricks">Customisation tips and tricks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#changing-port-number">Changing port number</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#changing-dynamic-range">Changing dynamic range</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adding-another-device">Adding another device</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Modbus Simulator Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Use the Node-RED script</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Install Node-RED locally</li>
+<li>Add required additional nodes</li>
+<li>Install the modbus simulator script</li>
+</ul>
+<h2 id="install-node-red-locally">Install Node-RED locally</h2>
+<p>This is a fairly easy step, as you just have to follow this guide:
+<a href="https://nodered.org/docs/getting-started/local" target="_blank">Running Node-RED locally</a></br></p>
+<p>Once installed and started open the browser and start the <a href="http://localhost:1880/" target="_blank">Node-RED</a> editor.</br></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make sure you are running Node-RED v3+, i.e. if you already have an existing older Node-RED instance installed locally then make sure to upgrade it before proceeding.</p>
+</div>
+<h2 id="add-required-additional-nodes">Add required additional nodes</h2>
+<p>Before loading the Node-RED script you need to add the required additional node library.</br>
+Node-RED library dependency:</br>
+- node-red-contrib-modbus</br></p>
+<ol>
+<li>Click on the burger menu in upper right hand corner and select <code>Manage palette</code>.
+<img alt="Manage palette" src="../img/nodered_01.png" /></br></br></li>
+<li>Click on <code>Install</code> and write <code>node-red-contrib-modbus</code>in the Search field - then click on <code>Install</code>.
+<img alt="Install node-red-contrib-modbus" src="../img/nodered_02.png" /></br></br></li>
+<li>Click on <code>Install</code> again.
+<img alt="Install node-red-contrib-modbus" src="../img/nodered_03.png" /></br></br></li>
+<li>Wait until you see the new nodes have been installed.
+<img alt="Install node-red-contrib-modbus" src="../img/nodered_04.png" /></br></br></li>
+</ol>
+<h2 id="install-the-modbus-simulator-script">Install the modbus simulator script</h2>
+<ol>
+<li>Download the <a href="../config/flows.json" target="_blank">flow</a></li>
+<li>Launch Node-RED</li>
+<li>Click on the burger menu and choose Import</br>
+<img alt="Import flow" src="../img/nodered_05.png" /></br></br></li>
+<li>Click on <code>select a file to import</code></li>
+<li>Choose the file downloaded in step 1.</li>
+<li>Click Import</br>
+<img alt="Import flow" src="../img/nodered_06.png" /></br></br></li>
+<li>Delete Flow 1</li>
+<li>Click on Deploy</li>
+<li>Your local Modbus Simulator is now active and the random and dynamic values will change every 30 second.
+<img alt="Complete flow" src="../img/nodered_07.png" /></br></br></li>
+</ol>
+<h2 id="customisation-tips-and-tricks">Customisation tips and tricks</h2>
+<h4 id="changing-port-number">Changing port number</h4>
+<p>If you need to change the port number, this is done in the Modbus Flex Server node:
+<img alt="Change Port" src="../img/nodered_08.png" /></br></br></p>
+<h4 id="changing-dynamic-range">Changing dynamic range</h4>
+<p>The function nodes provide the content of the holding registers (defined in msg.topic).</br>
+You can change the upper limit, the lower limit, and the default value if needed.
+<img alt="Change data range" src="../img/nodered_09.png" /></br></br></p>
+<h4 id="adding-another-device">Adding another device</h4>
+<p>You can add another device by duplicating one of the tabs. Just remember to change the port number in the Modbus Flex Server node in the new tab.
+<img alt="Tabs" src="../img/nodered_10.png" /></br></br></p>
+<hr />
+<p>Congratulations you have successfully installed and prepared a local instance of Node-RED running as a modbus simulator.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../docker/" class="btn btn-neutral float-left" title="1. Use the Docker image"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../docker/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

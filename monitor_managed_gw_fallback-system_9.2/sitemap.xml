@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/</loc>
+         <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/COS%20connection%20failure/</loc>
+         <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/MQTT%20connection%20failure/</loc>
+         <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/PV%20Fallback%20and%20Primary%20Publisher%20Recovery/</loc>
+         <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/fallback%20hierarchy/</loc>
+         <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/prereqs/</loc>
+         <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://ibm.github.io/maximo-labs/release_notes/</loc>
+         <lastmod>2026-06-23</lastmod>
+    </url>
+</urlset>

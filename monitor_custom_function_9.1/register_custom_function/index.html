@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Radhika Surani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/register_custom_function/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Register Custom Function - Monitor Custom Function</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Register Custom Function";
+        var mkdocs_page_input_path = "register_custom_function.md";
+        var mkdocs_page_url = "/maximo-labs/register_custom_function/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Custom Function
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Custom Function</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_starter_package/">1. Setup Starter Package</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../write_custom_function/">2. Write Custom Function</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Register Custom Function</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install-the-custom-function-locally">Install the custom function locally</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#register-your-custom-function">Register your custom function</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../apply_custom_function/">4. Apply Custom Function</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Custom Function</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Register Custom Function</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to register custom function with Maximo Monitor.</p>
+<h3 id="install-the-custom-function-locally">Install the custom function locally</h3>
+<p>Install the custom function in your local environment. Update the variables in {} to match your environment.</p>
+<pre class="language-bash"><code>
+    pip3 install git+https://{XXXXXX}@github.com/{user_id}{path_to_repository}@starter_package --upgrade
+</code></pre>
+
+<p>Replace  <code>{xxxxxx}</code> with your personal access token.</p>
+<ol> <b> Test your custom function locally </b></br>
+
+<li>Create a script called test_my_custom_function.py in the scripts folder. In the script, import Python libraries and packages:
+<pre class ="language-bash"><code>
+    import datetime as dt
+    import json
+    import pandas as pd
+    import numpy as np
+    from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean, func
+    from iotfunctions.base import BaseTransformer
+    from iotfunctions.metadata import EntityType
+    from iotfunctions.db import Database
+    from iotfunctions import ui
+</code></pre>
+</li>
+<li>
+    Connect to Maximo Monitor. In the test_my_custom_function.py script, add:
+    <pre class ="language-bash"><code>
+    with open('credentials_as.json', encoding='utf-8') as F:
+    credentials = json.loads(F.read())
+    db_schema = None
+    db = Database(credentials=credentials)
+    </code></pre>
+</li>
+<li> Import and instantiate the function. In the test_my_custom_function.py script, add the following code. Update the variables in {} to match your environment. 
+<pre class ="language-bash"><code>
+    from custom{yourinitials}.multiplybyfactor{yourinitials} import MultiplyByFactor{YourInitials}
+    fn = MultiplyByFactor{YourInitials}(
+    input_items = ['speed', 'travel_time'],
+    factor = '2',
+    output_items = ['adjusted_speed', 'adjusted_travel_time']
+              )
+    df = fn.execute_local_test(db=db, db_schema=db_schema, generate_days=1,to_csv=True)
+    print(df)
+    </code></pre>
+</li>
+<li>Run the script from the command line. The date frame results are saved to a .csv file. Look for df_test_entity_for_multiplybyfactor{your_initials}.csv in the scripts directory. Enter:
+    <pre class ="language-bash"><code>
+        python3 test_my_custom_function.py
+     </code></pre>
+</li>
+</ol>
+
+<h3 id="register-your-custom-function">Register your custom function</h3>
+<ol> 
+    <li> Create a script called register_my_custom_function.py in the scripts folder. In the script, import Python libraries and packages:
+    </li>
+    <li>
+    <pre class="language-bash"><code>
+    import datetime as dt
+    import json
+    import pandas as pd
+    import numpy as np
+    from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean, func
+    from iotfunctions.base import BaseTransformer
+    from iotfunctions.metadata import EntityType
+    from iotfunctions.db import Database
+    from iotfunctions import ui
+    </code></pre>
+    </li>
+    <li>Connect to Maximo Monitor. In the register_my_custom_function.py script, add:
+        <pre><code class="language-bash">
+        with open('credentials_as.json', encoding='utf-8') as F:
+        credentials = json.loads(F.read())
+        db_schema = None
+        db = Database(credentials=credentials)
+        </code></pre>
+    </li>
+    <li>In the register_my_custom_function.py script, to register the function, add the following code. Update the variables in {} to match your environment.
+        <pre><code class="language-bash">
+        from custom{yourinitials}.multiplybyfactor{yourinitials} import MultiplyByFactor{YourInitials}
+        db.register_functions([MultiplyByFactor{YourInitials}])
+        </pre></code>
+    </li>
+    <li> Run the script from the command line. For example:
+        <pre><code class="language-bash">
+            python3 register_my_custom_function.py
+        </code></pre>
+    </li>
+</ol>
+
+<hr />
+<p>Congratulations you have successfully registerd a custom function with maximo monitor</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../write_custom_function/" class="btn btn-neutral float-left" title="2. Write Custom Function"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../apply_custom_function/" class="btn btn-neutral float-right" title="4. Apply Custom Function">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../write_custom_function/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../apply_custom_function/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

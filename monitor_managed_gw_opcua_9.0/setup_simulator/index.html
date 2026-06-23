@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_simulator/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Setup Simulator Environment - Monitor Managed Gateway Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Setup Simulator Environment";
+        var mkdocs_page_input_path = "setup_simulator.md";
+        var mkdocs_page_url = "/maximo-labs/setup_simulator/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Managed Gateway Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Managed GW OPC UA Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Setup Simulator Environment</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#running-the-opc-ua-server">Running the OPC UA Server</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#verifying-the-opc-ua-server-is-running">Verifying the OPC UA Server is running</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_device/">2. Add device to library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_gateway/">3. Create a Managed Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify connectivity</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Managed Gateway Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Setup Simulator Environment</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Install the OPC UA simulator</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+</ol>
+<hr />
+<p>The simulator in this exercice is a PLC OPC UA simulator with dynamic data tags: <a href="https://github.com/Azure-Samples/iot-edge-opc-plc" target="_blank">Microsoft OPC UA PLC</a></p>
+<h4 id="running-the-opc-ua-server">Running the OPC UA Server</h4>
+<p>Open a terminal window (Mac/Linux) or Command window (Windows) and enter the following command:</p>
+<pre><code class="language-bash">docker run --rm -it --net host --name opcplc mcr.microsoft.com/iotedge/opc-plc:2.5.2 --ph=127.0.0.1 --pn=50000 --ut --autoaccept --sph --sn=5 --sr=10 --st=uint --fn=5 --fr=1 --ft=uint --gn=5
+</code></pre>
+<p><img alt="Run OPC-UA Simulator" src="../img/setup_01.png" /></br></p>
+<p>Wait until the initialization has been complete:</br>
+<img alt="Run OPC-UA Simulator" src="../img/setup_02.png" /></br></p>
+<p>You should now see the URL of the Endpoint: <code>opc.tcp://127.0.0.1:50000</code> - which will be used later in the lab.</br></p>
+<div class="admonition note notes">
+<p class="admonition-title">Note</p>
+<p>Info on the different options for the command can be found <a href="https://github.com/Azure-Samples/iot-edge-opc-plc#command-line-reference" target="_blank">here</a></br>
+The added command options compared to the suggested one provided in the page are:
+<ul>
+<li> Be absolutely sure to use version 2.5.2 of the simulator - if you use any later version you’ll get close to 4000 tags instead of just 27</li>
+<li> <code>--ut</code>: To enable unsecure transport, so that there is the possibility to establish connection without certificates and user authentication</li>
+<li> <code>--ph=&lt;path&gt;</code>: The fully-qualified hostname of the PLC - in our case <code>127.0.0.1</code>.</li>
+<li> <code>--pn=&lt;port number&gt;</code>: The server port of the OPC server endpoint - in our case <code>50000</code>.</li>
+</ul></p>
+</div>
+<h4 id="verifying-the-opc-ua-server-is-running">Verifying the OPC UA Server is running</h4>
+<p>This part of the exercise is optional.</p>
+<p>If you want to verify that the OPC UA server is running there are several options. </br>
+The <a href="https://prosysopc.com/products/opc-ua-browser/" target="_blank">Prosys OPC UA Browser</a> is fairly easy to use and it is available for all major operating systems (Windows, Linux, macOS).</p>
+<p>The OPC UA Browser is free, but you are required to click the Request Download and provide your contact information in return for downloading it.</p>
+<p>Install and open the application, then enter the URL of the Endpoint: <code>opc.tcp://127.0.0.1:50000</code></br>
+Select the <code>RandomSignedInt32</code> basic telemetry and you can see a Value attribute:</br>
+<img alt="Prosys OPC UA Browser" src="../img/setup_03.png" /></br>
+Click on the <code>Refresh Attributes</code> and verify that the Value changes for each click.</p>
+<hr />
+<p>Congratulations you have successfully setup the simulator environment.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../add_device/" class="btn btn-neutral float-right" title="2. Add device to library">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../add_device/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

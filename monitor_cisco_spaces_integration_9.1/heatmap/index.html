@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Bihag Gandhi" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/heatmap/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>7. Generate heatmap on MREF location - Monitor Cisco Spaces Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "7. Generate heatmap on MREF location";
+        var mkdocs_page_input_path = "heatmap.md";
+        var mkdocs_page_url = "/maximo-labs/heatmap/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Cisco Spaces Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Cisco Spaces Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_overview/">1. Cisco spaces overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../generate_activation_token/">2. Generate activation token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_integration/">3. Configure cisco spaces integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../locations_list/">4. Locations list overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subscribe/">5. Subscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../location_metrics/">6. Cisco spaces location metrics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">7. Generate heatmap on MREF location</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-by-step-guide-to-generate-heat-maps">Step-by-Step Guide to Generate Heat Maps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-verify-floor-plan-for-the-mref-floor">Step 1: Verify Floor Plan for the MREF Floor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-create-occupancy-location-calculated-metric">Step 2: Create Occupancy Location Calculated Metric</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#configure-the-metric">Configure the Metric:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fill-in-the-configuration-fields">Fill in the configuration fields:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-create-or-update-dashboard-to-visualize-heat-map">Step 3: Create or Update Dashboard to Visualize Heat Map</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#add-heat-map-card">Add Heat Map Card:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-wait-for-pipeline-execution-and-view-the-heat-map">Step 4: Wait for Pipeline Execution and View the Heat Map</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1"></a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe/">8. Unsubscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_delete_config/">9. Edit / Delete cisco spaces configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Cisco Spaces Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">7. Generate heatmap on MREF location</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="heat-maps-on-mref-floor-plan">Heat Maps on MREF Floor Plan</h1>
+<p>In this guide, we will learn how to <strong>generate heat maps</strong> on the MREF Floor Plan using events received from <strong>Cisco Spaces</strong>. These heat maps help visualize <strong>user movement patterns</strong> on a floor using coordinate-based data (<code>x_pos</code> and <code>y_pos</code>).</p>
+<p>We’ll walk through the full process including verifying floor plans, creating calculated metrics, and rendering heat maps on a custom dashboard.</p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>Cisco Spaces sends real-time user location events which include X and Y positions. Using this data, we can:</p>
+<ul>
+<li>Plot heat maps on SVG-based floor plans.</li>
+<li>Observe occupancy trends.</li>
+<li>Analyze behavior across time (hourly, daily, etc.).</li>
+</ul>
+<hr />
+<h2 id="step-by-step-guide-to-generate-heat-maps">Step-by-Step Guide to Generate Heat Maps</h2>
+<h3 id="step-1-verify-floor-plan-for-the-mref-floor">Step 1: Verify Floor Plan for the MREF Floor</h3>
+<ol>
+<li>Go to <strong>Dashboard → Location View</strong>.
+    <img alt="Dashboard Menu" src="../img/dashboard_menu.png" />
+    <br></li>
+<li>Use the <strong>search bar</strong> to find the desired <strong>Floor Name</strong>.
+     <img alt="Seach Loc" src="../img/search_loc.png" />
+    <br></li>
+<li>Click on the <strong>floor</strong> to open dashboards.</li>
+<li>On the right-side pane, select the <strong>Workplace Analytics</strong> tab.</li>
+<li>Ensure that a <strong>floor plan (.svg)</strong> has been generated from MREF.
+    <img alt="Floor plan" src="../img/floorPlan.png" /></li>
+</ol>
+<hr />
+<h3 id="step-2-create-occupancy-location-calculated-metric">Step 2: Create Occupancy Location Calculated Metric</h3>
+<p>We now create a calculated metric to capture occupancy data over time.</p>
+<ol>
+<li>Navigate back to the <strong>Locations</strong> tab.</li>
+<li>Open the <strong>Calculated Metrics</strong> tab.</li>
+<li>Click <strong>Add Calculated Metric</strong>.
+    <img alt="Calculated Metrics tab" src="../img/calculated_metrics_tab.png" /></li>
+</ol>
+<h4 id="configure-the-metric">Configure the Metric:</h4>
+<ul>
+<li>This will open a pop-up with the list of function to calculate the batch data metrics
+    <img alt="Calculated Metrics tab" src="../img/search_calculted_metric.png" /></li>
+<li>From this popup, <strong>search and select</strong>: <code>OccupancyLocation</code> aggregate function.
+    <img alt="Occupancy_Loc" src="../img/occupancy_loc.png" /></li>
+</ul>
+<h4 id="fill-in-the-configuration-fields">Fill in the configuration fields:</h4>
+<ol>
+<li><strong>Scope</strong>: Define the nodes to include.
+    <img alt="Occupancy_Loc1" src="../img/occupancy_loc1.png" /></li>
+<li><strong>Input</strong>: Select <code>x_pos</code> and <code>y_pos</code> metrics from the dropdown.
+    <img alt="Occupancy_Loc2" src="../img/occupancy_loc2.png" />
+    <img alt="Occupancy_Loc3" src="../img/occupancy_loc3.png" /></li>
+<li>
+<p><strong>Output</strong>:  </p>
+<ul>
+<li>Granularity: <strong>Hourly</strong>  (For this lab, we will use <strong>hourly granularity</strong>)</li>
+<li>Auto Schedule: Enabled (or turn off and select custom time range)  </li>
+<li>Output Data Item Name: Provide any name for the data item , eg. <code>Hourly_OccupancyLocation</code>  </li>
+</ul>
+<p><img alt="Occupancy_Loc4" src="../img/occupancy_loc4.png" />
+<br></p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+<ul>
+<li>The metric <code>Hourly_OccupancyLocation</code> will now appear in the list of Calculated Metrics.
+<img alt="Hourly_loc_metric" src="../img/Hourly_occupancy_loc.png" /></li>
+</ul>
+<hr />
+</li>
+</ol>
+<h3 id="step-3-create-or-update-dashboard-to-visualize-heat-map">Step 3: Create or Update Dashboard to Visualize Heat Map</h3>
+<p>You can either create a new dashboard or add a card to an existing one.</p>
+<ol>
+<li>Go to the <strong>Dashboards</strong> tab.</li>
+<li>
+<p>Click <strong>Add Dashboard</strong>, provide a <strong>title</strong>, and click <strong>Configure Dashboard</strong>.</p>
+<p><img alt="create_dashboard" src="../img/create_dashboard.png" /></p>
+<p><img alt="dashboard_title" src="../img/dashboard_title.png" /></p>
+<h4 id="add-heat-map-card">Add Heat Map Card:</h4>
+</li>
+<li>
+<p>From the right-side <strong>Gallery</strong>, select: <code>Floorplan with overlay</code>.
+    <img alt="add card" src="../img/add_card.png" /></p>
+<p><img alt="valid svg" src="../img/provide_valid_svg.png" /></p>
+</li>
+<li>
+<p>Fill in the <strong>card configuration details</strong>:</p>
+<ul>
+<li><strong>Title</strong>: Heat Map or any relevant title</li>
+<li><strong>Description</strong>: Describe what the card visualizes</li>
+<li><strong>Card Size</strong>: Choose based on layout</li>
+<li><strong>Time Range</strong>: Select desired time range</li>
+<li><strong>Data Source</strong>: Choose <strong>Cisco Spaces</strong></li>
+<li><strong>SVG File</strong>: Select the appropriate floor plan.</li>
+<li><strong>Data Item</strong>: Select <code>Hourly_OccupancyLocation</code></li>
+</ul>
+<p><img alt="fill details" src="../img/fill_data.png" /></p>
+</li>
+<li>
+<p>Click <strong>Save and Close</strong>.</p>
+</li>
+</ol>
+<hr />
+<h3 id="step-4-wait-for-pipeline-execution-and-view-the-heat-map">Step 4: Wait for Pipeline Execution and View the Heat Map</h3>
+<ul>
+<li>The system will automatically schedule the pipeline to process the calculated metric.</li>
+<li>Once processed, go back to:</li>
+</ul>
+<p><strong>Dashboard → Location View → Search Floor Name</strong></p>
+<ol>
+<li>Open the newly created dashboard (e.g., <code>"Hourly"</code>).</li>
+<li>You should now see the <strong>heat map overlayed</strong> on the SVG floor plan.</li>
+<li>
+<p>The heat map visualizes <strong>user density and movement</strong> across the floor.</p>
+<p><img alt="heatmap" src="../img/heatmap.png" /></p>
+<h2 id="_1"><img alt="heatmap2" src="../img/heatmap2.png" /></h2>
+</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>You have now successfully:</p>
+<ul>
+<li>Created a calculated metric for occupancy data.</li>
+<li>Configured a dashboard with a heat map overlay.</li>
+<li>Visualized Cisco Spaces event data on MREF floor maps.</li>
+</ul>
+<p>This process enables facilities teams to gain actionable insights into user flow and space utilization using real-time data from Cisco Spaces.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../location_metrics/" class="btn btn-neutral float-left" title="6. Cisco spaces location metrics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../unsubscribe/" class="btn btn-neutral float-right" title="8. Unsubscribe cisco space location">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../location_metrics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../unsubscribe/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

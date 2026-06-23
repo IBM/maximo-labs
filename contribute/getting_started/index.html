@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/getting_started/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Getting Started with contributing toThe IBM Maximo Labs! - Contribute to IBM Maximo Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Getting Started with contributing toThe IBM Maximo Labs!";
+        var mkdocs_page_input_path = "getting_started.md";
+        var mkdocs_page_url = "/maximo-labs/getting_started/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Contribute to IBM Maximo Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contribute</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to contribute</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tasks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_content/">Add content</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_new/">Create new lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">Deploy to IBM Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Contribute to IBM Maximo Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Getting Started with contributing toThe IBM Maximo Labs!</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="getting-started-with-contributing-tothe-ibm-maximo-labs">Getting Started with contributing to<br>The IBM Maximo Labs!</h1>
+<p>The first things you need to understand is the way this site is build and how the architecture looks like. This is needed so that your changes and additions does not break the consistancy and structure of the complete IBM Maximo Labs site.</p>
+<h2 id="structure-of-the-labs">Structure of the labs</h2>
+<p>Here is the structure of the IBM Maximo Labs:</p>
+<p><img alt="Template Architecture" src="../img/architecture.png" /></p>
+<ol>
+<li>Location of the git repositories</li>
+<li>The root folder of the maximo-labs git repository. Basically only contain the build script and the MkDocs folder with all the MkDocs content folders.</li>
+<li>A separate folder for each lab in the form <code>&lt;product&gt;_&lt;version&gt;</code> e.g. <code>edc_8.11</code>. The <code>toplevel</code>, <code>template_1.0</code> and <code>contribute</code> folders are all part of the main content and structure for the complete site, beside each individual lab folder.</li>
+<li>Only contain the <code>mkdocs.yml</code> file to configure the MkDocs build of this site / sub-site. The content is stored in the docs folder.</li>
+<li>Location of the markdown files that is the source files for the specific sub-site. The <code>index.md</code> is the landing page for the lab and the <code>release_notes.md</code> contains information about the contributors and the history of this lab.</li>
+<li>The <code>img</code> folder is the location of the images for that site / sub-site. They should be referenced as <code>img/&lt;image&gt;.png</code> within the markdown files using relative links.</li>
+</ol>
+<h2 id="building-the-labs-overview">Building the labs overview</h2>
+<p>Once you have the development environment in place and have cloned or forked the github repository, you are ready to look at the <code>build_all_mkdocs.sh</code> file in the root which is the shell script that is being used to build the MkDocs site and sub-sites that this site consist of.<br><br>
+Basically <code>build_all_mkdocs.sh</code> is divided into some different sections that each build the various MkDocs sites and subsites that the complete site comprises of.<br>
+These are the building blocks of the build script:</p>
+<ul>
+<li>Setting up some variables and erase the old site completely to avoid any leftovers</li>
+<li>Building the toplevel content</li>
+<li>Building the various labs with each there own separate MkDocs structure and navigation menu</li>
+<li>Building the template and this contribute lab</li>
+<li>Finish up and starting a webserver when running it locally, so that you can look and navigate in the complete site to verify and review any changes you've made</li>
+</ul>
+<p>Now you are ready to setup your development environment :-)
+<br></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

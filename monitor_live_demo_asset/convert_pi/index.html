@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/convert_pi/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Convert Pi to RPE - Monitor Live Demo Asset Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Convert Pi to RPE";
+        var mkdocs_page_input_path = "convert_pi.md";
+        var mkdocs_page_url = "/maximo-labs/convert_pi/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Live Demo Asset Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Live Demo Asset Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_guide/">RPE User Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">1. Create Monitor devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prepare_pi/">2. Prepare Rasperry Pi</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Convert Pi to RPE</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-install-the-needed-node-red-libraries-nodes">1. Install the needed Node-RED libraries (nodes).</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-import-the-rpe-node-red-flows">2. Import the RPE Node-RED flows.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-modify-the-mqtt-connections-to-your-need">3. Modify the MQTT connections to your need.</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify_rpe/">4. Verify RPE is working</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Live Demo Asset Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Convert Pi to RPE</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to convert the Raspbery Pi to an instance of the asset called</br>
+Raspberry Pi Engine controller (RPE).</p>
+<p>In this task, you will import and modify the Node-RED flows that makes out the RPE.</p>
+<h2 id="1-install-the-needed-node-red-libraries-nodes">1. Install the needed Node-RED libraries (nodes).</h2>
+<p><strong>a.</strong> Power on the Pi and wait for the green LED to calm down.</p>
+<p><strong>b.</strong> Open your browser and enter the IP address or hostname from before using port 1880,</br>
+e.g. <code>192.168.1.59:1880</code> OR <code>rpe042.local:1880</code></p>
+<p><strong>c.</strong> Select the Manage palette from the burger menu:</br>
+<img alt="NR - Palette" src="../img/convert_pi_01.png" /></p>
+<p><strong>d.</strong> Find the <code>node-red-dashboard</code> under the Install tab:</br>
+<img alt="NR - Palette" src="../img/convert_pi_02.png" /></p>
+<p><strong>e.</strong> Install it:</br>
+<img alt="NR - Palette" src="../img/convert_pi_03.png" /></br>
+wait until you get a message about the nodes been installed.</br></p>
+<p><strong>f.</strong> Install these two additional libraries:</br>
+<img alt="NR - Palette" src="../img/convert_pi_04.png" />
+<img alt="NR - Palette" src="../img/convert_pi_05.png" /></p>
+<h2 id="2-import-the-rpe-node-red-flows">2. Import the RPE Node-RED flows.</h2>
+<p><strong>a.</strong> Download the Node-RED <a href="../config/RPE%20Flows.json">RPE Flows.json</a>.</br></p>
+<p><strong>b.</strong> Select Import from the burger menu:</br>
+<img alt="NR - Import" src="../img/convert_pi_06.png" /></p>
+<p><strong>c.</strong> Click on <code>select a file to import</code> and select the file you just downloaded. Click <code>Import</code> and it will create some new flows in Node-RED.</p>
+<p><strong>d.</strong> Wait for something like this:</br>
+<img alt="NR - Import" src="../img/convert_pi_07.png" /></p>
+<p><strong>e.</strong> Delete Flow 1 and click on Deploy</p>
+<h2 id="3-modify-the-mqtt-connections-to-your-need">3. Modify the MQTT connections to your need.</h2>
+<p><strong>a.</strong> Go to the <code>Collect And Send Data</code> tab.</p>
+<p><strong>b.</strong> Locate the MQTT nodes, which are trying to connect:</br>
+<img alt="NR - Modify nodes" src="../img/convert_pi_08.png" /></p>
+<p><strong>c.</strong> In the Debug sidebar pane a couple of warnings tells you that the mqtt nodes failed to connect, which is only natural since the credentials are not transferred when the script was exported. Further you need to add your own credentials after the import:</br>
+<img alt="NR - Debug pane" src="../img/convert_pi_09.png" /></p>
+<p><strong>d.</strong> Follow the comment nodes if you want to change the number of mqtt connections. [Not Default]</br>
+<img alt="NR - Status node" src="../img/convert_pi_10.png" /></p>
+<p><strong>e.</strong> Modify the mqtt nodes with your credentials. Open the mqtt node for the CPU device:</br>
+<img alt="NR - mqtt out" src="../img/convert_pi_11.png" /></p>
+<p><strong>f.</strong> Optionally change the name to your RPE CPU Device Id. Click on the pencil to modify the Server:</br>
+<img alt="NR - mqtt out" src="../img/convert_pi_12.png" /></p>
+<p><strong>g.</strong> Change the messaging server of the connection and the port number to <code>443</code> (red boxes):</br>
+<img alt="NR - mqtt out" src="../img/convert_pi_13.png" />
+ The Client ID (purple box) is defined as <code>d:&lt;org&gt;:&lt;device type&gt;:&lt;device id&gt;</code> 
+– e.g. <code>d:wwgeo:CPU:RPE042-CPU-01</code></br>
+The corresponding Server could be: <code>wwgeo.messaging.iot.wwgeomas.gtm-pat.com</code> for</br>
+the WW MAS Geo cluster. Use the one from your environment.</br></p>
+<p>The TLS configuration must be the same messaging server and the <code>Verify server certificate</code> must be un-checked:</br>
+<img alt="NR - mqtt out" src="../img/convert_pi_14.png" /></p>
+<p><strong>h.</strong> Select the Security tab
+<img alt="NR - mqtt out" src="../img/convert_pi_15.png" />
+The Username is <code>use-token-auth</code></br>
+The Password is the Authentication Token from when you created the device in Exercise 1.</p>
+<p><strong>i.</strong> Press Update and Done</p>
+<p><strong>j.</strong> Clear the debug sidebar pane and click Deploy.</p>
+<p><strong>k.</strong> You’ll see the <code>mqtt out</code> node reporting to be connected if the credentials are correct:</br>
+<img alt="NR - mqtt out" src="../img/convert_pi_16.png" /> </p>
+<p><strong>l.</strong> After a short while the disconnected state changes to connecting and the following appears in the debug sidebar pane:
+<img alt="NR - Debug pane" src="../img/convert_pi_17.png" /></p>
+<p><strong>m.</strong> Do the same with the other <code>mqtt out</code> nodes.</p>
+<p><strong>n.</strong> You should now see the following if all credentials are correct:</br>
+<img alt="NR - Connected mqtt nodes" src="../img/convert_pi_18.png" /></p>
+<p><strong>o.</strong> You can add additional mqtt nodes by following the instructions in the comments notes below.</br>
+<img alt="NR - Status node" src="../img/convert_pi_10.png" /></p>
+<p><strong>p.</strong> This concludes this exercise.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The interpretation of the SenseHAT LED’s and the usage of the joystick is explained in the</br>
+<a href="../user_guide/">RPE User Guide</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The flows work in two different time intervals with different behavior:</br>
+1) Monday – Friday 8am-6pm CET: </br>
+   In this mode, a 5 minutes load is put on the RPE every 15 minutes (00, 15, 30, 45) after which a
+   10 minutes idle and cooling down period is allocated. </br>
+   The RPE gathers and submit data to Maximo Monitor every 10 second.</br>
+</br>
+2) All other times no load is being is being performed.</br>
+   The RPE gathers and submit data to Maximo Monitor every 20 minutes.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prepare_pi/" class="btn btn-neutral float-left" title="2. Prepare Rasperry Pi"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../verify_rpe/" class="btn btn-neutral float-right" title="4. Verify RPE is working">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prepare_pi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../verify_rpe/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

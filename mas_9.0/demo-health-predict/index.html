@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-health-predict/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>6. Health - Predict - MAS 9.0 Overview Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6. Health - Predict";
+        var mkdocs_page_input_path = "demo-health-predict.md";
+        var mkdocs_page_url = "/maximo-labs/demo-health-predict/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS 9.0 Overview Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS 9.0 Overview Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-rsl/">1. Reliability Strategies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-monitor/">2. Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mvi/">3. Visual Inspection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-manage/">4. Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mobile-assist/">5. Mobile</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6. Health - Predict</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#health-overview">Health Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#review-assets-health">Review Asset's Health</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#work-queue">Work Queue</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#asset-details">Asset Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#predict-overview">Predict Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#predicted-failure-model">Predicted Failure Model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#asset-timeline">Asset Timeline</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#take-action">Take Action</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">7. Closing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clean/">Lab Clean up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS 9.0 Overview Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">6. Health - Predict</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="health-predict-lab">Health - Predict Lab</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This lab is under development.  Not all steps are complete or accurate.</p>
+</div>
+<h2 id="health-overview">Health Overview</h2>
+<p>Now that one asset has been identified as creating multiple alerts, the Operations Manager asked the Reliability Manager to dig deeper into all of the similar pumps, to make sure that there aren't any failures predicted to occur before planned maintenance.</p>
+<p>Maximo Health and Predict are targeted to the reliability engineer. Together, they provide a view of the current state of an enterprise's assets, and project future conditions of those assets.<br/></p>
+<p>In this exercise you will understand the Health of your assets.</p>
+<ol>
+<li>
+<p>Select Health Application in the right corner.<br/>
+<img alt="Health Overview" src="../img/health01.png" /></p>
+</li>
+<li>
+<p>Show grid view of assets in health.<br/>
+<img alt="Health Overview" src="../img/health02.png" /></p>
+</li>
+</ol>
+<p><b>Value:</b></p>
+<p>Health and Predict arm the Reliability Engineer with AI-powered insights to take actions to extend the life of the assets, reduce maintenance cost, and eliminate unplanned downtime. You can sort and select the asset attributes that allow you to rank and rate which assets you should focus on.</p>
+<p>As the Reliability Engineer, I'll identify assets the need attention, investigate those assets, and finally take an action to avoid unplanned downtime.</p>
+<h2 id="review-assets-health">Review Asset's Health</h2>
+<p>From the main MAS screen, click on the Health tile to show grid view of assets in Maximo Health and Predict.</p>
+<p><img alt="Views" src="../img/health03.png" /></p>
+<p>On the main screen, I can see a universal view of my managed assets in a familiar grid view.</p>
+<p><b>Value:</b> </p>
+<p>This is particularly valuable to me as the Reliability Engineer because I can see a mix of both IT data (from Manage) and OT data (from Monitor) together in a single view.<br/></p>
+<p>These assets are coming from Maximo Manage, but we can connect to other EAM systems.<br/></p>
+<p>Different views of our data can be generated to make it easier to identify our critical assets. On this grid, I can add and move columns, filter, search and sort.<br/></p>
+<p><b>Value:</b> 
+You have created a saved view to so that I don’t have to start over every time.  This view includes a status column, filters on my pumps, and sorts them by OEM and non-OEM.<br/> </p>
+<p>In this exercise you understand how to use your saved views to quickly get to your assets based on a query and filter definition.  </p>
+<ol>
+<li>Select "Pump” view in the demo may be different. <br/>
+ <img alt="Pump View" src="../img/health04.png" /></li>
+</ol>
+<p>In this view, I can see two columns with calculated data. You can see Health scores, which are created within the Health application for groups of assets from the Scoring tab.<br/></p>
+<ol>
+<li>Show Health Scores under health column and Scoring Tab on the left Tab view.<br/>
+<img alt="Health Scores" src="../img/health05.png" /></li>
+</ol>
+<p><b>Value:</b>
+Risk tolerance can vary among industries, asset types, and enterprises.  I can define the scoring ranges specific to my tolerance levels. I can even assign my own colors.<br/></p>
+<ol>
+<li>
+<p>Show Predict Grouping Tab on left Tab menu. Similarly, information in the Days to Failure column comes from a predictive model from the Predict Grouping tab.<br/>
+<img alt="Predict Scores" src="../img/health06.png" /></p>
+</li>
+<li>
+<p>Search <code>pmpd</code> and click Map icon.  I can see that my pumps are in various states of health, but in general, my OEM pumps are in better health.  Based on the information I’ve received from the ops manager, I suspect that my all of my non-OEM pumps are all have issues with their o-rings.<br>
+<img alt="Grid View" src="../img/health07.png" /></p>
+</li>
+<li>
+<p>Select the map icon in the upper right of the screen.  I can also see my selected assets on a map view, with similar information.<br/>
+<img alt="Map View" src="../img/health08.png" /></p>
+</li>
+</ol>
+<p>Seeing how the assets are spatially distributed may assist the Reliability engineer with identify and investigating assets at risk.  This is particularly true in the Utilities industry.</p>
+<h2 id="work-queue">Work Queue</h2>
+<p>I’ll continue my investigation to determine which assets are expect to fail soon, but don’t have a maintenance plan to address the failure.  I want to do those to avoid unplanned downtime, and be more proactive in my maintenance planning.   The easiest way to do this is by using the work queue feature.<br>  </p>
+<ol>
+<li>Select Work queues tab on the Left Tab menu, and Show work queues.
+<img alt="Select Work Queue" src="../img/health05.png" /><br/>
+<img alt="View Work Queue" src="../img/health06.png" /></li>
+</ol>
+<p>Work queues are preconfigured views designed to help you find what you're looking for...and to manage your day-to-day activities.<br>  </p>
+<p>These are particularly valuable to a Reliability Engineer who needs to address a specific problem, like a water treatment plant, trying to avoid unplanned downtime. In this exercise you will learn about the OOTB Health Work Queues. That allow you to focus on specific workflow tasks around identifying missing data so that you can calculated importment key performance metrics and then find assets in need of attention and actioning.</p>
+<ol>
+<li>Hover over the <code>Missing Data</code> Work Queue. There are a number of work queues included with Health and Predict.<br/></li>
+</ol>
+<p>There are work queues specific to Predict, like assets with a <code>High Probability of Failure</code>.<br/>
+<img alt="High Probability of Failure Work Queue" src="../img/health07.png" /></p>
+<ol>
+<li>
+<p>Hover over the <code>Low Health</code> Work Queue.  There's also a work queue for identifying assets in poor health.<br/>
+<img alt="Low Health Work Queue" src="../img/health08.png" /></p>
+</li>
+<li>
+<p>Hover over the <code>Missing Data</code> Work Queue. And there are work queues that show assets with missing data. The <code>Missing Data</code> Work Queue are extremely useful to a reliability engineer as they can help identify gaps in data necessary to calculate health scores or predictive failure model.<br/>
+<img alt="Missing Data" src="../img/health09.png" /></p>
+</li>
+<li>
+<p>Hover over the <code>Failing Before PM</code> Work Queue. I can drill into the <code>Failing Before PM</code> work queue to see all of the assets with scores in that work queue. As a Reliability Engineer at a Water treatment plant, it is critical for me to avoid pump failures.<br/>
+<img alt="Failing Before PM" src="../img/health10.png" /></p>
+</li>
+<li>
+<p>Drill in to the <code>Failing Before PM</code> Work Queue.  We can see that there are 4 pumps that have a predicted failure before their next planned maintenance date, and they are all non-OEM pumps.<br/>
+<img alt="Drill in for Asset List" src="../img/health11.png" /></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Recorded in a previous date.</p>
+</div>
+<p>You can see the pump here, the one with the bad o-ring that our technician discovered.<br/></p>
+<p>Select a different pump in the queue as we start to manage our workload for the day, investigating and addressing all of the assets in the queue.<br/></p>
+<h2 id="asset-details">Asset Details</h2>
+<p>You can understand more about the contributors to the asset Health Score and information about the asset.</p>
+<ol>
+<li>Click on  <code>pump 1</code> which opens the asset detail page [DETAILS ON THIS PAGE WILL VARY AS THIS IS A LIVE DEMO SYSTEM]<br/>
+<img alt="Asset Details Pump" src="../img/health12.png" /></li>
+</ol>
+<p>The asset detail page is an incredibly useful tool for investigating assets.  We can find all the asset information presented on a single page, in easy-to-read tables, charts and graphs.<br/></p>
+<p>On the top of the page, I see details about my asset, and KPIs that give me a snapshot of its current state.<br/></p>
+<p>For this asset, we have a health score of xx, which is in our yellow zone.  We can also see that it has dropped xx points since it was last calculated<br/></p>
+<ol>
+<li>Show health score and small number next to health score at the top.<br/></li>
+</ol>
+<p>This asset also has a criticality and risk score.  These too can be calculated in a similar manner to the Health Score.<br/></p>
+<p>We can see this asset has xx% of its expected remaining useful life, based on the install date and manufacturers recommended life.<br/></p>
+<ol>
+<li>
+<p>Show 'RUL' card at the top. We can see that our asset is projected to fail in the next x days, but our next maintenance isn't planned for x days.<br/></p>
+</li>
+<li>
+<p>Show 'Next Failure' card and 'Next PM' card at the top. When we started our investigation, we knew the asset was expected to fail before its planned maintenance.  But, just by looking at the KPIs, we have additional evidence that this asset is in trouble, and that some action needs to be taken<br/></p>
+</li>
+</ol>
+<p>Below the KPI sections, we can see more information about our asset, which comes directly from our EAM system...in this case, Maximo Manage, also included with the Maximo Application Suite. </p>
+<ol>
+<li>Scroll to health details and click the arrows to show metrics. There's a breakdown of the health score drivers and factors that give us insight into what's causing its poor health.<br/>
+<img alt="Poor Health Score" src="../img/health13.png" /></li>
+</ol>
+<p>For this asset, and assets in the same group, we can see that the health score is a weighted average of open work orders, remaining useful life, and meter health.</p>
+<h2 id="predict-overview">Predict Overview</h2>
+<ol>
+<li>Scroll down from asset Health into the Predictions tab and open the tab. There are several predictive models built to score against incoming sensor data for our asset.<br/>
+<img alt="Predict Tab" src="../img/health14.png" /></li>
+</ol>
+<p>IBM Predict includes templates to help our Data Scientist get started building models to project days to failure, calculate probability of failure, detect anomalies, and generate an asset life curve based on group asset deployment and retirement dates.  These templates include a large number of algorithms and can automatically select the one that best fits our data for the optimal outcome.  </p>
+<p>Note that also included with the Maximo Application Suite is Watson Studio and Watson Machine Learning, both of which our Data Scientist can use for building, training, and maintaining predictive models.<br/>
+ <img alt="Watson Machine Learning" src="../img/health15.png" /></p>
+<h2 id="predicted-failure-model">Predicted Failure Model</h2>
+<p>In the case of our asset, our model tells us that it is projected to fail in xx days...plus or minus xx days.  Depending on the richness of our failure history, our Data Scientist can build predictive models for specific failure modes.  And we can select those failure modes within the widget to see the projection for each.<br/></p>
+<ol>
+<li>
+<p>Select <code>drop down arrow</code> for failure mode.                 <br />
+<img alt="Failure Modes" src="img/health16.png" /></p>
+</li>
+<li>
+<p>Click the <code>info</code> icon to learn more about the field. Also in the widget, we get information about our training data in the widget to help us decide when a model should be retrained.<br/>
+<img alt="Info Help" src="../img/predict5.png" /></p>
+</li>
+<li>
+<p>Review the <code>Failure probability</code> widget to learn about the different failure modes impact our predictions. For example, it might show us our asset has a xx% probability of failure in the next xx months due to xx<br/>
+<img alt="Failure Probability" src="../img/predict4.png" /></p>
+</li>
+</ol>
+<p>Our Data Scientist can build specific models for time periods.  And just like the failure modes, we can look at the results by making different selections within our widget.<br/> </p>
+<ol>
+<li>
+<p>Review the <code>Failure probability history</code> widget.  Failure probability history shows how the probability of failure for each mode has changed over time.<br/>
+<img alt="Failure probability history" src="../img/predict6.png" /></p>
+</li>
+<li>
+<p>Scroll to <code>Factors</code> that contribute to failures card.
+The factors that contribute to failure show which factors from our training data impacted failures the most, giving us an indication of what may lead to future failures.<br/>
+<img alt="Factors" src="../img/predict7.png" /></p>
+</li>
+<li>
+<p>Scroll to <code>Anomaly detection history</code> card.  Our anomaly detection model creates a threshold based on history, and we can see when our asset exceeds that threshold in our widget.<br/>
+<img alt="Anomaly detection history" src="../img/predict8.png" /></p>
+</li>
+</ol>
+<h2 id="asset-timeline">Asset Timeline</h2>
+<p>At the bottom of the page, is an asset timeline that shows us several pieces of key information about our asset in the same graph.<br/></p>
+<ol>
+<li>Open Asset Timeline tab.<br/>
+<img alt="Timeline" src="../img/asset_t2.png" /></li>
+</ol>
+<p>For example, we can see that I have a predicted failure (on the top line of the graph), that will occur before our next planned maintenance (on the second line of the graph).<br/></p>
+<p>Other information on the chart, like past work orders and inspection, provide valuable insight into our asset's history, and may support what kind of action we take.<br/></p>
+<ol>
+<li>Hover over predicted failure.<br/>
+<img alt="Predicted Failures" src="../img/asset_t3.png" /></li>
+</ol>
+<p>While each piece of information, or widget, gives us insight into the state of our asset, all of the information together, gives us a richer view, and helps us make a data-driven decision on how to address this asset.</p>
+<h2 id="take-action">Take Action</h2>
+<ol>
+<li>
+<p>Scroll back to the top of the page and Select <code>Action</code> button in the right corner. Once I decide what action to take, I can do it immediately from the top of the asset detail page.<br/>
+<img alt="Action Asset" src="img/action.png" /></p>
+</li>
+<li>
+<p>Hover over the <code>Create Service Request</code> but don't click on it.  I can create a <code>service request</code>, <code>work order</code>, <code>recalculate a health score</code>, or <code>edit source asset record</code>.</p>
+</li>
+<li>
+<p>Click on <code>edit source record</code>.  In this case, I'll Edit the source asset record to adjust the next scheduled maintenance to avoid a potential failure...and unplanned downtime.<br/></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don't create or modify source record. </p>
+</div>
+<ol>
+<li>Mark my asset addressed, and move to my next asset, confident that we'll avoid unplanned downtime at our water treatment plant. <code>[DO NOT LEAVE THIS CHECKED]</code> uncheck it.<br>
+<img alt="Addressed Queue" src="../img/queue_addressed.png" style="height:200px;width:800px" /></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>As the Reliability Engineer, managing the short and long term asset planning for a water and waster water treatement facilities across multiple locations I was able to use <code>IBM Maximo Health</code> to:
+- Address short term asset needs by replacing a low-dollar o-ring could save thousands of dollars in capital costs preventing the pump from failing by vibrations. I can also use this this type of information on the Risk Matrix to ensure that we aren’t over maintaining their assets in future years which I will cover in a separate exercise. Since we address all of the pumps in our work queue, we can reduce the alerts and SRs in Monitor. This information can also be valuable for capital planning purposes. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo-mobile-assist/" class="btn btn-neutral float-left" title="5. Mobile"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../closing/" class="btn btn-neutral float-right" title="7. Closing">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo-mobile-assist/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../closing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

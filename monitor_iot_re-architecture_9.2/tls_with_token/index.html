@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Pradipkumar Jinjala" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/tls_with_token/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. TLS With Token - Monitor IoTP Re-Architecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. TLS With Token";
+        var mkdocs_page_input_path = "tls_with_token.md";
+        var mkdocs_page_url = "/maximo-labs/tls_with_token/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor IoTP Re-Architecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor IoTP Re-Architecture Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Key Management</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api_key_overview/">API Key Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_api_key/">1. Generate API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_api_key/">2. Edit / Update API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_api_key/">3. Delete API Key</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IoT Security</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../iot_security_overview/">IoT Security Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. TLS With Token</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important-notes">Important Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configure-connection-security-level">Configure Connection Security Level</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_cert_or_token/">5. TLS With Client Certificate or Token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_cert_and_token/">6. TLS With Client Certificate and Token</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor IoTP Re-Architecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">IoT Security</li>
+      <li class="breadcrumb-item active">4. TLS With Token</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tls-with-token">TLS With Token</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting this exercise, ensure you have:</p>
+<ul>
+<li>Access to Maximo Monitor</li>
+</ul>
+<h2 id="important-notes">Important Notes</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>When you want to send data to device using username and password, you must use <strong>TLS with Token</strong> connection security level.</li>
+<li><strong>TLS with Token</strong> is a default option for security level.</li>
+</ul>
+</div>
+<h2 id="configure-connection-security-level">Configure Connection Security Level</h2>
+<ol>
+<li>Navigate to <strong>Setup</strong> &gt; <strong>IoT Security</strong>
+<img alt="Navigate to API Keys" src="../img/IotSecurityMenu.png" style="height:500px;width:900px" /></li>
+<li>By Default <strong>TLS with Token</strong> selected as Connection security level
+<img alt="Navigate to API Keys" src="../img/tlsToken.png" style="height:500px;width:900px" /></li>
+<li>Click on <strong>Save</strong> button</li>
+<li>Follow create a DeviceType (<a href="../../monitor_device_devicetype_setup_9.1/docs/overview_configuration.md">Steps to create DeviceType</a>) and devices (<a href="../../monitor_device_devicetype_setup_9.1/docs/add_edit_device.md#add-device">Steps to create Device</a>)</li>
+<li>New device has username and password(token) generated. Keep those username and password for future use.</li>
+<li>Add metric and event on device type (<a href="../../monitor_device_devicetype_setup_9.1/docs/add_metrics.md#add-metrics">Steps to add metric</a>)</li>
+<li>Now you can use <strong>Swagger UI</strong> (Selecy <code>API Docs Menu</code> and select <code>HTTP Messaging API</code> click on <code>View APIs</code>) or any messaging tool like MQTTX to test device authentication using username and password.</li>
+<li>Provide parameters in swagger document or add topic in MQTTX for device and send data.</li>
+<li>Once you send data, data should be shown in device recent event and data table.
+    <strong>Device Recent</strong>
+    <img alt="Navigate to API Keys" src="../img/recentevent_device.png" style="height:500px;width:900px" />
+    <strong>Device Data Table</strong>
+    <img alt="Navigate to API Keys" src="../img/data_device_table.png" style="height:500px;width:900px" /></li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<p>After configuring TLS with token authentication, you may want to:</p>
+<ul>
+<li><a href="../tls_with_cert_or_token/">Configure TLS with Client Certificate or Token</a> for enhanced security</li>
+<li><a href="../tls_with_cert_and_token/">Configure TLS with Client Certificate and Token</a> for maximum security</li>
+</ul>
+<hr />
+<p><strong>Related Topics:</strong>
+- <a href="../create_api_key/">Generate API Key</a>
+- <a href="../edit_api_key/">Edit API Key</a>
+- <a href="../delete_api_key/">Delete API Key</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../iot_security_overview/" class="btn btn-neutral float-left" title="IoT Security Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tls_with_cert_or_token/" class="btn btn-neutral float-right" title="5. TLS With Client Certificate or Token">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../iot_security_overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tls_with_cert_or_token/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

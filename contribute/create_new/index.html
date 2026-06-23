@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_new/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Create new lab - Contribute to IBM Maximo Labs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Create new lab";
+        var mkdocs_page_input_path = "create_new.md";
+        var mkdocs_page_url = "/maximo-labs/create_new/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Contribute to IBM Maximo Labs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contribute</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to contribute</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tasks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../add_content/">Add content</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Create new lab</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#make-first-changes-for-new-lab">Make first changes for new lab</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-replicate-template-to-your-lab">1. Replicate Template to your lab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-modify-the-mkdocsyml-file">2. Modify the mkdocs.yml file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-modify-the-indexmd-file">3. Modify the index.md file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-modify-the-release_notesmd-file">4. Modify the release_notes.md file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-add-the-new-lab-to-the-build-script">5. Add the new lab to the build script</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-build-and-verify-your-lab-content">6. Build and verify your lab content</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">Deploy to IBM Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Contribute to IBM Maximo Labs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tasks</li>
+      <li class="breadcrumb-item active">Create new lab</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="create-new-lab">Create new lab</h1>
+<p>Creating a new lab follows the same process as under <a href="../add_content/">Add content</a>:</p>
+<ol>
+<li>Prepare your Git branch</li>
+<li>Make changes</li>
+<li>Commit and push your changes</li>
+<li>Create Pull request</li>
+<li>Clean up branches locally and remotely (Github)</li>
+</ol>
+<p>The only difference is the first time you execute step "2. Make changes", then follow this process:</p>
+<ul>
+<li>Follow step "1. Prepare your Git branch" under <a href="../add_content/#1-prepare-your-git-branch">Add content</a>.</li>
+<li>Come back here and run the below "Make first changes for new lab".</li>
+<li>Go back to <a href="../add_content/#3-commit-and-push-your-changes">Add content</a> and run from step 3.<br>(You are done here :-)</li>
+</ul>
+<h2 id="make-first-changes-for-new-lab">Make first changes for new lab</h2>
+<p>The following steps are used to crate a new lab based on the provided <a href="../../template_1.0/">template</a></p>
+<h3 id="1-replicate-template-to-your-lab">1. Replicate Template to your lab</h3>
+<p>Select the <code>template_1.0</code> folder
+<img alt="Select template folder" src="../img/copy_template_1.png" /></p>
+<p>Make a copy of the <code>template_1.0</code> folder
+<img alt="Copy template folder" src="../img/copy_template_2.png" /></p>
+<p>Rename the <code>template_1.0 copy</code> folder to <code>&lt;product&gt;_&lt;version&gt;</code> for wich this new lab is intended,<br />
+e.g. <code>monitor_live_demo_asset</code> - it should now look like this:
+<img alt="Rename template folder" src="../img/copy_template_3.png" /></p>
+<div class="admonition attention">
+<p class="admonition-title">Important</p>
+<p>It is important that this structure is kept consistent cross all labs in order to easily build and deploy the complete set of labs.</p>
+</div>
+<h3 id="2-modify-the-mkdocsyml-file">2. Modify the mkdocs.yml file</h3>
+<p>The <code>mkdocs.yml</code>file holds the configuration of the new lab, i.e. some generic information about the new lab, like location of where the site will be created during the build and also which .md (markdown) files it consist of based on the navigation information.  </p>
+<p>Select and open the <code>mkdocs.yml</code> file located in the root of you new lab folder
+<img alt="Select mkdocs.yml" src="../img/edit_mkdocs.yml_1.png" /></p>
+<p>Edit the marked areas suitable for your new lab
+<img alt="Edit mkdocs.yml" src="../img/edit_mkdocs.yml_2.png" /></p>
+<p>Which could look like this
+<img alt="Edit mkdocs.yml" src="../img/edit_mkdocs.yml_3.png" /></p>
+<p>Save the file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>nav:</code> definition holds the navigation menu for the new lab.<br>
+It is only <code>index.md</code> and <code>release_notes.md</code> that need to have some mandatory information, as explained below. The rest of the markdown files and navigation menu is defined by the way the lab is structured and how many exercises it consist of.</p>
+</div>
+<h3 id="3-modify-the-indexmd-file">3. Modify the index.md file</h3>
+<p>The <code>index.md</code> file is the landing / welcome page for the new lab.  </p>
+<p>Select and open the <code>index.md</code> file located in the <code>docs</code> folder of you new lab
+<img alt="Select index.md" src="../img/edit_index_1.png" /></p>
+<p>Edit the file and make sure to change the marked areas suitable for your new lab
+<img alt="Edit index.md" src="../img/edit_index_2.png" /></p>
+<p>Which could look like this
+<img alt="Edit index.md" src="../img/edit_index_3.png" /></p>
+<p>Save the file.</p>
+<div class="admonition attention">
+<p class="admonition-title">Remember to do this:</p>
+<p>Update the <code>Updated</code> at the end of this file to current date once the new lab is ready.</p>
+</div>
+<h3 id="4-modify-the-release_notesmd-file">4. Modify the release_notes.md file</h3>
+<p>The <code>release_notes.md</code> file contains a list of the Contributors to this lab as well as the Change Information.  </p>
+<p>Select and open the <code>release_notes.md</code> file located in the <code>docs</code> folder of your new lab. Edit the file and make sure to change it so it's suitable for your new lab
+<img alt="Edit about.md" src="../img/edit_release_notes_1.png" /></p>
+<p>Which could look like this
+<img alt="Edit about.md" src="../img/edit_release_notes_2.png" /></p>
+<p>Save the file.</p>
+<div class="admonition attention">
+<p class="admonition-title">Remember to do this:</p>
+<p>Update both sections when the lab is ready.</p>
+</div>
+<h3 id="5-add-the-new-lab-to-the-build-script">5. Add the new lab to the build script</h3>
+<p>First we need to update the <code>build_all_mkdocs.sh</code> file located in the <code>maximo-labs</code> root folder.
+This file contains the shell script for building the entire IBM Maximo Labs static web site.  </p>
+<p>Select and open the <code>build_all_mkdocs.sh</code> file
+<img alt="Select build_all_mkdocs.sh" src="../img/edit_build_1.png" /></p>
+<p>Scroll down to find <code># Build the template level:</code>
+<img alt="Edit build_all_mkdocs.sh" src="../img/edit_build_2.png" /></p>
+<p>Copy the section and paste it right over the previous newest lab and right under the <code>Maximo Application Suite X.X Labs</code> header.</br> 
+Change the comment and the <code>lab=</code> variable to match the folder of the new lab.
+<img alt="Edit build_all_mkdocs.sh" src="../img/edit_build_3.png" /></p>
+<p>Save the file.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please don't change <strong>anything else!</strong></p>
+</div>
+<h3 id="6-build-and-verify-your-lab-content">6. Build and verify your lab content</h3>
+<p>In a terminal navigate to the root of this git repo and execute the build script:</p>
+<pre><code>./build_all_mkdocs.sh
+</code></pre>
+<p>It could look like this:
+<img alt="Edit build_all_mkdocs.sh" src="../img/edit_build_4.png" /></p>
+<p>Wait until it has finished building the whole site.
+<img alt="Edit build_all_mkdocs.sh" src="../img/edit_build_5.png" /></p>
+<p>Open a browser and navigate to <a href="http://localhost:8080/">http://localhost:8080/</a> in order to verify that the build was successful.<br />
+<img alt="Edit build_all_mkdocs.sh" src="../img/edit_build_6.png" /></p>
+<p>The new lab has not yet been added to the <code>index.md</code> in the <code>toplevel</code> page, so you need to navigate directly to the new lab, e.g. <a href="http://localhost:8080/monitor_live_demo_asset">http://localhost:8080/monitor_live_demo_asset</a> in order to verify that your changes look as expected.<br />
+<img alt="Edit build_all_mkdocs.sh" src="../img/edit_build_7.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Press control-c to stop the web server and get back to the prompt.</p>
+</div>
+<p>Congratulations, you have now created the foundation for the new lab following the structure and consistensy of the entire IBM Maximo Labs site.</p>
+<p>Now you "only" need to add all the content to the foundation, by adding markdown files and images according to the structure.  </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The mark down files in your new lab should contain examples on :</br>
+- how to use chapters</br>
+- how to link to other md files in your lab</br>
+- how to link to chapters in your lab</br>
+- how to link to external sites </br>
+- how to link to images (please add plenty)</br>
+- how to add a table</br>
+- how to add admonitions (like this Tip section)</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Remember to do this:</p>
+<p>Go back to <a href="../add_content/#3-commit-and-push-your-changes">Add content</a> and run from step 3. (You are done here :-)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is good practise to commit your changes often and at least once the foundation is in place.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../add_content/" class="btn btn-neutral float-left" title="Add content"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../deploy/" class="btn btn-neutral float-right" title="Deploy to IBM Cloud">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../add_content/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../deploy/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

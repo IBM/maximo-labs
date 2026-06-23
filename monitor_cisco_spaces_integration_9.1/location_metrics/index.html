@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Bihag Gandhi" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/location_metrics/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>6. Cisco spaces location metrics - Monitor Cisco Spaces Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6. Cisco spaces location metrics";
+        var mkdocs_page_input_path = "location_metrics.md";
+        var mkdocs_page_url = "/maximo-labs/location_metrics/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Cisco Spaces Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Cisco Spaces Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_overview/">1. Cisco spaces overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../generate_activation_token/">2. Generate activation token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_integration/">3. Configure cisco spaces integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../locations_list/">4. Locations list overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subscribe/">5. Subscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6. Cisco spaces location metrics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#accessing-location-metrics">Accessing Location Metrics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metrics-fetched-from-cisco-spaces">Metrics Fetched from Cisco Spaces</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-event_timestamp">1. EVENT_TIMESTAMP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-event_type">2. EVENT_TYPE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-record_uid">3. RECORD_UID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-total_users">4. TOTAL_USERS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-users_with_user_id">5. USERS_WITH_USER_ID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-user_without_userid">6. USER_WITHOUT_USERID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-x_pos">7. X_POS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-y_pos">8. Y_POS</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dimensions-fetched-from-cisco-spaces">Dimensions Fetched from Cisco Spaces</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-x-offset">1. X-OFFSET</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-y-offset">2. Y-OFFSET</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../heatmap/">7. Generate heatmap on MREF location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe/">8. Unsubscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_delete_config/">9. Edit / Delete cisco spaces configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Cisco Spaces Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">6. Cisco spaces location metrics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cisco-spaces-location-metrics">Cisco Spaces Location Metrics</h1>
+<p>Once the Cisco Spaces integration is set up and events are being processed successfully, IBM MAS Monitor begins to display real-time and historical <strong>location-based metrics</strong> fetched directly from Cisco Spaces.</p>
+<p>These metrics provide deep insights into user presence, movement, and positioning within a mapped floor or space.</p>
+<hr />
+<h2 id="accessing-location-metrics">Accessing Location Metrics</h2>
+<p>You can view metrics associated with a Cisco Spaces location using either of the following methods:</p>
+<ol>
+<li>
+<p><strong>Navigate via Floor Name Link</strong>  </p>
+<ul>
+<li>Go to the <strong>Cisco Spaces Locations</strong> table.  </li>
+<li>Click on the <strong>Floor Name</strong> (which is a clickable link) for the subscribed location.</li>
+</ul>
+<p><img alt="Navigate 1" src="../img/navigate1.png" /> </p>
+</li>
+<li>
+<p><strong>Search from Locations Tab</strong>  </p>
+<ul>
+<li>Go to the <strong>Monitor → Locations</strong> tab.  </li>
+<li>Search for the location by its mapped <strong>Floor Name</strong>.</li>
+<li>Select the matching location from the results to open the detailed location view.</li>
+</ul>
+<p><img alt="Navigate 1" src="../img/navigate2.png" /></p>
+</li>
+</ol>
+<p>Once inside the location page, view the <strong>Metrics</strong> section to see Cisco Spaces data.
+     <img alt="Metrics" src="../img/metrics_section.png" /></p>
+<hr />
+<h2 id="metrics-fetched-from-cisco-spaces">Metrics Fetched from Cisco Spaces</h2>
+<p>Below is the list of key metrics received from Cisco Spaces.</p>
+<h3 id="1-event_timestamp">1. <code>EVENT_TIMESTAMP</code></h3>
+<p>Represents the timestamp when the event is received.</p>
+<p><img alt="Event timestamp" src="../img/event_timestamp.png" /> </p>
+<hr />
+<h3 id="2-event_type">2. <code>EVENT_TYPE</code></h3>
+<p>Represents the type of event that occurred (e.g., entry, exit).</p>
+<p><img alt="Event Type View" src="../img/event_type1.png" /><br />
+<img alt="Event Type Chart" src="../img/event_type2.png" /></p>
+<hr />
+<h3 id="3-record_uid">3. <code>RECORD_UID</code></h3>
+<p>Unique identifier for the event record received from Cisco Spaces.</p>
+<p><img alt="Record UID View" src="../img/record_uid1.png" /><br />
+<img alt="Record UID Details" src="../img/record_uid2.png" /></p>
+<hr />
+<h3 id="4-total_users">4. <code>TOTAL_USERS</code></h3>
+<p>Indicates the total number of users detected in the location at that timestamp.</p>
+<p><img alt="Total Users Value" src="../img/total_users1.png" /><br />
+<img alt="Total Users Graph" src="../img/total_users2.png" /></p>
+<hr />
+<h3 id="5-users_with_user_id">5. <code>USERS_WITH_USER_ID</code></h3>
+<p>Number of users identified with a valid user ID.</p>
+<p><img alt="Users With ID Metric" src="../img/user_with_user_id1.png" /><br />
+<img alt="Users With ID Trend" src="../img/user_with_user_id2.png" /></p>
+<hr />
+<h3 id="6-user_without_userid">6. <code>USER_WITHOUT_USERID</code></h3>
+<p>Number of anonymous users or users without an ID.</p>
+<p><img alt="Users Without ID Metric" src="../img/user_without_userid1.png" /><br />
+<img alt="Users Without ID Chart" src="../img/user_without_userid2.png" /></p>
+<hr />
+<h3 id="7-x_pos">7. <code>X_POS</code></h3>
+<p>X-coordinate of user position within the mapped space.</p>
+<p><img alt="X Position Metric" src="../img/x_pos1.png" /><br />
+<img alt="X Position Distribution" src="../img/x_pos2.png" /></p>
+<hr />
+<h3 id="8-y_pos">8. <code>Y_POS</code></h3>
+<p>Y-coordinate of user position within the mapped space.</p>
+<p><img alt="Y Position Metric" src="../img/y_pos1.png" /><br />
+<img alt="Y Position Distribution" src="../img/y_pos2.png" /></p>
+<hr />
+<h2 id="dimensions-fetched-from-cisco-spaces">Dimensions Fetched from Cisco Spaces</h2>
+<p>In addition to event metrics, Cisco Spaces also provides <strong>dimension details</strong> configured during the subscription phase. These include:</p>
+<h3 id="1-x-offset">1. <code>X-OFFSET</code></h3>
+<p>The horizontal offset configured in <strong>Edit Offset and Measurement</strong>.</p>
+<p><img alt="X Offset Setting" src="../img/X-offset.png" /> </p>
+<hr />
+<h3 id="2-y-offset">2. <code>Y-OFFSET</code></h3>
+<p>The vertical offset configured in <strong>Edit Offset and Measurement</strong>.</p>
+<p><img alt="Y Offset Setting" src="../img/y-offset.png" />  </p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../subscribe/" class="btn btn-neutral float-left" title="5. Subscribe cisco space location"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../heatmap/" class="btn btn-neutral float-right" title="7. Generate heatmap on MREF location">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../subscribe/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../heatmap/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

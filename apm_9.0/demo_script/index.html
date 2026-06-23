@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo_script/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Health and Predict Overview Task Guide - Maximo v9.0 APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Health and Predict Overview Task Guide";
+        var mkdocs_page_input_path = "demo_script.md";
+        var mkdocs_page_url = "/maximo-labs/demo_script/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo v9.0 APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Health and Predict Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../build_demo/">Setup Health and Predict Demonstration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Health and Predict Overview Task Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#identify">Identify</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#asset-table-view">Asset Table View</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#map-view">Map View</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#charts-view">Charts View</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#failure-rate-chart">Failure rate chart</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mean-time-between-failure-chart">Mean time between failure chart</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#matrix-view">Matrix View</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#work-queues-view">Work Queues View</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#investigate">Investigate</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#assets-detail-view">Assets Detail View</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#take-action">Take Action</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#identify-investigate-with-maps">Identify / Investigate with Maps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#identify-investigate-with-a-matrix">Identify / Investigate with a Matrix</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#take-action-with-aio">Take Action with AIO</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo v9.0 APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Health and Predict Overview Task Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mas-health-and-predict-overview-task-guide">MAS Health and Predict Overview Task Guide</h1>
+<p>This task guide is based on the MAS v8.11 early program environment.  Please follow the steps in this task guide.  Any deviation from 
+the task guide and or changes you make to the system will also appear and may impact other users.  Since this is a live 
+system, some changes are inevitable, and you may find that some of the details of the task guide do not match the system.</p>
+<p>For this overview, the following are required, and have been created by your instructor.</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Data Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group (with scores)</td>
+<td>EUORG1_EUDEMO_ST_A</td>
+</tr>
+<tr>
+<td>Group (with scores)</td>
+<td>ST_EFFICIENCY</td>
+</tr>
+<tr>
+<td>Score Type</td>
+<td>Substation Efficiency</td>
+</tr>
+<tr>
+<td>Custom Matrix</td>
+<td>Efficiency and Health</td>
+</tr>
+<tr>
+<td>Investment Project</td>
+<td>ST Investment Project</td>
+</tr>
+<tr>
+<td>Plan Template</td>
+<td>SUBSTATION_TRANSFORMER</td>
+</tr>
+</tbody>
+</table>
+<p>If your instructor hasn't added the data, ask him to follow the steps in <a href="../build_demo/">Build MAS Health and Predict Demonstration</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>In this demonstration you will be a reliability engineer.   Your role is to maintain the reliability of the grid.  Your major 
+responsibility is to ensure that the grid stays up and operational.  You are also responsible for making short, medium and 
+long term investment decisions that drive maintenance and replacement policies. You use asset condition and operational 
+data to gain insights into Asset Health, Probability of Failure and Risk, both today and into the future.</p>
+<p>Thankfully you have a Health and Predict solution from IBM with advanced analytics that help you work efficiently and 
+confidently without relying on spreadsheets or point solutions that consider 1 or 2 data sources.  Health and Predict 
+incorporates multiple data sources such as <code>Asset Master</code> data from Manage, <code>Work order</code> data, historical <code>failure</code> data, <code>GeoSpatial</code> Data, 
+<code>Inspection</code> and <code>Test</code> Logs, <code>IoT</code> and <code>Sensor</code> data.  Health and Predict provides a flexible asset condition framework for 
+mining the asset condition data. Health and Predict helps you identify assets that are at greatest risk of failure, 
+across different circuits/feeders, substations and regions. The risk assessment helps you drive asset and work management 
+activities in Maximo Manage or other EAM systems to keep the grid up, reduce operational expense, optimize and defend 
+capital expenditures resulting in better outcomes. </p>
+<p>Maximo Health and Predict are applications in Maximo Application Suite (MAS) that are targeted to the reliability engineer, 
+and provide a view of the current state and future state of an enterprise's assets.  IBM Maximo Models for Electrical 
+Distribution is an accelerator that extends Health and Predict designed for understanding the condition of electrical 
+distribution asset classes used by the utilities industry.</p>
+<h2 id="identify">Identify</h2>
+<p><a name="identify"></a></p>
+<p>On the “Applications” tab, there are tiles for each of the applications that the admin has loaded from the Maximo 
+Application Suite (MAS).  On the “Industry Solution” tab, there is a tile for Health and Predict – Utilities.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Health and Predict arm you the reliability engineer with AI-powered insights to take actions to extend the life of the Utility’s assets, reduce maintenance costs, and eliminate unplanned downtime.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>
+<p>From the main MAS page, select the <code>Applications</code> tab
+<img alt="navigate_to_health" src="../img/hpu_8.11/health1.png" /> </p>
+</li>
+<li>
+<p>Click the <code>Launch</code> link <code>Health</code> tile.</p>
+</li>
+<li>
+<p>The <code>Asset Table View</code> is displayed with the default query of all assets.
+<img alt="navigate_to_health" src="../img/hpu_8.11/assets_grid_page.png" />    </p>
+</li>
+</ol>
+<h3 id="asset-table-view">Asset Table View</h3>
+<p><a name="grid_view"></a></p>
+<p>On the main screen, there is a table view of all managed assets in a familiar table view. From this page you can quickly 
+choose the asset query that reflects the assets you are responsible for. You can filter those assets to quickly identify 
+the assets that have poor scores by sorting the assets or by searching for assets using key words so that you can get the 
+latest asset details on an individual asset.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>This is particularly valuable because it shows you a mix of both IT data (from Manage) and OT data (from Monitor) together in a single view.</p>
+</div>
+<p>This asset data is coming from Maximo Manage, but MAS can connect to other EAM systems with or App Connect, via API or 
+using Monitor Connectors.</p>
+<p>Different views of the data can be generated to make it easier to identify critical assets.  On this grid, you can 
+add and move columns, filter, search and sort.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>
+<p>Select the <code>hamburger</code> icon above to the magnifying glass to show the left navigation menus. This shows how you can 
+navigate to other perspectives like <code>locations</code> to understand location health. There are other menu options to setup 
+health scores, asset investment analysis or and prediction capabilities.
+<img alt="navigate_to_health" src="../img/hpu_8.11/assets_grid_page_hamburger.png" /></p>
+</li>
+<li>
+<p>Click <code>hamburger</code> menu icon again to close the menu slider. </p>
+</li>
+</ol>
+<p>There’s an option to create private views, and public views which are available to everyone.
+<img alt="saved_views" src="../img/hpu_8.11/savedviews.png" /> </p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Saved views allow the you to return to a particular view so that they don’t have to start over every time.  This view filters on my Substation Transformers.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Use the selection box to show your saved view.</p>
+</div>
+<ol>
+<li>Click the selection box to show the saved views then click on the <code>Substation Transformers</code> view.
+<img alt="select_views" src="../img/hpu_8.11/substationtransformerview.png" /> </li>
+</ol>
+<p>In the Table view, there are columns with calculated data.  There are Health scores, which are created for groups of assets 
+from the <code>Scoring setting</code> menu. These specify the group that scores are calculated on.  The query the notebook to use and
+how frequently the score should be calculated. </p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>You don't have to spend time creating your own templates but can use the included notebook templates with predefined industry standard formulas to calculate health, criticality, risk, end of life and effective age scores for assets.   </p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the actions below</p>
+</div>
+<ol>
+<li>You can display the data in the Table view that is most important to you. Use the selection box to choose which asset 
+data columns to display in your table.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2030.png" /></li>
+<li>The <code>Days to Failure</code> column comes from a predictive model defined and scheduled in the <code>Predict setting</code> tab. 
+<img alt="assets_grid" src="../img/hpu_8.11/assets_grid.png" /></li>
+</ol>
+<p>The IBM Maximo Models for Electrical Distribution includes the following model templates:</p>
+<ul>
+<li>
+<p>Substation Transformers / Substation Power (IBM Transformers Tap Changers) </p>
+</li>
+<li>
+<p>Circuit Breaker </p>
+<ul>
+<li>
+<p>Air Blast Circuit Breaker (IBM Circuit Breakers Air Blast) </p>
+</li>
+<li>
+<p>Air Magnetic Circuit Breaker </p>
+</li>
+<li>
+<p>Circuit Breaker </p>
+</li>
+<li>
+<p>Oil Circuit Breaker (IBM Circuit Breakers Oil) </p>
+</li>
+<li>
+<p>SF6 Circuit Breaker </p>
+</li>
+<li>
+<p>Vacuum Circuit Breaker </p>
+</li>
+</ul>
+</li>
+<li>
+<p>Distribution Transformers (IBM Transformers Tap Changers) </p>
+<ul>
+<li>
+<p>Overheads (multiple) </p>
+</li>
+<li>
+<p>Undergrounds (multiple) </p>
+</li>
+</ul>
+</li>
+<li>
+<p>Instrument Transformers </p>
+<ul>
+<li>
+<p>Dry Current Transformer </p>
+</li>
+<li>
+<p>Oil Filled Capacitive Voltage Transformer </p>
+</li>
+<li>
+<p>Oil Filled Current Transformer (IBM Instrument Oil Filled CTs) </p>
+</li>
+<li>
+<p>Oil Filled Voltage Transformer </p>
+</li>
+<li>
+<p>SF6 Filled Current Transformer </p>
+</li>
+</ul>
+</li>
+<li>
+<p>Switch gear / Gas Insulated Switch gear (IBM Gas Insulated Switchgear) </p>
+</li>
+</ul>
+<h3 id="map-view">Map View</h3>
+<p><a name="map_view"></a></p>
+<p>Another view to help identify assets in trouble is the map view.  Using a map view focused to a container  is a good way to
+understand the capabilities and benefits of the Map view. Containers enable to you reflect the geolocation of your assets 
+and geo fencing of business areas.  It could be a region, town, service subscriber area you are responsible for servicing.</p>
+<p>We’ll look at a region that contains a mixture of transformers, circuit breakers, cables (OTWs), and switches. 
+Select a group of assets, or a container, that contains a mixture of transformers, circuit breakers, cables (OTWs), and 
+switches.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Seeing how assets are spatially distributed may assist with identifying and investigating assets at risk.  This is especially true in the utilities industry that have geo location dependencies on interconnectivity, weather or area of responsibility.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>You filter the group of assets you want to focus on.   Reset the <code>View</code> to show <code>All shared</code> assets.  Reference the early instructions if you forgot how to do this.
+<img alt="show_all_assets" src="../img/apm_8.9/show_all_assets.png" /></li>
+<li>Click the <code>filter</code> icon that looks like a funnel. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2033.png" /></li>
+<li>Select the <code>pencil</code> symbol for containers
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2034.png" /></li>
+<li>Select  <code>NIXON9098</code></li>
+<li>Click <code>OK</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2035.png" /></li>
+<li>Click <code>Apply</code></li>
+</ol>
+<p><img alt="setup_assets" src="../img/HPU_8.9/HPU%2036.png" /></p>
+<p>You can see there are 261 assets in this container. When we sort by the health score from low to high, we find there are 
+many assets with <code>Health</code> scores in poor health and many of them have a <code>Criticality</code> score of 0.  This is concerning.  Several column headers can be used to sort to help visualize the data in different ways. Sort by most critical assets 
+and with the worst health.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Be able to quickly focus on the assets you are responsible for and in need of action.  </p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>
+<p>On the <code>Assets Table</code> view, click <code>Health</code> column title to sort assets by the <code>Health</code> score.<br />
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2037.png" /></p>
+</li>
+<li>
+<p>Asset <code>Criticality</code> can be measured by understanding the importance an asset has to the grid performing it's job of providing 
+electricity to customers.   Asset <code>End of Life</code> is important to know so that assets can be planned to be replaced before they reach 
+their end of life.  On the <code>Assets Table</code> view, click <code>Criticality</code> column title to sort assets by the <code>Criticality</code> score. </p>
+</li>
+</ol>
+<p>You need to understand the relative position of the assets with the worst health and most critical in reference to the service are you are responsible for.  </p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p><code>Maps</code> provide a way to understand an asset condition scores relative to position, connectivity and condition of the impacted service areas using <code>Containers</code>. </p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Click <code>Map</code> button.  Selecting the <code>pin</code> icon in the upper right of the screen shows the selected assets on a map view.
+The different <code>pin</code> colors and icons represents the health of the assets, according to the legend at the bottom left of 
+the screen.  This is a quick way to understand which assets are in poor health.</li>
+</ol>
+<p><img alt="setup_assets" src="../img/HPU_8.9/HPU%2038.png" /></p>
+<ol>
+<li>
+<p>Adjust the map using the controls and mouse.  You can expand a two finger pinch press on the touch pad to zoom in. <br />
+To move the map push one finger and move with the other finger on the touch pad
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2039.png" />
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2040.png" /></p>
+</li>
+<li>
+<p>By turning on the <code>Container</code> selection, a polygon will appear around the assets in the container.  The color of the container will reflect the overall health of the container.</p>
+</li>
+<li>
+<p>Click the <code>Container</code> icon, and toggle on <code>Containers</code></p>
+</li>
+<li>
+<p>Zoom out to see the container color.  You can decrease a two finger pinch press on the touch pad to zoom out.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2041.png" /></p>
+</li>
+<li>
+<p>Click the <code>Scores</code> icon and selecting another score will switch the view to a different score.  The asset colors, and  container color, will change accordingly.</p>
+</li>
+<li>
+<p>Select another score like <code>End of Life</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2042.png" /></p>
+</li>
+<li>
+<p>You can return to the Health score view, and hovering over different assets, and the container, reveals the health scores.  Click the <code>Health</code> button to return to the original view.</p>
+</li>
+<li>
+<p>Zoom in or out  until until you  see the container outline color change from black to another color.  You can two finger  pinch press and squeeze your fingers together on the touch pad to zoom in and expand to zoom out.  Or you can use the zoom <code>plus</code> and <code>minus</code> icons on the bottom right.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2041.png" /></p>
+</li>
+<li>
+<p>Hover over the <code>Container</code> outline to show the <code>Health</code> score of the <code>Container</code>.
+<img alt="setu_ assets" src="../img/HPU_8.9/HPU%2043.png" /></p>
+</li>
+<li>
+<p>Click the container <code>NIXON9098</code> which is the dashed line surrounding the assets on the map to show the average scores  of all the asset in that container on a single card.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2074.png" /></p>
+</li>
+</ol>
+<p>You can zoom in to see each of asset pin locations. By clicking on the pins you can view the key asset KPIs for 
+that asset. You can action assets in the map view, by creating <code>plans</code>, adding a <code>flag</code> for follow up, or 
+<code>submit a work order</code> by clicking the <code>Action</code> button.  Work Orders will be sent to Maximo Manage so that technicians 
+can service or inspect the asset.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Zoom in. Click the <code>pin</code> for <code>ST_1400518</code> to see the card. This is the  substation transformer that likely needs attention.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2075.png" /></li>
+<li>Click on the <code>Actions</code> drop down selection box button to see the available options.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2076.png" /></li>
+</ol>
+<p>Note that you can click on the <code>asset name</code> to open the <code>asset detail</code> page which is explained later.  However, there are 
+other methods to identify assets in poor health.  In the next section you will focus on substation transformers which you 
+are responsible for.</p>
+<h3 id="charts-view">Charts View</h3>
+<p><a name="charts_view"></a></p>
+<p>The <code>Charts view</code> page offers another way to identify assets that are not performing well relative to each other.  There are 
+four out of the box charts available that count the number of assets in a particular category or range of condition.  </p>
+<ol>
+<li>Navigate to the <code>Charts view</code> page. Click on the Charts Icon. <img alt="chart_view_icon" src="../img/chart_view_icon.png" /></li>
+<li>Choose a "View" for example select <code>Pumps with status</code> from the view drop down selection box. <img alt="pumps_with_status" src="../img/pumps_with_status.png" /></li>
+<li>Review the four charts that summarizes the currently selected views asset performance counts by range <img alt="view_charts" src="../img/view_charts.png" /></li>
+</ol>
+<p>The <code>Charts view</code> shows 3 charts:</p>
+<ul>
+<li>A health wheel chart categorizing all of the assets by health.</li>
+<li>Unplanned downtime chart view showing hours of downtime by month.</li>
+<li>A failure rate per manufacturer chart</li>
+<li>A Mean time between failure that shows the count of asset meeting a performance threshold for mean time to failure duration.</li>
+</ul>
+<p>You will drill-down through each of these charts to see the assets details of each category.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Seeing key KPIs for multi-assets by health distribution, categorized by unplanned downtime or failure rate per manufacture can help you understand assets failure trends.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<h4 id="failure-rate-chart">Failure rate chart</h4>
+<ol>
+<li>On the Failure rate per manufacture click on the manufacturer <code>PUMPSRUS</code> to see the failures by that manufacturer. Clicking on the manufacturer Boggs shows a 100% failure rate.  So all assets from Boggs have failed.
+<img alt="drill_in_failure_rate" src="../img/drillin_view_charts_failure_rate.png" /></li>
+<li>On the Failure rate per manufacture click on the manufacturer <code>PUMPCO</code> to see the failures by that manufacturer. </li>
+<li>Return to the charts page by using the breadcrumb at the top of the page. Click on the <code>Assets</code> breadcrumb to return to the charts page. <img alt="assets_charts_breadcrumbs" src="img/apm_9.0/assets_charts_breadcrumbs.png" /></li>
+</ol>
+<h4 id="mean-time-between-failure-chart">Mean time between failure chart</h4>
+<ol>
+<li>Notice the Mean time between failure chart is not configured. Each time you navigate to the charts page you must select 
+the thresholds to use on the current chart.  Click the filter <code>funnel icon</code> to see thresholds option to create or select
+an existing <code>threshold</code> value.  <img alt="configure_chart_funnel" src="../img/configure_chart_funnel.png" /> apm_9.0/img/mtbf_results.png</li>
+<li>Click the <code>threshold pencil</code> icon.  <img alt="choose_threshold" src="../img/choose_threshold.png" /></li>
+<li>Click the <code>threshold</code> radio box for 10k hours to indicate the asset must be running for more than 10k hours before it
+has an unscheduled maintenance. </li>
+<li>Click the <code>OK</code> button. and <code>Apply</code> button.<a href="../img/configure_chart_funnel.png">configure_chart_funnel</a></li>
+<li>Notice the Mean time between failure chart displays a bar chart with the count of assets:<ul>
+<li>Meeting the threshold. Count and list of assets that went longer than 10k hours before having an unscheduled work order. </li>
+<li>Not meeting threshold. Count and list of assets that were not able to achieve 10k hours before having an unscheduled work order.</li>
+<li>Missing data.  Count and list of assets that were missing data that prevented MTBF from being calculated.</li>
+<li>Assets that don't have Asset Class Definition defined.</li>
+</ul>
+</li>
+<li>Hover on the <code>red</code> bar to see the count of assets not meeting the Mean time between threshold.</li>
+<li>Click on the <code>red</code> bar to see the list of assets that did not not meet the Mean time between threshold. <a href="../img/mtbf_results.png">mtbf_results</a></li>
+<li>Click on the <code>asset name</code> to see the asset details to see how many mean time betwee failure hours the asset went before 
+having an unschedule maintenance. <a href="../img/mtbf_assets_notmeeting_mtbf.png">mtbf_assets_notmeeting_mtbf</a></li>
+<li>Click on the <code>bread crumb</code> to return to the drilled in asset list. Or hit the next button to see the next asset that 
+didn't achieve mean time between failure hours threshold before having an unschedule maintenance. <a href="../img/mtbf_asset_details.png">mtbf_asset_details</a></li>
+</ol>
+<h3 id="matrix-view">Matrix View</h3>
+<p><a name="matrix_view"></a></p>
+<p>Another view to help you identify the number of assets in different condition ranges is the <code>Matrix view</code>. </p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Spend your time investigating and actioning assets that exhibit multiple conditions that meet your score range criteria. </p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<p>Now choose You want to focus on all substation transformers 
+by changing  the <code>type</code> filter, and select the <code>Charts view</code> to understand asset relative condition and performance.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Return to the <code>Table view</code> using the instructions below.</li>
+<li>Reset the view to show <code>ALL (shared assets)</code> by clicking <code>X</code> on the <code>Container</code> filter
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2077.png" /></li>
+<li>Click the <code>funnel</code> symbol
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2078.png" /></li>
+<li>Select the <code>pencil</code> symbol for <code>Query</code>
+<img alt="setup_assets" src="../img/hpu_8.11/edit_query_filter.png" /></li>
+<li>Select <code>ST_EUDEMO_A</code> from the list</li>
+<li>Click <code>OK</code>
+<img alt="st_eudemo_a" src="../img/hpu_8.11/st_eudemo_a.png" /></li>
+<li>Click <code>Apply</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2081.png" /></li>
+<li>You will now see the results for all substation transformers. </li>
+<li>Select the 4th icon that looks like a Matrix in the upper right of the screen. 
+<img alt="view_matrix" src="../img/hpu_8.11/view_matrix.png" /></li>
+<li>You can see the number of assets categorized on a Matrix view. </li>
+<li>Set the Matrix Version to <code>Criticality</code> and <code>End of life</code> to see the X and Y axis change and score ranges change to the different score range categories. Note how many assets are for <code>High Need For Action</code> which means they need to be actioned. 
+<img alt="set_matrix_version" src="../img/hpu_8.11/set_matrix_version.png" /></li>
+<li>Click <code>Assets</code> breadcrumb to navigate back to the <code>Matrix</code> view.
+<img alt="view_matrix" src="../img/hpu_8.11/asset_drill_in_view.png" /></li>
+<li>Set the Matrix Version to <code>Criticality</code> and <code>End of life</code>.<br />
+<img alt="set_matrix_version" src="../img/hpu_8.11/set_matrix_version.png" /></li>
+<li>You can drill into the red cell with <code>Criticality</code> A and <code>End of life</code> High to see what assets are at close to the end of their life. Click the number of assets <code>#</code>. 
+<img alt="final_matrix" src="../img/hpu_8.11/final_matrix.png" /></li>
+<li>You can also see the number of asset in the matrix in the future years if you have configured your forecast score notebooks.</li>
+</ol>
+<h3 id="work-queues-view">Work Queues View</h3>
+<p><a name="charts_view"></a></p>
+<p>Using <code>Work queues view</code>  is another way to identify assets in trouble or need your attention so that you can take an 
+action to ensure KPIs are able to be calculated and to avoid asset unplanned downtime and be more proactive in maintenance
+planning.</p>
+<p>There are a number of <code>Work queues</code> included with Health and Predict. Here are some example <code>Work queues</code></p>
+<ul>
+<li>Predict assets with a <code>High probability of failure</code></li>
+<li>Identify <code>Assets in poor health</code> </li>
+<li>Identify assets with <code>Assets missing data</code></li>
+</ul>
+<p>Work queues are preconfigured views designed to help find assets that meet specific conditions.  They can be used by the
+reliability engineer to systematically address each asset on the list, in turn, and “work down” the list.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Allows you to prioritize your work and focus to address a specific problem, like a utility, trying to avoid unplanned downtime.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Hover over the left nav bar to expand it</li>
+<li>Select the <code>Work queues</code> section on the left nav bar
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2085.png" /></li>
+<li>Select <code>Failing Before PM</code> work queue
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2086.png" /></li>
+</ol>
+<h2 id="investigate">Investigate</h2>
+<p><a name="investigate"></a></p>
+<p>The <code>Failing before PM</code> work queue shows all of the assets with scores in that work queue.  As a reliability engineer at
+a Utilities plant, it is critical to avoid failures.   Note that for this <code>Work queues</code>, there are several pumps and 
+substation transformers that have a predicted failure before their next planned maintenance date. Two of the transformers 
+are in the container that was viewed earlier.  You will select <code>ST_1400518</code> in the queue to start managing your work load 
+for the day by investigating and addressing all of the assets in the work queue.  You will use the Asset Details view to 
+better understand the holistic asset condition of <code>ST_1400518</code> so that you can better assess and pick a corrective action.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>The missing data <code>Work queues</code> are useful for an reliability engineer to help identify gaps in data necessary to create health scores or predictive failure date models.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Select <code>ST_1400518</code> which opens the <code>asset details</code> view.  Details on this page will vary since this is a live demonstration environment system.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2087.png" /></li>
+</ol>
+<h3 id="assets-detail-view">Assets Detail View</h3>
+<p><a name="assets_detail_view"></a></p>
+<p>On the top of the <code>Asset Details</code> page there are the resulting scores from the predefined notebook for this substation 
+transformer.  These are health, criticality, risk, end of life and effective age score.  Note that effective age is a 
+calculation using the actual age and the health score.  An asset in poor health will have an effective age greater than 
+its actual age.</p>
+<p>On the second line, there are custom scores, like the <code>Substation Efficiency</code> score.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2088.png" /></p>
+<p>The next <code>Preventive Maintenance</code> date and the <code>MRR</code> come directly from Maximo Manage.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>The asset detail page is an useful for investigating assets.  Asset condition information is presented on a single page, in easy-to-read tables, charts and graphs.</p>
+</div>
+<ul>
+<li>On the top of the page, there are details about the asset, and KPIs that give a snapshot of its current state.</li>
+<li>For this asset, there is a <code>Health Score</code> of 44, which is in the medium <code>fair</code> zone.  </li>
+<li>This asset also has a high <code>Criticality</code> and low <code>Risk Score</code>. </li>
+<li>This asset has a low percentage of <code>probability</code> that there will be an imminent <code>failure</code>, based on the <code>Installation Date</code> and manufacturers recommended life.</li>
+<li>The asset is projected to fail in the next 0 days, but the next maintenance isn't planned for 30 days.</li>
+</ul>
+<p>At the beginning of the investigation, you suspected the asset was going to fail before its planned maintenance.  But, just by 
+looking at the KPIs, additional evidence suggests that this asset may be in trouble, and that some action needs to be 
+taken now.  The <code>Health history</code> widget of this asset is below the <code>Score widget</code>. Using the historical health chart, you can see 
+this assets health has been low for some time.  This is another indication that this asset needs attention.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Viewing the contributors and the historical health scores can give insight into the why a particular score is trending in one direction or the other.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Scroll down the page to learn more about the health of the asset, go to the <code>Score details</code> widget. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2089.png" /></li>
+<li>Understand what is contributing to the poor health of the asset to see how you might address the problems.  </li>
+<li>Expand the view to see the contributors by clicking the <code>chevrons</code> to view the contributors to poor asset health. 
+<img alt="setup_assets" src="../img/hpu_8.11/chevron.png" /></li>
+<li>See and sort on complete list of contributors to help understand what might be the root cause of the problem.  Click <code>Weight</code> to understand what is contributing the most to the  <code>Score</code></li>
+<li>From the <code>Scoring</code> drop down box you can also see other <code>Custom score</code> contributors that you have created using the custom score template.</li>
+</ol>
+<p>The Health application supports asset-specific calculations and visualizations like <code>Dissolved gas analysis</code> for transformers. 
+There a two types of visualization widgets available to understand the transformers gas conditions using inspection or 
+sensor data readings.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Understanding gas levels can be a early indicator of underlying asset transformer problems that if not inspected or serviced could result in an unscheduled maintenance or failure. </p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Scroll down the <code>Asset Details</code> page until you reach the <code>Dissolved gas analysis</code> tile.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2090.png" /></li>
+<li>Click on each of the <code>dots</code> to get detailed information about the amount of those types of gases.</li>
+<li>Click the <code>switcher</code> icon on the top right corner of the tile, to view the results in the table view.</li>
+<li>The other widget is the history of combustible gas concentrations. It shows the combustible gas trend and rating over 
+time.  The rating represents the average acceptability of detected gas concentrations. The rating is determined by the 
+overall factor.  </li>
+<li>Hover on each of the assessment dates to get the detailed asset condition information.</li>
+</ol>
+<p>There are several predictive model templates that come with Predict.  Your data scientist has trained and deployed these 
+models built using Cloud Pack for Data and Watson Studio which is included with Maximo Application Suite.  IBM Predict 
+includes templates to:</p>
+<ul>
+<li>Predict days to failure</li>
+<li>Calculate probability of failure</li>
+<li>Detect anomalies</li>
+<li>Generate an asset life curve based on group asset deployment and decommission dates </li>
+</ul>
+<p>These templates include a large number of algorithms and can automatically select the one that best fits the data for the 
+optimal outcome.  These models are built to detect specific problems for each asset problem and failure mode.  They can 
+detect problems and forecast the future condition of the asset using historical asset sensor data ingested by Maximo 
+Asset Monitor or streamed into Health using the App Connect included with Maximo Application Suite. </p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Understanding what potential problems may occur in the future allows you to schedule asset maintenance or replacement without impacting customer service or production. </p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Scroll down <code>Asset Details</code> page until you reach the <code>Predictions</code> tile. </li>
+<li>Double click the " the <code>Predictions</code> tile tile to expand the tile and see the prediction cards.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2091.png" /></li>
+</ol>
+<p>Note that also included with MAS is Watson Studio and Watson Machine Learning, both of which a Data Scientist can use for 
+building, training, and maintaining predictive models.  In the case of this asset, the model tells us that it is projected 
+to fail in 0 days plus or minus 1 day. </p>
+<p>A Data Scientist can build predictive models for specific failure modes using the templates included with Predict if you have failure history data. </p>
+<p>The reliability engineer can select those failure modes within the card to see the projection for each failure modes. </p>
+<p>The failure training data is used to help calculate Failure probability.  Different failure modes can be calculated and do impact predictions. </p>
+<p><code>Failure probability</code> is the chance that an asset may have a failure with a certain time period.   For this asset there is a 20% probability of failure in the next 2 months due to overheating. </p>
+<p>A Data Scientist must build specific models for time periods just like the failure modes. You can see the prediction results by making different selections within the card.</p>
+<p><code>Failure probability history</code> shows how the probability of failure for each mode and how it has changed over time.</p>
+<p>The <code>Factors that contribute to failure</code> show which factors from the training data impacted failures the most, giving an indication of what may lead to future failures.
+The anomaly detection model creates a threshold based on history and shows when the asset exceeds that threshold in the card.</p>
+<p>The <code>End of life curve</code> is built based on training data for assets that have been decommissioned.   By applying the effective age calculation from the notebook, this curve can be used to estimate probability of an end of life failure.</p>
+<p>The <code>Effective age</code> of the transformer is 27 years.  The curve produces an end of life probability of  89%.  This is one more indication that this asset needs to be attended to immediately.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Understanding this asset <code>Effective age</code> and <code>End of life curve</code> relative to all the assets, allows you to understand it's likely remaining life given given it's operation and conditional history rather instead of it's calender based age. </p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Hover near the point where the <code>Effective age</code> crosses the curve.  </li>
+<li>How is this asset performing relative to others of a similar class and where it should be for it's age?</li>
+</ol>
+<p>The <code>Asset timeline</code> card shows several pieces of key information about the asset in the same graph. For example, the timeline shows a predicted failure (on the top line of the graph), that will occur before the next preventive maintenance (on the second line of the graph). 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2092.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Information on the <code>Asset timeline</code> chart, like past work orders and inspection, provide valuable insight into the asset's history, and may help you better formulate what kind of action to take.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Scroll down the page</li>
+<li>Hover over a point on the timeline</li>
+</ol>
+<p>There are several other sections on this page including:</p>
+<ul>
+<li><code>Operational status</code>, showing recent meter readings, maintenance history, showing work orders for this asset.</li>
+<li><code>Replacement planning</code>, showing any replacement or refurbishment plans created for this particular asset.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>While each piece of information, or card, gives nsight into the state of our asset, all of the information together, gives a richer view, and helps make a data-driven decision on how to address this asset.</p>
+</div>
+<p><img alt="setup_assets" src="../img/HPU_8.9/HPU%2093.png" />
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2094.png" /></p>
+<h3 id="take-action">Take Action</h3>
+<p>There’s enough evidence from the investigation to take some action against this asset.  Scroll to the top of the page and click the <code>Actions</code> dropdown selection box button to see the options.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Corrective actions to address asset problems can be done with a couple of clicks directly from the asset detail page.</p>
+</div>
+<ol>
+<li>Scroll to the top of the page.</li>
+<li>Click the <code>Actions</code> button.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2095.png" /></li>
+</ol>
+<p>You could:</p>
+<ul>
+<li><code>Add flag</code> which sets a replacement flag on this asset to make sure it is marked to be replaced in the next round of replacement planning.</li>
+<li><code>Create a plan</code> to replace or repair this asset.</li>
+<li><code>Recalculate scores</code> if there is new information or your scoring notebook has changed, you can request that the scores be re-calculated to reflect these changes.</li>
+<li><code>Edit source asset record</code> to navigate to the asset record to make asset changes.  In this case, possibly adjust the preventative maintenance schedule.</li>
+<li><code>Create a service request</code>so that a technician can do asset repairs, inspection or replacement.</li>
+</ul>
+<p>However, this asset needs urgent maintenance.  Create an emergency maintenance work order for this asset by selecting the <code>Create work order</code> option and completing the form.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Select the <code>Create work order</code> option</li>
+<li>Show the form</li>
+<li>Click <code>Cancel</code> to return to the asset detail page
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2096.png" /></li>
+</ol>
+<p>Health and Predict gives many options to identify assets at risk with a table, map, chart and asset details views.</p>
+<p>Additionally you can use and predefined <code>Work Queues</code> to help systematically address risky assets exhibiting the same 
+problems or that are missing data in order to calculate their scores.</p>
+<p>There’s a single page from which to conduct an investigation and take an action.  In this case, submitting an emergency work order to prevent the imminent failure of a substation transformer.</p>
+<p>In Health and Predict – Utilities, there’s also the ability to use a matrix (custom or OOTB) and do long-term replacement planning based on risk tolerance and available budget.</p>
+<h3 id="identify-investigate-with-maps">Identify / Investigate with Maps</h3>
+<p>Start building an investment project from the matrix view.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<h3 id="identify-investigate-with-a-matrix">Identify / Investigate with a Matrix</h3>
+<p>Start building an investment project from the matrix view.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Hover over the left nav bar to expand it</li>
+<li>Select the <code>Assets</code> section on the left nav bar
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2029.png" /></li>
+<li>Make sure the asset view is for <code>substation transformers</code> by either using the filter symbol or a saved view.  If necessary, clear the filters to start from the full set of assets under management</li>
+<li>Click the “Matrix” icon to move to the matrix view
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2044.png" /></li>
+</ol>
+<p>The default matrix view, in this case, is set to “Substation Efficiency and Health”.  This is a custom matrix.  The out-of-the-box matrices are…
+- Criticality and End of life
+- Criticality and Health
+- Criticality and Risk</p>
+<p>This custom matrix is using the Health score generated by using the notebook for substation transformers.  The Substation Efficiency score is a custom score.  Together, on the matrix, they can represent a proxy for sustainability.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Seeing how the assets are distributed by color, and against two variables, provides an easy way to identify assets at risk.</p>
+</div>
+<p>To get a different view of the assets, change the axes of the matrix by using the pull-down menu. </p>
+<p>The color pattern can also be adjusted by clicking on the setting cog.  By doing this, we are adjusting our risk tolerance.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>The ability to change the matrix, further allows you to focus on specific assets.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Click on the pull-down menu to show the other matrix options
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20101.png" /></li>
+<li>Click on the setting cog to briefly go into the setting page to show that the page is customizable
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20102.png" /></li>
+<li>Click <code>Close</code> to return to the matrix view
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20103.png" /></li>
+</ol>
+<p>This view shows that there are 35 assets in red or high category.  Click through the summary boxes, or the boxes in the matrix, to see the details of the assets in a table view.</p>
+<p>This table view provides a perfect example of how assets can be added to a new or existing investment project.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>The ability to drill-down allows you to focus on those asset in trouble, and take action on only those assets.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Click on the "High" box with 35 assets in it
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2097.png" /></li>
+<li>From the table view, demonstrate how all of the assets can be selected by clicking on the selection box at the top
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2098.png" /></li>
+<li>Show the options to add the assets to a new or existing investment project</li>
+<li>Click <code>Cancel</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2099.png" /></li>
+<li>Click the <code>Assets</code> breadcrumb to return to the matrix
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20100.png" /></li>
+</ol>
+<h3 id="take-action-with-aio">Take Action with AIO</h3>
+<p>In Health and Predict – Utilities, there’s a capability to build an Asset Investment Optimizer (AIO) project.</p>
+<p>The AIO process starts with building a project of assets, assigning a length and starting date to the project, then running multiple strategies to determine which assets should be replaced over the life of the project, and when.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Utilizing advanced data-driven analytics to optimize OPEX and CAPEX comprehensively from various dimensions.</p>
+</div>
+<p>In this case, a project has already been built with the 35 assets in the “red” cell, and the 26 assets in the “yellow” cell next to it.</p>
+<p><img alt="setup_assets" src="../img/HPU_8.9/HPU%20104.png" /></p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Hover over the left nav bar to expand it</li>
+<li>Select the <code>Asset investment optimizer</code> section on the left nav bar
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2055.png" /></li>
+<li>From the <code>Projects</code> tab, click on <code>ST Investment Project</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20105.png" /></li>
+</ol>
+<p>There are 3 strategies built out in the “ST Investment Project”.</p>
+<p>The first strategy is to maintain the average risk of 8.2 for the 61 substation transformers in the 25-year project.</p>
+<p>The second is to reduce the risk to 7.0.</p>
+<p>The third is to stay within a $2.16M budget.</p>
+<p>Each of the scenarios uses a plan template build for Substation Transformers specific replacement costs and cost of a failure.</p>
+<div class="admonition note">
+<p class="admonition-title">Value</p>
+<p>Multiple scenario can be run to determine the best strategy to meet the risk tolerance of the enterprise, and the budget available for the project.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Click the <code>Maintain risk</code> scenario
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20106.png" /></li>
+<li>Review the scenario by using the 2 “details” buttons to toggle between the cost of the scenario, and the specific replacement plan</li>
+<li>Repeat the process for “Stay within budget” and “Reduce risk” scenarios to review each scenario
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20107.png" /></li>
+</ol>
+<p>Up to three strategies can be compared side-by-side and the details can be exported.</p>
+<div class="admonition attention">
+<p class="admonition-title">Actions</p>
+<p>Follow the action items below.</p>
+</div>
+<ol>
+<li>Click the <code>Compare strategies</code> button
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20108.png" /></li>
+<li>From the pop-up, click all three scenarios</li>
+<li>Click <code>Compare</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20109.png" /></li>
+<li>Review the output noting the results of each strategy
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%20110.png" /></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>As the Reliability Engineer, maintaining the grid, I was able to use IBM Maximo Health and Predict to identify assets at 
+risk, investigate those assets, and finally take an action to prevent a failure and unplanned downtown…saving thousands 
+of dollars, and maintaining the integrity of the grid.</p>
+<p>My actions will also help short, medium and long term investment decisions that drive maintenance and replacement policies.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../build_demo/" class="btn btn-neutral float-left" title="Setup Health and Predict Demonstration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../build_demo/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

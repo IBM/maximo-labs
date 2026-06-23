@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Mayur Sojitra" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/add_edit_device/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Add and Edit devices - Device and device type setup</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Add and Edit devices";
+        var mkdocs_page_input_path = "add_edit_device.md";
+        var mkdocs_page_url = "/maximo-labs/add_edit_device/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Device and device type setup
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Device and device type setup Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview_configuration/">1. Device Type Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_metrics/">2. Metrics in Device Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_dimensions/">3. Dimension in Device Type</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Add and Edit devices</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#add-device">Add Device</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-second-device">Add Second Device</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#edit-device">Edit Device</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-simulation">Data Simulation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-metric-data">View Metric data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-dimension-data">View Dimension data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#edit-device-dimension">Edit Device Dimension</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../device_relation/">5. Device Relationship with Asset/Location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_calc_metrics/">6. Calculated metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../devicetype_dashboard/">7. Dashboard</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../archive_devicetype/">8. Archive/Restore/Delete Device Type</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Device and device type setup</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Add and Edit devices</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to add/edit devices in device type.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<hr />
+<h2 id="add-device">Add Device</h2>
+<p>There are two ways to add device :</br>
+We can add Device in Device Types navigation.</br>
+We can create Device through Devices Navigation.</br>
+Click on <code>Add Device +</code> button.
+<img alt="Add Device" src="../img/add_edit_device01.png" /></br></br></p>
+<p><img alt="Add Device" src="../img/add_edit_device02.png" /></br></br></p>
+<p>It will show device creation through device library or custom device.Select add custom device and click <code>Continue</code>.
+<img alt="Add Device" src="../img/add_edit_device03.png" /></br></br></p>
+<p>It will redirect to Add Device page where device Id and token type is required.Token type can be auto-generated or custom.Also need to mention Device Type name and click <code>Save</code>.
+<img alt="Add Device" src="../img/add_edit_device04.png" /></br></br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The device type will not be pre-populated when creating a device via the Devices navigation. If it is not automatically selected, please choose the appropriate device type from the dropdown menu.</p>
+</div>
+<p>Device will be available in specified Device Type.
+<img alt="Add Device" src="../img/add_edit_device05.png" /></br></br></p>
+<h2 id="add-second-device">Add Second Device</h2>
+<p>Follow the steps outlined above to add a second device to the device type. Once completed, the configuration will appear as shown below.
+<img alt="Add Device" src="../img/add_edit_device06.png" /></br></br></p>
+<h2 id="edit-device">Edit Device</h2>
+<p>Click on the device that you wish to edit.
+<img alt="Edit Device" src="../img/add_edit_device07.png" /></br></br></p>
+<p>Go on Overview page of device.
+<img alt="Edit Device" src="../img/add_edit_device08.png" /></br></br></p>
+<p>It will provide device details and its relationship with asset and location. Click on <code>Edit</code>.
+<img alt="Edit Device" src="../img/add_edit_device09.png" /></br></br></p>
+<p>We can edit device alias, description and also enable data simulator through edit option in Overview.Finally, click <code>Save</code> to modify data for the device.
+<img alt="Edit Device" src="../img/add_edit_device10.png" /></br></br></p>
+<p>Device alias and description successfully updated.
+<img alt="Edit Device" src="../img/add_edit_device11.png" /></br></br></p>
+<h2 id="data-simulation">Data Simulation</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using Data simulator we receive simulated data to the device.</p>
+</div>
+<p>Go on Overview page of device. Click on <code>Edit</code>.
+<img alt="Data Simulation" src="../img/add_edit_device12.png" /></br></br></p>
+<p>Toggle the 'Data Simulator' switch to enable it. Then, specify the frequency by entering the desired number of events per minute.
+<img alt="Data Simulation" src="../img/add_edit_device13.png" /></br></br></p>
+<p>Data Simulation is Enabled now for this device.
+<img alt="Data Simulation" src="../img/add_edit_device14.png" /></br></br></p>
+<p>The simulated event payload will appear under the 'Recent Events' section.
+<img alt="Data Simulation" src="../img/add_edit_device15.png" /></br></br></p>
+<h2 id="view-metric-data">View Metric data</h2>
+<p>Navigate to the Data page of the device. Click the arrow next to Metric to expand the list.
+<img alt="View Metric" src="../img/add_edit_device16.png" /></br></br></p>
+<p>Select the metric name for which you want to view data. Click on the Data Table to display the metric data.
+<img alt="View Metric" src="../img/add_edit_device17.png" /></br></br></p>
+<p>Data is available for multiple metrics and can be reviewed individually.
+<img alt="View Metric" src="../img/add_edit_device18.png" /></br></br></p>
+<p><img alt="View Metric" src="../img/add_edit_device19.png" /></br></br></p>
+<p><img alt="View Metric" src="../img/add_edit_device20.png" /></br></br></p>
+<h2 id="view-dimension-data">View Dimension data</h2>
+<p>Navigate to the Data page of the device. Click the arrow next to Dimension to expand the list.
+<img alt="View Dimension" src="../img/add_edit_device21.png" /></br></br></p>
+<p>Select the dimension name for which you want to view data.
+<img alt="View Dimension" src="../img/add_edit_device22.png" /></br></br>
+<img alt="View Dimension" src="../img/add_edit_device23.png" /></br></br></p>
+<p>Alternatively, you can navigate to the device's Dimension page to view dimension data.
+<img alt="View Dimension" src="../img/add_edit_device24.png" /></br></br></p>
+<h2 id="edit-device-dimension">Edit Device Dimension</h2>
+<p>Navigate to the Dimension page of the device. Click on Edit icon.
+<img alt="Edit Dimension" src="../img/add_edit_device25.png" /></br></br></p>
+<p>The default value displayed here reflects the dimension value configured at the device type level. To update it, modify the dimension value as needed and click the <code>Save</code> button to apply the changes.
+<img alt="Edit Dimension" src="../img/add_edit_device26.png" /></br></br></p>
+<p>The dimension details have been successfully updated for this device.
+<img alt="Edit Dimension" src="../img/add_edit_device27.png" /></br></br></p>
+<p>Since we modified the dimension data for Device 1, its current values differ from those originally configured at the device type level. In contrast, Device 2 still reflects the default values, as no changes have been made to its dimension data.
+<img alt="Edit Dimension" src="../img/add_edit_device28.png" /></br></br></p>
+<hr />
+<p>Congratulations you have successfully added and modified devices in device type.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../add_dimensions/" class="btn btn-neutral float-left" title="3. Dimension in Device Type"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../device_relation/" class="btn btn-neutral float-right" title="5. Device Relationship with Asset/Location">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../add_dimensions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../device_relation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

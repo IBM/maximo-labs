@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/build_demo/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Setup Health and Predict Demonstration - Maximo v9.0 APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup Health and Predict Demonstration";
+        var mkdocs_page_input_path = "build_demo.md";
+        var mkdocs_page_url = "/maximo-labs/build_demo/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo v9.0 APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Health and Predict Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Setup Health and Predict Demonstration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#login-to-mas-applications">Login to MAS Applications</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-health-asset-permissions-in-manage">Setup Health Asset Permissions in Manage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-default-health-asset-condition-scores">Setup Default Health Asset Condition Scores</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#activate-the-default-score">Activate the Default Score</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-an-asset">Create an Asset</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-health-score-groups">Setup Health Score Groups</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-scoring-group">Create a Scoring Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pick-a-query">Pick a Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#activate-score">Activate Score</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-score-type">Create Score Type</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-score-type">Create a New Score Type</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-group-for-using-custom-score-using-notebooks">Create Group for Using Custom Score Using Notebooks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-scoring-group_1">Create a Scoring Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-score-type">Add Score Type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-contributor">Add Contributor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-contributor-weight">Add Contributor Weight</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-custom-matrix">Create Custom Matrix</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#view-matrix">View Matrix</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configure-matrix">Configure Matrix</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-replacement-plan-template-for-substation-transformers">Create Replacement Plan Template for Substation Transformers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#replacement-plan-templates">Replacement Plan Templates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-an-asset-replacement-template">Create an Asset Replacement Template</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-investment-project">Create Investment Project</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#assign-assets">Assign Assets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-project">Create a Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-assets-from-the-matrix">Add Assets from the Matrix</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-and-run-investment-strategies">Create and Run Investment Strategies</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#meantime-between-failure">Meantime Between Failure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-threshold-on-charts-page">Create Threshold on Charts Page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-threshold-on-score-settings-page">Create Threshold on Score Settings Page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-required-data-on-asset-details">Add Required Data on Asset Details</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-required-data-on-asset-table">Add Required Data on Asset Table</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#troubleshoot-mtbf">Troubleshoot MTBF</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo_script/">Health and Predict Overview Task Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo v9.0 APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Setup Health and Predict Demonstration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="build-mas-health-and-predict-demonstration">Build MAS Health and Predict Demonstration</h1>
+<p>Follow the steps in this lab in your own environment to create the necessary components to deliver the Maximo Application Suite (MAS) v9 Health and 
+Predict Demo Script. The data for your system can be provided by the instructor or you can create your own assets too for some of the exercises.</p>
+<ol>
+<li>Login to MAS Applications </li>
+<li>Setup Health Asset Permissions </li>
+<li>Setup Default Health Asset Condition Scores</li>
+<li>Create an Asset</li>
+<li>Setup Health Score Groups </li>
+<li>Create a Score Group</li>
+<li>Create score type </li>
+<li>Create group using Custom Scoring Methodology </li>
+<li>Create custom matrix </li>
+<li>Plan replacement plan template for Substation Transformers </li>
+<li>Create investment project</li>
+</ol>
+<p>To keep track of the items that you create, append your initials to the end of the name, so that they’ll be easy to find and delete.</p>
+<p><strong>Prerequisites</strong></p>
+<p>This lab requires the following:</p>
+<ul>
+<li>A working MAS environment with Maximo Manage, or another Enterprise Asset Management (EAM) 
+system, Maximo Health, Maximo Health and Predict, IBM Maximo Models for Electrical Distribution and Maximo Optimizer installed.</li>
+<li>Sufficient asset data to run the analysis and get insights</li>
+<li>User id with application access to <code>Health</code> application.</li>
+<li>User id with access to a site. Otherwise you will get a warning <code>This user doesn't have access to any site. Site access is required to access ASSET object</code></li>
+</ul>
+<h2 id="login-to-mas-applications">Login to MAS Applications</h2>
+<p>Launch <code>Health</code> on the <code>Applications</code> tab.  If <code>Health</code> tile is not present on applications tab,  ask your MAS admin has to enable it. </p>
+<ol>
+<li>After you login using the credentials provided by your instructor,  navigate to the </li>
+<li>From the main MAS page, select the <code>Applications</code> tab
+<img alt="navigate_to_health" src="../img/hpu_8.11/health1.png" /></li>
+<li>Click the <code>Launch</code> link on the <code>Manage</code>, <code>Health</code> or <code>Predict</code> tile.  To setup permissions in the next exercise you will go to Manage.</li>
+<li>This displays the assets grid page with a table of assets and their health scores for the user's currently assigned site.
+<img alt="assets_page" src="../img/hpu_8.11/assets_grid_page.png" /></li>
+</ol>
+<p>**Note if  the user isn't assigned to a site they will not see any assets. ** </p>
+<h2 id="setup-health-asset-permissions-in-manage">Setup Health Asset Permissions in Manage</h2>
+<p><a name="setup-health-asset-permissions"></a></p>
+<p>In order to allow users to <code>edit source record</code> on <code>Action</code> button on the Health asset details page you must first configure the Health application security groups in Manage using the steps below.</p>
+<ol>
+<li>Go to Manage Application.
+<img alt="assets_page" src="../img/hpu_8.11/select_manage.png" /></li>
+<li>Choose the <code>Security group</code> application. 
+<img alt="assets_page" src="../img/hpu_8.11/select_security_groups.png" /></li>
+<li>Search on the <code>HEALTH</code> group and click <code>enter</code> key. 
+<img alt="assets_page" src="../img/hpu_8.11/search_health_group.png" /></li>
+<li>Click the <code>Applications</code> tab.</li>
+<li>Select <code>Assets</code>
+<img alt="assets_page" src="../img/hpu_8.11/click_applications_assets.png" /></li>
+<li>Click the <code>Grant listed options for the application</code> </li>
+<li>Enable options for asset actions
+<img alt="assets_page" src="../img/hpu_8.11/turn_on_options.png" /></li>
+<li>Click <code>Save Group</code>. 
+<img alt="assets_page" src="../img/hpu_8.11/confirmation_save.png" /></li>
+<li>Go back to <code>Health</code>application and login using the user to ensure the operation is now possible.</li>
+</ol>
+<h2 id="setup-default-health-asset-condition-scores">Setup Default Health Asset Condition Scores</h2>
+<p><a name="default_score"></a></p>
+<p>Maximo Health v9 includes the ability to automatically active Asset Condition scoring for all assets that don't belong to
+a score group.  After you activate the default asset condition scores, any new asset you create will also use 
+the out of the box default score group to calculate asset condition for Health Risk and Criticality.   Asset that are 
+already part of score group will be skipped.</p>
+<p>Watch the <a href="https://mediacenter.ibm.com/media/1_2k8jqivj">video on Default Asset Condition Scores</a></p>
+<h3 id="activate-the-default-score">Activate the Default Score</h3>
+<p>In this exercise you enable the <code>Default Score</code>. </p>
+<ol>
+<li>After you Log into IBM Maximo for the first time you will be reminded to enable the <code>Default Score</code>. </li>
+<li>Press the <code>Activate</code> Button to enable the Default Scores.
+<img alt="default_scores_form" src="../img/default_scores_form.png" /></li>
+<li>Make sure you have create assets and they have the required dependencies set.  An Asset Priority,  Work orders or 
+Service Requests set against the asset.  Asset installation date and asset expected life based on Manufacture.</li>
+<li>Optionally you can choose to <code>activate the scores later</code>.  Go to <code>Setting Group</code> and <code>Groups</code> tab to find the 
+<code>Default_Score</code> group to enable it.</li>
+<li>Check the group to see if the default scores have been activated.  You will see Health, Risk and Criticality 
+calculated for all your assets.
+<img alt="default_scores_group" src="../img/defaultscores_activated.png" /></li>
+</ol>
+<p>Asset scores will begin to be calculated using the <code>Default_Score</code> group.  You can also verify if the scoring is working by
+viewing assets using the <code>Asset Table List</code> page.  If the Health, Risk ad Criticality score don't apper it likely because
+there data missing for it to be calculated.   You can bulk update missing data for Installation Date in the <code>Asset Table 
+List</code> page simply by clicking on the column and row asset value and entering the information in the pop up dialog. <br />
+You can also view the Asset Condition Scores for <code>Health</code>, <code>Risk</code> and <code>Criticality</code> on the <code>Asset Details</code> page.</p>
+<h2 id="create-an-asset">Create an Asset</h2>
+<p><a name="create_asset"></a></p>
+<p>In this exercise you create an asset in IBM Maximo Manage.  You will use this asset later to measure it's Meantime 
+Between Failure and see how it's value performs versus other assets using a Chart. </p>
+<p>In order for the Meantime Between Failure Score to be calculated you also are required also create an unscheduled emergency work 
+order.   Let's start by first creating the asset and then a work order.</p>
+<p>To create an example asset for Meantime Between Failure score make sure you enter the following asset fields:</p>
+<ul>
+<li>Asset Number: "AH016"</li>
+<li>Description: "Submersible pump 20 hp rotary"</li>
+<li>Asset Type: "Pump"</li>
+<li>Status: Active</li>
+<li>Installation Date: 6/1/20</li>
+<li>Expected Life: 10  ( Manufacture suggested life - 20% for example)</li>
+<li>Vendor: Armstrong</li>
+<li>
+<p>Manufacturer: Armstrong</p>
+</li>
+<li>
+<p>Log into IBM Maximo.  Open IBM Maximo Application Suite. </p>
+</li>
+<li>Open your web browser and navigate to the IBM Maximo login page.</li>
+<li>Enter your <code>username</code> and <code>password</code> to log in.</li>
+<li>
+<p>Launch <code>Manage</code> on the <code>Applications</code> tab.  If <code>Manage</code> tile is not present on <code>Applications</code> tab,  ask your MAS 
+administrator to enable it for your user id.</p>
+</li>
+<li>
+<p>Navigate to the <code>Asset</code> Module. Select to <code>Asset</code> Module.  From the main Maximo menu, select <code>Assets &gt; Assets</code>.</p>
+</li>
+<li>
+<p>Create a New Asset:</p>
+</li>
+<li>
+<p>Open <code>New Asset</code> Form. In the <code>Asset</code> module, click on the <code>New Asset</code> button to open the <code>asset creation</code> form.</p>
+</li>
+<li>
+<p>Fill in Asset Details:</p>
+</li>
+<li>
+<p>Enter <code>Asset Number</code>. In the <code>Asset Number</code> field, enter a unique identifier for the asset (e.g., AH016).</p>
+</li>
+<li>Enter <code>Description</code>.  In the <code>Description</code> field, enter a detailed description of the asset (e.g., Submersible pump 20 hp rotary).</li>
+<li>Select <code>Asset Type</code>. Locate the <code>Asset Type</code> field and select the appropriate type from the dropdown menu (e.g., Pump).</li>
+<li>Enter <code>Installation Date</code>. Enter the <code>date</code> the asset was installed. Use the date picker to select the date (e.g., 2024-05-21).</li>
+<li>Enter <code>Vendor Information</code>. In the <code>Vendor</code> field, enter the name of the vendor from which the asset was purchased (e.g., Siemens).</li>
+<li>Enter <code>Manufacturer Information</code>. In the <code>Manufacturer</code> field, enter the name of the manufacturer of the asset (e.g., ABB).</li>
+<li>
+<p>Enter <code>Expected Life</code> in Years. In the <code>Expected Life</code> field, enter the expected operational life of the asset in years (e.g., 20).</p>
+</li>
+<li>
+<p>Save the <code>Asset</code>. After filling in all the required fields, click the <code>Save</code> button to create the asset record in Maximo.</p>
+</li>
+<li>
+<p>Click <code>Save</code> to store the new asset record.</p>
+</li>
+<li>
+<p>Select  the asset status to <code>Active</code>:</p>
+</li>
+<li>
+<p>From the <code>Common Actions</code> menu on the left, find the <code>Status</code> menu to launch the status Form.
+<img alt="change_asset_status" src="../img/change_asset_status.png" /></p>
+</li>
+<li>Choose  <code>Active</code> from the <code>New Status</code> dropdown menu and click <code>Save</code> button.
+<img alt="change_asset_status" src="../img/change_asset_status.png" /></li>
+</ul>
+<h2 id="setup-health-score-groups">Setup Health Score Groups</h2>
+<p><a name="setup_health_score_group"></a></p>
+<p>When you first login to the Health Application,  there is a universal table list view of all managed assets.</p>
+<p>Scores that are shown in this view, and others, are created from the <code>Scoring Settings</code> section on the left nav bar.</p>
+<ol>
+<li>
+<p>Hover over the left nav bar to expand it. Select the <code>Scoring Settings</code> section on the left nav bar
+<img alt="setup_settings menu" src="../img/score_settings.png" />  </p>
+</li>
+<li>
+<p>Create a scoring group by choosing assets that have similar behavior.  <code>Groups</code> are bound to an <code>asset query</code>. </p>
+</li>
+</ol>
+<p>If there are any scoring groups already created, they will appear on the <code>Groups</code> tab of the <code>Scoring settings</code> page.</p>
+<ol>
+<li>Scroll through the pages to see what groups have already been created.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%205.png" /></li>
+</ol>
+<p>There are 2 ways to create asset condition scores in Maximo Health. The first way is using the <a href="">Maximo Formula Engine</a>.<br />
+The second way is use Watson Studio to customize the Jupyter notebook templates provided in Maximo Health or accelerators . 
+Each asset class has it's own notebook template.  See the <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/continuous-delivery?topic=cm-asset-class-notebooks-in-maximo-health-predict-utilities">documentation</a> 
+for the list of asset classes IBM provides.  You can configure the <code>Score Settings</code> using a text file with a <code>.cfg</code> 
+extension to specify how to calculate Asset Health, Risk and Criticality.</p>
+<p>Alternatively, scoring methodologies can be created from scratch directly in the UI.</p>
+<h3 id="create-a-scoring-group">Create a Scoring Group</h3>
+<p>To create a score group for Substation Transformers, click the <code>Create a scoring and DGA group</code> button, and complete the form.</p>
+<ol>
+<li>Click the <code>Create a scoring group +</code> button. 
+<img alt="setup_assets" src="../img/create_score_group.png" /></li>
+<li>Complete the open fields for <code>Name</code> and <code>Description</code>. </li>
+<li>Select the radio button for <code>asset</code> to identify the <code>Object</code>. </li>
+<li>Select the radio button <code>Connecting group to notebook</code> in response to <code>Configure scoring and DGA by</code>. </li>
+<li>Click <code>Select</code> to pick a notebook. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%207.png" /></li>
+<li>When prompted, scroll and select the <code>IBM Transformers Tap Changers DGA 6.0.1</code>. </li>
+<li>Click <code>Use notebook</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%208.png" /></li>
+</ol>
+<h3 id="pick-a-query">Pick a Query</h3>
+<p>To identify which assets each notebook your formula engine setting are applied to a the group of assets you must
+pick a asset query.  In this case select, substation transformers. </p>
+<ol>
+<li>Click <code>select</code> to pick a query. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%209.png" /></li>
+<li>When prompted, scroll and select the <code>EUORG1_EUDEMO_ST</code></li>
+<li>Click <code>Apply</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2010.png" /></li>
+<li>Click <code>Create</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2011.png" /></li>
+</ol>
+<h3 id="activate-score">Activate Score</h3>
+<p>Once created, the group will display.  The next step is to activate each of the scoring methodologies from the notebook. </p>
+<ol>
+<li>Click each score in sequence, starting at the top. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2012.png" /></li>
+<li>On each <code>score</code> screen, review the scoring methodology, and select <code>Active</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2013.png" /></li>
+<li>Use the breadcrumb to return the <code>Scoring Group</code> page. </li>
+<li>Ensure that all of the scores are <code>Active</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2014.png" /></li>
+</ol>
+<h2 id="create-score-type">Create Score Type</h2>
+<p><a name="create-score-type"></a></p>
+<p>To create your own asset conditions scores, you can use custom score from the UI, return to the <code>Scoring Settings</code> page by clicking the breadcrumb at the top of the page.</p>
+<p>Select the <code>Score types</code> tab on the page to create a new score type.  Existing score types will display on the page.</p>
+<ol>
+<li>Click the <code>Scoring Settings</code> breadcrumb at the top of the page. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2015.png" /></li>
+<li>Select the <code>Score types</code> tab. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2018.png" /></li>
+<li>Click the <code>Create new score type</code> button. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2019.png" /></li>
+</ol>
+<h3 id="create-a-new-score-type">Create a New Score Type</h3>
+<p>Complete the form for the new custom score type.  The score type can be customized with new ranges, colors and icons. </p>
+<ol>
+<li>Complete the open fields for <code>Name</code> and <code>Description</code>. </li>
+<li>Leave the remaining fields as they default. </li>
+<li>Click <code>Save</code>. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2020.png" /></li>
+<li>Return to the <code>Groups</code> tab to set up the custom score methodology. Select the <code>Groups</code> tab. </li>
+</ol>
+<h2 id="create-group-for-using-custom-score-using-notebooks">Create Group for Using Custom Score Using Notebooks</h2>
+<p><a name="create-group-custom-score"></a></p>
+<h3 id="create-a-scoring-group_1">Create a Scoring Group</h3>
+<p>Follow similar steps as those using the notebook to create a custom score methodology for substation transformers 
+in this case, a proxy for efficiency.</p>
+<ol>
+<li>Click the <code>Create a scoring and DGA group</code> button. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%206.png" /></li>
+<li>Complete the open fields for <code>Name</code> and <code>Description</code>. </li>
+<li>Select the radio button for <code>asset</code> to identify the <code>Object</code>. </li>
+<li>Select the radio button <code>Building scores</code> in response to <code>Configure scoring and DGA by</code>. </li>
+<li>Click <code>select</code> to pick a query. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2016.png" /></li>
+<li>When prompted, scroll and select the <code>EUORG1_EUDEMO_ST</code>. </li>
+<li>Click <code>Apply</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2010.png" /></li>
+<li>Click <code>Create</code>. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2011.png" /></li>
+</ol>
+<h3 id="add-score-type">Add Score Type</h3>
+<p>Once created, the group will display.  The next step is to create the custom score methodology itself.</p>
+<p>When adding a score type, existing score types with appear, including the Substation Efficiency just created.</p>
+<ol>
+<li>Click the <code>Add score</code> button. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2022.png" /></li>
+<li>Select <code>Substation Efficiency</code> from the score options. </li>
+<li>Click <code>Done</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2023.png" /></li>
+</ol>
+<h3 id="add-contributor">Add Contributor</h3>
+<p>From the Substation Efficiency score page, the custom score methodology can be built using various contributors, formulas, or groups.</p>
+<ol>
+<li>Click the <code>+</code> in the contributor section of the page. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2024.png" /></li>
+<li>From the <code>Add a contributor</code> popup, select the tile <code>FACAGESAMPLE</code>. </li>
+<li>Click <code>Add</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2025.png" /></li>
+</ol>
+<h3 id="add-contributor-weight">Add Contributor Weight</h3>
+<p>For this example, only one contributor is used, but often there will be several contributors.  Therefore, a weight must be assigned to each contributor.  In this case, 100%.</p>
+<p><strong>Value:</strong>  The ability to create custom scores, with any data available, allows the user to account for unique operating environments and conditions.</p>
+<ol>
+<li>Click the <code>Pencil</code> icon. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2026.png" /></li>
+<li>In the popup, change the % weight to <code>100</code>. </li>
+<li>Click <code>Save</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2027.png" /></li>
+<li>Change the <code>Active</code> button to <code>Yes</code>. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2028.png" /></li>
+</ol>
+<h2 id="create-custom-matrix">Create Custom Matrix</h2>
+<p><a name="create-group-custom-score"></a></p>
+<h3 id="view-matrix">View Matrix</h3>
+<p>Now that the score methodologies are built, and active, scores will appear in multiple views.</p>
+<p>To use the custom score in a matrix, a custom matrix must be created. </p>
+<ol>
+<li>Hover over the left nav bar to expand it. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2029.png" /></li>
+<li>Select the <code>Assets</code> section on the left nav bar to return to the table view. </li>
+<li>Click the <code>Matrix</code> icon to move to the matrix view. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2044.png" /></li>
+</ol>
+<h2 id="configure-matrix">Configure Matrix</h2>
+<p><a name="create-group-custom-score"></a></p>
+<p>To customize the matrix, click the <code>setting icon</code> in the upper right of the screen.  Adjust the fields so that Health 
+appears on the y-axis, and Substation Transformer Efficiency on the x-axis.</p>
+<ol>
+<li>Click the <code>cog</code> symbol. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2045.png" /></li>
+<li>In the <code>Name</code> field, type <code>Substation Efficiency and Health</code>. </li>
+<li>In the <code>Y-axis</code> field, select <code>Substation Efficiency</code>. </li>
+<li>Select the <code>100-0</code> radio button under <code>Y-axis direction</code>.  </li>
+<li>In the <code>X-axis</code> field, select <code>Health</code>.</li>
+<li>Select the <code>100-0</code> radio button under <code>X-axis direction</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2046.png" /></li>
+</ol>
+<p>Also, fill in the colors of the matrix so that the assets with poor health and poor efficiency appear red or <code>high</code> in the upper right corner.</p>
+<ol>
+<li>Click <code>High</code> radio button. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2047.png" /></li>
+<li>In the Matrix, click on the upper right box to turn it red. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2048.png" /></li>
+<li>Continue with <code>Medium</code> and <code>Low</code> to complete the matrix view to match the example. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2049.png" /></li>
+<li>Click <code>Save as</code> to save the matrix and set it as the default. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2050.png" /></li>
+</ol>
+<h2 id="create-replacement-plan-template-for-substation-transformers">Create Replacement Plan Template for Substation Transformers</h2>
+<p><a name="create-group-custom-score"></a></p>
+<h3 id="replacement-plan-templates">Replacement Plan Templates</h3>
+<p>The matrix provides a good view from which to select assets for an investment project.  However, a plan template must be complete for any asset class in a project.  To set up a plan template, go to the Asset investment optimizer tab.</p>
+<ol>
+<li>Hover over the left nav bar to expand it.</li>
+<li>Select the <code>Asset investment optimizer</code> section on the left nav bar.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2055.png" /></li>
+<li>Click the <code>Plan templates</code> tab. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2056.png" /></li>
+<li>On the <code>Plan templates</code> tab, click the <code>+</code> symbol to create a new plan template. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2057.png" /></li>
+</ol>
+<h3 id="create-an-asset-replacement-template">Create an Asset Replacement Template</h3>
+<p>Complete the form for the replacement plan template.</p>
+<ol>
+<li>Select <code>SUBSTATION_TRANSFORMER</code> from the selection list or other asset class.  <strong>Note if there is already a replacement plan template for an asset class, a new one cannot be created</strong></li>
+<li>In the open field, type <code>Sample replacement plan template for Substation Transformer</code></li>
+<li>Select <code>Replacement</code> for <code>Plan type</code>. </li>
+<li>Enter <code>8</code> for <code>Expected downtime in hours</code>. </li>
+<li>Enter <code>50000</code> for <code>Estimated capital cost</code>. </li>
+<li>Enter <code>30000</code> for <code>Estimated operating cost</code>. </li>
+<li>Enter <code>150000</code> for <code>Estimated failure cost</code>. </li>
+<li>Enter <code>30</code> for <code>Expected life in years</code>.  </li>
+<li>Click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2058.png" /></li>
+<li>Hover over the left nav bar to expand it.  </li>
+<li>Select the <code>Assets</code> section on the left nav bar to return to the matrix view. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2029.png" /></li>
+</ol>
+<h2 id="create-investment-project">Create Investment Project</h2>
+<p><a name="create-group-custom-score"></a></p>
+<h3 id="assign-assets">Assign Assets</h3>
+<p>To assign a set of substation transformers to an investment project from the matrix page, filter the assets, and 
+<code>drill down</code> to the table view and add assets to a project. </p>
+<ol>
+<li>Use the pulldown, and select <code>Substation Transformers (shared)</code> from the list. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2051.png" /></li>
+<li>Select the <code>red</code> box in the matrix to show the table view of the assets. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2052.png" /></li>
+<li>From the table view, select <code>50</code> from the pulldown at the bottom of the table. </li>
+<li>Select the <code>box</code> at the top of the page to select all of the assets on the table. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2053.png" /></li>
+<li>Select <code>Create investment project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2054.png" /></li>
+</ol>
+<h3 id="create-a-project">Create a Project</h3>
+<p>Complete the form on the <code>Create a project page</code>.</p>
+<ol>
+<li>In the open field, type <code>ST Demo Project</code>. </li>
+<li>In the Summary field, type <code>Demo project for Substation Transformers</code>. </li>
+<li>Enter <code>25</code> for <code>Duration in years</code>. </li>
+<li>Select <code>2Q</code> for <code>Target start quarter</code>. </li>
+<li>Enter <code>2023</code> for <code>Target start year</code>. </li>
+<li>Click <code>Create</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2059.png" /></li>
+<li>Once the <code>ST Demo Project</code> page appears, hover over the left nav bar to expand it.</li>
+<li>Select the <code>Assets</code> section on the left nav bar to return to the matrix view to add more assets to the project. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2029.png" /></li>
+</ol>
+<h3 id="add-assets-from-the-matrix">Add Assets from the Matrix</h3>
+<p>From the matrix view, <code>drill down</code> once more to the table view and add additional assets to the project.</p>
+<ol>
+<li>Select the <code>yellow</code> box in the middle top row of the matrix to show the table view of the assets. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2060.png" /></li>
+<li>From the table view, select <code>50</code> from the pull down at the bottom of the table. </li>
+<li>Select the <code>box</code> at the top of the page to select all the assets on the table. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2061.png" /></li>
+<li>Select <code>Add to investment project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2062.png" /></li>
+</ol>
+<p>From the popup, select the ST Demo Project to add the new set of assets to the existing project.</p>
+<ol>
+<li>Select <code>ST Demo Project</code> from the set of projects. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2063.png" /></li>
+<li>Click <code>Add</code></li>
+<li>From the <code>Edit project</code> page, click <code>Save</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2064.png" /></li>
+<li>Click <code>Save</code> from the <code>Confirm save</code> popup. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2065.png" /></li>
+</ol>
+<h3 id="create-and-run-investment-strategies">Create and Run Investment Strategies</h3>
+<p>To test different investment strategies, move to the Asset investment optimizer tab to create the first strategy 
+<code>Maintain risk</code>.</p>
+<ol>
+<li>Hover over the left nav bar to expand it. </li>
+<li>Select the <code>Asset investment optimizer</code> section on the left nav bar. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2055.png" /></li>
+<li>From the <code>Projects</code> tab, click on <code>ST Demo Project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2066.png" /></li>
+<li>Click the <code>+</code> to create the first strategy. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2067.png" /></li>
+<li>From the popup, make sure the <code>Strategy</code> selection is <code>Maintain risk</code>, the click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2068.png" /></li>
+</ol>
+<p>Once the strategy is created, run the analysis.  It may take some time to complete.  The user can leave the screen and 
+the analysis will continue to run.</p>
+<ol>
+<li>Click <code>Run analysis</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2069.png" /></li>
+</ol>
+<p>Create the second investment strategy <code>Reduce risk</code> and run it.</p>
+<ol>
+<li>Click the <code>+</code> to create the second strategy. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2070.png" /></li>
+<li>From the popup, set the <code>Strategy</code> selection is <code>Reduce risk</code>. </li>
+<li>Set the <code>Target risk score</code> to <code>7</code>. </li>
+<li>Click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2071.png" /></li>
+<li>Click <code>Run Analysis</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2069.png" /></li>
+</ol>
+<p>Create the third investment strategy <code>Stay in budget</code> and run it. </p>
+<ol>
+<li>Click the <code>+</code> to create the third strategy. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2072.png" /></li>
+<li>From the popup, set the <code>Strategy</code> selection is <code>Stay in budget</code>. </li>
+<li>Set the <code>Opex</code> to <code>810000</code>. </li>
+<li>Set the <code>Capex</code> to <code>1350000</code>. </li>
+<li>Click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2073.png" /></li>
+<li>Click <code>Run Analysis</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2069.png" /></li>
+</ol>
+<h2 id="meantime-between-failure">Meantime Between Failure</h2>
+<p><a name="mtbf"></a></p>
+<p>To calculate the count of how many assets are achieving or not achieving the meantime to failure requires that you 
+specify threshold goal to achieve.   For example what is the number of hours an asset needs to go to achieve the meantime 
+of failure goal.  Assets who have a meantime between failure less than the number of hours means they are failing earlier 
+than required and therefore aren't meeting the meantime between failure.   Meantime between failures is calculated using
+the amount of time an asset goes before it has an unscheduled work order.  Where the work order is either a corrective 
+maintenance or emergency maintenance.   The meantime between failure is calculated by summing the total amount of time 
+between installation and the first and subsequent unscheduled work order divided by the total number of unscheduled 
+worker order occurrences.</p>
+<h3 id="create-threshold-on-charts-page">Create Threshold on Charts Page</h3>
+<p>To create a meantime between failure threshold consider the group of assets that you are measuring performance for.
+Consider creating separate thresholds for a groups of similar expected performance assets within an asset class like 
+pumps and other thresholds for assets that are part of a system and require similar performance considerations like an
+HVAC system.  </p>
+<p>For this exercise you will create a MTBF performance threshold for an asset class. You can use pumps that have a similar 
+asset class, type, manufacture and model.  There are two ways to create <code>Thresholds</code>.  One is on the <code>Asset Charts</code> page,</p>
+<p>If you haven't previously created any <code>Thresholds</code>. The other way to create them by going to the <code>Score Settings</code> page.</p>
+<ol>
+<li>Navigate to the <code>Asset Charts</code> page. 
+<img alt="setup_settings menu" src="../img/GoToChartsCreateThreshold.png" />   </li>
+<li>Click <code>Create threshold</code> button.</li>
+<li>Fill in the form values and click the <code>Save</code> button.
+<img alt="setup_settings menu" src="../img/CreateThresholdPumpHours.png" /></li>
+<li>Select the <code>box</code> at the top of the page to select all of the assets on the table. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2053.png" /></li>
+<li>Select <code>Create investment project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2054.png" /></li>
+</ol>
+<h3 id="create-threshold-on-score-settings-page">Create Threshold on Score Settings Page</h3>
+<p>Create a <code>Threshold</code> anytime by navigating to the <code>Score Settings</code>  After you create the threshold it will be made
+ available as an option on <code>MTBF</code> chart on the <code>Charts</code> page.</p>
+<ol>
+<li>Navigate to the <code>Score Setting</code> page. 
+<img alt="setup_settings menu" src="../img/ClickOnFilterFunnelIcon.png" /> </li>
+<li>Click <code>Funnel</code> button.</li>
+<li>Select the previously created Threshold you want to use for the current <code>View</code> and click the <code>Save</code> button.
+<img alt="setup_settings menu" src="../img/CreateThresholdPumpHours.png" /></li>
+</ol>
+<p>The other way to create them by going to the <code>Score Settings</code> page.</p>
+<ol>
+<li>Navigate to the <code>Asset Charts</code> page. 
+<img alt="setup_settings menu" src="../img/GoToChartsCreateThreshold.png" />   </li>
+<li>Click <code>Create threshold</code> button.</li>
+<li>Fill in the form values and click the <code>Save</code> button.
+<img alt="setup_settings menu" src="../img/CreateThresholdPumpHours.png" /></li>
+<li>Select the <code>box</code> at the top of the page to select all of the assets on the table. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2053.png" /></li>
+<li>Select <code>Create investment project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2054.png" /></li>
+</ol>
+<h3 id="add-required-data-on-asset-details">Add Required Data on Asset Details</h3>
+<p>To calculate an asset's meantime between failure (MTBF), the asset's installation date must be known. Assets that are unable to
+display their MTBF value will show an <code>i</code> icon in the MTBF column and asset row in <code>Asset Table</code> Page or on the value card of 
+the <code>Asset Details</code> Page.  By clicking on the <code>i</code> icon, a dialog will open where you can set the installation date.  Suggested
+values for the installation date are also provided.</p>
+<ol>
+<li>Navigate to an <code>Asset Details</code> Page
+<img alt="change_asset_status" src="../img/asset_details_enter_installation_date.png" /></li>
+<li>Click the an <code>i</code> icon on the MTBF value card.  </li>
+<li>Choose the installation date using the <code>Calendar</code> control inf the dialog.  If you don't know the installation date
+consider using the suggested value of when the asset was first added to Maximo.  </li>
+<li>Click <code>save</code> to save the installation date.</li>
+<li>The MTBF value card will be updated when the MTBF calculation is recalculated in the <code>crontask</code>.</li>
+</ol>
+<h3 id="add-required-data-on-asset-table">Add Required Data on Asset Table</h3>
+<ol>
+<li>Navigate to an <code>Asset Table</code> Page
+<img alt="change_asset_status" src="../img/asset_table_click_i_mtbf.png" /></li>
+<li>Click the an <code>i</code> icon on the MTBF value card.  </li>
+<li>Choose the installation date using the <code>Calendar</code> control inf the dialog.  If you don't know the installation date
+consider using the suggested value of when the asset was first added to Maximo.  </li>
+<li>Click <code>save</code> button to save the installation date.
+<img alt="change_asset_status" src="../img/mtbf_asset_table_enter_installation_date.png" /></li>
+<li>The MTBF value card will be updated when the MTBF calculation is recalculated in the <code>crontask</code>. You will see a status
+message letting you know the value will be calculated.
+<img alt="change_asset_status" src="../img/crontask_status.png" /></li>
+</ol>
+<h3 id="troubleshoot-mtbf">Troubleshoot MTBF</h3>
+<p>If an asset's MTBF value doesn't appear in the <code>Asset Details</code> page or <code>Asset Table</code> page after you have entered and the asset's installation date
+and the <code>crontask</code> has run then check to see if there are any filters applied to the <code>crontask</code> that remove your asset from
+the list of assets to be calculated for MTBF.</p>
+<ol>
+<li>Navigate to the <code>crontask</code> in Manage.
+<img alt="change_asset_status" src="../img/manage_select_crontask.png" /></li>
+<li>Search on <code>MTBF</code> and click on the <code>MTBF crontask</code>.
+<img alt="change_asset_status" src="../img/search_mtbf_crontask.png" /></li>
+<li>Review the  <code>crontask parameters</code>  to see if the value would descope your asset from being calculated.
+<img alt="change_asset_status" src="../img/mtbf_cron_task.png" /></li>
+<li>Remove or correct any filters that my descope your asset from being included in the MTBF score calculation task.
+and click the <code>save</code> button to save the <code>crontask</code> settings.</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>Congratulations.  You now have completed the MAS v8.11 Health and Predict Demo setup lab and are ready to demo.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_script/" class="btn btn-neutral float-right" title="Health and Predict Overview Task Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_script/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

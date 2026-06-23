@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/user_guide/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>RPE User Guide - Monitor Live Demo Asset Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "RPE User Guide";
+        var mkdocs_page_input_path = "user_guide.md";
+        var mkdocs_page_url = "/maximo-labs/user_guide/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Live Demo Asset Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Live Demo Asset Lab</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">RPE User Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-understand-the-rpe-measurements">1. Understand the RPE measurements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-understand-the-rpe-sensehat-led-output">2. Understand the RPE SenseHAT LED output</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#connection-status">Connection Status</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#all-mqtt-connections-are-connected">All mqtt connections are connected</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#all-mqtt-connections-are-trying-to-connect">All mqtt connections are trying to connect</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#at-least-one-but-not-all-connections-are-connected">At least one but not all connections are connected</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#waiting-for-connecting-status">Waiting for connecting status</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#day-of-week-including-operation-status">Day of week including operation status</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#rpe-is-in-working-hour-on-a-tuesday">RPE is in working hour on a Tuesday</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rpe-is-in-idle-mode-on-a-saturday">RPE is in idle mode on a Saturday</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-four-bars">The four bars</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-1">Example 1</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#example-2">Example 2</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-operate-the-rpe-using-the-sensehat-joystick">3. Operate the RPE using the SenseHAT joystick</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#overview_1">Overview</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#down-click">Down Click</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#up-click">Up Click</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#enter-click">Enter Click</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hold-left">Hold Left</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-use-the-rpe-local-dashboard">4. Use the RPE local dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#overview_2">Overview</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#rp-engine-idle-example">RP Engine – Idle Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rp-engine-load-example">RP Engine – Load Example</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rp-environment">RP Environment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rpe-control">RPE Control</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">1. Create Monitor devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prepare_pi/">2. Prepare Rasperry Pi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../convert_pi/">3. Convert Pi to RPE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify_rpe/">4. Verify RPE is working</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Live Demo Asset Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Monitor Live Demo Asset Lab</li>
+      <li class="breadcrumb-item active">RPE User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="rpe-user-guide">RPE User Guide</h1>
+<p>This user guide will describe how to use and operate the RP Engine controller (RPE) once an RPE have been created following the exercises of this lab.</p>
+<p>Hardware requirements are located here: <a href="../prereqs/#Hardware">Hardware pre-requisites</a></p>
+<p>You can use this user guide to:</br>
+►   Understand the RPE measurements</br>
+►   Understand the RPE SenseHAT LED output</br>
+►   Operate the RPE using the SenseHAT joystick</br>
+►   Use the RPE local dashboard</br></p>
+<p></br></p>
+<h2 id="1-understand-the-rpe-measurements">1. Understand the RPE measurements</h2>
+<p>The three devices (CPU, OSC, and ENV) in your RPE asset will submit its measured data on a regular basis to Maximo Monitor. </p>
+<p>The last exercise in this lab ended with a screen shot of the data being delivered for the CPU device into the IoT Tool:</br>
+<img alt="IoT RPE data" src="../img/user_guide_01.png" /></p>
+<p>The properties are abbreviations of different measurements.</p>
+<p>The Central Processing Unit (CPU) Device:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cl</td>
+<td>Percentage</td>
+<td>CPU Load</td>
+</tr>
+<tr>
+<td>ct</td>
+<td>C</td>
+<td>CPU Temperature</td>
+</tr>
+<tr>
+<td>du</td>
+<td>Percentage</td>
+<td>Disk Usage of the SD card in the Pi</td>
+</tr>
+<tr>
+<td>mu</td>
+<td>Percentage</td>
+<td>Memory Usage of the Pi</td>
+</tr>
+</tbody>
+</table>
+<p>The Oscillator (OSC) device:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ov</td>
+<td>Volt</td>
+<td>Oscillator Voltage</td>
+</tr>
+<tr>
+<td>ot</td>
+<td>Celcius</td>
+<td>Oscillator Temperature</td>
+</tr>
+<tr>
+<td>of</td>
+<td>MHz</td>
+<td>Oscillator Frequency</td>
+</tr>
+</tbody>
+</table>
+<p>The Environment (ENV) device:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Unit</th>
+<th>Description ç</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eh</td>
+<td>Percentage</td>
+<td>Environment relativ Humidity measured by the SenseHat</td>
+</tr>
+<tr>
+<td>ep</td>
+<td>millibar</td>
+<td>Environment atmospheric Pressure measured by the SenseHat</td>
+</tr>
+<tr>
+<td>et</td>
+<td>Celcius</td>
+<td>Environment Temperature measured by the SenseHat</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<h2 id="2-understand-the-rpe-sensehat-led-output">2. Understand the RPE SenseHAT LED output</h2>
+<h3 id="overview">Overview</h3>
+<p>You should look at the RPE SenseHAT from this angle, which means the power chord and/or the HDMI cable is pointing away from you:</p>
+<p><img alt="Pi Overview" src="../img/user_guide_02.png" /></p>
+<p>The display consists of three areas:</p>
+<ul>
+<li>Connection status of the mqtt connections</li>
+<li>Day of week including operation status: Running / Idle</li>
+<li>Four bars representing selected measurements</li>
+</ul>
+<p><img alt="Pi Overview" src="../img/user_guide_03.png" /></p>
+<p></br></p>
+<h3 id="connection-status">Connection Status</h3>
+<p>This single LED at the left in the lower row is telling you the connection status to the Maximo Monitor instance.</p>
+<h5 id="all-mqtt-connections-are-connected">All mqtt connections are connected</h5>
+<p><img alt="Pi Connection state" src="../img/user_guide_04.png" /></p>
+<p>All devices are connected. It depends on knowing how many device connections it must look after as described in <a href="../convert_pi/#3-modify-the-mqtt-connections-to-your-need">exercise 3.3</a>.</p>
+<h5 id="all-mqtt-connections-are-trying-to-connect">All mqtt connections are trying to connect</h5>
+<p><img alt="Pi Connection state" src="../img/user_guide_05.png" /></p>
+<p>All connections are either <code>disconnected</code> or <code>connecting</code> trying to establish a connection for all devices. This might be caused by lack of internet connectivity for the RPE.</p>
+<h5 id="at-least-one-but-not-all-connections-are-connected">At least one but not all connections are connected</h5>
+<p><img alt="Pi Connection state" src="../img/user_guide_06.png" /></p>
+<p>This can be caused by faulty credentials in one or more <code>mqtt out</code> nodes, but not in all of them.</p>
+<h5 id="waiting-for-connecting-status">Waiting for connecting status</h5>
+<p><img alt="Pi Connection state" src="../img/user_guide_07.png" /></p>
+<p>This may be caused by a mismatch between the number of connections defined and the number of <code>mqtt out</code> nodes the status node are listening to - as described in <a href="../convert_pi/#3-modify-the-mqtt-connections-to-your-need">exercise 3.3</a>.</p>
+<h3 id="day-of-week-including-operation-status">Day of week including operation status</h3>
+<p>The seven LED's to the right in the lower row each represents a day in the week, starting with Monday.</br>
+<span style="color:green"><strong>Green</strong></span> means the RPE is running. The RPE will initiate a 5 minutes run under load every 0, 15, 30, 45 minutes past the top of the hour in the period: 8 am to 6 pm CET Monday to Friday. It will measure and submit data every 10 seconds while being in the running mode.</br>
+<span style="color:red"><strong>Red</strong></span> means the RPE is idle, meaning outside of working hours or in the weekend. It will not run any loads and will only measure and send every 20 minutes.</p>
+<h5 id="rpe-is-in-working-hour-on-a-tuesday">RPE is in working hour on a Tuesday</h5>
+<p><img alt="Pi Connection state" src="../img/user_guide_04.png" /></p>
+<p>It is Tuesday between 8am and 6pm CET and all connections are up and running.</p>
+<h5 id="rpe-is-in-idle-mode-on-a-saturday">RPE is in idle mode on a Saturday</h5>
+<p><img alt="Pi Connection state" src="../img/user_guide_08.png" /></p>
+<p>It is Saturday at any time as it is weekend ;-)</p>
+<h3 id="the-four-bars">The four bars</h3>
+<p>The four bars represent the following four measurements:</p>
+<ol>
+<li>cl: CPU Load</li>
+<li>ct: CPU Temperature</li>
+<li>ot: Oscillator Temperature</li>
+<li>et: Environment Temperature (from the SenseHat)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Meaning value in % or C is within</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RED</td>
+<td>X &gt; 80</td>
+</tr>
+<tr>
+<td>YELLOW</td>
+<td>60 &gt;= X &lt;80</td>
+</tr>
+<tr>
+<td>GREEN</td>
+<td>40 &gt;= X &lt;60</td>
+</tr>
+<tr>
+<td>GREEN</td>
+<td>20 &gt;= X &lt;40</td>
+</tr>
+<tr>
+<td>GREEN</td>
+<td>X &lt;20</td>
+</tr>
+</tbody>
+</table>
+<h5 id="example-1">Example 1</h5>
+<p><img alt="Pi 4 bar state" src="../img/user_guide_02.png" /></p>
+<p>It is Wednesday between 8am and 6pm CET and all connections are up and running.
+The CPU Load is low, hence the temperatures are also relatively low.</p>
+<h5 id="example-2">Example 2</h5>
+<p><img alt="Pi 4 bar state" src="../img/user_guide_09.png" /></p>
+<p>It is Wednesday between 8am and 6pm CET and all connections are up and running.</br>
+The CPU Load is high between 60 and 80%.</br>
+The CPU Temperature is between 60 and 80 C.</br>
+The Oscillator Temperature is above 80 C.</br>
+The Env, Temperature is between 20 and 40 C.</br></p>
+<p></br></p>
+<h2 id="3-operate-the-rpe-using-the-sensehat-joystick">3. Operate the RPE using the SenseHAT joystick</h2>
+<h3 id="overview_1">Overview</h3>
+<p>This section will explain the options the SenseHAT joystick delivers to operate the RPE. You should look at it from this angle, which means the power chord and/or the HDMI cable is pointing away from you:</br>
+<img alt="Pi Overview" src="../img/user_guide_02.png" /></p>
+<p>The joystick currently has 4 actions available:</p>
+<ul>
+<li>Down click</li>
+<li>Up click</li>
+<li>Enter click</li>
+<li>Hold to the left</li>
+</ul>
+<p><img alt="Pi Joystick" src="../img/user_guide_10.png" /></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please be patient when using the joystick – it might take up to 20 seconds before you see the response on the SenseHAT LED Matrix.</p>
+</div>
+<h5 id="down-click">Down Click</h5>
+<p>The down click shows scrolling text about network information changing between: </p>
+<ul>
+<li>IP Address in blue</li>
+<li>WiFi SSID in yellow</li>
+<li>MAC Address in green</li>
+</ul>
+<h5 id="up-click">Up Click</h5>
+<p>The up click shows scrolling text about RPE information changing between: </p>
+<ul>
+<li>The RPE ID in blue</li>
+<li>Software version of the Node-Red script in yellow</li>
+<li>Hardware version of the Raspberry Pi in green</li>
+</ul>
+<h5 id="enter-click">Enter Click</h5>
+<p>Clicking on the enter button toggles the LED display off and on.</p>
+<h5 id="hold-left">Hold Left</h5>
+<p>Holding the joystick left during some seconds will initiate an immediate SHUTDOWN of the RPE.
+This is in fact the best way to close down a Raspberry Pi minimizing the risk of damaging the SD card.</p>
+<p><span style="color:red"> <strong>Handle with care!!</strong> </span></p>
+<p></br></p>
+<h2 id="4-use-the-rpe-local-dashboard">4. Use the RPE local dashboard</h2>
+<h3 id="overview_2">Overview</h3>
+<p>The RPE have a local dashboard where you can see the measurements and some additional information.
+They are accessible on <code>http://&lt;the RPE IP Address&gt;:1880/ui</code>.</br>
+The following three dashboards are available:</p>
+<p><img alt="RPE Dashboard Menu" src="../img/user_guide_11.png" /></p>
+<ol>
+<li>RP Engine – Shows some Rasperry Pi measurements (CPU and OSC values)</li>
+<li>RP Environment – Shows some SenseHAT measurements</li>
+<li>RPE Control – shows some RPE information</li>
+</ol>
+<h5 id="rp-engine-idle-example">RP Engine – Idle Example</h5>
+<p><img alt="RPE Dashboard Idle" src="../img/user_guide_12.png" />
+All measurements are within normal Idle mode.</p>
+<h5 id="rp-engine-load-example">RP Engine – Load Example</h5>
+<p><img alt="RPE Dashboard Load" src="../img/user_guide_13.png" />
+All measurements are either high or very high when running under Load mode.</p>
+<h5 id="rp-environment">RP Environment</h5>
+<p><img alt="RPE Dashboard Environment" src="../img/user_guide_14.png" />
+These measurements are done in the SenseHat and covers: </p>
+<ol>
+<li>Temperature (et)</li>
+<li>Relative Humidity (eh)</li>
+<li>Atmospheric Pressure (ep)</li>
+</ol>
+<h5 id="rpe-control">RPE Control</h5>
+<p><img alt="RPE Dashboard Control" src="../img/user_guide_15.png" />
+Information about the RPE software version and the Raspberry Pi hardware is available.</br>
+Two buttons are available to either Reboot or shutdown the RPE.</p>
+<p><span style="color:red"><strong>Handle with care!!</strong></span></p>
+<p></br>
+</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_devices/" class="btn btn-neutral float-right" title="1. Create Monitor devices">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_devices/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

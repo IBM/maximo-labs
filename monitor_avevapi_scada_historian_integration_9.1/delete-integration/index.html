@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jignesh Prajapati" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/delete-integration/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>5. Delete Aveva PI Scada Historian Integration - Monitor Aveva PI Scada Historian Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "5. Delete Aveva PI Scada Historian Integration";
+        var mkdocs_page_input_path = "delete-integration.md";
+        var mkdocs_page_url = "/maximo-labs/delete-integration/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Aveva PI Scada Historian Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Aveva PI Scada Historian Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../add-integration/">1. Configure Aveva PI Scada Historian Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify-deploy-docker/">2. Verify and Deploy docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../devicetype-device-data-monitor/">3. Device Type and devices data in Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit-integration/">4. Update Aveva PI Scada Historian Integration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">5. Delete Aveva PI Scada Historian Integration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#delete-aveva-pi-scada-historian-integration_1">Delete Aveva PI Scada Historian integration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reset-api-key/">6. Reset API Key</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Aveva PI Scada Historian Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">5. Delete Aveva PI Scada Historian Integration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="delete-aveva-pi-scada-historian-integration">Delete Aveva PI Scada Historian Integration</h1>
+<p>In this Exercise you will learn how to delete existing Aveva PI Scada Historian integration.</p>
+<h2 id="delete-aveva-pi-scada-historian-integration_1">Delete Aveva PI Scada Historian integration</h2>
+<p><a name="summary"></a></p>
+<ol>
+<li>Open <code>Maximo Application Suite</code> and select <code>Monitor Application</code>. 
+<img alt="setup assets" src="../img/mas_home.png" style="height:500px;width:900px" /></li>
+<li>Open <code>Monitor</code> tab
+<img alt="setup assets" src="../img/monitor_home.png" style="height:500px;width:900px" /></li>
+<li>Navigate to the <code>Integrations</code> menu tab
+<img alt="setup assets" src="../img/integrations-menu.png" style="height:350px;width:140px" /></li>
+<li>Select the integration that needs to be deleted from the list.</li>
+<li>Click on <code>Delete</code>
+<img alt="setup assets" src="../img/delete-integration.png" style="height:400px;width:900px" />
+<img alt="setup assets" src="../img/delete-integration-confirmation.png" style="height:300px;width:500px" /></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Deleting the Aveva PI Scada Historian integration, only deletes the integration but Device Types and Devices will remains in Monitor.</p>
+</div>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>Lets next see how to use Reset API Key.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../edit-integration/" class="btn btn-neutral float-left" title="4. Update Aveva PI Scada Historian Integration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../reset-api-key/" class="btn btn-neutral float-right" title="6. Reset API Key">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../edit-integration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../reset-api-key/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

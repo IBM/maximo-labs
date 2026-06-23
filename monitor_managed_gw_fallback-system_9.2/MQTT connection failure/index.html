@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Maximo Labs Team" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/MQTT%20connection%20failure/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. MQTT Connection failure - Monitor Managed Gateway Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. MQTT Connection failure";
+        var mkdocs_page_input_path = "MQTT connection failure.md";
+        var mkdocs_page_url = "/maximo-labs/MQTT%20connection%20failure/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Managed Gateway Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Managed GW Fallback</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../fallback%20hierarchy/">1. Understanding the Edge Data Collector fallback hierarchy</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. MQTT Connection failure</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-configure-and-deploy-managed-gateway">1. Configure and Deploy Managed Gateway</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-verify-mqtt-data-flow">2. Verify MQTT Data Flow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-verify-mqtt-failure-detection">3. Verify MQTT Failure Detection</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../COS%20connection%20failure/">3. COS connection failure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PV%20Fallback%20and%20Primary%20Publisher%20Recovery/">4  PV Fallback and Primary Publisher Recovery</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Managed Gateway Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. MQTT Connection failure</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how Manage gateway handles an MQTT connection failure and automatically switches data publishing to the COS fallback mechanism , as demonstrated in <strong>Scenario 1</strong></p>
+<hr />
+<p><em>Before you begin:</em></p>
+<p>This Exercise requires that you have:</p>
+<ol>
+<li>completed the previous exercise</li>
+<li>created Managed Gateway</li>
+<li>added the required device and configured metrics</li>
+</ol>
+<hr />
+<h2 id="1-configure-and-deploy-managed-gateway">1. Configure and Deploy Managed Gateway</h2>
+<p>After configuring the device in <strong>Manage Gateway</strong>, the Docker command is generated automatically.</p>
+<p>Navigate to:</p>
+<p><strong>Maximo Monitor → Gateway →  View deployment instructions</strong></p>
+<p><img alt="Docker_command" src="../img/docker_command.png" /></br></br></p>
+<p>Open a terminal on Mac or Linux, or the Command Prompt on Windows, navigate to the desired location, paste the Docker command from the clipboard, and press Enter to execute it.</p>
+<hr />
+<h2 id="2-verify-mqtt-data-flow">2. Verify MQTT Data Flow</h2>
+<p>Verify the following details based on the device configuration:</p>
+<ul>
+<li>Device connection status is active</li>
+<li>Device is connected using <strong>Modbus protocol</strong></li>
+<li>Device endpoint is configured with the IP address and port: '127.0.0.1:10502'</li>
+<li>Data publishing is active through MQTT connection</li>
+</ul>
+<p>Verify the following details in the terminal:</p>
+<ul>
+<li>IOT/MQTT is configured as the primary publisher</li>
+<li>CSV publisher is configured as the fallback publisher</li>
+<li>COS is configured as the fallback storage</li>
+<li>PV available</li>
+</ul>
+<p><img alt="MQTT Data Flow" src="../img/mqtt_data_flow_.png" /></br></br></p>
+<hr />
+<h2 id="3-verify-mqtt-failure-detection">3. Verify MQTT Failure Detection</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>MQTT Failure Scenario:</strong></p>
+<p>To evaluate the fallback behavior of the Managed Gateway, disable the internet.</p>
+<p>The Managed Gateway detects the loss of connectivity and automatically starts the fallback mechanism within the within the designated timeout period.</p>
+</div>
+<p><img alt="MQTT Connection Failure" src="../img/mqtt_failure.png" /></br></br></p>
+<p>When a connection failure occurs, Managed gateway monitors the publisher status and automatically activates the fallback mechanism based on the configured publisher type.</p>
+<p>The behavior of failure detection is determined by the configured publishing scenarios.</p>
+<ul>
+<li>The system detects MQTT connection failure in 4 minutes approximately .</li>
+<li>Failure detection includes:<ul>
+<li>2-minute connection timeout</li>
+<li>2-minute static delay</li>
+<li>Connection status checks</li>
+</ul>
+</li>
+</ul>
+<p>After failure detection completes, Managed gateway switches to the configured fallback publisher.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>During the MQTT failure detection period (approximately 4 minutes), data loss may occur. Since MQTT is a real-time publishing protocol and does not queue messages when the connection is unavailable, data collected before the fallback mechanism cannot be recovered.</p>
+<p>Once the fallback publisher is activated, data collection continues without interruption. New data is stored in CSV format. After the system remains in fallback mode for 60 minutes and automatically attempts to reconnect to the primary publisher.</p>
+</div>
+<p><img alt="MQTT Failure Detection" src="../img/mqtt_failure_detection.png" /></br></br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Managed Gateway detects the internet connection is lost and switches to COS, if COS also fails, it transitions to PV fallback.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../fallback%20hierarchy/" class="btn btn-neutral float-left" title="1. Understanding the Edge Data Collector fallback hierarchy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../COS%20connection%20failure/" class="btn btn-neutral float-right" title="3. COS connection failure">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../fallback%20hierarchy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../COS%20connection%20failure/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

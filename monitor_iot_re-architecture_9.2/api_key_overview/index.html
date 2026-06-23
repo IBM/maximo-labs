@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Pradipkumar Jinjala" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/api_key_overview/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>API Key Overview - Monitor IoTP Re-Architecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "API Key Overview";
+        var mkdocs_page_input_path = "api_key_overview.md";
+        var mkdocs_page_url = "/maximo-labs/api_key_overview/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor IoTP Re-Architecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor IoTP Re-Architecture Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Key Management</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">API Key Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-are-iotp-api-keys">What are IoTP API Keys?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-youll-learn">What You'll Learn</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lab-exercises">Lab Exercises</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-create-api-key">1. Create API Key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-edit-api-key">2. Edit API Key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-delete-api-key">3. Delete API Key</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#expected-outcomes">Expected Outcomes</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_api_key/">1. Generate API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_api_key/">2. Edit / Update API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_api_key/">3. Delete API Key</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IoT Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../iot_security_overview/">IoT Security Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_token/">4. TLS With Token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_cert_or_token/">5. TLS With Client Certificate or Token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_cert_and_token/">6. TLS With Client Certificate and Token</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor IoTP Re-Architecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">API Key Management</li>
+      <li class="breadcrumb-item active">API Key Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="maximo-monitor-iotp-api-key">Maximo Monitor IoTP API Key</h1>
+<p>API Keys in Maximo Monitor provide token-based authentication for IoT devices to securely send data to the platform.</p>
+<h2 id="what-are-iotp-api-keys">What are IoTP API Keys?</h2>
+<p>API Keys are authentication tokens that enable secure device-to-platform communication. They serve as credentials that devices use to prove their identity when sending data to Maximo Monitor.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li><strong>Secure Device Authentication</strong>: Token-based authentication for IoT devices</li>
+<li><strong>Data Ingestion Control</strong>: Manage which devices can send data to Monitor</li>
+<li><strong>Access Management</strong>: Create, update, and revoke API keys as needed</li>
+</ul>
+<h2 id="what-youll-learn">What You'll Learn</h2>
+<p>In the API Key exercises, you will:</p>
+<ul>
+<li><strong>Generate API Key</strong>: Create new API keys for device authentication and understand the key generation process</li>
+<li><strong>Edit/Update API Key</strong>: Modify existing API key configurations and manage key properties</li>
+<li><strong>Delete API Key</strong>: Remove API keys when no longer needed and understand security implications</li>
+</ul>
+<p><strong>Practical Skills:</strong>
+- How to create API keys
+- When to rotate or revoke API keys
+- How API keys integrate with device authentication</p>
+<h2 id="lab-exercises">Lab Exercises</h2>
+<h3 id="1-create-api-key">1. <a href="../create_api_key/">Create API Key</a></h3>
+<p>Learn how to generate new API keys for device authentication.</p>
+<h3 id="2-edit-api-key">2. <a href="../edit_api_key/">Edit API Key</a></h3>
+<p>Modify and update existing API key configurations.</p>
+<h3 id="3-delete-api-key">3. <a href="../delete_api_key/">Delete API Key</a></h3>
+<p>Remove API keys and understand the security implications.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting these exercises, ensure you have:</p>
+<ul>
+<li>Access to Maximo Monitor 9.2</li>
+<li>Basic understanding of IoT device connectivity</li>
+<li>A device type configured in Monitor (for testing)</li>
+</ul>
+<h2 id="expected-outcomes">Expected Outcomes</h2>
+<p>By completing these exercises, you will be able to:</p>
+<ul>
+<li>Generate and manage API keys for IoT device authentication</li>
+<li>Apply API key best practices to your IoT deployments</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Expected time needed to complete these exercises: <strong>20-30 minutes</strong></p>
+</div>
+<hr />
+<p><strong>Updated: 2026-06-18</strong></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_api_key/" class="btn btn-neutral float-right" title="1. Generate API Key">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_api_key/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

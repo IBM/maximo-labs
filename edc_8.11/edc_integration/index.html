@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/edc_integration/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Create EDC Integration - Edge Data Collector Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Create EDC Integration";
+        var mkdocs_page_input_path = "edc_integration.md";
+        var mkdocs_page_url = "/maximo-labs/edc_integration/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Edge Data Collector Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Edge Data Collector Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">1. Setup Simulator Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_devices/">2. Create Monitor Devices</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Create EDC Integration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-new-edge-data-collector-edc-integration-in-monitor">Create a new Edge Data Collector (EDC) Integration in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-an-endpoint">Add an endpoint</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-devices">Add devices</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_metrics/">5. Create Monitor metric</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Edge Data Collector Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Create EDC Integration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Create an Edge Data Collector (EDC) Integration in Monitor</li>
+<li>Add an endpoint to the Integration</li>
+<li>Add devices to the Integration</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<p>A good starting point is to get the IP address of the industrial devices you need to collect the data from - in this case the machine the Modbus simulator is running on.
+The way to get it depends on the OS:</p>
+<ul>
+<li>Windows: Open a CMD window and execute <code>ipconfig</code> </li>
+<li>MacOS: Open a terminal and execute <code>ifconfig -en0</code></li>
+<li>Linux: Open a terminal and execute <code>hostname -I</code></li>
+</ul>
+<p>I was running the simulator on my local network on a machine with the IP address: 192.168.1.42.</p>
+<hr />
+<h2 id="create-a-new-edge-data-collector-edc-integration-in-monitor">Create a new Edge Data Collector (EDC) Integration in Monitor</h2>
+<p>Navigate to the Configure devices in Edge Data Collector from the Monitor Home page:
+<img alt="EDC Tile" src="../img/edc_integration_01.png" /></br></br></p>
+<p>Click on <code>Add integration</code>:<br />
+<img alt="Add integration" src="../img/edc_integration_02.png" /></br></br></p>
+<p>Give it a name:
+<img alt="Integration name" src="../img/edc_integration_03.png" /></br></br></p>
+<h2 id="add-an-endpoint">Add an endpoint</h2>
+<p>The endpoint of the Integration configuration is where the gateway connection credentials we defined previously has to be added. This is where the EDC edge will send the unified data to once collected from the industrial devices.</br></br>
+Click on <code>Add endpoint</code> and the select <code>Maximo</code>:
+<img alt="Add endpoint" src="../img/edc_integration_04.png" /></br></br></p>
+<p>Add the credentials you saved in the previous exercise and click <code>Finish</code>:
+<img alt="Enter credentials" src="../img/edc_integration_05.png" /></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The URL is defined by <code>&lt;MAS tenant id&gt;.messaging.iot.&lt;MAS domain&gt;</code></br></p>
+</div>
+<p></br></br></p>
+<h2 id="add-devices">Add devices</h2>
+<p>EDC provides a vast library of pre-configured connectors for a range of industrial devices.</br></br></p>
+<p>It is time to add the Lenze i550 devices. Click on <code>Add device</code>;
+<img alt="Add device" src="../img/edc_integration_06.png" /></br></br></p>
+<p>Search for Lenze in the manufacurer drop-down and select it:
+<img alt="Search Lenze" src="../img/edc_integration_07.png" /></br></br></p>
+<p>Select the i550 product and click <code>Next</code>:
+<img alt="Select i550" src="../img/edc_integration_08.png" /></br></br></p>
+<p>Give the device a name. This will become the Device ID in Monitor. Select Modbus TCP. Enter the IP Address where the Modbus simulator is running including the port number after the colon:</br>
+<img alt="Configure protocol" src="../img/edc_integration_09.png" /></br></br></p>
+<p>Select the eight first tags. Change the Base Frequency to 60000 ms (1 minute), which will change all the Frequency fields of the selected tags. Click <code>Finish</code>:
+<img alt="Select data points" src="../img/edc_integration_10.png" /></br></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Standardized metrics use labels, units, and values that are unified to the standard Edge Data Collector device type.</br>
+Synthesized metrics are created by using other metrics. Some standardized metrics are synthesized, but the metrics are listed as only standardized metrics.</p>
+</div>
+<p>Once the first Lenze device is created it is easy to duplicate it for the second one:
+<img alt="Duplicate device" src="../img/edc_integration_11.png" /></br></br></p>
+<p>Enter the Device name and the IP address with port number of the other simulator. Click <code>Next</code>:
+<img alt="Configure protocol" src="../img/edc_integration_12.png" /></br></br></p>
+<p>The data point settings are cloned automatically. Click <code>Finish</code>.</br>
+A red box in the upper right corner indicates that the changes you have made to the integrationn have not yet been deployed. Click on <code>Save and deploy</code>:
+<img alt="Save" src="../img/edc_integration_13.png" /></br></br></p>
+<p>The Deployment guide appears:
+<img alt="Deployment Guide" src="../img/edc_integration_14.png" /></br></br></p>
+<hr />
+<p>Congratulations you have successfully created an Edge Data Collector Integration.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../monitor_devices/" class="btn btn-neutral float-left" title="2. Create Monitor Devices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../deploy/" class="btn btn-neutral float-right" title="4. Deploy and verify integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../monitor_devices/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../deploy/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

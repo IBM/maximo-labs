@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Saravanan Krishnamoorthy" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/add_device_using_CSV/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Add device to Device library - Monitor Managed Gateway Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Add device to Device library";
+        var mkdocs_page_input_path = "add_device_using_CSV.md";
+        var mkdocs_page_url = "/maximo-labs/add_device_using_CSV/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Managed Gateway Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Managed GW Modbus Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_simulator/">1. Setup Simulator Environment</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Add device to Device library</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_gateway_with_device/">3. Create a Managed Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify data inflow</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Managed Gateway Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Add device to Device library</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to add a custom Modbus device to the Device library.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">New in MAS 9.1</p>
+<p>You can add custom devices, such as PLCs or OPC-UA servers, or industrial devices which supports Modbus, BACnet and Json protocols that are not available in the Maximo Monitor Device library. Later the same device can be used by anyone who is creating a device on the Devices page. </br></p>
+</div>
+<p>Assuming the Lenze i550 VFD device is not in the pre-configured library, you can add this device to the Device library by uploading the CSV file in given format.</br></p>
+<ul>
+<li>
+<p>Navigate to the Device library page:</br>
+<img alt="Navigate to Device library" src="../img/device_library_01.png" /></br></p>
+</li>
+<li>
+<p>Modbus devices can be added using device settings in CSV file format .</br>
+Click <code>Add device to library</code> and select <code>Import device settings</code> option:</br>
+<img alt="Import device settings" src="../img/device_library_02.png" /></br></p>
+</li>
+<li>
+<p>Select protocol as <code>Modbus</code> </br>
+<img alt="Import device settings" src="../img/device_library_03.png" /></br></p>
+</li>
+<li>
+<p>Enter the device details and click <code>Next</code>:</br>
+<img alt="Import device settings" src="../img/device_library_04.png" /></br></p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>New manufacutrer can be added if you couldn't find it in the option.</li>
+<li>XX in the Device name should be your initials in case other people are following this lab in the same Maximo Application Suite environment.</li>
+</ul>
+</div>
+<ul>
+<li>
+<p>Download <code>example.xlsx file</code></br>
+<img alt="Import device settings" src="../img/device_library_05.png" /></br></p>
+</li>
+<li>
+<p>Open Excel file to fill the data points in <code>metrics</code> sheet, Each column in the template, offering context on its purpose and instructions for completing the corresponding cell values. It is important to note that each row in the CSV represents a single Modbus datapoint.
+<img alt="Import device settings" src="../img/device_library_06.png" /></br></p>
+</li>
+<li>
+<p>Modbus datapoint details can be found in the Manufacturer user manual/Communication manual. Example - For Lenze i550 the Modbus registers details are found in this <a href="https://www.lenze.com/product-information/PCS04-0000-0107-0/?contextType=PcsIdList&amp;activeService=docFinder&amp;documentId=OBJ_DOKU-0000000019-EN-015" target="_blank">Commissioning Manual</a> [Page - 418]
+<img alt="Import device settings" src="../img/device_library_07.png" /></br>
+<img alt="Import device settings" src="../img/device_library_08.png" /></br>
+<img alt="Import device settings" src="../img/device_library_09.png" /></br></p>
+</li>
+<li>
+<p>Fill the <code>Metrics</code> sheet using the modbus details:
+<img alt="Import device settings" src="../img/device_library_10.png" /></br></p>
+</li>
+</ul>
+<h1 id="examples-of-input-for-csv-template">Examples of input for csv template</h1>
+<table>
+<thead>
+<tr>
+<th>Column_Name&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+<th>Description&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><i>Register</i></td>
+<td>Register column expects the value to be always in decimal (base-10)and not in Hexadecimal. Actual Torque - <code>42013</code></td>
+</tr>
+<tr>
+<td><i>Name</i></td>
+<td>The name of the data point should be added in this column. The value will be used in Monitor as the related metric name. <code>Actual Torque</code></td>
+</tr>
+<tr>
+<td><i>Type</i></td>
+<td>Supported formats <code>uint</code>,<code>sint</code>,<code>float</code>,<code>string</code> and <code>bool</code>. The data type of a datapoint is determined by the physical property it represents and the range of values expected. For instance, if a value like frequency, Torque never goes negative, it's categorized as an unsigned integer (uint).</br> Manuals may explicitly label it as "uint". If the data can include negative values, it's treated as a signed integer (int or sint), and is often directly mentioned in the documentation. Floating point numbers (float) are typically specified as such in the manual and are used for properties requiring decimal precision.</br> Strings are made up of characters packed in 16-bit unsigned integers, and may be referred to as "ascii" or "char" in device documentation.</br> Coil addresses represent Boolean values, storing simple binary data (0 or 1).</td>
+</tr>
+<tr>
+<td><i>Length</i></td>
+<td>1 byte = 8 bits </br> 2 byte = 16 bits = 1 word (42013) </br> 4 byte = 32 bits = 2 words (42025 + 42026) </br> 12 byte = 96 bits = 6 words (30008 to 30013)</td>
+</tr>
+<tr>
+<td><i>Unit</i></td>
+<td>This column indicates the unit in which the data is reported for a specific datapoint. This is an optional parameter as not all datapoints require a unit.</td>
+</tr>
+<tr>
+<td><i>Multiplier</i></td>
+<td>Used to get the exact values from the raw values </br> In the example for Acutal torque it is x.x % as defined, so the multiplier is <code>0.1</code>. Not applicable for float, string, bool data types.</td>
+</tr>
+<tr>
+<td><i>Function Code[FC]</i></td>
+<td>Function codes are usually decided based on the starting number of register number (old Modicon notation). In the example, 4xxxx and 3xxxx registers mean Holding registers[FC3] and Input registers[FC4] respectively.</td>
+</tr>
+<tr>
+<td><i>Register_Offset</i></td>
+<td>In the example, register offset is required the address 0 is used in the frame.</br> when register 40001 is read. The register offset is the amount that needs to be added to the Register address to obtain the real Modbus Decimal address.</br> Since the register is in the FC format (i.e. 42013), we have added -40001 offset. If the register address was 4097, offset would need to be just -1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>For filling the <code>metrics</code> sheet, please refer <code>Sample Metrics Format</code>sheet.
+<img alt="Import device settings" src="../img/device_library_11.png" /></br></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once the required datapoint details is filled to the Metrics sheet, kindly save the Excel file <code>Metrics</code> as CSV format for uploading. </br></p>
+</div>
+<p><img alt="Import device settings" src="../img/device_library_11_1.png" /></br></p>
+<ul>
+<li>
+<p>Upload the CSV file and select <code>Next</code>
+<img alt="Import device settings" src="../img/device_library_12.png" /></br></p>
+</li>
+<li>
+<p>You can see the summary of datapoints, if required you can remove the metrics here. Once done click <code>Finish</code>:</br>
+<img alt="Import device settings" src="../img/device_library_13.png" /></br></p>
+</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you see a <code>Bad Request</code> error while Uploading the CSV file, </br>
+then you might need to check the CSV file for each metrics which you might be missing details or it maybe in a invalid format.</p>
+</div>
+<ul>
+<li>You can see the newly added device in Device library:</br>
+<img alt="Import device settings" src="../img/device_library_14.png" /></li>
+</ul>
+<p>Now the device is ready to use. Enjoy!!! 🤗.</br></p>
+<hr />
+<p>Congratulations you have successfully added a device to the Device library.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup_simulator/" class="btn btn-neutral float-left" title="1. Setup Simulator Environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_gateway_with_device/" class="btn btn-neutral float-right" title="3. Create a Managed Gateway">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup_simulator/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_gateway_with_device/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

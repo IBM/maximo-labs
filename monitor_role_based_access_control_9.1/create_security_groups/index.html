@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jvaneel Dwivedi" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_security_groups/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Create Security Groups - Monitor Role Based Access Control Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Create Security Groups";
+        var mkdocs_page_input_path = "create_security_groups.md";
+        var mkdocs_page_url = "/maximo-labs/create_security_groups/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Role Based Access Control Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor RBAC Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Create Security Groups</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-navigate-to-security-groups">Step 1: Navigate to Security Groups</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-create-a-new-security-group">Step 2: Create a New Security Group</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-assign-permissions">Step 3: Assign Permissions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-of-out-of-the-box-security-groups">Example of Out of the Box Security Groups</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_users/">2. Create Users and Assign Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_access_behavior/">3. User Login and Access Behavior</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Role Based Access Control Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Create Security Groups</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this exercise, you will learn how to:</p>
+<ul>
+<li>Create new Security Groups in Monitor</li>
+<li>Define role-based permissions for users</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This exercise assumes that you have:</p>
+<ol>
+<li>Admin access to Maximo Monitor  </li>
+<li>Completed the RBAC Overview in the <a href="../">Introduction section</a></li>
+</ol>
+<hr />
+<p>Security Groups in Monitor define which pages and functionalities users can access. By creating Security Groups, you can enforce role-based permissions like admin, viewer, or limited dashboard access.</p>
+<hr />
+<h3 id="step-1-navigate-to-security-groups">Step 1: Navigate to Security Groups</h3>
+<ol>
+<li>Login to Monitor with an Admin user</li>
+<li>Go to <strong>Suite → Security → Security Groups</strong></li>
+</ol>
+<p><img alt="Security Groups Navigation" src="../img/security_groups_nav_01.png" /></br>
+<img alt="Security Groups Navigation" src="../img/security_groups_01.png" /></br></p>
+<hr />
+<h3 id="step-2-create-a-new-security-group">Step 2: Create a New Security Group</h3>
+<ol>
+<li>
+<p>Click <strong>Create group</strong> </br> </br>
+<img alt="Security Groups Navigation" src="../img/security_groups_02.png" /></br></p>
+</li>
+<li>
+<p>Enter a name for the group, e.g., <code>DEMO_MONITOR_USERS</code> and Click <strong>Create group</strong> </br>
+<img alt="Security Groups Navigation" src="../img/security_groups_03.png" /></br></p>
+</li>
+<li>
+<p>Provide a brief Group description (optional)</p>
+</li>
+</ol>
+<hr />
+<h3 id="step-3-assign-permissions">Step 3: Assign Permissions</h3>
+<ol>
+<li>Select the features/modules that this group should have access to<br />
+   Example:<br />
+   – Enable Dashboard access<br />
+   – Enable CRUD operations on Dashboard<br />
+   – Disable Setup page access</li>
+<li>
+<p>Save the group once permissions are configured</p>
+</li>
+<li>
+<p>Search for View and All the View Pages Shall Appear. Select all the permissions to enable the Security Group to view and Access Only Dashboard Pages.</p>
+</li>
+</ol>
+<p><img alt="Assign Permissions" src="../img/security_groups_04.png" /></br></p>
+<ul>
+<li>The Assigned permissions can be viewed in Details / Edit Security group section </br></li>
+</ul>
+<p><img alt="Assign Permissions" src="../img/security_groups_05.png" /></br></p>
+<p></br></p>
+<hr />
+<h3 id="example-of-out-of-the-box-security-groups">Example of Out of the Box Security Groups </br></h3>
+<p>MONITOR_ADMIN, MONITOR_USERS &amp; MONITOR_READ_ONLY are out-of-box security groups and customers can change them and also able to create new security groups for their needs.</p>
+<table>
+<thead>
+<tr>
+<th>Group Name</th>
+<th>Purpose</th>
+<th>Access Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MONITOR_ADMIN</td>
+<td>Full Admin Access</td>
+<td>All pages (Dashboard + Setup)</td>
+</tr>
+<tr>
+<td>MONITOR_USERS</td>
+<td>Standard User</td>
+<td>Dashboard only (CRUD allowed)</td>
+</tr>
+<tr>
+<td>MONITOR_READ_ONLY</td>
+<td>Readonly Role</td>
+<td>Dashboard view only (no CRUD)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Congratulations!<br />
+You have successfully created a Security Group. Next, you can proceed to <a href="../create_users/">Create Users and Assign Groups</a></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_users/" class="btn btn-neutral float-right" title="2. Create Users and Assign Groups">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_users/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

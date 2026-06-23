@@ -1,0 +1,4689 @@
+[
+    {
+        "id": "2951b7effc79365b",
+        "type": "tab",
+        "label": "Control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e1e54dabc69f1d73",
+        "type": "tab",
+        "label": "Collect And Send Data",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5c01f085dcb66947",
+        "type": "tab",
+        "label": "SenseHAT",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1ba9ecdc13615029",
+        "type": "tab",
+        "label": "Apply Load",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ef169a4f553187bd",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "64b7570ffbc5ad6b",
+        "type": "group",
+        "z": "2951b7effc79365b",
+        "name": "Initialization",
+        "style": {
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "ebca5eb9b4b6fa63",
+            "d1b602c451d91b3f",
+            "eae492531c4dafd2",
+            "7258574e4fbb7c4c",
+            "952b253616bdc3e5",
+            "914e131f2ae283b4",
+            "6ec34e5a89d341a0",
+            "60b46a815ca64fb1",
+            "d2a70326e2e72bfc"
+        ],
+        "x": 14,
+        "y": 99,
+        "w": 892,
+        "h": 222
+    },
+    {
+        "id": "f3354ec8a74e26a6",
+        "type": "group",
+        "z": "2951b7effc79365b",
+        "name": "!!!   ---   HANDLE WITH CARE   ---    !!!",
+        "style": {
+            "fill": "#d1d1d1",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "d78c72a785c777de",
+            "ad7c8a0206fd53b6",
+            "a290e9fc3a80951c",
+            "a84b625162a8e05e",
+            "7877acdac06f1582",
+            "95986bb76a75b1f9",
+            "6069954fba0a3dd0"
+        ],
+        "x": 14,
+        "y": 351.5,
+        "w": 432,
+        "h": 257
+    },
+    {
+        "id": "c166c63be31a616c",
+        "type": "group",
+        "z": "ef169a4f553187bd",
+        "name": "RPE Control",
+        "style": {
+            "fill": "#ff7f7f",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "23bc52f1dd5562b1",
+            "3dcc72bca8c0e6b5",
+            "63e6d0190cddc82b",
+            "f9440cc23e7b8e76",
+            "8be3e3b467709c3d",
+            "9c4b61a820ea5130",
+            "e1d014fd540e7aea",
+            "678455e1a238c3e1"
+        ],
+        "x": 854,
+        "y": 219,
+        "w": 532,
+        "h": 242
+    },
+    {
+        "id": "0d59f8b1a80503cd",
+        "type": "group",
+        "z": "ef169a4f553187bd",
+        "name": "RPE Engine",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "5003ce4774f9c71a",
+            "0551d431530cb913",
+            "dc857b3b9835fbd8",
+            "2efce66f5a826f3e",
+            "17b408d50477a981",
+            "eb19b0754b1ad77f",
+            "942f20dbf2bf5429",
+            "acb2a740222b6c5f",
+            "a0f9de536d2ce7f9",
+            "3d96998cdedbe218",
+            "bf1ce3e32b511bb0",
+            "5755cd310f917157",
+            "43fa76ab2533fa89",
+            "9c67d25466125c20",
+            "01fdf65d504bfec7"
+        ],
+        "x": 154,
+        "y": 79,
+        "w": 492,
+        "h": 522
+    },
+    {
+        "id": "7aa084990def344f",
+        "type": "group",
+        "z": "ef169a4f553187bd",
+        "name": "RPE Environment",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "050e7e9ed97e1e09",
+            "d61a46fedc282371",
+            "14b145c80498682c",
+            "3d7c21866d3e4ad3",
+            "158f44ae8bd4e8be",
+            "e728703570843eda",
+            "fbedfbf5537f99f0",
+            "71c8a6c328216080",
+            "6ccb96b5f7fa71d1"
+        ],
+        "x": 154,
+        "y": 619,
+        "w": 492,
+        "h": 282
+    },
+    {
+        "id": "4f048d898ba582cf",
+        "type": "group",
+        "z": "ef169a4f553187bd",
+        "name": "Add <hostname> (<version>) to the header",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "264051881213693d",
+            "27fbf1d911a76a2d",
+            "4a9c1d224c39f3d8"
+        ],
+        "x": 854,
+        "y": 79,
+        "w": 432,
+        "h": 122
+    },
+    {
+        "id": "b313d0034f84e52b",
+        "type": "junction",
+        "z": "5c01f085dcb66947",
+        "x": 540,
+        "y": 900,
+        "wires": [
+            [
+                "d1e44506c0e728a8"
+            ]
+        ]
+    },
+    {
+        "id": "7fea466e.f901c8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d1dc2ced772ef384",
+        "type": "ui_tab",
+        "name": "RP Engine",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "79c576528b6aa971",
+        "type": "ui_group",
+        "name": "Gauges",
+        "tab": "d1dc2ced772ef384",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dccd0cde175bd172",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "d1dc2ced772ef384",
+        "order": 2,
+        "disp": false,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "94a6f42267a3723d",
+        "type": "ui_tab",
+        "name": "RPE Control",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "02e305b7494a3c01",
+        "type": "ui_tab",
+        "name": "RP Environment",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d7ef781262ba03c2",
+        "type": "ui_group",
+        "name": "Gauges",
+        "tab": "02e305b7494a3c01",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f501320b4b627325",
+        "type": "ui_group",
+        "name": "Charts",
+        "tab": "02e305b7494a3c01",
+        "order": 2,
+        "disp": false,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "b7898575f20f0298",
+        "type": "ui_group",
+        "name": "Information",
+        "tab": "94a6f42267a3723d",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "e5202e8463d4cbf2",
+        "type": "ui_group",
+        "name": "Actions",
+        "tab": "94a6f42267a3723d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "11f24378fbc4f3c2",
+        "type": "tls-config",
+        "name": "WW Geo",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "74eae28f.f6e6f4",
+        "type": "mqtt-broker",
+        "name": "RPE042-CPU-01",
+        "broker": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
+        "port": "443",
+        "tls": "11f24378fbc4f3c2",
+        "clientid": "d:wwgeo:CPU:RPE042-CPU-01",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5f2e2a3b08e6ab88",
+        "type": "mqtt-broker",
+        "name": "RPE042-OSC-03",
+        "broker": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
+        "port": "443",
+        "tls": "11f24378fbc4f3c2",
+        "clientid": "d:wwgeo:OSC:RPE042-OSC-03",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5a440ff8.4f85e",
+        "type": "mqtt-broker",
+        "name": "RPE042-ENV-17",
+        "broker": "wwgeo.messaging.iot.wwgeomas.gtm-pat.com",
+        "port": "443",
+        "tls": "11f24378fbc4f3c2",
+        "clientid": "d:wwgeo:ENV:RPE042-ENV-17",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d78c72a785c777de",
+        "type": "exec",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Reboot",
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ad7c8a0206fd53b6",
+        "type": "exec",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
+        "command": "sudo shutdown -h now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Shutdown",
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a290e9fc3a80951c",
+        "type": "inject",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
+        "name": "Reboot",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "d78c72a785c777de"
+            ]
+        ]
+    },
+    {
+        "id": "a84b625162a8e05e",
+        "type": "inject",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
+        "name": "Shutdown",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "SHUTDOWN",
+        "payloadType": "str",
+        "x": 120,
+        "y": 520,
+        "wires": [
+            [
+                "6069954fba0a3dd0"
+            ]
+        ]
+    },
+    {
+        "id": "826c4e92140d7d8e",
+        "type": "comment",
+        "z": "2951b7effc79365b",
+        "name": "Local device management and global initialization",
+        "info": "",
+        "x": 210,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7877acdac06f1582",
+        "type": "link in",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
+        "name": "Reboot In",
+        "links": [
+            "63e6d0190cddc82b"
+        ],
+        "x": 165,
+        "y": 440,
+        "wires": [
+            [
+                "d78c72a785c777de"
+            ]
+        ]
+    },
+    {
+        "id": "95986bb76a75b1f9",
+        "type": "link in",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
+        "name": "Shutdown In",
+        "links": [
+            "f9440cc23e7b8e76",
+            "c73e2ce0f92e6469"
+        ],
+        "x": 165,
+        "y": 560,
+        "wires": [
+            [
+                "ad7c8a0206fd53b6"
+            ]
+        ]
+    },
+    {
+        "id": "5a885f07ceb16388",
+        "type": "comment",
+        "z": "2951b7effc79365b",
+        "name": "Created by Jan Ekstrøm - 2024-09-27 - v1.06 (Open to view Version History)",
+        "info": "By jan.ekstrom@dk.ibm.com\n\nv1.06 2024-09-27:  \n- Get the ID (RPE-name) from the Pi's hostname rather than waiting for all MQTT connections to be connected\n\nv1.05 2023-12-04:  \n- Renamed the standard MQTT out nodes to a more generic RPE042-<device>-<number>\n- Filtered the IP address to only contain the IPv4 address (both IPv4 and IPv6 was way too long)\n\nv1.04 2023-01-12:\n- Deleted old mqtt nodes (EUDemo & CSUK18 MAM's) and cleaned up the configurations.\n\nv1.03 2022-12-29:\n- Cleaned up the Collect And Send Data flow and split up the data to three data sets \n  each having it's own MQTT connection to a device in MAS Monitor.\n- Commented out the pre-set environment data to be used only if the SenseHAT is missing\n- Changed Shutdown from Control flow to behave as shutdown via the joystick\n\n\nv1.02 2022-12-28:\n- Added three mqtt out nodes for CPU, OSC and ENV including the configurations.\n- Added \"measurement\" timestamps (evt_timestamp) for each of the three data sets, \n  so they have different timestamps simulating separate individual devices.\n\nv1.01 2022-12-28:\n- Preparing for the RPE on MAS flows, including removing support for External TEMPerHUM sensor \n  and removal of some superflous flows.\n\nv0.45 2022-12-28:\n- Updated version based on several additional flows have been added over the time to test \n  e.g. connectiong to a MAS Monitor instance (both as device and gateway).\n\nv0.44 2020-08-10:\n- Added support for TEMPerHUM USB Temperature & Humidity Sensor as provider of \n  External Temperature and Humidity (xt, xh).\n\nv0.43 2020-06-10:\n- Added the Get Ext data flow to listen to a local Mosquitto broker and receive \n  from an ESP32 board with an attached DHT22 (AM2302) sensor.\n\nv0.42 2020-05-20:\n- Moved the header info creation from dashboard to Collect An Send Data, \n  as a refresh of the UI Dashboard would make it dissapear. \n  Now it will automatically be induced into the header again when data is collected and send.\n- Added the ID name as the first text to be displayed on the SenseHat, when pushing UP.\n\nv0.41 2020-05-14:\n- Added RPE information in the right side of the header on the dashboard, e.g. RPE001 (v0.41)\n\nV0.40 2020-05-13:\n- Added 4 bars on the SenseHAT LEDs to indicate: CPU Load, CPU Temperature, Oscillator Temperature, Environment Temperature from the SenseHAT\n  There are 5 LEDs on each bar: 2\n  < 0 1 green, \n  < 40 2 green, \n  < 60 3green, \n  < 80 3 green + 1 yellow, \n  < 100 3 green + 1 yellow + 1 red\n\nv0.37 2020-05-11:\n- Tidy up some code in function nodes; removed superfluous code and debug nodes.\n- Moved collecting hardware version to the Control tab and stored in a global variable as it will never change.\n- Added Joystick function to show SW and HW versions on the SenseHAT\n- Added SW and HW versions to the RPE Control tab of the dashboard\n\nv0.35 2020-05-10:\n- Added logic for showing the status of the MQTT connections on the LED (0,7)\n\nv0.30 2020-05-07:\n- Added property for RPE software version.\n- Added property for hardware version.\n- Added properties for future eXternal DHT22 sensor: \n  Temperature and Humidity\n- Set default global variables for SenseHAT and DHT22 sensors, so that the flow can run on Pi's with or without those sensors attached.\n\nv0.20 2020-05-06:\n- Added ENTER on joystick to toggle the LED display on and off.\n- Added LEDs in lowest row to indicate MQTT connection state (not working yet - shows green) and the day of the week (green: Active - red: Inactive)\n\nv0.15 2020-05-05:\n- Added CRON+ to control when the measurements are being collected and transmitted + when the load tests are being performed:\nActive:   Monday-Friday 8am - 6pm CET\n          Every 10 seconds\nInactive: All other periods\n          Every 20 minutes\n- Added SenseHAT properties: Temperature, Humidity and Pressure\n\n\nv0.12 2020-05-04:\n- Added local dashboard\n- Added MQTT to send data\n- Added the Oscilator properties: \n  Frequency, Voltage and Temperature\n\n\nv0.10 2020-05-01:\n- Initial flows.\n- Using various CLI commands to gather sensor data every 10 seconds.\n- Run a 5 minute load test at 100% and the 10 minutes idleing.\n- Using CPU Load, CPU Temperature, Disk Usage and Free Memory",
+        "x": 290,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "ebca5eb9b4b6fa63",
+        "type": "function",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "Initialize",
+        "func": "// Set the current SW Version\nlet sw = \"v1.06\";\nglobal.set('software',sw);\n\n// REMOVED in v1.01\n// Initialize the sensorvalues of an external Adafruit AM2302 wired DHT22 sensor\n// That way the flows run with or without that sensor attached\n// global.set('external',{\"temperature\":0.0,\"humidity\":0.0});\n\n// Initialize the sensorvalues if a SenseHAT is not mounted\n// That way the flows run without that HAT mounted\n// global.set('environment',{\"temperature\":0.0,\"humidity\":0.0,\"pressure\":0.0});\n\n\n// Initialize the status of the MQTT connections\nglobal.set('mqttStatusGlobal', [ '#000000', '#000000' ]);\n\nmsg = {}; // Clear message\nmsg.topic = \"Software\";\nmsg.payload = sw;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "eae492531c4dafd2",
+                "952b253616bdc3e5",
+                "6ec34e5a89d341a0"
+            ]
+        ]
+    },
+    {
+        "id": "d1b602c451d91b3f",
+        "type": "inject",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "On Startup",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "ebca5eb9b4b6fa63"
+            ]
+        ]
+    },
+    {
+        "id": "eae492531c4dafd2",
+        "type": "exec",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "command": "cat /proc/device-tree/model",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "PI Revision",
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "7258574e4fbb7c4c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7258574e4fbb7c4c",
+        "type": "function",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "Formatting",
+        "func": "// Format the hardware version information and store it in a global variable\nlet hw = msg.payload.toString().substring(10).replace('\\0', '');\nglobal.set('hardware', hw);\n\nmsg = {}; // Clear message\nmsg.topic = \"Hardware\";\nmsg.payload = hw;\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 200,
+        "wires": [
+            [
+                "914e131f2ae283b4"
+            ]
+        ]
+    },
+    {
+        "id": "952b253616bdc3e5",
+        "type": "link out",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "Software Version Out",
+        "links": [
+            "9c4b61a820ea5130"
+        ],
+        "x": 455,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "914e131f2ae283b4",
+        "type": "link out",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "Hardware Version Out",
+        "links": [
+            "678455e1a238c3e1"
+        ],
+        "x": 865,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6069954fba0a3dd0",
+        "type": "link out",
+        "z": "2951b7effc79365b",
+        "g": "f3354ec8a74e26a6",
+        "name": "Initiate SHUTDOWN",
+        "mode": "link",
+        "links": [
+            "2e973c545057ae12"
+        ],
+        "x": 295,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "6ec34e5a89d341a0",
+        "type": "exec",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "command": "hostname",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "winHide": false,
+        "name": "RPE-name",
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "d2a70326e2e72bfc",
+                "60b46a815ca64fb1"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "60b46a815ca64fb1",
+        "type": "function",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "Set RPE Name",
+        "func": "// Set the RPE name / ID\nglobal.set('RPE-Name', msg.payload.substring(0, 6));\n\nreturn msg;",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d2a70326e2e72bfc",
+        "type": "debug",
+        "z": "2951b7effc79365b",
+        "g": "64b7570ffbc5ad6b",
+        "name": "RPE Name",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e17d567eb2e1a011",
+        "type": "exec",
+        "z": "e1e54dabc69f1d73",
+        "command": "vcgencmd measure_temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "RPi Temp.",
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "9bfa824f2f2862e6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9bfa824f2f2862e6",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Formatting",
+        "func": "//Returns a number with CPU temperature in Celcius\nstr = msg.payload;\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str.substring(5,9));\nmsg.topic = \"ct\"; //cpu temperature\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 180,
+        "wires": [
+            [
+                "147225d3911acdef"
+            ]
+        ]
+    },
+    {
+        "id": "1133350051652f0c",
+        "type": "exec",
+        "z": "e1e54dabc69f1d73",
+        "command": "top -d 0.7 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4 + $6}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "CPU Load",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "62f649e8535a08a5"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "db59a3117129636a",
+        "type": "exec",
+        "z": "e1e54dabc69f1d73",
+        "command": "free | grep Mem | awk '{printf \"%.2f\\n\", 100*$3/$2}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Free Memory",
+        "x": 550,
+        "y": 300,
+        "wires": [
+            [
+                "dc4409d50735317d"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "29ee569989e877fe",
+        "type": "exec",
+        "z": "e1e54dabc69f1d73",
+        "command": "df -h",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Disk Usage",
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "ad1f12fce9ad55e8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ad1f12fce9ad55e8",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Formatting",
+        "func": "//Returns a number with percentage of disk used\nvar re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str);\nmsg.topic = \"du\"; //disk usage\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "f3e265a4c9d0a2c4"
+            ]
+        ]
+    },
+    {
+        "id": "62f649e8535a08a5",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Formatting",
+        "func": "//Returns a number with CPU load in percent\nstr = msg.payload;\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str);\nmsg.topic = \"cl\"; //cpu load\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 240,
+        "wires": [
+            [
+                "62d764d9efdeed49"
+            ]
+        ]
+    },
+    {
+        "id": "dc4409d50735317d",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Formatting",
+        "func": "//Returns a number with percentage of memory used\nstr = msg.payload;\nmsg = {}; //Clear msg\nmsg.payload = parseFloat(str);\nmsg.topic = \"mu\"; //memory usage\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "fc19fdcf6e14bf0a"
+            ]
+        ]
+    },
+    {
+        "id": "147225d3911acdef",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "CPU Temp Out",
+        "links": [
+            "5003ce4774f9c71a",
+            "418846a39ce35fe8",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "62d764d9efdeed49",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "CPU Load Out",
+        "links": [
+            "0551d431530cb913",
+            "e2649eb8e46fba68",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fc19fdcf6e14bf0a",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "Memory Usage Out",
+        "links": [
+            "cb63c151fca4239a",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f3e265a4c9d0a2c4",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "Disk Usage Out",
+        "links": [
+            "f0dcbf6df699f93f",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ace8d6eac45bb9db",
+        "type": "exec",
+        "z": "e1e54dabc69f1d73",
+        "command": "vcgencmd read_ring_osc",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "RPi Osc",
+        "x": 540,
+        "y": 460,
+        "wires": [
+            [
+                "940e406121270adf"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "940e406121270adf",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Formatting",
+        "func": "//Returns the curent speed, voltage and temperature of the ring oscillator\n//RPi3B+ response example:\n//read_ring_osc(2)=2.923MHz (@1.2000V) (58.5'C)\nstr = msg.payload;\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\nmsg1.payload = parseFloat(str.substring(17,22));\nmsg1.topic = \"of\"; //Oscillator Frequency\nmsg2.payload = parseFloat(str.substring(28,34));\nmsg2.topic = \"ov\"; //Oscillator Voltage\nmsg3.payload = parseFloat(str.substring(38,42));\nmsg3.topic = \"ot\"; //Oscillator Temperature\nreturn [msg1,msg2,msg3];\n",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 730,
+        "y": 460,
+        "wires": [
+            [
+                "b408b369295b54ba"
+            ],
+            [
+                "c3eb06c1eedc3618"
+            ],
+            [
+                "40b73327b2157870"
+            ]
+        ]
+    },
+    {
+        "id": "9069eced482060a4",
+        "type": "delay",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "ace8d6eac45bb9db"
+            ]
+        ]
+    },
+    {
+        "id": "b408b369295b54ba",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "OSC Frequency Out",
+        "links": [
+            "942f20dbf2bf5429",
+            "3997e54ffcf36ede",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "40b73327b2157870",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "OSC Temperature Out",
+        "links": [
+            "43fa76ab2533fa89",
+            "c5e2ca46367dc0db",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c3eb06c1eedc3618",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "OSC Voltage Out",
+        "links": [
+            "3d96998cdedbe218",
+            "373d8ed62104ec25",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7c8cbfaf95ab0ca2",
+        "type": "delay",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "300",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "1133350051652f0c"
+            ]
+        ]
+    },
+    {
+        "id": "6044ff08816cfc71",
+        "type": "comment",
+        "z": "e1e54dabc69f1d73",
+        "name": "This flow get the measurements from the Pi sensors and send them to MAS Monitor",
+        "info": "",
+        "x": 310,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "fd59edfd8a50df9f",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "SenseHAT Measurements",
+        "func": "//Returns the temperature, humidity and pressure from the SenseHAT\nlet msg1 = {};\nlet msg2 = {};\nlet msg3 = {};\n\nvar environment = global.get('environment');\n\nmsg1.payload = environment.temperature;\nmsg1.topic = \"et\"; //SenseHAT Temperature\nmsg2.payload = environment.humidity;\nmsg2.topic = \"eh\"; //SenseHAT Humidity\nmsg3.payload = environment.pressure;\nmsg3.topic = \"ep\"; //SenseHAT Pressure\n\nreturn [msg1,msg2,msg3];\n",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 590,
+        "y": 620,
+        "wires": [
+            [
+                "de7672a0830ef659"
+            ],
+            [
+                "2721829be039d7e3"
+            ],
+            [
+                "e8005441ef2323e9"
+            ]
+        ]
+    },
+    {
+        "id": "de7672a0830ef659",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Temperature Out",
+        "links": [
+            "050e7e9ed97e1e09",
+            "b5602ed4cc55bc3f",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2721829be039d7e3",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Humidity Out",
+        "links": [
+            "3d7c21866d3e4ad3",
+            "36f881c7c2c358ba",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e8005441ef2323e9",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Pressure Out",
+        "links": [
+            "fbedfbf5537f99f0",
+            "774e71d7fe27c3f0",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "899ad6b1e6fdd6eb",
+        "type": "cronplus",
+        "z": "e1e54dabc69f1d73",
+        "name": "Measure",
+        "outputField": "payload",
+        "timeZone": "Europe/Copenhagen",
+        "outputs": 1,
+        "options": [
+            {
+                "topic": "Active",
+                "payload": "Active",
+                "type": "str",
+                "expression": "*/10 * 8-17 * * MON-FRI",
+                "name": "Active"
+            },
+            {
+                "topic": "Inactive 1",
+                "payload": "Inactive-Evening",
+                "type": "str",
+                "expression": "0 */20 18-23 * * MON-FRI",
+                "name": "Inactive 1"
+            },
+            {
+                "topic": "Inactive 2",
+                "payload": "Inactive-Morning",
+                "type": "str",
+                "expression": "0 */20 0-7 * * MON-FRI",
+                "name": "Inactive 2"
+            },
+            {
+                "topic": "Inactive 3",
+                "payload": "Inactive-Weekend",
+                "type": "str",
+                "expression": "0 */20 * * * SAT-SUN",
+                "name": "Inactive 3"
+            }
+        ],
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "db59a3117129636a",
+                "7c8cbfaf95ab0ca2",
+                "e17d567eb2e1a011",
+                "29ee569989e877fe",
+                "9069eced482060a4",
+                "fd59edfd8a50df9f",
+                "142fbd649eed05df",
+                "b7d5c347107394eb",
+                "49ece0b58da6f846"
+            ]
+        ]
+    },
+    {
+        "id": "440ac320cf578e06",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "142fbd649eed05df",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "func": "// Create timestamp for now\nvar now     = new Date(msg.cronplus.triggerTimestamp);\nvar year    = now.getFullYear();\nvar month   = now.getMonth()+1; \nvar day     = now.getDate();\nvar hour    = now.getHours();\nvar minute  = now.getMinutes();\nvar second  = now.getSeconds();   \nvar millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1) {\nmonth = '0'+month;\n}\nif(day.toString().length == 1) {\nday = '0'+day;\n}   \nif(hour.toString().length == 1) {\nhour = '0'+hour;\n}\nif(minute.toString().length == 1) {\nminute = '0'+minute;\n}\nif(second.toString().length == 1) {\nsecond = '0'+second;\n}   \nif(millisecond.toString().length == 1) {\nmillisecond = '00' + millisecond;\n}   \nif(millisecond.toString().length == 2) {\nmillisecond = '0' + millisecond;\n}   \n\nmsg.timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n\nglobal.set('state', msg.payload);\n\nflow.set('cron_timestamp', msg.timestamp);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 680,
+        "wires": [
+            [
+                "440ac320cf578e06"
+            ]
+        ]
+    },
+    {
+        "id": "cb19e347ec5ac912",
+        "type": "inject",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "e17d567eb2e1a011",
+                "7c8cbfaf95ab0ca2",
+                "db59a3117129636a",
+                "29ee569989e877fe",
+                "9069eced482060a4",
+                "fd59edfd8a50df9f",
+                "b7d5c347107394eb"
+            ]
+        ]
+    },
+    {
+        "id": "b7d5c347107394eb",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Software and hardware versions",
+        "func": "//Get and returns the software and hardware versions\nlet msg1 = {};\nlet msg2 = {};\n\n\nmsg1.payload = global.get('software');\nmsg1.topic = \"sw\"; //Software Version\nmsg2.payload = global.get('hardware');\nmsg2.topic = \"hw\"; //Hardware Version\n\n\nreturn [msg1,msg2];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 610,
+        "y": 120,
+        "wires": [
+            [
+                "a754cd0dd4ce3ffe"
+            ],
+            [
+                "e4f776d2b56a322c"
+            ]
+        ]
+    },
+    {
+        "id": "a754cd0dd4ce3ffe",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "PI Software Out",
+        "links": [
+            "d2156cef0405ccaa",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e4f776d2b56a322c",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "PI Hardware Out",
+        "links": [
+            "734b71b4b4b1f2f3",
+            "73c8bdec933f8e06"
+        ],
+        "x": 915,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0c041405391516b6",
+        "type": "status",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "scope": [
+            "7118a91a.e2607",
+            "c0a12d911f4bd465",
+            "1391e5dd.3de56a"
+        ],
+        "x": 180,
+        "y": 900,
+        "wires": [
+            [
+                "b3c09659b9d966cb"
+            ]
+        ]
+    },
+    {
+        "id": "0e51e25e44917658",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 810,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "4a28940734f6329b",
+        "type": "comment",
+        "z": "e1e54dabc69f1d73",
+        "name": "1. Select the mqtt nodes in status node",
+        "info": "",
+        "x": 270,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b3c09659b9d966cb",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Store Connection Status",
+        "func": "// Define number of MQTT connections which are read by the status node\n// This is important to get a correct indication of connection status on the SenseHAT\nlet numberOfConnections = 3;\n\nlet connections = context.get('mqtt_connections') || [];\n//let connections = context.get('mqtt_connections') || [{\"id\":\"bacdc4cb.b49ad8\",\"state\":\"HURRA\",\"name\":\"RPE001 (CSAP1XYZ)\"}];\n//node.warn(\"Number of objects: \" + connections.length + \" - Connections: \" + JSON.stringify(connections));\n\nlet id = msg.status.source.id;\nlet state = msg.status.text.substring(23);\nlet name = '';\nif (msg.status.source.name){\n    name = msg.status.source.name;\n}\n\nlet connectionObject = {'id': id, 'state': state, 'name': name};\n// node.warn(\"connectionObject = \" + JSON.stringify(connectionObject));\n\nlet index = connections.findIndex(connection => connection.id === id)\n\nif(index === -1) {\n    connections.push(connectionObject);\n    context.set('mqtt_connections', connections);\n    node.warn(\"Added, new object: \"+ JSON.stringify(connections));\n} else {\n    connections[index] = connectionObject;\n    context.set('mqtt_connections', connections);\n    node.warn(\"Replaced, new object: \"+ JSON.stringify(connections));\n}\n\n\n\nlet SUCCESS = [ '#008800', '#005500' ]; // Green\nlet ERROR   = [ '#880000', '#550000' ]; // Red\n//let UNKNOWN = [ '#000088', '#000055' ]; // Blue\nlet UNKNOWN = [ '#888800', '#555500' ]; // Yellow\nlet MISSING = [ '#000000', '#000000' ]; // Black\nlet mqttStatus = MISSING;\n\nif (numberOfConnections === connections.length) {\n    if (connections.every(connection => connection.state === \"connected\")) {\n        node.warn(\"Connections status: SUCCESS - #Connections: \"+connections.length);\n        // Store the RPE information for the dashboard\n        // global.set('RPE-Name',connections[connections.length-1].name.substring(0, 6));\n        mqttStatus = SUCCESS;\n    } else {\n        if (connections.some(connection => connection.state === \"connected\")) {\n            node.warn(\"Connections status: UNKNOWN - #Connections: \"+connections.length);\n            mqttStatus = UNKNOWN;\n        } else {\n            node.warn(\"Connections status: ERROR - #Connections: \"+connections.length);\n            mqttStatus = ERROR;\n        }\n    }\n} else {\n    node.warn(\"Connections status: MISSING - #Connections: \"+connections.length);\n    mqttStatus = MISSING;\n    \n}\n\nglobal.set('mqttStatusGlobal', mqttStatus);\n\nmsg.payload = connectionObject;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 900,
+        "wires": [
+            [
+                "0e51e25e44917658"
+            ]
+        ]
+    },
+    {
+        "id": "17571f60ae1d0cf6",
+        "type": "comment",
+        "z": "e1e54dabc69f1d73",
+        "name": "2. Adjust numberOfConnections in the function node",
+        "info": "",
+        "x": 670,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "84fb1cfe59f7d399",
+        "type": "comment",
+        "z": "e1e54dabc69f1d73",
+        "name": "!!!!!!!!!!!!!!!!!!!  When changing | adding | removing mqtt nodes or connections it is very important to:  !!!!!!!!!!!!!!!!!!!",
+        "info": "",
+        "x": 490,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "9880b808353943b0",
+        "type": "inject",
+        "z": "e1e54dabc69f1d73",
+        "name": "5 sec after startup",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "49ece0b58da6f846"
+            ]
+        ]
+    },
+    {
+        "id": "49ece0b58da6f846",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Put RPE Info on Dashbord header",
+        "func": "let name = global.get('RPE-Name');\nlet ver = global.get('software');\n\nmsg.payload = name + \" (\" + ver + \")\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 60,
+        "wires": [
+            [
+                "fcef0f5a51b4cae4"
+            ]
+        ]
+    },
+    {
+        "id": "fcef0f5a51b4cae4",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "Header Info Out",
+        "mode": "link",
+        "links": [
+            "4a9c1d224c39f3d8"
+        ],
+        "x": 915,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "232069843d37c317",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "Mem",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1190,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "68e2e9738d046fd3",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "Temp",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1190,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1e47d07621298283",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "Disk",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1190,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "798941261e060c0c",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "CPU",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1190,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "418846a39ce35fe8",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "CPU Temp Join",
+        "links": [
+            "147225d3911acdef"
+        ],
+        "x": 1015,
+        "y": 220,
+        "wires": [
+            [
+                "68e2e9738d046fd3",
+                "57ccc051d974396c"
+            ]
+        ]
+    },
+    {
+        "id": "e2649eb8e46fba68",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "CPU Load Join",
+        "links": [
+            "62d764d9efdeed49"
+        ],
+        "x": 1015,
+        "y": 260,
+        "wires": [
+            [
+                "798941261e060c0c",
+                "57ccc051d974396c"
+            ]
+        ]
+    },
+    {
+        "id": "cb63c151fca4239a",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "Memory Usage Join",
+        "links": [
+            "fc19fdcf6e14bf0a"
+        ],
+        "x": 1015,
+        "y": 300,
+        "wires": [
+            [
+                "232069843d37c317",
+                "57ccc051d974396c"
+            ]
+        ]
+    },
+    {
+        "id": "f0dcbf6df699f93f",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "Disk Usage Join",
+        "links": [
+            "f3e265a4c9d0a2c4"
+        ],
+        "x": 1015,
+        "y": 340,
+        "wires": [
+            [
+                "1e47d07621298283",
+                "57ccc051d974396c"
+            ]
+        ]
+    },
+    {
+        "id": "f54e6bff133342b7",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "RPi Info",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1600,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "cba42f1ab2a81f80",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Cleaning up",
+        "func": "// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 780,
+        "wires": [
+            [
+                "f54e6bff133342b7",
+                "8519296f2a4314a6"
+            ]
+        ]
+    },
+    {
+        "id": "3997e54ffcf36ede",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "OSC Frequency Join",
+        "links": [
+            "b408b369295b54ba"
+        ],
+        "x": 1015,
+        "y": 420,
+        "wires": [
+            [
+                "01f15fb61d21a5e4",
+                "40c1cc6b3b227730"
+            ]
+        ]
+    },
+    {
+        "id": "c5e2ca46367dc0db",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "OSC Temperature Join",
+        "links": [
+            "40b73327b2157870"
+        ],
+        "x": 1015,
+        "y": 500,
+        "wires": [
+            [
+                "01cea0b9756e01da",
+                "40c1cc6b3b227730"
+            ]
+        ]
+    },
+    {
+        "id": "373d8ed62104ec25",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "OSC Voltage Join",
+        "links": [
+            "c3eb06c1eedc3618"
+        ],
+        "x": 1015,
+        "y": 460,
+        "wires": [
+            [
+                "9a62f38c47a4691a",
+                "40c1cc6b3b227730"
+            ]
+        ]
+    },
+    {
+        "id": "01f15fb61d21a5e4",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "Osc MHz",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1200,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9a62f38c47a4691a",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "Osc V",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1190,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "01cea0b9756e01da",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "Osc 'C",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1190,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b5602ed4cc55bc3f",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Temperature Join",
+        "links": [
+            "de7672a0830ef659"
+        ],
+        "x": 1015,
+        "y": 580,
+        "wires": [
+            [
+                "ada539da6e718e6d",
+                "7d9523a5c00dea9e"
+            ]
+        ]
+    },
+    {
+        "id": "36f881c7c2c358ba",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Humidity Join",
+        "links": [
+            "2721829be039d7e3"
+        ],
+        "x": 1015,
+        "y": 620,
+        "wires": [
+            [
+                "8e261a88023dbc74",
+                "7d9523a5c00dea9e"
+            ]
+        ]
+    },
+    {
+        "id": "774e71d7fe27c3f0",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Pressure Join",
+        "links": [
+            "e8005441ef2323e9"
+        ],
+        "x": 1015,
+        "y": 660,
+        "wires": [
+            [
+                "6a68986a38562c6c",
+                "7d9523a5c00dea9e"
+            ]
+        ]
+    },
+    {
+        "id": "8e261a88023dbc74",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Humidity",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1220,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ada539da6e718e6d",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Temperature",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1230,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6a68986a38562c6c",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "HAT Pressure",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1220,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "734b71b4b4b1f2f3",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "PI Hardware Join",
+        "links": [
+            "e4f776d2b56a322c"
+        ],
+        "x": 1015,
+        "y": 140,
+        "wires": [
+            [
+                "4daa272a9f6743b1"
+            ]
+        ]
+    },
+    {
+        "id": "d2156cef0405ccaa",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "PI Software Join",
+        "links": [
+            "a754cd0dd4ce3ffe"
+        ],
+        "x": 1015,
+        "y": 100,
+        "wires": [
+            [
+                "997aba2792b757b4"
+            ]
+        ]
+    },
+    {
+        "id": "4daa272a9f6743b1",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "Hardware Version",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "997aba2792b757b4",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "RPE Software Version",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1240,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8519296f2a4314a6",
+        "type": "link out",
+        "z": "e1e54dabc69f1d73",
+        "name": "Payload Out",
+        "mode": "link",
+        "links": [
+            "23e9846877106c65"
+        ],
+        "x": 1555,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "57ccc051d974396c",
+        "type": "join",
+        "z": "e1e54dabc69f1d73",
+        "name": "Join CPU data",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "10",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1220,
+        "y": 180,
+        "wires": [
+            [
+                "373800331f406085"
+            ]
+        ]
+    },
+    {
+        "id": "40c1cc6b3b227730",
+        "type": "join",
+        "z": "e1e54dabc69f1d73",
+        "name": "Join OSC data",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "10",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1220,
+        "y": 380,
+        "wires": [
+            [
+                "cc8c93f669974bde"
+            ]
+        ]
+    },
+    {
+        "id": "7d9523a5c00dea9e",
+        "type": "join",
+        "z": "e1e54dabc69f1d73",
+        "name": "Join HAT (ENV) data",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "10",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1240,
+        "y": 540,
+        "wires": [
+            [
+                "77ca6e2e3002f252"
+            ]
+        ]
+    },
+    {
+        "id": "373800331f406085",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Cleaning up",
+        "func": "// Create timestamp for now\nlet now          = new Date();\nlet year         = now.getFullYear();\nlet month        = now.getMonth()+1; \nlet day          = now.getDate();\nlet hour         = now.getHours();\nlet minute       = now.getMinutes();\nlet second       = now.getSeconds();   \nlet millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1)       {month = '0'+month;}\nif(day.toString().length == 1)         {day = '0'+day;}   \nif(hour.toString().length == 1)        {hour = '0'+hour;}\nif(minute.toString().length == 1)      {minute = '0'+minute;}\nif(second.toString().length == 1)      {second = '0'+second;}   \nif(millisecond.toString().length == 1) {millisecond = '00' + millisecond;}   \nif(millisecond.toString().length == 2) {millisecond = '0' + millisecond;}   \n\nlet timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nstr.evt_timestamp = timestamp;\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 180,
+        "wires": [
+            [
+                "d53ab7ca97fc85e4",
+                "7118a91a.e2607"
+            ]
+        ]
+    },
+    {
+        "id": "d53ab7ca97fc85e4",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "CPU Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cc8c93f669974bde",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Cleaning up",
+        "func": "// Create timestamp for now\nlet now          = new Date();\nlet year         = now.getFullYear();\nlet month        = now.getMonth()+1; \nlet day          = now.getDate();\nlet hour         = now.getHours();\nlet minute       = now.getMinutes();\nlet second       = now.getSeconds();   \nlet millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1)       {month = '0'+month;}\nif(day.toString().length == 1)         {day = '0'+day;}   \nif(hour.toString().length == 1)        {hour = '0'+hour;}\nif(minute.toString().length == 1)      {minute = '0'+minute;}\nif(second.toString().length == 1)      {second = '0'+second;}   \nif(millisecond.toString().length == 1) {millisecond = '00' + millisecond;}   \nif(millisecond.toString().length == 2) {millisecond = '0' + millisecond;}   \n\nlet timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nstr.evt_timestamp = timestamp;\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 380,
+        "wires": [
+            [
+                "d0a1dad869b90c43",
+                "c0a12d911f4bd465"
+            ]
+        ]
+    },
+    {
+        "id": "77ca6e2e3002f252",
+        "type": "function",
+        "z": "e1e54dabc69f1d73",
+        "name": "Cleaning up",
+        "func": "// Create timestamp for now\nlet now          = new Date();\nlet year         = now.getFullYear();\nlet month        = now.getMonth()+1; \nlet day          = now.getDate();\nlet hour         = now.getHours();\nlet minute       = now.getMinutes();\nlet second       = now.getSeconds();   \nlet millisecond  = now.getMilliseconds();   \n\nif(month.toString().length == 1)       {month = '0'+month;}\nif(day.toString().length == 1)         {day = '0'+day;}   \nif(hour.toString().length == 1)        {hour = '0'+hour;}\nif(minute.toString().length == 1)      {minute = '0'+minute;}\nif(second.toString().length == 1)      {second = '0'+second;}   \nif(millisecond.toString().length == 1) {millisecond = '00' + millisecond;}   \nif(millisecond.toString().length == 2) {millisecond = '0' + millisecond;}   \n\nlet timestamp = year+'-'+month+'-'+day+'T'+hour+':'+minute+':'+second+'.'+millisecond+'Z';\n\n\n// Define the event properties\nlet eventType = \"event\";\nlet eventFormat = \"json\";\n\n// Clean up message\nlet str = msg.payload;\nmsg = {}; \n\n// Rebuild message\nstr.evt_timestamp = timestamp;\nmsg.payload = str;\nmsg.topic = \"iot-2/evt/\"+eventType+\"/fmt/\"+eventFormat;\n\n// Send message\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 540,
+        "wires": [
+            [
+                "7d1b1a21c6319752",
+                "1391e5dd.3de56a"
+            ]
+        ]
+    },
+    {
+        "id": "d0a1dad869b90c43",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "OSC Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "7d1b1a21c6319752",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "ENV Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "73c8bdec933f8e06",
+        "type": "link in",
+        "z": "e1e54dabc69f1d73",
+        "name": "Join All",
+        "links": [
+            "e8005441ef2323e9",
+            "fc19fdcf6e14bf0a",
+            "e4f776d2b56a322c",
+            "40b73327b2157870",
+            "c3eb06c1eedc3618",
+            "a754cd0dd4ce3ffe",
+            "f3e265a4c9d0a2c4",
+            "de7672a0830ef659",
+            "62d764d9efdeed49",
+            "147225d3911acdef",
+            "b408b369295b54ba",
+            "2721829be039d7e3"
+        ],
+        "x": 1015,
+        "y": 780,
+        "wires": [
+            [
+                "f8db7c2126c686f7"
+            ]
+        ]
+    },
+    {
+        "id": "f8db7c2126c686f7",
+        "type": "join",
+        "z": "e1e54dabc69f1d73",
+        "name": "Join all",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "10",
+        "count": "12",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1200,
+        "y": 780,
+        "wires": [
+            [
+                "cba42f1ab2a81f80"
+            ]
+        ]
+    },
+    {
+        "id": "12202064c37a8e87",
+        "type": "status",
+        "z": "e1e54dabc69f1d73",
+        "name": "",
+        "scope": [
+            "297d51f22a035838"
+        ],
+        "x": 1500,
+        "y": 940,
+        "wires": [
+            [
+                "59dae0d9604d3bb0"
+            ]
+        ]
+    },
+    {
+        "id": "59dae0d9604d3bb0",
+        "type": "debug",
+        "z": "e1e54dabc69f1d73",
+        "name": "MQTT Connection state",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "status.text",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "7118a91a.e2607",
+        "type": "mqtt out",
+        "z": "e1e54dabc69f1d73",
+        "name": "RPE042-CPU-01",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "74eae28f.f6e6f4",
+        "x": 1630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c0a12d911f4bd465",
+        "type": "mqtt out",
+        "z": "e1e54dabc69f1d73",
+        "name": "RPE042-OSC-03",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5f2e2a3b08e6ab88",
+        "x": 1630,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1391e5dd.3de56a",
+        "type": "mqtt out",
+        "z": "e1e54dabc69f1d73",
+        "name": "RPE042-ENV-17",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5a440ff8.4f85e",
+        "x": 1620,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a0d82da3835f4089",
+        "type": "rpi-sensehat in",
+        "z": "5c01f085dcb66947",
+        "name": "Environment",
+        "motion": true,
+        "env": true,
+        "stick": false,
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "9744b9c7ccc0ea63"
+            ]
+        ]
+    },
+    {
+        "id": "e7283c3d0e5c937e",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 490,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9744b9c7ccc0ea63",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Save Measurments",
+        "func": "// Set the environment global data\nglobal.set( msg.topic, msg.payload );\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 240,
+        "wires": [
+            [
+                "e7283c3d0e5c937e"
+            ]
+        ]
+    },
+    {
+        "id": "511824978207f8c4",
+        "type": "rpi-sensehat out",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "x": 970,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "21e2dc74b39c146a",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Scroll Message",
+        "func": "\nmsg.payload = msg.payload+' ';\n\nclearTimeout( flow.get('sense-hat-busy-to') );\nflow.set('sense-hat-busy', true );\nflow.set('sense-hat-busy-to', setTimeout( function(){\n    // console.log('t/o fired');\n    flow.set('sense-hat-busy', false );\n}, msg.payload.length*650)); // ~.5 sec per letter in the message\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 860,
+        "wires": [
+            [
+                "14a6faadfecbf1cf",
+                "b313d0034f84e52b"
+            ]
+        ]
+    },
+    {
+        "id": "93b5fb9030bae28e",
+        "type": "link in",
+        "z": "5c01f085dcb66947",
+        "name": "SenseHat MSG",
+        "links": [
+            "5180d86f2c92d53e",
+            "0cd9f7d3c9733876",
+            "3821b73e859ec40f",
+            "841735dc4fb244cd",
+            "143e14c6f7f34efb",
+            "5832e2bd41458234",
+            "e0d29645c6ac796f"
+        ],
+        "x": 155,
+        "y": 860,
+        "wires": [
+            [
+                "21e2dc74b39c146a"
+            ]
+        ]
+    },
+    {
+        "id": "46fb046e55a1a88b",
+        "type": "comment",
+        "z": "5c01f085dcb66947",
+        "name": "Store SenseHat Environment data to Global Variable",
+        "info": "",
+        "x": 210,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "798af07e2e0ee9f6",
+        "type": "comment",
+        "z": "5c01f085dcb66947",
+        "name": "Control Status Lights and scrolling messages on LED",
+        "info": "",
+        "x": 220,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "039cfc082d078ef5",
+        "type": "http in",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "url": "/monitor",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 1100,
+        "wires": [
+            [
+                "7e1abd9326e83737"
+            ]
+        ]
+    },
+    {
+        "id": "e66a6d920cf2f3ab",
+        "type": "http response",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "7e1abd9326e83737",
+        "type": "template",
+        "z": "5c01f085dcb66947",
+        "name": "HTML Monitor",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Required meta tags -->\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <!-- Bootstrap CSS -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\">\n  </head>\n  <body>\n\n    <div class=\"container\">\n\n      <h1>RP Engine SenseHat Monitor</h1>\n      \n      <table class=\"table\">\n\t<thead>\n\t  <tr>\n\t    <th class=\"\">d</th>\n\t    <th class=\"\">Value</th>\n\t    <th class=\"\">Comment</th>\n\t  </tr>\n\t</thead>\n\t<tbody>\n\n\t  <tr>\n\t    <th scope=\"row\">d.t</th>\n\t    <td id=\"d-t\"></td>\n\t    <td>environment.temperature (°C)</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.h</th>\n\t    <td id=\"d-h\"></td>\n\t    <td>environment.humidity (%)</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.p</th>\n\t    <td id=\"d-p\"></td>\n\t    <td>environment.pressure (hPa)</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.ax</th>\n\t    <td id=\"d-ax\"></td>\n\t    <td>motion.acceleration.x</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.ay</th>\n\t    <td id=\"d-ay\"></td>\n\t    <td>motion.acceleration.y</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.az</th>\n\t    <td id=\"d-az\"></td>\n\t    <td>motion.acceleration.z</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.gx</th>\n\t    <td id=\"d-gx\"></td>\n\t    <td>motion.gyroscope.x</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.gy</th>\n\t    <td id=\"d-gy\"></td>\n\t    <td>motion.gyroscope.y</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.gz</th>\n\t    <td id=\"d-gz\"></td>\n\t    <td>motion.gyroscope.z</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.or</th>\n\t    <td id=\"d-or\"></td>\n\t    <td>motion.orientation.roll</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.op</th>\n\t    <td id=\"d-op\"></td>\n\t    <td>motion.orientation.pitch</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.oy</th>\n\t    <td id=\"d-oy\"></td>\n\t    <td>motion.orientation.yaw</td>\n\t  </tr>\n\n\t  <tr>\n\t    <th scope=\"row\">d.c</th>\n\t    <td id=\"d-c\"></td>\n\t    <td>motion.compass (0-259)</td>\n\t  </tr>\n\n\t</tbody>\n    </table>\n\n    </div>\n    \n    <!-- Optional JavaScript -->\n    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js\" integrity=\"sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1\" crossorigin=\"anonymous\"></script>\n    \n    <script>\n        $(function(){\n      \n            setInterval( function(){\n\n                fetch('/measures')\n                .then( function(d){ return d.json(); })\n                .then( function(data){\n                    \n                    $('#d-t').text( data.environment.temperature );\n                    $('#d-h').text( data.environment.humidity );\n                    $('#d-p').text( data.environment.pressure );\n          \n                    $('#d-ax').text( data.motion.acceleration.x );\n                    $('#d-ay').text( data.motion.acceleration.y );\n                    $('#d-az').text( data.motion.acceleration.z );            \n        \n                    $('#d-gx').text( data.motion.gyroscope.x );\n                    $('#d-gy').text( data.motion.gyroscope.y );\n                    $('#d-gz').text( data.motion.gyroscope.z );   \n\n                    $('#d-or').text( data.motion.orientation.roll );\n                    $('#d-op').text( data.motion.orientation.pitch );\n                    $('#d-oy').text( data.motion.orientation.yaw );\n\n                    $('#d-c').text( data.motion.compass );    \n\n                }); // .then() \n\n            },500); // setInterval() every .5sec\n      \n        }); // document ready\n    </script>\n  </body>\n</html>\n",
+        "output": "str",
+        "x": 300,
+        "y": 1100,
+        "wires": [
+            [
+                "e66a6d920cf2f3ab"
+            ]
+        ]
+    },
+    {
+        "id": "6b18defe5f5f414f",
+        "type": "inject",
+        "z": "5c01f085dcb66947",
+        "name": "On Startup",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "93fd161e6319eb00"
+            ]
+        ]
+    },
+    {
+        "id": "463f9994113224b1",
+        "type": "comment",
+        "z": "5c01f085dcb66947",
+        "name": "http://<ipAddr>:1880/monitor (web monitor for the SenseHAT data)",
+        "info": "",
+        "x": 260,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "b13fcaa5358687a2",
+        "type": "inject",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 100,
+        "y": 820,
+        "wires": [
+            [
+                "3c173e48a677aaca"
+            ]
+        ]
+    },
+    {
+        "id": "3c173e48a677aaca",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Status Indicators",
+        "func": "// ** DO NOTHING IF SENSE-HAT IS BUSY ** //\nif ( flow.get('sense-hat-busy') ) {\n    //node.warn(\"Sense-HAT is busy\");\n    return [null,null]; // don't do anything...\n}\n\n\n// ** CLEAR THE DISPLAY IF DisplayOff IT TRUE ** //\nif ( flow.get('displayOff') ){\n    //node.warn(\"displayOff is true\");\n    msg.payload = '';\n    return [null, msg];\n}\n//node.warn(\"displayOff is false\");\n\n\n// ** SET THE CONNECTION LED ACCORDING TO ITS STATE DEFINED ON THE \"Collect And Send Data\" TAB ** //\nvar mqttStatus = global.get('mqttStatusGlobal');\nmsg.payload = '0,7,' + mqttStatus[0];\n\n\n// ** SET THE APPRPRIATE WEEKDAY LED ACCORDING TO ITS STATE ** //\nvar date = new Date();\nvar daynum = date.getDay();\n\nif (daynum === 0) {\n    daynum = 7; //Sunday is the last day ;-)\n}\n\nvar state = global.get('state');\nvar stateLED = '#550000'; //Defaults to Inactive\n\nif (state == 'Active') {\n    stateLED = '#005500'; //Change to green\n}\n\nvar i;\nfor (i = 1; i < 8; i++) {\n  if (daynum === i) {\n      msg.payload += ',' + i + ',7,' + stateLED;\n  } else {\n      msg.payload += ',' + i + ',7,#000000';\n  }\n}\n\n\n// ** SET THE BAR LEDS ACCORDING TO THE DEFINED MEASUREMENTS ** //\n// Get the values to display\nlet CL = flow.get('CPU_Load'); //CPU Load\nlet CT = flow.get('CPU_Temp'); //CPU Temperature\nlet OT = flow.get('Osc_Temp'); //Oscillator Temperature\nlet ET = flow.get('Sense_Temp'); //SenseHAT Environmental Temperature\n\n\n// Create the bar for the SenseHAT LEDs at a given row based on the given value\nfunction bar(row, value){\n    // Defining the main colors\n    let G = '#005500'; // Green\n    let R = '#550000'; // Red\n    let Y = '#555500'; // Yellow\n    let N = '#000000'; // N = No color => Black\n    let LEDs = '';\n    switch (true) {\n        case (value < 20):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+N+\",\"+row+\",3,\"+N+\",\"+row+\",2,\"+N+\",\"+row+\",1,\"+N;\n            break;\n        case (value < 40):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+N+\",\"+row+\",2,\"+N+\",\"+row+\",1,\"+N;\n            break;\n        case (value < 60):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+G+\",\"+row+\",2,\"+N+\",\"+row+\",1,\"+N;\n            break;\n        case (value < 80):\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+G+\",\"+row+\",2,\"+Y+\",\"+row+\",1,\"+N;\n            break;\n        default:\n            LEDs = row+\",5,\"+G+\",\"+row+\",4,\"+G+\",\"+row+\",3,\"+G+\",\"+row+\",2,\"+Y+\",\"+row+\",1,\"+R;\n            break;\n    }\n    return LEDs;\n}\n\n// The bars will be at 0,2,4,6\nmsg.payload += \",\"+bar(0,CL)+\",\"+bar(2,CT)+\",\"+bar(4,OT)+\",\"+bar(6,ET);\n\n\n// ** BLINK THE CONNECTION LED ACCORDING TO ITS STATE FOR 1/4 SECOND ** //\nsetTimeout( function() {\n    if ( flow.get('sense-hat-busy') ) {\n        return [null, null]; // don't do anything...\n    }\n    node.send({ payload: '0,7,' + mqttStatus[1]});  //Make the MQTT state blink\n}, 250 );\n\n\nreturn [msg,null];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 350,
+        "y": 820,
+        "wires": [
+            [
+                "2339239b7e619da8",
+                "b313d0034f84e52b"
+            ],
+            [
+                "f05434bc8b099e6c",
+                "48a72286dd0a4013"
+            ]
+        ]
+    },
+    {
+        "id": "a6e7ea80f9702735",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Clear LEDs",
+        "func": "\nclearTimeout( flow.get('sense-hat-busy-to') );\nflow.set('sense-hat-busy', true );\nflow.set('sense-hat-busy-to', setTimeout( function(){\n    flow.set('sense-hat-busy', false );\n}, 1*1000 )); // 1 sec\nmsg.payload = \"*,*,#000000\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 900,
+        "wires": [
+            [
+                "a78deae23f37657c",
+                "b313d0034f84e52b"
+            ]
+        ]
+    },
+    {
+        "id": "0aadbca62592c880",
+        "type": "link in",
+        "z": "5c01f085dcb66947",
+        "name": "ClearLEDs",
+        "links": [
+            "053de5b72a59217e",
+            "f05434bc8b099e6c"
+        ],
+        "x": 155,
+        "y": 900,
+        "wires": [
+            [
+                "a6e7ea80f9702735"
+            ]
+        ]
+    },
+    {
+        "id": "daf18ba0e38a0372",
+        "type": "rpi-sensehat in",
+        "z": "5c01f085dcb66947",
+        "name": "Joystick",
+        "motion": false,
+        "env": false,
+        "stick": true,
+        "x": 100,
+        "y": 380,
+        "wires": [
+            [
+                "b146b3b00be2532b",
+                "457a628aeaf2e873"
+            ]
+        ]
+    },
+    {
+        "id": "b146b3b00be2532b",
+        "type": "switch",
+        "z": "5c01f085dcb66947",
+        "name": "Key State",
+        "property": "payload.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 3,
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "d5108d6de5d66f14"
+            ],
+            [],
+            [
+                "2cd9c06518f98e07"
+            ]
+        ],
+        "outputLabels": [
+            "key press",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "d5108d6de5d66f14",
+        "type": "switch",
+        "z": "5c01f085dcb66947",
+        "name": "Key Press",
+        "property": "payload.key",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "UP",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "DOWN",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "LEFT",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ENTER",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 340,
+        "y": 440,
+        "wires": [
+            [
+                "1b7ad23874f5fe96",
+                "349c66ee2fe27f8a"
+            ],
+            [
+                "ea35bcca5910c598"
+            ],
+            [],
+            [
+                "47c3ce682abff4d1"
+            ]
+        ],
+        "outputLabels": [
+            "UP",
+            "DOWN",
+            "LEFT",
+            "PUSH"
+        ]
+    },
+    {
+        "id": "f3a4bda1507ed07e",
+        "type": "exec",
+        "z": "5c01f085dcb66947",
+        "command": "hostname",
+        "addpay": false,
+        "append": "-I",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get IP Address",
+        "x": 900,
+        "y": 300,
+        "wires": [
+            [
+                "e14c319704ae8871",
+                "82ac2043a2c0b806"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e14c319704ae8871",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "IP Address",
+        "func": "let ipAddresses = msg.payload.trim().split(\" \");\n\nlet ipAddressV4 = ipAddresses[0];\n\nmsg.payload = 'IP: ' + ipAddressV4;\nmsg.color   = '#0000ff'; // Blue\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 320,
+        "wires": [
+            [
+                "5180d86f2c92d53e",
+                "659f10f3d232dd1c"
+            ]
+        ]
+    },
+    {
+        "id": "5180d86f2c92d53e",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show IP Address",
+        "links": [
+            "93b5fb9030bae28e"
+        ],
+        "x": 1275,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "cb21bef1332ac21c",
+        "type": "exec",
+        "z": "5c01f085dcb66947",
+        "command": "cat",
+        "addpay": false,
+        "append": "/sys/class/net/e*/address",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get MAC Address",
+        "x": 890,
+        "y": 420,
+        "wires": [
+            [
+                "3de16ef7e315fa71"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3de16ef7e315fa71",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "MAC Address",
+        "func": "\nmsg.payload = 'MAC: ' + msg.payload.trim().replace(/:/g,' ');\n\nmsg.color = '#00ff00'; // GREEN\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1100,
+        "y": 440,
+        "wires": [
+            [
+                "0cd9f7d3c9733876"
+            ]
+        ]
+    },
+    {
+        "id": "0cd9f7d3c9733876",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show MAC Address",
+        "links": [
+            "93b5fb9030bae28e"
+        ],
+        "x": 1275,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "83d02925812c6fb1",
+        "type": "exec",
+        "z": "5c01f085dcb66947",
+        "command": "iwgetid",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Get SSID",
+        "x": 900,
+        "y": 360,
+        "wires": [
+            [
+                "ead9234434f0d32d"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ead9234434f0d32d",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "WIFI SSID",
+        "func": "\nvar wifi = msg.payload.match(/SSID:\"(.*)\"/);\n\nif ( wifi ) {\n    \n    msg.payload = 'WIFI: ' + wifi[1];\n    msg.color   = '#ffff00'; // Yellow\n    \n} else {\n\n    msg.payload = 'NO WIFI';\n    msg.color   = '#ff0000'; // Red\n    \n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1090,
+        "y": 380,
+        "wires": [
+            [
+                "3821b73e859ec40f"
+            ]
+        ]
+    },
+    {
+        "id": "3821b73e859ec40f",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show SSID",
+        "links": [
+            "93b5fb9030bae28e"
+        ],
+        "x": 1275,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1b7ad23874f5fe96",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "next msg",
+        "func": "\nvar STATUS_MESSAGE_COUNT = 3; // total number of status messages\n\nvar statusIndex = context.get('next-status') || 0;\n\nmsg.payload = statusIndex % STATUS_MESSAGE_COUNT;\n\ncontext.set('next-status', statusIndex + 1 );\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 420,
+        "wires": [
+            [
+                "76156bd284c44107",
+                "c8986b2efe5ea864"
+            ]
+        ]
+    },
+    {
+        "id": "76156bd284c44107",
+        "type": "switch",
+        "z": "5c01f085dcb66947",
+        "name": "status msg",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 3,
+        "x": 690,
+        "y": 420,
+        "wires": [
+            [
+                "f3a4bda1507ed07e",
+                "87a0d03591b9218c"
+            ],
+            [
+                "83d02925812c6fb1"
+            ],
+            [
+                "cb21bef1332ac21c"
+            ]
+        ]
+    },
+    {
+        "id": "2cd9c06518f98e07",
+        "type": "switch",
+        "z": "5c01f085dcb66947",
+        "name": "Held Down",
+        "property": "payload.key",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "RIGHT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "bf4c1848a3227b77"
+            ]
+        ],
+        "outputLabels": [
+            "RIGHT"
+        ]
+    },
+    {
+        "id": "bf4c1848a3227b77",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Shutdown?",
+        "func": "\n//\n// 'Press and hold' a button logic\n//\n\nclearTimeout( flow.get('status-timeout') );\nflow.set( 'status-timout', setTimeout( function(){\n    flow.set( 'status-timeout', 0 );\n}));\n\nvar count = flow.get('shutdown-count') || 0;\ncount = count + 1\nmsg.count = count;\nflow.set( 'shutdown-count', count );\n\nif ( count < 120 ){\n    return null; // don't pass this message on\n}\n\n// we have a shutdown event!\n\nmsg.payload = \"SHUTDOWN\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 640,
+        "wires": [
+            [
+                "c0e3133d6cacbafc"
+            ]
+        ]
+    },
+    {
+        "id": "841735dc4fb244cd",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show Shutdown",
+        "links": [
+            "93b5fb9030bae28e"
+        ],
+        "x": 855,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8ebce9b0fa2fbaa6",
+        "type": "delay",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 900,
+        "y": 640,
+        "wires": [
+            [
+                "053de5b72a59217e",
+                "c73e2ce0f92e6469"
+            ]
+        ]
+    },
+    {
+        "id": "053de5b72a59217e",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show empty",
+        "links": [
+            "0aadbca62592c880"
+        ],
+        "x": 1035,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c0e3133d6cacbafc",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Shutdown!",
+        "func": "\nmsg.payload = \"SHUTDOWN\";\nmsg.color   = \"#ff0000\";\n\n// prevent another message from getting through while the pi shuts down\nclearTimeout( flow.get('status-timeout') );\n\n// prevent another shutdown event from getting through\nflow.set( 'shutdown-count', -9999 );\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 640,
+        "wires": [
+            [
+                "841735dc4fb244cd",
+                "8ebce9b0fa2fbaa6"
+            ]
+        ]
+    },
+    {
+        "id": "979f03589cbf97a0",
+        "type": "link in",
+        "z": "5c01f085dcb66947",
+        "name": "Update Status Indicators",
+        "links": [
+            "01407065272b81cd"
+        ],
+        "x": 155,
+        "y": 780,
+        "wires": [
+            [
+                "3c173e48a677aaca",
+                "4e2b1869259fe27b"
+            ]
+        ]
+    },
+    {
+        "id": "afa3e4cc67aff56c",
+        "type": "comment",
+        "z": "5c01f085dcb66947",
+        "name": "Handle SenseHAT Joystick Events",
+        "info": "",
+        "x": 160,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5a45751d0751f3cc",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "LED Display",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 970,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "d1e44506c0e728a8",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "rotate",
+        "func": "msg.payload= \"R180\\n\"+msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 900,
+        "wires": [
+            [
+                "511824978207f8c4",
+                "5a45751d0751f3cc"
+            ]
+        ]
+    },
+    {
+        "id": "d09a3b6a6fbc7b16",
+        "type": "delay",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 120,
+        "wires": [
+            [
+                "f3a4bda1507ed07e"
+            ]
+        ]
+    },
+    {
+        "id": "93fd161e6319eb00",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Initialize",
+        "func": "flow.set('displayOff', false);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "d09a3b6a6fbc7b16"
+            ]
+        ]
+    },
+    {
+        "id": "87a0d03591b9218c",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "Get IP Address",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "82ac2043a2c0b806",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "IP Address",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a12ec22338fcf9c4",
+        "type": "comment",
+        "z": "5c01f085dcb66947",
+        "name": "This flow handles the interaction with the SenseHAT",
+        "info": "",
+        "x": 210,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "0f08e6e38c113b82",
+        "type": "comment",
+        "z": "5c01f085dcb66947",
+        "name": "Initialization",
+        "info": "",
+        "x": 90,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "49b507eedf19cfe5",
+        "type": "http in",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "url": "/measures",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 1140,
+        "wires": [
+            [
+                "f1bef6b249056980"
+            ]
+        ]
+    },
+    {
+        "id": "f1bef6b249056980",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "last measures",
+        "func": "\nmsg.payload = {\n    environment: global.get('environment'),\n    motion: global.get('motion'),\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 1140,
+        "wires": [
+            [
+                "57dc4c7982de8c71"
+            ]
+        ]
+    },
+    {
+        "id": "57dc4c7982de8c71",
+        "type": "http response",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "0d6191e5c2e7de91",
+        "type": "inject",
+        "z": "5c01f085dcb66947",
+        "name": "Clear",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 940,
+        "wires": [
+            [
+                "a6e7ea80f9702735"
+            ]
+        ]
+    },
+    {
+        "id": "47c3ce682abff4d1",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Toggle Display",
+        "func": "flow.set( 'displayOff', !flow.get('displayOff') );\n\nmsg.payload = flow.get('displayOff');\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 560,
+        "wires": [
+            [
+                "01407065272b81cd"
+            ]
+        ]
+    },
+    {
+        "id": "01407065272b81cd",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Toggle Display",
+        "links": [
+            "979f03589cbf97a0"
+        ],
+        "x": 675,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "4e2b1869259fe27b",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 310,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "457a628aeaf2e873",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "Joystick",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f05434bc8b099e6c",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Display Off",
+        "links": [
+            "0aadbca62592c880"
+        ],
+        "x": 695,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "2339239b7e619da8",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "DisplayON",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 750,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "48a72286dd0a4013",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "DisplayOFF",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 750,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "14a6faadfecbf1cf",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "Scroll Msg",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "a78deae23f37657c",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 750,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c73e2ce0f92e6469",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Shutdown Out",
+        "links": [
+            "95986bb76a75b1f9"
+        ],
+        "x": 1035,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5e04dae0da5bed65",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "RPE Name",
+        "func": "let name = global.get('RPE-Name');\n\nmsg.payload = 'ID: ' + name;\nmsg.color   = '#0000ff'; // Blue\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            [
+                "143e14c6f7f34efb"
+            ]
+        ]
+    },
+    {
+        "id": "ea35bcca5910c598",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "next msg",
+        "func": "\nvar STATUS_MESSAGE_COUNT = 3; // total number of status messages\n\nvar statusIndex = context.get('next-status') || 0;\n\nmsg.payload = statusIndex % STATUS_MESSAGE_COUNT;\n\ncontext.set('next-status', statusIndex + 1 );\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 480,
+        "wires": [
+            [
+                "d63f8a700883fc4f"
+            ]
+        ]
+    },
+    {
+        "id": "d63f8a700883fc4f",
+        "type": "switch",
+        "z": "5c01f085dcb66947",
+        "name": "status msg",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "5e04dae0da5bed65"
+            ],
+            [
+                "873ad173208c0382"
+            ],
+            [
+                "9b696198fc8884d9"
+            ]
+        ]
+    },
+    {
+        "id": "9b696198fc8884d9",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Hardware Version",
+        "func": "let hw = global.get('hardware');\n\nmsg.payload = 'HW: ' + hw;\nmsg.color   = '#00ff00'; // Green\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 560,
+        "wires": [
+            [
+                "5832e2bd41458234"
+            ]
+        ]
+    },
+    {
+        "id": "143e14c6f7f34efb",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show RPE ID Version",
+        "links": [
+            "93b5fb9030bae28e"
+        ],
+        "x": 1275,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5832e2bd41458234",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show Hardware Version",
+        "links": [
+            "93b5fb9030bae28e"
+        ],
+        "x": 1275,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "23e9846877106c65",
+        "type": "link in",
+        "z": "5c01f085dcb66947",
+        "name": "Payload to LEDs",
+        "links": [
+            "8519296f2a4314a6"
+        ],
+        "x": 155,
+        "y": 980,
+        "wires": [
+            [
+                "004d51c1439f438f"
+            ]
+        ]
+    },
+    {
+        "id": "004d51c1439f438f",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Set bar values to display",
+        "func": "// Select the values to display\nflow.set('CPU_Load', msg.payload.cl); //CPU Load\nflow.set('CPU_Temp', msg.payload.ct); //CPU Temperature\nflow.set('Osc_Temp', msg.payload.ot); //Oscillator Temperature\nflow.set('Sense_Temp', msg.payload.et); //SenseHAT Temperature\n",
+        "outputs": 0,
+        "noerr": 0,
+        "x": 370,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "873ad173208c0382",
+        "type": "function",
+        "z": "5c01f085dcb66947",
+        "name": "Software Version",
+        "func": "let sw = global.get('software');\n\nmsg.payload = 'SW: ' + sw;\nmsg.color   = '#ffff00'; // Yellow\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 520,
+        "wires": [
+            [
+                "e0d29645c6ac796f"
+            ]
+        ]
+    },
+    {
+        "id": "e0d29645c6ac796f",
+        "type": "link out",
+        "z": "5c01f085dcb66947",
+        "name": "Show Software Version",
+        "links": [
+            "93b5fb9030bae28e"
+        ],
+        "x": 1275,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2e973c545057ae12",
+        "type": "link in",
+        "z": "5c01f085dcb66947",
+        "name": "Shutdown",
+        "links": [
+            "6069954fba0a3dd0"
+        ],
+        "x": 585,
+        "y": 600,
+        "wires": [
+            [
+                "c0e3133d6cacbafc"
+            ]
+        ]
+    },
+    {
+        "id": "349c66ee2fe27f8a",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "Key Pressed",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c8986b2efe5ea864",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "Down",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "659f10f3d232dd1c",
+        "type": "debug",
+        "z": "5c01f085dcb66947",
+        "name": "IP to be shown",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "09ca559c4697dac2",
+        "type": "exec",
+        "z": "1ba9ecdc13615029",
+        "command": "sysbench --test=cpu --cpu-max-prime=100000 --num-threads=3 --max-time=300 run",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Loadtest",
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "aedd23cc9907a1e2",
+                "d08f3a5c31280e7a"
+            ],
+            [
+                "5c8575f68f024acb",
+                "4b7da3661979ad49"
+            ],
+            [
+                "44710764266c8da3",
+                "3443c7bfd6b6af25"
+            ]
+        ]
+    },
+    {
+        "id": "aedd23cc9907a1e2",
+        "type": "debug",
+        "z": "1ba9ecdc13615029",
+        "name": "1 - Complete",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "5c8575f68f024acb",
+        "type": "debug",
+        "z": "1ba9ecdc13615029",
+        "name": "2 - Complete",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 690,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "44710764266c8da3",
+        "type": "debug",
+        "z": "1ba9ecdc13615029",
+        "name": "3 - Complete",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d08f3a5c31280e7a",
+        "type": "debug",
+        "z": "1ba9ecdc13615029",
+        "name": "1 - Payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4b7da3661979ad49",
+        "type": "debug",
+        "z": "1ba9ecdc13615029",
+        "name": "2 - Payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3443c7bfd6b6af25",
+        "type": "debug",
+        "z": "1ba9ecdc13615029",
+        "name": "3 - Payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 690,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3cff62199dd62d41",
+        "type": "cronplus",
+        "z": "1ba9ecdc13615029",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "Europe/Copenhagen",
+        "outputs": 1,
+        "options": [
+            {
+                "topic": "Every 15 min during working hours",
+                "payload": "Start Load Test",
+                "type": "str",
+                "expression": "0 0,15,30,45 8-17 * * MON-FRI",
+                "name": "Every 15 min during working hours"
+            }
+        ],
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "f9db7df60355d2ad",
+                "09ca559c4697dac2"
+            ]
+        ]
+    },
+    {
+        "id": "f9db7df60355d2ad",
+        "type": "debug",
+        "z": "1ba9ecdc13615029",
+        "name": "CRON+ Output",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 400,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3c0ff42594800780",
+        "type": "comment",
+        "z": "1ba9ecdc13615029",
+        "name": "This script handles the scheduled load test generation",
+        "info": "",
+        "x": 220,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "5003ce4774f9c71a",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "CPU Temp Dashboard",
+        "links": [
+            "147225d3911acdef"
+        ],
+        "x": 195,
+        "y": 120,
+        "wires": [
+            [
+                "dc857b3b9835fbd8",
+                "2efce66f5a826f3e"
+            ]
+        ]
+    },
+    {
+        "id": "0551d431530cb913",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "CPU Load Dashboard",
+        "links": [
+            "62d764d9efdeed49"
+        ],
+        "x": 195,
+        "y": 220,
+        "wires": [
+            [
+                "17b408d50477a981",
+                "eb19b0754b1ad77f"
+            ]
+        ]
+    },
+    {
+        "id": "dc857b3b9835fbd8",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "79c576528b6aa971",
+        "order": 1,
+        "width": "6",
+        "height": "5",
+        "gtype": "gage",
+        "title": "CPU Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 530,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2efce66f5a826f3e",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "dccd0cde175bd172",
+        "order": 1,
+        "width": "20",
+        "height": "5",
+        "label": "CPU Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "45",
+        "ymax": "85",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 530,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17b408d50477a981",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "79c576528b6aa971",
+        "order": 1,
+        "width": "6",
+        "height": "5",
+        "gtype": "gage",
+        "title": "CPU Load",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "85",
+        "x": 510,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "eb19b0754b1ad77f",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "dccd0cde175bd172",
+        "order": 1,
+        "width": "20",
+        "height": "5",
+        "label": "CPU Load",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 510,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "942f20dbf2bf5429",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "OSC Frequency Dashboard",
+        "links": [
+            "b408b369295b54ba"
+        ],
+        "x": 195,
+        "y": 320,
+        "wires": [
+            [
+                "acb2a740222b6c5f",
+                "a0f9de536d2ce7f9"
+            ]
+        ]
+    },
+    {
+        "id": "acb2a740222b6c5f",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "79c576528b6aa971",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "OSC Frequency",
+        "label": "MHz",
+        "format": "{{value}}",
+        "min": "2.5",
+        "max": "3.5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "2.95",
+        "seg2": "3.1",
+        "x": 520,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a0f9de536d2ce7f9",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "dccd0cde175bd172",
+        "order": 1,
+        "width": "20",
+        "height": "4",
+        "label": "OSC Frequency",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "2.9",
+        "ymax": "3.4",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 520,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d96998cdedbe218",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "Osc Voltagte Dashboard",
+        "links": [
+            "c3eb06c1eedc3618"
+        ],
+        "x": 195,
+        "y": 420,
+        "wires": [
+            [
+                "bf1ce3e32b511bb0",
+                "5755cd310f917157"
+            ]
+        ]
+    },
+    {
+        "id": "bf1ce3e32b511bb0",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "79c576528b6aa971",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "OSC Voltage",
+        "label": "V",
+        "format": "{{value}}",
+        "min": "1.1",
+        "max": "1.3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "1.201",
+        "seg2": "1.27",
+        "x": 510,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "5755cd310f917157",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "dccd0cde175bd172",
+        "order": 1,
+        "width": "20",
+        "height": "4",
+        "label": "OSC Voltage",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "1.15",
+        "ymax": "1.35",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 510,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43fa76ab2533fa89",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "OSC Temperature Dashboard",
+        "links": [
+            "40b73327b2157870"
+        ],
+        "x": 195,
+        "y": 520,
+        "wires": [
+            [
+                "9c67d25466125c20",
+                "01fdf65d504bfec7"
+            ]
+        ]
+    },
+    {
+        "id": "9c67d25466125c20",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "79c576528b6aa971",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "OSC Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 530,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "01fdf65d504bfec7",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "0d59f8b1a80503cd",
+        "name": "",
+        "group": "dccd0cde175bd172",
+        "order": 1,
+        "width": "20",
+        "height": "4",
+        "label": "OSC Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "45",
+        "ymax": "85",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 530,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3637ce27593a32be",
+        "type": "comment",
+        "z": "ef169a4f553187bd",
+        "name": "This flow takes care of the local dashboard",
+        "info": "",
+        "x": 180,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "23bc52f1dd5562b1",
+        "type": "ui_button",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "name": "",
+        "group": "e5202e8463d4cbf2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "63e6d0190cddc82b"
+            ]
+        ]
+    },
+    {
+        "id": "3dcc72bca8c0e6b5",
+        "type": "ui_button",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "name": "",
+        "group": "e5202e8463d4cbf2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Shutdown",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 950,
+        "y": 320,
+        "wires": [
+            [
+                "f9440cc23e7b8e76"
+            ]
+        ]
+    },
+    {
+        "id": "050e7e9ed97e1e09",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "HAT Temperature Dashboard",
+        "links": [
+            "de7672a0830ef659"
+        ],
+        "x": 195,
+        "y": 660,
+        "wires": [
+            [
+                "d61a46fedc282371",
+                "14b145c80498682c"
+            ]
+        ]
+    },
+    {
+        "id": "d61a46fedc282371",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "",
+        "group": "d7ef781262ba03c2",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "HAT Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "14b145c80498682c",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "",
+        "group": "f501320b4b627325",
+        "order": 1,
+        "width": "20",
+        "height": "6",
+        "label": "HAT Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "50",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 530,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63e6d0190cddc82b",
+        "type": "link out",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "name": "Reboot Out",
+        "links": [
+            "7877acdac06f1582"
+        ],
+        "x": 1195,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f9440cc23e7b8e76",
+        "type": "link out",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "name": "Shutdown Out",
+        "links": [
+            "95986bb76a75b1f9"
+        ],
+        "x": 1195,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3d7c21866d3e4ad3",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "HAT Temperature Dashboard",
+        "links": [
+            "2721829be039d7e3"
+        ],
+        "x": 195,
+        "y": 740,
+        "wires": [
+            [
+                "158f44ae8bd4e8be",
+                "e728703570843eda"
+            ]
+        ]
+    },
+    {
+        "id": "158f44ae8bd4e8be",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "",
+        "group": "d7ef781262ba03c2",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "HAT Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 520,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e728703570843eda",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "",
+        "group": "f501320b4b627325",
+        "order": 1,
+        "width": "20",
+        "height": "6",
+        "label": "HAT Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 520,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbedfbf5537f99f0",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "HAT Temperature Dashboard",
+        "links": [
+            "e8005441ef2323e9"
+        ],
+        "x": 195,
+        "y": 820,
+        "wires": [
+            [
+                "71c8a6c328216080",
+                "6ccb96b5f7fa71d1"
+            ]
+        ]
+    },
+    {
+        "id": "71c8a6c328216080",
+        "type": "ui_gauge",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "",
+        "group": "d7ef781262ba03c2",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "HAT Pressure",
+        "label": "mbar",
+        "format": "{{value}}",
+        "min": "900",
+        "max": "1100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 520,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "6ccb96b5f7fa71d1",
+        "type": "ui_chart",
+        "z": "ef169a4f553187bd",
+        "g": "7aa084990def344f",
+        "name": "",
+        "group": "f501320b4b627325",
+        "order": 1,
+        "width": "20",
+        "height": "6",
+        "label": "HAT Pressure",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "900",
+        "ymax": "1100",
+        "removeOlder": "90",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 520,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8be3e3b467709c3d",
+        "type": "ui_text",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "group": "b7898575f20f0298",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Software Version Information",
+        "label": "Software",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1220,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9c4b61a820ea5130",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "name": "SW Information In",
+        "links": [
+            "952b253616bdc3e5"
+        ],
+        "x": 995,
+        "y": 380,
+        "wires": [
+            [
+                "8be3e3b467709c3d"
+            ]
+        ]
+    },
+    {
+        "id": "e1d014fd540e7aea",
+        "type": "ui_text",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "group": "b7898575f20f0298",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Hardware Version Information",
+        "label": "Hardware",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1230,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "678455e1a238c3e1",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "c166c63be31a616c",
+        "name": "HW Information In",
+        "links": [
+            "914e131f2ae283b4"
+        ],
+        "x": 995,
+        "y": 420,
+        "wires": [
+            [
+                "e1d014fd540e7aea"
+            ]
+        ]
+    },
+    {
+        "id": "264051881213693d",
+        "type": "ui_template",
+        "z": "ef169a4f553187bd",
+        "g": "4f048d898ba582cf",
+        "group": "79c576528b6aa971",
+        "name": "Toolbar",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n    $('#titlewords').remove();\n    var toolbar = $('#nr-dashboard-toolbar');\n    //var div = $('<div style=\"text-align:left; padding-left:10px; width:100%;\"/>');\n    var div = $('<div style=\"position: absolute; right: 20px; top: 5px; height: 30px;\"/>');\n    var p = $('<p/ id=\"titlewords\">');\n    \n    $('#titleScript').parent().hide();\n    div.append(p);\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n\n    // Watch the payload and update the title\n    (function(scope) {\n        scope.$watch('msg.payload', function(data) {\n            displayTitle(data);\n        });\n    })(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 1200,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27fbf1d911a76a2d",
+        "type": "ui_template",
+        "z": "ef169a4f553187bd",
+        "g": "4f048d898ba582cf",
+        "group": "d7ef781262ba03c2",
+        "name": "Toolbar",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n    $('#titlewords').remove();\n    var toolbar = $('#nr-dashboard-toolbar');\n    //var div = $('<div style=\"text-align:left; padding-left:10px; width:100%;\"/>');\n    var div = $('<div style=\"position: absolute; right: 20px; top: 5px; height: 30px;\"/>');\n    var p = $('<p/ id=\"titlewords\">');\n    \n    $('#titleScript').parent().hide();\n    div.append(p);\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n\n    // Watch the payload and update the title\n    (function(scope) {\n        scope.$watch('msg.payload', function(data) {\n            displayTitle(data);\n        });\n    })(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 1200,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a9c1d224c39f3d8",
+        "type": "link in",
+        "z": "ef169a4f553187bd",
+        "g": "4f048d898ba582cf",
+        "name": "Header Info",
+        "links": [
+            "fcef0f5a51b4cae4"
+        ],
+        "x": 895,
+        "y": 120,
+        "wires": [
+            [
+                "264051881213693d",
+                "27fbf1d911a76a2d"
+            ]
+        ]
+    }
+]

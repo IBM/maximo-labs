@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/view_alert/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. View alerts at device/device type - Monitor Alerts</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. View alerts at device/device type";
+        var mkdocs_page_input_path = "view_alert.md";
+        var mkdocs_page_url = "/maximo-labs/view_alert/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Alerts
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Alerts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_alert/">1. Setup alerts at device type</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. View alerts at device/device type</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#default-dashboard">Default Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#custom-dashboard">Custom Dashboard</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hierarchyAlerts/">3. Setup alerts at different Hierarchy level</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../servicerequest/">4. Create service request based on an alert</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Alerts</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. View alerts at device/device type</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to view alerts in monitor dashboard.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>
+<p>Completed the prerequisites listed in the <a href="../prereqs/">All Labs Prerequisites</a>.</p>
+</li>
+<li>
+<p>Finished the previous exercises in this lab series.</p>
+</li>
+</ol>
+<hr />
+<h3 id="default-dashboard">Default Dashboard</h3>
+<p>Once the Alert KPI is configured at the device type level, a dashboard named "Alerts" will automatically be added to the device type.</p>
+<p>Navigate to the Device type Dashboard view from the left sidebar.
+<img alt="setup alert" src="../img/ha17.png" /></br>
+Search for the device type and click on it to open the details.
+<img alt="setup alert" src="../img/ha18.png" /></br>
+You will see the Alerts Dashboard as below.
+<img alt="setup alert" src="../img/ha19.png" /></br>
+Alert Table displays all alerts related to the device type and its associated devices. You can click on the Source link to navigate directly to the device that triggered the alert.</p>
+<h3 id="custom-dashboard">Custom Dashboard</h3>
+<p>You can create custom dashboards for both device types and individual devices. In this exercise, we will create a custom dashboard for a specific device.</p>
+<p>Navigate to the device and open its Device Details page.
+<img alt="setup alert" src="../img/viewalert1.png" /></br>
+Click on the Dashboard tab, then click the "Add Dashboard" button.
+<img alt="setup alert" src="../img/viewalert2.png" /></br>
+Enter a title for your dashboard and click "Configure Dashboard".
+<img alt="setup alert" src="../img/viewalert3.png" /></br>
+The Dashboard Editor will open. From the right sidebar, select "Alert Table".
+<img alt="setup alert" src="../img/viewalert4.png" /></br>
+Provide a title and description for the alert. Choose a time range for the data and click "Add Card".
+<img alt="setup alert" src="../img/viewalert5.png" /></br>
+From the right sidebar, select "Time series line". Enter a title, Enable Overlay with Alerts, Select the alert name, Click "Add Card".
+<img alt="setup alert" src="../img/viewalert6.png" /></br>
+Click "Save and Close".
+<img alt="setup alert" src="../img/viewalert11.png" /></br>
+The newly created alert dashboard will now appear in the Dashboard tab.
+<img alt="setup alert" src="../img/viewalert7.png" /></br>
+To view it from the device type level, Navigate to the Device Type view from the left sidebar.
+<img alt="setup alert" src="../img/viewalert8.png" /></br>
+Search for your device type, click the dropdown arrow, and select the device.
+<img alt="setup alert" src="../img/viewalert9.png" /></br></p>
+<p>You will now see a beautifully customized Alert Dashboard.</p>
+<ul>
+<li>You can rearrange the cards and resize them as needed.</li>
+<li>In the Timeseries card, alerts are shown as red markers. Hover over them to view the metric and alert values.</li>
+</ul>
+<p><img alt="setup alert" src="../img/viewalert10.png" /></br></p>
+<hr />
+<p>Congratulations you have successfully created Alert Dashboard🤗.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup_alert/" class="btn btn-neutral float-left" title="1. Setup alerts at device type"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../hierarchyAlerts/" class="btn btn-neutral float-right" title="3. Setup alerts at different Hierarchy level">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup_alert/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../hierarchyAlerts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

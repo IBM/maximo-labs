@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Radhika Surani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/nodata_alerts/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Nodata Alert - Monitor Smart Alerts</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Nodata Alert";
+        var mkdocs_page_input_path = "nodata_alerts.md";
+        var mkdocs_page_url = "/maximo-labs/nodata_alerts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Smart Alerts
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Custom Function</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Nodata Alert</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-nodata-alert">What is a NoData Alert?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#use-cases">Use Cases</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuration-parameters">Configuration Parameters</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ui-configuration">UI Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration-steps">Configuration Steps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-configure-nodata-alert">Step 1: Configure NoData Alert</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-set-alert-parameters">Step 2: Set Alert Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-timeline">Example Timeline</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-1-device-stops-sending-data">Scenario 1: Device Stops Sending Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-2-monitoring-specific-data-item">Scenario 2: Monitoring Specific Data Item</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#backtrack-support">Backtrack Support</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#use-case-resolving-alerts-after-data-upload">Use Case: Resolving Alerts After Data Upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-it-works">How It Works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-timeline_1">Example Timeline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits">Benefits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../alerts_by_occurrences_count/">2. AlertsByOccurrencesCount</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_alert_in_manage/">3. Create Alert In Manage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Smart Alerts</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Nodata Alert</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nodata-alerts">NoData Alerts</h1>
+<h2 id="objective">Objective</h2>
+<p>In this exercise, you will configure a NoData Alert to detect when devices stop sending data for a specified duration. This alert type is essential for identifying device offline conditions, connectivity issues, and sensor failures.</p>
+<hr />
+<h2 id="what-is-a-nodata-alert">What is a NoData Alert?</h2>
+<p>A <strong>NoData Alert</strong> triggers when data not arrive from a device for a continuous duration <strong>D</strong>. Unlike occurrence-based alerts that count condition breaches, NoData Alerts are <strong>time-gap based</strong> and detect silent periods in data streams.</p>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li><strong>Device Offline Detection</strong></li>
+<li><strong>Sensor Heartbeat Monitoring</strong></li>
+<li><strong>Connectivity Outage</strong></li>
+</ul>
+<hr />
+<h2 id="configuration-parameters">Configuration Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>duration</strong></td>
+<td>int</td>
+<td>Yes</td>
+<td>-</td>
+<td>Minimum time period without data before the first alert is triggered</td>
+</tr>
+<tr>
+<td><strong>duration_unit</strong></td>
+<td>int</td>
+<td>Yes</td>
+<td>-</td>
+<td>Duration threshold in minutes/hours/days</td>
+</tr>
+<tr>
+<td><strong>cooldown</strong></td>
+<td>int</td>
+<td>No</td>
+<td>-</td>
+<td>Minimum time between consecutive alerts</td>
+</tr>
+<tr>
+<td><strong>cooldown_unit</strong></td>
+<td>String</td>
+<td>No</td>
+<td>Minute</td>
+<td>Cooldown Unit in minutes/hours/days</td>
+</tr>
+<tr>
+<td><strong>input_item</strong></td>
+<td>String</td>
+<td>No</td>
+<td>None</td>
+<td>Optional specific data item to monitor</td>
+</tr>
+<tr>
+<td><strong>create_alert_in_manage</strong></td>
+<td>boolean</td>
+<td>Yes</td>
+<td>-</td>
+<td>Create Alert in Manage</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p></br></br></p>
+<h3 id="ui-configuration">UI Configuration</h3>
+<p><img alt="Configure Device ID" src="../img/nodata_ui_config.png" /></br></br></p>
+<hr />
+<h3 id="configuration-steps">Configuration Steps</h3>
+<h3 id="step-1-configure-nodata-alert">Step 1: Configure NoData Alert</h3>
+<ol>
+<li>Navigate to </li>
+<li>Select your device type and click <strong>Edit</strong></li>
+<li>Navigate to the <strong>Calculated Metrics</strong> tab</li>
+<li>Click <strong>Create Calculated Metric</strong></li>
+<li>Select <strong>NoData Alert</strong> from the KPI catalog</li>
+</ol>
+<h3 id="step-2-set-alert-parameters">Step 2: Set Alert Parameters</h3>
+<p>Configure the following parameters:</p>
+<p><strong>Duration (D):</strong></p>
+<pre><code>Example: 5 hours
+</code></pre>
+<ul>
+<li>How long to wait before triggering an alert</li>
+<li>Consider normal data transmission intervals</li>
+<li>Account for expected maintenance windows</li>
+</ul>
+<p><strong>Cooldown Period:</strong></p>
+<pre><code>Example: 1 day
+</code></pre>
+<ul>
+<li>Prevents alert spam during prolonged outages</li>
+</ul>
+<p><strong>Data Item (Optional):</strong></p>
+<pre><code>Example: temperature_sensor
+</code></pre>
+<ul>
+<li>Monitor specific data item instead of all device data</li>
+</ul>
+<p><strong>Alert Actions:</strong></p>
+<ol>
+<li>select alert severity (Critical, High, Medium, Low)</li>
+<li>select alert creation status(New, Resolved, Acknowledge, validated) </li>
+<li>select create alert in manage(True, False)</li>
+</ol>
+<hr />
+<h2 id="example-timeline">Example Timeline</h2>
+<h3 id="scenario-1-device-stops-sending-data">Scenario 1: Device Stops Sending Data</h3>
+<p>When no specific data item is configured, the alert monitors <strong>all device data</strong>.</p>
+<p><strong>Configuration:</strong>
+- Duration (D) = 2 hours
+- Cooldown = 3 hours
+- Data Item = None (monitors all metrics)</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Pressure</th>
+<th>Temperature</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>✓</td>
+<td>✓</td>
+<td>Data received</td>
+</tr>
+<tr>
+<td>12:04</td>
+<td>✓</td>
+<td>✓</td>
+<td>Data received</td>
+</tr>
+<tr>
+<td>12:05</td>
+<td>✓</td>
+<td>✓</td>
+<td>Data received</td>
+</tr>
+<tr>
+<td>14:05</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Alert fires</strong> (12:05 to 14:05 → 2 hours, no data for ALL metrics)</td>
+</tr>
+<tr>
+<td>17:05</td>
+<td>-</td>
+<td>-</td>
+<td><strong>Alert fires</strong> (cooldown expired, still no data)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Points:</strong>
+- Alert triggers when <strong>data not</strong> arrives for <strong>all metric</strong>
+- Both Pressure and Temperature must be missing
+- If either metric sends data, the gap resets</p>
+<p></br></br></p>
+<h3 id="scenario-2-monitoring-specific-data-item">Scenario 2: Monitoring Specific Data Item</h3>
+<p>When a specific data item is configured, the alert monitors <strong>only that data item</strong>.</p>
+<p><strong>Configuration:</strong>
+- Duration (D) = 2 hours
+- Cooldown = 3 hours
+- Data Item = Temperature</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Pressure</th>
+<th>Temperature</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>✓</td>
+<td>✓</td>
+<td>Data received</td>
+</tr>
+<tr>
+<td>12:04</td>
+<td>✓</td>
+<td>✓</td>
+<td>Data received</td>
+</tr>
+<tr>
+<td>12:05</td>
+<td>✓</td>
+<td>✓</td>
+<td>Data received</td>
+</tr>
+<tr>
+<td>13:00</td>
+<td>✓</td>
+<td>-</td>
+<td>Pressure continues, Temperature stops</td>
+</tr>
+<tr>
+<td>14:05</td>
+<td>✓</td>
+<td>-</td>
+<td><strong>Alert fires</strong> (12:05 to 14:05 → 2 hours, no Temperature data)</td>
+</tr>
+<tr>
+<td>14:30</td>
+<td>✓</td>
+<td>-</td>
+<td>No new alert (cooldown active)</td>
+</tr>
+<tr>
+<td>17:05</td>
+<td>✓</td>
+<td>-</td>
+<td><strong>Alert fires</strong> (cooldown expired, still no Temperature)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Points:</strong>
+- Alert triggers when <strong>Temperature</strong> data is missing for 2 hours
+- Only Temperature gaps are monitored</p>
+<hr />
+<h2 id="backtrack-support">Backtrack Support</h2>
+<p>NoData Alerts support backtracking to handle historical data scenarios and resolve alerts retroactively.</p>
+<h3 id="use-case-resolving-alerts-after-data-upload">Use Case: Resolving Alerts After Data Upload</h3>
+<p><strong>Scenario:</strong> </br>
+1. Device experiences an outage and stops sending data</br>
+2. NoData Alert is triggered (Status: <strong>New</strong>)</br>
+3. Missing data is uploaded via CSV file upload</br>
+4. Pipeline runs in backtrack mode</br>
+5. Alert status automatically updates from <strong>New</strong> to <strong>Resolved</strong></br></p>
+<h3 id="how-it-works">How It Works</h3>
+<p>When you upload historical data that fills a data gap:</p>
+<ol>
+<li><strong>Upload Missing Data</strong>: Use CSV file upload to add data for the missing time period</li>
+<li><strong>Run Pipeline in Backtrack</strong>: Execute the pipeline in backtrack mode for the affected time range</li>
+<li><strong>Automatic Resolution</strong>: The system detects that data now exists for the previously missing period</li>
+<li><strong>Alert Status Update</strong>: Alert status changes from <strong>New</strong> to <strong>Resolved</strong></li>
+</ol>
+<h3 id="example-timeline_1">Example Timeline</h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Event</th>
+<th>Alert Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>Device stops sending data</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14:00</td>
+<td>NoData Alert fires (2-hour gap)</td>
+<td><strong>New</strong></td>
+</tr>
+<tr>
+<td>15:00</td>
+<td>Upload CSV with data for 12:00-14:00</td>
+<td><strong>New</strong></td>
+</tr>
+<tr>
+<td>15:05</td>
+<td>Run pipeline in backtrack mode</td>
+<td><strong>Resolved</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="benefits">Benefits</h3>
+<ul>
+<li><strong>Retroactive Resolution</strong>: Alerts are automatically resolved when missing data is provided</li>
+<li><strong>Accurate History</strong>: Alert records reflect the actual data availability</li>
+<li><strong>No Manual Intervention</strong>: No need to manually close alerts after data upload</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>You have learned how to:</p>
+<p>✅ Understand NoData Alert concepts and use cases<br />
+✅ Configure duration and cooldown parameters<br />
+✅ Set up alerts for device offline detection<br />
+✅ Handle backtrack scenarios  </p>
+<hr />
+<h2 id="next-steps">Next Steps</h2>
+<p>Proceed to <a href="../alerts_by_occurrences_count/">Exercise 2: Alerts by Occurrences Count</a> to learn about frequency-based alerting.</p>
+<hr />
+<p><strong>Congratulations!</strong> You have successfully configured NoData Alerts for proactive device monitoring.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../alerts_by_occurrences_count/" class="btn btn-neutral float-right" title="2. AlertsByOccurrencesCount">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../alerts_by_occurrences_count/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
