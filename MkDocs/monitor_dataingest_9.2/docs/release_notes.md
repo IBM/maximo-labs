@@ -11,6 +11,6 @@
 
 |Date      |By         | Description |
 |:---------|:----------|:------------|
-|2026-06-11|Margi Shah | Initial release of the Data Ingestion lab with documentation for CSV upload, template download, file validation, status tracking, storage usage, retention settings, file download, and file deletion. |
+|2026-06-19|Margi Shah | Initial release of the Data Ingestion lab with documentation for CSV upload, template download, file validation, status tracking, storage usage, retention settings, file download, and file deletion. |
 
 ---

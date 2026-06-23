@@ -31,15 +31,16 @@ Look at the character used above and belove these two lines of text.
 
 ##############################################################
 #### Maximo Application Suite 9.2 Labs                    ####
-# Build the smart alerts:
-lab=monitor_smart_alerts_9.2
+
+#### Build the Monitor Re-Architecture level:
+lab=monitor_iot_re-architecture_9.2
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Data Ingestion:
+# Build the Data Ingestion level:
 lab=monitor_dataingest_9.2
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -47,8 +48,7 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-##############################################################
-#### Maximo Application Suite 9.2 Labs
+#### Build the Managed Gateway Fallback level:
 lab=monitor_managed_gw_fallback-system_9.2
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -56,9 +56,43 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
+# Build the smart alerts level:
+lab=monitor_smart_alerts_9.2
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Resource Based Access Control 9.2 level:
+lab=monitor_resource_based_access_control_9.2
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+
+##############################################################
 #### Maximo Application Suite 9.1 Labs                    ####
 
-# Build the Monitor Modbus Custom Device upload:
+# Build the Monitor Parent Level Aggregation 9.1 level:
+lab=monitor_parent_level_aggregation_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Resource Based Access Control 9.1 level:
+lab=monitor_resource_based_access_control_9.1
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+# Build the Monitor Modbus Custom Device upload level:
 lab=monitor_managed_gw_json_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -66,7 +100,7 @@ cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
 
-# Build the Monitor Modbus Custom Device upload:
+# Build the Monitor Modbus Custom Device upload level:
 lab=monitor_modbus_custom_device_9.1
 echo "==================================================================================="
 echo "BUILD_INFO - The $lab lab is being build"
@@ -161,35 +195,6 @@ echo "BUILD_INFO - The $lab lab is being build"
 cd $root_dir/MkDocs/$lab
 mkdocs build
 echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
-
-# Build the Monitor Resource Based Access Control 9.1 level:
-lab=monitor_resource_based_access_control_9.1
-echo "==================================================================================="
-echo "BUILD_INFO - The $lab lab is being build"
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
-
-# Build the Monitor Parent Level Aggregation 9.1 level:
-lab=monitor_parent_level_aggregation_9.1
-echo "==================================================================================="
-echo "BUILD_INFO - The $lab lab is being build"
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
-
-##############################################################
-#### Maximo Application Suite 9.2 Labs                    ####
-
-# Build the Monitor Resource Based Access Control 9.2 level:
-lab=monitor_resource_based_access_control_9.2
-echo "==================================================================================="
-echo "BUILD_INFO - The $lab lab is being build"
-cd $root_dir/MkDocs/$lab
-mkdocs build
-echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
-
-##############################################################
 
 # Build the Monitor Managed Gatewway Modbus 9.0 level:
 lab=monitor_managed_gw_modbus_9.1

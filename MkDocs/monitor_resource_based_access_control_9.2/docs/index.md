@@ -49,3 +49,7 @@ In this guide, we will cover:
     Estimated time to complete gateway restriction setup and testing: **10–15 minutes**
 
 ---
+
+**Updated: 2026-06-16**
+
+---

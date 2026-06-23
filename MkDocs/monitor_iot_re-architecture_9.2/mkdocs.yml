@@ -2,7 +2,7 @@ site_name: Monitor IoTP Re-Architecture
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Pradipkumar Jinjala
 site_description: "Maximo Monitor IoTP Re-Architecture Hands on Lab"
-site_dir: ../../site/monitor-iot-re-architecture_9.2
+site_dir: ../../site/monitor_iot_re-architecture_9.2
 
 nav:
   - Get back to Maximo Labs: ..
