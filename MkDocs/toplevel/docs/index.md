@@ -14,13 +14,31 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 
 ### Maximo Application Suite 9.2
 
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor IoTP Re-Architecture](monitor_iot_re-architecture_9.2/) | [Generate API Key](monitor_iot_re-architecture_9.2/create_api_key) |
+|                                                                | [Edit / Update API Key](monitor_iot_re-architecture_9.2/edit_api_key)             |
+|                                                                | [Delete API Key](monitor_iot_re-architecture_9.2/delete_api_key)                  |
+|                                                                | [TLS With Token](monitor_iot_re-architecture_9.2/tls_with_token)                  |
+|                                                                | [TLS With Client Certificate or Token](monitor_iot_re-architecture_9.2/tls_with_cert_or_token) |
+|                                                                | [TLS With Client Certificate and Token](monitor_iot_re-architecture_9.2/tls_with_cert_and_token) |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor DataIngest](monitor_dataingest_9.2/) | [Navigate Data Ingestion](monitor_dataingest_9.2/upload_csv_files)                                        |
+|                                                                | [Download Built-in Template & Upload File](monitor_dataingest_9.2/download_template)            |
+|                                                                | [Uploaded File - Progress Tracking & Status](monitor_dataingest_9.2/file_status)                |
+|                                                                | [Download Processed and Error Files](monitor_dataingest_9.2/download_file)                      |
+|                                                                | [Storage Usage & Storage Mode](monitor_dataingest_9.2/storage_guide)                            |
+|                                                                | [File Retention Days](monitor_dataingest_9.2/file_retention)                                    |
+|                                                                | [Delete File](monitor_dataingest_9.2/delete_file)                                               |
+
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway Fallback](monitor_managed_gw_fallback-system_9.2/)     | [Understanding the Managed Gateway fallback hierarchy](monitor_managed_gw_fallback-system_9.2/fallback%20hierarchy)                                                                                  |
 |                                                              | [Simulating MQTT connection failures](monitor_managed_gw_fallback-system_9.2/MQTT%20connection%20failure)                                                        |
 |                                                              | [COS connection failure](monitor_managed_gw_fallback-system_9.2/COS%20connection%20failure)                                                               |
 |                                                              | [PV Fallback and Primary Publisher Recovery](monitor_managed_gw_fallback-system_9.2/PV%20Fallback%20and%20Primary%20Publisher%20Recovery)                                                               |
-
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,16 +50,6 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor Resource Based Access Control 9.2](monitor_resource_based_access_control_9.2/)  | [Gateway Restrictions](monitor_resource_based_access_control_9.2/gateway_restrictions)     |
 
-
-| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
-|----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor DataIngest](monitor_dataingest_9.2/) | [Navigate Data Ingestion](monitor_dataingest_9.2/upload_csv_files)                                        |
-|                                                                | [Download Built-in Template & Upload File](monitor_dataingest_9.2/download_template)            |
-|                                                                | [Uploaded File - Progress Tracking & Status](monitor_dataingest_9.2/file_status)                |
-|                                                                | [Download Processed and Error Files](monitor_dataingest_9.2/download_file)                      |
-|                                                                | [Storage Usage & Storage Mode](monitor_dataingest_9.2/storage_guide)                            |
-|                                                                | [File Retention Days](monitor_dataingest_9.2/file_retention)                                    |
-|                                                                | [Delete File](monitor_dataingest_9.2/delete_file)                                               |
 
 ### Maximo Application Suite 9.1 
 
@@ -325,6 +333,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2026-06-19
+### UPDATED: 2026-06-23
 
 ---

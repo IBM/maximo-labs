@@ -1,0 +1,47 @@
+site_name: Monitor IoTP Re-Architecture
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Pradipkumar Jinjala
+site_description: "Maximo Monitor IoTP Re-Architecture Hands on Lab"
+site_dir: ../../site/monitor_iot_re-architecture_9.2
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor IoTP Re-Architecture Lab:
+    - Welcome to this lab: index.md
+    - Get Started: getting_started.md
+    - Pre-Requisites: prereqs.md
+  - API Key Management:
+    - API Key Overview: api_key_overview.md
+    - 1. Generate API Key: create_api_key.md
+    - 2. Edit / Update API Key: edit_api_key.md
+    - 3. Delete API Key: delete_api_key.md
+  - IoT Security:
+    - IoT Security Overview: iot_security_overview.md
+    - 4. TLS With Token: tls_with_token.md
+    - 5. TLS With Client Certificate or Token: tls_with_cert_or_token.md
+    - 6. TLS With Client Certificate and Token: tls_with_cert_and_token.md
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+  
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js
