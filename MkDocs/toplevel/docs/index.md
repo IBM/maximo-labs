@@ -14,6 +14,15 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 
 ### Maximo Application Suite 9.2
 
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor IoTP Re-Architecture](monitor-iot-re-architecture_9.2/) | [Generate API Key](monitor-iot-re-architecture_9.2/create_api_key) |
+|                                                                | [Edit / Update API Key](monitor-iot-re-architecture_9.2/edit_api_key)             |
+|                                                                | [Delete API Key](monitor-iot-re-architecture_9.2/delete_api_key)                  |
+|                                                                | [TLS With Token](monitor-iot-re-architecture_9.2/tls_with_token)                  |
+|                                                                | [TLS With Client Certificate or Token](monitor-iot-re-architecture_9.2/tls_with_cert_or_token) |
+|                                                                | [TLS With Client Certificate and Token](monitor-iot-re-architecture_9.2/tls_with_cert_and_token) |
+
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | [Maximo Monitor Managed Gateway Fallback](monitor_managed_gw_fallback-system_9.2/)     | [Understanding the Managed Gateway fallback hierarchy](monitor_managed_gw_fallback-system_9.2/fallback%20hierarchy)                                                                                  |

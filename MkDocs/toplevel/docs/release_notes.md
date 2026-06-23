@@ -1,5 +1,6 @@
 # Contributors to the IBM Maximo Labs
 
+- Pradipkumar Jinjala - <pradipkumar.jinjala@ibm.com>
 - Carlos Ferreira - <carlos.ferreira1@ibm.com>
 - Jan Ekstrøm - <jan.ekstrom@dk.ibm.com>
 - Cecilia Stark - <cecilia.stark@ibm.com>
@@ -39,6 +40,7 @@
 | 2026-06-16 |Radhika Surani | Added the initial version of [Maximo Monitor Smart Alerts Lab](../monitor_smart_alerts_9.2/) for MAS 9.2.|
 |2026-06-16|Kajal Lalwani|Added the [Maximo Monitor Resource Based Access Control Lab](../monitor_resource_based_access_control_9.2/) for MAS 9.2. |
 |2026-06-16|Kajal Lalwani|Added the [Maximo Monitor Resource Based Access Control Lab](../monitor_resource_based_access_control_9.1/) for MAS 9.1. |
+|2026-06-18|Pradipkumar Jinjala    |Added the initial version of [Maximo Monitor IoTP Re-Architecture Lab](../monitor-iot-re-architecture_9.2/) for MAS 9.2. |
 |2025-09-05|Jan Ekstrøm    |Moved these Maximo Labs to the archive: Maximo SaaS, MAS 8.5, MAS 8.7, MAS 8.8, MAS 8.9.  |
 |2025-07-16|Saravanan Krishnamoorthy |Added the initial version of [Maximo Monitor Json-over-http custom device upload lab](../monitor_managed_gw_json_9.1/) for MAS 9.1. |
 |2025-07-11|Saravanan Krishnamoorthy |Added the initial version of [Maximo Monitor Modbus custom device upload lab](../monitor_modbus_custom_device_9.1/) for MAS 9.1. |
