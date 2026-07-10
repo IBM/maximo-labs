@@ -73,6 +73,9 @@ Example: temperature_sensor
 ```
 - Monitor specific data item instead of all device data
 
+!!! note
+    Data Item is optional only for the DeviceType, It is required for all other resource types.
+
 **Alert Actions:**
 
 1. select alert severity (Critical, High, Medium, Low)
