@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Kajal Lalwani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/resource_restriction_scenarios/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Resource Restriction Scenarios - Monitor Resource Based Access Control Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Resource Restriction Scenarios";
+        var mkdocs_page_input_path = "resource_restriction_scenarios.md";
+        var mkdocs_page_url = "/maximo-labs/resource_restriction_scenarios/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Resource Based Access Control Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor RBAC Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../create_security_groups/">1. Create Security Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_users/">2. Create Users and Assign Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_restriction_update/">3. Add Data Restrictions in Security Group</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Resource Restriction Scenarios</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-organization-restrictions">1. Organization Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-11-single-organization-access">Scenario 1.1: Single Organization Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-12-multiple-organization-access">Scenario 1.2: Multiple Organization Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-13-organization-pattern-matching">Scenario 1.3: Organization Pattern Matching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-14-organization-by-uuid">Scenario 1.4: Organization by UUID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-15-active-organizations-only">Scenario 1.5: Active Organizations Only</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-16-organization-by-category">Scenario 1.6: Organization by Category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-site-restrictions">2. Site Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-21-single-site-access">Scenario 2.1: Single Site Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-22-multiple-site-access">Scenario 2.2: Multiple Site Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-23-site-pattern-matching">Scenario 2.3: Site Pattern Matching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-24-active-sites-only">Scenario 2.4: Active Sites Only</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-system-restrictions">3. System Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-31-single-system-access">Scenario 3.1: Single System Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-32-multiple-system-access">Scenario 3.2: Multiple System Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-33-system-pattern-matching">Scenario 3.3: System Pattern Matching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-34-system-by-uuid">Scenario 3.4: System by UUID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-35-system-with-multiple-conditions">Scenario 3.5: System with multiple conditions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-location-restrictions">4. Location Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-41-single-location-access">Scenario 4.1: Single Location Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-42-multiple-location-access">Scenario 4.2: Multiple Location Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-43-location-pattern-matching">Scenario 4.3: Location Pattern Matching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-44-location-by-id-range">Scenario 4.4: Location by ID Range</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-45-location-with-various-filter-combinations">Scenario 4.5: Location with Various Filter Combinations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-asset-restrictions">5. Asset Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-51-single-asset-access">Scenario 5.1: Single Asset Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-52-multiple-asset-access">Scenario 5.2: Multiple Asset Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-53-asset-pattern-matching">Scenario 5.3: Asset Pattern Matching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-54-asset-by-location">Scenario 5.4: Asset by Location</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-55-asset-by-site">Scenario 5.5: Asset by Site</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-56-asset-by-uuid">Scenario 5.6: Asset by UUID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-57-asset-with-multiple-filters">Scenario 5.7: Asset with Multiple Filters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-device-type-restrictions">6. Device Type Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-61-single-device-type-access">Scenario 6.1: Single Device Type Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-62-multiple-device-type-access">Scenario 6.2: Multiple Device Type Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-63-device-type-pattern-matching">Scenario 6.3: Device Type Pattern Matching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-64-device-type-by-uuid">Scenario 6.4: Device Type by UUID</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-65-exclude-device-types-not-like">Scenario 6.5: Exclude Device Types (NOT LIKE)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-66-multiple-pattern-matching-or">Scenario 6.6: Multiple Pattern Matching (OR)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-67-name-and-description-combined-and">Scenario 6.7: Name and Description Combined (AND)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#direct-access-behavior">Direct Access Behavior</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-device-restrictions">7. Device Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-71-single-device-type-all-devices">Scenario 7.1: Single Device Type - All Devices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-72-multiple-device-types-all-their-devices">Scenario 7.2: Multiple Device Types - All Their Devices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-73-device-type-pattern-all-matching-devices">Scenario 7.3: Device Type Pattern - All Matching Devices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-74-device-type-by-uuid-all-its-devices">Scenario 7.4: Device Type by UUID - All Its Devices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#direct-access-behavior_1">Direct Access Behavior</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-pin-dashboard-restrictions">8. Pin Dashboard Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-pin-dashboard-restrictions-work">How Pin Dashboard Restrictions Work</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-81-pin-dashboard-with-location-restrictions">Scenario 8.1: Pin Dashboard with Location Restrictions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-82-pin-dashboard-with-asset-restrictions">Scenario 8.2: Pin Dashboard with Asset Restrictions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-83-pin-dashboard-with-device-type-restrictions">Scenario 8.3: Pin Dashboard with Device Type Restrictions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-84-pin-dashboard-with-multiple-resource-restrictions">Scenario 8.4: Pin Dashboard with Multiple Resource Restrictions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-multiple-security-groups-for-data-restrictions">Using Multiple Security Groups for Data Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-multiple-security-groups-work">How Multiple Security Groups Work</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-regional-manager-with-multiple-responsibilities">Example: Regional Manager with Multiple Responsibilities</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#security-group-1-bedford-site-access">Security Group 1: BEDFORD Site Access</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#security-group-2-asset-category-13-access">Security Group 2: Asset Category 13 Access</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#security-group-3-robot-devices-access">Security Group 3: ROBOT Devices Access</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-multi-site-operator">Example: Multi-Site Operator</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#security-group-1-multi-site-access">Security Group 1: Multi-Site Access</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#security-group-2-specific-location-access">Security Group 2: Specific Location Access</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits-of-multiple-security-groups">Benefits of Multiple Security Groups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices-for-multiple-security-groups">Best Practices for Multiple Security Groups</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-takeaways">Key Takeaways</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#independent-restrictions">Independent Restrictions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#application-coverage">Application Coverage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multiple-security-groups-strategy">Multiple Security Groups Strategy</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify_data_restrictions/">5. Verify User Data Restrictions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Resource Based Access Control Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Resource Restriction Scenarios</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="exercise-4-resource-restriction-scenarios">Exercise 4: Resource Restriction Scenarios</h1>
+<h2 id="overview">Overview</h2>
+<p>This exercise demonstrates practical scenarios for each resource type in Maximo Monitor. Data restrictions work at each hierarchy level independently:</p>
+<ul>
+<li><strong>Organization restriction</strong> → Controls access to organization details and dashboards</li>
+<li><strong>Site restriction</strong> → Controls access to site details (sites list shown on org detail page uses site query)</li>
+<li><strong>System restriction</strong> → Controls access to system details (systems shown on site detail page use system query)</li>
+<li><strong>Location restriction</strong> → Controls access to location details and location list pages</li>
+<li><strong>Asset restriction</strong> → Controls access to asset details and asset list pages</li>
+<li><strong>Device Type restriction</strong> → Controls access to device type details and device type list pages</li>
+<li><strong>Device restriction</strong> → Controls access to device details and device list pages (filtered by device type queries)</li>
+</ul>
+<hr />
+<h2 id="1-organization-restrictions">1. Organization Restrictions</h2>
+<h3 id="scenario-11-single-organization-access">Scenario 1.1: Single Organization Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ORGANIZATIONS</code>
+- <code>MONITOR_SETUP_ORGANIZATIONS</code></p>
+<p><strong>Query</strong>: <code>orgid="EAGLENA"</code></p>
+<p><strong>Description</strong>:
+When this restriction is applied, users can only access the EAGLENA organization. In the Dashboard application (<code>MONITOR_DB_ORGANIZATIONS</code>), users will see the EAGLENA organization details page and its associated dashboards. In the Setup application (<code>MONITOR_SETUP_ORGANIZATIONS</code>), users can view EAGLENA organization details in overview page. The hierarchy page will only display EAGLENA in the organization list. All other organizations will be completely hidden from the user's view.</p>
+<p><img alt="Organization Single Access" src="../img/org_single_access_db.png" /></p>
+<p><img alt="Organization Single Access" src="../img/org_single_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-12-multiple-organization-access">Scenario 1.2: Multiple Organization Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ORGANIZATIONS</code>
+- <code>MONITOR_SETUP_ORGANIZATIONS</code></p>
+<p><strong>Query</strong>: <code>orgid in ["EAGLENA","EAGLESA"]</code></p>
+<p><strong>Description</strong>:
+Users with this restriction can access both EAGLENA and EAGLESA organizations. In the Dashboard application, they can view dashboards for both organizations. In the Setup application, The hierarchy page will show both EAGLENA and EAGLESA in the organization list, allowing users to navigate between them. Any other organizations in the system will remain hidden.</p>
+<p><img alt="Organization Multiple Access" src="../img/org_multiple_access_db.png" /></p>
+<p><img alt="Organization Multiple Access" src="../img/org_multiple_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-13-organization-pattern-matching">Scenario 1.3: Organization Pattern Matching</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ORGANIZATIONS</code>
+- <code>MONITOR_SETUP_ORGANIZATIONS</code></p>
+<p><strong>Query</strong>: <code>orgid="EA%"</code></p>
+<p><strong>Description</strong>:
+This pattern-based restriction allows access to all organizations whose name start with "EA" (such as EAGLENA, EASTERN, EASTCOAST). Users can view and manage all matching organizations in both Dashboard and Setup applications. The hierarchy page will display all organizations matching this pattern. This is particularly useful when organizations follow a naming convention based on regions or business units.</p>
+<p><img alt="Organization Pattern Access" src="../img/org_pattern_access_db.png" /></p>
+<p><img alt="Organization Pattern Access" src="../img/org_pattern_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-14-organization-by-uuid">Scenario 1.4: Organization by UUID</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ORGANIZATIONS</code>
+- <code>MONITOR_SETUP_ORGANIZATIONS</code></p>
+<p><strong>Query</strong>: <code>organizationid in [1,4,16,20,23]</code></p>
+<p><strong>Description</strong>:
+This restriction uses internal organization UUIDs. Users can access only the organizations with the specified UUID values. This approach is more stable than using organization names because UUIDs don't change even if the organization ID is modified. In both Dashboard and Setup applications, only organizations matching these UUIDs will be accessible. This is particularly useful for system integrations or when organization names might be renamed.</p>
+<p><img alt="Organization UUID Access" src="../img/org_uuid_access_db.png" /></p>
+<p><img alt="Organization UUID Access" src="../img/org_uuid_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-15-active-organizations-only">Scenario 1.5: Active Organizations Only</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ORGANIZATIONS</code>
+- <code>MONITOR_SETUP_ORGANIZATIONS</code></p>
+<p><strong>Query</strong>: <code>active=1</code></p>
+<p><strong>Description</strong>:
+This restriction filters organizations based on their active status. Users will only see organizations that are currently active (active=1 or active=true). Inactive or decommissioned organizations will not appear in either the Dashboard or Setup applications. The hierarchy page will only show active organizations. This helps operations teams focus on current, operational organizations without being distracted by historical or inactive data.</p>
+<hr />
+<h3 id="scenario-16-organization-by-category">Scenario 1.6: Organization by Category</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ORGANIZATIONS</code>
+- <code>MONITOR_SETUP_ORGANIZATIONS</code></p>
+<p><strong>Query</strong>: <code>category="COUNT"</code></p>
+<p><strong>Description</strong>:
+Organizations can be categorized for different business purposes. This restriction limits access to organizations with a specific category value. Users will only see organizations where the category field equals "COUNT". This allows you to segment organizations by type, business unit, or any other categorical classification. Both Dashboard and Setup applications will respect this filter.</p>
+<hr />
+<h2 id="2-site-restrictions">2. Site Restrictions</h2>
+<h3 id="scenario-21-single-site-access">Scenario 2.1: Single Site Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SITES</code>
+- <code>MONITOR_SETUP_SITES</code></p>
+<p><strong>Query</strong>: <code>siteid="BEDFORD"</code></p>
+<p><strong>Description</strong>:
+Users with this restriction can only access the BEDFORD site. In the Dashboard application (<code>MONITOR_DB_SITES</code>), users will see dashboards created for the BEDFORD site. In the Setup application (<code>MONITOR_SETUP_SITES</code>), users can view BEDFORD site details in overview page. The hierarchy page will only display BEDFORD in the site list. When viewing an organization's detail page, only BEDFORD will appear in the sites list (if it belongs to that organization). All other sites will be completely hidden from the user's view.</p>
+<p><img alt="Site Single Access" src="../img/site_single_access_db.png" /></p>
+<p><img alt="Site Single Access" src="../img/site_single_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-22-multiple-site-access">Scenario 2.2: Multiple Site Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SITES</code>
+- <code>MONITOR_SETUP_SITES</code></p>
+<p><strong>Query</strong>: <code>siteid in ["BEDFORD","TEXAS"]</code></p>
+<p><strong>Description</strong>:
+This restriction grants access to both BEDFORD and TEXAS sites. In the Dashboard application, users can view dashboards created for both BEDFORD and TEXAS sites. In the Setup application, the hierarchy page will show both BEDFORD and TEXAS in the site list, and users can view their details in overview page. When viewing organization detail pages, the sites list will show only BEDFORD and TEXAS (if they belong to that organization). Any other sites in the system will remain hidden.</p>
+<p><img alt="Site Multiple Access" src="../img/site_multiple_access_db.png" /></p>
+<p><img alt="Site Multiple Access" src="../img/site_multiple_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-23-site-pattern-matching">Scenario 2.3: Site Pattern Matching</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SITES</code>
+- <code>MONITOR_SETUP_SITES</code></p>
+<p><strong>Query</strong>: <code>siteid="C%"</code></p>
+<p><strong>Description</strong>:
+This pattern-based restriction allows access to all sites whose names start with "C" (such as CHILEHDQ, CONCSITE). In the Dashboard application, users can view dashboards created for all matching sites. In the Setup application, the hierarchy page will display all sites matching this pattern, and users can view their details in overview page. When viewing organization detail pages, only sites matching this pattern will appear. This is useful when sites follow a geographic or functional naming convention.</p>
+<p><img alt="Site Pattern Access" src="../img/site_pattern_access_db.png" /></p>
+<p><img alt="Site Pattern Access" src="../img/site_pattern_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-24-active-sites-only">Scenario 2.4: Active Sites Only</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SITES</code>
+- <code>MONITOR_SETUP_SITES</code></p>
+<p><strong>Query</strong>: <code>active=1</code></p>
+<p><strong>Description</strong>:
+This restriction filters sites based on their active status. Users will only see sites that are currently operational (active=1). In the Dashboard application, users can view dashboards created for active sites only. In the Setup application, the hierarchy page will only show active sites, and users can view their details in overview page. When viewing organization detail pages, only active sites will appear. Inactive, closed, or decommissioned sites will not appear in either application. This helps operations teams focus on current facilities without being distracted by historical or inactive sites.</p>
+<hr />
+<h2 id="3-system-restrictions">3. System Restrictions</h2>
+<h3 id="scenario-31-single-system-access">Scenario 3.1: Single System Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SYSTEMS</code>
+- <code>MONITOR_SETUP_SYSTEMS</code></p>
+<p><strong>Query</strong>: <code>systemid='ITHQ'</code></p>
+<p><strong>Description</strong>:
+Users with this restriction can only access the system with ID "ITHQ". In the Dashboard application (<code>MONITOR_DB_SYSTEMS</code>), users will see dashboards created for the ITHQ system. In the Setup application (<code>MONITOR_SETUP_SYSTEMS</code>), users can view ITHQ system details in overview page. The hierarchy page will only display ITHQ in the system list. When viewing a site's detail page, only "ITHQ" will appear in the systems list (if it belongs to that site). All other systems will be completely hidden from the user's view.</p>
+<p><img alt="System Single Access" src="../img/system_single_access_setup.png" /></p>
+<p><img alt="System Single Access" src="../img/system_single_access_db.png" /></p>
+<hr />
+<h3 id="scenario-32-multiple-system-access">Scenario 3.2: Multiple System Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SYSTEMS</code>
+- <code>MONITOR_SETUP_SYSTEMS</code></p>
+<p><strong>Query</strong>: <code>systemid in ['ITHQ','NEW']</code></p>
+<p><strong>Description</strong>:
+This restriction grants access to both "ITHQ" and "NEW" systems. In the Dashboard application, users can view dashboards created for both ITHQ and NEW systems. In the Setup application, the hierarchy page will show both ITHQ and NEW in the system list, and users can view their details in overview page. When viewing site detail pages, the systems list will show only these two systems (if they belong to that site). Any other systems in the system will remain hidden.</p>
+<p><img alt="System Multiple Access" src="../img/system_multiple_access_setup.png" /></p>
+<p><img alt="System Multiple Access" src="../img/system_multiple_access_db.png" /></p>
+<hr />
+<h3 id="scenario-33-system-pattern-matching">Scenario 3.3: System Pattern Matching</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SYSTEMS</code>
+- <code>MONITOR_SETUP_SYSTEMS</code></p>
+<p><strong>Query</strong>: <code>systemid="IT%"</code></p>
+<p><strong>Description</strong>:
+This pattern-based restriction allows access to all systems whose names start with "IT" (such as "ITHQ", "ITOPS", "ITDEV"). In the Dashboard application, users can view dashboards created for all matching systems. In the Setup application, the hierarchy page will display all systems matching this pattern, and users can view their details in overview page. When viewing site detail pages, only systems matching this pattern will appear. This is useful for managing equipment families or product lines.</p>
+<p><img alt="System Pattern Access" src="../img/system_single_access_setup.png" /></p>
+<p><img alt="System Pattern Access" src="../img/system_single_access_db.png" /></p>
+<hr />
+<h3 id="scenario-34-system-by-uuid">Scenario 3.4: System by UUID</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_SYSTEMS</code>
+- <code>MONITOR_SETUP_SYSTEMS</code></p>
+<p><strong>Query</strong>: <code>locsystemid in [1,2,4,5,8,9]</code></p>
+<p><strong>Description</strong>:
+This restriction uses the system's internal UUID (locsystemid) for precise identification. Users can access only systems with these specific UUID values. This approach is more stable than using system names because UUIDs don't change even if the system ID is modified. In the Dashboard application, users can view dashboards created for systems with these UUIDs. In the Setup application, the hierarchy page will display only systems matching these UUIDs, and users can view their details in overview page. This is particularly useful for system integrations or when system names might be renamed.</p>
+<p><img alt="System UUID Access" src="../img/system_uuid_access_setup.png" /></p>
+<p><img alt="System UUID Access" src="../img/system_uuid_access_db.png" /></p>
+<hr />
+<h3 id="scenario-35-system-with-multiple-conditions">Scenario 3.5: System with multiple conditions</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_SYSTEMS</code>
+- <code>MONITOR_SETUP_SYSTEMS</code></p>
+<p><strong>Query Options</strong>:</p>
+<pre><code>orgid=&quot;EA%&quot; and siteid=&quot;BED%&quot;
+</code></pre>
+<p><strong>Description</strong>:
+This scenario demonstrates how to filter systems by organization and site. The behavior depends on how you configure the restrictions:</p>
+<p><strong>Option 1: Single Security Group with AND Query</strong>
+- <strong>Query</strong>: <code>orgid="EA%" and siteid="BED%"</code>
+- <strong>Behavior</strong>: Shows systems that match BOTH conditions (AND logic)
+- <strong>Result</strong>: Only systems in organizations starting with "EA" AND at sites starting with "BED"
+- <strong>Use Case</strong>: Restrict to specific sites within specific organizations</p>
+<p><img alt="System Multiple Filters" src="../img/system_multiple_filters_option_1.png" /></p>
+<p><strong>Option 2: Multiple Security Groups with Separate Queries</strong>
+- <strong>Security Group 1</strong>: <code>orgid='EA%'</code>
+- <strong>Security Group 2</strong>: <code>siteid='BED%'</code>
+- <strong>Behavior</strong>: Shows systems that match EITHER condition (OR logic)
+- <strong>Result</strong>: Systems in organizations starting with "EA" OR systems at sites starting with "BED"
+- <strong>Use Case</strong>: Grant access to all systems in certain organizations OR all systems at certain sites</p>
+<p><img alt="System Multiple Filters" src="../img/system_multiple_filters_option_2.png" /></p>
+<p><strong>Individual Filters</strong>:
+- <strong>Organization Pattern</strong>: <code>orgid='EA%'</code> - Shows systems in organizations starting with "EA"
+- <strong>Site Pattern</strong>: <code>siteid='BED%'</code> - Shows systems at sites starting with "BED"</p>
+<p>The hierarchy page and site detail pages will show only systems matching the specified criteria based on whether you use AND (single group) or OR (multiple groups) logic.</p>
+<hr />
+<h2 id="4-location-restrictions">4. Location Restrictions</h2>
+<h3 id="scenario-41-single-location-access">Scenario 4.1: Single Location Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_LOCATIONS</code>
+- <code>MONITOR_SETUP_LOCATIONS</code></p>
+<p><strong>Query</strong>: <code>location="BR200"</code></p>
+<p><strong>Description</strong>:
+Users with this restriction can only access location BR200. In the Dashboard application (<code>MONITOR_DB_LOCATIONS</code>), users will see dashboards created for the BR200 location. In the Setup application (<code>MONITOR_SETUP_LOCATIONS</code>), users can view BR200 location details in overview page. The locations list page will only display BR200. When viewing a system's detail page, only BR200 will appear in the locations list (if it belongs to that system). The hierarchy page will only show this location. All other locations will be completely hidden from the user's view.</p>
+<p><img alt="Location Single Access" src="../img/location_single_access_db.png" /></p>
+<p><img alt="Location Single Access" src="../img/location_single_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-42-multiple-location-access">Scenario 4.2: Multiple Location Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_LOCATIONS</code>
+- <code>MONITOR_SETUP_LOCATIONS</code></p>
+<p><strong>Query</strong>: <code>location in ["BR200","BR210","BR430"]</code></p>
+<p><strong>Description</strong>:
+This restriction grants access to three specific locations: BR200, BR210, and BR430. In the Dashboard application, users can view dashboards created for all three locations. In the Setup application, the locations list page will only display these three locations, and users can view their details in overview page. When viewing system detail pages, the locations list will show only these locations (if they belong to that system). The hierarchy page will display all three locations. Any other locations in the system will remain hidden.</p>
+<p><img alt="Location Multiple Access" src="../img/location_multiple_access_db.png" /></p>
+<p><img alt="Location Multiple Access" src="../img/location_multiple_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-43-location-pattern-matching">Scenario 4.3: Location Pattern Matching</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_LOCATIONS</code>
+- <code>MONITOR_SETUP_LOCATIONS</code></p>
+<p><strong>Query</strong>: <code>location="BR%"</code></p>
+<p><strong>Description</strong>:
+This pattern-based restriction allows access to all locations whose names start with "BR" (such as BR200, BR210, BR430, BR400). In the Dashboard application, users can view dashboards created for all matching locations. In the Setup application, the locations list page will display all matching locations, and users can view their details in overview page. When viewing system detail pages, only locations matching this pattern will appear. The hierarchy page will display all matching locations. This is useful when locations follow a building or floor naming convention.</p>
+<p><img alt="Location Pattern Access" src="../img/location_pattern_access_db.png" /></p>
+<p><img alt="Location Pattern Access" src="../img/location_pattern_access_setup.png" /></p>
+<p><img alt="Location Pattern Access" src="../img/location_pattern_access_hierarchy.png" /></p>
+<hr />
+<h3 id="scenario-44-location-by-id-range">Scenario 4.4: Location by ID Range</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_LOCATIONS</code>
+- <code>MONITOR_SETUP_LOCATIONS</code></p>
+<p><strong>Query</strong>: <code>locationsid in [1,11,130]</code></p>
+<p><strong>Description</strong>:
+This restriction uses internal location names (UUIDs) instead of location codes. Users can access only the locations with the specified ID values: 1, 11, and 130. This approach is useful when working with system integrations or when location codes might change. In the Dashboard application, users can view dashboards created for locations with these names. In the Setup application, the locations list page will only display locations with these names, and users can view their details in overview page.</p>
+<p><img alt="Location ID Access" src="../img/location_id_access_db.png" /></p>
+<p><img alt="Location ID Access" src="../img/location_id_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-45-location-with-various-filter-combinations">Scenario 4.5: Location with Various Filter Combinations</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_LOCATIONS</code>
+- <code>MONITOR_SETUP_LOCATIONS</code></p>
+<p><strong>Query Options</strong> (use various combinations):</p>
+<pre><code>orgid=&quot;EA%&quot;
+siteid=&quot;HA%&quot;
+type=&quot;FLOOR&quot; or type=&quot;OPERATING&quot;
+status='OPERATING' or status=&quot;ACTIVE&quot;
+systemid='AIR'
+</code></pre>
+<p><strong>Example Combined Query</strong>: <code>siteid="HA%" and type="OPERATING" and status="ACTIVE"</code></p>
+<p><strong>Description</strong>:
+This scenario demonstrates how to combine multiple location attributes for precise filtering. You can filter locations by:</p>
+<ul>
+<li><strong>Organization Pattern</strong>: <code>orgid="EA%"</code> - Shows locations in organizations starting with "EA"</li>
+<li><strong>Site Pattern</strong>: <code>siteid="HA%"</code> - Shows locations at sites starting with "BED"</li>
+<li><strong>Location Type</strong>: <code>type="FLOOR"</code> or <code>type="OPERATING"</code> - Filters by location type (FLOOR, OPERATING, etc.)</li>
+<li><strong>Location Status</strong>: <code>status="OPERATING"</code> or <code>status="ACTIVE"</code> - Shows only locations with specific operational status</li>
+<li><strong>System Assignment</strong>: <code>systemid='AIR'</code> - Shows locations associated with the "AIR" system</li>
+</ul>
+<p>These filters can be combined using <code>and</code>/<code>or</code> operators to create complex location restrictions. For example, <code>siteid="HA%" and type="OPERATING" and status="ACTIVE"</code> would show only operating locations with active status at sites starting with "BED". In the Dashboard application, users can view dashboards created for matching locations. In the Setup application, the locations list page will only display matching locations, and users can view their details in overview page. The hierarchy page and system detail pages will show only locations matching all specified criteria.</p>
+<p><img alt="Location Various Filters" src="../img/location_various_filters.png" /></p>
+<hr />
+<h2 id="5-asset-restrictions">5. Asset Restrictions</h2>
+<h3 id="scenario-51-single-asset-access">Scenario 5.1: Single Asset Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ASSETS</code>
+- <code>MONITOR_SETUP_ASSETS</code></p>
+<p><strong>Query</strong>: <code>assetnum="A6002"</code></p>
+<p><strong>Description</strong>:
+Users with this restriction can only access asset A6002. In the Dashboard application (<code>MONITOR_DB_ASSETS</code>), users will see dashboards created for the A6002 asset. In the Setup application (<code>MONITOR_SETUP_ASSETS</code>), users can view A6002 asset details in overview page. The assets list page will only display A6002. When viewing a location's detail page, only asset A6002 will appear in the assets list (if it's at that location). The hierarchy page will only show this asset. All other assets will be completely hidden from the user's view.</p>
+<p><img alt="Asset Single Access" src="../img/asset_single_access_db.png" /></p>
+<p><img alt="Asset Single Access" src="../img/asset_single_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-52-multiple-asset-access">Scenario 5.2: Multiple Asset Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ASSETS</code>
+- <code>MONITOR_SETUP_ASSETS</code></p>
+<p><strong>Query</strong>: <code>assetnum in ["A6002","11400","1004"]</code></p>
+<p><strong>Description</strong>:
+This restriction grants access to three specific assets: A6002, 11400, and 1004. In the Dashboard application, users can view dashboards created for all three assets. In the Setup application, the assets list page will only display these three assets, and users can view their details in overview page. When viewing location detail pages, the assets list will show only these assets (if they're at that location). The hierarchy page will display all three assets. Any other assets in the system will remain hidden.</p>
+<p><img alt="Asset Multiple Access" src="../img/asset_multiple_access_db.png" /></p>
+<p><img alt="Asset Multiple Access" src="../img/asset_multiple_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-53-asset-pattern-matching">Scenario 5.3: Asset Pattern Matching</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ASSETS</code>
+- <code>MONITOR_SETUP_ASSETS</code></p>
+<p><strong>Query</strong>: <code>assetnum="11%"</code></p>
+<p><strong>Description</strong>:
+This pattern-based restriction allows access to all assets whose numbers start with "11" (such as 11200, 11230, 11240). In the Dashboard application, users can view dashboards created for all matching assets. In the Setup application, the assets list page will display all matching assets, and users can view their details in overview page. When viewing location detail pages, only assets matching this pattern will appear. The hierarchy page will display all matching assets. This is useful when asset numbers follow a departmental or categorical numbering convention.</p>
+<p><img alt="Asset Pattern Access" src="../img/asset_pattern_access_db.png" /></p>
+<p><img alt="Asset Pattern Access" src="../img/asset_pattern_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-54-asset-by-location">Scenario 5.4: Asset by Location</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ASSETS</code>
+- <code>MONITOR_SETUP_ASSETS</code></p>
+<p><strong>Query</strong>: <code>location="REPAIR"</code></p>
+<p><strong>Description</strong>:
+This restriction filters assets based on their location. Users will only see assets that are physically located at REPAIR. In the Dashboard application, users can view dashboards created for all assets at REPAIR. In the Setup application, the assets list page will display all assets at location REPAIR, and users can view their details in overview page. When viewing the REPAIR location detail page, all its assets will be visible. When viewing other location detail pages, no assets will appear. This is useful for area-based access control where users should only see equipment in their designated area.</p>
+<p><img alt="Asset Location Access" src="../img/asset_location_access.png" /></p>
+<hr />
+<h3 id="scenario-55-asset-by-site">Scenario 5.5: Asset by Site</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ASSETS</code>
+- <code>MONITOR_SETUP_ASSETS</code></p>
+<p><strong>Query</strong>: <code>siteid="BEDFORD"</code></p>
+<p><strong>Description</strong>:
+This restriction filters assets based on their site. Users will only see assets that belong to the BEDFORD site. In the Dashboard application, users can view dashboards created for all assets at BEDFORD site. In the Setup application, the assets list page will display all assets at BEDFORD site (across all locations), and users can view their details in overview page. When viewing location detail pages within BEDFORD site, assets will be visible. When viewing locations at other sites, no assets will appear. This is useful for site-level access control where users should see all equipment at their facility.</p>
+<p><img alt="Asset Site Access" src="../img/asset_site_access.png" /></p>
+<hr />
+<h3 id="scenario-56-asset-by-uuid">Scenario 5.6: Asset by UUID</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ASSETS</code>
+- <code>MONITOR_SETUP_ASSETS</code></p>
+<p><strong>Query</strong>: <code>assetid in [1,104,117,123]</code></p>
+<p><strong>Description</strong>:
+This restriction uses internal asset UUIDs (assetid) instead of asset numbers. Users can access only the assets with the specified UUID values: 1, 104, 117, and 123. This approach is more stable than using asset numbers because UUIDs don't change even if the asset number is modified. In the Dashboard application, users can view dashboards created for assets with these UUIDs. In the Setup application, the assets list page will only display assets with these UUIDs, and users can view their details in overview page. This is particularly useful for system integrations or when asset numbers might be renumbered.</p>
+<p><img alt="Asset UUID Access" src="../img/asset_uuid_access.png" /></p>
+<hr />
+<h3 id="scenario-57-asset-with-multiple-filters">Scenario 5.7: Asset with Multiple Filters</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_ASSETS</code>
+- <code>MONITOR_SETUP_ASSETS</code></p>
+<p><strong>Query</strong>: <code>siteid="BEDFORD" and location="BR%" and assetnum="11%"</code></p>
+<p><strong>Description</strong>:
+This complex restriction combines multiple criteria: assets must be at BEDFORD site, in locations starting with "BR", and have asset numbers starting with "11". Users will only see assets that meet all three conditions. For example, asset 11200 at location BR200 in BEDFORD site will be visible. Asset 11200 at a different site or location will be hidden. This allows for very precise filtering of assets based on multiple business rules. In the Dashboard application, users can view dashboards created for matching assets. In the Setup application, the assets list page will only display matching assets, and users can view their details in overview page.</p>
+<p><img alt="Asset Multiple Filters" src="../img/asset_multiple_filters.png" /></p>
+<hr />
+<h2 id="6-device-type-restrictions">6. Device Type Restrictions</h2>
+<h3 id="scenario-61-single-device-type-access">Scenario 6.1: Single Device Type Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_DEVICE_TYPES</code>
+- <code>MONITOR_SETUP_DEVICE_TYPES</code></p>
+<p><strong>Query</strong>: <code>name="ROBOT"</code></p>
+<p><strong>Description</strong>:
+Users with this restriction can only access the "ROBOT" device type. In the Dashboard application (<code>MONITOR_DB_DEVICE_TYPES</code>), users will see dashboards created for the ROBOT device type and all devices of this type. In the Setup application (<code>MONITOR_SETUP_DEVICE_TYPES</code>), users can view ROBOT device type details in overview page. The Device Types list page will only display the ROBOT device type. Users cannot see or access any other device types in the system.</p>
+<p><img alt="Device Type Single Access" src="../img/devicetype_single_access_db.png" /></p>
+<p><img alt="Device Type Single Access" src="../img/devicetype_single_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-62-multiple-device-type-access">Scenario 6.2: Multiple Device Type Access</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_DEVICE_TYPES</code>
+- <code>MONITOR_SETUP_DEVICE_TYPES</code></p>
+<p><strong>Query</strong>: <code>name in ["ROBOT","Pump"]</code></p>
+<p><strong>Description</strong>:
+This restriction grants access to both "ROBOT" and "Pump" device types. In the Dashboard application, users can view dashboards created for both ROBOT and Pump device types and all their associated devices. In the Setup application, the Device Types list page will only display ROBOT and Pump device types, and users can view their details in overview page. All other device types in the system will be hidden.</p>
+<p><img alt="Device Type Multiple Access" src="../img/devicetype_multiple_access_db.png" /></p>
+<p><img alt="Device Type Multiple Access" src="../img/devicetype_multiple_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-63-device-type-pattern-matching">Scenario 6.3: Device Type Pattern Matching</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_DEVICE_TYPES</code>
+- <code>MONITOR_SETUP_DEVICE_TYPES</code></p>
+<p><strong>Query</strong>: <code>name like "PU%"</code></p>
+<p><strong>Description</strong>:
+This pattern-based restriction allows access to all device types whose names start with "PU" (such as "Pump_AFM_VV", "Pump_AFM_DD", "Pump_AFM_IOT_R1"). In the Dashboard application, users can view dashboards created for all matching device types and their devices. In the Setup application, the Device Types list page will display all device types matching this pattern, and users can view their details in overview page. This is useful for managing device families or product lines with similar naming conventions.</p>
+<p><img alt="Device Type Pattern Access" src="../img/devicetype_patten_access_db.png" /></p>
+<p><img alt="Device Type Pattern Access" src="../img/devicetype_patten_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-64-device-type-by-uuid">Scenario 6.4: Device Type by UUID</h3>
+<p><strong>Applications</strong>: 
+- <code>MONITOR_DB_DEVICE_TYPES</code>
+- <code>MONITOR_SETUP_DEVICE_TYPES</code></p>
+<p><strong>Query</strong>:
+- Single UUID: <code>uuid='410251ee-2ce9-498f-96c6-b08b3d7f6f56'</code>
+- Multiple UUIDs: <code>uuid in ('2584814b-3ed8-4c13-a923-4978ba68c897','410251ee-2ce9-498f-96c6-b08b3d7f6f56')</code></p>
+<p><strong>Description</strong>:
+This restriction uses the device type's internal UUID for precise identification. Users can access only the device type(s) with the specified UUID(s). For a single device type, use the exact match format. For multiple device types, use the <code>in</code> operator with a list of UUIDs. This approach is more stable than using device type names because UUIDs don't change even if the device type name is modified. In the Dashboard application, users can view dashboards created for device type(s) matching the specified UUID(s). In the Setup application, the Device Types list page will only display device type(s) matching the specified UUID(s), and users can view their details in overview page. This is particularly useful for system integrations or when device type names might be renamed.</p>
+<p><img alt="Device Type UUID Access" src="../img/devicetype_uuid_access_db.png" /></p>
+<p><img alt="Device Type UUID Access" src="../img/devicetype_uuid_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-65-exclude-device-types-not-like">Scenario 6.5: Exclude Device Types (NOT LIKE)</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code>
+- <code>MONITOR_SETUP_DEVICE_TYPES</code></p>
+<p><strong>Query</strong>: <code>name NOT LIKE 'E2E%'</code></p>
+<p><strong>Description</strong>:
+This exclusion pattern allows access to all device types EXCEPT those starting with "E2E". Users can view all device types whose names do not start with "E2E". For example, if you have device types "ROBOT", "Pump", "Engine", and "Electric Motor", users will see "ROBOT" and "Pump" but NOT "Engine" or "Electric Motor". In the Dashboard application, users can view dashboards created for all device types except those matching the exclusion pattern. In the Setup application, the Device Types list page will display all device types except those matching the exclusion pattern, and users can view their details in overview page. This is useful when you want to grant broad access while excluding specific categories.</p>
+<p><img alt="Device Type Exclude Pattern" src="../img/devicetype_exclude_pattern_1.png" /></p>
+<p><img alt="Device Type Exclude Pattern" src="../img/devicetype_exclude_pattern_2.png" /></p>
+<hr />
+<h3 id="scenario-66-multiple-pattern-matching-or">Scenario 6.6: Multiple Pattern Matching (OR)</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code>
+- <code>MONITOR_SETUP_DEVICE_TYPES</code></p>
+<p><strong>Query</strong>: <code>name like 'E2E%' or name like 'DT%'</code></p>
+<p><strong>Description</strong>:
+This OR-based pattern allows access to device types starting with either "E2E" or "DT". Users can view all device types whose names start with "E2E" (like "E2E_Test", "E2E_Robot") OR start with "DT" (like "DT1", "DT_Sensor", "DT_Monitor"). In the Dashboard application, users can view dashboards created for all device types matching either pattern. In the Setup application, the Device Types list page will display all device types matching either pattern, and users can view their details in overview page. Users cannot see device types that don't match either pattern (like "ROBOT" or "Pump"). This is useful for managing multiple device families with different naming conventions.</p>
+<p><img alt="Device Type Multiple Patterns" src="../img/devicetype_multiple_patterns.png" /></p>
+<hr />
+<h3 id="scenario-67-name-and-description-combined-and">Scenario 6.7: Name and Description Combined (AND)</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code>
+- <code>MONITOR_SETUP_DEVICE_TYPES</code></p>
+<p><strong>Query</strong>: <code>name='DT1' and description='Device details'</code></p>
+<p><strong>Description</strong>:
+This combined restriction requires both the device type name to be exactly "DT1" AND the description to be exactly "Device details". Users can only access device types that match both criteria. This provides very precise filtering when you need to identify device types by multiple attributes. In the Dashboard application, users can view dashboards created for the device type with name "DT1" and description "Device details". In the Setup application, the Device Types list page will only display the device type matching both criteria, and users can view its details in overview page. If a device type named "DT1" has a different description, it will not be accessible.</p>
+<p><img alt="Device Type Combined Attributes" src="../img/devicetype_combined_attributes_1.png" /></p>
+<p><img alt="Device Type Combined Attributes" src="../img/devicetype_combined_attributes_2.png" /></p>
+<hr />
+<h3 id="direct-access-behavior">Direct Access Behavior</h3>
+<p><strong>What happens when users try to access restricted device types directly?</strong></p>
+<p>If a user tries to access a device type that is not included in their data restrictions (via direct URL or link), they will receive an <strong>access denied message</strong>. This applies to:</p>
+<ul>
+<li><strong>Direct URL access</strong>: Typing or pasting a device type URL directly in the browser</li>
+<li><strong>Bookmarked links</strong>: Clicking on previously saved bookmarks to restricted device types</li>
+<li><strong>Shared links</strong>: Following links shared by other users who have access</li>
+<li><strong>Navigation from other pages</strong>: Clicking links from search results or other applications</li>
+</ul>
+<p><strong>Example Scenarios</strong>:</p>
+<ol>
+<li><strong>User has access to "ROBOT" device type only</strong> (<code>name="ROBOT"</code>)</li>
+<li>Accessing ROBOT device type URL: ✅ <strong>Allowed</strong></li>
+<li>
+<p>Accessing Pump device type URL: ❌ <strong>Access Denied</strong></p>
+</li>
+<li>
+<p><strong>User has access to device types starting with "PU"</strong> (<code>name like "PU%"</code>)</p>
+</li>
+<li>Accessing ROBOT device type URL: ✅ <strong>Allowed</strong></li>
+<li>Accessing Robotic Arm device type URL: ✅ <strong>Allowed</strong></li>
+<li>Accessing Pump device type URL: ❌ <strong>Access Denied</strong></li>
+</ol>
+<p>This ensures that data restrictions are enforced consistently across all access methods, not just through the UI navigation.</p>
+<p><img alt="Device Type Access Denied" src="../img/devicetype_access_denied.png" /></p>
+<hr />
+<h2 id="7-device-restrictions">7. Device Restrictions</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Device restrictions are applied using <strong>Device Type queries</strong>, not device-specific queries. The <code>MONITOR_SETUP_DEVICES</code> application is <strong>not used</strong> for applying restrictions. Devices are filtered based on their device type restrictions.</p>
+</div>
+<h3 id="scenario-71-single-device-type-all-devices">Scenario 7.1: Single Device Type - All Devices</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code> (applies device type query to filter devices)</p>
+<p><strong>Query</strong>: <code>name="ROBOT"</code></p>
+<p><strong>Description</strong>:
+When you apply a device type restriction with <code>name="ROBOT"</code>, users can only see devices that belong to the "ROBOT" device type. In the Dashboard application, the Devices list page will show only devices of type "ROBOT". When viewing an asset's detail page, only ROBOT devices associated with that asset will be visible. When viewing the ROBOT device type detail page, all its devices will be shown. This restriction works by filtering device types, and devices are automatically filtered based on their type.</p>
+<p><img alt="Device Type ROBOT Access" src="../img/device_robot_access_db.png" /></p>
+<p><img alt="Device Type ROBOT Access" src="../img/device_robot_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-72-multiple-device-types-all-their-devices">Scenario 7.2: Multiple Device Types - All Their Devices</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code> (applies device type query to filter devices)</p>
+<p><strong>Query</strong>: <code>name in ("ROBOT","Pump")</code></p>
+<p><strong>Description</strong>:
+With this restriction, users can see devices belonging to either "ROBOT" or "Pump" device types. The Devices list page will show all devices of these two types. When viewing asset detail pages, only ROBOT and Pump devices will be visible. When viewing location detail pages, only ROBOT and Pump devices at that location will appear. The device type restriction automatically filters which devices are accessible.</p>
+<p><img alt="Device Multiple Types Access" src="../img/device_multiple_types_access_db.png" /></p>
+<p><img alt="Device Multiple Types Access" src="../img/device_multiple_types_access_setup.png" /></p>
+<hr />
+<h3 id="scenario-73-device-type-pattern-all-matching-devices">Scenario 7.3: Device Type Pattern - All Matching Devices</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code> (applies device type query to filter devices)</p>
+<p><strong>Query</strong>: <code>name like "PU%"</code></p>
+<p><strong>Description</strong>:
+This pattern-based device type restriction allows access to all devices whose types start with "PU" (such as "ROBOT", "Robotic Arm", "Robotic Welder"). The Devices list page will show all devices belonging to any device type matching this pattern. When navigating through the hierarchy or viewing asset detail pages, only devices of matching types will be visible. This is useful for managing device families with similar naming conventions.</p>
+<p><img alt="Device Pattern Access" src="../img/device_pattern_access.png" /></p>
+<hr />
+<h3 id="scenario-74-device-type-by-uuid-all-its-devices">Scenario 7.4: Device Type by UUID - All Its Devices</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code> (applies device type query to filter devices)</p>
+<p><strong>Query</strong>:
+- Single UUID: <code>uuid='410251ee-2ce9-498f-96c6-b08b3d7f6f56'</code>
+- Multiple UUIDs: <code>uuid in ('2584814b-3ed8-4c13-a923-4978ba68c897','410251ee-2ce9-498f-96c6-b08b3d7f6f56')</code></p>
+<p><strong>Description</strong>:
+This restriction uses the device type's internal UUID. Users can only see devices belonging to the device type(s) with the specified UUID(s). For a single device type, use the exact match format. For multiple device types, use the <code>in</code> operator with a list of UUIDs. The Devices list page will show only devices of the specified device type(s). This approach is more stable than using device type names because UUIDs don't change even if the device type name is modified. All devices of the specified type(s) will be accessible regardless of where they are in the hierarchy.</p>
+<p>Single UUID Example:</p>
+<p><img alt="Device UUID Access" src="../img/device_uuid_access_single.png" /></p>
+<p>Multiple UUID Example:</p>
+<p><img alt="Device UUID Access" src="../img/device_uuid_access.png" /></p>
+<hr />
+<h3 id="direct-access-behavior_1">Direct Access Behavior</h3>
+<p><strong>What happens when users try to access restricted devices directly?</strong></p>
+<p>If a user tries to access a device that belongs to a device type not included in their data restrictions (via direct URL or link), they will receive an <strong>access denied message</strong>. Remember that device access is controlled through device type restrictions, not individual device restrictions.</p>
+<p>This applies to:</p>
+<ul>
+<li><strong>Direct URL access</strong>: Typing or pasting a device URL directly in the browser</li>
+<li><strong>Bookmarked links</strong>: Clicking on previously saved bookmarks to restricted devices</li>
+<li><strong>Shared links</strong>: Following links shared by other users who have access</li>
+<li><strong>Navigation from other pages</strong>: Clicking links from search results or other applications</li>
+</ul>
+<p><strong>Example Scenarios</strong>:</p>
+<ol>
+<li><strong>User has access to "ROBOT" device type only</strong> (<code>name="ROBOT"</code>)</li>
+<li>Accessing any ROBOT device URL: ✅ <strong>Allowed</strong></li>
+<li>
+<p>Accessing any Pump device URL: ❌ <strong>Access Denied</strong></p>
+</li>
+<li>
+<p><strong>User has access to device types starting with "PU"</strong> (<code>name like "PU%"</code>)</p>
+</li>
+<li>Accessing ROBOT device URL: ✅ <strong>Allowed</strong></li>
+<li>Accessing Robotic Arm device URL: ✅ <strong>Allowed</strong></li>
+<li>
+<p>Accessing Pump device URL: ❌ <strong>Access Denied</strong></p>
+</li>
+<li>
+<p><strong>User has access to specific device type UUID</strong> (<code>uuid='410251ee-2ce9-498f-96c6-b08b3d7f6f56'</code>)</p>
+</li>
+<li>Accessing devices of that device type: ✅ <strong>Allowed</strong></li>
+<li>Accessing devices of any other device type: ❌ <strong>Access Denied</strong></li>
+</ol>
+<p><strong>Important Note</strong>: Since device restrictions are applied through device type queries, there is no way to restrict access to individual devices within an allowed device type. If a user has access to a device type, they have access to ALL devices of that type.</p>
+<p>This ensures that data restrictions are enforced consistently across all access methods, not just through the UI navigation.</p>
+<p><img alt="Device Access Denied" src="../img/device_access_denied.png" /></p>
+<hr />
+<h2 id="8-pin-dashboard-restrictions">8. Pin Dashboard Restrictions</h2>
+<p>Pin Dashboard allows users to pin dashboards from any resource type (organizations, sites, systems, locations, assets, device types, devices) for quick access. When data restrictions are applied, users will only see pinned dashboards for resources they have access to.</p>
+<h3 id="how-pin-dashboard-restrictions-work">How Pin Dashboard Restrictions Work</h3>
+<p>Pin Dashboard restrictions are automatically enforced based on the underlying resource restrictions. The system validates that users can only see pins for resources they have permission to access through their <code>MONITOR_DB_*</code> application restrictions.</p>
+<p><strong>Key Principles</strong>:</p>
+<ol>
+<li><strong>Automatic Filtering</strong>: Pinned dashboards are automatically filtered based on user's data restrictions</li>
+<li><strong>Resource-Based Access</strong>: If a user doesn't have access to a resource, they won't see its pinned dashboard</li>
+<li><strong>Workspace Validation</strong>: The system validates DB pins for workspace and displays only accessible pins</li>
+<li><strong>No Separate Application</strong>: Pin Dashboard uses existing <code>MONITOR_DB_*</code> applications (no separate <code>MONITOR_DB_PINS</code> application)</li>
+</ol>
+<h3 id="scenario-81-pin-dashboard-with-location-restrictions">Scenario 8.1: Pin Dashboard with Location Restrictions</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_LOCATIONS</code> (controls which location dashboards can be pinned/viewed)</p>
+<p><strong>Query</strong>: <code>location="BR200"</code></p>
+<p><strong>Description</strong>:
+When a user has location restrictions, they can only pin and view dashboards for locations they have access to. If a user with <code>location="BR200"</code> restriction tries to view their Pin Dashboard:</p>
+<ul>
+<li><strong>Visible Pins</strong>: Only pinned dashboards for location BR200 will appear</li>
+<li><strong>Hidden Pins</strong>: Pinned dashboards for other locations (BR210, BR430, etc.) will not appear, even if they were pinned by other users or shared</li>
+<li><strong>Workspace Validation</strong>: The system validates all DB pins in the workspace and filters them based on the user's location restrictions</li>
+</ul>
+<p><img alt="Pin Dashboard Location Restriction" src="../img/pin_dashboard_location.png" /></p>
+<hr />
+<h3 id="scenario-82-pin-dashboard-with-asset-restrictions">Scenario 8.2: Pin Dashboard with Asset Restrictions</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_ASSETS</code> (controls which asset dashboards can be pinned/viewed)</p>
+<p><strong>Query</strong>: <code>assetnum in ["13170","11400","1004"]</code></p>
+<p><strong>Description</strong>:
+When a user has asset restrictions, they can only pin and view dashboards for assets they have access to. If a user with this restriction views their Pin Dashboard:</p>
+<ul>
+<li><strong>Visible Pins</strong>: Only pinned dashboards for assets 13170, 11400, and 1004 will appear</li>
+<li><strong>Hidden Pins</strong>: Pinned dashboards for other assets will not appear</li>
+<li><strong>Cross-Location Access</strong>: If these assets are at different locations, the user can see pins for all three assets regardless of location</li>
+</ul>
+<p><img alt="Pin Dashboard Asset Restriction" src="../img/pin_dashboard_asset_1.png" /></p>
+<p><img alt="Pin Dashboard Asset Restriction" src="../img/pin_dashboard_asset_2.png" /></p>
+<hr />
+<h3 id="scenario-83-pin-dashboard-with-device-type-restrictions">Scenario 8.3: Pin Dashboard with Device Type Restrictions</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_DEVICE_TYPES</code> (controls which device type dashboards can be pinned/viewed)</p>
+<p><strong>Query</strong>: <code>name like "PU%"</code></p>
+<p><strong>Description</strong>:
+When a user has device type restrictions, they can only pin and view dashboards for device types they have access to. If a user with this restriction views their Pin Dashboard:</p>
+<ul>
+<li><strong>Visible Pins</strong>: Only pinned dashboards for device types starting with "PU" (like Pump_AFM_VV, Pump_AFM_DD) will appear</li>
+<li><strong>Hidden Pins</strong>: Pinned dashboards for other device types (ROBOT, etc.) will not appear</li>
+<li><strong>Device Dashboard Access</strong>: This also affects pinned dashboards for individual devices - only devices of allowed types will be visible</li>
+</ul>
+<p><img alt="Pin Dashboard Device Type Restriction" src="../img/pin_dashboard_devicetype_1.png" /></p>
+<p><img alt="Pin Dashboard Device Type Restriction" src="../img/pin_dashboard_devicetype_2.png" /></p>
+<hr />
+<h3 id="scenario-84-pin-dashboard-with-multiple-resource-restrictions">Scenario 8.4: Pin Dashboard with Multiple Resource Restrictions</h3>
+<p><strong>Applications</strong>:
+- <code>MONITOR_DB_SITES</code> (controls site dashboard pins)
+- <code>MONITOR_DB_LOCATIONS</code> (controls location dashboard pins)
+- <code>MONITOR_DB_ASSETS</code> (controls asset dashboard pins)</p>
+<p><strong>Query</strong>:
+- Sites: <code>siteid="BEDFORD"</code>
+- Locations: <code>location="BR%"</code>
+- Assets: <code>assetnum="11%"</code></p>
+<p><strong>Description</strong>:
+When a user has multiple resource restrictions, their Pin Dashboard will show pins for all resources they have access to across different resource types:</p>
+<ul>
+<li><strong>Visible Pins</strong>:</li>
+<li>BEDFORD site dashboard (if pinned)</li>
+<li>Location dashboards for BR200, BR210, BR430, etc. (if pinned)</li>
+<li>Asset dashboards for assets starting with "11" (if pinned)</li>
+<li><strong>Hidden Pins</strong>:</li>
+<li>Other site dashboards</li>
+<li>Locations not starting with "BR"</li>
+<li>Assets not starting with "11"</li>
+<li>Any device type or device dashboards (no device type restrictions applied)</li>
+</ul>
+<p><img alt="Pin Dashboard Multiple Restrictions" src="../img/pin_dashboard_multiple_1.png" /></p>
+<p><img alt="Pin Dashboard Multiple Restrictions" src="../img/pin_dashboard_multiple_2.png" /></p>
+<hr />
+<h2 id="using-multiple-security-groups-for-data-restrictions">Using Multiple Security Groups for Data Restrictions</h2>
+<p>Instead of creating complex combined restrictions in a single security group, you can create multiple security groups with different restrictions and assign users to multiple groups. This provides more flexible and manageable access control.</p>
+<h3 id="how-multiple-security-groups-work">How Multiple Security Groups Work</h3>
+<p>When a user is assigned to multiple security groups with different data restrictions:</p>
+<ul>
+<li><strong>The restrictions are combined automatically using OR logic</strong></li>
+<li><strong>The user will have access to resources allowed by ANY of their assigned security groups</strong></li>
+<li><strong>This is an OR operation, not an AND operation</strong></li>
+</ul>
+<h3 id="example-regional-manager-with-multiple-responsibilities">Example: Regional Manager with Multiple Responsibilities</h3>
+<p><strong>Scenario</strong>: A regional manager needs access to:
+- BEDFORD site and all its resources
+- All assets starting with "13" across all sites
+- All ROBOT device types and their devices</p>
+<p><strong>Solution</strong>: Create three separate security groups:</p>
+<h4 id="security-group-1-bedford-site-access">Security Group 1: BEDFORD Site Access</h4>
+<pre><code>Application: MONITOR_DB_SITES, MONITOR_SETUP_SITES
+Query: siteid=&quot;BEDFORD&quot;
+</code></pre>
+<h4 id="security-group-2-asset-category-13-access">Security Group 2: Asset Category 13 Access</h4>
+<pre><code>Application: MONITOR_DB_ASSETS, MONITOR_SETUP_ASSETS
+Query: assetnum=&quot;13%&quot;
+</code></pre>
+<h4 id="security-group-3-robot-devices-access">Security Group 3: ROBOT Devices Access</h4>
+<pre><code>Application: MONITOR_DB_DEVICE_TYPES, MONITOR_SETUP_DEVICE_TYPES
+Query: name=&quot;ROBOT&quot;
+</code></pre>
+<p><strong>Result</strong>: The user assigned to all three groups can:
+- View BEDFORD site details and all its resources
+- View all assets starting with "13" at any site (not just BEDFORD)
+- View all ROBOT devices at any location (not just BEDFORD or with asset 13)</p>
+<h3 id="example-multi-site-operator">Example: Multi-Site Operator</h3>
+<p><strong>Scenario</strong>: An operator needs access to:
+- BEDFORD and TEXAS sites
+- Locations starting with "BR" or "TX"</p>
+<p><strong>Solution</strong>: Create two security groups:</p>
+<h4 id="security-group-1-multi-site-access">Security Group 1: Multi-Site Access</h4>
+<pre><code>Application: MONITOR_DB_SITES, MONITOR_SETUP_SITES
+Query: siteid in [&quot;BEDFORD&quot;,&quot;TEXAS&quot;]
+</code></pre>
+<h4 id="security-group-2-specific-location-access">Security Group 2: Specific Location Access</h4>
+<pre><code>Application: MONITOR_DB_LOCATIONS, MONITOR_SETUP_LOCATIONS
+Query: location=&quot;BR%&quot; or location=&quot;TX%&quot;
+</code></pre>
+<p><strong>Result</strong>: The user can:
+- View both BEDFORD and TEXAS site details
+- View all locations starting with "BR" or "TX" at any site
+- Navigate through the hierarchy seeing only these sites and locations</p>
+<h3 id="benefits-of-multiple-security-groups">Benefits of Multiple Security Groups</h3>
+<ol>
+<li><strong>Flexibility</strong>: Easy to add or remove access by assigning/unassigning security groups</li>
+<li><strong>Reusability</strong>: Same security groups can be assigned to multiple users</li>
+<li><strong>Maintainability</strong>: Update one security group to affect all assigned users</li>
+<li><strong>Clarity</strong>: Each security group has a clear, single purpose</li>
+<li><strong>Scalability</strong>: Easy to manage as organization grows</li>
+</ol>
+<h3 id="best-practices-for-multiple-security-groups">Best Practices for Multiple Security Groups</h3>
+<ol>
+<li><strong>Create Purpose-Specific Groups</strong>: Each security group should have a clear, single purpose (e.g., "BEDFORD Site Access", "Asset Category 13")</li>
+<li><strong>Use Descriptive Names</strong>: Name security groups clearly to indicate what access they provide</li>
+<li><strong>Document Group Purpose</strong>: Keep documentation of what each security group is meant to accomplish</li>
+<li><strong>Test Combinations</strong>: Always test how multiple security groups work together before deploying to production</li>
+<li><strong>Review Regularly</strong>: Periodically review user assignments to ensure they still need all assigned groups</li>
+</ol>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>After reviewing all the scenarios in this exercise, here are the important concepts to remember:</p>
+<h3 id="independent-restrictions">Independent Restrictions</h3>
+<ul>
+<li>Each resource type restriction works independently at its hierarchy level</li>
+<li>Organization restriction controls org details, site restriction controls site details, etc.</li>
+<li>Child resource lists on detail pages are controlled by the child resource's restriction, not the parent's</li>
+</ul>
+<h3 id="application-coverage">Application Coverage</h3>
+<ul>
+<li>Most restrictions apply to both <code>MONITOR_DB_*</code> (Dashboard) and <code>MONITOR_SETUP_*</code> (Setup) applications</li>
+<li>Device restrictions are an exception - they use device type queries and <code>MONITOR_SETUP_DEVICES</code> is not used</li>
+</ul>
+<h3 id="multiple-security-groups-strategy">Multiple Security Groups Strategy</h3>
+<ul>
+<li>Create separate security groups for different access needs</li>
+<li>Assign users to multiple groups for flexible access control</li>
+<li>Restrictions combine using OR logic - users get access allowed by ANY assigned group</li>
+<li>This approach is more maintainable and scalable than complex single-group restrictions</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>Now that you understand how different restriction scenarios work across applications and hierarchy levels, proceed to <a href="../verify_data_restrictions/">Exercise 5: Verify User Data Restrictions</a> to test your configured restrictions.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../data_restriction_update/" class="btn btn-neutral float-left" title="3. Add Data Restrictions in Security Group"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../verify_data_restrictions/" class="btn btn-neutral float-right" title="5. Verify User Data Restrictions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../data_restriction_update/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../verify_data_restrictions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

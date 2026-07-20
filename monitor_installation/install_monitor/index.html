@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/install_monitor/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Install Maximo Monitor - Maximo Monitor Installation Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Install Maximo Monitor";
+        var mkdocs_page_input_path = "install_monitor.md";
+        var mkdocs_page_url = "/maximo-labs/install_monitor/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo Monitor Installation Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Monitor Installation Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Install Maximo Monitor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#start-mas-cli">Start MAS CLI</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prepare-for-installation">Prepare for Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-iot-tool">Install IoT Tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-monitor">Install Monitor</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo Monitor Installation Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Install Maximo Monitor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to install Maximo Monitor on an existing MAS cluster.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have completed the pre-requisites required for <a href="../prereqs/">all exercises</a></p>
+<hr />
+<h3 id="start-mas-cli">Start MAS CLI</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This lab relies on the <a href="https://ibm-mas.github.io/ansible-devops/" target="_blank">MAS Devops Ansible Collection</a> and the <a href="https://ibm-mas.github.io/cli/" target="_blank">IBM Maximo Application Suite CLI Utility</a>.</br></p>
+</div>
+<p>First open a terminal and run the docker command to start the MAS CLI docker container:</p>
+<pre><code>docker run -ti --rm --pull always quay.io/ibmmas/cli
+</code></pre>
+<p></br>
+<img alt="MAS CLI" src="../img/install_monitor_01.png" /></br></br></p>
+<p>Login to the OpenShift cluster using your kubeadmin account and click on <code>Copy login command</code>:</br>
+<img alt="OCP Login Command" src="../img/install_monitor_02.png" /></br></br></p>
+<p>Click on <code>Display Token</code> and copy the <code>oc login</code> command in its entirety:</br>
+<img alt="OCP Login Command" src="../img/install_monitor_03.png" /></br></br></p>
+<p>Run the command in the MAS CLI docker container:</br>
+<img alt="MAS CLI" src="../img/install_monitor_04.png" /></br></br></p>
+<h3 id="prepare-for-installation">Prepare for Installation</h3>
+<p>Define the required environment variables according to <a href="https://ibm-mas.github.io/ansible-devops/playbooks/oneclick-iot/" target="_blank">MAS DevOps Ansible Playbook for adding IoT</a> using the MAS CLI docker container.</p>
+<p>First extract the existing MAS License File from your MAS environement and define MAS_CONFIG_DIR:</p>
+<pre><code>mkdir /root/mas_configs
+kubectl get secret ibm-sls-sls-entitlement -n ibm-sls -o json | jq -r '.data.entitlement' | base64 --decode &gt; /root/mas_configs/entitlement.lic
+export MAS_CONFIG_DIR=/root/mas_configs
+</code></pre>
+<p><img alt="MAS CLI" src="../img/install_monitor_05.png" /></br></br></p>
+<p>Then define the other environment variables:</p>
+<pre><code>export IBM_ENTITLEMENT_KEY=$(kubectl get secret ibm-entitlement -n mas-inst1-core -o json | jq -r '.data[&quot;.dockerconfigjson&quot;]' | base64 --decode | jq -r '.auths[&quot;cp.icr.io/cp&quot;].password')
+export DB2_INSTANCE_NAME=db2u-iot
+export MAS_INSTANCE_ID=inst1
+</code></pre>
+<p><img alt="MAS CLI" src="../img/install_monitor_06.png" /></br></br></p>
+<h3 id="install-iot-tool">Install IoT Tool</h3>
+<p>The first component that needs to be installed is the IoT Tool - this also includes:</br>
+* Set up Db2 instance as the system-level JDBC datasource</br>
+* Set up Kafka cluster as the system-level Kafka</p>
+<p>Run the following command in the MAS CLI docker container:</p>
+<pre><code>ansible-playbook ibm.mas_devops.oneclick_add_iot
+</code></pre>
+<p>Now grab a cup of coffee and be patient. Installing the IoT Tool and the dependencies takes 1,5 - 2 hours.</br>
+Don't be worried when you see the <code>FAILED - RETRYING:...</code> messages:</br>
+<img alt="MAS CLI" src="../img/install_monitor_07.png" /></br></br></p>
+<p>You can continue this exercise, when you see the following:</br>
+<img alt="MAS CLI" src="../img/install_monitor_08.png" /></br></br></p>
+<h3 id="install-monitor">Install Monitor</h3>
+<p>Run the following command in the MAS CLI docker container:</p>
+<pre><code>ansible-playbook ibm.mas_devops.oneclick_add_monitor
+</code></pre>
+<p>Another cup of coffee and patience is needed. Installing the Monitor application takes 1 - 1,5 hours.</br>
+You are done when you see this:</br>
+<img alt="MAS CLI" src="../img/install_monitor_09.png" /></br></br></p>
+<p>Logging into MAS and viewing in About, this MAS environment now have MAS Core, Manage, IoT, and Monitor installed:</br>
+<img alt="MAS About" src="../img/install_monitor_10.png" /></br></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can now install the additional Maximo Application Suite applications by following the <a href="https://ibm-mas.github.io/ansible-devops/" target="_blank">MAS Devops Ansible Collection</a></br> 
+or begin to test, build your demo, or build your pilot with the installed applications - have fun !!</br></p>
+</div>
+<hr />
+<p>Congratulations you have successfully installed Maximo Monitor on an existing MAS environment.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

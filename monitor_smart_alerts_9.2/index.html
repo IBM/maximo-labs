@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Radhika Surani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Welcome - Monitor Smart Alerts</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Welcome";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/maximo-labs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Monitor Smart Alerts
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../.">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Custom Function</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Welcome</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-smart-alerts">What are Smart Alerts?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alert-types-covered">Alert Types Covered</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-alertsbyoccurrencescount">1. AlertsByOccurrencesCount</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-nodata-alerts">2. NoData Alerts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lab-exercises">Lab Exercises</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#expected-outcomes">Expected Outcomes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="nodata_alerts/">1. Nodata Alert</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="alerts_by_occurrences_count/">2. AlertsByOccurrencesCount</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="create_alert_in_manage/">3. Create Alert In Manage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Monitor Smart Alerts</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Monitor Custom Function</li>
+      <li class="breadcrumb-item active">Welcome</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome-to-the-maximo-monitor-92-smart-alerts-lab">Welcome to the Maximo Monitor 9.2 </br>Smart Alerts Lab</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This Maximo Monitor lab demonstrates how to configure Smart Alerts for intelligent device monitoring.</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Smart Alerts in Maximo Monitor enable intelligent, condition-based alerting that reduces noise and focuses on meaningful patterns. This lab covers two fundamental alert types that help you detect critical conditions and data gaps in your IoT devices.</p>
+<h3 id="what-are-smart-alerts">What are Smart Alerts?</h3>
+<p>Smart Alerts are advanced monitoring capabilities that:</p>
+<ul>
+<li><strong>Detect Patterns</strong>: Identify recurring conditions rather than one-off events</li>
+<li><strong>Reduce False Positives</strong>: Filter out intermittent noise through configurable thresholds</li>
+<li><strong>Track Data Gaps</strong>: Alert when devices stop sending data</li>
+<li><strong>Prevent Alert Fatigue</strong>: Use cooldown periods to avoid duplicate notifications</li>
+</ul>
+<h2 id="alert-types-covered">Alert Types Covered</h2>
+<h3 id="1-alertsbyoccurrencescount">1. AlertsByOccurrencesCount</h3>
+<p>Trigger alerts when a condition becomes true <strong>N times within a time window T</strong>. This frequency-based alert is ideal for:</p>
+<ul>
+<li>Detecting recurring metric threshold breaches</li>
+<li>Identifying intermittent sensor failures</li>
+<li>Monitoring repeated anomalies</li>
+<li>Converting noise into meaningful patterns</li>
+</ul>
+<p><strong>Key Features:</strong>
+- Configurable occurrence thresholds (N)
+- Sliding or tumbling time windows (T)
+- Rising edge or continuous evaluation modes
+- Cooldown periods to prevent alert spam</p>
+<h3 id="2-nodata-alerts">2. NoData Alerts</h3>
+<p>Trigger alerts when <strong>no data arrives for a continuous duration D</strong>. This time-gap alert detects:</p>
+<ul>
+<li>Device offline conditions</li>
+<li>Sensor heartbeat failures</li>
+<li>Connectivity outages</li>
+<li>Communication disruptions</li>
+</ul>
+<p><strong>Key Features:</strong>
+- Duration-based detection (D)
+- Cooldown management
+- Monitoring of specific data item</p>
+<h2 id="lab-exercises">Lab Exercises</h2>
+<p>In this lab, you will learn:</p>
+<ol>
+<li><strong>Configure NoData Alerts</strong> - Set up alerts to detect when devices stop sending data</li>
+<li><strong>Configure AlertsByOccurrencesCount</strong> - Create frequency-based alerts for recurring conditions</li>
+<li><strong>Create Alerts in Manage</strong> - Integrate alerts with Maximo Manage</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting this lab, ensure you have:</p>
+<ul>
+<li>Access to Maximo Monitor 9.2</li>
+<li>A device type with active data streams</li>
+<li>Basic understanding of KPI functions</li>
+<li>Familiarity with Maximo Monitor UI</li>
+</ul>
+<h2 id="expected-outcomes">Expected Outcomes</h2>
+<p>By the end of this lab, you will be able to:</p>
+<ul>
+<li>Understand the difference between occurrence-based and time-gap alerts</li>
+<li>Configure alert parameters (N, T, D, cooldown)</li>
+<li>Choose appropriate occurrence detection modes</li>
+<li>Create actionable alerts in Maximo Manage</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Expected time needed to complete the lab: <strong>30 minutes</strong></p>
+</div>
+<h2 id="getting-started">Getting Started</h2>
+<p>Proceed to the <a href="prereqs/">Prerequisites</a> section to ensure your environment is ready, then begin with <a href="nodata_alerts/">Exercise 1: NoData Alerts</a>.</p>
+<hr />
+<p><strong>Updated: 2026-06-16</strong></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="prereqs/" class="btn btn-neutral float-right" title="Pre-Requisites">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="prereqs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="../js/popper.min.js"></script>
+      <script src="../js/tippy-bundle.umd.js"></script>
+      <script src="../js/clipboard.js"></script>
+      <script src="../js/extra.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

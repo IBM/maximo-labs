@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/hierarchyAlerts/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Setup alerts at different Hierarchy level - Monitor Alerts</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Setup alerts at different Hierarchy level";
+        var mkdocs_page_input_path = "hierarchyAlerts.md";
+        var mkdocs_page_url = "/maximo-labs/hierarchyAlerts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Alerts
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Alerts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_alert/">1. Setup alerts at device type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../view_alert/">2. View alerts at device/device type</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Setup alerts at different Hierarchy level</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#setup-alert">Setup Alert</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-alert">View Alert</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../servicerequest/">4. Create service request based on an alert</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Alerts</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Setup alerts at different Hierarchy level</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to create and manage alerts in monitor hierarchy.</p>
+<hr />
+<p><em>Before you begin:</em>  </p>
+<p>Make sure you have:</p>
+<ul>
+<li>Reviewed the Monitor Hierarchy lab to understand the concept of hierarchy in Monitor.</li>
+<li>Set up a sample hierarchy in Monitor.</li>
+</ul>
+<p>In this lab, an asset is configured with two devices, both running simulations.
+<img alt="hierarchy alert" src="../img/ha1.png" /></br>
+A calculated metric named asset_pressure_sum has been added at the asset level to compute the sum of pressure values from the devices every minute.
+<img alt="hierarchy alert" src="../img/ha2.png" /></br></p>
+<hr />
+<p>In this lab, you will configure an alert at the Asset level. Similarly, alerts can be configured at any hierarchy level such as Site, System, Location, or Organization.</p>
+<h4 id="setup-alert">Setup Alert</h4>
+<ol>
+<li>Navigate to the Asset Setup page and search for the asset.
+<img alt="hierarchy alert" src="../img/ha3.png" /></br></li>
+<li>click on the asset. It will open its detail page.
+<img alt="hierarchy alert" src="../img/ha4.png" /></br></li>
+<li>Go to the Calculated Metrics tab and click on "Add Calculated Metric" button.
+<img alt="hierarchy alert" src="../img/ha5.png" /></br></li>
+<li>In the popup window, search for "Alert".
+<img alt="hierarchy alert" src="../img/ha6.png" /></br></li>
+<li>Select AlertLowValue and click "Next".
+<img alt="hierarchy alert" src="../img/ha7.png" /></br></li>
+<li>Choose "This node and child nodes" and click "Next".
+<img alt="hierarchy alert" src="../img/ha8.png" /></br></li>
+<li>Select the calculated metric for which you want to generate the alert. Enter the lower threshold, severity, and status. Click "Next".
+<img alt="hierarchy alert" src="../img/ha9.png" /></br></li>
+<li>Provide a name for the alert and click "Create".
+<img alt="hierarchy alert" src="../img/ha10.png" /></br></li>
+<li>The alert will now appear in the Calculated Metrics table.
+<img alt="hierarchy alert" src="../img/ha11.png" /></br></li>
+</ol>
+<h4 id="view-alert">View Alert</h4>
+<p>The pipeline will run, and an alert will be triggered when the threshold condition is met.</p>
+<p>You can view generated alerts in the "Alerts" dashboard, which is automatically created when an asset has any alert configured.</p>
+<ol>
+<li>Navigate to the Asset Dashboard view from the left sidebar.
+<img alt="hierarchy alert" src="../img/ha12.png" /></br></li>
+<li>Search for the desired asset and click on it to open the details.
+<img alt="hierarchy alert" src="../img/ha13.png" /></br></li>
+<li>You will see the Alerts Dashboard, which displays an Alert Table. This table lists all alerts associated with the asset and its connected devices.
+<img alt="hierarchy alert" src="../img/ha14.png" /></br></li>
+<li>You can use Filter icon to filter alerts based on specific criteria.
+<img alt="hierarchy alert" src="../img/ha15.png" /></br></li>
+</ol>
+<p>You can also create a custom dashboard using Dashboard Tab in the Asset setup page. Follow the same steps outlined in <a href="../view_alert/#custom-dashboard">Exercise 2</a> of this lab series.
+<img alt="hierarchy alert" src="../img/ha16.png" /></br></p>
+<hr />
+<p>🎉 Congratulations! You have successfully completed the exercise to set up and view alerts at different hierarchy levels in Monitor.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../view_alert/" class="btn btn-neutral float-left" title="2. View alerts at device/device type"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../servicerequest/" class="btn btn-neutral float-right" title="4. Create service request based on an alert">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../view_alert/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../servicerequest/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/prereqs/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Pre-Requisites - Monitor Managed Gateway Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Pre-Requisites";
+        var mkdocs_page_input_path = "prereqs.md";
+        var mkdocs_page_url = "/maximo-labs/prereqs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Managed Gateway Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Managed GW Modbus Lab</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Pre-Requisites</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_simulator/">1. Setup Simulator Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_gateway/">2. Create a Managed Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_device_1/">3. Add an industrial device</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify connectivity</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_device_2/">5. Add another industrial device</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../re-deploy/">6. Deploy and view data in Monitor</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Managed Gateway Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Monitor Managed GW Modbus Lab</li>
+      <li class="breadcrumb-item active">Pre-Requisites</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pre-requisite-instructions">Pre-Requisite Instructions</h1>
+<p>Here are the pre-requisites for the Maximo Monitor Edge Data Collector exercises.  </p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This lab requires Maximo Monitor 9.0.</br>
+MAS application entitlement must be <code>Limited</code> or higher.</p>
+</div>
+<h1 id="all-exercises">All Exercises</h1>
+<p>All Exercises require that you have:</p>
+<ol>
+<li>
+<p>A computer with a Chrome or Firefox browser and internet connectivity.</p>
+</li>
+<li>
+<p>User access to a Maximo Application Suite environment that can create a managed gateways in Monitor. This require:</br>
+o Your user must have access to Monitor and the IoT Tool</br>
+o Your user must have administrator access to Maximo Application Suite.</br>
+Your Exercise facilitator should have provided you with the information on your access.</p>
+</li>
+<li>
+<p>An IBM ID.  If you don't have an IBM ID you can get one <a href="https://www.ibm.com/account/reg/signup?" target="_blank">here</a>:<br>
+o Click <code>Login to MY IBM</code> button<br>
+o Click <code>Create an IBM ID</code> link</p>
+</li>
+<li>
+<p>Test your access to the Maximo Application Suite environment.</p>
+</li>
+</ol>
+<h1 id="exercise-4">Exercise 4</h1>
+<p>Docker must be running on your local machine while acting as the Managed Gateway instance.</br>
+There are different ways to install the Docker engine depending of the package and the OS.</br>
+One multi platform option is Rancher Desktop. It is fairly easy to install Rancher Desktop,</br>
+as you just have to follow this guide: <a href="https://docs.rancherdesktop.io/getting-started/installation/" target="_blank">Running Docker locally</a></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Podman and Docker Desktop should also work, but I have not tested it.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../setup_simulator/" class="btn btn-neutral float-right" title="1. Setup Simulator Environment">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../setup_simulator/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

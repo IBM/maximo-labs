@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tirth Patel" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/aggregation_across_hierarchy/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Aggregation Across Hierarchy Levels - Monitor Parent-Level Aggregation Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Aggregation Across Hierarchy Levels";
+        var mkdocs_page_input_path = "aggregation_across_hierarchy.md";
+        var mkdocs_page_url = "/maximo-labs/aggregation_across_hierarchy/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Parent-Level Aggregation Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Parent-Level Aggregation Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_asset/">1. Setup Asset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_asset_dashboard/">2. Create Dashboard with Time Series Card</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../explore_card_types/">3. Explore Different Card Types</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Aggregation Across Hierarchy Levels</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#understanding-hierarchy-levels">Understanding Hierarchy Levels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-dashboard-at-organization-level">Creating Dashboard at Organization Level</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-organization-dashboard">Create Organization dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important-considerations">Important Considerations</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Parent-Level Aggregation Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Aggregation Across Hierarchy Levels</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this exercise you will learn how to:</p>
+<ul>
+<li>Understand hierarchy levels in Maximo Monitor</li>
+<li>Create dashboards at Organization</li>
+<li>Select resources from the hierarchy </li>
+</ul>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>Parent-level aggregation works across all hierarchy levels in Maximo Monitor. While the previous exercises focused on Asset-level dashboards, you can create dashboards at any hierarchy level:</p>
+<p><strong>Hierarchy Structure:</strong></p>
+<pre><code>Organization (Top Level)
+  └── Site
+      └── System
+          └── Location / Asset
+              └── Device (Bottom Level)
+</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Key Concept</p>
+<p>Devices are always assigned to <strong>Location</strong> or <strong>Asset</strong>. When creating dashboards at higher levels in hierarchy, inorder to get data, you must ensure that device assugned to location or asset which are present in the hierarchy.</p>
+</div>
+<hr />
+<h2 id="understanding-hierarchy-levels">Understanding Hierarchy Levels</h2>
+<p><strong>Supported Hierarchy Levels for Parent-Level Aggregation:</strong></p>
+<ol>
+<li><strong>Organization</strong> - Top-level entity representing your entire organization</li>
+<li><strong>Site</strong> - Physical sites within your organization</li>
+<li><strong>System</strong> - Logical groupings of assets or locations</li>
+<li><strong>Location</strong> - Physical locations where devices are installed</li>
+<li><strong>Asset</strong> - Equipment or machinery with assigned devices</li>
+</ol>
+<hr />
+<h2 id="creating-dashboard-at-organization-level">Creating Dashboard at Organization Level</h2>
+<p>Organization-level dashboards provide a comprehensive view of data from your entire organizational hierarchy. This is ideal for executive dashboards and enterprise-wide monitoring.</p>
+<h2 id="create-organization-dashboard">Create Organization dashboard</h2>
+<ol>
+<li>
+<p>Goto dashboard tab and select <code>Add dashboard</code> to configure new dashboard and click on <code>Add Hierarchy Data Item</code>. Here we can data items from all hierarchy levels.</br></br>
+<img alt="Navigate to Org Dashboard" src="../img/org_01.png" /></br></br></p>
+</li>
+<li>
+<p>We can use filter option to select data items from specific hierarchy level.</br></br>
+<img alt="Select Resource" src="../img/org_02.png" /></br></br></p>
+</li>
+<li>
+<p>We can use filter option to select data items from specific hierarchy level.</br></br>
+<img alt="Select Dataitem" src="../img/org_03.png" /></br></br></p>
+</li>
+<li>
+<p>View selected child resource metrics in card. Likewise we can create similar dashboards using other cards as discussed in previous sectionss.</br></br>
+<img alt="View Dashboard" src="../img/org_04.png" /></br></br></p>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>You have successfully created an Organization-level dashboard that aggregates data from devices across your entire organizational hierarchy!</p>
+</div>
+<hr />
+<h2 id="important-considerations">Important Considerations</h2>
+<div class="admonition tip">
+<p class="admonition-title">Resource Selection</p>
+<p>When selecting resources at higher hierarchy levels, you can mix different resource types (Location, Asset, Site) in the same dashboard to get a comprehensive view.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Data Aggregation</p>
+<p>Use aggregation functions (sum, average, min, max) to meaningfully combine data from multiple devices across the hierarchy.</p>
+</div>
+<hr />
+<p>🎉 Congratualtions! You have now completed the core exercises for parent-level aggregation.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../explore_card_types/" class="btn btn-neutral float-left" title="3. Explore Different Card Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../explore_card_types/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

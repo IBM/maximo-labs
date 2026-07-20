@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/monitor_devices/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Create Monitor Devices - Edge Data Collector Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Create Monitor Devices";
+        var mkdocs_page_input_path = "monitor_devices.md";
+        var mkdocs_page_url = "/maximo-labs/monitor_devices/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Edge Data Collector Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Edge Data Collector Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">1. Setup Simulator Environment</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Create Monitor Devices</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-the-edc-edge-gateway-in-monitor">Create the EDC edge gateway in Monitor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pre-create-device-type-for-the-vfds">Pre-create device type for the VFDs</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edc_integration/">3. Create EDC Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_metrics/">5. Create Monitor metric</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Edge Data Collector Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Create Monitor Devices</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>create the credentials for the Edge Data Collector (EDC) edge entity</li>
+<li>pre-create the device type for the Variable Frequency Drives (VFD's)</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<p>The Edge Data Collector edge uses the Maximo Monitor capability to use the priveledged gateway device type, which enables the automatic creation of new devices when data is delivered from the gateway on behalf of them.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This exercise will use the new version of device types introduced in MAS 8.8 which do not require physical and logical interfaces before saving the data in the database and making it available within Monitor.</br>
+However, this currently require you to create the device type for the VFDs manually up front, as automatically creating that through the gateway will result in the classic version of the device type which will require the physical and logical interfaces before the data is available in Monitor.</p>
+</div>
+<hr />
+<h2 id="create-the-edc-edge-gateway-in-monitor">Create the EDC edge gateway in Monitor</h2>
+<p>In this section you will create the credentials for the EDC edge gateway, so the EDC edge can connect to Maximo Monitor.</br></p>
+<p>Login to MAS and navigate to Monitor:
+<img alt="MAS Monitor" src="../img/monitor_devices_01.png" /></br></br></p>
+<p>Navigate to the IoT Tool from the Monitor Home page:
+<img alt="IoT Tool" src="../img/monitor_devices_10.png" /></br></br></p>
+<p>It opens a new tab. Navigate to Device Types:
+<img alt="Add device type" src="../img/monitor_devices_11.png" /></br></br></p>
+<p>Select <code>Add Device Type</code>:
+<img alt="Add device type" src="../img/monitor_devices_12.png" /></br></br></p>
+<p>Select <code>Gateway</code>, give it the name <code>XX_EDC_GW</code> and a short description.</br>
+Click <code>Next</code> and <code>Finish</code>:
+<img alt="Add new device type" src="../img/monitor_devices_13.png" /></br></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>XX in the device type name should be your initials in case other people are following this lab in the same Maximo Application Suite environment.</br></p>
+</div>
+<p>Select <code>Register Devices</code>:
+<img alt="Add new device type" src="../img/monitor_devices_14.png" /></br></br></p>
+<p>Define the Device Id <code>XX_EDC_GW_01</code>. Click <code>Next</code>:
+<img alt="Add new Edge device" src="../img/monitor_devices_15.png" /></br></br></p>
+<p>OPTIONAL: Add a Model name <code>Edge Data Collector</code> and Manufacturer name <code>IBM</code>. Click <code>Next</code>:
+<img alt="Add new Edge device" src="../img/monitor_devices_16.png" /></br></br></p>
+<p>Just click <code>Next</code>:
+<img alt="Add new Edge device" src="../img/monitor_devices_17.png" /></br></br></p>
+<p>Select <code>Privileged Gateway</code> and click <code>Next</code>:
+<img alt="Add new Edge device" src="../img/monitor_devices_18.png" /></br></br></p>
+<p>Click <code>Next</code> to let the system auto generate an authentication token:
+<img alt="Add new Edge device" src="../img/monitor_devices_19.png" /></br></br></p>
+<p>Just click <code>Finish</code>:
+<img alt="Add new Edge device" src="../img/monitor_devices_20.png" /></br></br></p>
+<p>You will see the created Device credentials:
+<img alt="Add new Edge device" src="../img/monitor_devices_21.png" /></br></br></p>
+<div class="admonition attention">
+<p class="admonition-title">Save these credentials</p>
+<p>It is very important, that you save these credentials as you need them in the next exercise</br>
+AND the authentication token is non-recoverable once you navigate away from this page. </p>
+</div>
+<p>The gateway is now created in the IoT Tool and it will appear as <code>Disconnected</code> until the physical EDC Edge connects:
+<img alt="Add new Edge device" src="../img/monitor_devices_22.png" /></br></br></p>
+<h2 id="pre-create-device-type-for-the-vfds">Pre-create device type for the VFDs</h2>
+<p>You need to create the device type for the VFD´s manually in Monitor to ensure the right version of Device Type is being used later on.</br></p>
+<p>Navigate to Setup from the Monitor Home page:
+<img alt="Monitor Setup" src="../img/monitor_devices_02.png" /></br></br></p>
+<p>Select <code>Devices</code>:
+<img alt="Monitor Setup" src="../img/monitor_devices_03.png" /></br></br></p>
+<p>Click on <code>Add device type</code>:
+<img alt="Add device type" src="../img/monitor_devices_04.png" /></br></br></p>
+<p>Select <code>Basic template</code> as this will create the new version of the device type and click <code>Next</code>:
+<img alt="Empty template" src="../img/monitor_devices_05.png" /></br></br></p>
+<p>Define the Device type name as <code>VariableFrequencyDrives</code> (<em>exactly like this</em>), give it a description and press <code>Create</code>:
+<img alt="Template identity" src="../img/monitor_devices_06.png" /></br></br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will define the metrics in a later exersice once we have defined the data points in the EDC Integration.</br></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Here is the list of the current canonical models defined within EDC using <code>PascalCase</code>: </br>
+<table>
+<thead>
+<tr>
+    <th>Device type</th>
+    <th>Device Type in Monitor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Variable Frequency Drives</td>
+    <td>VariableFrequencyDrives</td>
+</tr>
+<tr>
+    <td>Variable Air Volume</td>
+    <td>VariableAirVolume</td>
+</tr>
+<tr>
+    <td>Uninterruptible Power Supplies</td>
+    <td>UninterruptiblePowerSupplies</td>
+</tr>
+<tr>
+    <td>Power Meters</td>
+    <td>PowerMeters</td>
+</tr>
+<tr>
+    <td>Circuit Breakers</td>
+    <td>CircuitBreakers</td>
+</tr>
+<tr>
+    <td>Protection Relays</td>
+    <td>ProtectionRelays</td>
+</tr>
+<tr>
+    <td>Heat Meters</td>
+    <td>HeatMeters</td>
+</tr>
+<tr>
+    <td>Gas Flow Meters</td>
+    <td>GasFlowMeters</td>
+</tr>
+</tbody>
+</table></p>
+</div>
+<hr />
+<p>Congratulations you have successfully created the needed gateway in the IoT Tool </br>
+and the needed device type in Monitor.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup/" class="btn btn-neutral float-left" title="1. Setup Simulator Environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../edc_integration/" class="btn btn-neutral float-right" title="3. Create EDC Integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../edc_integration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

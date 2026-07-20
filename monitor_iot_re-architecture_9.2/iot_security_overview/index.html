@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Pradipkumar Jinjala" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/iot_security_overview/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>IoT Security Overview - Monitor IoTP Re-Architecture</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "IoT Security Overview";
+        var mkdocs_page_input_path = "iot_security_overview.md";
+        var mkdocs_page_url = "/maximo-labs/iot_security_overview/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor IoTP Re-Architecture
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor IoTP Re-Architecture Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API Key Management</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api_key_overview/">API Key Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_api_key/">1. Generate API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_api_key/">2. Edit / Update API Key</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_api_key/">3. Delete API Key</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IoT Security</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">IoT Security Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-iotp-security">What is IoTP Security?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-youll-learn">What You'll Learn</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-tls-with-token">1. TLS With Token</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-tls-with-client-certificate-or-token">2. TLS With Client Certificate or Token</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-tls-with-client-certificate-and-token">3. TLS With Client Certificate and Token</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lab-exercises">Lab Exercises</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-tls-with-token_1">1. TLS With Token</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-tls-with-client-certificate-or-token_1">2. TLS With Client Certificate or Token</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-tls-with-client-certificate-and-token_1">3. TLS With Client Certificate and Token</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_token/">4. TLS With Token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_cert_or_token/">5. TLS With Client Certificate or Token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tls_with_cert_and_token/">6. TLS With Client Certificate and Token</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor IoTP Re-Architecture</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">IoT Security</li>
+      <li class="breadcrumb-item active">IoT Security Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="maximo-monitor-iotp-security">Maximo Monitor IoTP Security</h1>
+<p>Configure secure TLS (Transport Layer Security) connections with multiple authentication options to protect data in transit of IoT devices.</p>
+<h2 id="what-is-iotp-security">What is IoTP Security?</h2>
+<p>IoTP Security provides multiple layers of protection for device-to-platform communication using TLS encryption and various authentication methods. This ensures that data transmitted from IoT devices is encrypted and that only authorized devices can connect to the platform.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>Multiple authentication methods</li>
+<li>Flexible security configurations</li>
+<li>Compliance with security standards</li>
+</ul>
+<h2 id="what-youll-learn">What You'll Learn</h2>
+<p>In the IoTP Security exercises, you will:</p>
+<h3 id="1-tls-with-token">1. TLS With Token</h3>
+<p>Configure token-based TLS authentication
+- Understand how tokens work with TLS
+- Set up devices to use API keys over encrypted connections
+- Verify secure token-based communication</p>
+<h3 id="2-tls-with-client-certificate-or-token">2. TLS With Client Certificate or Token</h3>
+<p>Set up either certificate or token authentication
+- Learn when to use certificates vs tokens
+- Configure flexible authentication options
+- Implement fallback authentication mechanisms</p>
+<h3 id="3-tls-with-client-certificate-and-token">3. TLS With Client Certificate and Token</h3>
+<p>Implement dual authentication for maximum security
+- Combine certificate and token authentication
+- Understand the benefits of dual authentication
+- Configure the most secure connection method</p>
+<p><strong>Practical Skills:</strong>
+- How to configure different TLS authentication methods
+- When to use each authentication approach
+- How to generate and manage client certificates
+- Best practices for securing IoT device connections
+- Troubleshooting TLS connection issues</p>
+<h2 id="lab-exercises">Lab Exercises</h2>
+<h3 id="1-tls-with-token_1">1. <a href="../tls_with_token/">TLS With Token</a></h3>
+<p>Configure token-based TLS authentication for secure device connections.</p>
+<h3 id="2-tls-with-client-certificate-or-token_1">2. <a href="../tls_with_cert_or_token/">TLS With Client Certificate or Token</a></h3>
+<p>Set up flexible authentication using either certificates or tokens.</p>
+<h3 id="3-tls-with-client-certificate-and-token_1">3. <a href="../tls_with_cert_and_token/">TLS With Client Certificate and Token</a></h3>
+<p>Implement the most secure dual authentication method.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting these exercises, ensure you have:</p>
+<ul>
+<li>Access to Maximo Monitor 9.2</li>
+<li>Basic understanding of IoT device connectivity</li>
+<li>A device type configured in Monitor (for testing)</li>
+<li>Understanding of authentication and encryption principles</li>
+</ul>
+<hr />
+<p><strong>Updated: 2026-06-18</strong></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../delete_api_key/" class="btn btn-neutral float-left" title="3. Delete API Key"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tls_with_token/" class="btn btn-neutral float-right" title="4. TLS With Token">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../delete_api_key/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tls_with_token/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

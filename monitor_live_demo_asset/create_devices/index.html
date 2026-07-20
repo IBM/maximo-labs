@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_devices/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Create Monitor devices - Monitor Live Demo Asset Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Create Monitor devices";
+        var mkdocs_page_input_path = "create_devices.md";
+        var mkdocs_page_url = "/maximo-labs/create_devices/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Live Demo Asset Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Live Demo Asset Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_guide/">RPE User Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Create Monitor devices</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-login">1. Login</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-create-the-device-types">2. Create the device types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-create-the-devices">3. Create the devices</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prepare_pi/">2. Prepare Rasperry Pi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../convert_pi/">3. Convert Pi to RPE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify_rpe/">4. Verify RPE is working</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Live Demo Asset Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Create Monitor devices</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to create the RPE device credentials in MAS Monitor.</p>
+<p>Your RPE asset will have three devices that measures different things:</p>
+<p><img alt="The RPE" src="../img/create_devices_01.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Device Type</th>
+<th>Measurements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>CPU related metrics from the Pi</td>
+</tr>
+<tr>
+<td>OSC</td>
+<td>Oscillator related metrics from the Pi</td>
+</tr>
+<tr>
+<td>ENV</td>
+<td>Environmental metrics from the SenseHAT</td>
+</tr>
+</tbody>
+</table>
+<p>You need to create three device types (CPU, OSC and ENV) with the related metrics (as we already know what they are) and then later a device of each device type.</br>
+The credentials for the three devices will be used when configuring the RPE Node-RED script to work in your environment (in exercise <a href="../convert_pi/">3. Convert Pi to RPE</a>).</p>
+<h2 id="1-login">1. Login</h2>
+<p><strong>a.</strong> Login to your instance of MAS and navigate to Monitor:</br>
+<img alt="MAS Login" src="../img/create_devices_02.png" /></p>
+<h2 id="2-create-the-device-types">2. Create the device types</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Jump to <a href="#3-create-the-devices">Create the devices</a> if the CPU, OSC and ENV device types have already been created.</p>
+</div>
+<p><strong>a.</strong> Go to the Setup tab:</br>
+<img alt="Setup tab" src="../img/create_devices_03.png" /></p>
+<p><strong>b.</strong> We will setup three device types: CPU, OSC and ENV.</br></p>
+<p><strong>c.</strong> Select the Devices tab and press the blue + button to add a new device type:</br>
+<img alt="Add device type" src="../img/create_devices_04.png" /></p>
+<p><strong>d.</strong> Select the Basic template and click Next:</br>
+<img alt="Basic template" src="../img/create_devices_05.png" /></p>
+<p><strong>e.</strong> Define the Device type name as “CPU” and either clear or replace the Description</br></p>
+<p><strong>f.</strong> Click Create and click on Add metric and Add metric</br>
+<img alt="Add metric" src="../img/create_devices_06.png" /></p>
+<p><strong>g.</strong> Create the following metrics while pressing “Add metric +” to add another metric row:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Display name</th>
+<th>Event</th>
+<th>Type</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cl</td>
+<td>CPU_Load</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>Percentage</td>
+</tr>
+<tr>
+<td>ct</td>
+<td>CPU_Temperature</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>C</td>
+</tr>
+<tr>
+<td>du</td>
+<td>Disk_Usage</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>Percentage</td>
+</tr>
+<tr>
+<td>mu</td>
+<td>Memory_Usage</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>Percentage</td>
+</tr>
+<tr>
+<td>evt_timestamp</td>
+<td></td>
+<td>event</td>
+<td>TIMESTAMP</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All the values above are case sensitive.</p>
+</div>
+<p><strong>h.</strong>  Click the Add button and then the Save button to save the metrics</br></p>
+<p><strong>i.</strong> Expand the event and it should look somewhat like this (the order might be different):</br>
+<img alt="CPU metrics" src="../img/create_devices_07.png" /></p>
+<p><strong>j.</strong> For the OSC Device type: repeat step 2c – 2f and create the following metrics:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Display name</th>
+<th>Event</th>
+<th>Type</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ov</td>
+<td>OSC_Voltage</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>V</td>
+</tr>
+<tr>
+<td>ot</td>
+<td>OSC_Temperature</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>C</td>
+</tr>
+<tr>
+<td>of</td>
+<td>OSC_Frequency</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>Hz</td>
+</tr>
+<tr>
+<td>evt_timestamp</td>
+<td></td>
+<td>event</td>
+<td>TIMESTAMP</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>k.</strong> Click the Add button and then the Save button to save the metrics</br></p>
+<p><strong>l.</strong> Expand the event and it should look somewhat like this (the order might change):</br>
+<img alt="OSC metrics" src="../img/create_devices_08.png" /></p>
+<p><strong>m.</strong> For the ENV Device type: repeat step 2c – 2f and create the following metrics:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Display name</th>
+<th>Event</th>
+<th>Type</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eh</td>
+<td>ENV_Humidity</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>Percentage</td>
+</tr>
+<tr>
+<td>ep</td>
+<td>ENV_Pressure</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>millibar</td>
+</tr>
+<tr>
+<td>et</td>
+<td>ENV_Temperature</td>
+<td>event</td>
+<td>NUMBER</td>
+<td>C</td>
+</tr>
+<tr>
+<td>evt_timestamp</td>
+<td></td>
+<td>event</td>
+<td>TIMESTAMP</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>n.</strong> Click the Add button and then the Save button to save the metrics</p>
+<p><strong>o.</strong> Expand the event and it should look somewhat like this (the order might change):</br>
+<img alt="ENV metrics" src="../img/create_devices_09.png" /></p>
+<h2 id="3-create-the-devices">3. Create the devices</h2>
+<p><strong>a.</strong> It is now time to create the three devices for the first asset.</br>
+The example shows how to do that for the asset called RPE042.</p>
+<p><strong>b.</strong> Go to the Setup tab:</br>
+<img alt="Setup tab" src="../img/create_devices_03.png" /></p>
+<p><strong>c.</strong> Select the <code>Devices</code>tab. Select the CPU device type and click the blue “Add a device   +” link (There might already be existing devices in your environment, just make sure you create your own set):</br>
+<img alt="Add device" src="../img/create_devices_10.png" /></p>
+<p><strong>d.</strong> Define your own Device ID, leave the Token type to be Auto-generated, and click Add:</br>
+<img alt="Add device" src="../img/create_devices_11.png" /></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make sure to write down the credentials </br>
+– at least the Authentication Token as it is non-recoverable.</p>
+</div>
+<p><strong>e.</strong> Once you have saved the credentials a safe place, then press Close:</br>
+<img alt="Add device" src="../img/create_devices_12.png" /></p>
+<p><strong>f.</strong> For the ENV device repeat step 3c – 3e, e.g. RPE042-ENV-17</br></p>
+<p><strong>g.</strong> For the OSC device repeat step 3c – 3e, e.g. RPE042-OSC-03</br></p>
+<p><strong>h.</strong> Navigate to the IoT Tool.</br>
+This can either be done from the Monitor Home page:</br>
+<img alt="RPE devices" src="../img/create_devices_13.png" /></p>
+<p>or from the Application Switcher in the upper right corner: </br>
+<img alt="RPE devices" src="../img/create_devices_14.png" /></p>
+<p>A new browser tab opens with the MAS Watson IoT Platform Service.</p>
+<p><strong>i.</strong> Here is how it could look like in the IoT Tool, once you have created all three devices and have used the <code>Search by Device ID</code>:</br>
+<img alt="RPE devices" src="../img/create_devices_15.png" /></p>
+<p><strong>j.</strong> This concludes this exercise.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../user_guide/" class="btn btn-neutral float-left" title="RPE User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../prepare_pi/" class="btn btn-neutral float-right" title="2. Prepare Rasperry Pi">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../user_guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../prepare_pi/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Kajal Lalwani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/mref_location_details/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Maximo Real Estate and facilities Location Details - Monitor Maximo Real Estate and Facilities</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Maximo Real Estate and facilities Location Details";
+        var mkdocs_page_input_path = "mref_location_details.md";
+        var mkdocs_page_url = "/maximo-labs/mref_location_details/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Maximo Real Estate and Facilities
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor MREF</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prerequisite/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../configure_MREF/">1. Configure Maximo Real Estate and facilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mref_buildings/">2. Maximo Real Estate and facilities Buildings</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Maximo Real Estate and facilities Location Details</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#view-location-in-hierarchies-and-location-section">View Location in Hierarchies and Location Section</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-building-details">View building details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#overview-tab">Overview Tab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-tab">Template Tab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#device-tab">Device Tab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dimension-tab">Dimension Tab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#calculated-metrics-tab">Calculated Metrics Tab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-tab">Data Tab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dashboard-tab">Dashboard Tab</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../workplace_dashboard/">4. Workplace Analytics dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cleanup/">5. Clean Up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Maximo Real Estate and Facilities</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Maximo Real Estate and facilities Location Details</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will see details of Maximo Real Estate and facilities Location :</p>
+<ul>
+<li>Synced Location details will available in Hierarchies and Location Section</li>
+<li>In Location details - Overview, Template, Dimensions, Device, Calculated Metrics</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prerequisite/">all labs</a> and for this exercise</li>
+<li>completed the previous exercises</li>
+<li>verified the building is synced active <a href="../mref_buildings/" target="_blank">exercise 2</a></li>
+</ol>
+<hr />
+<h2 id="view-location-in-hierarchies-and-location-section">View Location in Hierarchies and Location Section</h2>
+<p>Once Real Estate and Facilities Building get synced, you can see the entire hierarchy for that building. ​</p>
+<p>The Synced buildings are now available in monitor under <code>Hierarchies</code> &amp; <code>Locations</code> section. </p>
+<p><img alt="hierarchies menu" src="../img/hierarchies_menu.png" /></br></br></p>
+<p>In Hierarchy section, you can see whole monitor location hierarchy</p>
+<p><img alt="hierarchies Section" src="../img/hierarchies_section.png" /></br></br></p>
+<p>You can navigate toLocations from side menu. </p>
+<p><img alt="Location menu" src="../img/location_menu.png" /></br></br></p>
+<p>Here, you can search synced location name and in result it will show location name and type as <code>building</code>.</p>
+<p><img alt="Location Section" src="../img/location_section.png" /></br></br></p>
+<h2 id="view-building-details">View building details</h2>
+<p>You can view details of any of the location in Locations and Hierarchy section from the ellipses button as shown in screenshot. ​<code>view details</code>.</p>
+<p><img alt="Location Details" src="../img/view_location_detail_1.png" /></br></br></p>
+<p><img alt="Location Details" src="../img/view_location_detail_2.png" /></br></br></p>
+<p>Once you click on the <code>View Details</code> action menu, you will be redirected to the Location Details page. This page is divided into several tabs, which provide a comprehensive overview of the location.</p>
+<p>The following tabs are available:</p>
+<ul>
+<li>Data</li>
+<li>Overview</li>
+<li>Calculated Metrics</li>
+<li>Template</li>
+<li>Dashboard</li>
+</ul>
+<p>Let's explore what information is available under each tab.</p>
+<h3 id="overview-tab">Overview Tab</h3>
+<p>Below, you'll find an overview of the building, including its Name, Site, Location Type, and Parent Location details. The Child Location section lists the available floors and its location type as <code>Floor</code>, You can click on a floor to view its details page.</p>
+<p><img alt="Building Details" src="../img/building_details.png" /></br></br></p>
+<p>Similarly, you can access the Floor and Space details pages. On the floor's - child location section, you'll see a list of associated spaces and its location type as <code>Space</code>. You can click on a space to view its details page.
+In Parents location of floor - you'll see associated building name.</p>
+<p><img alt="Floor Details" src="../img/floor_details.png" /></br></br></p>
+<p>Space Details -</p>
+<p><img alt="Space Details" src="../img/space_details.png" /></br></br></p>
+<p></br></br></p>
+<h3 id="template-tab">Template Tab</h3>
+<p>Here, you can view a list of all available templates. The Tririga template that corresponds to the specific building type will be applied to the space, floor, and building once that building has been synced.</p>
+<p>Building Template -</p>
+<p><img alt="Building Template" src="../img/template_building.png" /></p>
+<p>Floor Template -</p>
+<p><img alt="Floor Template" src="../img/template_floor.png" /></p>
+<p>Space Template - </p>
+<p><img alt="Space Template" src="../img/template_space.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The applied templates have collection of out of the box KPI (Calculated Metrics) and workplace analytics dashboard which will be generated once you assign device to space.</p>
+</div>
+<p></br></p>
+<h3 id="device-tab">Device Tab</h3>
+<p>Before assign device, complete the following steps - </br>
+Integrate with Cisco Spaces. For more information, see Integrating with Cisco Spaces.</br>
+Integrate with Cisco Webex. For more information, see Integrating with Cisco Webex.</p>
+<p>Once,configuration of Cisco Spaces and Cisco Webex has been completed you can assign subscribed <code>Cisco Webex</code> device to Space in order to track occupancy details, including the number of people in the space and the occupancy rate. Once a device is assigned, it will begin generating valuable insights and data, including Calculated metrics and dashboards for the space, floor, and building.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>you can assign only device type <code>Cisco Webex</code> device to MREF Buildings. </p>
+</div>
+<p>To assign Cisco Webex device to Space follow the steps -  </p>
+<p>Click on <code>Assign devices</code> button</p>
+<p><img alt="Assign Device" src="../img/assign_device_01.png" /></p>
+<p>A popup window will appear, enabling you to assign devices. You can:</p>
+<p>Search for a device by name</br>
+Select multiple devices to assign by checking the corresponding checkboxes</p>
+<p>Click on <code>Save</code> </p>
+<p><img alt="Assign Device" src="../img/assign_device_02.png" /></p>
+<p><img alt="Assign Device" src="../img/assign_device_03.png" /></p>
+<p>Congratulations you have successfully assigned device in Location.</p>
+<p>You can also remove assigned device from the location through <code>remove</code> option from action menu.</p>
+<p><img alt="Delete Device" src="../img/delete_device_1.png" /></p>
+<p></br></br></p>
+<h3 id="dimension-tab">Dimension Tab</h3>
+<p>This tab displays a list of dimensions associated with the Building, Floor, and Space. These dimensions are automatically generated when the building is successfully synced. The dimensions are sourced from the configured Tririga Instance, ensuring accurate and up-to-date information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Automatically generated dimensions cannot be edited or removed.</li>
+<li>You have the flexibility to add new dimensions manually.</li>
+<li>Manually created dimensions can be edited or deleted as needed.</li>
+</ul>
+</div>
+<p>Building Dimensions -</p>
+<p><img alt="Dimension Building" src="../img/dimension_1.png" /></p>
+<p>Floor Dimensions -</p>
+<p><img alt="Dimension Floor" src="../img/dimension_2.png" /></p>
+<p>Space Dimensions -</p>
+<p><img alt="Dimension Space" src="../img/dimension_3.png" /></p>
+<p>​</br></br></p>
+<h3 id="calculated-metrics-tab">Calculated Metrics Tab</h3>
+<p>This section displays a list of Calculated Metrics associated with the Building, Floor, and Space, which are derived from Templates. These metrics are used to measure various parameters, including: Occupancy Count, Occupancy Rate, Duration (by Minute, Hour, Day, and Week) etc.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calculated metrics will only be generated after a Cisco Webex device has been assigned to the Space.Please allow some time for the metrics to be generated after device assignment.</p>
+</div>
+<p>Building Calculated Metrics -</p>
+<p><img alt="Calculated Metrics" src="../img/metrics_1.png" /></p>
+<p>Floor Calculated Metrics</p>
+<p><img alt="Calculated Metrics" src="../img/metrics_2.png" /></p>
+<p>Space Calculated Metrics</p>
+<p><img alt="Calculated Metrics" src="../img/metrics_3.png" /></p>
+<p></br></br></p>
+<h3 id="data-tab">Data Tab</h3>
+<p>This tab provides a detailed view of dimensions and calculated metrics data. You can:</p>
+<p>Visualize metrics and dimensions values through interactive graphs</br>
+View detailed data for each metric and dimension in a table format, allowing for individual analysis and insights.</p>
+<p><strong>Building Calculated Metrics and Dimension details -</strong></p>
+<p>Below is a list of calculated metrics. As an example, let's take a look at the metric <code>Building-MaxOccupancyCount-Day</code>.</p>
+<p>This metric displays a graph showing the maximum occupancy count for a building on a given day.The graph provides a visual representation of the maximum occupancy count, allowing you to easily track and analyze the data.</p>
+<p><img alt="building_data_tab" src="../img/building_metrics_1.png" /></p>
+<p>In addition to the graph view, you can also view the calculated metrics in a table format. To do this, navigate to the Data Table tab.
+This table view allows you to easily compare the metrics, making it a useful alternative to the graph view.</p>
+<p><img alt="building_data_tab" src="../img/building_metrics_2.png" /></p>
+<p>Below is a list of dimensions, displaying their corresponding values.</p>
+<p><img alt="building_data_tab" src="../img/building_dimension_graph.png" /></p>
+<p><strong>Floor Calculated Metrics and Dimension details -</strong></p>
+<p>Below is a list of calculated metrics of floor. As an example, let's take a look at the metric <code>Floor-MaxOccupancyCount-Day</code> and <code>Floor-MaxOccupancyRate-Minute</code> . Here, its showing graph and table formate of calculated metrics data.</p>
+<p><img alt="floor_data_tab" src="../img/floor_metric_1.png" /></p>
+<p><img alt="floor_data_tab" src="../img/floor_metric_2.png" /></p>
+<p>Below is a list of dimensions of Floor, displaying their corresponding values.</p>
+<p><img alt="floor_data_tab" src="../img/floor_dimension_graph.png" /></p>
+<p><strong>Space Calculated Metrics and Dimension details -</strong></p>
+<p>Below is a list of calculated metrics of floor. As an example, let's take a look at the metric <code>Space-MaxOccupancyCount-Hour</code> and <code>Floor-MaxOccupancyCount-Day</code> . Here, its showing graph and table formate of calculated metrics data.</p>
+<p><img alt="space_data_tab" src="../img/space_metric_1.png" /></p>
+<p><img alt="space_data_tab" src="../img/space_metric_2.png" /></p>
+<p>Below is a list of dimensions of Space, displaying their corresponding values.</p>
+<p><img alt="space_data_tab" src="../img/space_dimension_graph.png" /></p>
+<p></br></br></p>
+<h3 id="dashboard-tab">Dashboard Tab</h3>
+<p>This tab list the workplace analytics and alert dashboard which is automatically generated once building has been synced. This dashboards are sourced from applied template.</p>
+<p>Building Dashboard List</p>
+<p><img alt="Dashboard" src="../img/dashboard_1.png" /></p>
+<p>Floor Dashboard List</p>
+<p><img alt="Dashboard" src="../img/dashboard_2.png" /></p>
+<p>Space Dashboard List</p>
+<p><img alt="Dashboard" src="../img/dashboard_3.png" /></p>
+<hr />
+<p>Congratulations, you have successfully covered the understanding of MREF location details.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mref_buildings/" class="btn btn-neutral float-left" title="2. Maximo Real Estate and facilities Buildings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../workplace_dashboard/" class="btn btn-neutral float-right" title="4. Workplace Analytics dashboards">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mref_buildings/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../workplace_dashboard/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

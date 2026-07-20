@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Kajal Lalwani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/data_restriction_update/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Add Data Restrictions in Security Group - Monitor Resource Based Access Control Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Add Data Restrictions in Security Group";
+        var mkdocs_page_input_path = "data_restriction_update.md";
+        var mkdocs_page_url = "/maximo-labs/data_restriction_update/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Resource Based Access Control Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor RBAC Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../create_security_groups/">1. Create Security Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_users/">2. Create Users and Assign Groups</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Add Data Restrictions in Security Group</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objectives">Objectives</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#understanding-data-restrictions">Understanding Data Restrictions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#steps-to-add-data-restrictions">Steps to Add Data Restrictions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-navigate-to-security-groups">Step 1: Navigate to Security Groups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-open-the-security-group">Step 2: Open the Security Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-navigate-to-restrictions-tab">Step 3: Navigate to Restrictions Tab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-edit-and-add-restriction">Step 4: Edit and Add Restriction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-create-data-restriction">Step 5: Create Data Restriction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-6-view-created-restriction">Step 6: View Created Restriction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-7-add-multiple-restrictions-optional">Step 7: Add Multiple Restrictions (Optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-8-save-changes">Step 8: Save Changes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rbac-examples-for-hierarchy-resources">RBAC Examples for Hierarchy Resources</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#table-1-rbac-examples-for-hierarchy-resources">Table 1: RBAC Examples for Hierarchy Resources</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rbac-examples-for-device-types">RBAC Examples for Device Types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#table-2-rbac-examples-for-device-types">Table 2: RBAC Examples for Device Types</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#filter-syntax-examples">Filter Syntax Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameter-reference-for-hierarchy-resources">Parameter Reference for Hierarchy Resources</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#table-3-parameter-terms-and-examples">Table 3: Parameter Terms and Examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#organization-parameters">Organization Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#site-parameters">Site Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#system-parameters">System Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#location-parameters">Location Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#asset-parameters">Asset Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#device-type">Device Type</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resource_restriction_scenarios/">4. Resource Restriction Scenarios</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify_data_restrictions/">5. Verify User Data Restrictions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Resource Based Access Control Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Add Data Restrictions in Security Group</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="add-data-restriction-in-security-group">Add Data Restriction in Security Group</h1>
+<h2 id="objectives">Objectives</h2>
+<p>In this exercise, you will learn how to:</p>
+<ul>
+<li>Configure data restrictions in Security Groups</li>
+<li>Apply filters to limit resource visibility</li>
+<li>Test data restrictions with different filter conditions</li>
+<li>Understand how resource-based access control works with various resource types</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This exercise assumes that you have:</p>
+<ol>
+<li>Completed <a href="../create_security_groups/">Creating Security Groups</a>  </li>
+<li>Completed <a href="../create_users/">Creating Users and Assigning Groups</a>  </li>
+<li>Have existing resources (Assets, Locations, Systems, etc.) in your Monitor environment</li>
+</ol>
+<hr />
+<h2 id="understanding-data-restrictions">Understanding Data Restrictions</h2>
+<p>Data restrictions control which specific resources a user can see within Monitor applications. By adding conditions to Security Groups, you can filter data based on various attributes like names, UUIDs, descriptions, status, and more.</p>
+<hr />
+<h2 id="steps-to-add-data-restrictions">Steps to Add Data Restrictions</h2>
+<p>Follow these steps to add data restrictions to the Security Group you created in the previous exercise:</p>
+<h3 id="step-1-navigate-to-security-groups">Step 1: Navigate to Security Groups</h3>
+<ol>
+<li>Login to Monitor with an Admin user</li>
+<li>Go to <strong>Suite → Access and usage → Security Groups</strong></li>
+</ol>
+<p><img alt="Security Groups Navigation" src="../img/security_groups_nav_01.png" /></br></p>
+<hr />
+<h3 id="step-2-open-the-security-group">Step 2: Open the Security Group</h3>
+<ol>
+<li>In the Security Groups list, search for the security group you created (e.g., <code>MONITOR_DATA_RESTRICTION</code>)</li>
+<li>Click on the security group name to open it</li>
+</ol>
+<p><img alt="Search Security Group" src="../img/data_restriction_01.png" /></br></p>
+<hr />
+<h3 id="step-3-navigate-to-restrictions-tab">Step 3: Navigate to Restrictions Tab</h3>
+<ol>
+<li>Once the security group opens, click on the <strong>Restrictions</strong> tab</li>
+<li>You will see an empty restrictions list if no restrictions have been added yet</li>
+</ol>
+<p><img alt="Restrictions Tab" src="../img/data_restriction_02.png" /></br></p>
+<hr />
+<h3 id="step-4-edit-and-add-restriction">Step 4: Edit and Add Restriction</h3>
+<ol>
+<li>Click the <strong>Edit</strong> icon (pencil icon) to enable editing mode</li>
+<li>Click the <strong>Add restriction</strong> button</li>
+</ol>
+<p><img alt="Edit Security Group" src="../img/data_restriction_03.png" /></br></p>
+<p><img alt="Add Restriction Button" src="../img/data_restriction_04.png" /></br></p>
+<hr />
+<h3 id="step-5-create-data-restriction">Step 5: Create Data Restriction</h3>
+<p>A "Create data restriction" modal will open. Follow these steps:</p>
+<p><strong>Search for Application</strong>: In the Application field, search for the Monitor application you want to add restrictions to</p>
+<p>Example: <code>MONITOR_SETUP_LOCATIONS</code></p>
+<p><img alt="Search Application" src="../img/data_restriction_05.png" /></p>
+<p><strong>Select Application</strong>: Click on the application from the dropdown list</p>
+<p>Example: Select <code>MONITOR_SETUP_LOCATIONS</code> from the list</p>
+<p><img alt="Select Application" src="../img/data_restriction_06.png" /></p>
+<p><strong>Add Condition</strong>: In the "Condition expression" field, enter your filter condition</p>
+<p>Example: <code>location="BR%"</code></p>
+<p>This will restrict the user to only see locations starting with "BR"</p>
+<p><img alt="Add Condition" src="../img/data_restriction_07.png" /></p>
+<p>Click <strong>Create</strong> to save the restriction</p>
+<p><img alt="Create Restriction" src="../img/data_restriction_08.png" /></p>
+<hr />
+<h3 id="step-6-view-created-restriction">Step 6: View Created Restriction</h3>
+<p>The created restriction will now appear in the Restrictions tab, showing:</p>
+<ul>
+<li><strong>Application</strong>: The Monitor application (e.g., MONITOR_SETUP_LOCATIONS)</li>
+<li><strong>Object</strong>: The Maximo object being restricted (e.g., MASOBJECTNP)</li>
+<li><strong>Condition</strong>: Empty (system managed)</li>
+<li><strong>Expression</strong>: Your filter condition (e.g., <code>location="BR%"</code>)</li>
+</ul>
+<p><img alt="View Restriction" src="../img/data_restriction_09.png" /></br></p>
+<hr />
+<h3 id="step-7-add-multiple-restrictions-optional">Step 7: Add Multiple Restrictions (Optional)</h3>
+<p>You can add multiple restrictions to the same security group:</p>
+<ol>
+<li>Click <strong>Add restriction</strong> button again</li>
+<li>Select a different application (e.g., <code>MONITOR_DB_LOCATIONS</code>)</li>
+<li>Add the same or different condition</li>
+<li>Click <strong>Create</strong></li>
+</ol>
+<p>Repeat this process for all applications where you want to apply data restrictions.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can add restrictions for both Dashboard (<code>MONITOR_DB_*</code>) and Setup (<code>MONITOR_SETUP_*</code>) applications to ensure consistent filtering across all Monitor interfaces.</p>
+</div>
+<hr />
+<h3 id="step-8-save-changes">Step 8: Save Changes</h3>
+<ol>
+<li>After adding all desired restrictions, click <strong>Save &amp; exit</strong> at the bottom of the page</li>
+<li>The restrictions are now active and will be applied to all users assigned to this security group</li>
+</ol>
+<p><img alt="Save and Exit" src="../img/data_restriction_10.png" /></br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Users assigned to this security group will only see resources matching the specified conditions.</p>
+<p>If a user is assigned to multiple security groups with different data restrictions, the restrictions are combined automatically. The user will have access to resources allowed by ANY of their assigned security groups.</p>
+</div>
+<hr />
+<p>Congratulations!
+You've successfully added data restrictions to Security Groups. The examples below provide a comprehensive reference for various filter conditions you can use.</p>
+<hr />
+<h2 id="rbac-examples-for-hierarchy-resources">RBAC Examples for Hierarchy Resources</h2>
+<p>The following table shows various scenarios for filtering hierarchy resources:</p>
+<h3 id="table-1-rbac-examples-for-hierarchy-resources">Table 1: RBAC Examples for Hierarchy Resources</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Applications</th>
+<th>Condition</th>
+<th>Expected Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organization name filter</strong></td>
+<td><code>MONITOR_DB_ORGANIZATIONS</code><br><code>MONITOR_SETUP_ORGANIZATIONS</code></td>
+<td><code>orgid="P%"</code></td>
+<td>Organizations starting with P are displayed on the dashboard and setup group.</td>
+</tr>
+<tr>
+<td><strong>Site name filter</strong></td>
+<td><code>MONITOR_DB_SITES</code><br><code>MONITOR_SETUP_SITES</code></td>
+<td><code>siteid="M%"</code></td>
+<td>All the sites starting with M are displayed on the dashboard and setup group.</td>
+</tr>
+<tr>
+<td><strong>System name filter</strong></td>
+<td><code>MONITOR_DB_SYSTEMS</code><br><code>MONITOR_SETUP_SYSTEMS</code></td>
+<td><code>systemid="M%"</code></td>
+<td>All the systems starting with M are displayed on the dashboard and setup group.</td>
+</tr>
+<tr>
+<td><strong>Location name filter</strong></td>
+<td><code>MONITOR_DB_LOCATIONS</code><br><code>MONITOR_SETUP_LOCATIONS</code></td>
+<td><code>location="M%"</code><br><code>location="P%"</code></td>
+<td>All the locations starting with M and P are displayed on the dashboard and setup group.</td>
+</tr>
+<tr>
+<td><strong>Asset name filter</strong></td>
+<td><code>MONITOR_DB_ASSETS</code><br><code>MONITOR_SETUP_ASSETS</code></td>
+<td><code>assetnum="M%"</code></td>
+<td>All the assets starting with M are displayed on the dashboard and setup group.</td>
+</tr>
+<tr>
+<td><strong>Description filter</strong></td>
+<td><code>MONITOR_DB_ORGANIZATIONS</code><br><code>MONITOR_SETUP_ORGANIZATIONS</code><br><code>MONITOR_DB_SITES</code><br><code>MONITOR_SETUP_SITES</code><br><code>MONITOR_DB_SYSTEMS</code><br><code>MONITOR_SETUP_SYSTEMS</code><br><code>MONITOR_DB_ASSETS</code><br><code>MONITOR_SETUP_ASSETS</code><br><code>MONITOR_DB_LOCATIONS</code><br><code>MONITOR_SETUP_LOCATIONS</code></td>
+<td><code>description="%esc%"</code></td>
+<td>Only the hierarchy levels with description "%esc%" are displayed on the dashboard and setup group.</td>
+</tr>
+<tr>
+<td><strong>Org UUID filter</strong></td>
+<td><code>MONITOR_DB_ORGANIZATIONS</code><br><code>MONITOR_SETUP_ORGANIZATIONS</code></td>
+<td><code>organizationid in [1,6,114,115,217,350]</code></td>
+<td>Only selected organizations are displayed in setup and dashboard.</td>
+</tr>
+<tr>
+<td><strong>Site UUID filter</strong></td>
+<td><code>MONITOR_DB_SITES</code><br><code>MONITOR_SETUP_SITES</code></td>
+<td><code>siteuid in [1,6,7,9,11,20]</code></td>
+<td>Only selected sites are displayed in the setup and dashboard.</td>
+</tr>
+<tr>
+<td><strong>System UUID filter</strong></td>
+<td><code>MONITOR_DB_SYSTEMS</code><br><code>MONITOR_SETUP_SYSTEMS</code></td>
+<td><code>locsystemid in [1,2,4,5,8,9]</code></td>
+<td>Only the selected systems are displayed in setup and dashboard.</td>
+</tr>
+<tr>
+<td><strong>Location UUID filter</strong></td>
+<td><code>MONITOR_DB_LOCATIONS</code><br><code>MONITOR_SETUP_LOCATIONS</code></td>
+<td><code>locationsid in [1,11,130,122,14]</code></td>
+<td>Only the selected locations are displayed in setup and dashboard.</td>
+</tr>
+<tr>
+<td><strong>Asset UUID filter</strong></td>
+<td><code>MONITOR_DB_ASSETS</code><br><code>MONITOR_SETUP_ASSETS</code></td>
+<td><code>assetid in [1,76,84,149,1276,104]</code></td>
+<td>Only the selected assets are displayed in setup and dashboard.</td>
+</tr>
+<tr>
+<td><strong>Organization and site status filter</strong></td>
+<td><code>MONITOR_DB_ORGANIZATIONS</code><br><code>MONITOR_SETUP_ORGANIZATIONS</code><br><code>MONITOR_DB_SITES</code><br><code>MONITOR_SETUP_SITES</code></td>
+<td><code>active=1</code></td>
+<td>Only active organizations and sites are displayed in setup and dashboard.</td>
+</tr>
+<tr>
+<td><strong>Organization category filter</strong></td>
+<td><code>MONITOR_DB_ORGANIZATIONS</code><br><code>MONITOR_SETUP_ORGANIZATIONS</code></td>
+<td><code>category="COUNT"</code><br>or<br><code>category="AVG"</code></td>
+<td>Only organizations with specified category type are displayed.</td>
+</tr>
+<tr>
+<td><strong>System with org/site filter</strong></td>
+<td><code>MONITOR_DB_SYSTEMS</code><br><code>MONITOR_SETUP_SYSTEMS</code></td>
+<td><code>orgid="M%"</code><br><code>siteid="M%"</code></td>
+<td>Only systems with orgid and siteid starting with M are displayed.</td>
+</tr>
+<tr>
+<td><strong>Location with multiple filters</strong></td>
+<td><code>MONITOR_DB_LOCATIONS</code><br><code>MONITOR_SETUP_LOCATIONS</code></td>
+<td><code>orgid="M%"</code><br><code>siteid="M%"</code><br><code>type=FLOOR</code><br><code>status=OPERATING</code><br><code>systemid="M%"</code></td>
+<td>Locations matching all specified conditions are displayed.</td>
+</tr>
+<tr>
+<td><strong>Asset with multiple filters</strong></td>
+<td><code>MONITOR_DB_ASSETS</code><br><code>MONITOR_SETUP_ASSETS</code></td>
+<td><code>type=&lt;asset_type&gt;</code><br><code>status=&lt;status&gt;</code><br><code>orgid=&lt;org_name&gt;</code><br><code>siteid=&lt;site_name&gt;</code><br><code>location=&lt;location_name&gt;</code><br><code>systemid=&lt;system_name&gt;</code></td>
+<td>Assets matching the specified combination of filters are displayed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rbac-examples-for-device-types">RBAC Examples for Device Types</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Queries defined for <code>MONITOR_DB_DEVICES</code> and <code>MONITOR_SETUP_DEVICES</code> will not apply directly to devices. To apply restrictions on devices, the system uses the queries defined in <code>MONITOR_SETUP_DEVICE_TYPES</code> and <code>MONITOR_DB_DEVICE_TYPES</code>. Device access is controlled through their associated device types.</p>
+</div>
+<p>The following table shows various scenarios for filtering device types:</p>
+<h3 id="table-2-rbac-examples-for-device-types">Table 2: RBAC Examples for Device Types</h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Condition</th>
+<th>Expected Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>name='DT1'</code></td>
+<td>Device type with name DT1 is displayed on the Dashboard page.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>name='DT1'</code></td>
+<td>Device type with name DT1 is displayed on the Setup page.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>uuid in ('34b3f40b-e253-428d-a500-d4dfe17c901b', '4b57c0b5-169b-4e1d-bd6c-298ea35808c0')</code></td>
+<td>Device types with specified UUIDs are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>uuid in ('34b3f40b-e253-428d-a500-d4dfe17c901b', '4b57c0b5-169b-4e1d-bd6c-298ea35808c0')</code></td>
+<td>Device types with specified UUIDs are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>name in ('Cisco_Webex', 'CJ_TESTKAFKA_PL', 'DT1')</code></td>
+<td>Only the specified 3 device types are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>name in ('Cisco_Webex', 'CJ_TESTKAFKA_PL', 'DT1')</code></td>
+<td>Only the 3 specified device types and their assigned devices are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>name like 'Empty%'</code></td>
+<td>Only device types starting with "Empty" are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>name like 'Empty%'</code></td>
+<td>Only device types starting with "Empty" are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>name like 't%' and description = 'hello'</code></td>
+<td>Device types starting with "t" and having description "hello" are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>name like 't%' and description = 'hello'</code></td>
+<td>Device types starting with "t" and having description "hello" are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>name='DT1' and description='qwerty'</code></td>
+<td>Device type DT1 with description "qwerty" is displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>name='DT1' and description='qwerty'</code></td>
+<td>Device type DT1 with description "qwerty" is displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>name NOT LIKE 'E%'</code></td>
+<td>Device types that do not start with "E" are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>name NOT LIKE 'E%'</code></td>
+<td>Device types that do not start with "E" are displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>uuid='295e0c1f-423d-4296-90b4-94eaf3184449'</code></td>
+<td>Device type with the specified UUID is displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_SETUP_DEVICE_TYPES</code></td>
+<td><code>uuid='295e0c1f-423d-4296-90b4-94eaf3184449'</code></td>
+<td>Device type with the specified UUID is displayed.</td>
+</tr>
+<tr>
+<td><code>MONITOR_DB_DEVICE_TYPES</code></td>
+<td><code>name like 'e%' or name like 'C%'</code></td>
+<td>Device types starting with "e" or "C" are displayed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="filter-syntax-examples">Filter Syntax Examples</h2>
+<p>Here are common filter syntax patterns you can use:</p>
+<pre><code>assetnum=&quot;USA&quot;
+orgid!=&quot;M2_ORG&quot;
+assetnum IN [&quot;123&quot;,&quot;456&quot;,&quot;789&quot;]
+active=true
+active=0
+category IN [&quot;COUNT&quot;,&quot;AVG&quot;]
+active=true AND siteid=&quot;BEDFORD&quot;
+assetnum=&quot;M2%&quot;
+</code></pre>
+<h2 id="parameter-reference-for-hierarchy-resources">Parameter Reference for Hierarchy Resources</h2>
+<h3 id="table-3-parameter-terms-and-examples">Table 3: Parameter Terms and Examples</h3>
+<h4 id="organization-parameters">Organization Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orgid</code></td>
+<td>Name of the organization</td>
+<td><code>orgid = "EAGLEN%"</code></td>
+</tr>
+<tr>
+<td><code>organizationid</code></td>
+<td>UUID of the organization</td>
+<td><code>organizationid in [1,114,310,312,6000]</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description of the organization</td>
+<td><code>description like "%sec%"</code><br><code>description in ["%AGLE%","%esc%"]</code></td>
+</tr>
+<tr>
+<td><code>active</code></td>
+<td>Status of the organization</td>
+<td><code>true</code>, <code>false</code>, <code>0</code>, <code>1</code></td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>Type of organization</td>
+<td><code>category="COUNT"</code> or <code>category="AVG"</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="site-parameters">Site Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>siteid</code></td>
+<td>Name of the site</td>
+<td><code>siteid="BEDFORD"</code></td>
+</tr>
+<tr>
+<td><code>siteuid</code></td>
+<td>Site UUID</td>
+<td><code>siteuid IN [1,6,7,9,11]</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description of the site</td>
+<td><code>description like "%esc%"</code></td>
+</tr>
+<tr>
+<td><code>active</code></td>
+<td>Status of the site</td>
+<td><code>0</code>, <code>1</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="system-parameters">System Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>systemid</code></td>
+<td>System name</td>
+<td><code>systemid like "M%"</code></td>
+</tr>
+<tr>
+<td><code>locsystemid</code></td>
+<td>System UUID</td>
+<td><code>locsystemid in [1,2,4,5,8,9]</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description of the system</td>
+<td><code>description like "%esc%"</code></td>
+</tr>
+<tr>
+<td><code>orgid</code></td>
+<td>Organization name</td>
+<td><code>orgid="M%"</code></td>
+</tr>
+<tr>
+<td><code>siteid</code></td>
+<td>Site name</td>
+<td><code>siteid="M%"</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="location-parameters">Location Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>location</code></td>
+<td>Name of the location</td>
+<td><code>location like "M%"</code></td>
+</tr>
+<tr>
+<td><code>locationsid</code></td>
+<td>Location UUID</td>
+<td><code>locationsid in [1,11,107,108,109]</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description of the location</td>
+<td><code>description = "%esc%"</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Location type name</td>
+<td><code>type="FLOOR"</code> or <code>type="OPERATING"</code></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status of the location</td>
+<td><code>status="OPERATING"</code> or <code>status="ACTIVE"</code></td>
+</tr>
+<tr>
+<td><code>orgid</code></td>
+<td>Organization name</td>
+<td><code>orgid="M%"</code></td>
+</tr>
+<tr>
+<td><code>siteid</code></td>
+<td>Site name</td>
+<td><code>siteid="M%"</code></td>
+</tr>
+<tr>
+<td><code>systemid</code></td>
+<td>System name</td>
+<td><code>systemid="M%"</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="asset-parameters">Asset Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>assetnum</code></td>
+<td>Name of the asset</td>
+<td><code>assetnum like "M%"</code></td>
+</tr>
+<tr>
+<td><code>assetid</code></td>
+<td>Asset UUID</td>
+<td><code>assetid in [1,104,117,123]</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description of the asset</td>
+<td><code>description like '%esc%'</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Type of the asset</td>
+<td><code>type="PRODUCTION"</code></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status of the asset</td>
+<td><code>status="OPERATING"</code></td>
+</tr>
+<tr>
+<td><code>orgid</code></td>
+<td>Organization name</td>
+<td><code>orgid="M%"</code></td>
+</tr>
+<tr>
+<td><code>siteid</code></td>
+<td>Site name</td>
+<td><code>siteid="BEDFORD"</code></td>
+</tr>
+<tr>
+<td><code>location</code></td>
+<td>Location name</td>
+<td><code>location="FLOOR1"</code></td>
+</tr>
+<tr>
+<td><code>systemid</code></td>
+<td>System name</td>
+<td><code>systemid="M%"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="device-type">Device Type</h3>
+<p>Device type data restrictions allow you to control access to specific device types based on various attributes.</p>
+<p><strong>Supported Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Name of the device type</td>
+<td><code>name='ms_test_1' and description='test device type'</code></td>
+</tr>
+<tr>
+<td><code>name</code> (pattern matching)</td>
+<td>Name pattern using LIKE</td>
+<td><code>name like 'ms_test%'</code></td>
+</tr>
+<tr>
+<td><code>name</code> (multiple values)</td>
+<td>Multiple device type names</td>
+<td><code>name in ('type_1','type_2')</code></td>
+</tr>
+<tr>
+<td><code>uuid</code></td>
+<td>Device type UUID</td>
+<td><code>uuid in ('uuid1','uuid2','uuid3')</code></td>
+</tr>
+<tr>
+<td><code>alias</code></td>
+<td>Alias of the device type</td>
+<td><code>alias='device_alias_1'</code></td>
+</tr>
+<tr>
+<td><code>alias</code> (pattern matching)</td>
+<td>Alias pattern using LIKE</td>
+<td><code>alias like 'device%'</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Description of the device type</td>
+<td><code>description like '%test%'</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Congratulations!
+You have successfully learned how to configure data restrictions in Security Groups. Continue to the next section to explore practical scenarios for each resource type: <a href="../resource_restriction_scenarios/">Resource Restriction Scenarios</a></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_users/" class="btn btn-neutral float-left" title="2. Create Users and Assign Groups"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../resource_restriction_scenarios/" class="btn btn-neutral float-right" title="4. Resource Restriction Scenarios">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_users/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../resource_restriction_scenarios/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
