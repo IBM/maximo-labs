@@ -29,6 +29,17 @@ Look at the character used above and belove these two lines of text.
 #### PLEASE KEEP SAME ORDER AS IN THE INDEX.MD, I.E.      ####
 #### ADDING NEW LABS RIGHT UNDER THIS COMMENT             ####
 
+#### Maximo Application Suite 9.3 Labs                    ####
+
+#### Build the Monitor Juniper mist inetration:
+lab=monitor_juniper_mist_integration_9.3
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
+
 ##############################################################
 #### Maximo Application Suite 9.2 Labs                    ####
 
