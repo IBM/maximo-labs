@@ -2,16 +2,6 @@
 
 In this Exercise you will learn how to configure the Juniper Mist integration in IBM MAS Monitor, upload Business Unit mapping configurations, and set up the dynamic Business Unit Lookup API.
 
-<!-- ---
-
-*Before you begin:*  
-This Exercise requires that you have:
-
-1. Completed the pre-requisites required for [all labs](prereqs.md)
-2. Completed the previous exercises
-
---- -->
-
 ## Steps to Configure the Integration
 
 1. **Log in to IBM MAS Monitor**  
@@ -34,8 +24,6 @@ This Exercise requires that you have:
 
     ![Add Integration](img/juniper_mist_int.png)
 
-<!-- --- -->
-
 ## Step 1: Configure Juniper Mist Access
 
 In this step, provide the required Juniper Mist connection details:
@@ -50,8 +38,6 @@ Click **Next** to proceed.
 ![Add Integration](img/mist_access_config.png)
 
 These details are used to establish connectivity between Juniper Mist and IBM MAS Monitor.  
-
-<!-- --- -->
 
 ## Step 2: Configure Business Unit (Optional)
 
@@ -69,8 +55,6 @@ Click **Next** to proceed.
 
 This is an **optional step**, and users can skip it if not needed.
 
-<!-- --- -->
-
 ## Step 3: Configure Business Unit Lookup API (Optional)
 
 The **Configure Business Unit Lookup API** step allows administrators to configure the API details required to resolve user identities to Business Units dynamically at runtime:
@@ -86,8 +70,6 @@ Click **Finish** to complete the integration configuration.
 
 This is an **optional step**, and users can skip it.
 
-<!-- --- -->
-
 ## Verify Integration
 
 Once the integration is added successfully, its details will appear on the **Integrations list** page.
@@ -95,5 +77,3 @@ Once the integration is added successfully, its details will appear on the **Int
 ![Verify Integration](img/verify_integration.png)
 
 Congratulations, you have successfully configured the Juniper Mist Integration in Maximo Monitor.
-
-<!-- --- -->

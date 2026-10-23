@@ -13,15 +13,16 @@ By the end of the lab, you will understand how Wi-Fi telemetry and location inte
 
 You will complete the following exercises:
 
-* Juniper Mist Overview & Architecture
+* Juniper Mist Overview
 * Configure Juniper Mist Integration
+* Edit Juniper Mist Integration
 * Site Synchronization Overview
 * Assign Maximo Manage Locations
 * Subscribe Juniper Mist Locations
 * Access Points & Device Types
 * Occupancy & Presence Calculated Metrics
 * Unsubscribe & Unassign Workflows
-* Edit & Delete Integration
+* Delete Juniper Mist Integration
 
 ---
 

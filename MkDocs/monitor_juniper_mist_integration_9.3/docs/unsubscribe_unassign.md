@@ -32,8 +32,6 @@ To stop data collection for a floor, unsubscribe from it first:
 
     ![Unsubscribed Floor](img/unsubscribed_Floor.png)
 
-<!-- --- -->
-
 ### Unsubscribing from a Juniper MIST Building
 
 - The **Unsubscribe** option is available only when a Maximo Manage Location is assigned to the MIST Building.
@@ -54,13 +52,9 @@ To stop data collection for a floor, unsubscribe from it first:
 
     ![partially Unsubscribed Error - Building](img/partial_Unsub_Error_Build.png)
 
-    ![Unsubscribe Error - Building](img/unsub_Error_Build.png)
-
 - Once unsubscribe is completed successfully, the subscription status of the applicable MIST Floors is updated to `Unsubscribed`.
 
     ![Unsubscribed Building](img/unsubscribed_Build.png)
-
-<!-- --- -->
 
 ### Unsubscribing from a Juniper MIST Site
 
@@ -83,13 +77,9 @@ To stop data collection for a floor, unsubscribe from it first:
 
     ![partially Unsubscribed Error - site](img/partial_Unsub_Error_Site.png)
 
-    ![Unsubscribe Error - Site](img/unsub_Error_Site.png)   
-
 - Once unsubscribe is completed successfully, the subscription status of the applicable MIST Floors is updated to `Unsubscribed`.
 
     ![Unsubscribed Site](img/unsubscribed_Site.png)
-
-<!-- --- -->
 
 ## Unassigning Maximo Manage Locations
 
@@ -108,8 +98,6 @@ To stop data collection for a floor, unsubscribe from it first:
 5. The selected Maximo Manage Location is successfully unassigned from the corresponding MIST Floor.
 
     ![Unassigned Location - Floor](img/unassigned_Floor.png)
-
-<!-- --- -->
 
 ### Unassign a Maximo Manage Location from a MIST Building
 
@@ -132,8 +120,6 @@ To stop data collection for a floor, unsubscribe from it first:
     
 ![Unassign Location Error - Building](img/unassign_Error_Build.png)
 
-<!-- --- -->
-
 ### Unassign a Maximo Manage Location from a MIST Site
 
 1. From the **Action menu (⋮)** for the required MIST Site, select **Unassign Location**.
@@ -154,5 +140,3 @@ To stop data collection for a floor, unsubscribe from it first:
     If any associated **Building or Floor** still has a Maximo Manage Location assigned, the system will not allow the Site-level location to be unassigned and will display an error.
 
 ![Unassign Location Error - Site](img/unassign_Error_Site.png)
-
-<!-- --- -->

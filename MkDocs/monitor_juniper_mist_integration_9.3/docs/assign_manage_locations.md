@@ -33,8 +33,6 @@ To assign a Maximo Manage Location to a Mist Site from the Site List page:
 
     ![Location assigned to site](img/location_Assigned_Site.png)
 
-<!-- --- -->
-
 ## Assign Maximo Manage Location to a Mist Building
 
 To assign a Maximo Manage Location to a Mist Building from the Building details page:
@@ -55,8 +53,6 @@ To assign a Maximo Manage Location to a Mist Building from the Building details 
 
     ![Location assigned to Building](img/loc_Assigned_Building.png)
 
-<!-- --- -->
-
 ## Assign Maximo Manage Location to a Mist Floor
 
 To assign a Maximo Manage Location to a Mist Floor from the Floor details page:
@@ -76,5 +72,3 @@ To assign a Maximo Manage Location to a Mist Floor from the Floor details page:
 7. The selected Maximo Manage Location will be successfully assigned to the corresponding Mist Floor.
 
     ![Location assigned to Floor](img/loc_Assigned_Floor.png)   
-
-<!-- --- -->

@@ -6,8 +6,6 @@ Here are the pre-requisites for this Maximo hands-on lab.
     This lab requires **Maximo Monitor 9.2.4 or 9.3 FC** or later.</br>
     MAS application entitlement must be `Limited` or higher.
 
-<!-- ---     -->
-
 # All Exercises
 
 All Exercises require that you have:
@@ -25,14 +23,9 @@ All Exercises require that you have:
 
 5. Locations set up in **Maximo Manage** (`Organization → Site → System → Location`), as Juniper Mist sites, buildings, and floors must be assigned to Manage locations.
 
-<!-- --- -->
-
 # Exercise Prerequisites
 
 - You must have administrator access to your **Juniper Mist organization portal** (`https://manage.mist.com`).
-
-!!! note "Screenshot Placeholder: Juniper Mist Account Details"
-    <!-- Add screenshot showing the Mist Cloud portal where Org ID and API Token are obtained -->
 
 - Obtain the following values from your Juniper Mist account:
     - **Mist Cloud URL** (e.g., `https://api.mist.com`)
@@ -40,15 +33,3 @@ All Exercises require that you have:
     - **Organization ID**
 
 - Verify outbound network connectivity from your Maximo Monitor cluster to the Juniper Mist REST API and WebSocket (`wss://`) endpoints.
-
-<!-- --- -->
-
-<!-- ## Recommended Prior Labs
-
-If you haven't completed the following labs, it is recommended to review them:
-
-- [Maximo Monitor Real Estate and Facilities Integration (MREF)](/monitor_MREF_integration_9.1/)
-- [Maximo Monitor Hierarchy Lab](/monitor_hierarchy_9.1/)
-- [Maximo Monitor Cisco Spaces Integration Lab](/monitor_cisco_spaces_integration_9.1/) -->
-
-<!-- --- -->

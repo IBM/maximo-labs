@@ -24,8 +24,6 @@ Once a Floor is subscribed, a background scheduler automatically prepares the se
 
 ![Floor DeviceType ](img/floor_Devicetype.png)
 
-<!-- --- -->
-
 ## Viewing Device Type Overview & Metrics
 
 To view the generated DeviceType and its metrics:

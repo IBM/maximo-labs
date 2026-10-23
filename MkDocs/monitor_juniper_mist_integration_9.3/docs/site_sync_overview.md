@@ -24,12 +24,10 @@ To access the site synchronization page:
 
 ![Integrations list – Configure site synchronization](img/config_Site_Sync.png)
 
-- The system internally triggers a scheduler to fetch and synchronize Juniper Mist sites from the configured organization.
-- The site synchronization may take some time after the configuration is completed, so the sites may not appear immediately.
+- The system internally triggers a scheduler to fetch and synchronize Juniper Mist hierarchy (Site, Building, Floor) from the configured organization.
+- The Mist hierarchy synchronization may take some time after the configuration is completed, so the Site/Building/Floor  may not appear immediately.
 
 ![Site Synchronization](img/site_Syncronization.png)
-
-<!-- --- -->
 
 ## Connection Status Indicators
 
@@ -42,8 +40,6 @@ At the top of the Juniper Mist Site Synchronization page, check the connection s
 - **Not Connected to Juniper Mist**: Indicates that the Mist instance is currently unreachable or the connection could not be established.
 
     ![Not Connected to Juniper Mist](img/not_Connector_Mist.png){ width=70%}
-
-<!-- --- -->
 
 ## Navigating Synchronized Sites, Buildings, and Floors
 
@@ -68,5 +64,3 @@ table.
 - The screen displays all Mist Floors, along with their current Mapped location and Subscribe Status.
 
 ![Floor Details](img/floor_Details.png)
-
-<!-- --- -->

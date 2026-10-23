@@ -1,6 +1,6 @@
 # Objectives
 
-In this Exercise you will learn how to edit an existing Juniper Mist configuration or delete the integration from IBM Maximo Monitor.
+In this Exercise you will learn how to edit an existing Juniper Mist configuration in IBM Maximo Monitor.
 
 ---
 
@@ -36,31 +36,3 @@ You can edit the Juniper Mist configuration from the **Edit** button provided wi
 
     - You will not be able to edit the **Integration Name**.
 6. Click **Finish** to save changes.
-
-<!-- --- -->
-
-## Delete Juniper Mist Integration
-
-You can delete the Juniper Mist configuration if it is no longer required. However, this action has strict prerequisites.
-
-### Prerequisites Before Deleting:
-
-- Before deleting the Juniper MIST Configuration, ensure that **all Sites, Buildings, and Floors have been unassigned** from their Maximo Manage Locations.
-- Ensure that **all MIST Floors are unsubscribed**.
-
-### Steps to Delete:
-
-1. Navigate to **Setup → Integrations**.
-2. Find the **Juniper Mist** configuration entry.
-3. Click the **Action menu (⋮)** next to the integration.
-4. Select **Delete**.
-
-    ![Delete Juniper Mist](img/action_Delete.png)
-
-5. A confirmation popup will appear. Click **Delete** to confirm.
-
-    ![Delete Confirmation Dialog](img/delete_Dialog.png)
-
-6. After confirmation, the configuration is deleted and the associated MIST Sites, Buildings, and Floors are removed from Monitor.
-
-<!-- --- -->

@@ -31,8 +31,6 @@ To subscribe to a Juniper Mist Floor from the Floor Details page:
 
     ![Subscribed Floor](img/subscribed_Floor.png)
 
-<!-- --- -->
-
 ## Subscribe Juniper Mist Building
 
 To subscribe to a Juniper Mist Building from the Building Details page:
@@ -55,13 +53,9 @@ To subscribe to a Juniper Mist Building from the Building Details page:
 
     ![Partially subscribe error - Building ](img/partial_Sub_Error_Build.png)
 
-    ![subscribe error - Building ](img/sub_Error_Build.png)
-
 - Once the subscription is completed, the subscription status of the applicable Mist Building floors will be updated to **Subscribed**.
 
     ![subscribed Building ](img/subscribed_Build.png)
-
-<!-- --- -->
 
 ## Subscribe Juniper Mist Site
 
@@ -85,10 +79,6 @@ To subscribe to a Juniper Mist Site from the Site List page:
 
     ![Partially subscribe error - Site ](img/partial_Sub_Error_Site.png)
 
-    ![subscribe error - Site ](img/error_Sub_Site.png)
-
 - Once the subscription is completed successfully, the applicable Mist Site associated floors subscription statuses will be updated to **Subscribed**.
 
 ![subscribed Site ](img/subscribed_Site.png)
-
-<!-- --- -->

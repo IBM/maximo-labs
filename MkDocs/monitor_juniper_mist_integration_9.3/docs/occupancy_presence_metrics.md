@@ -40,8 +40,6 @@ Occupancy and presence count metrics generated at the floor level capture local 
 
     ![Presence Count for floor ](img/presence_Count_Floor.png)
 
-<!-- --- -->
-
 ## 2. Building Location Calculated Metrics
 
 To view the calculated metrics for a subscribed Building:
