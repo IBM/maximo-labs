@@ -12,22 +12,20 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 <empty line>
 [IMPORTANT HIDDEN COMMENT: Do not alter the header line of the below tables as they use the space accessible, but copy it to new tables when they are created]::
 
-### Maximo Application Suite 9.3
+### Maximo Application Suite 9.2
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Maximo Monitor Juniper Mist Integration](monitor_juniper_mist_integration_9.3/) | [Juniper Mist Overview](monitor_juniper_mist_integration_9.3/juniper_mist_overview) |
-|                                                                | [Configure Juniper Mist Integration](monitor_juniper_mist_integration_9.3/configure_mist_integration) |
-|                                                                | [Edit Juniper Mist Integration](monitor_juniper_mist_integration_9.3/edit_integration) |
-|                                                                | [Site Synchronization Overview](monitor_juniper_mist_integration_9.3/site_sync_overview) |
-|                                                                | [Assign Maximo Manage Locations](monitor_juniper_mist_integration_9.3/assign_manage_locations) |
-|                                                                | [Subscribe Juniper Mist Locations](monitor_juniper_mist_integration_9.3/subscribe_locations) |
-|                                                                | [Access Points & Device Types](monitor_juniper_mist_integration_9.3/ap_device_types) |
-|                                                                | [Occupancy & Presence Metrics](monitor_juniper_mist_integration_9.3/occupancy_presence_metrics) |
-|                                                                | [Unsubscribe & Unassign Workflows](monitor_juniper_mist_integration_9.3/unsubscribe_unassign) |
-|                                                                | [Delete Juniper Mist Integration](monitor_juniper_mist_integration_9.3/delete_integration) |
-
-### Maximo Application Suite 9.2
+| [Maximo Monitor Juniper Mist Integration](monitor_juniper_mist_integration_9.2/) | [Juniper Mist Overview](monitor_juniper_mist_integration_9.2/juniper_mist_overview) |
+|                                                                | [Configure Juniper Mist Integration](monitor_juniper_mist_integration_9.2/configure_mist_integration) |
+|                                                                | [Edit Juniper Mist Integration](monitor_juniper_mist_integration_9.2/edit_integration) |
+|                                                                | [Site Synchronization Overview](monitor_juniper_mist_integration_9.2/site_sync_overview) |
+|                                                                | [Assign Maximo Manage Locations](monitor_juniper_mist_integration_9.2/assign_manage_locations) |
+|                                                                | [Subscribe Juniper Mist Locations](monitor_juniper_mist_integration_9.2/subscribe_locations) |
+|                                                                | [Access Points & Device Types](monitor_juniper_mist_integration_9.2/ap_device_types) |
+|                                                                | [Occupancy & Presence Metrics](monitor_juniper_mist_integration_9.2/occupancy_presence_metrics) |
+|                                                                | [Unsubscribe & Unassign Workflows](monitor_juniper_mist_integration_9.2/unsubscribe_unassign) |
+|                                                                | [Delete Juniper Mist Integration](monitor_juniper_mist_integration_9.2/delete_integration) |
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|

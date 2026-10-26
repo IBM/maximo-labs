@@ -1,8 +1,8 @@
 site_name: Monitor Juniper Mist Integration Lab
 site_url: https://ibm.github.io/maximo-labs/
 site_author: Triparna Kar
-site_description: "Maximo Monitor 9.3 Juniper Mist Integration Lab"
-site_dir: ../../site/monitor_juniper_mist_integration_9.3
+site_description: "Maximo Monitor 9.2 Juniper Mist Integration Lab"
+site_dir: ../../site/monitor_juniper_mist_integration_9.2
 
 nav:
   - Get back to Maximo Labs: ..

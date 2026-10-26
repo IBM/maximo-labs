@@ -1,4 +1,4 @@
-# Welcome to the Maximo Monitor 9.3</br>Juniper Mist Integration Lab
+# Welcome to the Maximo Monitor 9.2</br>Juniper Mist Integration Lab
 
 !!! info
     This hands-on lab demonstrates how to integrate **Juniper Mist** with **IBM Maximo Monitor 9.2.4 & 9.3 FC**.
