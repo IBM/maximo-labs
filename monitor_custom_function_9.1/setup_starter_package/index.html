@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Radhika Surani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_starter_package/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Setup Starter Package - Monitor Custom Function</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Setup Starter Package";
+        var mkdocs_page_input_path = "setup_starter_package.md";
+        var mkdocs_page_url = "/maximo-labs/setup_starter_package/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Custom Function
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Custom Function</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Setup Starter Package</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-starter-package">Setup Starter Package</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-pycharm">Setup Pycharm</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../write_custom_function/">2. Write Custom Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../register_custom_function/">3. Register Custom Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../apply_custom_function/">4. Apply Custom Function</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Custom Function</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Setup Starter Package</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>setup starter package with IOT fucntions</li>
+</ul>
+<hr />
+<h4 id="prerequisites">Prerequisites</h4>
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>Install <a href="https://www.python.org/downloads/">Python 3.11.x</a> in your environment.</li>
+<li>Install <a href="https://git-scm.com/downloads">Git</a>.</li>
+<li>Install <a href="https://pip.pypa.io/en/stable/installation/">pip3</a> package manager for Python.</li>
+<li>Install an editor such as <a href="https://www.jetbrains.com/pycharm/download/">Pycharm Community Edition</a></li>
+</ol>
+<h4 id="setup-starter-package">Setup Starter Package</h4>
+<ol>
+  <li>Clone the <a href='https://github.com/ibm-watson-iot/functions/tree/'> HelloWorld starter package </a>.</li>
+  <li>Open a terminal window.</li>
+  <li>Make a new project folder for the starter package. For example, mkdir custom_function.</li>
+  <li>Change to the project directory. For example, cd custom_function.</li>
+  <li>Clone the starter package. Enter:
+    <pre><code class="language-bash">git clone --branch starter_package https://github.com/ibm-watson-iot/functions.git</code></pre>
+  </li>
+  <li>Verify that you cloned the starter package to the custom_function directory.</li>
+  <li>Change to the functions directory in the starter package. Enter: cd functions</li>
+  <li>Open the setup.py file. The setup.py file defines the package name and the list of packages that are required for the project.</li>
+  <li>Set the name parameter to custom{your_initials}. Replace the {your_initials} variable with  
+       your initials or with another unique value.</li>
+  <li>In the ibm-watson-iot/functions repository, verify that the iotfunction package is the    
+        correct version. For example, for Maximo Monitor 9.1, the package must be from the 9.1.X GitHub branch. Do not replace the x in the version with another value. The following text is an example setup.py file. The name parameter is set to customId and the 9.1.X branch is used.</br>
+        <pre><code class="language-bash">
+        #!/usr/bin/env python 
+        from setuptools import setup, find_packages
+        setup(name='customld', version='0.0.1', packages=find_packages(),
+        install_requires=['iotfunctions@git+https://github.com/ibm-watson-iot/functions.git@9.1.x'])
+        </code></pre> 
+  </li>
+</ol>
+
+<h4 id="setup-pycharm">Setup Pycharm</h4>
+<ol>
+  <li> Install the <a href = 'https://www.jetbrains.com/pycharm/download/'> PyCharm </a> community edition
+  </li>
+  <li>Open PyCharm and select Open to browse to your cloned directory.</li>
+  <li>Next, create a Python virtual environment (venv) inside the custome_function folder by running the following command:</li></br>
+  <li> 
+     <pre><code class="language-bash">
+        python3 -m venv venv-cust
+        cd venv-cust/bin source activate
+     </pre></code>
+  </li>
+  <li>
+    <ol>Set up a virtual environment: 
+        <li> Go to PyCharm > Preferences > Project > Python Interpreter </li>
+        <li>Click the settings icon and select Add</li>
+        <li>Set your venv folder location</li>
+        <li>Set the base interpreter to your Python 3.11.x directory</li>
+    </ol>
+  </li>
+  <li>Run the following command to install the iotfunctions package into your Python environment. Ensure that you use   the correct branch name for your version</br>
+  <pre><code class="language-bash">
+            pip3 install git+https://github.com/ibm-watson-iot/functions.git@9.1.x --upgrade
+     </pre></code>
+  </li>
+  </ol>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always use the IoT Functions version that matches your Maximo Monitor version to avoid pipeline issues.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you're using a Mac Machine, you might encounter compatibility issues with the ibm_db package. Here's how to resolve them:</br>
+Open the requirements.txt file</br>
+Change ibm_db==3.2.3 to ibm_db==3.2.5</br>
+Save the file</br>
+pip3 install -r requirements.txt</p>
+</div>
+<hr />
+<p>Congratulations you have successfully setup the starter package.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../write_custom_function/" class="btn btn-neutral float-right" title="2. Write Custom Function">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../write_custom_function/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

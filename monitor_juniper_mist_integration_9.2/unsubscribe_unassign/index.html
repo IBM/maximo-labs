@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Triparna Kar" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/unsubscribe_unassign/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>9. Unsubscribe & Unassign Workflows - Monitor Juniper Mist Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "9. Unsubscribe \u0026 Unassign Workflows";
+        var mkdocs_page_input_path = "unsubscribe_unassign.md";
+        var mkdocs_page_url = "/maximo-labs/unsubscribe_unassign/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Juniper Mist Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Juniper Mist Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../juniper_mist_overview/">1. Juniper Mist Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configure_mist_integration/">2. Configure Juniper Mist Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_integration/">3. Edit Juniper Mist Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../site_sync_overview/">4. Site Synchronization Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../assign_manage_locations/">5. Assign Maximo Manage Locations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subscribe_locations/">6. Subscribe Juniper Mist Locations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ap_device_types/">7. Access Points & Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../occupancy_presence_metrics/">8. Occupancy & Presence Metrics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">9. Unsubscribe & Unassign Workflows</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#unsubscribing-from-juniper-mist-locations">Unsubscribing from Juniper Mist Locations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#unsubscribing-from-a-juniper-mist-floor">Unsubscribing from a Juniper MIST Floor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unsubscribing-from-a-juniper-mist-building">Unsubscribing from a Juniper MIST Building</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unsubscribing-from-a-juniper-mist-site">Unsubscribing from a Juniper MIST Site</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unassigning-maximo-manage-locations">Unassigning Maximo Manage Locations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#unassign-a-maximo-manage-location-from-a-mist-floor">Unassign a Maximo Manage Location from a MIST Floor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unassign-a-maximo-manage-location-from-a-mist-building">Unassign a Maximo Manage Location from a MIST Building</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unassign-a-maximo-manage-location-from-a-mist-site">Unassign a Maximo Manage Location from a MIST Site</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_integration/">10. Delete Juniper Mist Integration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Juniper Mist Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">9. Unsubscribe & Unassign Workflows</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to Unsubscribe from Juniper Mist locations to stop data collection, and how to Unassign Maximo Manage locations.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>Completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>Completed the previous exercises</li>
+</ol>
+<hr />
+<h2 id="unsubscribing-from-juniper-mist-locations">Unsubscribing from Juniper Mist Locations</h2>
+<h3 id="unsubscribing-from-a-juniper-mist-floor">Unsubscribing from a Juniper MIST Floor</h3>
+<p>To stop data collection for a floor, unsubscribe from it first:</p>
+<ul>
+<li>The <strong>Unsubscribe</strong> option is available only when the MIST Floor is subscribed.</li>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required MIST Floor, select <strong>Unsubscribe</strong>.</p>
+<p><img alt="Unsubscribe Floor" src="../img/action_Unsub_Floor.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog appears. Click <strong>Unsubscribe</strong> to confirm.</p>
+<p><img alt="Unsubscribe Dialog Floor" src="../img/unsub_Dialog_Floor.png" /></p>
+</li>
+<li>
+<p>Unsubscribing stops the flow of data from Juniper MIST to Maximo Monitor.</p>
+</li>
+<li>
+<p>Once unsubscribe is completed successfully, the subscription status of the MIST Floor is updated to <code>Unsubscribed</code>.</p>
+<p><img alt="Unsubscribed Floor" src="../img/unsubscribed_Floor.png" /></p>
+</li>
+</ul>
+<h3 id="unsubscribing-from-a-juniper-mist-building">Unsubscribing from a Juniper MIST Building</h3>
+<ul>
+<li>The <strong>Unsubscribe</strong> option is available only when a Maximo Manage Location is assigned to the MIST Building.</li>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required MIST Building, select <strong>Unsubscribe</strong>.</p>
+<p><img alt="Unsubscribe Building" src="../img/action_Unsub_Build.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog appears. Click <strong>Unsubscribe</strong> to confirm.</p>
+<p><img alt="Unsubscribe Dialog Building" src="../img/unsub_Dialog_Build.png" /></p>
+</li>
+<li>
+<p>Unsubscribing stops the flow of data from the Juniper Building to Maximo Monitor.</p>
+</li>
+<li>During the unsubscribe process, the system checks whether a Maximo Manage Location is assigned to each Floor:<ul>
+<li>Floors with an assigned location are unsubscribed successfully.</li>
+<li>Floors without an assigned location are not unsubscribed and are reported as errors.</li>
+</ul>
+</li>
+<li>If only some Buildings or Floors are unsubscribed successfully, the Building is marked as <code>Partially Unsubscribed</code>.</li>
+<li>
+<p>If an error or partial unsubscribe occurs, the confirmation dialog provides an option to <strong>download the error file</strong> for review.</p>
+<p><img alt="partially Unsubscribed Error - Building" src="../img/partial_Unsub_Error_Build.png" /></p>
+</li>
+<li>
+<p>Once unsubscribe is completed successfully, the subscription status of the applicable MIST Floors is updated to <code>Unsubscribed</code>.</p>
+<p><img alt="Unsubscribed Building" src="../img/unsubscribed_Build.png" /></p>
+</li>
+</ul>
+<h3 id="unsubscribing-from-a-juniper-mist-site">Unsubscribing from a Juniper MIST Site</h3>
+<ul>
+<li>To stop data collection for a site, unsubscribe from it first.</li>
+<li>The <strong>Unsubscribe</strong> option is available only when a Maximo Manage Location is assigned to the MIST Site.</li>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required MIST Site, select <strong>Unsubscribe</strong>.</p>
+<p><img alt="Unsubscribe site" src="../img/action_Unsub_Site.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog appears. Click <strong>Unsubscribe</strong> to confirm.</p>
+<p><img alt="Unsubscribe dialog site" src="../img/unsub_Dialog_Site.png" /></p>
+</li>
+<li>
+<p>Unsubscribing stops the flow of data from Juniper MIST to Maximo Monitor.</p>
+</li>
+<li>During the unsubscribe process, the system checks whether a Maximo Manage Location is assigned to each Building and Floor:<ul>
+<li>Buildings and Floors with an assigned location are unsubscribed successfully.</li>
+<li>Buildings and Floors without an assigned location are not unsubscribed and are reported as errors.</li>
+</ul>
+</li>
+<li>If only some Buildings or Floors are unsubscribed successfully, the Site is marked as <code>Partially Unsubscribed</code>.</li>
+<li>
+<p>If an error or partial unsubscribe occurs, the confirmation dialog provides an option to <strong>download the error file</strong> for review.</p>
+<p><img alt="partially Unsubscribed Error - site" src="../img/partial_Unsub_Error_Site.png" /></p>
+</li>
+<li>
+<p>Once unsubscribe is completed successfully, the subscription status of the applicable MIST Floors is updated to <code>Unsubscribed</code>.</p>
+<p><img alt="Unsubscribed Site" src="../img/unsubscribed_Site.png" /></p>
+</li>
+</ul>
+<h2 id="unassigning-maximo-manage-locations">Unassigning Maximo Manage Locations</h2>
+<h3 id="unassign-a-maximo-manage-location-from-a-mist-floor">Unassign a Maximo Manage Location from a MIST Floor</h3>
+<ol>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required MIST Floor, select <strong>Unassign Location</strong>.</p>
+<p><img alt="Unassign Location - Floor" src="../img/action_Unassign_Floor.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog appears to confirm the removal of the Maximo Manage Location from the Floor.</p>
+</li>
+<li>The dialog also provides an option to <strong>delete the calculated metrics</strong> associated with the location.</li>
+<li>
+<p>Click <strong>Unassign Location</strong> to complete the action.</p>
+<p><img alt="Unassign Location dialog - Floor" src="../img/unassign_Dialog_Floor.png" /></p>
+</li>
+<li>
+<p>The selected Maximo Manage Location is successfully unassigned from the corresponding MIST Floor.</p>
+<p><img alt="Unassigned Location - Floor" src="../img/unassigned_Floor.png" /></p>
+</li>
+</ol>
+<h3 id="unassign-a-maximo-manage-location-from-a-mist-building">Unassign a Maximo Manage Location from a MIST Building</h3>
+<ol>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required MIST Building, select <strong>Unassign Location</strong>.</p>
+<p><img alt="Unassign Location - Building" src="../img/action_Unassign_Build.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog appears to confirm the removal of the Maximo Manage Location from the Building.</p>
+</li>
+<li>The dialog also provides an option to <strong>delete the calculated metrics</strong> associated with the location.</li>
+<li>
+<p>Click <strong>Unassign Location</strong> to complete the action.</p>
+<p><img alt="Unassign Location Dialog - Building" src="../img/unassign_Dialog_Build.png" /></p>
+</li>
+<li>
+<p>The selected Maximo Manage Location is successfully unassigned from the corresponding MIST Building.</p>
+<p><img alt="Unassigned Location - Building" src="../img/unassigned_Build.png" /></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Dependency Rule</p>
+<p>If any associated <strong>Floor</strong> still has a Maximo Manage Location assigned, the system will not allow the Building-level location to be unassigned and will display an error.</p>
+</div>
+<p><img alt="Unassign Location Error - Building" src="../img/unassign_Error_Build.png" /></p>
+<h3 id="unassign-a-maximo-manage-location-from-a-mist-site">Unassign a Maximo Manage Location from a MIST Site</h3>
+<ol>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required MIST Site, select <strong>Unassign Location</strong>.</p>
+<p><img alt="Unassign Location - Site" src="../img/action_Unassign_Site.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog appears to confirm the removal of the Maximo Manage Location from the Site.</p>
+</li>
+<li>The dialog also provides an option to <strong>delete the calculated metrics</strong> associated with the location.</li>
+<li>
+<p>Click <strong>Unassign Location</strong> to complete the action.</p>
+<p><img alt="Unassign Location Dialog - Site" src="../img/unassign_Dialog_Site.png" /></p>
+</li>
+<li>
+<p>The selected Maximo Manage Location is successfully unassigned from the corresponding MIST Site.</p>
+<p><img alt="Unassigned Location - Site" src="../img/Unassigned_Site.png" /></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Dependency Rule</p>
+<p>If any associated <strong>Building or Floor</strong> still has a Maximo Manage Location assigned, the system will not allow the Site-level location to be unassigned and will display an error.</p>
+</div>
+<p><img alt="Unassign Location Error - Site" src="../img/unassign_Error_Site.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../occupancy_presence_metrics/" class="btn btn-neutral float-left" title="8. Occupancy & Presence Metrics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../delete_integration/" class="btn btn-neutral float-right" title="10. Delete Juniper Mist Integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../occupancy_presence_metrics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../delete_integration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

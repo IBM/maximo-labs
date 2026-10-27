@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Mayur Sojitra" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/archive_devicetype/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>8. Archive/Restore/Delete Device Type - Device and device type setup</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "8. Archive/Restore/Delete Device Type";
+        var mkdocs_page_input_path = "archive_devicetype.md";
+        var mkdocs_page_url = "/maximo-labs/archive_devicetype/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Device and device type setup
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Device and device type setup Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview_configuration/">1. Device Type Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_metrics/">2. Metrics in Device Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_dimensions/">3. Dimension in Device Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_edit_device/">4. Add and Edit devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../device_relation/">5. Device Relationship with Asset/Location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_calc_metrics/">6. Calculated metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../devicetype_dashboard/">7. Dashboard</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">8. Archive/Restore/Delete Device Type</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#unassign-device">Unassign Device</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#archive-device-type">Archive Device type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-archived-device-type">View Archived Device type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#restore-device-type-optional">Restore Device type (Optional)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete-device-type-optional">Delete Device type (Optional)</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Device and device type setup</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">8. Archive/Restore/Delete Device Type</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to Archive and Restore/Delete the device type.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<hr />
+<h2 id="unassign-device">Unassign Device</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can archive device type only when devices of this device type are not assigned to any asset or location.</p>
+</div>
+<p>To unassign a device from an Asset or Location, search for the relevant device type and select the device that was previously assigned to the Asset or Location.</br>
+Navigate to the Device Overview page. Under the 'Relationships' section, if the device is assigned to an Asset, click the delete icon corresponding to each row to remove the assignment.
+<img alt="Unassign device" src="../img/archive_devicetype00.png" /></br></br></p>
+<p>Click <code>Confirm</code> to complete the unassignment of the device from an Asset.
+<img alt="Unassign device" src="../img/archive_devicetype01.png" /></br></br></p>
+<p>Repeat the same steps in the 'Relationships → Locations' section under the 'Overview' tab to unassign the device from a Location.</p>
+<h2 id="archive-device-type">Archive Device type</h2>
+<p>To archive a device type, navigate to Setup → Device Type from the left-hand panel and search for the relevant device type.</br>
+Click the three-dot menu next to the device type name and select <code>Archive</code> to proceed with archiving the device type.
+<img alt="Archive Device type" src="../img/archive_devicetype02.png" /></br></br></p>
+<p>In the confirmation popup, click 'Archive' to archive the device type.
+<img alt="Archive Device type" src="../img/archive_devicetype03.png" /></br></br></p>
+<h2 id="view-archived-device-type">View Archived Device type</h2>
+<p>To view archived device type, navigate to Setup → Archives from the left-hand panel.
+<img alt="View Archived Device type" src="../img/archive_devicetype05.png" /></br></br></p>
+<p>You should now be able to view the archived device type. If it does not appear, try searching for it by name using the search bar.
+<img alt="View Archived Device type" src="../img/archive_devicetype06.png" /></br></br></p>
+<p>For each table row, you will see <code>Restore</code> and <code>Delete</code> options. You can choose either action by following one of the steps outlined below.
+<img alt="View Archived Device type" src="../img/archive_devicetype07.png" /></br></br></p>
+<h2 id="restore-device-type-optional">Restore Device type (Optional)</h2>
+<p>Click <code>Restore</code> next to the archived device type to reinstate it.
+<img alt="Restore Device type" src="../img/archive_devicetype08.png" /></br></br></p>
+<p>In the confirmation popup, click <code>Restore</code> to complete the device type restoration process.
+<img alt="Restore Device type" src="../img/archive_devicetype09.png" /></br></br></p>
+<h2 id="delete-device-type-optional">Delete Device type (Optional)</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that a device type must be archived prior to deletion.</p>
+</div>
+<p>Click Delete icon next to the archived device type to delete it.
+<img alt="Delete Device type" src="../img/archive_devicetype10.png" /></br></br></p>
+<p>In the confirmation popup, enter the device type name and click <code>Confirm</code> to remove this device type from the Monitor.
+<img alt="Delete Device type" src="../img/archive_devicetype11.png" /></br></br></p>
+<hr />
+<p>Congratulations you have successfully Archived and Restored/Deleted the device type.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../devicetype_dashboard/" class="btn btn-neutral float-left" title="7. Dashboard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../devicetype_dashboard/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Triparna Kar" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/subscribe_locations/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>6. Subscribe Juniper Mist Locations - Monitor Juniper Mist Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6. Subscribe Juniper Mist Locations";
+        var mkdocs_page_input_path = "subscribe_locations.md";
+        var mkdocs_page_url = "/maximo-labs/subscribe_locations/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Juniper Mist Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Juniper Mist Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../juniper_mist_overview/">1. Juniper Mist Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configure_mist_integration/">2. Configure Juniper Mist Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_integration/">3. Edit Juniper Mist Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../site_sync_overview/">4. Site Synchronization Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../assign_manage_locations/">5. Assign Maximo Manage Locations</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6. Subscribe Juniper Mist Locations</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#subscribe-juniper-mist-floor">Subscribe Juniper Mist Floor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subscribe-juniper-mist-building">Subscribe Juniper Mist Building</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subscribe-juniper-mist-site">Subscribe Juniper Mist Site</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ap_device_types/">7. Access Points & Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../occupancy_presence_metrics/">8. Occupancy & Presence Metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe_unassign/">9. Unsubscribe & Unassign Workflows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_integration/">10. Delete Juniper Mist Integration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Juniper Mist Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">6. Subscribe Juniper Mist Locations</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to subscribe to Juniper Mist Floors, Buildings, and Sites to enable real-time data collection.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>Completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>Completed the previous exercises</li>
+<li>Assigned Maximo Manage Locations to the target Juniper Mist Site, Building, and Floor</li>
+</ol>
+<hr />
+<h2 id="subscribe-juniper-mist-floor">Subscribe Juniper Mist Floor</h2>
+<p>To subscribe to a Juniper Mist Floor from the Floor Details page:</p>
+<ul>
+<li>The <strong>Subscribe</strong> action is available only after a Maximo Manage Location has been assigned to the Mist Floor.</li>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required Mist Floor, select <strong>Subscribe</strong>.</p>
+<p><img alt="Subscribe Floor" src="../img/action_Sub_Floor.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog will appear to confirm the subscription.</p>
+</li>
+<li>
+<p>Click <strong>Subscribe</strong> to proceed.</p>
+<p><img alt="Click Subscribe - Floor" src="../img/click_sub_Floor.png" /></p>
+</li>
+<li>
+<p>Once the subscription is successful, the selected Mist Floor status will be updated to <strong>Subscribed</strong>.</p>
+<p><img alt="Subscribed Floor" src="../img/subscribed_Floor.png" /></p>
+</li>
+</ul>
+<h2 id="subscribe-juniper-mist-building">Subscribe Juniper Mist Building</h2>
+<p>To subscribe to a Juniper Mist Building from the Building Details page:</p>
+<ul>
+<li>The <strong>Subscribe</strong> action is available only after a Maximo Manage Location has been assigned to the Mist Building.</li>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required Mist Building, select <strong>Subscribe</strong>.</p>
+<p><img alt="Subscribe Building" src="../img/action_Sub_Build.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog will appear. Click <strong>Subscribe</strong> to proceed.</p>
+<p><img alt="Click Subscribe - Building" src="../img/click_Sub_Build.png" /></p>
+</li>
+<li>
+<p>Subscribing to a Mist Building initiates the subscription process for all floors associated with that building.</p>
+</li>
+<li>During the subscription process, the system validates whether each floor has a Maximo Manage Location assigned:<ul>
+<li>Floors with an assigned location will be subscribed successfully.</li>
+<li>Floors without an assigned location will not be subscribed and will generate an error.</li>
+<li>If only some floors are successfully subscribed, the building will be marked as <strong>Partially Subscribed</strong>.</li>
+</ul>
+</li>
+<li>
+<p>In case of an error or partial subscription, the confirmation modal provides an option to <strong>download the error file</strong> for further review.</p>
+<p><img alt="Partially subscribe error - Building " src="../img/partial_Sub_Error_Build.png" /></p>
+</li>
+<li>
+<p>Once the subscription is completed, the subscription status of the applicable Mist Building floors will be updated to <strong>Subscribed</strong>.</p>
+<p><img alt="subscribed Building " src="../img/subscribed_Build.png" /></p>
+</li>
+</ul>
+<h2 id="subscribe-juniper-mist-site">Subscribe Juniper Mist Site</h2>
+<p>To subscribe to a Juniper Mist Site from the Site List page:</p>
+<ul>
+<li>The <strong>Subscribe</strong> action is available only after a Maximo Manage Location has been assigned to the Mist Site.</li>
+<li>
+<p>From the <strong>Action menu (⋮)</strong> for the required Mist Site, select <strong>Subscribe</strong>.</p>
+<p><img alt="Subscribe site" src="../img/action_Sub_Site.png" /></p>
+</li>
+<li>
+<p>A confirmation dialog will appear. Click <strong>Subscribe</strong> to proceed.</p>
+<p><img alt="Click Subscribe - Site" src="../img/click_Sub_Site.png" /></p>
+</li>
+<li>
+<p>Subscribing to a Mist Site initiates the subscription process for all Buildings and associated Floors within that Site.</p>
+</li>
+<li>During the subscription process, the system validates whether a Maximo Manage Location is assigned to each Building and Floor:<ul>
+<li>Floors with an assigned location will be subscribed successfully.</li>
+<li>Floors without an assigned location will not be subscribed and will generate an error.</li>
+<li>If only some Floors are successfully subscribed, the Site will be marked as <strong>Partially Subscribed</strong>.</li>
+</ul>
+</li>
+<li>
+<p>In case of an error or partial subscription, the confirmation modal provides an option to <strong>download the error file</strong> for further review.</p>
+<p><img alt="Partially subscribe error - Site " src="../img/partial_Sub_Error_Site.png" /></p>
+</li>
+<li>
+<p>Once the subscription is completed successfully, the applicable Mist Site associated floors subscription statuses will be updated to <strong>Subscribed</strong>.</p>
+</li>
+</ul>
+<p><img alt="subscribed Site " src="../img/subscribed_Site.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../assign_manage_locations/" class="btn btn-neutral float-left" title="5. Assign Maximo Manage Locations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ap_device_types/" class="btn btn-neutral float-right" title="7. Access Points & Device Types">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../assign_manage_locations/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ap_device_types/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

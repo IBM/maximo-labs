@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Kajal Lalwani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/gateway_restrictions/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Gateway Restrictions - Monitor Resource Based Access Control Lab - Gateway Restrictions</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Gateway Restrictions";
+        var mkdocs_page_input_path = "gateway_restrictions.md";
+        var mkdocs_page_url = "/maximo-labs/gateway_restrictions/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Resource Based Access Control Lab - Gateway Restrictions
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor RBAC 9.2 Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Gateway Restrictions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gateway-restriction-basics">Gateway Restriction Basics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#supported-query-patterns">Supported Query Patterns</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#gateway-type-name-patterns">Gateway Type Name Patterns</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#gateway-device-id-patterns">Gateway Device ID Patterns</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-apply-gateway-restrictions">How to Apply Gateway Restrictions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario-1-single-gateway-type-access">Scenario 1: Single Gateway Type Access</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applications">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query">Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expected-result">Expected Result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario-2-multiple-gateway-type-access">Scenario 2: Multiple Gateway Type Access</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applications_1">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query_1">Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description_1">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expected-result_1">Expected Result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario-3-gateway-type-pattern-matching">Scenario 3: Gateway Type Pattern Matching</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applications_2">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query_2">Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description_2">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expected-result_2">Expected Result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario-4-exclude-gateway-types-not-like">Scenario 4: Exclude Gateway Types (NOT LIKE)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applications_3">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query_3">Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description_3">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expected-result_3">Expected Result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario-5-gateway-device-id-access">Scenario 5: Gateway Device ID Access</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applications_4">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query_4">Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description_4">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expected-result_4">Expected Result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario-6-multiple-pattern-matching-or">Scenario 6: Multiple Pattern Matching (OR)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applications_5">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query_5">Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description_5">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expected-result_5">Expected Result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scenario-8-direct-url-access-behavior">Scenario 8: Direct URL Access Behavior</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applications_6">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#query_6">Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#description_6">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#testing-direct-access">Testing Direct Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expected-result_6">Expected Result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Resource Based Access Control Lab - Gateway Restrictions</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Gateway Restrictions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="exercise-1-gateway-restrictions">Exercise 1: Gateway Restrictions</h1>
+<h2 id="overview">Overview</h2>
+<p>Gateway restrictions in Maximo Application Suite 9.2 allow you to control which gateways users can access based on gateway type names. This exercise demonstrates how to apply gateway restrictions using different query patterns.</p>
+<h2 id="gateway-restriction-basics">Gateway Restriction Basics</h2>
+<p>Gateway restrictions are applied through the <code>MONITOR_SETUP_GATEWAYS</code> application using the <code>gatewayTypeName</code> field. The system filters gateways based on the query you define in the Security Group's data restrictions.</p>
+<h3 id="supported-query-patterns">Supported Query Patterns</h3>
+<h4 id="gateway-type-name-patterns">Gateway Type Name Patterns</h4>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact Match</td>
+<td>Match a specific gateway type name</td>
+<td><code>gatewayTypeName='Gearbox'</code></td>
+</tr>
+<tr>
+<td>Exact Match</td>
+<td>Match a specific gateway type name</td>
+<td><code>gatewayTypeName="GatewayType_20260615_030408"</code></td>
+</tr>
+<tr>
+<td>Pattern Matching</td>
+<td>Match gateway types using LIKE operator</td>
+<td><code>gatewayTypeName like 'Ge%'</code></td>
+</tr>
+<tr>
+<td>Pattern Matching</td>
+<td>Match gateway types using LIKE operator</td>
+<td><code>gatewayTypeName Like "GatewayType_20260615_030408"</code></td>
+</tr>
+<tr>
+<td>Exclusion Pattern</td>
+<td>Exclude gateway types using NOT LIKE</td>
+<td><code>gatewayTypeName NOT LIKE 'Test%'</code></td>
+</tr>
+<tr>
+<td>Exclusion Pattern</td>
+<td>Exclude gateway types using NOT LIKE</td>
+<td><code>gatewayTypeName NOT Like "GatewayType_20260615_030408"</code></td>
+</tr>
+<tr>
+<td>Multiple Values</td>
+<td>Match multiple gateway type names</td>
+<td><code>gatewayTypeName in ('Gearbox','Edge-GW')</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="gateway-device-id-patterns">Gateway Device ID Patterns</h4>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact Match</td>
+<td>Match a specific gateway device ID</td>
+<td><code>gatewayDeviceId="JD_CSV_GWD"</code></td>
+</tr>
+<tr>
+<td>Pattern Matching</td>
+<td>Match gateway device IDs using LIKE operator</td>
+<td><code>gatewayDeviceId Like "JD_CSV_GWD"</code></td>
+</tr>
+<tr>
+<td>Exclusion Pattern</td>
+<td>Exclude gateway device IDs using NOT LIKE</td>
+<td><code>gatewayDeviceId NOT Like "JD_CSV_GWD"</code></td>
+</tr>
+<tr>
+<td>Multiple Values</td>
+<td>Match multiple gateway device IDs</td>
+<td><code>gatewayDeviceId in ("JD_CSV_GWD","DEVICE_002")</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-to-apply-gateway-restrictions">How to Apply Gateway Restrictions</h2>
+<p>All gateway restriction scenarios follow the same steps. Only the query changes based on your requirements:</p>
+<ol>
+<li>Navigate to <strong>Administration</strong> &gt; <strong>Security</strong> &gt; <strong>Security Groups</strong></li>
+<li>Select or create a Security Group</li>
+<li>Go to the <strong>Data Restrictions</strong> tab</li>
+<li>Click <strong>Add Data Restriction</strong></li>
+<li>Select Application: <code>MONITOR_SETUP_GATEWAYS</code></li>
+<li>Enter the appropriate Query (see scenarios below)</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>After applying a restriction, assign users to the Security Group and have them log in to verify the restriction works as expected.</p>
+</div>
+<hr />
+<h2 id="scenario-1-single-gateway-type-access">Scenario 1: Single Gateway Type Access</h2>
+<h3 id="applications">Applications</h3>
+<ul>
+<li><code>MONITOR_SETUP_GATEWAYS</code></li>
+</ul>
+<h3 id="query">Query</h3>
+<pre><code>gatewayTypeName='Gearbox'
+</code></pre>
+<h3 id="description">Description</h3>
+<p>Users with this restriction can only access gateways of type "Gearbox". In the Setup application's Gateways page, only gateways with gateway type name "Gearbox" will be visible. All other gateway types will be hidden from the user's view.</p>
+<h3 id="expected-result">Expected Result</h3>
+<ul>
+<li><strong>Visible</strong>: Gateways with gateway type name "Gearbox"</li>
+<li><strong>Hidden</strong>: All other gateway types (Edge-GW, Pump, etc.)</li>
+</ul>
+<p><img alt="Gateway Single Type Access" src="../img/gateway_single_type.png" /></p>
+<hr />
+<h2 id="scenario-2-multiple-gateway-type-access">Scenario 2: Multiple Gateway Type Access</h2>
+<h3 id="applications_1">Applications</h3>
+<ul>
+<li><code>MONITOR_SETUP_GATEWAYS</code></li>
+</ul>
+<h3 id="query_1">Query</h3>
+<pre><code>gatewayTypeName in ('Gearbox','Edge-GW')
+</code></pre>
+<h3 id="description_1">Description</h3>
+<p>This restriction grants access to gateways of two specific types: "Gearbox" and "Edge-GW". Users can view and manage gateways of both types in the Setup application. The Gateways list page will show only gateways matching these two types.</p>
+<h3 id="expected-result_1">Expected Result</h3>
+<ul>
+<li><strong>Visible</strong>: Gateways with gateway type names "Gearbox" or "Edge-GW"</li>
+<li><strong>Hidden</strong>: All other gateway types (Pump, Compressor, etc.)</li>
+</ul>
+<p><img alt="Gateway Multiple Types Access" src="../img/gateway_multiple_types.png" /></p>
+<hr />
+<h2 id="scenario-3-gateway-type-pattern-matching">Scenario 3: Gateway Type Pattern Matching</h2>
+<h3 id="applications_2">Applications</h3>
+<ul>
+<li><code>MONITOR_SETUP_GATEWAYS</code></li>
+</ul>
+<h3 id="query_2">Query</h3>
+<pre><code>gatewayTypeName like 'Ed%'
+</code></pre>
+<h3 id="description_2">Description</h3>
+<p>This pattern-based restriction allows access to all gateway types whose names start with "Ge" (such as  "Edge-GW", "EDC_Opcua"). Users can view and manage all matching gateway types in the Setup application. This is useful when gateway types follow a naming convention.</p>
+<h3 id="expected-result_2">Expected Result</h3>
+<ul>
+<li><strong>Visible</strong>: Gateways with gateway type names starting with "Ed" ( Edge-GW, EDC_Opcua, etc.)</li>
+<li><strong>Hidden</strong>: Gateway types not matching the pattern (Pump, Compressor, Motor, etc.)</li>
+</ul>
+<p><img alt="Gateway Pattern Matching" src="../img/gateway_pattern_matching.png" /></p>
+<hr />
+<h2 id="scenario-4-exclude-gateway-types-not-like">Scenario 4: Exclude Gateway Types (NOT LIKE)</h2>
+<h3 id="applications_3">Applications</h3>
+<ul>
+<li><code>MONITOR_SETUP_GATEWAYS</code></li>
+</ul>
+<h3 id="query_3">Query</h3>
+<pre><code>gatewayTypeName NOT LIKE 'Test%'
+</code></pre>
+<h3 id="description_3">Description</h3>
+<p>This exclusion pattern allows access to all gateway types EXCEPT those starting with "Test". Users can view and manage all gateway types whose names do not start with "Test". This is useful for hiding test or experimental gateways from production users.</p>
+<h3 id="expected-result_3">Expected Result</h3>
+<ul>
+<li><strong>Visible</strong>: All gateway types except those starting with "Test"</li>
+<li><strong>Hidden</strong>: Gateway types starting with "Test" (Test_Gateway, Test_Gearbox, etc.)</li>
+</ul>
+<p><img alt="Gateway Exclude Pattern" src="../img/gateway_exclude_pattern.png" /></p>
+<hr />
+<h2 id="scenario-5-gateway-device-id-access">Scenario 5: Gateway Device ID Access</h2>
+<h3 id="applications_4">Applications</h3>
+<ul>
+<li><code>MONITOR_SETUP_GATEWAYS</code></li>
+</ul>
+<h3 id="query_4">Query</h3>
+<pre><code>gatewayDeviceId=&quot;JD_CSV_GWD&quot;
+</code></pre>
+<h3 id="description_4">Description</h3>
+<p>This restriction grants access to a specific gateway based on its device ID. Users can only view and manage the gateway with device ID "JD_CSV_GWD". This is useful when you need to restrict access to individual gateways rather than gateway types, providing more granular control over gateway access.</p>
+<h3 id="expected-result_4">Expected Result</h3>
+<ul>
+<li><strong>Visible</strong>: Gateway with device ID "JD_CSV_GWD"</li>
+<li><strong>Hidden</strong>: All other gateways regardless of their type</li>
+</ul>
+<p><img alt="Gateway Device ID Access" src="../img/gateway_device_id.png" /></p>
+<hr />
+<h2 id="scenario-6-multiple-pattern-matching-or">Scenario 6: Multiple Pattern Matching (OR)</h2>
+<h3 id="applications_5">Applications</h3>
+<ul>
+<li><code>MONITOR_SETUP_GATEWAYS</code></li>
+</ul>
+<h3 id="query_5">Query</h3>
+<pre><code>gatewayTypeName like 'Ge%' or gatewayTypeName like 'Ed%'
+</code></pre>
+<h3 id="description_5">Description</h3>
+<p>This OR-based pattern allows access to gateway types starting with either "Ge" or "Ed". Users can view and manage all gateway types whose names start with "Ge" (like "Gearbox", "Generator") OR start with "Ed" (like "Edge-GW", "Edge-Gateway"). This is useful for managing multiple gateway families with different naming conventions.</p>
+<h3 id="expected-result_5">Expected Result</h3>
+<ul>
+<li><strong>Visible</strong>: Gateway types starting with "Ge" or "Ed" (Gearbox, Generator, Edge-GW, Edge-Gateway, etc.)</li>
+<li><strong>Hidden</strong>: Gateway types not matching either pattern (Pump, Motor, Compressor, etc.)</li>
+</ul>
+<p><img alt="Gateway Multiple Patterns" src="../img/gateway_multiple_patterns.png" /></p>
+<hr />
+<h2 id="scenario-8-direct-url-access-behavior">Scenario 8: Direct URL Access Behavior</h2>
+<h3 id="applications_6">Applications</h3>
+<ul>
+<li><code>MONITOR_SETUP_GATEWAYS</code></li>
+</ul>
+<h3 id="query_6">Query</h3>
+<pre><code>gatewayTypeName='Gearbox'
+</code></pre>
+<h3 id="description_6">Description</h3>
+<p>This scenario demonstrates the security behavior when users attempt to access restricted gateways directly via URL. Even if a user has the URL to a specific gateway that doesn't match their data restrictions, the system will deny access and display an "Access Denied" or "Not Found" message. This ensures that data restrictions are enforced at all access points, not just in list views.</p>
+<h3 id="testing-direct-access">Testing Direct Access</h3>
+<ol>
+<li><strong>Apply Restriction</strong>: Set up a restriction allowing only "Gearbox" gateway types</li>
+<li><strong>Get Restricted Gateway URL</strong>: Obtain the direct URL to a gateway of type "Generator" (which is restricted)</li>
+<li><strong>Attempt Direct Access</strong>: Try to access the restricted gateway by pasting the URL directly in the browser</li>
+<li><strong>Verify Denial</strong>: System should show "Access Denied" or "Not Found" error</li>
+</ol>
+<h3 id="expected-result_6">Expected Result</h3>
+<ul>
+<li><strong>List View</strong>: Only gateways with type "Gearbox" appear in the Gateways list</li>
+<li><strong>Direct URL Access to Allowed Gateway</strong>: Successfully opens the gateway details page</li>
+<li><strong>Direct URL Access to Restricted Gateway</strong>: Shows "Access Denied" or "Not Found" error</li>
+<li><strong>Security</strong>: Data restrictions are enforced regardless of how the user attempts to access the gateway</li>
+</ul>
+<p><img alt="Direct URL Access" src="../img/gateway_direct_access.png" /></p>
+<p><img alt="Direct URL Access Denied" src="../img/gateway_direct_access_denied.png" /></p>
+<h2 id="summary">Summary</h2>
+<p>Gateway restrictions in Maximo Application Suite 9.2 provide flexible control over gateway access using the <code>gatewayTypeName</code> and <code>gatewayDeviceId</code> fields. By combining different query patterns (exact match, pattern matching, multiple values, exclusions), you can create precise access control policies that match your organizational structure and security requirements.</p>
+<p>For information about restrictions on other resource types (Organizations, Sites, Systems, Locations, Assets, Device Types, Devices), see <a href="../../monitor_resource_based_access_control_9.1/">Resource-Based Access Control in Maximo Monitor 9.1</a>.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

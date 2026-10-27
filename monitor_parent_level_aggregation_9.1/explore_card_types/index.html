@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tirth Patel" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/explore_card_types/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Explore Different Card Types - Monitor Parent-Level Aggregation Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Explore Different Card Types";
+        var mkdocs_page_input_path = "explore_card_types.md";
+        var mkdocs_page_url = "/maximo-labs/explore_card_types/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Parent-Level Aggregation Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Parent-Level Aggregation Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_asset/">1. Setup Asset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_asset_dashboard/">2. Create Dashboard with Time Series Card</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Explore Different Card Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#simple-bar-card">Simple Bar Card</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stacked-bar-card">Stacked Bar Card</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#valuekpi-card">Value/KPI Card</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-table-card">Data Table Card</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image-card">Image Card</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#combining-multiple-card-types">Combining Multiple Card Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../aggregation_across_hierarchy/">4. Aggregation Across Hierarchy Levels</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Parent-Level Aggregation Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Explore Different Card Types</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this exercise you will learn how to:</p>
+<ul>
+<li>Create different card types for visualizing hierarchy data</li>
+<li>Use Simple bar cards to compare current values across devices</li>
+<li>Use Stacked bar cards to show cumulative metrics</li>
+<li>Use Value/KPI cards to display aggregated totals</li>
+<li>Use Data table cards to view detailed data</li>
+<li>Use Image cards with hierarchy context</li>
+</ul>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>Parent-level aggregation supports multiple card types, each providing different ways to visualize and analyze child device data. In the previous exercise, you learned how to use Time series line cards with aggregation functions and time grain. In this exercise, you will explore other card types to gain different insights from your hierarchy data.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All card types support the same hierarchy data item selection process you learned in Exercise 2. The key difference is how each card type visualizes the data.</p>
+</div>
+<hr />
+<h2 id="simple-bar-card">Simple Bar Card</h2>
+<p>Simple bar cards display a single metric grouped by time intervals, allowing you to see how values change over different time periods.</p>
+<ol>
+<li>
+<p>Click <code>Add card</code> and select <code>Simple bar</code> card type.</br></br>
+<img alt="Add Simple Bar Card" src="../img/simple_bar_01.png" /></br></br></p>
+</li>
+<li>
+<p>Click <code>Add Hierarchy Data Item</code> button and select the child devices.</br></br>
+<img alt="Add Hierarchy Data Item" src="../img/simple_bar_02.png" /></br></br></p>
+</li>
+<li>
+<p>Select the data item (metric) to display. <strong>Note:</strong> Simple bar cards allow you to select only ONE metric at a time.</br></br>
+<img alt="Select Data Items" src="../img/simple_bar_03.png" /></br></br></p>
+</li>
+<li>
+<p>The Simple bar card displays the selected metric grouped by time intervals (hourly, daily, weekly, etc.), showing how the value changes over time.</br></br>
+<img alt="View Simple Bar Card" src="../img/simple_bar_04.png" /></br></br></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Use Case Example</p>
+<p>Simple bar cards are ideal for visualizing a single metric over time intervals, such as:</p>
+<ul>
+<li>View hourly energy consumption patterns throughout the day</li>
+<li>Compare daily production output across the week</li>
+</ul>
+<p>The grouping by time interval helps identify patterns and trends for a specific metric.</p>
+</div>
+<hr />
+<h2 id="stacked-bar-card">Stacked Bar Card</h2>
+<p>Stacked bar cards are similar to Simple bar cards but allow you to select multiple data items. The card displays these metrics stacked on top of each other, grouped by time intervals, showing the cumulative contribution of each metric over time.</p>
+<ol>
+<li>
+<p>Click <code>Add card</code> and select <code>Stacked bar</code> card type.</br></br>
+<img alt="Add Stacked Bar Card" src="../img/stacked_bar_01.png" /></br></br></p>
+</li>
+<li>
+<p>Click <code>Add Hierarchy Data Item</code> button and select the child devices.</br></br>
+<img alt="Add Hierarchy Data Item" src="../img/stacked_bar_02.png" /></br></br></p>
+</li>
+<li>
+<p>Select multiple data items (metrics) to display. <strong>Note:</strong> Unlike Simple bar cards, Stacked bar cards allow you to select MULTIPLE metrics, which will be stacked together for same time interval.</br></br>
+<img alt="Select Devices and Metrics" src="../img/stacked_bar_03.png" /></br></br></p>
+</li>
+<li>
+<p>The Stacked bar card displays the selected metrics stacked on top of each other, grouped by time intervals, showing how each metric contributes to the total over time.</br></br>
+<img alt="View Stacked Bar Card" src="../img/stacked_bar_04.png" /></br></br></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Use Case Example</p>
+<p>Stacked bar cards are ideal for visualizing multiple metrics stacked together over time intervals, such as:</p>
+<ul>
+<li>Compare production output by stacking different product lines over time</li>
+<li>Analyze total resource utilization by stacking metrics</li>
+</ul>
+<p>The stacked visualization helps you see both individual metric contributions and the total combined value across time intervals.</p>
+</div>
+<hr />
+<h2 id="valuekpi-card">Value/KPI Card</h2>
+<p>Value/KPI cards display aggregated metrics as single values, perfect for showing key performance indicators on your dashboard.</p>
+<ol>
+<li>
+<p>Click <code>Add card</code> and select <code>Value</code> card type.</br></br>
+<img alt="Add Value Card" src="../img/value_01.png" /></br></br></p>
+</li>
+<li>
+<p>Follow similar steps and Add hierarchy data items from child devices.</br></br>
+<img alt="Add Hierarchy Data Item" src="../img/value_02.png" /></br></br></p>
+</li>
+<li>
+<p>Select edit on selected data items to configure aggregation method to calculate the KPI value. Bydefault last value is selected and can configure other fields similar to dataitem at hierarchy level.</br></br>
+<img alt="Select Devices and Metrics" src="../img/value_03.png" /></br></br></p>
+</li>
+<li>
+<p>The Value card displays the aggregated metric as a single prominent value.</br></br>
+<img alt="View Value Card" src="../img/value_04.png" /></br></br></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Value/KPI cards are excellent for executive dashboards where you need to display high-level metrics like total energy consumption, average temperature across all devices, or device count.</p>
+</div>
+<hr />
+<h2 id="data-table-card">Data Table Card</h2>
+<p>Data table cards provide a detailed tabular view of child device data, allowing you to see multiple metrics and devices in a structured format.</p>
+<ol>
+<li>
+<p>Click <code>Add card</code> and select <code>Data table</code> card type.</br></br>
+<img alt="Add Data Table Card" src="../img/table_01.png" /></br></br></p>
+</li>
+<li>
+<p>Add hierarchy data items from child devices.</br></br>
+<img alt="Add Hierarchy Data Item" src="../img/table_02.png" /></br></br></p>
+</li>
+<li>
+<p>The Data table card displays all selected metrics in a structured table format, making it easy to compare multiple values across devices.</br></br>
+<img alt="View Data Table Card" src="../img/table_03.png" /></br></br></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Data table cards are ideal when you need to display multiple metrics from multiple devices in a compact, scannable format. They're particularly useful for operational dashboards.</p>
+</div>
+<hr />
+<h2 id="image-card">Image Card</h2>
+<p>Image cards can display images with hierarchy context, useful for showing device photos, diagrams, or visual status indicators.</p>
+<ol>
+<li>
+<p>Click <code>Add card</code> and select <code>Image</code> card type.</br></br>
+<img alt="Add Image Card" src="../img/image_01.png" /></br></br></p>
+</li>
+<li>
+<p>Configure the image data source and add hierarchy data items as done earlier. We can also add aggreagtion similar to value card.</br></br>
+<img alt="Configure Image Card" src="../img/image_02.png" /></br></br>
+<img alt="Configure Image Card" src="../img/image_03.png" /></br></br>
+<img alt="Configure Image Card" src="../img/image_04.png" /></br></br></p>
+</li>
+<li>
+<p>The Image card displays the configured image with hierarchy data item.</br></br>
+<img alt="View Image Card" src="../img/image_05.png" /></br></br></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Image cards are useful for displaying device photos, facility layouts, or visual indicators that help operators quickly identify equipment or locations.</p>
+</div>
+<hr />
+<h2 id="combining-multiple-card-types">Combining Multiple Card Types</h2>
+<p>The power of parent-level aggregation comes from combining different card types on a single dashboard to provide comprehensive insights.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>You have successfully explored different card types for visualizing hierarchy data! Each card type provides unique insights, and combining them creates powerful, comprehensive dashboards for monitoring your asset hierarchy.</p>
+</div>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<p>When creating dashboards with hierarchy data:</p>
+<ol>
+<li><strong>Use Time series cards</strong> to identify trends and patterns over time</li>
+<li><strong>Use Value/KPI cards</strong> for high-level metrics that need immediate attention</li>
+<li><strong>Use Simple bar cards</strong> for quick comparisons of current values</li>
+<li><strong>Use Stacked bar cards</strong> to understand cumulative contributions</li>
+<li><strong>Use Data table cards</strong> when detailed multi-metric views are needed</li>
+<li><strong>Use Image cards</strong> to provide visual context and improve operator understanding</li>
+</ol>
+<hr />
+<p>In the next exercise, you will explore dashoard creation at organization for visualizing hierarchy data.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_asset_dashboard/" class="btn btn-neutral float-left" title="2. Create Dashboard with Time Series Card"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../aggregation_across_hierarchy/" class="btn btn-neutral float-right" title="4. Aggregation Across Hierarchy Levels">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_asset_dashboard/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../aggregation_across_hierarchy/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

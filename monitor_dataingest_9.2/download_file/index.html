@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Margi Shah" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/download_file/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Download Processed and Error Files - Monitor Data Ingest</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Download Processed and Error Files";
+        var mkdocs_page_input_path = "download_file.md";
+        var mkdocs_page_url = "/maximo-labs/download_file/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Data Ingest
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Data-Ingest</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../upload_csv_files/">1. Navigate Data Ingestion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../download_template/">2. Download Built-in Template & Upload File</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file_status/">3. Uploaded File - Progress Tracking & Status</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Download Processed and Error Files</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-options-by-file-status">Download Options by File Status</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-download-a-successfully-processed-file">Step 1: Download a Successfully Processed File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-download-files-for-a-partially-processed-upload">Step 2: Download Files for a Partially Processed Upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-download-the-error-file-for-a-failed-upload">Step 3: Download the Error File for a Failed Upload</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage_guide/">5. Storage Usage & Storage Mode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file_retention/">6. File Retention Days</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_file/">7. Delete File</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Data Ingest</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Download Processed and Error Files</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="download-processed-and-error-files">Download Processed and Error Files</h1>
+<h2 id="objective">Objective</h2>
+<p>In this exercise, you will learn how to download processed CSV files and error files from Monitor. You will review file outcomes based on processing status and understand which downloadable files are available for completed, incomplete, and failed uploads.</p>
+<hr />
+<h2 id="download-options-by-file-status">Download Options by File Status</h2>
+<h3 id="step-1-download-a-successfully-processed-file">Step 1: Download a Successfully Processed File</h3>
+<p>If a file is uploaded and all records are valid, the status is marked as <strong>Completed</strong>. The processed file can be downloaded from the UI.</p>
+<p><img alt="Download Success File" src="../img/download_file/1_download_file.png" />&nbsp;&nbsp;</p>
+<h3 id="step-2-download-files-for-a-partially-processed-upload">Step 2: Download Files for a Partially Processed Upload</h3>
+<p>If the data is partially processed, where some records are ingested and some fail, the status is marked as <strong>Incomplete</strong>.</p>
+<p>Both files are available for download from the UI:</p>
+<ul>
+<li><strong>Processed file</strong> – Contains successfully processed records</li>
+<li><strong>Error file</strong> – Contains failed or unprocessed records</li>
+</ul>
+<p><img alt="Download Success File" src="../img/download_file/2_download_file.png" />&nbsp;&nbsp;</p>
+<h3 id="step-3-download-the-error-file-for-a-failed-upload">Step 3: Download the Error File for a Failed Upload</h3>
+<p>If the file fails due to invalid data, incorrect headers, or record-level errors, no data is processed. The file status is marked as <strong>Failed</strong>.</p>
+<p>An error file is available for download from the UI for troubleshooting.</p>
+<p><img alt="Download Success File" src="../img/download_file/3_download_file.png" />&nbsp;&nbsp;</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>You have learned how to:</p>
+<ul>
+<li>Identify downloadable files based on upload status</li>
+<li>Download processed files for completed uploads</li>
+<li>Download both processed and error files for incomplete uploads</li>
+<li>Download error files for failed uploads</li>
+</ul>
+<hr />
+<h2 id="next-steps">Next Steps</h2>
+<p>Proceed to <a href="../storage_guide/">Storage Usage &amp; Storage Mode</a> to learn how storage works for CSV files in Data Ingestion.</p>
+<hr />
+<p><strong>Congratulations!</strong> You have successfully learned how to download processed and error CSV files.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../file_status/" class="btn btn-neutral float-left" title="3. Uploaded File - Progress Tracking & Status"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../storage_guide/" class="btn btn-neutral float-right" title="5. Storage Usage & Storage Mode">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../file_status/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../storage_guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

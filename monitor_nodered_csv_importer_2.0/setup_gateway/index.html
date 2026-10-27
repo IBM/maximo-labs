@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_gateway/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Inject device data through a gateway to Monitor - Monitor Node-RED CSV Importer Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Inject device data through a gateway to Monitor";
+        var mkdocs_page_input_path = "setup_gateway.md";
+        var mkdocs_page_url = "/maximo-labs/setup_gateway/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Node-RED CSV Importer Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Node-RED CSV Importer Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">1. Setup Node-RED environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_device/">2. Inject device data directly to Monitor</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Inject device data through a gateway to Monitor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-device-type-and-setup-metrics-in-monitor">Create a device type and setup metrics in Monitor</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-device-type">Create a device type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-metrics-in-the-device-type">Create Metrics in the device type</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-gateway-in-iot-and-register-a-device">Create a gateway in IoT and register a device</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-node-red-flow-to-import-the-csv">Import Node-RED flow to import the CSV</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configure-node-red-flow-csv-to-mqtt-to-monitor-through-a-gateway">Configure Node-RED flow "CSV to MQTT to Monitor through a gateway"</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#configure-node-red-flow-for-your-mas-monitor-environment">Configure Node-RED flow for your MAS Monitor environment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-the-device-type">Update the device type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-the-client-id">Update the Client ID</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-the-node-red-flow-for-a-gateway">Run the Node-RED flow for a gateway</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#verify-the-devices-and-data-in-monitor">Verify the devices and data in Monitor</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Node-RED CSV Importer Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Inject device data through a gateway to Monitor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to setup Monitor to receive data from a CSV file that contains solar panel data and send the data through a gateway.  The gateway will create the devices in Monitor.</p>
+<ul>
+<li>Create a device type and setup metrics in Monitor</li>
+<li>Create a gateway in IoT to send events to the device type in Monitor</li>
+<li>Configure Node-RED flow</li>
+<li>Run Node-RED flow</li>
+<li>Verify the devices and data are in Monitor</li>
+</ul>
+<h2 id="create-a-device-type-and-setup-metrics-in-monitor">Create a device type and setup metrics in Monitor</h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have already done the previous exercise, then skip to <a href="#create-a-gateway-in-iot-and-register-a-device">Create a gateway in IoT and register a device</a> and reuse the device type setup.</p>
+</div>
+<h3 id="create-a-device-type">Create a device type</h3>
+<ol>
+<li>Go to Setup in Monitor</li>
+<li>Go to Devices tab</li>
+<li>Click on + button to create a device type</li>
+<li>Choose Basic template</li>
+<li>Next</li>
+<li>Enter a Device type name, e.g. XX_SolarPanel (replace XX with your initials).<br>
+   Take note of the name you give as you will need this in the Node-RED flow config</li>
+<li>Create</li>
+</ol>
+<h3 id="create-metrics-in-the-device-type">Create Metrics in the device type</h3>
+<ol>
+<li>Under Metrics section click Add metric</li>
+<li>Click Add metric
+    <br>a. Enter AC_POWER for Metric
+    <br>b. Enter AC_POWER for Display name
+    <br>c. Enter event_1 for Event
+    <br>d. Choose NUMBER for Type 
+    <br>e. Enter Watt for Unit </li>
+<li>Click Add metric
+    <br>a. Enter DC_POWER for Metric
+    <br>b. Enter DC_POWER for Display name
+    <br>c. Choose event_1 for Event
+    <br>d. Choose NUMBER for Type
+    <br>e. Enter Watt for Unit </li>
+<li>Click Add metric
+    <br>a. Enter DAILY_YIELD for Metric
+    <br>b. Enter DAILY_YIELD for Display name
+    <br>c. Choose event_1 for Event
+    <br>d. Choose NUMBER for Type</li>
+<li>Click Add metric
+    <br>a. Enter TOTAL_YIELD for Metric
+    <br>b. Enter TOTAL_YIELD for Display name
+    <br>c. Choose event_1 for Event
+    <br>d. Choose NUMBER for Type</li>
+<li>Click Add metric
+    <br>a. Enter EVT_TIMESTAMP for Metric
+    <br>b. Enter EVT_TIMESTAMP for Display name
+    <br>c. Choose event_1 for Event
+    <br>d. Choose TIMESTAMP for Type</li>
+<li>Click Add</li>
+<li>Apply checkmark in the box to <code>Use this as the default timestamp</code></li>
+<li>The metrics should look like this: <br>
+<img alt="Metrics" src="../img/solarpanel_metrics.png" /></li>
+<li>Click Save</li>
+</ol>
+<h2 id="create-a-gateway-in-iot-and-register-a-device">Create a gateway in IoT and register a device</h2>
+<ol>
+<li>Click the AppSwitcher in the top right corner and choose IoT</br>
+<img alt="Open IoT Tool" src="../img/select_iot.png" /></li>
+<li>Click on Device Types</li>
+<li>Click on Add Device Type</li>
+<li>Click on Type Gateway</li>
+<li>Enter a name for the gateway type, e.g. XX_SolarPanel_GW (replace XX with your initials).<br>
+   Take note of the name you give as you will need this in the Node-RED flow config</li>
+<li>Click Next</li>
+<li>Click Finish</li>
+<li>Click Register Devices
+<img alt="Upload CSV multiple devices" src="../img/create_gateway.png" /></li>
+<li>Enter a name for the gateway device, e.g. XX_SolarPanel_GW01 (replace XX with your initials).<br>
+Note:  This is not the DEVICEID in your CSV file</li>
+<li>Click Next 4 times</li>
+<li>In Authenticaton Token enter Pasword1! and click Next
+<img alt="Add Device" src="../img/add_device_gateway.png" /></li>
+<li>Click Finish
+<img alt="Add Device" src="../img/device_credentials.png" /></li>
+</ol>
+<h2 id="import-node-red-flow-to-import-the-csv">Import Node-RED flow to import the CSV</h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have already done the previous exercise, then skip to <a href="#update-the-device-type">next step</a> and use the Node-RED script already imported.</p>
+</div>
+<ol>
+<li>Download the <a href="https://github.com/ekstrom-ibm/monitor_csv_importer/blob/main/V2/Monitor_CSV_to_MQTT_flow.json" target="_blank">flow</a>, if you have completed the previous device exercise skip these steps </li>
+<li>Launch Node-RED</li>
+<li>Click on the burger menu and choose Import</li>
+<li>Click on select a file to import</li>
+<li>Choose the file downloaded in step 1.</li>
+<li>Click Import</li>
+</ol>
+<h2 id="configure-node-red-flow-csv-to-mqtt-to-monitor-through-a-gateway">Configure Node-RED flow "CSV to MQTT to Monitor through a gateway"</h2>
+<h3 id="configure-node-red-flow-for-your-mas-monitor-environment">Configure Node-RED flow for your MAS Monitor environment</h3>
+<p>Collect the following (or skip if done in previous exercise):<br>
+* name of the device type created above<br>
+* Messaging hostname which should look like this<br>
+&ensp;[tenant/workspace].messaging.iot.[domain]<br>
+&ensp;e.g. masdev.messaging.iot.monitordemo2.ibmmam.com<br></p>
+<h3 id="update-the-device-type">Update the device type</h3>
+<ol>
+<li>Double click on the "Set Flow Data" <code>function</code> node in the Initializtion section</li>
+<li>Change the deviceType to the device type you created previously,<br>
+   e.g. XX_SolarPanel (replace XX with your initials).</li>
+<li>Click Done</li>
+</ol>
+<h3 id="update-the-client-id">Update the Client ID</h3>
+<ol>
+<li>Double click on the purple <code>mqtt out</code> node named<br><code>Send MQTT event to a gateway in MAS Monitor</code></li>
+<li>Click on the pencil icon next to Server</li>
+<li>In the Server box replace with your Messaging hostname</li>
+<li>Click on the pencil icon next to TLS configuration</li>
+<li>In the Server Name box replace with your Messaging hostname</li>
+<li>Uncheck <code>Verify server certificate</code> and click Update</li>
+<li>The Client ID for a gateway looks like this: <code>g:&lt;tenant&gt;:&lt;device type&gt;:&lt;device ID&gt;</code></li>
+<li>In the Client ID field replace masdev with your tenant/workspace name if it is not the same</li>
+<li>In the Client ID field replace XX_SolarPanel_GW with your gateway device type created above</li>
+<li>In the Client ID field replace XX_SolarPanel_GW01 with the device Id of your gateway created above</li>
+<li>Click on the Security tab, write <code>use-token-auth</code> as the username<br>
+    and write <code>Pasword1!</code> as the Password</li>
+<li>Click Update</li>
+<li>Click Done</li>
+<li>Click Deploy in the top right corner</li>
+<li>You should now see a green dot and <code>connected</code> below the <code>mqtt out</code> node <br>
+if all credentials were entered correctly:<br>
+<img alt="Connected device" src="../img/connected_gateway.png" /></li>
+</ol>
+<h2 id="run-the-node-red-flow-for-a-gateway">Run the Node-RED flow for a gateway</h2>
+<ol>
+<li>Download <a href="https://github.com/ekstrom-ibm/monitor_csv_importer/blob/main/V2/multiple_solar_panels.csv" target="_blank">multiple_solar_panels.csv</a> from github</li>
+<li>Click on the down arrow in the upper right corner in Node-RED and choose Dashboard<br>
+<img alt="Choose dashboard" src="../img/dashboard_choose.png" /></li>
+<li>Click on the launch arrow<br>
+<img alt="Launch dashboard" src="../img/dashboard_launch.png" /></li>
+<li>Click on Choose File or Browse under "Upload CSV with multiple devices" and select the recently downloadet CSV file.<br>
+<img alt="Upload CSV multiple devices" src="../img/upload_csv_multiple_devices.png" /></li>
+<li>Select the <code>multiple_solar_panels.csv</code> file and click the right arrow play button</li>
+<li>Go back to the Node-RED flow window</li>
+<li>Under the light purple <code>delay</code> node it shows the amount of messages left to send to Monitor</li>
+<li>Under the green <code>debug</code> Progress node it shows the amount of messages that have been sent to Monitor</li>
+<li>All the data is ingested into Monitor once the number under the light purple <code>delay</code> node<br>
+   shows 0 but you can go ahead to the next step to verify data is going into Monitor.<br>
+   It will take approx. 11 minutes.<br>
+<img alt="Single device run" src="../img/gateway_run.png" /></li>
+</ol>
+<h2 id="verify-the-devices-and-data-in-monitor">Verify the devices and data in Monitor</h2>
+<ol>
+<li>Go to Setup in Monitor</li>
+<li>Click on the Device Type created earlier in the lab</li>
+<li>See that 21 (+1 from previous exercise) devices were created in Monitor under the device type
+<img alt="Device list" src="../img/device_list.png" /></li>
+<li>Click on the black button "Set up device type"</li>
+<li>On the left side open Metric and then select DAILY_YIELD</li>
+<li>Click on Data table to see the values of that metric and notice the different Device ID's<br>
+<img alt="Data table" src="../img/data_table_devices.png" /></li>
+</ol>
+<hr />
+<p>Congratulations!  You have ingested data from a CSV file into Monitor for several devices through a gateway. 
+Now you can explore creating calculated data metrics and dashboards in Monitor.<br>
+Which could be something like this:<br>
+<img alt="Single Device Dashboard" src="../img/summary_dashboard.png" /><br><br></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please archive and delete your device type when it is no longer being used.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup_device/" class="btn btn-neutral float-left" title="2. Inject device data directly to Monitor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../setup_device/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
