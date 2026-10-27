@@ -31,6 +31,6 @@ You will complete the following exercises:
 
 ---
 
-**Updated: 2026-03-24**
+**Updated: 2026-10-27**
 
 ---
