@@ -32,6 +32,14 @@ Look at the character used above and belove these two lines of text.
 ##############################################################
 #### Maximo Application Suite 9.2 Labs                    ####
 
+#### Build the Monitor Juniper Mist Integration level:
+lab=monitor_juniper_mist_integration_9.2
+echo "==================================================================================="
+echo "BUILD_INFO - The $lab lab is being build"
+cd $root_dir/MkDocs/$lab
+mkdocs build
+echo "BUILD_INFO - The $lab lab is build and added under the top level of IBM Maximo Labs."
+
 #### Build the Monitor Re-Architecture level:
 lab=monitor_iot_re-architecture_9.2
 echo "==================================================================================="
