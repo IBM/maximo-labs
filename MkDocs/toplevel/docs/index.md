@@ -16,6 +16,19 @@ Feel free to [open issues](https://github.com/IBM/maximo-labs/issues){target=_bl
 
 | Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
 |----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Maximo Monitor Juniper Mist Integration](monitor_juniper_mist_integration_9.2/) | [Juniper Mist Overview](monitor_juniper_mist_integration_9.2/juniper_mist_overview) |
+|                                                                | [Configure Juniper Mist Integration](monitor_juniper_mist_integration_9.2/configure_mist_integration) |
+|                                                                | [Edit Juniper Mist Integration](monitor_juniper_mist_integration_9.2/edit_integration) |
+|                                                                | [Site Synchronization Overview](monitor_juniper_mist_integration_9.2/site_sync_overview) |
+|                                                                | [Assign Maximo Manage Locations](monitor_juniper_mist_integration_9.2/assign_manage_locations) |
+|                                                                | [Subscribe Juniper Mist Locations](monitor_juniper_mist_integration_9.2/subscribe_locations) |
+|                                                                | [Access Points & Device Types](monitor_juniper_mist_integration_9.2/ap_device_types) |
+|                                                                | [Occupancy & Presence Metrics](monitor_juniper_mist_integration_9.2/occupancy_presence_metrics) |
+|                                                                | [Unsubscribe & Unassign Workflows](monitor_juniper_mist_integration_9.2/unsubscribe_unassign) |
+|                                                                | [Delete Juniper Mist Integration](monitor_juniper_mist_integration_9.2/delete_integration) |
+
+| Lab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;| Exercises&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Maximo Monitor IoTP Re-Architecture](monitor_iot_re-architecture_9.2/) | [Generate API Key](monitor_iot_re-architecture_9.2/create_api_key) |
 |                                                                | [Edit / Update API Key](monitor_iot_re-architecture_9.2/edit_api_key)             |
 |                                                                | [Delete API Key](monitor_iot_re-architecture_9.2/delete_api_key)                  |
@@ -333,6 +346,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2026-06-23
+### UPDATED: 2026-10-27
 
 ---

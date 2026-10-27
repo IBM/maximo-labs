@@ -1,0 +1,49 @@
+site_name: Monitor Juniper Mist Integration Lab
+site_url: https://ibm.github.io/maximo-labs/
+site_author: Triparna Kar
+site_description: "Maximo Monitor 9.2 Juniper Mist Integration Lab"
+site_dir: ../../site/monitor_juniper_mist_integration_9.2
+
+nav:
+  - Get back to Maximo Labs: ..
+  - Monitor Juniper Mist Integration Lab:
+    - Welcome: index.md
+    - Pre-Requisites: prereqs.md
+  - Exercises:
+    - 1. Juniper Mist Overview: juniper_mist_overview.md
+    - 2. Configure Juniper Mist Integration: configure_mist_integration.md
+    - 3. Edit Juniper Mist Integration: edit_integration.md
+    - 4. Site Synchronization Overview: site_sync_overview.md
+    - 5. Assign Maximo Manage Locations: assign_manage_locations.md
+    - 6. Subscribe Juniper Mist Locations: subscribe_locations.md
+    - 7. Access Points & Device Types: ap_device_types.md
+    - 8. Occupancy & Presence Metrics: occupancy_presence_metrics.md
+    - 9. Unsubscribe & Unassign Workflows: unsubscribe_unassign.md
+    - 10. Delete Juniper Mist Integration: delete_integration.md
+    
+  - About:
+    - Release Notes: release_notes.md
+    - Copyright: ../copyright
+
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-EGH6ZGZ8CT
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - json
+    - bash
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+extra_css:
+  - ../css/extra.css
+
+extra_javascript:
+  - ../js/popper.min.js
+  - ../js/tippy-bundle.umd.js
+  - ../js/clipboard.js
+  - ../js/extra.js

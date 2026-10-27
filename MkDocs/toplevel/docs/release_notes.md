@@ -25,6 +25,7 @@
 - Tirth Patel - <tirth.patel1@ibm.com>
 - Abinav Tv - <abinav.tv@ibm.com>
 - Pradipkumar Jinjala - <pradipkumar.jinjala@ibm.com>
+- Triparna Kar - <triparna.j.kar@ibm.com>
 
  
 
@@ -34,6 +35,7 @@
 
 |Date      |By             | Description                                                                            |
 |:---------|:--------------|:---------------------------------------------------------------------------------------|
+|2026-10-27|Triparna Kar    |Added the initial version of [Maximo Monitor Juniper Mist Integration Lab](../monitor_juniper_mist_integration_9.2/) for MAS 9.2. |
 |2026-06-23|Jan Ekstrøm    |Fixed minor Maximo Labs structural details and re-deployed Maximo Labs.  |
 |2026-06-23|Pradipkumar Jinjala    |Added the initial version of [Maximo Monitor IoTP Re-Architecture Lab](../monitor-iot-re-architecture_9.2/) for MAS 9.2. |
 |2026-06-19|Margi Shah | Added the initial version of [Maximo Monitor DataIngest](../monitor_dataingest_9.2/) for MAS 9.2.|
