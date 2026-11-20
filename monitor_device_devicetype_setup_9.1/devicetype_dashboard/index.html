@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Mayur Sojitra" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/devicetype_dashboard/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>7. Dashboard - Device and device type setup</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "7. Dashboard";
+        var mkdocs_page_input_path = "devicetype_dashboard.md";
+        var mkdocs_page_url = "/maximo-labs/devicetype_dashboard/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Device and device type setup
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Device and device type setup Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview_configuration/">1. Device Type Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_metrics/">2. Metrics in Device Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_dimensions/">3. Dimension in Device Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_edit_device/">4. Add and Edit devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../device_relation/">5. Device Relationship with Asset/Location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_calc_metrics/">6. Calculated metrics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">7. Dashboard</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-device-type-dashboard">Create Device type Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#edit-device-type-dashboard">Edit Device type Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-device-type-dashboard">View Device type Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-device-dashboard">Create Device Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-device-dashboard">View Device Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pin-dashboard">Pin Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view-pinned-dashboard">View Pinned Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unpin-dashboard">Unpin Dashboard</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../archive_devicetype/">8. Archive/Restore/Delete Device Type</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Device and device type setup</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">7. Dashboard</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to create and view dashboard in device type.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<hr />
+<h2 id="create-device-type-dashboard">Create Device type Dashboard</h2>
+<p>Navigate to the Dashboards tab within the desired device type and click on <code>Add dashboard</code>.
+<img alt="Create Dashboard" src="../img/dashboard01.png" /></br></br></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An Alerts Dashboard is automatically created by default for every device type created in Monitor.</p>
+</div>
+<p>Please enter a title for the dashboard and click <code>Configure Dashboard</code> to proceed.
+<img alt="Create Dashboard" src="../img/dashboard02.png" /></br></br></p>
+<p>You can choose from a variety of dashboard components available in the gallery, such as Time Graphs, Bar Charts, and more.</br>
+Click on <code>Time Series Line</code> to add a time-based line chart to your dashboard.
+<img alt="Create Dashboard" src="../img/dashboard03.png" /></br></br></p>
+<p>Enter the dashboard content details, then click <code>Save and Close</code> to finalize your changes.
+<img alt="Create Dashboard" src="../img/dashboard04.png" /></br></br></p>
+<p>The dashboard has been successfully created for the selected device type.
+<img alt="Create Dashboard" src="../img/dashboard05.png" /></br></br></p>
+<h2 id="edit-device-type-dashboard">Edit Device type Dashboard</h2>
+<p>To edit a dashboard, navigate to the Dashboards tab under the desired device type. Locate the saved dashboard, click the three-dot menu next to it, and select <code>Edit</code>.
+<img alt="Edit Dashboard" src="../img/dashboard06.png" /></br></br></p>
+<p>You can choose from a variety of dashboard components available in the gallery.
+Click on <code>Simple bar</code> to add a bar chart to your dashboard.
+<img alt="Edit Dashboard" src="../img/dashboard07.png" /></br></br></p>
+<p>Enter the dashboard content details, then click <code>Save and Close</code> to finalize your changes.
+<img alt="Edit Dashboard" src="../img/dashboard08.png" /></br></br></p>
+<h2 id="view-device-type-dashboard">View Device type Dashboard</h2>
+<p>To view the dashboard, navigate to the Dashboard section, then select <code>Device Types View</code> from the left-hand panel.
+<img alt="View Dashboard" src="../img/dashboard09.png" /></br></br></p>
+<p>Search for the device type for which you want to view the dashboard.
+<img alt="View Dashboard" src="../img/dashboard10.png" /></br></br></p>
+<p>Click on the dashboard name to open and view its contents.
+<img alt="View Dashboard" src="../img/dashboard11.png" /></br></br></p>
+<h2 id="create-device-dashboard">Create Device Dashboard</h2>
+<p>Navigate to the Dashboards tab within the desired device and click on <code>Add dashboard</code>.
+<img alt="Create Dashboard" src="../img/dashboard12.png" /></br></br></p>
+<p>Please enter a title for the dashboard, specify whether it should be created for this device only or for all devices, and then click <code>Configure Dashboard</code> to proceed.
+<img alt="Create Dashboard" src="../img/dashboard13.png" /></br></br></p>
+<p>You can choose from a variety of dashboard components available in the gallery.
+Click on <code>Data table</code> to add metric data to your dashboard.
+<img alt="Create Dashboard" src="../img/dashboard14.png" /></br></br></p>
+<p>Enter the dashboard content details, then click <code>Save and Close</code> to finalize your changes.
+<img alt="Create Dashboard" src="../img/dashboard15.png" /></br></br></p>
+<p>The dashboard has been successfully created for the selected device.
+<img alt="Create Dashboard" src="../img/dashboard16.png" /></br></br></p>
+<h2 id="view-device-dashboard">View Device Dashboard</h2>
+<p>To view the dashboard, navigate to the Dashboard section, then select <code>Device Types View</code> from the left-hand panel.
+<img alt="View Dashboard" src="../img/dashboard09.png" /></br></br></p>
+<p>Search for the device for which you want to view the dashboard.
+<img alt="View Dashboard" src="../img/dashboard17.png" /></br></br></p>
+<p>Click on the dashboard name to open and view its contents.
+<img alt="View Dashboard" src="../img/dashboard18.png" /></br></br></p>
+<h2 id="pin-dashboard">Pin Dashboard</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can also pin dashboard for easy access to frequently data uses and unpin them when it's no longer required.</p>
+</div>
+<p>View the dashboard associated with the device type you wish to pin and Click the pin icon.
+<img alt="View Dashboard" src="../img/dashboard19.png" /></br></br></p>
+<p>Click on <code>Pin dashboard</code>.
+<img alt="View Dashboard" src="../img/dashboard20.png" /></br></br></p>
+<p>Provide a description and select a category, if applicable, then click <code>Pin Dashboard</code> to complete the process.
+<img alt="View Dashboard" src="../img/dashboard21.png" /></br></br></p>
+<h2 id="view-pinned-dashboard">View Pinned Dashboard</h2>
+<p>To view the pinned dashboard, navigate to the Dashboard section, then select <code>Pinned Dashboards</code> from the left-hand panel.
+<img alt="View Dashboard" src="../img/dashboard22.png" /></br></br></p>
+<p>Once pinned, the dashboard will be visible. If no category was selected during the pinning process, it will appear under the 'Uncategorized' section.
+<img alt="View Dashboard" src="../img/dashboard23.png" /></br></br></p>
+<h2 id="unpin-dashboard">Unpin Dashboard</h2>
+<p>To unpin a dashboard, click the three-dot menu next to the pinned dashboard name and select <code>Unpin Dashboard</code>.
+<img alt="View Dashboard" src="../img/dashboard24.png" /></br></br></p>
+<p>Click <code>Remove</code> to confirm the unpinning of the dashboard.
+<img alt="View Dashboard" src="../img/dashboard25.png" /></br></br></p>
+<hr />
+<p>Congratulations you have successfully created new dashboard for device and device type .</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../add_calc_metrics/" class="btn btn-neutral float-left" title="6. Calculated metrics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../archive_devicetype/" class="btn btn-neutral float-right" title="8. Archive/Restore/Delete Device Type">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../add_calc_metrics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../archive_devicetype/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

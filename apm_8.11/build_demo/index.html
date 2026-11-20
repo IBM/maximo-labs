@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/build_demo/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Setup Health and Predict Demonstration - Maximo APM Hands On Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup Health and Predict Demonstration";
+        var mkdocs_page_input_path = "build_demo.md";
+        var mkdocs_page_url = "/maximo-labs/build_demo/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Maximo APM Hands On Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Maximo Health and Predict Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to the Lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Setup Health and Predict Demonstration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#setup-health-asset-permissions">Setup Health Asset Permissions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-asset-scoring-groups-using-notebooks">Create Asset Scoring Groups using Notebooks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#navigate-to-health">Navigate to Health</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scoring-settings">Scoring Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-scoring-group">Create a Scoring Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-scoring-group_1">Create a Scoring Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pick-a-query">Pick a Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#activate-score">Activate Score</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-score-type">Create Score Type</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#score-types">Score Types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-score-type">Create a New Score Type</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-group-using-custom-scoring-methodology">Create Group Using Custom Scoring Methodology</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-scoring-group_2">Create a Scoring Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-score-type">Add Score Type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-contributor">Add Contributor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-contributor-weight">Add Contributor Weight</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-custom-matrix">Create Custom Matrix</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#view-matrix">View Matrix</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configure-matrix">Configure Matrix</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-replacement-plan-template-for-substation-transformers">Create Replacement Plan Template for Substation Transformers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#replacement-plan-templates">Replacement Plan Templates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-template">Create a Template</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-investment-project">Create Investment Project</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#assign-assets">Assign Assets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-project">Create a Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-assets-from-the-matrix">Add Assets from the Matrix</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-and-run-investment-strategies">Create and Run Investment Strategies</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo_script/">Health and Predict Overview Task Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Maximo APM Hands On Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Setup Health and Predict Demonstration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="build-mas-health-and-predict-demonstration">Build MAS Health and Predict Demonstration</h1>
+<p>Follow the steps in this lab in your own environment to create the necessary components to deliver the MAS v8.11 Health and 
+Predict Demo Script. The data for your system can be provided by the instructor.</p>
+<ol>
+<li>Create group using notebooks</li>
+<li>Create score type</li>
+<li>Create group using Custom Scoring Methodology</li>
+<li>Create custom matrix</li>
+<li>Plan replacement plan template for Substation Transformers</li>
+<li>Create investment project</li>
+</ol>
+<p>To keep track of the items that you create, append your initials to the end of the name, so that they’ll be easy to find and delete.</p>
+<p><strong>Prerequisites</strong></p>
+<p>This lab requires the following:</p>
+<ul>
+<li>A working Maximo Application Suite (MAS) environment with Maximo Manage, or another Enterprise Asset Management (EAM) 
+system, Maximo Health, Maximo Health and Predict, IBM Maximo Models for Electrical Distribution and Maximo Optimizer installed.</li>
+<li>Sufficient asset data to run the analysis and get insights</li>
+<li>User id with application access to <code>Health</code> application.</li>
+<li>User id with access to a site. Otherwise you will get a warning <code>This user doesn't have access to any site. Site access is required to access ASSET object</code></li>
+</ul>
+<h2 id="setup-health-asset-permissions">Setup Health Asset Permissions</h2>
+<p>In order to allow users to <code>edit source record</code> on <code>Action</code> button to navigate from the Health asset details page to the 
+Manage Asset page you must configure the Health application security groups in manage using the steps below.</p>
+<ol>
+<li>Go to Manage.
+<img alt="assets_page" src="../img/hpu_8.11/select_manage.png" /></li>
+<li>Choose the <code>Security group</code> application. 
+<img alt="assets_page" src="../img/hpu_8.11/select_security_groups.png" /></li>
+<li>Search on the <code>HEALTH</code> group and click <code>enter</code> key. 
+<img alt="assets_page" src="../img/hpu_8.11/search_health_group.png" /></li>
+<li>Click the <code>Applications</code> tab.</li>
+<li>Select <code>Assets</code>
+<img alt="assets_page" src="../img/hpu_8.11/click_applications_assets.png" /></li>
+<li>Click the <code>Grant listed options for the application</code> </li>
+<li>Enable options for asset actions
+<img alt="assets_page" src="../img/hpu_8.11/turn_on_options.png" /></li>
+<li>Click <code>Save Group</code>. 
+<img alt="assets_page" src="../img/hpu_8.11/confirmation_save.png" /></li>
+<li>Go back to <code>Health</code>application and login using the user to ensure the operation is now possible.</li>
+</ol>
+<h2 id="create-asset-scoring-groups-using-notebooks">Create Asset Scoring Groups using Notebooks</h2>
+<p><a name="create_group_notebooks"></a>
+Coming soon.</p>
+<h3 id="navigate-to-health">Navigate to Health</h3>
+<p>Launch <code>Health</code> on the <code>Applications</code> tab.  If <code>Health</code> tile is not present on applications tab,  ask your MAS admin has to enable it. </p>
+<ol>
+<li>After you login using the credentials provided by your instructor,  navigate to the </li>
+<li>From the main MAS page, select the <code>Applications</code> tab
+<img alt="navigate_to_health" src="../img/hpu_8.11/health1.png" /></li>
+<li>Click the <code>Launch</code> link on the <code>Health</code> or <code>Predict</code> tile </li>
+<li>This displays the assets grid page with a table of assets and their health scores for the user's currently assigned site.
+<img alt="assets_page" src="../img/hpu_8.11/assets_grid_page.png" /></li>
+</ol>
+<p>**Note if  the user isn't assigned to a site they will not see any assets. ** </p>
+<h3 id="scoring-settings">Scoring Settings</h3>
+<p>On the main screen, there is a universal view of all managed assets in a familiar table view.</p>
+<p>Scores that are shown in this view, and others, are created from the <code>Scoring and DGA settings</code> section on the left nav bar.</p>
+<ol>
+<li>
+<p>Hover over the left nav bar to expand it
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%203.png" />  </p>
+</li>
+<li>
+<p>Select the <code>Scoring and DGA settings</code> section on the left nav bar
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%204.png" />  </p>
+</li>
+</ol>
+<h3 id="create-a-scoring-group">Create a Scoring Group</h3>
+<p>Creating a scoring group (i.e. grouping common assets together) is the first step to creating scores.</p>
+<p>If there are any scoring groups already created, they will appear on the <code>Groups</code> tab of the <code>Scoring and DGA settings</code> page.</p>
+<ol>
+<li>Scroll through the pages to see what groups have already been created.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%205.png" /></li>
+</ol>
+<p>There are 2 ways to develop scoring methodologies in Maximo Health and Predict – Utilities</p>
+<p>The first way is to develop the scoring methodology in a Jupyter notebook.  For many assets in the Transmission and Distribution space (T&amp;D), IBM provides <a href="https://www.ibm.com/docs/en/mhmpmh-and-p-u/continuous-delivery?topic=cm-asset-class-notebooks-in-maximo-health-predict-utilities">notebooks with prescribed scoring methodologies.</a></p>
+<p>Alternatively, scoring methodologies can be created from scratch directly in the UI.</p>
+<h3 id="create-a-scoring-group_1">Create a Scoring Group</h3>
+<p>To create a score group for Substation Transformers, click the <code>Create a scoring and DGA group</code> button, and complete the form.</p>
+<ol>
+<li>Click the <code>Create a scoring and DGA group</code> button. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%206.png" /></li>
+<li>Complete the open fields for <code>Name</code> and <code>Description</code>. </li>
+<li>Select the radio button for <code>asset</code> to identify the <code>Object</code>. </li>
+<li>Select the radio button <code>Connecting group to notebook</code> in response to <code>Configure scoring and DGA by</code>. </li>
+<li>Click <code>Select</code> to pick a notebook. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%207.png" /></li>
+<li>When prompted, scroll and select the <code>IBM Transformers Tap Changers DGA 6.0.1</code>. </li>
+<li>Click <code>Use notebook</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%208.png" /></li>
+</ol>
+<h3 id="pick-a-query">Pick a Query</h3>
+<p>Complete the group by using a query to identify the assets in the group.  In this case, substation transformers. </p>
+<ol>
+<li>Click <code>select</code> to pick a query. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%209.png" /></li>
+<li>When prompted, scroll and select the <code>EUORG1_EUDEMO_ST</code></li>
+<li>Click <code>Apply</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2010.png" /></li>
+<li>Click <code>Create</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2011.png" /></li>
+</ol>
+<h3 id="activate-score">Activate Score</h3>
+<p>Once created, the group will display.  The next step is to activate each of the scoring methodologies from the notebook. </p>
+<ol>
+<li>Click each score in sequence, starting at the top. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2012.png" /></li>
+<li>On each <code>score</code> screen, review the scoring methodology, and select <code>Active</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2013.png" /></li>
+<li>Use the breadcrumb to return the <code>Scoring Group</code> page. </li>
+<li>Ensure that all of the scores are <code>Active</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2014.png" /></li>
+</ol>
+<h2 id="create-score-type">Create Score Type</h2>
+<h3 id="score-types">Score Types</h3>
+<p>To create a custom score methodology from the UI, return to the <code>Scoring and DGA settings</code> page by clicking the breadcrumb at the top of the page.</p>
+<p>Select the <code>Score types</code> tab on the page to create a new score type.  Existing score types will display on the page.</p>
+<ol>
+<li>Click the <code>Scoring and DGA settings</code> breadcrumb at the top of the page. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2015.png" /></li>
+<li>Select the <code>Score types</code> tab. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2018.png" /></li>
+<li>Click the <code>Create new score type</code> button. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2019.png" /></li>
+</ol>
+<h3 id="create-a-new-score-type">Create a New Score Type</h3>
+<p>Complete the form for the new custom score type.  The score type can be customized with new ranges, colors and icons. </p>
+<ol>
+<li>Complete the open fields for <code>Name</code> and <code>Description</code>. </li>
+<li>Leave the remaining fields as they default. </li>
+<li>Click <code>Save</code>. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2020.png" /></li>
+<li>Return to the <code>Groups</code> tab to set up the custom score methodology. Select the <code>Groups</code> tab. </li>
+</ol>
+<h2 id="create-group-using-custom-scoring-methodology">Create Group Using Custom Scoring Methodology</h2>
+<h3 id="create-a-scoring-group_2">Create a Scoring Group</h3>
+<p>Follow similar steps as those using the notebook to create a custom score methodology for substation transformers 
+in this case, a proxy for efficiency.</p>
+<ol>
+<li>Click the <code>Create a scoring and DGA group</code> button. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%206.png" /></li>
+<li>Complete the open fields for <code>Name</code> and <code>Description</code>. </li>
+<li>Select the radio button for <code>asset</code> to identify the <code>Object</code>. </li>
+<li>Select the radio button <code>Building scores</code> in response to <code>Configure scoring and DGA by</code>. </li>
+<li>Click <code>select</code> to pick a query. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2016.png" /></li>
+<li>When prompted, scroll and select the <code>EUORG1_EUDEMO_ST</code>. </li>
+<li>Click <code>Apply</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2010.png" /></li>
+<li>Click <code>Create</code>. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2011.png" /></li>
+</ol>
+<h3 id="add-score-type">Add Score Type</h3>
+<p>Once created, the group will display.  The next step is to create the custom score methodology itself.</p>
+<p>When adding a score type, existing score types with appear, including the Substation Efficiency just created.</p>
+<ol>
+<li>Click the <code>Add score</code> button. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2022.png" /></li>
+<li>Select <code>Substation Efficiency</code> from the score options. </li>
+<li>Click <code>Done</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2023.png" /></li>
+</ol>
+<h3 id="add-contributor">Add Contributor</h3>
+<p>From the Substation Efficiency score page, the custom score methodology can be built using various contributors, formulas, or groups.</p>
+<ol>
+<li>Click the <code>+</code> in the contributor section of the page. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2024.png" /></li>
+<li>From the <code>Add a contributor</code> popup, select the tile <code>FACAGESAMPLE</code>. </li>
+<li>Click <code>Add</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2025.png" /></li>
+</ol>
+<h3 id="add-contributor-weight">Add Contributor Weight</h3>
+<p>For this example, only one contributor is used, but often there will be several contributors.  Therefore, a weight must be assigned to each contributor.  In this case, 100%.</p>
+<p><strong>Value:</strong>  The ability to create custom scores, with any data available, allows the user to account for unique operating environments and conditions.</p>
+<ol>
+<li>Click the <code>Pencil</code> icon. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2026.png" /></li>
+<li>In the popup, change the % weight to <code>100</code>. </li>
+<li>Click <code>Save</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2027.png" /></li>
+<li>Change the <code>Active</code> button to <code>Yes</code>. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2028.png" /></li>
+</ol>
+<h2 id="create-custom-matrix">Create Custom Matrix</h2>
+<h3 id="view-matrix">View Matrix</h3>
+<p>Now that the score methodologies are built, and active, scores will appear in multiple views.</p>
+<p>To use the custom score in a matrix, a custom matrix must be created. </p>
+<ol>
+<li>Hover over the left nav bar to expand it. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2029.png" /></li>
+<li>Select the <code>Assets</code> section on the left nav bar to return to the table view. </li>
+<li>Click the <code>Matrix</code> icon to move to the matrix view. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2044.png" /></li>
+</ol>
+<h2 id="configure-matrix">Configure Matrix</h2>
+<p>To customize the matrix, click the <code>setting icon</code> in the upper right of the screen.  Adjust the fields so that Health 
+appears on the y-axis, and Substation Transformer Efficiency on the x-axis.</p>
+<ol>
+<li>Click the <code>cog</code> symbol. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2045.png" /></li>
+<li>In the <code>Name</code> field, type <code>Substation Efficiency and Health</code>. </li>
+<li>In the <code>Y-axis</code> field, select <code>Substation Efficiency</code>. </li>
+<li>Select the <code>100-0</code> radio button under <code>Y-axis direction</code>.  </li>
+<li>In the <code>X-axis</code> field, select <code>Health</code>.</li>
+<li>Select the <code>100-0</code> radio button under <code>X-axis direction</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2046.png" /></li>
+</ol>
+<p>Also, fill in the colors of the matrix so that the assets with poor health and poor efficiency appear red or <code>high</code> in the upper right corner.</p>
+<ol>
+<li>Click <code>High</code> radio button. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2047.png" /></li>
+<li>In the Matrix, click on the upper right box to turn it red. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2048.png" /></li>
+<li>Continue with <code>Medium</code> and <code>Low</code> to complete the matrix view to match the example. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2049.png" /></li>
+<li>Click <code>Save as</code> to save the matrix and set it as the default. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2050.png" /></li>
+</ol>
+<h2 id="create-replacement-plan-template-for-substation-transformers">Create Replacement Plan Template for Substation Transformers</h2>
+<h3 id="replacement-plan-templates">Replacement Plan Templates</h3>
+<p>The matrix provides a good view from which to select assets for an investment project.  However, a plan template must be complete for any asset class in a project.  To set up a plan template, go to the Asset investment optimizer tab.</p>
+<ol>
+<li>Hover over the left nav bar to expand it.</li>
+<li>Select the <code>Asset investment optimizer</code> section on the left nav bar.
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2055.png" /></li>
+<li>Click the <code>Plan templates</code> tab. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2056.png" /></li>
+<li>On the <code>Plan templates</code> tab, click the <code>+</code> symbol to create a new plan template. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2057.png" /></li>
+</ol>
+<h3 id="create-a-template">Create a Template</h3>
+<p>Complete the form for the replacement plan template.</p>
+<ol>
+<li>Select <code>SUBSTATION_TRANSFORMER</code> from the selection list.  <strong>Note if there is already a replacement plan template for an asset class, a new one cannot be created</strong></li>
+<li>In the open field, type <code>Sample replacement plan template for Substation Transformer</code></li>
+<li>Select <code>Replacement</code> for <code>Plan type</code>. </li>
+<li>Enter <code>8</code> for <code>Expected downtime in hours</code>. </li>
+<li>Enter <code>50000</code> for <code>Estimated capital cost</code>. </li>
+<li>Enter <code>30000</code> for <code>Estimated operating cost</code>. </li>
+<li>Enter <code>150000</code> for <code>Estimated failure cost</code>. </li>
+<li>Enter <code>30</code> for <code>Expected life in years</code>.  </li>
+<li>Click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2058.png" /></li>
+<li>Hover over the left nav bar to expand it.  </li>
+<li>Select the <code>Assets</code> section on the left nav bar to return to the matrix view. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2029.png" /></li>
+</ol>
+<h2 id="create-investment-project">Create Investment Project</h2>
+<h3 id="assign-assets">Assign Assets</h3>
+<p>To assign a set of substation transformers to an investment project from the matrix page, filter the assets, and 
+<code>drill down</code> to the table view and add assets to a project. </p>
+<ol>
+<li>Use the pulldown, and select <code>Substation Transformers (shared)</code> from the list. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2051.png" /></li>
+<li>Select the <code>red</code> box in the matrix to show the table view of the assets. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2052.png" /></li>
+<li>From the table view, select <code>50</code> from the pulldown at the bottom of the table. </li>
+<li>Select the <code>box</code> at the top of the page to select all of the assets on the table. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2053.png" /></li>
+<li>Select <code>Create investment project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2054.png" /></li>
+</ol>
+<h3 id="create-a-project">Create a Project</h3>
+<p>Complete the form on the <code>Create a project page</code>.</p>
+<ol>
+<li>In the open field, type <code>ST Demo Project</code>. </li>
+<li>In the Summary field, type <code>Demo project for Substation Transformers</code>. </li>
+<li>Enter <code>25</code> for <code>Duration in years</code>. </li>
+<li>Select <code>2Q</code> for <code>Target start quarter</code>. </li>
+<li>Enter <code>2023</code> for <code>Target start year</code>. </li>
+<li>Click <code>Create</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2059.png" /></li>
+<li>Once the <code>ST Demo Project</code> page appears, hover over the left nav bar to expand it.</li>
+<li>Select the <code>Assets</code> section on the left nav bar to return to the matrix view to add more assets to the project. <br/>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2029.png" /></li>
+</ol>
+<h3 id="add-assets-from-the-matrix">Add Assets from the Matrix</h3>
+<p>From the matrix view, <code>drill down</code> once more to the table view and add additional assets to the project.</p>
+<ol>
+<li>Select the <code>yellow</code> box in the middle top row of the matrix to show the table view of the assets. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2060.png" /></li>
+<li>From the table view, select <code>50</code> from the pull down at the bottom of the table. </li>
+<li>Select the <code>box</code> at the top of the page to select all the assets on the table. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2061.png" /></li>
+<li>Select <code>Add to investment project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2062.png" /></li>
+</ol>
+<p>From the popup, select the ST Demo Project to add the new set of assets to the existing project.</p>
+<ol>
+<li>Select <code>ST Demo Project</code> from the set of projects. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2063.png" /></li>
+<li>Click <code>Add</code></li>
+<li>From the <code>Edit project</code> page, click <code>Save</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2064.png" /></li>
+<li>Click <code>Save</code> from the <code>Confirm save</code> popup. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2065.png" /></li>
+</ol>
+<h3 id="create-and-run-investment-strategies">Create and Run Investment Strategies</h3>
+<p>To test different investment strategies, move to the Asset investment optimizer tab to create the first strategy 
+<code>Maintain risk</code>.</p>
+<ol>
+<li>Hover over the left nav bar to expand it. </li>
+<li>Select the <code>Asset investment optimizer</code> section on the left nav bar. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2055.png" /></li>
+<li>From the <code>Projects</code> tab, click on <code>ST Demo Project</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2066.png" /></li>
+<li>Click the <code>+</code> to create the first strategy. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2067.png" /></li>
+<li>From the popup, make sure the <code>Strategy</code> selection is <code>Maintain risk</code>, the click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2068.png" /></li>
+</ol>
+<p>Once the strategy is created, run the analysis.  It may take some time to complete.  The user can leave the screen and 
+the analysis will continue to run.</p>
+<ol>
+<li>Click <code>Run analysis</code>
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2069.png" /></li>
+</ol>
+<p>Create the second investment strategy <code>Reduce risk</code> and run it.</p>
+<ol>
+<li>Click the <code>+</code> to create the second strategy. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2070.png" /></li>
+<li>From the popup, set the <code>Strategy</code> selection is <code>Reduce risk</code>. </li>
+<li>Set the <code>Target risk score</code> to <code>7</code>. </li>
+<li>Click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2071.png" /></li>
+<li>Click <code>Run Analysis</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2069.png" /></li>
+</ol>
+<p>Create the third investment strategy <code>Stay in budget</code> and run it. </p>
+<ol>
+<li>Click the <code>+</code> to create the third strategy. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2072.png" /></li>
+<li>From the popup, set the <code>Strategy</code> selection is <code>Stay in budget</code>. </li>
+<li>Set the <code>Opex</code> to <code>810000</code>. </li>
+<li>Set the <code>Capex</code> to <code>1350000</code>. </li>
+<li>Click <code>Create</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2073.png" /></li>
+<li>Click <code>Run Analysis</code>. 
+<img alt="setup_assets" src="../img/HPU_8.9/HPU%2069.png" /></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>Congratulations.  You now have completed the MAS v8.11 Health and Predict Demo setup lab and are ready to demo.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_script/" class="btn btn-neutral float-right" title="Health and Predict Overview Task Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_script/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

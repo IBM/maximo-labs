@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-manage/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Manage - MAS 9.0 Overview Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Manage";
+        var mkdocs_page_input_path = "demo-manage.md";
+        var mkdocs_page_url = "/maximo-labs/demo-manage/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS 9.0 Overview Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS 9.0 Overview Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-rsl/">1. Reliability Strategies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-monitor/">2. Monitor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mvi/">3. Visual Inspection</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Manage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#work-order-tracking">Work Order Tracking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#manage-mobile">Manage - Mobile</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#technician-that-performs-inspection-and-repair">Technician that performs inspection and repair</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#technician-uses-assist-to-find-instructions">Technician uses Assist to find instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#technician-returns-to-assigned-workorder-to-close-out-the-work">Technician returns to assigned workorder to close out the work</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mobile-assist/">5. Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-health-predict/">6. Health - Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">7. Closing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clean/">Lab Clean up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS 9.0 Overview Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Manage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="manage-lab-under-construction">Manage Lab (Under Construction)</h1>
+<p>If you created an Service Request (SR) in Monitor, it will be automatically turned into a work order (WO).  However, that automatic escalation will not include the job in the WO.</p>
+<p>For this section, you need to duplicate the template <code>WO12345</code> against <code>PMPDEVICE005</code> and <code>Approve</code>.  You may wish to change the date to make your demo more realistic.</p>
+<p><code>WO12345</code> should be in <code>canceled</code> status in the <code>Work Order Tracking</code> app.  </p>
+<h2 id="work-order-tracking">Work Order Tracking</h2>
+<p>In this exercise the supervisor plans work in Manage by duplicating and approving a work order. To find the work order:</p>
+<ol>
+<li>
+<p>Go to  <code>Work Order Tracking</code> in Manage.<br/>
+<img alt="setup assets" src="../img/Work001.png" /></p>
+</li>
+<li>
+<p>Go to <code>More search fields</code> using the vertical <code>…</code>menu.<br/>
+<img alt="setup assets" src="../img/Work002.png" /></p>
+</li>
+<li>
+<p>Clear the <code>History?</code> value, and click <code>Find</code>.<br/>
+<img alt="setup assets" src="../img/Work003.png" /></p>
+</li>
+<li>
+<p>Type <code>12345</code> in the <code>Work Order</code> field, and press enter.<br/>
+<img alt="setup assets" src="../img/Work004.png" /></p>
+</li>
+<li>
+<p>Open the work order by selecting <code>12345</code> from list.<br/>
+<img alt="setup assets" src="../img/Work005.png" />.<br/></p>
+</li>
+<li>
+<p>From the left navigation bar, select <code>Duplicate Work Order</code>.<br/>
+<img alt="setup assets" src="../img/Work006.png" /></p>
+</li>
+<li>
+<p>In the pop-up, select <code>Duplicate Work Order with its Tasks</code>, and press <code>OK</code>.<br/>
+<img alt="setup assets" src="../img/Work007.png" /></p>
+</li>
+</ol>
+<p>Your new <code>WO</code> will automatically move to <code>Approved</code> status.</p>
+<h2 id="manage-mobile">Manage - Mobile</h2>
+<h3 id="technician-that-performs-inspection-and-repair">Technician that performs inspection and repair</h3>
+<p>In this exercies you will be a Technician that performs inspection and repair using Manage, Maximo Mobile, and Assist. If you haven’t downloaded the mobile application, this can be demonstrated using a desktop and logging into Manage.  The TECHNICIAN application can be found in the Work Orders module, under the Role Based Applications sub-menu. From the browser settings select <code>MORE TOOLS</code> and <code>RESPONSIVE</code> design view or mode to have the screen appear more like a mobile device.</p>
+<p>Within Manage EAM, the newly created Service Request can be automated into a WO, tasks and labor are assigned and the status changed to approved.  It is beneficial to have records processed without human intervention to increase the throughput rates and allow those resources to work on more value-add activities.</p>
+<p>In some cases a manual review by a supervisor may occur where they can drill into related history records against the PUMP, they can also link directly to the monitor dashboard to review the details of the anomaly/alert.  Part of the evaluation may or may not give enough information to know exactly what needs to be addressed, so in this case an inspection should be performed.    The supervisor can approve the work order and assign the appropriate resource.</p>
+<ol>
+<li>
+<p>In Maximo Mobile, click <code>My Schedule</code>.  Alternatively login to Manage on the deskop and open the Technician application in the Work Orders module, Role Based Applications from the left navigation menu.</p>
+</li>
+<li>
+<p>As a technician, I can login to Maximo Mobile and from the navigation page, tap <code>My Schedule</code> to see work that has been assigned to me whether I’m in the break room, on the other side of the plant, or even offline.<br/>
+<img alt="setup assets" src="../img/Mobile001.png" style="&quot;height:400px;width:250px;" /> </p>
+</li>
+<li>
+<p>Highlight the list and map icon options in the top right.  I see a new work order assigned to me, which is presented to me in order of priority so that I am focused on the right job at any given time in my shift.    I can look at all my work in a list, or use the map view to see work nearby and perform additional tasks like route optimization so I get to the correct location in the most efficient way.   The location information can help direct me to the proper asset within the plant to perform the work order tasks.<br/><br />
+<img alt="setup assets" src="../img/Mobile002.png" style="&quot;height:400px;width:250px;" /> <br/> 
+<img alt="setup assets" src="../img/Mobile003.png" style="&quot;height:400px;width:250px;" />  </p>
+</li>
+<li>
+<p>Click the <code>Start arrow</code> in the work order that was generated from the alert in Monitor.  I open the newly assigned work order and follow the indicated touch point to <code>Start the Work</code>.  This will begin recording the time spent on these tasks.  Within Mobile the next logical action is always highlighted to help direct the user to the next step.<br/>
+<img alt="setup assets" src="../img/Mobile004.png" style="&quot;height:400px;width:250px;" /> </p>
+</li>
+<li>
+<p>Click on <code>alert-based work order</code>, show the long description of the work order which shows the URL to navigate to the originating alert in the device dashboard in Monitor.<br/>
+<img alt="setup assets" src="../img/Mobile005.png" style="&quot;height:400px;width:250px;" /> </p>
+</li>
+<li>
+<p>Within the details of the <code>WO</code> I can see additional information including links in the long description that could take me back to monitor to see details of the anomaly.<br/> 
+<img alt="setup assets" src="../img/Mobile006.png" style="&quot;height:400px;width:250px;" /> </p>
+</li>
+</ol>
+<p>Additionally, I can see an image of the Asset, and if there is a barcode or QR code available, I can validate that I am working on the right piece of equipment by using the barcode scanner.  The second icon will show the meter reading history.  I can also view Workorder history by clicking the calendar icon.  Finally the double arrows will bring me to the Asset status, whether it is UP or DOWN.</p>
+<ol>
+<li>Click out of the long description and scroll down to the image.    Describe and optionally open each icon.<br/><br />
+<img alt="setup assets" src="../img/Mobile007.png" style="&quot;height:400px;width:250px;" />  </li>
+</ol>
+<p>By following the applications guidance, I tap on the blue highlighted <code>TASK</code> icon which also shows me the number of tasks associated with this work. Now I can see and mark complete the individual steps as well as manage any individual status’s at the task level.  </p>
+<p>It’s important that as a new technician that I have clear instructions available to me to ensure I’m performing the correct steps and gathering the proper information needed to complete this work.   In Maximo Mobile, it is all about presenting the right information, in the right place, at the right time.</p>
+<ol>
+<li>Click on the <code>blue task</code> icon.   Optionally complete some of the tasks.  Return to the main work order by checking each task and hitting <code>DONE</code>.<br/>
+<img alt="setup assets" src="../img/Mobile008.png" style="&quot;height:400px;width:250px;" /> <br/>
+<img alt="setup assets" src="../img/Mobile009.png" style="&quot;height:400px;width:250px;" /> </li>
+</ol>
+<p>There could be inspection steps associated with the overall workorder, or within a specific Task.  This workorder has an inspection form associated with it.  Click the inspection icon to open the inspection steps. </p>
+<ol>
+<li>
+<p>Click the circle icon with a check box in the center to open the inspection form.</p>
+</li>
+<li>
+<p>Click <code>blue icon</code> to start the inspection process.<br/>
+<img alt="setup assets" src="../img/Mobile0010.png" style="&quot;height:400px;width:250px;" /> </p>
+</li>
+</ol>
+<p>Review the inspection questions and respond   All is normal except vibration and noise which are high indicating a problem.  Add a Temperature above 100.   Note that the temperature has a validation that has been set against it to be within a range of 0-100.   Inspection forms can also be set up with conditional questions and answers.  For example, only ask for the temperature if the vibration was high.</p>
+<ol>
+<li>Click the <code>Blue</code> Checkbox to complete the inspection.</li>
+</ol>
+<p>I was going through the possible causes of what could be causing the vibration. There is nothing in the skid that seems to be causing instability, but I suspect that the O-ring may be worn out or deteriorated.  It should be replaced, but since I am not familiar with how to do this, I use Maximo Assist to see if there is additional steps or instruction that would be useful. 
+<img alt="setup assets" src="../img/Mobile0011.png" style="&quot;height:400px;width:250px;" /> </p>
+<h3 id="technician-uses-assist-to-find-instructions">Technician uses Assist to find instructions</h3>
+<p>At the bottom of the main WO view, there is an action to <code>Launch Assist</code>.  Assist is an additional set of capabilities that are part of the Mobile entitlement (no additional appoints are required).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assist is not available through the web browser, only on the mobile device.</p>
+</div>
+<ol>
+<li>From the Mobile navigator you can click <code>Assist</code> to open the search page where I<br/>  <br />
+<img alt="setup assets" src="../img/Assist001.png" style="&quot;height:400px;width:250px;" /> </li>
+</ol>
+<p>Also, optionally from the <code>Mobile navigator</code> you can click <code>Assist</code> to open the search page where you can launch Assist.<br/>
+<img alt="setup assets" src="../img/Mobile001.png" style="&quot;height:400px;width:250px;" />  </p>
+<ol>
+<li>Select the <code>Contact Expert</code> option in the top right – type replace O-ring in the search field for (What do you need advice about?)  It seems like the O-ring will not come off easily, and I don’t want to risk damaging it.   I could use some additional instructions to perform the fix so I choose to contact a remote expert for assistance.<br/>
+<img alt="setup assets" src="../img/Assist009.png" style="&quot;height:400px;width:250px;" /> </li>
+</ol>
+<p>Here I can see the online experts organized by area of expertise, and can also see the experts with top skill matches based on the work context.  I see someone in the pump group is online so I initiate a collaboration request with them using the blue touchpoint.  Soon, I receive a notification that they accepted the request and I initiate the session and can now use my mobile devices camera to show them what I see.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is where your second device will come into play.</p>
+</div>
+<ol>
+<li>
+<p>Click <code>Pump Expert</code>. <br/>
+<img alt="setup assets" src="../img/Assist0010.png" style="&quot;height:400px;width:250px;" />  </p>
+</li>
+<li>
+<p>Click <code>Right arrow</code> on <code>Pump Expert</code> tab. <br/>
+<img alt="setup assets" src="../img/Assist0011.png" style="&quot;height:400px;width:250px;" />  <br/>
+<img alt="setup assets" src="../img/Assist0012.jpg" style="&quot;height:400px;width:250px;" />  <br/></p>
+</li>
+<li>
+<p>Select <code>Pump Group</code> to accept the request.<br/>
+<img alt="setup assets" src="../img/Assist0013.png" style="&quot;height:400px;width:250px;" />  </p>
+</li>
+<li>
+<p>Select <code>START</code> to accept the request.<br/>
+<img alt="setup assets" src="../img/Assist0014.png" style="&quot;height:400px;width:250px;" />  </p>
+</li>
+<li>
+<p>Turn <code>audio off</code> on both devices so it doesn’t interfere.  In this scenario we do not require audio but there are options to use voice or if we’re in a noisy environment we can use text to communicate.<br/><br />
+<img alt="setup assets" src="../img/Assist0015.png" style="&quot;height:400px;width:250px;" />  </p>
+</li>
+<li>
+<p>Select <code>blue</code> button on the bottom right corner - Technician adds annotation - <code>this is stuck</code> (red arrow is only pointing to annotation just made, not a part of Assist)</p>
+</li>
+<li>
+<p>As I show my phone, the expert on their side views a stream of video and images in a gallery and can select on one of them to provide what actions I should take.   I’m going to indicate where exactly I’m stuck so the expert can provide some guidance.    The expert can either enter pointed annotations or sketch on the screen directly using Augmented Reality.   There are also options with the annotations to mark them as a safety hazard so that the technician is careful as they perform the recommended action.
+<img alt="setup assets" src="../img/Assist0016.jpg" style="&quot;height:400px;width:250px;" />  <br/> <br/>
+<img alt="setup assets" src="../img/Assist0017.jpg" style="&quot;height:400px;width:250px;" />  <br/> <br/>
+<img alt="setup assets" src="../img/Assist0018.jpg" style="&quot;height:400px;width:250px;" />  <br/> <br/></p>
+</li>
+<li>
+<p>Expert adds any instruction <code>pry here</code>, either in chat or draw using sketch.<br/>
+<img alt="setup assets" src="../img/Assist0019.png" style="&quot;height:400px;width:250px;" />  <br/>
+<img alt="setup assets" src="../img/Assist0020.png" style="&quot;height:400px;width:250px;" />  <br/>
+<img alt="setup assets" src="../img/Assist0021.png" style="&quot;height:400px;width:250px;" />  </p>
+</li>
+<li>
+<p>This now shows up on the technicians view exactly where the expert had marked it which is the same experience they would have had if the two were next to each other.<br/>  <br />
+<img alt="setup assets" src="../img/Assist0022.jpg" /> </p>
+</li>
+<li>
+<p>Move phone away from annotations. You will notice that even when my phone is pointed in a different direction, the green arrow will direct me to the new annotation so I don't miss it.<br/> <br />
+<img alt="setup assets" src="../img/Assist0023.jpg" /></p>
+</li>
+<li>
+<p>Select the end the session icon in the top left corner, then select <code>Yes</code>. The action of providing leverage to remove the o-ring worked and I’m able to now complete the rest of the tasks involved with replacing the part.   </p>
+</li>
+<li>
+<p>I’ll end the collaboration session which will create a session summary with all of the chat transcripts and the guidance that was provided.  This now can be added to the AI knowledge base for future reference.<br/>
+<img alt="setup assets" src="../img/Assist0024.jpg" /></p>
+</li>
+</ol>
+<h3 id="technician-returns-to-assigned-workorder-to-close-out-the-work">Technician returns to assigned workorder to close out the work</h3>
+<p>Now that I have completed all the tasks for this work order, I also go ahead and add this to the comments in the work order work log that <code>Replaced O-Ring</code>   </p>
+<ol>
+<li>
+<p>Technician opens the worklog by clicking on the worklog touchpoint and type in the description.<br/>
+<img alt="setup assets" src="../img/Mobile0012.jpg" /></p>
+</li>
+<li>
+<p>Open the Clipboard icon to report work.</p>
+</li>
+<li>
+<p>Add <code>Failure Class</code>: ‘PUMPS’, <code>Problem</code>: ‘LEAK’, <code>Cause</code>: ‘SEAL LEAKING’, and <code>Remedy</code>: ‘REPLACE’</p>
+</li>
+<li>
+<p>I then need to record the failure information so that accurate data on the cause and remedy for this problem is available to support future analysis.  This information gathering is invaluable for Health and Predict as it provides rich qualitative data from the human-in-the-loop, to supplement the quantitative data coming from Monitor, to pinpoint exactly how, why, and when failures occurred. These failure codes for excessive vibration can now be used to update health and failure prediction dates later by a Reliability Engineer.<br/>
+<img alt="setup assets" src="../img/Mobile0013.png" style="&quot;height:400px;width:250px;" />  <br/><br/>
+<img alt="setup assets" src="../img/Mobile0014.png" style="&quot;height:400px;width:250px;" />  <br/></p>
+</li>
+<li>
+<p>To report work and materials used, click the 3 buttons and choose Add Items. It is also important to accurately record the materials or items that were used as part of the repair.  This will keep inventory balances accurate, and provide complete costing information against the WO/Asset.<br/><br />
+<img alt="setup assets" src="../img/Mobile0016.png" style="&quot;height:400px;width:250px;" />  <br/> </p>
+</li>
+<li>
+<p>Add <code>+</code> to the <code>Materials</code> section the seal that were used, qty 1.  I need to record the part that was used during the work and add that I used material <code>SEAL</code> to the WO actuals.<br/>
+<img alt="setup assets" src="../img/Mobile0017.jpg" style="&quot;height:400px;width:250px;" />  <br/>   </p>
+</li>
+<li>
+<p>Click the <code>+</code> next to <code>Eli</code> to report the hours and type of work performed.  The time that was spent doing the work is also a component of overall cost and effort against this repair.  It is Important to have a clear record of the amount of time spent, and for some organizations this is used as part of payroll activities.  It’s also used to more accurately define the job tasks and may lead to adjustments when comparing plans to actuals.<br/>
+<img alt="setup assets" src="../img/Mobile0018.png" style="&quot;height:400px;width:250px;" />  <br/>   </p>
+</li>
+<li>
+<p>Select the <code>Work Type</code>. There is the ability to categorize the work time as either <code>Travel Time</code>, <code>waiting on Materials</code> or <code>Actual work time</code>.<br/>
+<img alt="setup assets" src="../img/Mobile0019.png" style="&quot;height:400px;width:250px;" />  <br/> <br/>
+<img alt="setup assets" src="../img/Mobile0020.png" style="&quot;height:400px;width:250px;" />  <br/> </p>
+</li>
+<li>
+<p>Add time and click <code>OK</code>.  I want to also record the time it took to execute the steps of the WO and complete the WO. This data will help future planners and schedulers to estimate how long work like this typically takes, and more efficiently plan and assign these types of jobs. And I also add the unplanned parts and materials I used.<br/>
+<img alt="setup assets" src="../img/Mobile0021.png" style="&quot;height:400px;width:250px;" /> <br/>
+<img alt="setup assets" src="../img/Mobile0022.png" style="&quot;height:400px;width:250px;" />  <br/></p>
+</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p><a name="summary"></a></p>
+<p>As the technician, maintaining the distribution and water treatment assets or other critical infrastructure assets, I can access the information I need before during and after performing work. I can get additional information and assistance do the work allowing me to complete work order in a single trip. </p>
+<p>MAS Mobile capabilities: It can Be Deployed On Premises Or in Any Cloud Environment with Flexible Options and can work online or offline.  IBM Maximo Mobile stands out for integrating remote AI-based expert assistance and real-time data from wearables and sensors, enhancing the digital twin experience. Its single-downloadable application across various platforms ensures quick deployment and seamless navigation, optimizing operational productivity even in disconnected modes.</p>
+<p>In the next lab the reliability engineer will do further analysis since the technician is only tasked with working on specific assets in their care whereas the reliability engineer is looking across all sites/pumps.</p>
+<p><b>TRANSITION:</b> I will now hand it over to the reliability engineer to do some further analysis since the technician is only tasked with working on specific assets in their care whereas the reliability engineer is looking across all sites/pumps.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo-mvi/" class="btn btn-neutral float-left" title="3. Visual Inspection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo-mobile-assist/" class="btn btn-neutral float-right" title="5. Mobile">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo-mvi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo-mobile-assist/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/prepare_pi/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Prepare Rasperry Pi - Monitor Live Demo Asset Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Prepare Rasperry Pi";
+        var mkdocs_page_input_path = "prepare_pi.md";
+        var mkdocs_page_url = "/maximo-labs/prepare_pi/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Live Demo Asset Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Live Demo Asset Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to this lab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_guide/">RPE User Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../create_devices/">1. Create Monitor devices</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Prepare Rasperry Pi</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-download-and-install-raspberry-pi-os-on-an-sd-card">1. Download and install Raspberry Pi OS on an SD Card</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-get-the-raspberry-pi-up-and-running-using-the-raspberry-pi-os-desktop">2. Get the Raspberry Pi up and running using the Raspberry Pi OS desktop</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#or-">– OR -</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-get-the-raspberry-pi-up-and-running-headless-using-the-terminal">3. Get the Raspberry Pi up and running headless using the terminal</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-update-and-upgrade-the-pi">4. Update and upgrade the Pi</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-a-few-additional-steps">5. A few additional steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../convert_pi/">3. Convert Pi to RPE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../verify_rpe/">4. Verify RPE is working</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Live Demo Asset Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Prepare Rasperry Pi</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to prepare the Raspbery Pi with a SenseHAT.</p>
+<p>In this task, you will download Raspberry Pi OS from raspberry.org and install it on an SD Card. 
+Further install a load test package and configure Node-RED to automatically start on boot.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you already have a Pi with a SenseHat running with the latest OS version then jump to step 4.</p>
+</div>
+<h2 id="1-download-and-install-raspberry-pi-os-on-an-sd-card">1. Download and install Raspberry Pi OS on an SD Card</h2>
+<p><strong>a.</strong> Go to <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a> and download the Raspberry Pi Imager:</br>
+<img alt="PI Software - Download" src="../img/prepare_pi_01.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For IBM’ers: Either you need to follow the Portable Storage Approval Process to get an exception so you can write to your IBM machine USB port</br>
+<a href="https://ciso-approvals.w3bmix.ibm.com/portable-storage-home.html">https://ciso-approvals.w3bmix.ibm.com/portable-storage-home.html</a></br>
+or you’ll need to find a non-IBM machine to perform this task.</p>
+</div>
+<p><strong>b.</strong> Install and start the Rapberry Pi Imager:</br>
+<img alt="PI Software - Start" src="../img/prepare_pi_02.png" /></p>
+<p><strong>c.</strong> Chose the Raspberry Pi Device type:</br>
+<img alt="PI Software - Select device type" src="../img/prepare_pi_03.png" /></p>
+<p><strong>d.</strong> Choose the Recommended OS:</br>
+<img alt="PI Software - Select OS" src="../img/prepare_pi_04.png" /></p>
+<p><strong>e.</strong> Choose Storage and select the SD Card in your laptop that you want to write to:</br>
+<img alt="PI Software - Select storage" src="../img/prepare_pi_05.png" /></p>
+<p><strong>f.</strong> Click Next:</br>
+<img alt="PI Software - Select storage" src="../img/prepare_pi_06.png" /></p>
+<p><strong>g.</strong> You might want to select Edit Settings, which will be easier and will skip step 2/3 later in this exercise – at least the username and password:</br>
+<img alt="PI Software - Edit Settings" src="../img/prepare_pi_07.png" /></p>
+<p><img alt="PI Software - Edit Settings" src="../img/prepare_pi_08.png" /></p>
+<p><strong>h.</strong> Click on Save and Yes.</br>
+Click on Yes to overwrite the SD card and wait until the verification has finished.:</br>
+<img alt="PI Software - Overwrite" src="../img/prepare_pi_09.png" /></p>
+<p><strong>i.</strong> Once the SD card is ready you need to do some additional steps before inserting it into the Raspberry Pi. First copy over the following files to a local place on your laptop:</br> 
+an empty <a href="../config/ssh">SSH file</a>, <a href="../config/wpa_supplicant.conf">wpa_supplicant.conf</a> and the <a href="../config/config.txt">config.txt</a>:</br>
+<img alt="SSH and WiFi settings" src="../img/prepare_pi_10.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can prepare the wpa_supplicant.conf file with your WiFi credentials, by following the instructions here:</br>
+<a href="https://www.raspberrypi.org/documentation/configuration/wireless/headless.md" target="_blank">https://www.raspberrypi.org/documentation/configuration/wireless/headless.md</a></p>
+<p>The ssh file is empty.</p>
+</div>
+<p><strong>j.</strong> Add your WiFi credentials to the wpa_supplicant.conf file.</br>
+You might also want to change the country code if you do not live in the US.</p>
+<p><strong>k.</strong> Eject and re-insert the SD Card in the reader.</br></p>
+<p><strong>l.</strong> Copy the 3 files to the bootfs location:</br>
+<img alt="SSH and WiFi settings" src="../img/prepare_pi_11.png" /></p>
+<p><strong>m.</strong> Eject the SD card from the reader.</br></p>
+<h2 id="2-get-the-raspberry-pi-up-and-running-using-the-raspberry-pi-os-desktop">2. Get the Raspberry Pi up and running using the Raspberry Pi OS desktop</h2>
+<p><strong>a.</strong> Insert the micro SD card into the Raspberry Pi. </p>
+<p><strong>b.</strong> Connect it to a monitor and keyboard/mouse. </p>
+<p><strong>c.</strong> Power on the Pi and verify:</br>
+- the WiFi is working</br>
+- you have defined the right hostname (Terminal: hostname)</br>
+- use Raspberry Pi Configuration tool</br>
+<img alt="Pi Configuration" src="../img/prepare_pi_12.png" />
+to verify Interfaces are enabled (SSH and optionally VNC), Localisation and WLAN Country</p>
+<h2 id="or-">– OR -</h2>
+<h2 id="3-get-the-raspberry-pi-up-and-running-headless-using-the-terminal">3. Get the Raspberry Pi up and running headless using the terminal</h2>
+<p><strong>a.</strong> Insert the micro SD card into the Raspberry Pi and power it up.</br>
+You know it is up and running when the SenseHat have turned off the LEDs and the Raspberry Pi green LED is blinking slowly.</p>
+<p><strong>b.</strong> Open a terminal windows and ssh into the Pi:</br></p>
+<pre><code>ssh pi@RPE042.local
+</code></pre>
+<p>answer yes</br>
+enter the default password: raspberry (or the password you changed in step 1g)</br>
+<img alt="Pi SSH Terminal" src="../img/prepare_pi_13.png" /></p>
+<p><strong>c.</strong> [If not done already] The first thing you need to do is changing the default password using:</p>
+<pre><code>passwd
+</code></pre>
+<p><img alt="Pi SSH Terminal" src="../img/prepare_pi_14.png" /></p>
+<p><strong>d.</strong> [If not done already] Then change the hostname (raspberry) to the instance of your RPE defined in task 1, e.g. RPE042. This needs to be changed in two files:</p>
+<pre><code>sudo nano /etc/hostname
+sudo nano /etc/hosts
+</code></pre>
+<p><img alt="Pi SSH Terminal" src="../img/prepare_pi_15.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Control-o to save the file, followed by Control-x to exit from the nano editor.</p>
+</div>
+<p><strong>e.</strong> [If not done already] Change the localisation of your pi.</p>
+<pre><code>sudo raspi-config
+</code></pre>
+<p>select the following menu item: 5 Localisation Options</br>
+and define your selections in all 4 submenus</br>
+<img alt="Pi Config Terminal" src="../img/prepare_pi_16.png" /></p>
+<p><strong>f.</strong> [Optional] You might want to enable VNC under 3 Interface Options </p>
+<p><strong>g.</strong> Finish raspi-config</p>
+<p><strong>h.</strong> Reboot the Pi:</br></p>
+<pre><code>sudo reboot now
+</code></pre>
+<p>wait a while until the Raspberry green LED have had some longer ON’s and then revert back to a few blinks once in a while.</p>
+<p><strong>i.</strong> SSH into the Pi again. Remember to use the new hostname and password:</br>
+<img alt="Pi Terminal" src="../img/prepare_pi_17.png" /></p>
+<h2 id="4-update-and-upgrade-the-pi">4. Update and upgrade the Pi</h2>
+<p>Update and upgrade the Pi by using the following commands:</p>
+<pre><code>sudo apt update
+sudo apt full-upgrade
+</code></pre>
+<p>get a cup of coffee or tea, as this might take a while.</br></p>
+<h2 id="5-a-few-additional-steps">5. A few additional steps</h2>
+<p>When the Pi is up and running you only need a few additional steps that are a pre-req for the RPE Node-RED flows to work.</p>
+<p><strong>a.</strong> SSH into the Pi if not already done so.</p>
+<p><strong>b.</strong> Install Node-RED following the steps described here:</br>
+<a href="https://nodered.org/docs/getting-started/raspberrypi" target="_blank">https://nodered.org/docs/getting-started/raspberrypi</a></br>
+However, it is advisable to add “--node20” to install Node-js V20 at the end of the install command:</br></p>
+<pre><code>bash &lt;(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) --node20
+</code></pre>
+<p>Answer y to both questions and the installation will start.</br>
+<img alt="Install Node-RED" src="../img/prepare_pi_18.png" /></p>
+<p>Press Enter to create the settings file.</br>
+Enter your <code>Username</code> and <code>Password</code>.</br>
+Press Enter to select default settings, until the settings file has been written.
+<img alt="Install Node-RED" src="../img/prepare_pi_19.png" /></p>
+<p><strong>c.</strong> Set the Pi to autostart Node-RED at every boot:</p>
+<pre><code>sudo systemctl enable nodered.service
+</code></pre>
+<p><strong>d.</strong> Install the sysbench package, which will be used to add load to the RPE at regular intervals:</p>
+<pre><code>sudo apt install sysbench
+</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Installing sysbench on the RPE is an <strong>IMPORTANT</strong> step to create load on the system regularly.</p>
+</div>
+<p><strong>e.</strong> Fetch the IP address of the RPE as you will use that later when using Node-RED:</br></p>
+<pre><code>hostname -I
+</code></pre>
+<p><img alt="Get IP Addresses" src="../img/prepare_pi_20.png" /></br>
+(Showing both IP v4 and v6 addresses)</p>
+<p><strong>f.</strong> Shutdown the RPE: </p>
+<pre><code>sudo shutdown -h now
+</code></pre>
+<p><img alt="Shutdown Pi" src="../img/prepare_pi_21.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Power off once the green LED stopped blinking.</br>
+NOW is a good time to backup you SD card to e.g. <code>&lt;date&gt;-Fresh Image.img</code></p>
+</div>
+<p><strong>g.</strong> This concludes this exercise.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_devices/" class="btn btn-neutral float-left" title="1. Create Monitor devices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../convert_pi/" class="btn btn-neutral float-right" title="3. Convert Pi to RPE">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_devices/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../convert_pi/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

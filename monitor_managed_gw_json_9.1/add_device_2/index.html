@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Saravanan Krishnamoorthy" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/add_device_2/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>5. Add Simulator-3 device - Monitor Managed Gateway Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "5. Add Simulator-3 device";
+        var mkdocs_page_input_path = "add_device_2.md";
+        var mkdocs_page_url = "/maximo-labs/add_device_2/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Managed Gateway Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Managed GW Json Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../setup_simulator/">1. Setup Simulator Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../add_device_1/">2. Add device to Device library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_gateway/">3. Create a Managed Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify data inflow</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">5. Add Simulator-3 device</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../re-deploy/">6. Deploy and view data in a dashboard</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Managed Gateway Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">5. Add Simulator-3 device</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to add a second simulator device to the Managed Gateway.</br></p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>completed the previous exercises</li>
+</ol>
+<hr />
+<p>Filter to find and select your Gateway </br>
+- select it and you should also see devices handled by your Managed Gateway:</br>
+<img alt="View your Managed Gateway" src="../img/2nd_device_01.png" /></br></br></p>
+<p>In the Managed Gateway click on <code>Add device</code>:</br>
+<a href="../img/2nd_device_02.png" target="_blank"><img alt="Add device" src="../img/2nd_device_02.png" /></a></br></p>
+<p>The <code>Use device library</code> will automatically be selected, as a Managed Gateway only supports devices from the library. Simply click on <code>Continue</code>:<br />
+<a href="../img/2nd_device_03.png"><img alt="Use device library" src="../img/2nd_device_03.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The type of gateway defines which types of devices that can be added to the gateway.</br>
+This is automatically handled by Monitor.</br></br>
+Managed Gateway: OT devices from the device library.</br>
+Standard/Privileged Gateway: IoT devices are added as custom devices.</br></p>
+</div>
+<p></br>
+It is time to add the Json simulator-3 device.</br>
+Search for <code>IBM</code> in the manufacurer drop-down and select it. Click <code>Next</code>:</br>
+<img alt="Search for IBM" src="../img/2nd_device_04.png" /></br></br></p>
+<p>Select the HTTP Device - main product, choose <code>Simulator-3</code> and click on <code>Next</code>:</br>
+<img alt="Select Simulator-3" src="../img/2nd_device_05.png" /></br></br></p>
+<p>Select the <code>http</code> protocol for endpoint:</br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The simulator is running in our local machine at http://localhost:8080 or http://127.0.0.1:8080 .</br></p>
+</div>
+<p></br>
+Now it is time to use the IP address of the simulator and  port number <code>127.0.0.1</code>, <code>8080</code>.</br>
+Click on <code>Next</code>;
+<img alt="Define IP Address" src="../img/2nd_device_06.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Context path of the URL should be added to the datapoints in the <code>endpoint</code> column during CSV upload.</br></p>
+</div>
+<p></br>
+Define the Device ID as <code>Json-over-http_Simulator-3</code>.</br>
+You can see the Product Type as Custom Device, i.e. The product type of all the custom device added to the device library.</br>
+Click on the <code>Device type</code> and you should see this:
+<img alt="Configure Device ID" src="../img/2nd_device_07.png" /></br></br></p>
+<p>You can either select the old device type or create new Device Type:</br>
+Click on the <code>XX_Json_Type</code> and click <code>Next</code>:
+<img alt="Configure Device type" src="../img/2nd_device_08.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can select your own Device Type from the drop-down list once you have created it.</br></p>
+</div>
+<p></br>
+Define the Data frequency to 30000 (30 seconds) and it will automatically be used when you select the metrics:</br>
+<img alt="Configure frequency" src="../img/2nd_device_09.png" /></br></br></p>
+<p>Select all the Metrics. Click <code>Save</code>:
+<img alt="Select data points" src="../img/2nd_device_10.png" /></p>
+<p></br>
+You will now see your 2nd device being a part of your Managed Gateway:
+<img alt="Device added" src="../img/2nd_device_11.png" /></br></br></p>
+<hr />
+<p>Congratulations you have successfully added another simulator device to your Managed Gateway.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../deploy/" class="btn btn-neutral float-left" title="4. Deploy and verify data inflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../re-deploy/" class="btn btn-neutral float-right" title="6. Deploy and view data in a dashboard">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../deploy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../re-deploy/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

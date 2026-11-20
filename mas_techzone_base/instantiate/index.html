@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/instantiate/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Instantiate a Base Image - MAS Techzone Certified Base Image Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Instantiate a Base Image";
+        var mkdocs_page_input_path = "instantiate.md";
+        var mkdocs_page_url = "/maximo-labs/instantiate/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS Techzone Certified Base Image Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS Techzone Certified Image Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Instantiate a Base Image</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prepare_for_use/">2. Prepare For Use</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../update_mas/">3. Update MAS [9.0.3 +]</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upgrade_mas/">4. Update MAS [9.0.1 & 9.0.2]</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS Techzone Certified Base Image Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Instantiate a Base Image</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Reserve an instance of a MAS Techzone Certified Base Image</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all exercises</a></li>
+</ol>
+<hr />
+<p>Login to <a href="https://techzone.ibm.com/" target="_blank">IBM Technology Zone</a> (aka TechZone) with your IBMid. </p>
+<div class="admonition note">
+<p class="admonition-title">Remember</p>
+<p>Remember that TechZone is only available for IBM Business Partner and IBM'ers with an IBMid.</p>
+</div>
+<p>Search for <code>TechZone Certified Base Images</code> and you will find this page:</br></p>
+<p><img alt="TechZone" src="../img/instantiate_01.png" /></br></br></p>
+<p>Select the <code>Pre-Installed Software</code> tab.</br>
+Scroll down untill you find the Maximo Application Suite images.</br>
+At this point in time (May 30 2025) these two exists for version 9.0.x:</br></p>
+<p><img alt="MAS Images" src="../img/instantiate_02.png" /></br></br></p>
+<p>Click on <code>OCP-V on IBM Cloud environment</code> in order to instantiate one of these. The <code>MAS V2 Core</code> image was used in this lab as that takes substantial shorter time to deploy. Click on <code>Reserve a environment</code>:</p>
+<p><img alt="Reservation Now" src="../img/instantiate_03.png" /></br></br></p>
+<p>To understand the durations for the four different purposes, click on <code>Reservation Duration Policy</code>:</br></p>
+<p><img alt="Reservation Duration Policy" src="../img/instantiate_04.png" /></br></br></p>
+<p>Demo and Pilot purposes requires an open opportunity in IBM Sales Cloud. Education and Test only require a purpose description:</br></p>
+<p><img alt="Reservation Duration Policy" src="../img/instantiate_05.png" /></br></br></p>
+<p>In this case <code>Education</code> was selected, so a purpose description is needed and the geography has to be selected. Optionally the Name can be changed as well:</br></p>
+<p><img alt="Reservation For Education" src="../img/instantiate_06.png" /></br></br></p>
+<p>Agree to IBM T&amp;C and click on Submit: </br></p>
+<p><img alt="Reservation Cluster Details" src="../img/instantiate_07.png" /></br></br></p>
+<p>You will be greeted with a Thank you. Click on <code>My reservations</code>:</br></p>
+<p><img alt="Create Reservation" src="../img/instantiate_08.png" /></br></br></p>
+<p>You might see the initial status is <code>Scheduled</code> in the TecZone <code>My reservations</code> page:</br></p>
+<p><img alt="Reservation Scheduled" src="../img/instantiate_09.png" /></br></br></p>
+<p>After a short while it will change to <code>Provisioning</code>:</p>
+<p><img alt="Reservation Provisioning" src="../img/instantiate_09-2.png" /></br></br></p>
+<p>After some time it will change to <code>Ready</code>: </br></p>
+<p><img alt="Reservation Ready" src="../img/instantiate_10.png" /></br></br></p>
+<p>In this case it only took approx. 1.5 hours to instatiate a <code>MAS V2 Core</code> image: </br></p>
+<p><img alt="Reservation Provisioning Emails" src="../img/instantiate_11.png" /></br></br></p>
+<p>Now you have an OpenShift Cluster where MAS Core is installed. </br>
+Click on the reservation and you will find the link to the OCP cluster as well as the credentials needed to login to it: </br></p>
+<p><img alt="Reservation OpenShift Login Details" src="../img/instantiate_12.png" /></br></br></p>
+<p>Click on the link to open the IBM Cloud environment. Select <code>kube:admin</code>:</br></p>
+<p><img alt="OpenShift Login" src="../img/instantiate_13.png" /></br></br></p>
+<p>Enter the credentials from the reservation page and click on <code>Log in</code>: </br></p>
+<p><img alt="OpenShift Login" src="../img/instantiate_14.png" /></br></br></p>
+<p>Navigate to the <code>Pipelines</code> tab and you should see the <code>mas-devops-deploy</code> pipeline succeeded: </br></p>
+<p><img alt="OpenShift Pipelines" src="../img/instantiate_15.png" /></br></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In case the pipeline did not succeed, try to rerun the PipelineRun. If that also fails then open the reservation and report the problem to TechZone Support:</br></br>
+<img alt="TechZone Support" src="../img/techzone_support_01.png" /></p>
+</div>
+<hr />
+<p>Congratulations you have successfully instantiated a MAS Techzone Certified Base Image.</br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../prepare_for_use/" class="btn btn-neutral float-right" title="2. Prepare For Use">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../prepare_for_use/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

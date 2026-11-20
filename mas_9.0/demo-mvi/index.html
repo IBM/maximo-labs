@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Carlos Ferreira & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/demo-mvi/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. Visual Inspection - MAS 9.0 Overview Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. Visual Inspection";
+        var mkdocs_page_input_path = "demo-mvi.md";
+        var mkdocs_page_url = "/maximo-labs/demo-mvi/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MAS 9.0 Overview Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MAS 9.0 Overview Labs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-rsl/">1. Reliability Strategies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-monitor/">2. Monitor</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3. Visual Inspection</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-dataset">Create Dataset</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#train-models">Train Models</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deploy-the-models">Deploy the models</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-rules">Setup Rules</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setup-alerts">Setup Alerts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#review-results">Review Results</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-manage/">4. Manage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-mobile-assist/">5. Mobile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../demo-health-predict/">6. Health - Predict</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../closing/">7. Closing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../clean/">Lab Clean up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MAS 9.0 Overview Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">3. Visual Inspection</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="visual-inspection">Visual Inspection</h1>
+<p>Visual Inspection Models (Asset Analyst)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Follow this process to demonstrate how the MVI models were created and used in the Monitor section above.</p>
+</div>
+<p>The sedimentation tanks need to be constantly monitored for growth of fungi or other unwanted debris. The operator uses Maximo Visual Inspection to inspect the tanks. The cameras will be posted around the tanks for 24 hours a day, saving the operator time from checking the tanks every hour.</p>
+<p>Demo:  I am an Asset Analyst at the facility and have been tasked to develop models that can identify dirty tanks. The developed models need to be highly accurate as they will be integrated into our Asset management solution using IBM Maximo.</p>
+<h2 id="create-dataset">Create Dataset</h2>
+<p>The Asset Analyst must create a dataset to aggregate images of the tank and label the data that represents dirty and clean tanks. First, we need to teach the model what it’s looking for by uploading an image dataset and label or categorize the images in the dataset.  The sample images can be found in the <a href="https://ibm.box.com/s/y5eh9l2t38fkddk856y96zfz0jc3ke0q">Box folder</a>, but the dataset has already been loaded.<br> </p>
+<ol>
+<li>Access Maximo Visual Inspection with the following <a href="https://gtmdemo.visualinspection.mviwwdemo.gtm-pat.com/#/">URL</a>
+<img alt="setup assets" src="../img/MVI00016.png" /></li>
+<li>Click on <code>Get Started</code> you should see the datasets page. In this demo, we will show you how to create a model to automatically inspect sedimentation tank cleanliness. We have pre-uploaded a dataset with images.
+<img alt="setup assets" src="../img/MVI00017.png" /></li>
+<li>Type <code>tank</code> in the search bar to filter for this dataset.</li>
+<li>Click on the <code>Tank 1 Training</code> IMAGE to open the dataset.
+<img alt="setup assets" src="../img/MVI0002.png" /></li>
+<li>Select <code>Select Files</code> then `Allv to select all images.</li>
+<li>Click <code>Label</code> then <code>Objects</code>.  This is the training dataset to teach the model to recognize <code>clean</code> vs. <code>dirty</code> tanks. There may be multiple tanks in an image so we will create an object detection model where we can label multiple objects in an image.  Images have already been labeled.
+<img alt="setup assets" src="../img/MVI0003.png" /></li>
+<li>Select a <code>clean tank</code> image from the images presented on the left.</li>
+<li>Select <code>clean</code>, select the <code>draw box</code> icon, and <code>draw a box</code> around portion of the image that denotes a <code>clean tank</code>.  This will annotate images with portions that denotes a <code>clean tank</code>. 
+<img alt="setup assets" src="../img/MVI00018.png" /></li>
+<li>Choose an image to see how to see label an object in the image.  The labels <code>clean</code> and <code>dirty</code> have already been created as seen on the right side. If there was another label needed, you would click <code>add label</code>.   </li>
+<li>Repeat labelling all the images with <code>dirty</code> and <code>clean</code> tanks
+<img alt="setup assets" src="../img/MVI0005.png" /></li>
+<li>Select <code>dirty</code>, or <code>clean</code> as needed, select <code>Box and draw</code> to draw a box around portion of the image that denotes the correct tank.</li>
+<li>Return to <code>Tank 1 Training</code> using the breadcrumbs.</li>
+<li>Select all the images and click <code>Augment Data</code>.  You have now labeled 15 images (14 clean and 7 dirty). To train deep learning models of high accuracy, a dataset should have a variety and volume of images.  MVI offers an ability to augment initial images by applying several filters.<br />
+<img alt="setup assets" src="../img/MVI0006.png" /></li>
+<li>Select filters to <code>Sharpen</code>, <code>Crop</code>, <code>Rotate</code>, <code>Vertical</code> &amp; <code>Horizontal</code>flips to generate 255 additional images. 
+<img alt="setup assets" src="../img/MVI0007.png" /></li>
+<li>You can click <code>cancel</code> and navigate to the <code>augmented dataset</code> that is already created.
+<img alt="setup assets" src="../img/MVI00022.png" /></li>
+</ol>
+<p>Image augmentation prevents overfitting your model to the few images uploaded and can increase accuracy of the model.  This feature lowers the cost of data acquisition and labelling for Asset Analysts. Please note, the annotations are also inherited on the augmented images.</p>
+<ol>
+<li>Navigate to the new dataset called <code>Tank 1 Augmented – DO NOT DELETE</code> and using the filter on objects, identify the 270 images, 252 labeled images with clean tanks and 126 images with dirty tanks.  Your dataset may appear in a different order.
+<img alt="setup assets" src="../img/MVI0008.png" /></li>
+</ol>
+<h2 id="train-models">Train Models</h2>
+<p>We are ready to train a model.
+1. Click the button labelled <code>Train Model</code>. 
+2. Select <code>Object detection</code>, make sure <code>Faster R-CNN</code> is selected. Normally you would click train model - a model is already created so show the model called <code>DO NOT DELETE: OBJECT DETECTION MODEL FOR TANKS</code>
+<img alt="setup assets" src="../img/MVI0010.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>WARNING:  If you click the button to <code>Train model</code>, it will take 30 minutes to complete the training. </p>
+</div>
+<p>MVI offers several types of models required to address a use case. There is image classification to classify the whole image, object detection models to identify an object or objects within an image, and action detection models to detect an action. For this use case, there may be multiple tanks in the frame of reference so we have will train an object detection model.  For the demo, show the pretrained model ALREADY in the demo system.</p>
+<ol>
+<li>Select <code>Models</code> from the left nav bar.
+<img alt="setup assets" src="../img/MVI0011.png" /></li>
+<li>Use the search bar to find the <code>DO NOT DELETE:  OBJECT DETECTION MODEL FOR TANKS</code> model
+<img alt="setup assets" src="../img/MVI0012.png" />
+<img alt="setup assets" src="../img/MVI0013.png" /></li>
+</ol>
+<p>As an Asset Analyst, I can view the characteristics of the trained model. Click the trained model to view model metrics like Accuracy, mAP, Precision, Recall, IoU, Loss graphs and Confusion matrix.  Validate the deployed model. </p>
+<ol>
+<li>Click the model from the deployment page.
+<img alt="setup assets" src="../img/MVI0030.png" /></li>
+<li>Select “Deployed models” from the left nav bar.
+<img alt="setup assets" src="../img/MVI0031.png" /></li>
+<li>Use the search bar to find the “DO NOT DELETE:  OBJECT DETECTION MODEL FOR TANKS” model
+<img alt="setup assets" src="../img/MVI0032.png" /></li>
+<li>Access the validation images on the <a href="https://ibm.box.com/s/ozscdc8xp6fuh7z2ndxhjunx8fk0aznh">box folder</a></li>
+<li>Download an image from the <code>clean</code> folder. 
+<img alt="setup assets" src="../img/MVI0033.png" />
+<img alt="setup assets" src="../img/MVI0034.png" /></li>
+<li>Drag and drop the image to validate. With validated model, you can build a dashboard in Maximo Monitor that will display the results of the tank inspections, from live camera feeds, as demonstrated in the Monitor section above.
+<img alt="setup assets" src="../img/MVI0035.png" />
+<img alt="setup assets" src="../img/MVI0036.png" />
+<img alt="setup assets" src="../img/MVI0037.png" /></li>
+</ol>
+<h2 id="deploy-the-models">Deploy the models</h2>
+<p>Now, I’m going to turn it over to the Asset Manager who can deploy the models to run the automated visual inspections on MVI Edge. As the Asset Inspector at the facility and have been tasked to monitor the facility for dirty tanks. I have deployed the models from the MVI training server onto MVI Edge. MVI Edge is connected to multiple cameras inspecting tanks across the facility. From the MVI Edge dashboard, I can keep track of the real-time inspections and send a service request if needed. </p>
+<h2 id="setup-rules">Setup Rules</h2>
+<ol>
+<li>Access <code>Maximo Visual Inspection Edge</code> using <a href="https://mvie811v2-visualinspection-edge.mvi-wwdemo-d0ef7f39d9cfcd50dc3b8ae064f7a945-0000.us-south.containers.appdomain.cloud/#/login">URL</a> using the log in information from your email. You will find the dashboard of all your inspections running on this <code>MVI Edge</code>.
+<img alt="setup assets" src="../img/MVIE001.png" /></li>
+<li>Click on <code>Tank 1</code></li>
+<li>Click on <code>Configuration</code>
+<img alt="setup assets" src="../img/MVIE0011.png" /></li>
+<li>The project made in the MVI training server is deployed in <code>MVI Edge</code> with the dataset and model.
+<img alt="setup assets" src="../img/MVIE002.png" /></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before giving the demo, check that there are images in the inspection results. If there are not then:</p>
+<pre><code>1. Disable inspection with the `Enabled` toggle.
+
+2. Scroll down to `edit input source`.
+
+3. Click the refresh icon next to `Processed`.
+
+4. Then go back and toggle to Enable inspection with “Disabled” toggle.
+</code></pre>
+</div>
+<ol>
+<li>Scroll down to the <code>Rules</code> section.
+<img alt="setup assets" src="../img/MVIE003.png" /></li>
+<li>Click on the icon under <code>Settings</code>.
+<img alt="setup assets" src="../img/MVIE0031.png" />
+<img alt="setup assets" src="../img/MVIE004.png" /></li>
+</ol>
+<h2 id="setup-alerts">Setup Alerts</h2>
+<p>The asset inspector can create rules based off the inference results. In this case, if the inference result is a <code>clean</code> tank with a confidence score of greater than a .8 threshold then the asset inspector can mark the inference inspection as a pass. The other rule set the inspection as a fail when the model finds a dirty tank. </p>
+<ol>
+<li>Scroll down to view the <code>Alert type</code>.  We can see that the asset inspector can send alerts via MQTT with the <code>Maximo Monitor settings</code> or via Twilio. We see here that the MQTT sent the inspection results to Maximo Monitor which we saw previously.
+<img alt="setup assets" src="../img/MVIE005.png" /></li>
+<li>Click <code>Cancel</code> to exit the pop-up. We can select our <code>input source</code>, connecting an <code>image folder</code>, <code>video</code>, or <code>camera</code>.  In our case, we are connected to an <code>image folder</code>.
+<img alt="setup assets" src="../img/MVIE0051.png" /></li>
+<li>Scroll back to the top and click on the “Images” tab to see the inspection results from the input source. </li>
+<li>Click on an image.
+<img alt="setup assets" src="../img/MVIE006.png" /></li>
+</ol>
+<h2 id="review-results">Review Results</h2>
+<p>We see here all the inference results from this input source. There is a green check mark for a pass and a red X for a failed dirty tank inspection. There may also be a yellow question mark if the model is unsure about the result. We also see the exclamation point in the triangle to indicate that the particular inspection result has been sent to Maximo Monitor via MQTT.</p>
+<ol>
+<li>Navigate back to <code>Maximo Visual Inspection</code> core using the <a href="https://gtmdemo.visualinspection.mviwwdemo.gtm-pat.com/#/">URL</a>.</li>
+<li>Select <code>Projects</code> from the left nav.
+<img alt="setup assets" src="../img/MVIE007.png" /> </li>
+<li>Click on the Sedimentation tank project called <code>World Wide Demo – DO NOT DELETE</code> 
+<img alt="setup assets" src="../img/MVIE0071.png" /> </li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>You have seen how easy it is to create AI models visual inspection using MVI projects to include the training datasets, inspection results datasets and models.  <code>MAS Visual Inspection for Business Users</code> includes tools and interfaces for anyone with limited skills in deep learning technologies.  This proven integrated technology solution scales real-time defect detection, allows alert capabilities from inspections, and optimizes manufacturing workflows, setting it apart from other products in the industry.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo-monitor/" class="btn btn-neutral float-left" title="2. Monitor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo-manage/" class="btn btn-neutral float-right" title="4. Manage">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo-monitor/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo-manage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

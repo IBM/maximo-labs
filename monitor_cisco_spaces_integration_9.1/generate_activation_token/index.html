@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Bihag Gandhi" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/generate_activation_token/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Generate activation token - Monitor Cisco Spaces Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Generate activation token";
+        var mkdocs_page_input_path = "generate_activation_token.md";
+        var mkdocs_page_url = "/maximo-labs/generate_activation_token/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Cisco Spaces Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Cisco Spaces Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_overview/">1. Cisco spaces overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Generate activation token</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#steps-to-add-the-integration-to-mas-monitor">Steps to add the Integration to MAS Monitor</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_integration/">3. Configure cisco spaces integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../locations_list/">4. Locations list overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subscribe/">5. Subscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../location_metrics/">6. Cisco spaces location metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../heatmap/">7. Generate heatmap on MREF location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe/">8. Unsubscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_delete_config/">9. Edit / Delete cisco spaces configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Cisco Spaces Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Generate activation token</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="generating-an-activation-token-in-cisco-spaces-for-mas-monitor-integration">Generating an Activation Token in Cisco Spaces for MAS Monitor Integration</h1>
+<p>This guide details the step-by-step process for generating an <strong>Activation Token</strong> in Cisco Spaces, which is required to integrate Cisco Spaces with Maximo Application Suite (MAS) Monitor.</p>
+<p>The Activation Token allows MAS Monitor to fetch building and location data from Cisco Spaces, enabling location-aware monitoring and insights.</p>
+<h2 id="steps-to-add-the-integration-to-mas-monitor">Steps to add the Integration to MAS Monitor</h2>
+<ol>
+<li>
+<p><strong>Log in to Cisco Spaces</strong><br />
+   Open <a href="https://dnaspaces.io/login">dnaspaces.io/login</a> in your browser and sign in using your Cisco Spaces credentials.</p>
+</li>
+<li>
+<p><strong>Search for the Application</strong><br />
+   After logging in, navigate to the <strong>Home</strong> page. Use the search bar to find the application. For this exercise, we will use the app named <strong>Copy_Test App_TBI (Prod)</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Search for the Application</p>
+<p>Ensure you search for the application that contains the list of buildings or locations relevant to your integration. The application should include the physical spaces / locations you intend to monitor with MAS Monitor.</p>
+</div>
+</li>
+<li>
+<p><strong>Open the Application Settings</strong><br />
+   Once you locate the app tile for <strong>Copy_Test App_TBI (Prod)</strong>, click on the <strong>gear icon</strong> located on the tile to open the application’s settings.</p>
+<p><img alt="Cisco Spaces App" src="../img/cisco_space_app.png" />  <img alt="Cisco Spaces App Gear icon" src="../img/cisco_spaces_app_gear.png" /></p>
+</li>
+<li>
+<p><strong>Generate a New Activation Key</strong><br />
+   In the new window that opens, click on the <strong>New Activation</strong> button to start the process of generating a new activation key.</p>
+<p><img alt="New Activation Button" src="../img/new_activation.png" /></p>
+</li>
+<li>
+<p><strong>Select Locations</strong><br />
+   In the <strong>New App Activation</strong> window, select the locations (buildings or areas) you want MAS Monitor to access. This selection determines which physical spaces will be integrated into MAS Monitor.</p>
+<p><img alt="Buidlings" src="../img/buildings.png" /></p>
+<p>After selecting the desired locations, click <strong>Next</strong> to proceed.</p>
+</li>
+<li>
+<p><strong>Generate the Activation Token</strong><br />
+   Review your selection. Then, click on the <strong>Generate Activation Key</strong> button. This action will create your Activation Token (JWT token), which you can use in MAS Monitor to complete the integration.</p>
+<p><img alt="Generate Activation Token" src="../img/generate_token.png" /></p>
+</li>
+<li>
+<p><strong>Copy and Store the Activation Token</strong><br />
+   Once the activation key is generated, <strong>Copy Token</strong> and keep it stored securely. You will need this token when configuring the Cisco Spaces integration within the MAS Monitor application.</p>
+<p><img alt="Activation token" src="../img/token.png" /></p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cisco_spaces_overview/" class="btn btn-neutral float-left" title="1. Cisco spaces overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cisco_spaces_integration/" class="btn btn-neutral float-right" title="3. Configure cisco spaces integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cisco_spaces_overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cisco_spaces_integration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

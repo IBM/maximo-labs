@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Triparna Kar" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/site_sync_overview/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Site Synchronization Overview - Monitor Juniper Mist Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Site Synchronization Overview";
+        var mkdocs_page_input_path = "site_sync_overview.md";
+        var mkdocs_page_url = "/maximo-labs/site_sync_overview/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Juniper Mist Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Juniper Mist Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../juniper_mist_overview/">1. Juniper Mist Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configure_mist_integration/">2. Configure Juniper Mist Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_integration/">3. Edit Juniper Mist Integration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Site Synchronization Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#configuration-sync-sites-buildings-floors">Configuration &amp; Sync – Sites, Buildings &amp; Floors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connection-status-indicators">Connection Status Indicators</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#navigating-synchronized-sites-buildings-and-floors">Navigating Synchronized Sites, Buildings, and Floors</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-mist-site-list">1. Mist Site List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-building-details">2. Building Details</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-floor-details">3. Floor Details</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../assign_manage_locations/">5. Assign Maximo Manage Locations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subscribe_locations/">6. Subscribe Juniper Mist Locations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ap_device_types/">7. Access Points & Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../occupancy_presence_metrics/">8. Occupancy & Presence Metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe_unassign/">9. Unsubscribe & Unassign Workflows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_integration/">10. Delete Juniper Mist Integration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Juniper Mist Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Site Synchronization Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will explore the synchronized Juniper Mist Sites, Buildings, and Floors, and understand the connection status indicators.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>Completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+<li>Completed the previous exercises</li>
+</ol>
+<hr />
+<h2 id="configuration-sync-sites-buildings-floors">Configuration &amp; Sync – Sites, Buildings &amp; Floors</h2>
+<p>Once the Maximo–Juniper Mist configuration is successfully completed, IBM MAS Monitor establishes a connection with the configured Juniper Mist organization.</p>
+<p>To access the site synchronization page:</p>
+<ol>
+<li>Navigate to the <strong>Integrations</strong> list page in IBM MAS Monitor.</li>
+<li>Locate your Juniper Mist integration entry in the list.</li>
+<li>Click the <strong>Configure site synchronization</strong> link in the corresponding row.</li>
+</ol>
+<p><img alt="Integrations list – Configure site synchronization" src="../img/config_Site_Sync.png" /></p>
+<ul>
+<li>The system internally triggers a scheduler to fetch and synchronize Juniper Mist hierarchy (Site, Building, Floor) from the configured organization.</li>
+<li>The Mist hierarchy synchronization may take some time after the configuration is completed, so the Site/Building/Floor  may not appear immediately.</li>
+</ul>
+<p><img alt="Site Synchronization" src="../img/site_Syncronization.png" /></p>
+<h2 id="connection-status-indicators">Connection Status Indicators</h2>
+<p>At the top of the Juniper Mist Site Synchronization page, check the connection status:</p>
+<ul>
+<li>
+<p><strong>Connected to Juniper Mist</strong>: Indicates that a successful connection has been established with Juniper Mist and site data can be retrieved.</p>
+<p><img alt="Connected to Juniper Mist" height="80%" src="../img/connected_mist.png" width="70%" /></p>
+</li>
+<li>
+<p><strong>Not Connected to Juniper Mist</strong>: Indicates that the Mist instance is currently unreachable or the connection could not be established.</p>
+<p><img alt="Not Connected to Juniper Mist" src="../img/not_Connector_Mist.png" width="70%" /></p>
+</li>
+</ul>
+<h2 id="navigating-synchronized-sites-buildings-and-floors">Navigating Synchronized Sites, Buildings, and Floors</h2>
+<p>The screen displays all Mist sites synchronized from the configured Mist organization, along with their buildings and floors.</p>
+<h3 id="1-mist-site-list">1. Mist Site List</h3>
+<p>Displays all sites retrieved from Juniper Mist, including the Site Name, Mapped Location status, and Subscription Status.</p>
+<p><img alt="Mist Site List" src="../img/site_List.png" /></p>
+<h3 id="2-building-details">2. Building Details</h3>
+<ul>
+<li>Click the <strong>Juniper Mist Site</strong> link from the Mist Site List page.</li>
+<li>The system redirects to the <strong>Building and Floor Details</strong> page for the selected Mist Site.</li>
+<li>The screen displays all Mist Buildings in the <strong>Building details</strong> tab associated with the selected Mist Site, along with their current mapping status.</li>
+</ul>
+<p><img alt="Building Details" src="../img/building_Details.png" /></p>
+<h3 id="3-floor-details">3. Floor Details</h3>
+<ul>
+<li>The Floor Details page can be accessed from the <strong>Floors</strong> tab on the Site Details page, displaying all floors associated with the site and building.</li>
+<li>Alternatively, floor details can be accessed from the Building Details page by clicking the <strong>Building Name</strong> link in the Building Details 
+table.</li>
+<li>The screen displays all Mist Floors, along with their current Mapped location and Subscribe Status.</li>
+</ul>
+<p><img alt="Floor Details" src="../img/floor_Details.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../edit_integration/" class="btn btn-neutral float-left" title="3. Edit Juniper Mist Integration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../assign_manage_locations/" class="btn btn-neutral float-right" title="5. Assign Maximo Manage Locations">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../edit_integration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../assign_manage_locations/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

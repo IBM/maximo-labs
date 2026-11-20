@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Triparna Kar" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/configure_mist_integration/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Configure Juniper Mist Integration - Monitor Juniper Mist Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Configure Juniper Mist Integration";
+        var mkdocs_page_input_path = "configure_mist_integration.md";
+        var mkdocs_page_url = "/maximo-labs/configure_mist_integration/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Juniper Mist Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Juniper Mist Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../juniper_mist_overview/">1. Juniper Mist Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Configure Juniper Mist Integration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#steps-to-configure-the-integration">Steps to Configure the Integration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-configure-juniper-mist-access">Step 1: Configure Juniper Mist Access</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-configure-business-unit-optional">Step 2: Configure Business Unit (Optional)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-configure-business-unit-lookup-api-optional">Step 3: Configure Business Unit Lookup API (Optional)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#verify-integration">Verify Integration</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_integration/">3. Edit Juniper Mist Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../site_sync_overview/">4. Site Synchronization Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../assign_manage_locations/">5. Assign Maximo Manage Locations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subscribe_locations/">6. Subscribe Juniper Mist Locations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ap_device_types/">7. Access Points & Device Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../occupancy_presence_metrics/">8. Occupancy & Presence Metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe_unassign/">9. Unsubscribe & Unassign Workflows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_integration/">10. Delete Juniper Mist Integration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Juniper Mist Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Configure Juniper Mist Integration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to configure the Juniper Mist integration in IBM MAS Monitor, upload Business Unit mapping configurations, and set up the dynamic Business Unit Lookup API.</p>
+<h2 id="steps-to-configure-the-integration">Steps to Configure the Integration</h2>
+<ol>
+<li>
+<p><strong>Log in to IBM MAS Monitor</strong><br />
+   Access your MAS Monitor environment by logging in with your credentials in Maximo Application Suite.</p>
+<p><img alt="Monitor App" height="50%" src="../img/monitor_app.png" width="70%" /></p>
+</li>
+<li>
+<p><strong>Navigate to Integrations</strong><br />
+   Open the left-side navigation menu. Scroll to the <strong>Monitor applications list</strong> and select <strong>Setup → Integrations</strong> from the menu options.</p>
+<p><img alt="Integration Menu" height="10%" src="../img/integration.png" width="20%" /></p>
+</li>
+<li>
+<p><strong>Add a New Integration</strong><br />
+   On the Integrations screen, click the <strong>Add Integration</strong> button to start configuring a new integration.</p>
+<p><img alt="Add Integration" src="../img/add_Integration.png" /></p>
+</li>
+<li>
+<p><strong>Select Juniper Mist as the Integration Type</strong><br />
+   From the <strong>Integration Type</strong> list, select <strong>Juniper Mist</strong> and click <strong>Next</strong>.</p>
+<p><img alt="Add Integration" src="../img/juniper_mist_int.png" /></p>
+</li>
+</ol>
+<h2 id="step-1-configure-juniper-mist-access">Step 1: Configure Juniper Mist Access</h2>
+<p>In this step, provide the required Juniper Mist connection details:</p>
+<ul>
+<li><strong>Integration Name</strong>: Specify a unique name for the integration.</li>
+<li><strong>API URL</strong>: Enter your Juniper Mist cloud URL (for example, <code>https://api.mist.com</code>).</li>
+<li><strong>API Token / Secret</strong>: Enter the API access token obtained from your Juniper Mist organization.</li>
+<li><strong>Organization ID</strong>: Enter the organization UUID from your Juniper Mist account.</li>
+</ul>
+<p>Click <strong>Next</strong> to proceed.  </p>
+<p><img alt="Add Integration" src="../img/mist_access_config.png" /></p>
+<p>These details are used to establish connectivity between Juniper Mist and IBM MAS Monitor.  </p>
+<h2 id="step-2-configure-business-unit-optional">Step 2: Configure Business Unit (Optional)</h2>
+<p>The <strong>Configure Business Unit</strong> step is used to upload the Business Unit (BU) mapping configuration file.</p>
+<ul>
+<li>A <strong>sample configuration file</strong> is available for download and reference.</li>
+<li>The uploaded file is used to resolve users to their respective Business Units.</li>
+<li>After uploading the file, the system displays the Business Units parsed from the configuration, allowing administrators to:<ul>
+<li>Review the Business Unit mappings</li>
+<li>Validate the uploaded configuration  </li>
+</ul>
+</li>
+</ul>
+<p>Click <strong>Next</strong> to proceed.</p>
+<p><img alt="Configure BU" src="../img/config_BU.png" /></p>
+<p>This is an <strong>optional step</strong>, and users can skip it if not needed.</p>
+<h2 id="step-3-configure-business-unit-lookup-api-optional">Step 3: Configure Business Unit Lookup API (Optional)</h2>
+<p>The <strong>Configure Business Unit Lookup API</strong> step allows administrators to configure the API details required to resolve user identities to Business Units dynamically at runtime:</p>
+<ul>
+<li><strong>BU Lookup API Endpoint</strong>: Enter the endpoint URL for user identity resolution.</li>
+<li><strong>Authentication Details</strong>: Provide required authentication credentials (API key, bearer token, etc.).</li>
+</ul>
+<p>These settings enable IBM MAS Monitor to dynamically determine the appropriate Business Unit for users during runtime.  </p>
+<p>Click <strong>Finish</strong> to complete the integration configuration.</p>
+<p><img alt="Configure LookUp API" src="../img/config_Lookup_API.png" /></p>
+<p>This is an <strong>optional step</strong>, and users can skip it.</p>
+<h2 id="verify-integration">Verify Integration</h2>
+<p>Once the integration is added successfully, its details will appear on the <strong>Integrations list</strong> page.</p>
+<p><img alt="Verify Integration" src="../img/verify_integration.png" /></p>
+<p>Congratulations, you have successfully configured the Juniper Mist Integration in Maximo Monitor.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../juniper_mist_overview/" class="btn btn-neutral float-left" title="1. Juniper Mist Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../edit_integration/" class="btn btn-neutral float-right" title="3. Edit Juniper Mist Integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../juniper_mist_overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../edit_integration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

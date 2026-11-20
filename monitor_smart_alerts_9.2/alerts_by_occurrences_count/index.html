@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Radhika Surani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/alerts_by_occurrences_count/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. AlertsByOccurrencesCount - Monitor Smart Alerts</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. AlertsByOccurrencesCount";
+        var mkdocs_page_input_path = "alerts_by_occurrences_count.md";
+        var mkdocs_page_url = "/maximo-labs/alerts_by_occurrences_count/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Smart Alerts
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Custom Function</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../nodata_alerts/">1. Nodata Alert</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. AlertsByOccurrencesCount</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-an-alertbyoccurrencescount">What is an AlertByOccurrencesCount?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#goals">Goals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#execution-modes-supported">Execution Modes Supported</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#occurrence-mode">Occurrence Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#occurrence-detection">Occurrence Detection:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuration-parameters">Configuration Parameters</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ui-configuration">UI Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration-steps">Configuration Steps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-configure-alertsbyoccurrencescount">Step 1: Configure AlertsByOccurrencesCount</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-configure-alert-parameters">Step 2: Configure Alert Parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-timeline">Example Timeline</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#occurrences-mode">Occurrences Mode:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-rising_edge">1. RISING_EDGE:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-every_type_evaluation">2. EVERY_TYPE_EVALUATION:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#execution-modes">Execution Modes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comparison-sliding-vs-tumbling">Comparison: Sliding vs Tumbling</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#when-to-use-each-mode">When to Use Each Mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#backtrack-support">Backtrack Support</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#use-case-1-resolving-alerts-after-data-correction">Use Case 1: Resolving Alerts After Data Correction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-it-works">How It Works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-data-value-correction">Example: Data Value Correction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#use-case-2-creating-alerts-after-adding-missing-events">Use Case 2: Creating Alerts After Adding Missing Events</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-adding-missing-events">Example: Adding Missing Events</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits">Benefits</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_alert_in_manage/">3. Create Alert In Manage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Smart Alerts</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. AlertsByOccurrencesCount</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="alertsbyoccurrencescount">AlertsByOccurrencesCount</h1>
+<h2 id="objective">Objective</h2>
+<p>In this exercise, you will configure an AlertByOccurrencesCount to detect when a condition becomes true <strong>N times within a time window T</strong>. This frequency-based alert converts intermittent noise into meaningful pattern alerts.</p>
+<hr />
+<h2 id="what-is-an-alertbyoccurrencescount">What is an AlertByOccurrencesCount?</h2>
+<p>An <strong>AlertByOccurrencesCount</strong> triggers when a defined condition becomes true at least <strong>N times</strong> within a sliding or tumbling window <strong>T</strong>. This is the foundational frequency alert that detects recurring spikes or events.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li><strong>Convert Noise to Patterns</strong>: Transform intermittent events into meaningful alerts</li>
+<li><strong>Reduce False Positives</strong>: Filter out one-off anomalies</li>
+<li><strong>Detect Recurring Issues</strong>: Identify persistent problems requiring attention</li>
+</ul>
+<hr />
+<h4 id="execution-modes-supported">Execution Modes Supported</h4>
+<ul>
+<li><strong>Sliding window</strong></li>
+<li><strong>Tumbling window</strong></li>
+</ul>
+<hr />
+<h4 id="occurrence-mode">Occurrence Mode</h4>
+<ul>
+<li><strong>RISING EDGE</strong></li>
+<li><strong>EVERY TYPE EVALUATION</strong></li>
+</ul>
+<h4 id="occurrence-detection">Occurrence Detection:</h4>
+<p>An <strong>occurrence</strong> represents a discrete event where the configured condition becomes true.</p>
+<hr />
+<h2 id="configuration-parameters">Configuration Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>condition</strong></td>
+<td>string</td>
+<td>Yes</td>
+<td>-</td>
+<td>Boolean expression (e.g., <code>df['temp'] &gt; 80</code>)</td>
+</tr>
+<tr>
+<td><strong>min_occurrence</strong>(N)</td>
+<td>int</td>
+<td>Yes</td>
+<td>-</td>
+<td>Minimum number of breaches required</td>
+</tr>
+<tr>
+<td><strong>occurrence_mode</strong></td>
+<td>string</td>
+<td>Yes</td>
+<td>-</td>
+<td><code>RISING_EDGE</code> or <code>EVERY_TYPE_EVALUATION</code></td>
+</tr>
+<tr>
+<td><strong>time_window(T)</strong></td>
+<td>int</td>
+<td>Yes</td>
+<td>-</td>
+<td>Time window in minutes/hours/days</td>
+</tr>
+<tr>
+<td><strong>window_type</strong></td>
+<td>string</td>
+<td>Yes</td>
+<td>-</td>
+<td><code>SLIDING</code> or <code>TUMBLING</code></td>
+</tr>
+<tr>
+<td><strong>cooldown</strong></td>
+<td>int</td>
+<td>No</td>
+<td>-</td>
+<td>Minimum time between consecutive alerts</td>
+</tr>
+<tr>
+<td><strong>cooldown_unit</strong></td>
+<td>String</td>
+<td>No</td>
+<td>Minute</td>
+<td>Cooldown Unit in minutes/hours/days</td>
+</tr>
+</tbody>
+</table>
+<p></br></br></p>
+<h3 id="ui-configuration">UI Configuration</h3>
+<p><img alt="n_occurrences" src="../img/alert_by_occurrences_count.png" />
+<img alt="n_occurrences" src="../img/alert_by_occurrences_count_2.png" /></br></br></p>
+<h3 id="configuration-steps">Configuration Steps</h3>
+<h3 id="step-1-configure-alertsbyoccurrencescount">Step 1: Configure AlertsByOccurrencesCount</h3>
+<ol>
+<li>Navigate to device type from left menu</li>
+<li>Select your device type and click <strong>Edit</strong></li>
+<li>Navigate to the <strong>Calculated Metrics</strong> tab</li>
+<li>Click <strong>Create Calculated Metric</strong></li>
+<li>Select <strong>AlertByOccurrencesCount</strong> from the KPI catalog</li>
+</ol>
+<h3 id="step-2-configure-alert-parameters">Step 2: Configure Alert Parameters</h3>
+<p><strong>Expression:</strong></p>
+<pre><code class="language-python"># Temperature threshold
+df['temp'] &gt; 80
+
+# Multiple conditions
+(df['temp'] &gt; 80) &amp; (df['humidity'] &gt; 70)
+</code></pre>
+<p><strong>Occurrence Mode:</strong></br></p>
+<ul>
+<li><strong>RISING_EDGE</strong>: Record an occurrence only when the condition transitions from <code>false → true</code>.</br></li>
+<li><strong>EVERY_EVALUATION</strong>: Record every occurrences.</li>
+</ul>
+<p><strong>Threshold(min_occurrences) (N):</strong></p>
+<pre><code>Example: 5 occurrences
+</code></pre>
+<ul>
+<li>Higher N = fewer false positives, slower detection</li>
+<li>Lower N = faster detection, more sensitive</li>
+</ul>
+<p><strong>Time Window (T):</strong></p>
+<pre><code>Example: 10 minutes
+</code></pre>
+<ul>
+<li>Duration for counting occurrences within the evaluation window</li>
+</ul>
+<p><strong>Window Type:</strong></p>
+<ul>
+<li><strong>Sliding Window:</strong> </br>
+   Continuous evaluation </br>
+   More responsive </br>
+   Better for real-time monitoring </br>
+</br></li>
+<li><strong>Tumbling Window:</strong>  </br>
+   Fixed intervals  </br>
+   Better for reporting  </br>
+   Clearer time boundaries  </br></li>
+</ul>
+<p><strong>Cooldown Period:</strong></p>
+<pre><code>Example: 15 minutes
+</code></pre>
+<ul>
+<li>Prevents alert fatigue</li>
+<li>Allows time for corrective action</li>
+</ul>
+<p><strong>Alert Actions:</strong></p>
+<ol>
+<li>select alert severity (Critical, High, Medium, Low)</li>
+<li>select alert creation status(New, Resolved, Acknowledge, validated) </li>
+<li>select create alert in manage(True, False)</li>
+</ol>
+<hr />
+<h2 id="example-timeline">Example Timeline</h2>
+<h3 id="occurrences-mode">Occurrences Mode:</h3>
+<h4 id="1-rising_edge">1. RISING_EDGE:</h4>
+<p>Record an occurrence <strong>only</strong> when the condition transitions from <code>false → true</code>.</p>
+<p><strong>Behavior:</strong>
+- If condition stays <code>true</code> across multiple data points, do <strong>not</strong> count additional occurrences
+- A new occurrence is recorded only after condition becomes <code>false</code> and then <code>true</code> again</p>
+<p><strong>Example:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t1</td>
+<td>false</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t2</td>
+<td>true</td>
+<td>✅</td>
+<td>First transition: false → true</td>
+</tr>
+<tr>
+<td>t3</td>
+<td>true</td>
+<td></td>
+<td>Still true, no new occurrence</td>
+</tr>
+<tr>
+<td>t4</td>
+<td>false</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t5</td>
+<td>true</td>
+<td>✅</td>
+<td>Second transition: false → true</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-every_type_evaluation">2. EVERY_TYPE_EVALUATION:</h4>
+<p>At each event in the batch, if the condition is <code>true</code>, count as an occurrence.</p>
+<p><strong>Example:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t1</td>
+<td>false</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t2</td>
+<td>true</td>
+<td>✅</td>
+<td>Condition is true</td>
+</tr>
+<tr>
+<td>t3</td>
+<td>true</td>
+<td>✅</td>
+<td>Condition is true</td>
+</tr>
+<tr>
+<td>t4</td>
+<td>false</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>t5</td>
+<td>true</td>
+<td>✅</td>
+<td>Condition is true</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="execution-modes">Execution Modes</h3>
+<p><strong>Sliding Window:</strong>
+- Continuously evaluates occurrences within a moving time window
+- Window moves with each batch run
+- More responsive to recent events</p>
+<p><strong>Example:</strong></p>
+<p><strong>Configuration:</strong> </br>
+- Condition: <code>temp &gt; 80</code> </br>
+- N = 3 occurrences </br>
+- T = 10 minutes (window size) </br>
+- Mode: EVERY_TYPE_EVALUATION </br></p>
+<p><strong>Example Timeline:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Window (10 min)</th>
+<th>Count</th>
+<th>Alert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>75</td>
+<td>false</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>12:02</td>
+<td>85</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>11:52-12:02</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>12:04</td>
+<td>78</td>
+<td>false</td>
+<td></td>
+<td>11:54-12:04</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>12:06</td>
+<td>88</td>
+<td>true</td>
+<td>✅ #2</td>
+<td>11:56-12:06</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>12:08</td>
+<td>72</td>
+<td>false</td>
+<td></td>
+<td>11:58-12:08</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>12:10</td>
+<td>90</td>
+<td>true</td>
+<td>✅ #3</td>
+<td>12:00-12:10</td>
+<td>3</td>
+<td>🚨 <strong>Alert</strong> (Count resets to 0)</td>
+</tr>
+<tr>
+<td>12:12</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>12:02-12:12</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>12:14</td>
+<td>86</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>12:04-12:14</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>12:16</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>12:06-12:16</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>12:18</td>
+<td>89</td>
+<td>true</td>
+<td>✅ #2</td>
+<td>12:08-12:18</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>12:20</td>
+<td>91</td>
+<td>true</td>
+<td>✅ #3</td>
+<td>12:10-12:20</td>
+<td>3</td>
+<td>🚨 <strong>Alert</strong> (Count resets to 0)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Characteristics:</strong>
+- Window continuously slides forward </br>
+- At 12:10: Window is 12:00-12:10, contains 3 occurrences → Alert fires, <strong>count resets to 0</strong></br>
+- At 12:12: Window is 12:02-12:12, count is 0 (reset after alert)</br>
+- At 12:14: New occurrence #1 detected, count = 1</br>
+- At 12:20: Window is 12:10-12:20, contains 3 new occurrences → Alert fires, <strong>count resets to 0</strong></br>
+- After each alert, occurrence count clears and starts from 0</br>
+- More responsive to recent patterns</br></p>
+<p><strong>Tumbling Window:</strong>
+- Fixed, non-overlapping time windows
+- Better for reporting-like use cases
+- Resets at window boundaries</p>
+<p><strong>Example:</strong></p>
+<p><strong>Configuration:</strong>
+- Condition: <code>temp &gt; 80</code>
+- N = 3 occurrences
+- T = 10 minutes (window size)
+- Mode: RISING_EDGE</p>
+<p><strong>Example Timeline:</strong></p>
+<p><strong>Window 1: 12:00-12:10</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Count in Window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>75</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>12:02</td>
+<td>85</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:04</td>
+<td>78</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:06</td>
+<td>88</td>
+<td>true</td>
+<td>✅ #2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:08</td>
+<td>72</td>
+<td>false</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:10</td>
+<td>90</td>
+<td>true</td>
+<td>✅ #3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> Window closes at 12:10 with 3 occurrences → 🚨 <strong>Alert Fired</strong></p>
+<hr />
+<p><strong>Window 2: 12:10-12:20</strong> (New window starts, count resets)</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Count in Window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:12</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>12:14</td>
+<td>86</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:16</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:18</td>
+<td>89</td>
+<td>true</td>
+<td>✅ #2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:20</td>
+<td>84</td>
+<td>true</td>
+<td></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The temperature exceeded 80 at 12:20, this occurrence was not counted because the window type is rising edge. Only transitions where the condition changes from <strong>false → true</strong> are considered valid events</p>
+</div>
+<p><strong>Result:</strong> Window closes at 12:20 with 2 occurrences → ❌ <strong>No Alert</strong> (&lt; 3)</p>
+<hr />
+<p><strong>Window 3: 12:20-12:30</strong> (New window starts, count resets)</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Count in Window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:22</td>
+<td>87</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:24</td>
+<td>78</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:26</td>
+<td>91</td>
+<td>true</td>
+<td>✅ #2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:28</td>
+<td>75</td>
+<td>false</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:30</td>
+<td>88</td>
+<td>true</td>
+<td>✅ #3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> Window closes at 12:30 with 3 occurrences → 🚨 <strong>Alert Fired</strong></p>
+<p><strong>Key Characteristics:</strong></br>
+- Fixed, non-overlapping windows</br>
+- Count resets at window boundaries</br>
+- Occurrences from previous windows don't carry over</br>
+- Better for periodic reporting</br>
+- Clearer time boundaries</br>
+- Less frequent alerts compared to sliding window</br></p>
+<hr />
+<h3 id="comparison-sliding-vs-tumbling">Comparison: Sliding vs Tumbling</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Sliding Window</th>
+<th>Tumbling Window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Window Movement</strong></td>
+<td>Continuous, moves with each evaluation</td>
+<td>Fixed intervals, resets at boundaries</td>
+</tr>
+<tr>
+<td><strong>Occurrence Carryover</strong></td>
+<td>Yes, occurrences can span multiple evaluations</td>
+<td>No, count resets each window</td>
+</tr>
+<tr>
+<td><strong>Responsiveness</strong></td>
+<td>High, detects patterns quickly</td>
+<td>Lower, waits for window to close</td>
+</tr>
+<tr>
+<td><strong>Alert Frequency</strong></td>
+<td>Can be higher</td>
+<td>Typically lower</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Real-time monitoring, immediate detection</td>
+<td>Periodic reporting, scheduled analysis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-use-each-mode">When to Use Each Mode</h3>
+<p><strong>Use Sliding Window When:</strong>
+- You need immediate detection of recurring issues
+- Real-time monitoring is critical
+- Pattern detection should be continuous
+- Example: Detecting repeated API failures, monitoring critical sensors</p>
+<p><strong>Use Tumbling Window When:</strong>
+- You need periodic summaries or reports
+- Clear time boundaries are important
+- You want to avoid alert overlap
+- Example: Hourly quality checks, daily performance reports, shift-based monitoring</p>
+<hr />
+<h2 id="backtrack-support">Backtrack Support</h2>
+<p>AlertsByOccurrencesCount supports backtracking to handle historical data scenarios, including data corrections and retroactive alert resolution.</p>
+<h3 id="use-case-1-resolving-alerts-after-data-correction">Use Case 1: Resolving Alerts After Data Correction</h3>
+<p><strong>Scenario:</strong></br>
+1. Sensor sends incorrect high values, triggering an alert</br>
+2. AlertsByOccurrencesCount fires (Status: <strong>New</strong>)</br>
+3. Corrected data is uploaded via CSV file upload</br>
+4. Pipeline runs in backtrack mode</br>
+5. Alert status automatically updates from <strong>New</strong> to <strong>Resolved</strong></br></p>
+<h3 id="how-it-works">How It Works</h3>
+<p>When you upload corrected historical data:</p>
+<ol>
+<li><strong>Upload Corrected Data</strong>: Use CSV file upload to replace incorrect values</li>
+<li><strong>Run Pipeline in Backtrack</strong>: Execute the pipeline in backtrack mode for the affected time range</li>
+<li><strong>Re-evaluation</strong>: The system re-evaluates the condition with corrected data</li>
+<li><strong>Alert Status Update</strong>: If occurrences no longer meet threshold N, alert status changes to <strong>Resolved</strong></li>
+</ol>
+<h3 id="example-data-value-correction">Example: Data Value Correction</h3>
+<p><strong>Configuration:</strong>
+- Condition: <code>temp &gt; 80</code>
+- N = 3 occurrences
+- T = 10 minutes
+- Mode: RISING_EDGE</p>
+<p><strong>Original Data (Incorrect):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Original temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>75</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>12:02</td>
+<td>95</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:04</td>
+<td>92</td>
+<td>true</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:06</td>
+<td>88</td>
+<td>true</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:08</td>
+<td>78</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:10</td>
+<td>91</td>
+<td>true</td>
+<td>✅ #2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:12</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:14</td>
+<td>89</td>
+<td>true</td>
+<td>✅ #3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> Alert fires at 12:14 (Status: <strong>New</strong>)</p>
+<hr />
+<p><strong>Corrected Data (After CSV Upload):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Corrected temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>75</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>12:02</td>
+<td>85</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:04</td>
+<td>76</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:06</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:08</td>
+<td>78</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:10</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:12</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:14</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> After backtrack, count = 1 (&lt; N=3), Alert status changes to <strong>Resolved</strong></p>
+<hr />
+<h3 id="use-case-2-creating-alerts-after-adding-missing-events">Use Case 2: Creating Alerts After Adding Missing Events</h3>
+<p><strong>Scenario:</strong> </br>
+1. Some sensor readings were not captured initially </br>
+2. No alert was triggered </br>
+3. Missing events are added via CSV file upload </br>
+4. Pipeline runs in backtrack mode </br>
+5. New alert is created (Status: <strong>New</strong>) </br></p>
+<h3 id="example-adding-missing-events">Example: Adding Missing Events</h3>
+<p><strong>Original Data (Incomplete):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>75</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>12:10</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>12:20</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> No alert (insufficient data points)</p>
+<hr />
+<p><strong>After Adding Missing Events:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>temp</th>
+<th>Condition</th>
+<th>Occurrence</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00</td>
+<td>75</td>
+<td>false</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>12:02</td>
+<td>85</td>
+<td>true</td>
+<td>✅ #1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:04</td>
+<td>78</td>
+<td>false</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>12:06</td>
+<td>88</td>
+<td>true</td>
+<td>✅ #2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:08</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>12:10</td>
+<td>90</td>
+<td>true</td>
+<td>✅ #3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>12:12</td>
+<td>77</td>
+<td>false</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>12:14</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>12:16</td>
+<td>78</td>
+<td>false</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>12:18</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>12:20</td>
+<td>79</td>
+<td>false</td>
+<td></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> After backtrack, count = 3 (≥ N), <strong>New alert created</strong> at 12:10</p>
+<hr />
+<h3 id="benefits">Benefits</h3>
+<ul>
+<li><strong>Data Integrity</strong>: Alerts reflect accurate data after corrections</li>
+<li><strong>Retroactive Analysis</strong>: Historical patterns are correctly identified</li>
+<li><strong>Automatic Management</strong>: No manual alert closure needed</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>You have learned:</p>
+<p>✅ occurrence-based alert concepts<br />
+✅ Configure condition expressions and occurrence modes<br />
+✅ Set appropriate N, T, and cooldown parameters<br />
+✅ Handle sliding window evaluations<br />
+✅ Handle Tumbling window evaluations<br />
+✅ Understand post-alert reset events counts<br />
+✅ Support backtrack scenarios  </p>
+<hr />
+<h2 id="next-steps">Next Steps</h2>
+<p>Proceed to <a href="../create_alert_in_manage/">Exercise 3: Create Alert in Manage</a>.</p>
+<hr />
+<p><strong>Congratulations!</strong> You have successfully configured AlertsByOccurrencesCount for frequency-based monitoring.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../nodata_alerts/" class="btn btn-neutral float-left" title="1. Nodata Alert"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_alert_in_manage/" class="btn btn-neutral float-right" title="3. Create Alert In Manage">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../nodata_alerts/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_alert_in_manage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

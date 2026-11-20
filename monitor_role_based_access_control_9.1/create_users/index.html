@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jvaneel Dwivedi" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/create_users/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Create Users and Assign Groups - Monitor Role Based Access Control Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Create Users and Assign Groups";
+        var mkdocs_page_input_path = "create_users.md";
+        var mkdocs_page_url = "/maximo-labs/create_users/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Role Based Access Control Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor RBAC Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../create_security_groups/">1. Create Security Groups</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Create Users and Assign Groups</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-navigate-to-user-management">Step 1: Navigate to User Management</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-create-a-new-user">Step 2: Create a New User</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-assign-security-groups">Step 3: Assign Security Groups</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-user-assignments">Example User Assignments</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_access_behavior/">3. User Login and Access Behavior</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Role Based Access Control Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Create Users and Assign Groups</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this exercise, you will learn how to:</p>
+<ul>
+<li>Create users in Monitor</li>
+<li>Assign users to appropriate Security Groups</li>
+<li>Understand the effect of multiple group assignments</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This exercise assumes that you have:</p>
+<ol>
+<li>Completed the steps in <a href="../create_security_groups/">Creating Security Groups</a>  </li>
+<li>Admin access to Maximo Monitor</li>
+</ol>
+<hr />
+<p>Users in Monitor must be assigned to one or more Security Groups to determine their access rights. The combination of these groups defines what features the user can see and interact with.</p>
+<hr />
+<h3 id="step-1-navigate-to-user-management">Step 1: Navigate to User Management</h3>
+<ol>
+<li>Login to Monitor with an Admin user</li>
+<li>Go to <strong>Suite → Security → Users</strong></li>
+</ol>
+<p><img alt="User Management Navigation" src="../img/create_users_01.png" /></br></p>
+<hr />
+<h3 id="step-2-create-a-new-user">Step 2: Create a New User</h3>
+<ol>
+<li>Click <strong>Create User</strong></li>
+</ol>
+<p><img alt="Create New User" src="../img/create_users_02.png" /></br></p>
+<ol>
+<li>
+<p>Fill in the required fields: <strong>User ID</strong>,  <strong>Name</strong>, <strong>Primary email</strong>
+   <img alt="Create New User" src="../img/create_users_04.png" /></br></p>
+</li>
+<li>
+<p><strong>Password</strong> Select Custom Password to create password of your choice.</br>
+   <img alt="Create New User" src="../img/create_users_05.png" /></br></p>
+</li>
+<li>
+<p>Click <strong>Create &amp; Continue to access</strong> to proceed to Security Group assignment </br></p>
+</li>
+</ol>
+<p><img alt="Create New User" src="../img/create_users_06.png" /></br></p>
+<hr />
+<h3 id="step-3-assign-security-groups">Step 3: Assign Security Groups</h3>
+<ol>
+<li>In the "Authorize User" section, and Click on Selects groups:</br></li>
+</ol>
+<p><img alt="Create New User" src="../img/create_users_07.png" /></br></p>
+<p><img alt="Create New User" src="../img/create_users_08.png" /></br></p>
+<ul>
+<li>For a <strong>readonly user</strong>, choose:  <ul>
+<li><code>MONITOR_READ_ONLY</code>  </li>
+<li><code>MAXADMIN</code> <em>(to view the pages getting data from Manage)</em></li>
+</ul>
+</li>
+<li>For a <strong>normal user</strong>, choose:  <ul>
+<li><code>MONITOR_USERS</code>  </li>
+<li><code>MAXADMIN</code> <em>(to view the pages getting data from Manage)</em></li>
+</ul>
+</li>
+<li>
+<p>For a <strong>full admin</strong>, choose:  </p>
+<ul>
+<li><code>MONITOR_ADMIN</code></li>
+<li><code>MAXADMIN</code> <em>(to view the pages getting data from Manage)</em></li>
+</ul>
+</li>
+<li>
+<p>Search for DEMO_MONITO_USERS (Having Access Similar to MONITOR_USERS) security group greated in the previous section and tick the selection </br></p>
+</li>
+</ul>
+<p><img alt="Create New User" src="../img/create_users_09.png" /></br></p>
+<ul>
+<li>
+<p>Search for MAXADMIN security Group to enable the user to get the data from Manage and Tick the Selection </br>
+<img alt="Create New User" src="../img/create_users_10.png" /></br></p>
+</li>
+<li>
+<p>Click <strong>Save &amp; exit</strong></p>
+</li>
+</ul>
+<p><img alt="Create New User" src="../img/create_users_11.png" /></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Users can be assigned <strong>multiple groups</strong>. Permissions from all assigned groups are combined automatically.</p>
+</div>
+<hr />
+<h3 id="example-user-assignments">Example User Assignments</h3>
+<table>
+<thead>
+<tr>
+<th>Username</th>
+<th>Security Groups Assigned</th>
+<th>Effective Permissions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>readonly_user</code></td>
+<td>MONITOR_READ_ONLY, MAXADMIN</td>
+<td>View-only Dashboard, no setup access</td>
+</tr>
+<tr>
+<td><code>normal_user</code></td>
+<td>MONITOR_USERS, MAXADMIN</td>
+<td>Full Dashboard CRUD, no setup access</td>
+</tr>
+<tr>
+<td><code>admin_user</code></td>
+<td>MONITOR_ADMIN, MAXADMIN</td>
+<td>Full access to Dashboard and Setup</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Congratulations!<br />
+You’ve successfully created users and mapped them to appropriate Security Groups. Continue to the next step to <a href="../user_access_behavior/">Verify User Access Behavior</a></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../create_security_groups/" class="btn btn-neutral float-left" title="1. Create Security Groups"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../user_access_behavior/" class="btn btn-neutral float-right" title="3. User Login and Access Behavior">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../create_security_groups/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../user_access_behavior/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

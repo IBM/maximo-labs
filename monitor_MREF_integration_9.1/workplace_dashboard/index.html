@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Kajal Lalwani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/workplace_dashboard/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Workplace Analytics dashboards - Monitor Maximo Real Estate and Facilities</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Workplace Analytics dashboards";
+        var mkdocs_page_input_path = "workplace_dashboard.md";
+        var mkdocs_page_url = "/maximo-labs/workplace_dashboard/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Maximo Real Estate and Facilities
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor MREF</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prerequisite/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../configure_MREF/">1. Configure Maximo Real Estate and facilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mref_buildings/">2. Maximo Real Estate and facilities Buildings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mref_location_details/">3. Maximo Real Estate and facilities Location Details</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Workplace Analytics dashboards</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#building-dashboard">Building Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#floor-dashboard">Floor Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#space-dashboard">Space Dashboard</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cleanup/">5. Clean Up</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Maximo Real Estate and Facilities</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Workplace Analytics dashboards</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will understand Maximo Real Estate and Facilities workplace analytics dashboard details.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prerequisite/">all labs</a></li>
+</ol>
+<hr />
+<p>Maximo Real Estate and Facilities Dashboard are available in monitor under Dashboard menu - Hierarchies &amp; Locations section. ​</p>
+<p>In the Hierarchy Dashboard, you will be able to view the dashboard for an expanding hierarchy that you previously configured when you enabled syncing for that building.</p>
+<p><img alt="Dashboard Side Menu" src="../img/dashboard_menu_1.png" /> 
+</br></p>
+<p>In the Location Dashboard, you can search for a specific location by name to view its dashboard details.</p>
+<p><img alt="Dashboard Side Menu" src="../img/dashboard_menu_2.png" /></p>
+<p>The following data is available in the Workplace Analytics dashboard:</p>
+<p><strong>Occupancy rate</strong> </br>
+How occupied a space is compared to the capacity of the space, expressed as a percentage. The following equation is used to calculate occupancy rate:</br></p>
+<pre><code>[aggregated peak daily occupancy count / capacity of the space] * 100
+</code></pre>
+<p><strong>Frequency rate</strong></br>
+The average time the space is occupied compared with the hours of space availability, expressed as a percentage. The following equation is used to calculate frequency rate:</br></p>
+<pre><code>space occupied / space availability x 100
+</code></pre>
+<p><strong>Occupancy count</strong></br>
+Total number of occupants present.</p>
+<p><strong>Guest count</strong></br>
+The number of unknown people on the wifi network.</p>
+<p><strong>Allocated workpoints</strong></br>
+The number of workpoints that are allocated to either a building, floor, or organization.</p>
+<p><strong>Total workpoints</strong></br>
+The total possible number of workpoints.</p>
+<p>A<strong>llocated workpoint capacity</strong></br>
+The total capacity for the allocated workpoints. This value is determined by the total allocated occupants of a space where workpoint is TRUE.</p>
+<p><strong>Total workpoint capacity</strong></br>
+The total capacity for the workpoints. This value is determined by the all occupants of a space where workpoint is TRUE.</p>
+<p><strong>Average days occupied per week</strong></br>
+Average number of days per week the workpoint is occupied. The following equation is used to calculate average days occupied per week:</p>
+<pre><code>(days occupied) / (working days) * working days per week
+</code></pre>
+<p><strong>Average hours occupied per day</strong></br>
+The average number of hours a space is occupied per day.</p>
+<p><strong>Space capacity</strong></br>
+The capacity of each space as defined in the Maximo Real Estate and Facilities space record.</p>
+<p>You can also access summaries of the data, such as by floor, space, or organization. You can access a heat map that summarizes the data for Maximo Monitor devices or your Cisco Webex devices.</p>
+<p>Next, we will see th dashboard details for Buildings, Floor and Space</p>
+<h2 id="building-dashboard">Building Dashboard</h2>
+<p>Here you can see building dashboard cards which contains Occupancy count/rate, Frequency Rate, Building Timezone, Room Summary, Floor Summary, Daily averages, WorkPoint Summary, Business unit summary and Space class summary. Additionally you can apply filter time rage to see dashboard data.</p>
+<p><img alt="Building Dashboard" src="../img/building_dashboard_1.png" /> </p>
+<p><img alt="Building Dashboard" src="../img/building_dashboard_2.png" /> </p>
+<p>You can also edit or delete dashboard from setting icon.</p>
+<p><img alt="Building Dashboard" src="../img/Edit_dashboard.png" /> </p>
+<p>On the Edit Dashboard page, you can modify individual cards content by updating the following elements:</p>
+<ul>
+<li>Title: Change the card's title to a name that suits your needs.</li>
+<li>Description: Edit the card's description to provide more context.</li>
+<li>Size: Adjust the card's size to fit your dashboard layout.</li>
+<li>Data Items: Update the data items associated with the card.</li>
+<li>Time Range: Change the time range for the card's data.</li>
+<li>JSON Editor: Edit the card's JSON configuration.</li>
+</ul>
+<p>Additionally, you can also Add New Cards with custom configurations tailored to your specific requirements.</p>
+<p><img alt="Building Dashboard" src="../img/edit_dashboard_2.png" /> </p>
+<h2 id="floor-dashboard">Floor Dashboard</h2>
+<p>Here you can see floor dashboard cards which contains floor plan, Occupancy count/rate, Frequency Rate, Room Summary, Hourly Occupancy Count graph,Number of Work points, Number of Work points Space Class summary, Individual space summary and Business unit summary</p>
+<p>Below is a floor plan image retrieved from the configured Tririga instance. The image features an overlay with colored highlights, which represent the following space metrics:</p>
+<ul>
+<li>Occupancy Count/Rate: The number of people occupying each space.</li>
+<li>Frequency Rate: How often each space is used.</li>
+<li>Duration: The length of time each space is occupied.</li>
+</ul>
+<p>The colored overlay indicates which spaces are currently occupied on the floor plan.</p>
+<p><img alt="Floor Dashboard" src="../img/floor_plan.png" /> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Tririga floor plan space overlay or heatmap appears only when the floor plan SVG contains an element with the id attribute set to either triSpaceLayer or triSubSpaceLayer in the floor dashboard.</p>
+</div>
+<p></br></p>
+<p><img alt="Floor Dashboard" src="../img/floor_dashboard_1.png" /> </p>
+<p></br>
+<img alt="Floor Dashboard" src="../img/floor_dashboard_2.png" /> </p>
+<h2 id="space-dashboard">Space Dashboard</h2>
+<p>Here you can see space dashboard cards which contains Space Class, Space Capacity, Occupancy Count, Is Work point, Frequency Rate, Duration by Day graph.
+</br></p>
+<p><img alt="Space Dashboard" src="../img/Space_dashboard_1.png" /> </p>
+<p></br></p>
+<p><img alt="Space Dashboard" src="../img/Space_dashboard_2.png" /> </p>
+<hr />
+<p>Congratulations, you have successfully covered the understanding of MREF location dashboard details.</br></br></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mref_location_details/" class="btn btn-neutral float-left" title="3. Maximo Real Estate and facilities Location Details"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cleanup/" class="btn btn-neutral float-right" title="5. Clean Up">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mref_location_details/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cleanup/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

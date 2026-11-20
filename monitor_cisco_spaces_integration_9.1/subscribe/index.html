@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Bihag Gandhi" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/subscribe/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>5. Subscribe cisco space location - Monitor Cisco Spaces Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "5. Subscribe cisco space location";
+        var mkdocs_page_input_path = "subscribe.md";
+        var mkdocs_page_url = "/maximo-labs/subscribe/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Cisco Spaces Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Cisco Spaces Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_overview/">1. Cisco spaces overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../generate_activation_token/">2. Generate activation token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_integration/">3. Configure cisco spaces integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../locations_list/">4. Locations list overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">5. Subscribe cisco space location</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-open-the-actions-menu">Step 1: Open the Actions Menu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-click-on-subscribe">Step 2: Click on Subscribe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-confirm-subscription">Step 3: Confirm Subscription</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-view-updated-actions">Step 4: View Updated Actions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-5-edit-offset-and-measurement">Step 5: Edit Offset and Measurement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-6-verify">Step 6: Verify</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../location_metrics/">6. Cisco spaces location metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../heatmap/">7. Generate heatmap on MREF location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe/">8. Unsubscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_delete_config/">9. Edit / Delete cisco spaces configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Cisco Spaces Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">5. Subscribe cisco space location</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="subscribe-to-cisco-spaces-location">Subscribe to Cisco Spaces Location</h1>
+<p>In this guide, we will walk through the process of subscribing a Cisco Spaces location in IBM MAS Monitor. Subscribing a location links the Cisco Spaces location with an MREF floor, allowing MAS Monitor to begin tracking and visualizing user presence , user movement and other metrics for that area.</p>
+<hr />
+<h2 id="step-1-open-the-actions-menu">Step 1: Open the Actions Menu</h2>
+<p>Navigate to the list of Cisco Spaces locations in MAS Monitor.</p>
+<ul>
+<li>On the rightmost side of the location entry, click the <strong>ellipsis (⋮)</strong> button to open the actions menu.</li>
+<li>You will see an option labeled <strong>Subscribe</strong>.</li>
+</ul>
+<p><img alt="Ellipsis Subscribe Option" src="../img/subscribe_button.png" /></p>
+<hr />
+<h2 id="step-2-click-on-subscribe">Step 2: Click on Subscribe</h2>
+<ul>
+<li>Click the <strong>Subscribe</strong> button from the menu.</li>
+<li>A popup will appear asking you to associate the Cisco Spaces location with a corresponding <strong>MREF building floor</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cisco Spaces locations <strong>must always</strong> be subscribed with an <strong>MREF Building Floor</strong>.  </p>
+</div>
+<p><img alt="Subscribe Popup" src="../img/locations_popup.png" /></p>
+<p><img alt="MREF location" src="../img/mref_location_selected.png" /></p>
+<hr />
+<h2 id="step-3-confirm-subscription">Step 3: Confirm Subscription</h2>
+<p>Once the location is successfully subscribed:</p>
+<ul>
+<li>The <strong>Status</strong> column will change from <code>Unsubscribed</code> to <code>Subscribed</code>.</li>
+<li>The <strong>Floor Name</strong> column will be populated with the name of the floor the location is mapped to.</li>
+<li>The floor name is a <strong>clickable link</strong> that navigates directly to the <strong>Locations</strong> page within MAS Monitor.</li>
+</ul>
+<p><img alt="Subscribed Status" src="../img/subscribed.png" /></p>
+<hr />
+<h2 id="step-4-view-updated-actions">Step 4: View Updated Actions</h2>
+<p>Now that the location is subscribed, clicking the <strong>ellipsis (⋮)</strong> menu will show two new options:</p>
+<ul>
+<li><strong>Unsubscribe</strong></li>
+<li><strong>Edit Offset and Measurement</strong></li>
+</ul>
+<p>These actions allow further control over the location mapping and coordinate adjustment.</p>
+<p><img alt="Edit" src="../img/edit.png" /></p>
+<hr />
+<h2 id="step-5-edit-offset-and-measurement">Step 5: Edit Offset and Measurement</h2>
+<p>Selecting <strong>Edit Offset and Measurement</strong> opens a dialog box where you can:</p>
+<ul>
+<li>Set <strong>X-Offset</strong> and <strong>Y-Offset</strong> values to coordinate the alignment of the location on the floor map.</li>
+<li>Choose the <strong>Unit of Measurement</strong>, which can be either:</li>
+<li><strong>Inches</strong></li>
+<li><strong>Millimeters</strong></li>
+</ul>
+<p>These offsets will be reflected as <strong>dimensions</strong> in the location data.</p>
+<p><img alt="Edit Offset" src="../img/edit_offset_measurement.png" /></p>
+<p><img alt="Edited Offset" src="../img/edited_offset_measurement.png" /></p>
+<p><img alt="Edited Offset" src="../img/edited.png" /></p>
+<hr />
+<h2 id="step-6-verify">Step 6: Verify</h2>
+<ul>
+<li>Once your edits are saved, the <strong>X/Y Offset</strong> values will be displayed in the corresponding columns of the location table.</li>
+<li>The <strong>Unit of Measurement</strong> will also be updated accordingly.</li>
+</ul>
+<p><img alt="Final Table View Placeholder" src="../img/final_table.png" /></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../locations_list/" class="btn btn-neutral float-left" title="4. Locations list overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../location_metrics/" class="btn btn-neutral float-right" title="6. Cisco spaces location metrics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../locations_list/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../location_metrics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

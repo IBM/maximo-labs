@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Maximo Labs Team" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/fallback%20hierarchy/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>1. Understanding the Edge Data Collector fallback hierarchy - Monitor Managed Gateway Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "1. Understanding the Edge Data Collector fallback hierarchy";
+        var mkdocs_page_input_path = "fallback hierarchy.md";
+        var mkdocs_page_url = "/maximo-labs/fallback%20hierarchy/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Managed Gateway Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Managed GW Fallback</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">1. Understanding the Edge Data Collector fallback hierarchy</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-managed-gateway-fallback-system-overview">1. Managed Gateway Fallback System Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-configuration-scenarios">2. Configuration Scenarios</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-1-monitor-with-iot-installed">Scenario 1: Monitor with IoT Installed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-2-monitor-with-cos-installed">Scenario 2: Monitor with COS Installed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-3-monitor-with-pv-installed">Scenario 3: Monitor with PV Installed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scenario-4-monitor-with-iot-installed">Scenario 4: Monitor with IoT Installed</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-fallback-hierarchy">3. Fallback Hierarchy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#level-1-mqtt-iot-platform">Level 1: MQTT (IoT Platform)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#level-2-csv-files-local-storage">Level 2: CSV Files (Local Storage)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#level-3-cos-cloud-object-storage">Level 3: COS (Cloud Object Storage)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#level-4-pv-persistent-volume">Level 4: PV (Persistent Volume)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#level-5-primary-retry-mechanism">Level 5: Primary Retry Mechanism</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-complete-fallback-flow">4. Complete Fallback Flow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-setting-up-managed-gateway-fallback-system">5. Setting up Managed Gateway Fallback System</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MQTT%20connection%20failure/">2. MQTT Connection failure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../COS%20connection%20failure/">3. COS connection failure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PV%20Fallback%20and%20Primary%20Publisher%20Recovery/">4  PV Fallback and Primary Publisher Recovery</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Managed Gateway Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">1. Understanding the Edge Data Collector fallback hierarchy</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how the  Managed Gateway fallback system works and understand the fallback publishing hierarchy in Maximo Monitor 9.2.</p>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<p>completed the pre-requisites required for <a href="../prereqs/">all labs</a></p>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">New in MAS 9.2</p>
+<p>Maximo Monitor 9.2 introduces a multi-level fallback publishing architecture in Managed Gateway. This system provides continuous data availability by automatically switching between real-time publishing and storage methods during connectivity failures.</p>
+</div>
+<h2 id="1-managed-gateway-fallback-system-overview">1.  Managed Gateway Fallback System Overview</h2>
+<p>The Edge Data Collector fallback system ensures reliable data collection and prevents data loss during network outages, connection failures, or downstream service unavailability.</p>
+<p>The system automatically detects publishing failures and moves through a predefined fallback hierarchy. Each fallback level provides additional redundancy and ensures collected device data remains available.</p>
+<p>The fallback system provides:</p>
+<ul>
+<li>Real-time telemetry publishing</li>
+<li>Local data persistence</li>
+<li>Cloud-based backup storage</li>
+<li>Long-term data durability</li>
+<li>Automatic recovery and retry mechanism</li>
+</ul>
+<hr />
+<h2 id="2-configuration-scenarios">2. Configuration Scenarios</h2>
+<p>The Edge Data Collector fallback system supports different configuration scenarios based on the configured publishing destinations.</p>
+<p>Each scenario defines the primary publisher, fallback path, and retry behavior.</p>
+<hr />
+<h4 id="scenario-1-monitor-with-iot-installed">Scenario 1: Monitor with IoT Installed</h4>
+<p>Primary publisher is MQTT, with COS and PV serving as fallback options.</p>
+<p>In this configuration, MQTT is the primary publisher and delivers real-time data to the IoT platform.
+If MQTT connectivity fails, the system falls back to local CSV storage. Data is then uploaded to Cloud Object Storage as a secondary publisher. If Cloud Object Storage also becomes unavailable, the system transitions to Persistent Volume (PV) as the final fallback.</p>
+<hr />
+<h3 id="scenario-2-monitor-with-cos-installed">Scenario 2: Monitor with COS Installed</h3>
+<p>Primary Publisher: COS and PV as fallback</p>
+<p>In this configuration, CSV with Cloud Object Storage is the primary publishing mechanism.
+If Cloud Object Storage is unavailable, data continues to be persisted locally in CSV format and is then uploaded to Persistent Volume as the fallback destination.</p>
+<hr />
+<h3 id="scenario-3-monitor-with-pv-installed">Scenario 3: Monitor with PV Installed</h3>
+<p>Primary publisher is PV.</p>
+<p>In the PV-only configuration, data is consistently uploaded to PV, with the local CSV functionality remaining continuously enabled. As there is no alternative publishing mechanism in this setup, no supplementary fallback or retry options are provided.</p>
+<hr />
+<h3 id="scenario-4-monitor-with-iot-installed">Scenario 4: Monitor with IoT Installed</h3>
+<p>Primary publisher is MQTT, with PV serving as a fallback option.</p>
+<p>In this configuration, MQTT serves as the primary publisher. If MQTT becomes unavailable, the system stores data locally in CSV files and uses PV as the fallback destination for uploads. The system attempts to reconnect to MQTT every hour while operating in PV mode.</p>
+<hr />
+<h2 id="3-fallback-hierarchy">3. Fallback Hierarchy</h2>
+<p>The fallback system operates in a hierarchical structure with multiple redundancy levels.</p>
+<p>The system contains five fallback levels</p>
+<h3 id="level-1-mqtt-iot-platform">Level 1: MQTT (IoT Platform)</h3>
+<p><strong>Data Format:</strong>  JSON</p>
+<p><strong>Active Scenarios:</strong>  Primary publisher: Scenario 1 and Scenario 4</p>
+<p><strong>Purpose:</strong> When MQTT is configured as the primary publisher,Managed Gateway sends device telemetry data directly to the IoT platform.</p>
+<p>If MQTT communication encounters a failure, Manage Gateway automatically transitions to the CSV fallback.</p>
+<hr />
+<h3 id="level-2-csv-files-local-storage">Level 2: CSV Files (Local Storage)</h3>
+<p><strong>Data Format:</strong>  CSV</p>
+<p><strong>Active Scenarios:</strong>  All scenarios from 1 to 4 .</p>
+<p><strong>Purpose:</strong> Local CSV storage is always enabled. When the primary publisher is unavailable, Managed Gateway stores collected data locally to prevent data loss.</p>
+<p>Features:</p>
+<ul>
+<li>Data is stored locally during outages</li>
+<li>Temporary failures do not interrupt data collection</li>
+<li>Stored data can be processed after connection recovery</li>
+</ul>
+<hr />
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The CSV files stored inside the Docker container temporary <code>/tmp/</code> location will be lost if the Docker container is stopped.</p>
+<p>Before stopping the Edge Data Collector container, ensure that all generated CSV files are successfully uploaded to the monitor.</p>
+<p>CSV files are generated for every device type with a unique timestamp. Within 24 hours, 1440 files are stored locally. Once the network connection is established, the files are uploaded to the monitor</p>
+<p>If a Network connection is not established within this timeframe and is instead established in the 25th hour, 1 hour data will be lost</p>
+</div>
+<hr />
+<h3 id="level-3-cos-cloud-object-storage">Level 3: COS (Cloud Object Storage)</h3>
+<p><strong>Data Format:</strong>  CSV</p>
+<p><strong>Active Scenarios:</strong>  Primary Publisher: Scenario 2; Secondary Publisher: 1</p>
+<p><strong>Purpose:</strong> Cloud Object Storage provides an additional backup destination after local CSV storage.</p>
+<p>Supported storage options:</p>
+<ul>
+<li>IBM Cloud Object Storage</li>
+<li>AWS S3</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one cloud storage option can be configured at a time.</p>
+</div>
+<hr />
+<h3 id="level-4-pv-persistent-volume">Level 4: PV (Persistent Volume)</h3>
+<p><strong>Data Format:</strong>  CSV</p>
+<p><strong>Active Scenarios:</strong>  All scenarios</p>
+<p><strong>Purpose:</strong> Persistent Volume acts as the final fallback storage destination when other publishing methods are unavailable.This ensures collected data remains available during extended outages.</p>
+<hr />
+<h3 id="level-5-primary-retry-mechanism">Level 5: Primary Retry Mechanism</h3>
+<p><strong>Purpose:</strong>  Automatic reconnection to the primary publisher.</p>
+<p>The system is activated after remaining in fallback mode for a duration of one hour.The Managed Gateway automatically attempts to reconnect to the primary publishing destination.</p>
+<p>Recovery process:</p>
+<ul>
+<li>Retry is performed every 1 hour</li>
+<li>Once the primary publisher becomes available, normal data publishing resumes</li>
+<li>Stored fallback data is handled based on recovery configuration</li>
+</ul>
+<hr />
+<h2 id="4-complete-fallback-flow">4. Complete Fallback Flow</h2>
+<p>The complete fallback hierarchy works as follows:
+<img alt="" src="../img/Fallback_Overview_1.png" /></br></br>           </p>
+<hr />
+<h2 id="5-setting-up-managed-gateway-fallback-system">5. Setting up Managed Gateway Fallback System</h2>
+<p>Before testing the fallback functionality, you need to complete the common setup steps required for Managed Gateway.</p>
+<p>The following steps are required before validating the fallback behavior:</p>
+<ol>
+<li>Create a Managed Gateway</li>
+<li>Add the required device from the Device Library</li>
+<li>Configure the device and metrics</li>
+<li>Deploy the Managed Gateway configuration</li>
+<li>Verify device data flow in Maximo Monitor</li>
+</ol>
+<p>For detailed steps, refer to the following exercises:</p>
+<ul>
+<li><a href="/monitor_managed_gw_modbus_9.1/create_gateway/">How to Create Managed Gateway</a></li>
+<li><a href="/monitor_managed_gw_modbus_9.1/add_device_2/">How to Add Device from Device Library</a></li>
+</ul>
+<p>After completing the above setup, continue with the fallback system validation steps.</p>
+<hr />
+<p>Congratulations, you have successfully understood the Edge Data Collector fallback hierarchy. 🤗</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../prereqs/" class="btn btn-neutral float-left" title="Pre-Requisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../MQTT%20connection%20failure/" class="btn btn-neutral float-right" title="2. MQTT Connection failure">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../prereqs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../MQTT%20connection%20failure/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Kajal Lalwani" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/verify_data_restrictions/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>5. Verify User Data Restrictions - Monitor Resource Based Access Control Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "5. Verify User Data Restrictions";
+        var mkdocs_page_input_path = "verify_data_restrictions.md";
+        var mkdocs_page_url = "/maximo-labs/verify_data_restrictions/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Resource Based Access Control Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor RBAC Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../create_security_groups/">1. Create Security Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_users/">2. Create Users and Assign Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_restriction_update/">3. Add Data Restrictions in Security Group</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resource_restriction_scenarios/">4. Resource Restriction Scenarios</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">5. Verify User Data Restrictions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objectives">Objectives</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#understanding-data-restriction-verification">Understanding Data Restriction Verification</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-log-out-from-admin-account">Step 1: Log Out from Admin Account</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-log-in-as-restricted-user">Step 2: Log In as Restricted User</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-navigate-to-dashboard-application">Step 3: Navigate to Dashboard Application</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-verify-filtered-resources-in-dashboard">Step 4: Verify Filtered Resources in Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-5-navigate-to-setup-application">Step 5: Navigate to Setup Application</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-6-verify-filtered-resources-in-setup">Step 6: Verify Filtered Resources in Setup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-7-test-with-different-resource-types">Step 7: Test with Different Resource Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-8-verify-no-access-to-unrestricted-resources">Step 8: Verify No Access to Unrestricted Resources</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#understanding-combined-restrictions">Understanding Combined Restrictions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#issue-user-sees-all-resources-instead-of-filtered-ones">Issue: User sees all resources instead of filtered ones</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#issue-user-sees-no-resources-at-all">Issue: User sees no resources at all</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#issue-restrictions-work-in-dashboard-but-not-in-setup">Issue: Restrictions work in Dashboard but not in Setup</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#verification-checklist">Verification Checklist</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Resource Based Access Control Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">5. Verify User Data Restrictions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="verify-user-data-restrictions">Verify User Data Restrictions</h1>
+<h2 id="objectives">Objectives</h2>
+<p>In this exercise, you will learn how to:</p>
+<ul>
+<li>Test data restrictions by logging in as a restricted user</li>
+<li>Verify that only filtered resources are visible</li>
+<li>Understand how data restrictions work in practice</li>
+<li>Confirm that restrictions are applied correctly across Dashboard and Setup applications</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This exercise assumes that you have:</p>
+<ol>
+<li>Completed <a href="../create_security_groups/">Creating Security Groups</a></li>
+<li>Completed <a href="../create_users/">Creating Users and Assigning Groups</a></li>
+<li>Completed <a href="../data_restriction_update/">Add Data Restrictions in Security Group</a></li>
+<li>Reviewed <a href="../resource_restriction_scenarios/">Resource Restriction Scenarios</a></li>
+</ol>
+<hr />
+<h2 id="understanding-data-restriction-verification">Understanding Data Restriction Verification</h2>
+<p>After configuring data restrictions in Security Groups, it's important to verify that they work as expected. Users assigned to restricted security groups should only see resources that match the configured filter conditions.</p>
+<hr />
+<h2 id="step-1-log-out-from-admin-account">Step 1: Log Out from Admin Account</h2>
+<ol>
+<li>Log out from your current admin session</li>
+<li>Close the browser or use an incognito/private window for testing</li>
+</ol>
+<p><img alt="Logout" src="../img/verify_restrictions_01.png" /></br></p>
+<hr />
+<h2 id="step-2-log-in-as-restricted-user">Step 2: Log In as Restricted User</h2>
+<ol>
+<li>Open the Maximo Application Suite login page</li>
+<li>Enter the credentials for the user you created with data restrictions</li>
+<li>Example: User assigned to <code>MONITOR_DATA_RESTRICTION</code> security group</li>
+</ol>
+<p><img alt="Login as Restricted User" src="../img/verify_restrictions_02.png" /></br></p>
+<hr />
+<h2 id="step-3-navigate-to-dashboard-application">Step 3: Navigate to Dashboard Application</h2>
+<ol>
+<li>After logging in, navigate to the Monitor application</li>
+<li>Go to the Dashboard page for the resource type you restricted</li>
+<li>Example: If you added restrictions for <code>MONITOR_DB_LOCATIONS</code>, go to the Locations Dashboard</li>
+</ol>
+<p>Go to <strong>Monitor → Dashboard -&gt; Locations view</strong></p>
+<p><img alt="Navigate to Dashboard" src="../img/verify_restrictions_03.png" /></br></p>
+<hr />
+<h2 id="step-4-verify-filtered-resources-in-dashboard">Step 4: Verify Filtered Resources in Dashboard</h2>
+<ol>
+<li>Observe the list of resources displayed</li>
+<li>Verify that only resources matching your filter condition are visible</li>
+<li>Example: our condition was <code>locationsid in [1,11,130,122,14]</code>, only locations with those specific IDs should appear</li>
+</ol>
+<p><img alt="Verify Dashboard Restrictions" src="../img/verify_restrictions_04.png" /></br></p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>If you see only the filtered resources, your data restriction is working correctly in the Dashboard application!</p>
+</div>
+<hr />
+<h2 id="step-5-navigate-to-setup-application">Step 5: Navigate to Setup Application</h2>
+<ol>
+<li>Navigate to the Setup page for the same resource type</li>
+<li>Example: Go to <strong>Setup → Locations</strong></li>
+</ol>
+<p><img alt="Navigate to Setup" src="../img/verify_restrictions_05.png" /></br></p>
+<hr />
+<h2 id="step-6-verify-filtered-resources-in-setup">Step 6: Verify Filtered Resources in Setup</h2>
+<ol>
+<li>Observe the list of resources in the Setup page</li>
+<li>our condition was location="BR%", only locations starting with "BR" should appear.</li>
+<li>Verify that the Setup page should show the same restricted set of resources as filtering is applied</li>
+</ol>
+<p><img alt="Verify Setup Restrictions" src="../img/verify_restrictions_06.png" /></br></p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Data restrictions should be consistent across both Dashboard and Setup applications!</p>
+</div>
+<hr />
+<h2 id="step-7-test-with-different-resource-types">Step 7: Test with Different Resource Types</h2>
+<p>If you added restrictions for multiple resource types, test each one:</p>
+<ol>
+<li>Navigate to Assets Dashboard/Setup (if restricted)</li>
+<li>Navigate to Device Type Dashboard/Setup (if restricted)</li>
+<li>Navigate to Organizations Dashboard/Setup (if restricted)</li>
+<li>Verify that each shows only the filtered resources</li>
+</ol>
+<p><img alt="Test Multiple Resources" src="../img/verify_restrictions_07.png" /></br></p>
+<hr />
+<h2 id="step-8-verify-no-access-to-unrestricted-resources">Step 8: Verify No Access to Unrestricted Resources</h2>
+<ol>
+<li>Try to access resources that don't match your filter condition</li>
+<li>Confirm that they are not visible in the list</li>
+<li>If you try to access them directly (via URL or link), you should get an access denied message</li>
+</ol>
+<p><img alt="Access Denied" src="../img/verify_restrictions_08.png" /></br></p>
+<hr />
+<h2 id="understanding-combined-restrictions">Understanding Combined Restrictions</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a user is assigned to multiple security groups with different data restrictions:</p>
+<ul>
+<li>The restrictions are <strong>combined automatically</strong></li>
+<li>The user will have access to resources allowed by <strong>ANY</strong> of their assigned security groups</li>
+<li>This is an <strong>OR</strong> operation, not an <strong>AND</strong> operation</li>
+</ul>
+<p><strong>Example:</strong>
+- Security Group A: <code>location="BR%"</code> (locations starting with BR)
+- Security Group B: <code>location="NY%"</code> (locations starting with NY)
+- User assigned to both groups will see locations starting with <strong>BR OR NY</strong></p>
+</div>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If data restrictions are not working as expected:</p>
+<h3 id="issue-user-sees-all-resources-instead-of-filtered-ones">Issue: User sees all resources instead of filtered ones</h3>
+<p><strong>Possible Causes:</strong></p>
+<ul>
+<li>User is assigned to a security group without restrictions</li>
+<li>User has admin privileges that override restrictions</li>
+<li>Restrictions were not saved properly</li>
+<li>User sync has not completed yet (changes may take a few minutes to propagate)</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Verify the user's security group assignments</li>
+<li>Check that the security group has the correct data restrictions configured</li>
+<li>Ensure you clicked "Save &amp; exit" after adding restrictions</li>
+<li>Wait a few minutes for user sync to complete, or manually re-sync the user from the user list (Suite &gt; Access and usage &gt; Users &gt; Select user &gt; Sync user)</li>
+<li>Log out and log back in to refresh the session</li>
+</ol>
+<hr />
+<h3 id="issue-user-sees-no-resources-at-all">Issue: User sees no resources at all</h3>
+<p><strong>Possible Causes:</strong></p>
+<ul>
+<li>Filter condition doesn't match any existing resources</li>
+<li>Syntax error in the filter condition</li>
+<li>Wrong application selected for the restriction</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Verify that resources matching your filter condition exist in the system</li>
+<li>Check the filter syntax for errors</li>
+<li>Ensure the restriction is added to the correct Monitor application</li>
+</ol>
+<hr />
+<h3 id="issue-restrictions-work-in-dashboard-but-not-in-setup">Issue: Restrictions work in Dashboard but not in Setup</h3>
+<p><strong>Possible Causes:</strong></p>
+<ul>
+<li>Restrictions were only added to Dashboard applications (<code>MONITOR_DB_*</code>)</li>
+<li>Setup applications (<code>MONITOR_SETUP_*</code>) were not configured</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Go back to the Security Group</li>
+<li>Add restrictions for both Dashboard and Setup applications</li>
+<li>Use the same filter condition for consistency</li>
+</ol>
+<hr />
+<h2 id="verification-checklist">Verification Checklist</h2>
+<p>Use this checklist to ensure your data restrictions are working correctly:</p>
+<ul>
+<li>[ ] User can log in successfully</li>
+<li>[ ] Dashboard shows only filtered resources</li>
+<li>[ ] Setup shows only filtered resources</li>
+<li>[ ] Resources not matching the filter are not visible</li>
+<li>[ ] Restrictions are consistent across Dashboard and Setup</li>
+<li>[ ] Multiple resource types are filtered correctly (if applicable)</li>
+<li>[ ] User cannot access unrestricted resources directly</li>
+<li>[ ] Combined restrictions work correctly (if user has multiple groups)</li>
+</ul>
+<hr />
+<p>Congratulations!<br />
+You have successfully verified that data restrictions are working correctly. Your users will now only see the resources they are authorized to access based on the configured filter conditions.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../resource_restriction_scenarios/" class="btn btn-neutral float-left" title="4. Resource Restriction Scenarios"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../resource_restriction_scenarios/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

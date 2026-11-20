@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Margi Shah" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/download_template/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>2. Download Built-in Template & Upload File - Monitor Data Ingest</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Download Built-in Template \u0026 Upload File";
+        var mkdocs_page_input_path = "download_template.md";
+        var mkdocs_page_url = "/maximo-labs/download_template/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Data Ingest
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Data-Ingest</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../upload_csv_files/">1. Navigate Data Ingestion</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Download Built-in Template & Upload File</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#navigate-to-data-ingestion">Navigate to Data Ingestion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-and-prepare-the-template">Download and Prepare the Template</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-download-the-template">Step 1: Download the Template</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-prepare-the-csv-file">Step 2: Prepare the CSV File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-review-validation-results">Step 3: Review Validation Results</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-submit-the-file">Step 4: Submit the File</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file_status/">3. Uploaded File - Progress Tracking & Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../download_file/">4. Download Processed and Error Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storage_guide/">5. Storage Usage & Storage Mode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file_retention/">6. File Retention Days</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../delete_file/">7. Delete File</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Data Ingest</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">2. Download Built-in Template & Upload File</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="download-template">Download Template</h1>
+<h2 id="objective">Objective</h2>
+<p>In this exercise, you will learn how to download the CSV template and prepare CSV files for upload. You will access the template from the <strong>Data Ingestion</strong> workflow, understand the required CSV structure, review validation rules, and submit the file for processing in Monitor.</p>
+<hr />
+<h2 id="navigate-to-data-ingestion">Navigate to Data Ingestion</h2>
+<p>Access the template download flow from either of the following paths:</p>
+<ul>
+<li><strong>Setup → Data Ingestion</strong></li>
+<li><strong>Setup → Device Types → Edit → Data Ingestion</strong></li>
+</ul>
+<hr />
+<h2 id="download-and-prepare-the-template">Download and Prepare the Template</h2>
+<h4 id="step-1-download-the-template">Step 1: Download the Template</h4>
+<p>Navigate to <strong>Data Ingestion</strong>, click on <strong>Download example.csv file</strong>.</p>
+<p><img alt="Navigate Data Ingestion" src="../img/download_template/1_download_template.png" />&nbsp;&nbsp;</p>
+<h4 id="step-2-prepare-the-csv-file">Step 2: Prepare the CSV File</h4>
+<p>Once the sample CSV template is downloaded, fill in the data according to the defined format. Data is validated based on the expected data type. If the data type does not match the configured metrics, the record fails validation.</p>
+<p><strong>Mandatory Fields in CSV</strong></p>
+<p>The CSV file must include the following mandatory fields:</p>
+<ol>
+<li><strong>Timestamp</strong> – Represents the date and time when the data was generated</li>
+<li><strong>Device ID</strong> – Unique identifier of the device</li>
+<li><strong>Data Field (Metric/Event)</strong> – At least one metric or event column</li>
+</ol>
+<h4 id="step-3-review-validation-results">Step 3: Review Validation Results</h4>
+<p>Once the file is uploaded, the system performs multiple validations before processing:</p>
+<ul>
+<li><strong>File Name Validation</strong> – Checks whether the file already exists; duplicate file names are not accepted for the same device type</li>
+<li><strong>Header Validation</strong> – Ensures the CSV headers match the required template</li>
+<li><strong>Data Type Validation</strong> – Verifies that all values are in the correct format</li>
+<li><strong>Mandatory Field Check</strong> – Ensures required fields are not null or missing</li>
+<li><strong>Maximum supported file size</strong> → 50 MB</li>
+<li><strong>Other Basic Validations</strong> – Ensures overall data consistency</li>
+</ul>
+<p>Review the validation outcome after the file is uploaded.</p>
+<p>If any validation fails, the system highlights the specific errors and prompts you to correct them.</p>
+<p><img alt="fail_csv" src="../img/download_template/3_download_template.png" />&nbsp;&nbsp;</p>
+<p>If the file passes all validations, the system processes the data and displays the raw data.</p>
+<p><img alt="success_csv" src="../img/download_template/2_download_template.png" />&nbsp;&nbsp;</p>
+<h4 id="step-4-submit-the-file">Step 4: Submit the File</h4>
+<p>Submit the file after successful validation. After the success message is displayed, you are redirected to the data ingestion page.</p>
+<p><img alt="success_csv" src="../img/download_template/4_download_template.png" />&nbsp;&nbsp;</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>You have learned how to:</p>
+<ul>
+<li>Access the CSV template download option from the data ingestion workflow</li>
+<li>Prepare CSV data by using the required template structure</li>
+<li>Understand mandatory fields and upload requirements</li>
+<li>Review validation results before submission</li>
+<li>Submit the CSV file for processing in Monitor</li>
+</ul>
+<hr />
+<h2 id="next-steps">Next Steps</h2>
+<p>Proceed to <a href="../file_status/">Uploaded File - Progress Tracking &amp; Status</a> to learn how to track uploaded files and review their processing status.</p>
+<hr />
+<p><strong>Congratulations!</strong> You have successfully downloaded the template and prepared the CSV file for upload.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../upload_csv_files/" class="btn btn-neutral float-left" title="1. Navigate Data Ingestion"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../file_status/" class="btn btn-neutral float-right" title="3. Uploaded File - Progress Tracking & Status">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../upload_csv_files/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../file_status/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Jan Ekstrøm & Contributors" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/setup_unslave/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Objectives - Edge Data Collector Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Objectives";
+        var mkdocs_page_input_path = "setup_unslave.md";
+        var mkdocs_page_url = "/maximo-labs/setup_unslave/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Edge Data Collector Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Edge Data Collector Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">1. Setup Simulator Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_devices/">2. Create Monitor Devices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edc_integration/">3. Create EDC Integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">4. Deploy and verify integration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitor_metrics/">5. Create Monitor metric</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Edge Data Collector Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Objectives</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="objectives">Objectives</h1>
+<p>In this Exercise you will learn how to:</p>
+<ul>
+<li>Prepare a Windows environment for the Modbus simulator</li>
+<li>Install the Modbus simulator</li>
+<li>Configure the Modbus simulator</li>
+</ul>
+<hr />
+<p><em>Before you begin:</em><br />
+This Exercise requires that you have:</p>
+<ol>
+<li>completed the pre-requisites required for <a href="../prereqs/">all labs</a></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can Right-Click on the images in this lab and select <code>Open Image in New Tab</code> </br>
+to view the details in the screen shots:</br></br>
+<img alt="View details" src="../img/setup_00.png" /></br>
+or use the browsers zoom function.</br></br>
+*NOTE: Information about the Modbus simulator can be found further down in this lab.</p>
+</div>
+<hr />
+<h2 id="prepare-a-windows-environment">Prepare a Windows environment</h2>
+<p>You need to have a Windows based environment with at static IP Address in which the Modbus simulator will run as that is required by the integration configurator.</br>
+IBM Cloud Classic Infrastructure with a Windows Server 2019 instance has been used in this lab.</br></p>
+<p><img alt="Windows Server 2019" src="../img/setup_01.png" /></br></br></p>
+<p>The Modbus simulator requires port 502 to be open in the firewall for incoming traffic.
+<img alt="Windows Server 2019" src="../img/setup_02.png" /></br></br></p>
+<h2 id="install-the-modbus-simulator">Install the Modbus simulator</h2>
+<p>We use the free Modbus simulator from Unserver to provide a couple of simulated Lenze i550 Variable Frequency Drives (VFD) for the purpose of this lab.
+Go to the <a href="https://unserver.xyz/docs/unslave/" target="_blank">Unslave download page</a> and download the ZIP file.
+Unzip the downloaded file:
+<img alt="Unslave unzipped" src="../img/setup_03.png" /></br></br></p>
+<p>and navigate into the unslave folder:
+<img alt="Unslave unzipped folder" src="../img/setup_04.png" /></br></br></p>
+<p>No further installation is needed.</p>
+<h2 id="configure-the-modbus-simulator">Configure the Modbus simulator</h2>
+<p>The <code>config.json</code> file contain the configuration of the Unslave Modbus simulator.</br>
+Start by renaming it to save a copy:
+<img alt="Rename config.json" src="../img/setup_05.png" /></br></br></p>
+<p>then download the <code>config.json</code> that contains the holding registers for 10 Lenze i550 VFD's.</br>
+You can get it here: <a href="../config/config.json" target="_blank">config.json</a></br>
+Copy it into the Windows environment in the unslave folder:
+<img alt="Copy config.json" src="../img/setup_06.png" /></br></br></p>
+<p>Double-click on the <code>unslave</code> application to start the simulator:
+<img alt="Start Unslave" src="../img/setup_07.png" /></br></br></p>
+<p>and you will see a CMD window that looks like this:
+<img alt="Unslave CMD indow" src="../img/setup_08.png" /></br></br></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Modbus holding registers defined in the <code>config.json</code> are static values. However the Unslave provide an API (on port 9000) to alter the values, which is not covered in this lab.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Another config file is available with 90 Lenze i550 devices in case you need that.</br>
+You can get it here: <a href="../config/config-90.json" target="_blank">config-90.json</a></br></p>
+</div>
+<hr />
+<p>Congratulations you have successfully setup the simulator environment.</br></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

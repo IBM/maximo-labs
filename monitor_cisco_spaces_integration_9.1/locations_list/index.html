@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Bihag Gandhi" /><link rel="canonical" href="https://ibm.github.io/maximo-labs/locations_list/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>4. Locations list overview - Monitor Cisco Spaces Integration Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Locations list overview";
+        var mkdocs_page_input_path = "locations_list.md";
+        var mkdocs_page_url = "/maximo-labs/locations_list/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGH6ZGZ8CT"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-EGH6ZGZ8CT");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Monitor Cisco Spaces Integration Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="" href="../..">Get back to Maximo Labs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Monitor Cisco Spaces Integration Lab</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prereqs/">Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Exercises</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_overview/">1. Cisco spaces overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../generate_activation_token/">2. Generate activation token</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cisco_spaces_integration/">3. Configure cisco spaces integration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Locations list overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-fetched-locations">1. Fetched Locations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-subscription-status">2. Subscription Status</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../subscribe/">5. Subscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../location_metrics/">6. Cisco spaces location metrics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../heatmap/">7. Generate heatmap on MREF location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unsubscribe/">8. Unsubscribe cisco space location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../edit_delete_config/">9. Edit / Delete cisco spaces configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release_notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../copyright">Copyright</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Monitor Cisco Spaces Integration Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">4. Locations list overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="location-list-fetched-from-cisco-spaces">Location List Fetched from Cisco Spaces</h1>
+<p>Once the Cisco Spaces integration is successfully configured in MAS Monitor, the integration begins retrieving the list of available locations.</p>
+<h2 id="1-fetched-locations">1. Fetched Locations</h2>
+<p>As shown in the image below, MAS Monitor has successfully fetched a list of locations from Cisco Spaces. Each location entry includes the following details:</p>
+<ul>
+<li><strong>Building Name</strong></li>
+<li><strong>Floor Name</strong></li>
+</ul>
+<p><img alt="Fetched Locations Placeholder" src="../img/locations_fetched.png" /></p>
+<h2 id="2-subscription-status">2. Subscription Status</h2>
+<p>At this stage, none of the locations are actively subscribed.</p>
+<ul>
+<li>The <strong>status</strong> of each location is currently marked as <code>Unsubscribed</code>.</li>
+<li>This indicates that the location data is available but <strong>not yet enabled</strong> for monitoring within MAS Monitor.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cisco_spaces_integration/" class="btn btn-neutral float-left" title="3. Configure cisco spaces integration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../subscribe/" class="btn btn-neutral float-right" title="5. Subscribe cisco space location">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cisco_spaces_integration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../subscribe/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../../js/popper.min.js"></script>
+      <script src="../../js/tippy-bundle.umd.js"></script>
+      <script src="../../js/clipboard.js"></script>
+      <script src="../../js/extra.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
