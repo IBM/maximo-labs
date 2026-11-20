@@ -1,4 +1,5 @@
-# Welcome to the IBM Maximo Labs
+# Welcome to the 
+![IBM Maximi Labs](img/IBM Maximo Labs web image.jpg)
 
 In these hands-on labs you will learn how to get started with the different products that are available in the IBM Maximo portfolio.</br>
 The labs are in different states of readiness for use shown below, i.e. they might have an <font color="red">UNDER CONSTRUCTION !!</font> indication.</br>
@@ -346,6 +347,6 @@ See the [Copyright page](copyright.md) for how the Maximo Hands-on Labs are lice
 
 ---
 
-### UPDATED: 2026-10-27
+### UPDATED: 2026-11-20
 
 ---
